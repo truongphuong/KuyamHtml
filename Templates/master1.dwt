@@ -41,11 +41,10 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>	    	
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
+<script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 <!-- TemplateBeginEditable name="script" -->
 <!-- TemplateEndEditable --> 
 <script type="text/javascript" src="scripts/general.js"></script>  
-
-<script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 <!-- === END SCRIPTS === -->
 </head>
 <body>
@@ -87,13 +86,14 @@
             <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navMenu">
                     <li class="active"><a href="index.html" title="Home">home</a><span class="desktop"></span></li>
-                    <li><a href="#" title="How it works">how it works</a><span class="desktop"></span></li>
+                    <li class="iphone"><a href="#" title="How it works">how it works</a><span class="desktop"></span></li>
                     <li><a href="#" title="Book">book</a><span class="desktop"></span></li>
                     <li><a href="#" title="Beautify LA">Beautify LA</a><span class="desktop"></span></li>
-                    <li><a href="#" title="Blog">blog</a><span class="desktop"></span></li>
+                    <li><a href="#" title="lifestyle blog">lifestyle blog</a><span class="desktop"></span></li>
                     <li class="iphone"><a href="#" title="kuyam.org">kuyam.org</a><span class="desktop"></span></li>
-                    <li><a class="bg-green" href="#" title="Sign in">sign in</a><span class="desktop"></span></li>
-                    <li><a class="bg-green" href="#" title="Sign up">sign up</a><span class="desktop"></span></li>
+                    <li class="desktop"><a href="#" title="How it works">how it works</a><span class="desktop"></span></li>
+                    <li><a class="bg-green" href="#" title="login">login</a><span class="desktop"></span></li>
+                    <li><a class="bg-green" href="#" title="logout">logout</a><span class="desktop"></span></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -128,10 +128,13 @@
     	<div class="container">
         	<div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"> 
-                    <header class="section-header">
+                    <header class="section-header clearfix">
                         <a class="logo" title="" href="#">
                             <img alt="" src="../content/images/logo_kuyam.png" />
-                        </a>                    
+                        </a>    
+                        <div class="live-chat iphone">                
+                            <a class="btnLiveChat off" href="#" title="live chat"></a>                    
+                        </div>                
                     </header>
                     <p>we love hearing your questions and feedback. send us an email or give us a call!<br /></p>
                     <address class="site-address">
@@ -144,7 +147,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 desktop ipad"> 
                     <header class="section-header">
-                        <h2>kuyam app</h2>
+                        <h2>kuyam app</h2>                        
                     </header>
                     <p>download kuyam's FREE app for your devices. with our app book your appointments on the go! available for iPhone & Android phones.</p> 
                     <div class="apps"> 
@@ -197,12 +200,7 @@
     </footer>
     
     <div class="loading"></div>
-    <div class="light-box"></div>  
-    
-    <noscript>
-        <!-- must remain last thing before the form tag -->
-        <p class="noJS">YOU NEED JAVASCRIPT TO RUN THIS SITE. PLEASE ENABLE JAVASCRIPT IN YOUR INTERNET OPTIONS.</p>
-    </noscript>
+    <div class="light-box"></div>
     <!-- END HTML -->   
    </form>
 </body>
