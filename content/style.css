@@ -53,7 +53,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .btn-green{width:100%;text-align:center;background:#96BE3D;color:#ffffff;}
 .btn-green:hover{background:#F2F2F2;color:#ffffff;}
 
-@font-face {
+@font-face{
     font-family:'open_sansregular';
     src:url('../fonts/OpenSans-Regular-webfont.eot');
     src:url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -71,11 +71,10 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 .system-date{font:400 14px/17px raleway,sans-serif;color:#8c8c8c;padding:5px 0;}
 
 .site-header{background:#333333;height:122px;margin:0;border:0 none;}
-.site-header .logo,
-.site-header .search-form{margin:25px 0 0;}
-
-.search-form{float:right;}
-.search-form fieldset{width:256px;display:inline-block;background:url("../content/images/icons/icon-list.jpg") no-repeat left center #424242;padding:0 0 0 28px;margin:0 0 0 25px;}
+.site-header .logo{margin: 25px 0 0;}
+.site-header .search-form{margin:25px 0 0;float:right;}
+.search-form .btnLiveChat{float:left;}
+.search-form fieldset{width:256px;float:left;background:url("../content/images/icons/icon-list.jpg") no-repeat left center #424242;padding:0 0 0 28px;margin:5px 0 0 25px;}
 .search-form fieldset .form-control{background:transparent;border:0 none;font:400 14px/17px raleway,sans-serif;color:#8c8c8c;}
 .search-form fieldset .form-control:hover,
 .search-form fieldset .form-control:focus{box-shadow:none;}
@@ -85,7 +84,7 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 .navbar-nav > li > a{display:block;color:white;font:400 14px/17px raleway,sans-serif;color:#ffffff;text-decoration:none;margin:0;padding:0 12px;}
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus{color:#96be3d;background:transparent;}
-.navbar-nav li.active span{display:block;height:7px;background:#96be3d;position:absolute;left:0;right:0;bottom:-17px;}
+/*.navbar-nav li.active span{display:block;height:7px;background:#96be3d;position:absolute;left:0;right:0;bottom:-17px;}*/
 
 .navbar-default .navbar-toggle .icon-bar{background:#ffffff;}
 .navbar-default .navbar-toggle,
@@ -202,10 +201,10 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 .link-img a.box-green .icon-business{background-image:url("images/icons/icon_business.png");}
 .link-img a.box-green:hover{background:#b2ce71;}
 .link-img a.box-blue .icon-blog{background-image:url("images/icons/icon_blog.png");}
-.link-img a.box-blue:hover{background:#56c9d8;}
+.link-img a.box-blue:hover{background:#b2ce71/*#56c9d8*/;}
 .link-img a.box-red{background:#e34500;}
 .link-img a.box-red .icon-event{background-image:url("images/icons/icon_events.png");}
-.link-img a.box-red:hover{background:#e26551;}
+.link-img a.box-red:hover{background:#b2ce71/*#e26551*/;}
 
 .event-section{}
 .event-section .section-header{margin:0 0 15px;}
@@ -242,7 +241,7 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 .votes .icon-like{background-image:url(images/icons/like.png);}
 .votes .icon-unlike{background-image:url(images/icons/unlike.png);}
 
-@media (min-width:1200px) {
+@media (min-width:1200px){
   .container{width:960px;}
 }
 
@@ -304,10 +303,12 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 	
 }
 @media (max-width:320px){
+    .navbar-nav > li > a{font:400 11px/17px raleway,sans-serif;}
+
 	.lineBottom{bottom:35px;}
 	.lineBottom .descriptionTitle h2{font-size:20px;line-height:23px;}
 	.lineBottom .descriptionTitle h4{line-height:17px;font-size:13px;margin-bottom:10px;}
-	.lineBottom .descriptionTitle p a{width:40%;}
+	.lineBottom .descriptionTitle p a{width:40%;font:400 12px/19px open-sans, sans-serif;}
 	
 	#slide_welcome.rslides li a{width:40%;}
 	#slide_welcome.rslides li a img{width:100%;}	
@@ -315,5 +316,7 @@ body{margin:0;padding:0;font:20px/24px raleway,sans-serif;color:#000000;}
 	.event-block{padding:0 10px;}
 	.event-block .avatar,
 	.event-block .desContent{width:100%;}
-	.desContent .group_link a{width:47%;}
+	.desContent .group_link a{width:46%;}
+
+    .link-socials a{margin:11px 11px 0 0;}
 }
