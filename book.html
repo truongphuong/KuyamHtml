@@ -75,7 +75,8 @@
                 <a class="btnLiveChat off" href="#" title="live chat"></a>
                 <fieldset> 
                     <span class="icon-list"></span>
-                    <input class="form-control" type="text" value="search for a business" onfocus="if (this.value == 'search for a business') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search for a business'; }" />                            
+                    <input class="form-control" type="text" value="search for a business" onfocus="if (this.value == 'search for a business') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search for a business'; }" />
+                    <input type="button" class="btn-search" value="Search" />                           
                 </fieldset>
             </div>
             <!-- /.search-form -->
@@ -130,6 +131,7 @@
                         <fieldset>
                             <span class="icon-list"></span>
                             <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'search for a business'; }" onfocus="if (this.value == 'search for a business') { this.value = ''; }" value="search for a business">
+                            <input type="button" class="btn-search" value="Search" />
                         </fieldset>
                     </div>
                     
@@ -345,10 +347,10 @@
                 </div>              
             </div>
             <div class="row">
-            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                	<div class="paging">
+            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                	<div class="pagination-container">
                         <ul class="desktop">
-                            <li class="nav-prev"><a title="" href="#"><span class="icon-prev"></span> back</a></li>
+                            <li class="PagedList-skipToPrevious"><a title="" href="#"><span class="icon-prev"></span> back</a></li>
                             <li><a class="active" title="" href="#">1</a></li>
                             <li><a title="" href="#">2</a></li>
                             <li><a title="" href="#">3</a></li>
@@ -360,9 +362,11 @@
                             <li><a title="" href="#">9</a></li>                        
                             <li><a title="" href="#">10</a></li>
                             <li><a title="" href="#">...</a></li>
-                            <li class="nav-next"><a title="" href="#">next <span class="icon-next"></span></a></li>
-                        </ul>
-                        <a class="book-more iphone" title="" href="#">pull to see more<br /> <span class="icon-angle-down"></span></a>
+                            <li class="PagedList-skipToNext"><a title="" href="#">next <span class="icon-next"></span></a></li>
+                        </ul>                        
+                    </div>
+                    <div class="iphone">
+                    	<a class="book-more" title="" href="#">pull to see more<br /> <span class="icon-angle-down"></span></a>
                     </div>
                 </div>
             </div>
