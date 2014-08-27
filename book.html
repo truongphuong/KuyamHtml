@@ -29,8 +29,7 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 <!-- jQuery UI CSS -->
-<link type="text/css" rel="stylesheet" href="content/themes/base/jquery.ui.core.css" />
-<link type="text/css" rel="stylesheet" href="content/themes/base/jquery.ui.theme.css" />
+<link type="text/css" rel="stylesheet" href="content/themes/base/jquery.ui.all.css" />
 <link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
@@ -42,6 +41,9 @@
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.core.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="scripts/jquery.ui.tabs.js"></script>
 <!-- InstanceBeginEditable name="script" -->
 <!-- InstanceEndEditable --> 
 <script type="text/javascript" src="scripts/general.js"></script>  
@@ -380,7 +382,48 @@
     
     <!-- .map -->    
     <div class="map desktop">
-        <div id="google-map"><iframe class="actAsDiv" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=Los%20Angeles%2C%20CA&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=19&amp;iwloc=A&amp;output=embed"></iframe></div>
+    	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
+		<script type="text/javascript">
+            
+            var map;
+            function initialize() {
+                var myLatlng = new google.maps.LatLng(34.0906351, -118.374025);
+                var myOptions = {
+                    zoom: 16,
+                    disableDefaultUI: true,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                  }
+                  map = new google.maps.Map(document.getElementById("google-map"), myOptions);
+                  var myLatLng = new google.maps.LatLng(34.0906351, -118.374025);
+                  var beachMarker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map
+                  });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize); 
+            
+            
+            function loadmap(lat, lon, googleIcon) {
+                var myLatlng = new google.maps.LatLng(lat, lon);
+                var myOptions = {
+                zoom: 16,
+                disableDefaultUI: true,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                map = new google.maps.Map(document.getElementById("google-map"), myOptions);
+                var myLatLng = new google.maps.LatLng(lat, lon);
+                var beachMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: googleIcon
+            
+            
+                });
+            }
+        </script>
+        <div id="google-map"></div>
     </div>
     <!-- /.map -->
     
