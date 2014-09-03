@@ -448,12 +448,13 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 
 .select-options{position:relative;}
 #select-who{display:none;}
-.options-caption{height:63px;padding:5px 10px;background:#BA337A;font:700 22px/26px raleway,sans-serif;color:#ffffff;text-align:center;}
+.select-options > a{display:block;height:63px;padding:5px 10px;background:#BA337A;font:700 22px/26px raleway,sans-serif;color:#ffffff;text-align:center;text-decoration:none;}
 
-.options-icon{display:inline-block;width:45px;height:45px;background:no-repeat;margin:10px 0 0;position:relative;z-index:10;}
+.options-icon{display:inline-block;width:45px;height:45px;background:transparent no-repeat;margin:10px 0 0;position:relative;z-index:10;}
 .options-icon-up{background-image:url(images/icons/options-icon-up.png);}
 .options-icon-down{background-image:url(images/icons/options-icon-down.png);}
-.options-text{display:none;max-height:300px;background:#ffffff;position:absolute;top:63px;right:0;left:0;margin:0;padding:24px 0 0;list-style:none;z-index:11;border:1px solid #999999;border-top:0 none;overflow-y:auto;font:400 14px/18px raleway,sans-serif;color:#333333;}
+
+.options-text{display:none;max-height:300px;background:#ffffff;position:absolute;top:63px;right:0;left:0;margin:0;padding:24px 0 0;list-style:none;z-index:11;border:1px solid #999999;border-top:0 none;overflow-y:auto;font:400 14px/18px raleway,sans-serif;color:#333333;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .options-text hr{margin:0 0 0 20px;padding:0;border:0 none;border-top:1px solid #cccccc;}
 .options-text li:last-child hr{border:0 none;}
 .options-text li:hover,
@@ -470,6 +471,8 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 
 .options-text li span.options-icon-mobile{float:right;display:inline-block;width:24px;height:24px;border:1px solid #C5C5C5;background:#ffffff;-webkit-border-radius:24px;-moz-border-radius:24px;border-radius:24px;}
 .options-text li.active span.options-icon-mobile{border:1px solid #BA337A;background:#BA337A;}
+
+.z-index-12{z-index:12;}
 
 .slide-calendar-mobile{}
 .slide-calendar-mobile .rslides{overflow:visible;}

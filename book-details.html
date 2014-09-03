@@ -169,12 +169,15 @@
                         </header>
                         <div class="row">
                         	<div class="col-xs-12 col-sm-6">
-                            	<div id="select-what">
+                            	<div class="select-what">
                             
                                     <!-- .select-options -->
-                                    <div class="select-options">
-                                        <div class="options-caption">What would you like done?<br /> <span class="options-icon options-icon-down"></span></div>
-                                        <ul class="options-text">
+                                    <div class="dropdown select-options">                                        
+                                        <a title="" id="a-what" data-toggle="dropdown" href="#">
+                                        	What would you like done?<br /> <span class="options-icon options-icon-down"></span>
+                                     	</a>
+
+                                        <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-what">
                                             <li>
                                                 <span class="options-info">
                                                     <span class="options-icon-mobile hidden-sm hidden-md hidden-lg"></span>
@@ -238,9 +241,12 @@
                             <div class="col-xs-12 col-sm-6">
                             	<div id="select-who">
                                     <!-- .select-options -->
-                                    <div class="select-options">
-                                        <div class="options-caption">What would you like done?<br /> <span class="options-icon options-icon-down"></span></div>
-                                        <ul class="options-text">
+                                    <div class="dropdown select-options">                                        
+                                        <a title="" id="a-who" data-toggle="dropdown" href="#">
+                                        	Who would you like?<br /> <span class="options-icon options-icon-down"></span>
+                                     	</a>
+
+                                        <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-who">
                                             <li>
                                             	<span class="options-info">
                                                 	<span class="options-icon-mobile hidden-sm hidden-md hidden-lg"></span>
@@ -286,51 +292,15 @@
                                 
                             </div>
                             <script type="text/javascript">
-								$(document).ready(function(){	
-									var temp = 0;									
-																	
-									$(document).bind({
-										mousedown: function(e){
-											var subject = $(".options-caption"); 
-											if($(e.target).attr('class') != subject.attr('class'))
-											{
-												if(temp == 1){													
-													var t = $(this);
-													$(".options-text").fadeOut();
-													statusIconDown(t);
-													temp = 0;
-												}else{
-													return
-												}
-											}
-										}	
-									});
-									
-									function statusIconDown(t){										
-										if(temp== 0){	
-											t.find(".options-icon").removeClass("options-icon-down").addClass("options-icon-up");											
-											temp = 1;
-										}else{	
-											t.find(".options-icon").removeClass("options-icon-up").addClass("options-icon-down");
-											temp = 0;
-										}
-									}
-																									
-									function selectToggle(t){
-										statusIconDown(t);	
-										t.parent().find("ul").slideToggle();										
-																				
-									}
-									
-									$('.options-caption').click(function(e){
-										var t = $(this);																				
-										selectToggle(t);
-									});
-									
+								$(document).ready(function(){
+									$('.select-options').click(function(e){
+										$(".options-icon").removeClass("z-index-12");
+										$(this).find(".options-icon").addClass("z-index-12");												
+									})													
+																										
 									$('.options-text li').click(function(e){
 										var a = $(e.target).attr('class');
-										if(a == "link-service" || a == "link-class"){
-										}else{	
+										if(a != "link-service" || a != "link-class"){
 											$(".bg-white-50").fadeOut();
 											$('.options-text li').removeClass("active");
 											$(this).addClass("active");	
