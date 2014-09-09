@@ -92,8 +92,8 @@
                     <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog<span class="hidden-xs"></span></a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a href="http://kuyam.org/" title="kuyam.org">kuyam.org<span class="hidden-xs"></span></a></li>
                     <li class="hidden-xs"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>
-                    <li><a class="bg-green" href="Javascript:void(0);" title="login">login<span class="hidden-xs"></span></a></li>
-                    <li><a class="bg-green" href="Javascript:void(0);" title="sign up">sign up<span class="hidden-xs"></span></a></li>
+                    <li><a class="bg-green" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);" title="login">login<span class="hidden-xs"></span></a></li>
+                    <li><a class="bg-green" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);" title="sign up">sign up<span class="hidden-xs"></span></a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -203,7 +203,91 @@
     
     <div class="loading"></div>
     <div class="light-box"></div>
-    <!-- END HTML -->   
+    <!-- END HTML --> 
+    
+    <!-- .modal-login -->    
+    <div class="modal fade modal-form modal-login" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h3 class="modal-title">welcome back!</h3>
+      			</div>
+                <div class="modal-body">
+                	<a title="" href="#" class="btn-blue btn-facebook">login with facebook</a>
+                	<div class="form-or">                    	
+                    	<hr />  
+                        <span>or</span>                      
+                    </div>
+                	<fieldset>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password">
+                        <div class="text-right"><a class="link-form link-forgot" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-forgot">forgot password?</a></div>
+                    	<button type="button" class="btn-green btn-form btn-login">login</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                    <div class="text-right">don't have an account? <a class="link-form link-create" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-login -->  
+    
+    <!-- .modal-sign-up -->    
+    <div class="modal fade modal-form modal-sign-up" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h3 class="modal-title">join kuyam free!</h3>
+                    <h4>book appointments at home or<br /> on the go!</h4>
+      			</div>
+                <div class="modal-body">
+                	<a title="" href="#" class="btn-blue btn-facebook">login with facebook</a>
+                	<div class="form-or">                    	
+                    	<hr />  
+                        <span>or</span>                      
+                    </div>
+                	<fieldset>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name">
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name">
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password">
+                        <div>by signing up, I agree to kuyams<a class="link-form link-term" title="" href="#">terms of use and privacy</a></div>
+                    	<button type="button" class="btn-green btn-form btn-sign-up">sign up</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                    <div class="text-right">already have an account? <a class="link-form link-login" title="" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-sign-up -->
+    
+    <!-- .modal-forgot -->    
+    <div class="modal fade modal-form modal-forgot" id="modal-forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h3 class="modal-title">forgot password?</h3>
+                    <h4>enter your email to reset password</h4>
+      			</div>
+                <div class="modal-body">                	
+                	<fieldset>                    	
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
+                    	<button type="button" class="btn-green btn-form btn-continue">continue</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                    <div class="text-right">don't have an account? <a class="link-form link-login" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-forgot -->
 
 </body>
 </html>
