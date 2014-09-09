@@ -518,20 +518,20 @@
         			<h3 class="modal-title">welcome back!</h3>
       			</div>
                 <div class="modal-body">
-                	<a title="" href="#" class="btn-blue btn-facebook">login with facebook</a>
+                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">login with facebook</a>
                 	<div class="form-or">                    	
                     	<hr />  
                         <span>or</span>                      
                     </div>
                 	<fieldset>
-                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password">
-                        <div class="text-right"><a class="link-form link-forgot" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-forgot">forgot password?</a></div>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+                        <div class="text-right link-form"><a class="link-forgot" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-forgot">forgot password?</a></div>
                     	<button type="button" class="btn-green btn-form btn-login">login</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                    <div class="text-right">don't have an account? <a class="link-form link-create" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                    <div class="text-right link-form">don't have an account? <a class="link-create" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -548,22 +548,22 @@
                     <h4>book appointments at home or<br /> on the go!</h4>
       			</div>
                 <div class="modal-body">
-                	<a title="" href="#" class="btn-blue btn-facebook">login with facebook</a>
+                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">login with facebook</a>
                 	<div class="form-or">                    	
                     	<hr />  
                         <span>or</span>                      
                     </div>
                 	<fieldset>
-                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name">
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name">
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password">
-                        <div>by signing up, I agree to kuyams<a class="link-form link-term" title="" href="#">terms of use and privacy</a></div>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+                        <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="" href="#">terms of use and privacy</a></div>
                     	<button type="button" class="btn-green btn-form btn-sign-up">sign up</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                    <div class="text-right">already have an account? <a class="link-form link-login" title="" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
+                    <div class="text-right link-form">already have an account? <a class="link-login" title="" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -581,17 +581,43 @@
       			</div>
                 <div class="modal-body">                	
                 	<fieldset>                    	
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email">
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
                     	<button type="button" class="btn-green btn-form btn-continue">continue</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                    <div class="text-right">don't have an account? <a class="link-form link-login" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                    <div class="text-right link-form">don't have an account? <a class="link-login" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
     <!-- /.modal-forgot -->
+    
+    <!-- .modal-facebook -->    
+    <div class="modal fade modal-form modal-facebook" id="modal-facebook" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h3 class="modal-title">Facebook sign up</h3>
+                    <h4>please double check the info<br /> provided to us by Facebook is<br /> accurate</h4>
+      			</div>
+                <div class="modal-body">                	
+                	<fieldset>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+                        <input class="form-control form-read-only" type="text" value="thaotran@vinasource.com" readonly="readonly" />
+                        <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="" href="#">terms of use and privacy</a></div>
+                    	<button type="button" class="btn-green btn-form btn-sign-up">create account!</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                    <div class="text-right link-form">already have an account? <a class="link-login" title="" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-sign-up -->
 
 </body>
 <!-- InstanceEnd --></html>
