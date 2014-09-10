@@ -62,6 +62,10 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .btn-blue{width:100%;text-align:center;background:#3B5998;color:#ffffff;}
 .btn-blue:hover{background:#F2F2F2;color:#ffffff;}
 
+.btn-brown-gradient,
+.btn-brown-gradient:hover,
+.btn-brown-gradient:focus{text-align:center;font:bold 12px/25px Arial, Helvetica, sans-serif;display:block;border:1px solid #636061;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#000000;margin:5px 0 0;text-decoration:none;height:25px;background-color:#afb1b5;background-image:-webkit-gradient(linear, top, bottom, from(#feffff), to(#afb1b5));background-image:-webkit-linear-gradient(top, #feffff, #afb1b5);background-image:-moz-linear-gradient(top, #feffff, #afb1b5);background-image:-o-linear-gradient(top, #feffff, #afb1b5);background-image:linear-gradient(to bottom, #feffff, #afb1b5);text-decoration:none;}
+
 @font-face{
     font-family:'open_sansregular';
     src:url('fonts/OpenSans-Regular-webfont.eot');
@@ -574,6 +578,31 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .modal-terms .ui-tabs-panel p{margin:0 0 15px;}
 .modal-terms .ui-tabs-panel .scroll-bar{height:500px;overflow-y:auto;}
 
+.modal-offer .modal-content{width:656px;border:3px solid #c1d82f;border-radius:0;}
+.modal-offer .modal-header{min-height:100px;background:#000000;padding:0;position:relative;}
+.modal-offer .modal-header .close{background:transparent;margin:0 10px 0 0;color:#ffffff;font:bold 40px/40px Arial, Helvetica, sans-serif;opacity:0.5;filter:alpha(opacity=50);}
+.modal-offer .logo-offer{float:left;margin:0 0 10px;}
+.modal-offer .event{width:230px;max-height:90px;overflow:hidden;color:#F7941E;font:26px/30px Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;margin:15px;position:absolute;right:0;bottom:0;}
+.modal-offer .modal-body{padding:0 0 10px;font:14px/18px Arial, Helvetica, sans-serif;}
+.modal-offer .nav-tabs{width:100%;min-height:55px;background:#f2f2f0;margin:0;padding:0 0 4px;list-style:none;border:0 none;}
+.modal-offer .nav-tabs li{float:left;width:214px;margin:0 0 0 4px;}
+.modal-offer .nav-tabs li a{display:block;height:51px;padding:8px 10px;color:#000000;border:1px solid #cccccc;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px;background-color:#E3E8EA;background-image:-webkit-gradient(linear, top, bottom, from(#EDF3F5), to(#E3E8EA));background-image:-webkit-linear-gradient(top, #EDF3F5, #E3E8EA);background-image:-moz-linear-gradient(top, #EDF3F5, #E3E8EA);background-image:-o-linear-gradient(top, #EDF3F5, #E3E8EA);background-image:linear-gradient(to bottom, #EDF3F5, #E3E8EA);}
+.modal-offer .nav-tabs li i{float:right;font-size:22px;margin:2px 0;}
+.modal-offer .nav-tabs li.active a,
+.modal-offer .nav-tabs li a:hover{border:1px solid #ff6600;color:#ffffff;background-color:#131B1E;background-image:-webkit-gradient(linear, top, bottom, from(#3E4649), to(#131B1E));background-image:-webkit-linear-gradient(top, #3E4649, #131B1E);background-image:-moz-linear-gradient(top, #3E4649, #131B1E);background-image:-o-linear-gradient(top, #3E4649, #131B1E);background-image:linear-gradient(to bottom, #3E4649, #131B1E);}
+.modal-offer .nav-tabs li:first-child{margin:0;}
+
+.modal-offer .offer-info{max-height:220px;padding-left:15px;margin-top:10px;margin-left:-15px;border-left:4px solid #f2f2f0;overflow:auto;}
+.modal-offer .offer-description{height:45px;background:url(images/offer-description.png) center center no-repeat;margin:0 0 10px;}
+.modal-offer h3{color:#f7941e;font:bold 30px/34px Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;margin:10px 0;}
+.modal-offer h4{font-size:24px;font-style:italic;font-weight:lighter;margin:20px 0;}
+.modal-offer h4 .oldprice{color:#aaaaaa;display:inline;}
+.modal-offer h4 .newprice{display:inline-block;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;background:#F7941E;color:#ffffff;padding:5px;}
+.modal-offer h4 .saleoff{display:inline;}
+.modal-offer .btn-brown-gradient{height:45px;font:bold 18px/45px Arial, Helvetica, sans-serif;margin:20px 0;}
+.modal-offer .offer-terms{font-weight:bold;color:#000000;text-decoration:none;}
+.modal-offer .offer-terms:hover{cursor:pointer;}
+
 @media (min-width:1200px){}
 
 @media (min-width:980px) and (max-width:1024px){}
@@ -745,6 +774,8 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.group_link a{width:18.5%;}	
 	
 	.link-img a{font:400 11px/71px raleway,sans-serif;}
+	
+	.modal-offer hr{display:block;}
 }
 @media (min-width:768px){
 	.event-block .avatar img{height:132px;}
@@ -849,6 +880,13 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	
 	.modal-class .modal-header .close{color:#ffffff;}
 	.modal-class .modal-footer .package-price{display:block;float:none;text-align:left;}
+	
+	.modal-offer .modal-content{width:100%;}
+	.modal-offer .logo-offer{float:none;}
+	.modal-offer .event{position:relative;width:90%;margin:0 auto;text-align:center;}
+	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
+	.modal-offer .offer-info{margin:0;border:0 none;}
+	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
 }
 @media (max-width:568px){	
 	.group_link a{width:23.2%;}
