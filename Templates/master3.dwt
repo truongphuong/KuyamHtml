@@ -31,7 +31,6 @@
 <!-- jQuery UI CSS -->
 <link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
 <link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />
-<script src="js/jquery.nicescroll.min.js"></script>
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
 
@@ -97,23 +96,37 @@
                     <li class="hidden-sm hidden-md hidden-lg"><a href="#" title="settings">settings<span class="hidden-xs"></span></a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="#" title="sign out">sign out<span class="hidden-xs"></span></a></li>
                     <li class="hidden-xs">
-                    	<a class="link-account" href="#" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                    	<a class="link-account" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
                     </li>
                 </ul>
                 
                 <script>
 					$(function(){
 						var temp = 0;
-						$( ".link-account" ).click(function(){	
+						var widthScreen;
+						$( window ).resize(function() {
+							widthScreen = $( window ).width();	
+							if(widthScreen < 768 && temp == 1){
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								$( "#nav-account" ).hide();
+								temp = 0;
+							}					
+						});							
+						
+						function showNavAccount(){
 							if(temp == 0){														
-								$( ".site-banner" ).animate({ "margin-top": "+=189px" }, 500 );
+								$( ".site-banner" ).animate({ "height": "+=186px" }, 500 );
 								temp = 1;
 							}else{
-								$( ".site-banner" ).animate({ "margin-top": "-=189px" }, 500 );
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
 								temp = 0;
 							}
 												
 							$( "#nav-account" ).toggle('blind', 500);
+						}
+						
+						$( ".link-account" ).click(function(){	
+							showNavAccount();
 						});
 					});
 				</script>
@@ -121,9 +134,9 @@
                 <div id="nav-account" class="nav-account">
                     <dl class="container clearfix">
                         <dt class="hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
-                        <dd><a href="#" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
-                        <dd><a href="#" title=""><span class="icon-appointments"></span>appointments<span class="icon-down"></span></a></dd>
-                        <dd><a href="#" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
+                        <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
+                        <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
+                        <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
                         <dt class="hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
                     </dl>
                 </div>
