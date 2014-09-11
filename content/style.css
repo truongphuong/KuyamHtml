@@ -99,6 +99,10 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .site-header .company-info address{font:400 18px/26px raleway,sans-serif;}
 .site-header .company-info ul{float:right;margin:0 0 0 20px;font:400 18px/26px raleway,sans-serif;}
 
+.site-header .account-user{float:right;font:400 14px/32px raleway, sans-serif;color:#ffffff;margin:8px;}
+
+.navbar-collapse{background:#333333;}
+
 .navbar-nav{margin:-10px 0 0;}
 .navbar-nav li{vertical-align:top;padding:0 10px;}
 .navbar-nav > li > a{position:relative;display:block;color:white;font:400 14px/17px raleway, sans-serif;color:#ffffff;text-decoration:none;margin:0;padding:0 2px;}
@@ -131,11 +135,17 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .section-header h2 .arrow_down{display:inline-block;width:34px;height:32px;background:url(images/icons/arrow_down.png) no-repeat;margin:0 0 -5px;}
 
 .site-contact{background:#2a2a2a;padding:70px 0 59px;font:400 13px/21px raleway, sans-serif;color:#777777;}
+.site-contact .link-terms{color:#96be3d;position:relative;top:-10px;left:10px;}
 .site-contact .section-header{margin:0 0 10px;}
 .site-contact .section-header h2{margin:6px 0 0;}
 .site-contact .section-header .logo{float:left;}
 .site-contact .section-header .live-chat{float:right;margin:0;}
 /*.site-contact .section-header .btnLiveChat{width:40px;background-position:left center;}*/
+
+.nav-footer{list-style:none;}
+.nav-footer li{margin:0 0 15px;}
+.nav-footer a{color:#ffffff;}
+.nav-footer a.link-sign-out{color:#96be3d;}
 
 .site-contact .site-address{padding:15px 0;}
 .site-address ul{margin:0;padding:0;list-style:none;}
@@ -144,6 +154,8 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .site-address ul li.icon-phone{background-image:url(images/icons/ico_phone.png);}
 .site-address ul li.icon-email{background-image:url(images/icons/ico_email.png);background-position:left 3px;}
 .site-address ul li.icon-email a{color:#777777;}
+.site-address ul li.terms{padding:0;}
+.site-address ul li.terms a{color:#96be3d;}
 
 .site-contact .apps{padding:15px 0;}
 .apps a{display:inline-block;width:100px;margin:0 0 0 25px;}
@@ -593,15 +605,39 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .modal-offer .nav-tabs li:first-child{margin:0;}
 
 .modal-offer .offer-info{max-height:220px;padding-left:15px;margin-top:10px;margin-left:-15px;border-left:4px solid #f2f2f0;overflow:auto;}
-.modal-offer .offer-description{height:45px;background:url(../images/offer_description.png) center center no-repeat;margin:0 0 10px;}
+.modal-offer .offer-description{height:45px;background:url(images/offer-description.png) center center no-repeat;margin:0 0 10px;}
 .modal-offer h3{color:#f7941e;font:bold 30px/34px Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;margin:10px 0;}
 .modal-offer h4{font-size:24px;font-style:italic;font-weight:lighter;margin:20px 0;}
 .modal-offer h4 .oldprice{color:#aaaaaa;display:inline;}
 .modal-offer h4 .newprice{display:inline-block;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;background:#F7941E;color:#ffffff;padding:5px;}
 .modal-offer h4 .saleoff{display:inline;}
-.modal-offer .btn-brown-gradient{height:45px;font:bold 18px/45px Arial, Helvetica, sans-serif;margin:20px 0;}
+.modal-offer .btn-brown-gradient{height:45px;font:700 18px/45px Arial, Helvetica, sans-serif;margin:20px 0;}
 .modal-offer .offer-terms{font-weight:bold;color:#000000;text-decoration:none;}
 .modal-offer .offer-terms:hover{cursor:pointer;}
+
+.nav-account{display:none;position:absolute;top:122px;right:0;left:0;background:#333333;border-top:1px solid #979797;border-bottom:1px solid #979797;}
+.nav-account dl{padding:15px 0;}
+.nav-account dt{font:700 14px/18px Arial, Helvetica, sans-serif;color:#979797;}
+.nav-account dt a{color:#ffffff;margin:0 15px;}
+.nav-account dt a.link-sign-out{color:#96be3d;}
+.nav-account dt a.link-account{color:#979797;}
+.nav-account dd{float:left;width:33.33%;padding:15px;text-align:center;}
+.nav-account dd a{display:block;font:700 22px/32px Arial, Helvetica, sans-serif;color:#ABABAB;text-decoration:none;}
+.nav-account dd a:hover{color:#ffffff;}
+.nav-account dd a span{display:inline-block;background:center center no-repeat;margin:0 15px 0 0;}
+.nav-account .icon-favorites{width:34px;height:32px;background-image:url(images/icons/icon-favorites.png);}
+.nav-account .icon-appointments{width:34px;height:32px;background-image:url(images/icons/icon-favorites.png);}
+.nav-account .icon-receipt{width:34px;height:32px;background-image:url(images/icons/icon-favorites.png);}
+.nav-account .icon-down{display:block;height:32px;background-image:url(images/icons/arrow_down_2.png);margin:0;}
+
+.nav-account a:hover .icon-favorites,
+.nav-account .active .icon-favorites{background-image:url(images/icons/icon-favorites-active.png);}
+.nav-account a:hover .icon-appointments,
+.nav-account .active .icon-appointments{background-image:url(images/icons/icon-favorites-active.png);}
+.nav-account a:hover .icon-receipt,
+.nav-account .active .icon-receipt{background-image:url(images/icons/icon-favorites-active.png);}
+.nav-account a:hover .icon-down,
+.nav-account .active .icon-down{background-image:url(images/icons/arrow_down_3.png);}
 
 @media (min-width:1200px){}
 
@@ -774,6 +810,8 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.group_link a{width:18.5%;}	
 	
 	.link-img a{font:400 11px/71px raleway,sans-serif;}
+	
+	.modal-offer hr{display:block;}
 }
 @media (min-width:768px){
 	.event-block .avatar img{height:132px;}
@@ -783,16 +821,16 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.iphone{display:block !important;}	
 	
 	.site-header{height:50px;}
-	.site-header .logo{width:117px;margin:8px 0 0 15px;}	
+	.site-header .logo{width:117px;margin:8px 0 0 15px;}
 	
-	.navbar-nav{margin:0;}
-	.navbar-nav{padding:16px 19px 8px 0;margin:0 -15px;}
-	.navbar-nav{background:rgba(255, 255, 255, 0.55);}	
+	.navbar-collapse.in{border-bottom:1px solid #979797;}	
+	
+	.navbar-nav{padding:16px 19px 8px 0;margin:0 -15px;/*background:rgba(255, 255, 255, 0.55);*/}	
 	.navbar-nav li{float:left;width:50%;margin:0 0 15px;}
-	.navbar-nav li a{margin:0 0 0 14px;padding:12px;background:#333333;color:#ffffff;text-align:center;}
-	.navbar-nav li a:hover{background:#cccccc;}
+	.navbar-nav li a{margin:0 0 0 14px;padding:12px;background:#333333;color:#ffffff;border:1px solid #ffffff;text-align:center;}
+	.navbar-nav li a:hover{background:#cccccc;border:1px solid #cccccc;}
 	.navbar-nav li a.bg-green,
-	.navbar-nav li a.bg-green:hover{background:#97BC47;color:#ffffff;}
+	.navbar-nav li a.bg-green:hover{background:#97BC47;color:#ffffff;border:1px solid #97BC47;}
 	
 	.site-banner{margin-top:50px;}
 	
@@ -879,17 +917,25 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.modal-class .modal-header .close{color:#ffffff;}
 	.modal-class .modal-footer .package-price{display:block;float:none;text-align:left;}
 	
+	.modal-offer .modal-content{width:100%;}
 	.modal-offer .logo-offer{float:none;}
 	.modal-offer .event{position:relative;width:90%;margin:0 auto;text-align:center;}
 	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
 	.modal-offer .offer-info{margin:0;border:0 none;}
 	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
 	
-	.modal-terms .ui-tabs-panel{border:0 none;}
+	.modal-form .modal-footer .link-form a{margin:0;}
+	
 	.modal-terms .ui-tabs-nav{background:transparent;border-top:1px solid #333333;}
 	.modal-terms .ui-tabs .ui-tabs-nav .ui-state-active .ui-tabs-anchor{color:#333333;}
 	.modal-terms .ui-tabs .ui-tabs-nav .ui-state-active .ui-tabs-anchor span{background-image:url(images/icons/arrow_down.png);}
+	.modal-terms .ui-tabs-panel{border:0 none;}
 	.modal-terms .ui-tabs-panel .scroll-bar{height:auto;}
+	
+	.nav-account{display:block;background:transparent;position:relative;top:0;border:0 none;}
+	.nav-account dd{float:none;width:100%;text-align:left;position:relative;}
+	.nav-account .icon-down{width:34px;position:absolute;top:15px;right:15px;}
+	
 }
 @media (max-width:568px){	
 	.group_link a{width:23.2%;}
@@ -964,6 +1010,9 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.site-contact{font:400 12px/21px raleway, sans-serif;}
 	.site-contact .section-header .logo{width:100px;}
 	.site-contact .section-header .btnLiveChat{width:62px;height:26px;background-position:left center;background-size:contain;}
+	.site-contact .section-header h2{font:500 20px/26px raleway, sans-serif;}
+	
+	.apps a{width:40%;}
 	
 	.info-tab .info-phone{font:500 20px/60px raleway,sans-serif;}
 	.info-tab .table-cell{font:400 13px/17px raleway,sans-serif;}
