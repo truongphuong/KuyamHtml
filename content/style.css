@@ -665,19 +665,22 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .appointments-header{font:700 21px/38px raleway,sans-serif;color:#333333;}
 .appointments-header hr{margin:18px 0 35px;border:0 none;border-top:1px solid #E7E7E7;border-bottom:1px solid #C2C2C2;}
 .appointments-num{display:inline-block;min-width:38px;font:400 16px/38px raleway,sans-serif;color:#ffffff;text-align:center;padding:0 5px;margin:0 15px 0 0;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;}
-.appointments-block{}
+.appointments-block{margin:0 0 40px;}
 .appointments-type{height:28px;font:700 13px/28px raleway,sans-serif;color:#ffffff;padding:0 12px;}
 .appointments-info{border:1px solid #333333;}
 .appointments-info .appointments-img{float:left;width:90px;height:90px;border:1px solid #333333;background:center center no-repeat;background-size:contain;margin:0 10px 0 0;}
 .appointments-info .iName{margin:5px 0;}
 .appointments-info .iName a{font:400 17px/20px raleway,sans-serif;color:#333333;}
 .appointments-info .iAddress{font:400 14px/17px raleway,sans-serif;color:#96be3d;margin:5px 0;}
-.appointments-info .shortDes{font:400 13px/18px raleway,sans-serif;color:#333333;margin:5px 0;}
+.appointments-info .shortDes{font:400 13px/18px raleway,sans-serif;color:#333333;}
 .appointments-info .shortDes a{color:#96be3d;}
-.appointments-info .date-price{float:right;font:400 13px/18px raleway,sans-serif;color:#333333;text-align:right;padding:5px 10px;}
-.appointments-control{}
-.appointments-control .link-controls{font:400 18px/22px raleway,sans-serif;color:#ABABAB;}
-.appointments-control span{display:inline-block;width:19px;height:19px;}
+.appointments-info .date-price{float:right;width:200px;font:400 13px/18px raleway,sans-serif;color:#333333;text-align:right;padding:5px 10px;}
+.appointments-info .date-price span{margin:0 0 0 35px;}
+.appointments-control{text-align:right;padding:10px 0 0;}
+.appointments-control .link-controls{font:400 18px/22px raleway,sans-serif;color:#ABABAB;margin:0 0 0 35px;}
+.appointments-control .link-controls:first-child{margin:0;}
+.appointments-control span{display:inline-block;width:19px;height:19px;margin:0 0 -3px 0;}
+.appointments-control .btn-book{display:inline-block;width:auto;font:400 16px/36px raleway,sans-serif;padding:0 35px;}
 
 .icon-modify{background:url(images/icons/icon_modify.png) center center no-repeat;}
 .icon-cancel-1{background:url(images/icons/icon_cancelappointment.png) center center no-repeat;}
@@ -685,6 +688,15 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 
 .comfirm-section .appointments-num,
 .comfirm-section .appointments-type{background:#99cc33;}
+
+.proposed-section .appointments-num,
+.proposed-section .appointments-type{background:#4290EA;}
+
+.spending-section .appointments-num,
+.spending-section .appointments-type{background:#FECB2E;}
+
+.canceled-section .appointments-num,
+.canceled-section .appointments-type{background:#C74124;}
 
 @media (min-width:1200px){}
 
@@ -1034,6 +1046,32 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.modal-terms .ui-tabs-panel{border:0 none;}
 	.modal-terms .ui-tabs-panel .scroll-bar{height:auto;}
 	
+	.appointments-section{padding:0;}
+	.appointments-section .container{padding:0;}
+	.appointments-section .row{margin:0;}
+	.appointments-section .col-xs-12{padding:0;}
+	
+	.appointments-header{padding:10px 15px;}
+	.appointments-control{padding:10px 15px;}
+	
+	.appointments-block{border:1px solid #ababab;margin:0;}
+	
+	.appointments-info{border:0 none;}
+	.appointments-info .appointments-img{margin:0 10px;}
+	.appointments-info .iName{margin:3px 10px;}
+	.appointments-info .iAddress{margin:5px 10px;}
+	.appointments-info .shortDes{margin:0 10px;}
+	.appointments-info .date-price{float:none;width:auto;clear:both;padding:10px;text-align:center;}
+	.appointments-info .date-price p{display:block;float:left;width:33.33%;}
+	.appointments-info .date-price p span{display:inline-block;width:48%;margin:0;}
+	.appointments-info .date-price p.date-info{text-align:left;}
+	.appointments-info .date-price p.unit-info{text-align:right;}
+	
+	.appointments-control{text-align:center;}
+	.appointments-control .link-controls{margin:0;}
+	.appointments-control .link-note{float:left;}
+	.appointments-control .link-cancel{float:right;}	
+	.appointments-control .btn-book{float:right;}
 }
 @media (max-width:568px){	
 	.group_link a{width:23.2%;}
@@ -1068,6 +1106,9 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.blockRight p{font:14px/32px raleway, sans-serif;}
 	
 	.site-contact .section-header h2{font:500 22px/26px raleway, sans-serif;}
+}
+@media (max-width:392px){
+	.appointments-info .date-price{font:400 10px/18px raleway,sans-serif;}
 }
 @media (max-width:380px){	
 	.group_link a{width:22.1%;}	
