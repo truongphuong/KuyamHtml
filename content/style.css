@@ -726,6 +726,50 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 .canceled-section .appointments-num,
 .canceled-section .appointments-type{background:#C74124;}
 
+/****************Tuan UI***************/
+.receipt-history-section{min-height:200px;padding-top:30px;}
+.receipt-history-section .total-appointment{display:inline-block;width:30px;height:30px;border-radius:15px;background-color:#97bc47;color:white;text-align:center;}
+.receipt-history-section .search-form fieldset{border:solid 1px #ababab;width:100%;padding-right:0px;margin:0px;}
+.receipt-history-section .receipt-header{border-bottom:solid 1px #c2c2c2;font-size:25px;font-weight:bold;padding:10px 0px;display:inline-block;}
+.receipt-history-section .glyphicon{background:center center no-repeat;width:24px;height:26px;vertical-align:bottom;}
+.receipt-history-section .icon-download-receipt{background-image:url(images/icons/icon_downloadreceipt.png);}
+.receipt-history-section .icon-print-receipt{background-image:url(images/icons/icon_printreceipt.png);}
+.receipt-history-section .download-receipt{font-size:15px;font-weight:bold;color:#ababab;text-decoration:none;padding-left:15px;}
+.receipt-history-section .download-receipt:hover{color:#333333;text-decoration:none;}
+.receipt-history-section .receipt-right-download{text-align:right;}
+.receipt-history-section .sort-by-date-section{font-size:14px;}
+.receipt-history-section .sort-by-date,
+.receipt-history-section .sort-by-date-range,
+.receipt-history-section .sort-by-date-payment{float:left;}
+.receipt-history-section .sort-by-date-range{padding-right:40px;padding-left:10px;}
+.receipt-history-section .receipt-row2{padding-top:20px;}
+.receipt-history-section .receipt-date{width:80px;text-align:center;margin:0px 10px;height:30px;}
+.receipt-history-section .any-payment{height:30px;width:140px;}
+.receipt-history-section .form-control{height:30px;}
+.receipt-history-section .list-receipt{font-size:14px;padding-top:20px;}
+.receipt-history-section .list-receipt .header{color:#ababab;}
+.receipt-history-section .appt-time{text-align:right;}
+.receipt-history-section .appt-payment{text-align:right;}
+.receipt-history-section .receipt-dropdown{background:url(images/icons/icon_receipt_dropdown.png) center center no-repeat;width:19px;height:11px;display:inline-block;cursor:pointer;padding-top:25px;}
+.receipt-history-section .receipt-dropdown-up{background:url(images/icons/icon_receipt_dropdown_up.png) center center no-repeat;}
+.receipt-history-section .appt-more-detail{text-align:right;}
+.receipt-history-section .list-receipt .item{border:solid 1px #c7c7c7;padding:10px auto;margin-bottom:10px;}
+.receipt-history-section .list-receipt .item > div{padding-top:10px;padding-bottom:10px;}
+.receipt-history-section .receipt-detail-review{text-align:right;padding-right:20px;}
+.receipt-history-section .detail-item-col1{text-align:right;font-weight:bold;}
+.receipt-history-section .detail-item{width:100%;}
+.receipt-history-section .detail-item .appt-payment{padding-right:5px;}
+.receipt-history-section .detail-item-receipt{display:none;}
+.receipt-history-section .receipt-search-area .search-form{float:right;}
+.receipt-history-section .detail-item-line{padding-right:5px;}
+.receipt-history-section .detail-item-line1{height:1px;background-color:#ababab;margin:11px 0px;}
+.receipt-history-section .receipt-search-area-mobile,
+.receipt-history-section .sort-by-date-mobile,
+.receipt-history-section .div-receipt-download-mobile,
+.receipt-history-section .appt-time-mobile,
+.receipt-history-section .appt-user-mobile{display:none;}
+/****************End Tuan UI***************/
+
 @media (min-width:1200px){}
 
 @media (min-width:980px) and (max-width:1024px){}
@@ -751,7 +795,7 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.navbar-nav li a.bg-green,
 	.navbar-nav li a.bg-green:hover{background:#97BC47;color:#ffffff;border:1px solid #97BC47;}
 	
-	.navbar-toggle{display:block;position: relative;float: right;padding: 9px 10px;margin-top: 8px;margin-right: 15px;margin-bottom: 8px;border-radius: 4px;}
+	.navbar-toggle{display:block;position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;border-radius:4px;}
 	
 	.site-banner{margin-top:50px;}
 	
@@ -954,6 +998,11 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.link-img a{font:400 11px/71px raleway,sans-serif;}
 	
 	.modal-offer hr{display:block;}
+	
+	/****************Tuan UI***************/
+	.receipt-history-section .sort-by-date-range{padding-right:10px;}
+	.receipt-history-section .receipt-date{margin:0px 5px;}
+	/****************Tuan UI***************/
 }
 @media (min-width:768px){
 	.event-block .avatar img{height:132px;}	
@@ -1100,7 +1149,53 @@ body{margin:0;padding:0;font:20px/24px raleway, sans-serif;color:#000000;}
 	.appointments-control .link-note{float:left;}
 	.appointments-control .link-cancel{float:right;}	
 	.appointments-control .btn-book{float:right;}
+	
+	/****************Tuan UI***************/
+	.receipt-history-section .receipt-header{border-bottom:solid white 0px;}
+	.receipt-history-section .receipt-search-area,
+	.receipt-history-section .sort-by-date,
+	.receipt-history-section .list-receipt .header,
+	.receipt-history-section .receipt-detail-review{display:none;}
+	.receipt-history-section .receipt-search-area-mobile,
+	.receipt-history-section .sort-by-date-mobile,
+	.receipt-history-section .div-receipt-download-mobile{display:block;}
+	.receipt-history-section .sort-by-date-range{padding-right:0px;width:100%;text-align:center;margin:15px 0px;padding-left:0px;}
+	.receipt-history-section .receipt-date{width:45%;margin-left:0px;}
+	.receipt-history-section .date-to{margin-left:10px;margin-right:0px;}
+	.receipt-history-section .sort-by-date-payment{margin-top:15px;margin-bottom:15px;width:100%;}
+	.receipt-history-section .any-payment{width:100%;}
+	.receipt-history-section .div-receipt-download-mobile{text-align:center;}
+	.receipt-history-section .download-receipt-mobile{font-size:18px;color:#ababab;text-decoration:none;}
+	.receipt-history-section .download-receipt-mobile:hover{color:#333333;text-decoration:none;}
+	.receipt-history-section .receipt-search-area{padding-right:0px;}
+	/****************Tuan UI***************/
 }
+/****************Tuan UI***************/
+@media (max-width:600px){	
+	.receipt-history-section .sort-by-date-mobile{font-size:120%;}
+	.receipt-history-section .receipt-date{width:35%;}
+	.receipt-history-section .detail-item-receipt .detail-item-receipt-col1{width:100%;margin-bottom:20px;}
+	.receipt-history-section .detail-item-receipt .detail-item-receipt-col2{width:100%;}
+	.receipt-history-section .detail-item-receipt .detail-item-receipt-col1 .detail-item-col1,
+	.receipt-history-section .detail-item-receipt .detail-item-receipt-col1 .detail-item-col2{width:50%;}
+	.receipt-history-section .appt-time,
+	.receipt-history-section .appt-user{display:none;}
+	.receipt-history-section .appt-time-mobile{display:block;width:100px;}
+	.receipt-history-section .appt-user-mobile{display:block;}
+	.receipt-history-section .appt-date,
+	.receipt-history-section .appt-payment,
+	.receipt-history-section .appt-time-mobile{width:25%;}
+	.receipt-history-section .appt-item-name,
+	.receipt-history-section .appt-user-mobile{width:50%;}
+	.receipt-history-section .list-receipt .item > div{padding-top:5px;padding-bottom:5px;}
+	.receipt-history-section .appt-more-detail{width:25%;}
+	.receipt-history-section .detail-item-empty{display:none;}
+	.receipt-history-section .detail-item-line{width:75%;}
+	.receipt-history-section .list-receipt .item{position:relative;border-color:#333333;border-left:solid white 0px;border-right:solid white 0px;}
+	.receipt-history-section .list-receipt .receipt-dropdown-up{position:absolute;z-index:1;right:15px;}
+	/*.receipt-history-section .receipt-history-content{padding-left:0px;padding-right:0px;}*/
+}
+/****************Tuan UI***************/
 @media (max-width:568px){	
 	.group_link a{width:23.2%;}
 }
