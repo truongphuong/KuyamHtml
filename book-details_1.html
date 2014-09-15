@@ -26,11 +26,11 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
-<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceBeginEditable name="head" --> 
 <!-- InstanceEndEditable -->
 <!-- jQuery UI CSS -->
 <link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
-<link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />  
+<link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />   
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
 
@@ -541,7 +541,7 @@
 								<a class="rslides_nav rslides2_nav next" href="#"></a>
 								<div class="table-css table-calendar-header">
                                     <div class="table-row">
-                                        <span class="table-cell calendar-item">
+                                        <span class="table-cell calendar-item active">
                                             <span class="day">Today</span>
                                             <span class="datetime">Sep 1, 2014</span>
                                         </span>
@@ -879,25 +879,52 @@
                                 <a title="" href="#" class="link-favorite"><span class="icon-unlike"></span> add to favorites</a>
                             </h2>                            
                     	</header>
-                        <div class="slide-pika">
-                        	<ul id="slide-pika">
-                                <li><img src="content/images/tab-photos.jpg"/></li>
-                                <li><img src="content/images/2.jpg"/></li>
-                                <li><img src="content/images/3.jpg"/></li>
-                                <li><img src="content/images/4.jpg"/></li>
-                                <li><img src="content/images/5.jpg"/></li>                               
-                            </ul>
-                            <script type="text/javascript">
-        						$(function(){
-									$("#slide-pika").PikaChoose({
-										showTooltips:false,
-										showCaption:false,
-										text:{previous: "", next: "" },
-										thumbOpacity: 1
-									});
-								});
-                            </script>
+                        
+                        <!-- -->
+                        <div class="photos-slide">
+                        	<!-- -->
+                            <div class="photos-stage" style="height: 470px;">
+                            	<img src="content/images/tab-photos.jpg" alt="" />
+                                <div class="photos-imgnav">
+                                    <a class="previous"></a>
+                                    <a class="next"></a>
+                                </div>
+                            </div>
+                            <!-- -->
+                            
+                            <!-- .pika-thumbs -->
+                            <ul class="photos-thumbs">
+                                <li class="active">
+                                    <div class="clip">
+                                    	<img class="active" src="content/images/tab-photos.jpg" />
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="clip">
+                                    	<img class="" src="content/images/2.jpg" />
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="clip">
+                                    	<img class="" src="content/images/3.jpg" />
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="clip">
+                                    	<img class="" src="content/images/4.jpg" />
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="clip">
+                                    	<img class="" src="content/images/5.jpg" />
+                                    </div>
+                                </li>
+                      		</ul>
+                            <!-- /.pika-thumbs -->
+                        	
                         </div>
+                        <!-- -->
+                        
                     </div>
                 </div>
             </div>
