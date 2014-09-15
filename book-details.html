@@ -531,7 +531,17 @@
                                 <!-- /.table-calendar -->
                                 
                             </div>
-                            <!-- /.slide-calendar -->                            
+                            <!-- /.slide-calendar --> 
+                            
+                            <script type="text/javascript">		
+                           		$(document).ready(function(){
+									$('.session-item').hover(function(){
+										$(this).addClass("active");
+									}, function(){
+										$(this).removeClass("active");
+									})								
+                                });
+                            </script>                         
                                                       
                             <!-- .slide-calendar -->
                         	<div class="slide-calendar-mobile hidden-sm hidden-md hidden-lg">
