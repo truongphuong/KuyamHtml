@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/master3.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/master1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=edge">
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" sizes="72x72" href="content/images/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="content/images/apple-touch-icon-114x114.png">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam - Receipt History</title>
+<title>Kuyam - Book Details</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -30,7 +30,7 @@
 <!-- InstanceEndEditable -->
 <!-- jQuery UI CSS -->
 <link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
-<link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />
+<link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" />  
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
 
@@ -42,8 +42,6 @@
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 <!-- InstanceBeginEditable name="script" -->
-<link type="text/css" rel="stylesheet" href="content/datepicker3.css" /> 
-<script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
 <!-- InstanceEndEditable --> 
 <script type="text/javascript" src="scripts/general.js"></script>  
 <!-- === END SCRIPTS === -->
@@ -63,14 +61,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>                
+                </button>
                 <a class="logo" title="" href="home.html"><img alt="" src="content/images/logo_kuyam.png" /></a>
                 <div class="system-date hidden-xs">
                     <p>Thursday, July 31 2014</p>
                 </div>
-                <a title="" href="#" class="account-user hidden-sm hidden-md hidden-lg">hi, Kourosh!</a>
             </div>
-            <!-- /.navbar-header -->
+            <!-- /.navbar-header -->            
             
             <!-- .search-form -->
             <div class="search-form hidden-xs">
@@ -88,61 +85,20 @@
             <!-- .navbar-collapse --> 
             <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navMenu">
-                    <li class="hidden-xs active"><a href="#" title="favorites">favorites<span class="hidden-xs"></span></a></li>                    
+                    <li class="active"><a href="home.html" title="Home">home<span class="hidden-xs"></span></a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>
                     <li><a href="book.html" title="Book">book<span class="hidden-xs"></span></a></li>
                     <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-sm hidden-md hidden-lg"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>
                     <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-xs"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>  
-                    <li class="hidden-sm hidden-md hidden-lg"><a href="#" title="settings">settings<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="#" title="sign out">sign out<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-xs">
-                    	<a class="link-account" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
-                    </li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="http://kuyam.org/" title="kuyam.org">kuyam.org<span class="hidden-xs"></span></a></li>
+                    <li class="hidden-xs"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>
+                    <li class="hidden-xs"><a class="bg-green" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);" title="login">login<span class="hidden-xs"></span></a></li>
+                    <li class="hidden-xs"><a class="bg-green" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);" title="sign up">sign up<span class="hidden-xs"></span></a></li>                    
+                    <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="login.html" title="login">login<span class="hidden-xs"></span></a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green"  href="register.html" title="sign up">sign up<span class="hidden-xs"></span></a></li>
                 </ul>
-                
-                <script>
-					$(function(){
-						var temp = 0;
-						var widthScreen;
-						$( window ).resize(function() {
-							widthScreen = $( window ).width();	
-							if(widthScreen < 768 && temp == 1){
-								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
-								$( "#nav-account" ).hide();
-								temp = 0;
-							}					
-						});							
-						
-						function showNavAccount(){
-							if(temp == 0){														
-								$( ".site-banner" ).animate({ "height": "+=186px" }, 500 );
-								temp = 1;
-							}else{
-								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
-								temp = 0;
-							}
-												
-							$( "#nav-account" ).toggle('blind', 500);
-						}
-						
-						$( ".link-account" ).click(function(){	
-							showNavAccount();
-						});
-					});
-				</script>
-                
-                <div id="nav-account" class="nav-account">
-                    <dl class="container clearfix">
-                        <dt class="hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
-                        <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
-                        <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
-                        <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
-                        <dt class="hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
-                    </dl>
-                </div>
             </div>
-            <!-- /.navbar-collapse --> 
+            <!-- /.navbar-collapse -->  
             
         </div>
     </header> 
@@ -157,384 +113,988 @@
     
     <!-- InstanceBeginEditable name="content" -->
     
-    <!-- .receipt-history-section -->
-    <section class="receipt-history-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-8">
-                    <span class="hidden-xs hidden-sm receipt-header">
-                    	appointment and receipt history <span class="total-appointment">5</span>
-                    </span>
-                    <span class="hidden-md hidden-lg receipt-header">
-                    	appointment receipts 
-                    </span>
+    <!-- .book-detail-page -->
+    <div class="event-section book-detail-page">
+		<div class="container">
+        
+        	 <!-- .book-detials-banner -->
+        	<div class="book-detials-banner hidden-sm hidden-md hidden-lg" style="background-image:url(content/images/tab-photos.jpg);">
+            	<div class="sale">
+                	<img width="101" src="content/images/icons/icon_featured-left.png" alt="" />
+                </div>    
+            	<a class="link-favorite" href="#" title=""><span class="icon-unlike"></span></a>
+            	<div class="company-info">
+                	<h1>Amy's Hair Salon</h1>
+                    <address>Santa Monica, CA</address>
+                    <ul class="clearfix">
+                    	<li>spa</li>                                                
+                        <li>nails</li>
+						<li>blowout</li>
+                    </ul>
+                </div>                        	
+            </div>
+            <!-- /.book-detials-banner -->            
+        
+            <!-- #tabs -->
+            <script>
+            $(function(){
+                $( "#tabs" ).tabs();
+            });
+            </script>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">book</a></li>
+                    <li><a href="#tabs-2">info</a></li>
+                    <li><a href="#tabs-3">reviews</a></li>
+                    <li><a href="#tabs-4">packages</a></li>
+                    <li class="hidden-xs"><a href="#tabs-5">photos</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <div class="book-tab">
+                        <header class="section-header hidden-xs">
+                            <h2>lets schedule an appointment!</h2>
+                        </header>
+                        <header class="section-header section-header-pink">
+                            <h2>pick a categgory:</h2>
+                            <div class="category-list">
+                                <ul class="tab-list clearfix">
+                                    <li>
+                                        <button class="active">blowout</button>
+                                    </li>
+                                    <li>
+                                        <button>facial</button>
+                                    </li>
+                                    <li>
+                                        <button>massage</button>
+                                    </li>
+                                </ul>
+                        	</div>
+                        </header>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-6">
+                            	<div class="select-what">
+                            
+                                    <!-- .select-options -->
+                                    <div class="dropdown select-options">                                        
+                                        <a title="" id="a-what" data-toggle="dropdown" href="#">
+                                        	What would you like done?<br /> <span class="options-icon options-icon-down"></span>
+                                     	</a>
+
+                                        <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-what">
+                                            <li>
+                                                <span class="options-info">
+                                                    <span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                    <span class="options-value">facial</span> 
+                                                    <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">(details)</a>
+                                                </span>
+                                                <span class="options-time">60m</span>
+                                                <span class="options-price">$60</span>                                                   
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                    <span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                    <span class="options-value">spa package</span> 
+                                                    <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">(details)</a>
+                                                </span>
+                                                <span class="options-time">45m</span>
+                                                <span class="options-price">$45</span>                                                    
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                    <span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                    <span class="options-value">Brazillian wax with nail service and full spa treatment</span> 
+                                                    <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">(details)</a>
+                                                </span>
+                                                <span class="options-time">90m</span>
+                                                <span class="options-price">$250</span>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                    <span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                    <span class="options-value">Brazillian wax</span> 
+                                                    <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">(details)</a>
+                                                </span>
+                                                <span class="options-time">30m</span>
+                                                <span class="options-price">$100</span>
+                                                    
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                    <span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                    <span class="options-value">spin</span> 
+                                                    <a class="link-class" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class">(class details)</a>
+                                                </span>
+                                                <span class="options-time">30m</span>
+                                                <span class="options-price">$100</span>
+                                                <hr />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.select-options -->
+                                    
+                                    <div class="select-text select-what-text">
+                                    </div>
+                            	</div>
+                                
+                            </div>   
+                            <div class="col-xs-12 col-sm-6">
+                            	<div id="select-who">
+                                    <!-- .select-options -->
+                                    <div class="dropdown select-options">                                        
+                                        <a title="" id="a-who" data-toggle="dropdown" href="#">
+                                        	Who would you like?<br /> <span class="options-icon options-icon-down"></span>
+                                     	</a>
+
+                                        <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-who">
+                                            <li>
+                                            	<span class="options-info">
+                                                	<span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                	<span class="options-value">George 1</span>
+                                                </span>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                	<span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                	<span class="options-value">George 2</span>
+                                                </span>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                	<span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                	<span class="options-value">George 3</span>
+                                                </span>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                	<span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                	<span class="options-value">George 4</span>
+                                                </span>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <span class="options-info">
+                                                	<span class="options-icon-mobile hidden-md hidden-lg"></span>
+                                                	<span class="options-value">George 5</span>
+                                                </span>
+                                                <hr />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.select-options -->
+                                    
+                                    <div class="select-text select-who-text">
+                                    </div>
+                            	</div>
+                                
+                            </div>
+                            <script type="text/javascript">
+								$(document).ready(function(){
+									$('.select-options').click(function(e){
+										$(".options-icon").removeClass("z-index-12");
+										$(this).find(".options-icon").addClass("z-index-12");												
+									})													
+																										
+									$('.options-text li').click(function(e){
+										var a = $(e.target).attr('class');
+										if(a != "link-service" || a != "link-class"){
+											$(".bg-white-50").fadeOut();
+											$('.options-text li').removeClass("active");
+											$(this).addClass("active");	
+											$('#select-who').fadeIn();
+											$('#select-who').find(".select-text").html("");
+											var getValue = $(this).find(".options-value").html();
+											$(this).parent().parent().parent().find(".select-text").html(getValue);
+										}
+									});
+								})
+							</script>
+                        </div>                        
+                        
+                        <!-- .site-calendar -->
+                        <div class="site-calendar clearfix">
+                        	<div class="bg-white-50"></div>
+                            
+                            <!-- .slide-calendar -->
+                        	<div class="slide-calendar hidden-xs">
+                            	<a class="rslides_nav rslides1_nav prev" href="#">last<br>week</a>
+								<a class="rslides_nav rslides1_nav next" href="#">next<br>week</a>
+                                
+                                <!-- .table-calendar -->
+                                <span class="table-css table-calendar">
+                                
+                                    <!-- .table-calendar-header -->
+                                    <span class="table-row table-calendar-header">
+                                        <span class="table-cell">
+                                            <span class="day">Today</span>
+                                            <span class="datetime">Sep 1, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Tuesday</span>
+                                            <span class="datetime">Sep 2, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Wednesday</span>
+                                            <span class="datetime">Sep 3, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Thursday</span>
+                                            <span class="datetime">Sep 4, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Friday</span>
+                                            <span class="datetime">Sep 5, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Saturday</span>
+                                            <span class="datetime">Sep 6, 2014</span>
+                                        </span>
+                                        <span class="table-cell">
+                                            <span class="day">Sunday</span>
+                                            <span class="datetime">Sep 7, 2014</span>
+                                        </span>
+                                    </span>
+                                    <!-- /.table-calendar-header -->
+                                    
+                                    <!-- /.table-calendar-body -->
+                                    <span class="table-row table-calendar-body">
+                                    
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-class">
+                                                    <span class="session-time">9:30am <br />George E. Spin</span>
+                                                    <a class="btn-pink btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-class">
+                                                    <span class="session-time">9:30am <br />George E. Spin</span>
+                                                    <a class="btn-pink btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-class">
+                                                    <span class="session-time">9:30am <br />George E. Spin</span>
+                                                    <a class="btn-pink btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                        <!-- /.table-cell -->
+                                        
+                                        <!-- .table-cell -->
+                                        <span class="table-cell">
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                            <span class="session">
+                                                <span class="session-item session-service">
+                                                    <span class="session-time">9:30am</span>
+                                                    <a class="btn-green btn-book" title="" href="#">book</a>
+                                                </span>
+                                            </span>
+                                        </span> 
+                                        <!-- /.table-cell -->                                                
+                                                                                      
+                                    </span>
+                                    <!-- /.table-calendar-body -->
+                                    
+                                </span>
+                                <!-- /.table-calendar -->
+                                
+                            </div>
+                            <!-- /.slide-calendar -->                            
+                                                      
+                            <!-- .slide-calendar -->
+                        	<div class="slide-calendar-mobile hidden-sm hidden-md hidden-lg">
+                            	<a class="rslides_nav rslides2_nav prev" href="#"></a>
+								<a class="rslides_nav rslides2_nav next" href="#"></a>
+								<div class="table-css table-calendar-header">
+                                    <div class="table-row">
+                                        <span class="table-cell calendar-item">
+                                            <span class="day">Today</span>
+                                            <span class="datetime">Sep 1, 2014</span>
+                                        </span>
+                                        <span class="table-cell calendar-item">
+                                            <span class="day">Tue</span>
+                                            <span class="datetime">Sep 2, 2014</span>
+                                        </span>
+                                        <span class="table-cell calendar-item">
+                                            <span class="day">Wed</span>
+                                            <span class="datetime">Sep 3, 2014</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="table-css calendar-item-info service-item-info">
+                                	<div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am</div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-green btn-book">book</a></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am</div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-green btn-book">book</a></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am</div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-green btn-book">book</a></div>
+                                    </div>
+                               	</div>
+                                <div class="table-css calendar-item-info class-item-info">
+                                    <div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-pink btn-book">book a spot</a></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-pink btn-book">book a spot</a></div>
+                                    </div>
+                                   	<div class="table-row">
+                                    	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
+                                        <div class="table-cell col-controls"><a title="" href="#" class="btn-pink btn-book">book a spot</a></div>
+                                    </div>
+                                </div>                                
+                                
+                            </div>
+                            <!-- .slide-calendar -->
+                            
+                        </div>
+                        <!-- /.site-calendar -->
+                        
+                    </div>
                 </div>
-                <div class="hidden-xs hidden-sm col-md-4 receipt-right-download">
-                    <a href="#" title="Download" class="download-receipt">
-                        <span class="glyphicon icon-download-receipt"></span>
-                        <span class="glyphicon-class"> download</span>
-                    </a>
-                    <a href="#" title="print all" class="download-receipt">
-                        <span class="glyphicon icon-print-receipt"></span>
-                        <span class="glyphicon-class"> print all</span>
-                    </a>
+                <div id="tabs-2">
+                    <div class="info-tab">
+                    	<div class="row">
+                       		<div class="col-xs-12 col-sm-6">
+                                <header class="section-header">
+                                    <h2>address:</h2>
+                                    <p>1460 4th Street.<br />Santa Monica, CA</p>
+                                </header>
+                                <div class="info-img hidden-sm hidden-md hidden-lg"><img alt="" src="content/images/info-tab.png" /></div>
+                                <a class="btn-green btn-direction" href="#" title="">directions</a>
+                                <div class="info-phone">(310) 426-7721</div>
+                                <header class="section-header">
+                                    <h2>business hours:</h2>
+                                </header>
+                                <div class="clear"></div>
+                                <div class="table-css">
+                                	<div class="table-row">
+                                    	<div class="table-cell">Mon</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"><a title="" href="">Open now</a></div>
+                                    </div>
+                                	<div class="table-row">
+                                    	<div class="table-cell">Tue</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell">Wed</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell">Thur</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell">Fri</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell">Sat</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                    <div class="table-row">
+                                    	<div class="table-cell">Sun</div>
+                                    	<div class="table-cell">9:00am - 9:00pm</div>
+                                        <div class="table-cell"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <header class="section-header hidden-xs">
+                                    <h2 class="clearfix">
+                                        <a title="" href="#" class="link-favorite"><span class="icon-unlike"></span> add to favorites</a>
+                                    </h2>
+                                </header>
+                                <header class="section-header hidden-xs">
+                                    <div class="info-img"><a data-target="#modal-offer" data-toggle="modal" href="javascript:void(0);" title=""><img alt="" src="content/images/info-tab.png" /></a></div>
+                                </header>
+                                <header class="section-header">
+                                    <a title="" href="#" class="info-web">company website</a>
+                                </header>
+                                <header class="section-header">
+                                    <a title="" href="#" class="info-pay"><span class="icon-pay"></span>PayPal.<br />pay in person</a>
+                                </header>
+                                <header class="section-header">
+                                    <a title="" href="#" class="info-cancel"><span class="icon-cancel"></span>cancel anytime</a>
+                                </header>
+                            </div>
+                        </div>
+               		</div>
+                </div>
+                <div id="tabs-3">
+                    <div class="reviews-tab">
+                        <header class="section-header">
+                            <h2 class="clearfix">
+                                business reviews:
+                                <a title="" href="#" class="link-favorite hidden-xs"><span class="icon-like"></span> add to favorites</a>
+                            </h2>
+                            <div class="votes clearfix">
+                                <span class="vote-icon yellow-star"></span>
+                                <span class="vote-icon yellow-star"></span>
+                                <span class="vote-icon yellow-star"></span>
+                                <span class="vote-icon yellow-star"></span>
+                                <span class="vote-icon gray-star"></span>
+                                <span class="total-review">4 customer reviews</span>
+                            </div>
+                    	</header>
+                        <div class="review-content">
+                            <div class="row">
+                            	<div class="col-xs-12 col-sm-6">
+                                	
+                                    <!-- .review-accordion -->
+                                    <div class="review-accordion">
+                                    	<div id="accordion">
+                                            <h3>Love this shop! Fast and wonderful cuts! <span class="text-read-full hidden-md hidden-lg">read full review <span class="icon-angle-down1"></span></span></h3>
+                                            <div>
+                                            	<div class="votes clearfix">
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon gray-star"></span>
+                                                </div>
+                                                <h4>John S. <time>February 14, 2014</time></h4>
+                                                <p>As a guy I just want a heap fansionable hair cut. No wait, no hassel. Everyone is very friendly there too.</p>
+                                            </div>
+                                            <h3>I've been here the last 3 times and it's always great! <span class="text-read-full hidden-md hidden-lg">read full review <span class="icon-angle-down1"></span></span></h3>
+                                            <div>
+                                                <div class="votes clearfix">
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon gray-star"></span>
+                                                </div>
+                                                <h4>John S. <time>February 14, 2014</time></h4>
+                                                <p>As a guy I just want a heap fansionable hair cut. No wait, no hassel. Everyone is very friendly there too.</p>
+                                            </div>
+                                            <h3>Hair cuts are hit or miss. not happy with my last. <span class="text-read-full hidden-md hidden-lg">read full review <span class="icon-angle-down1"></span></span></h3>
+                                            <div>
+                                                <div class="votes clearfix">
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon yellow-star"></span>
+                                                    <span class="vote-icon gray-star"></span>
+                                                </div>
+                                                <h4>John S. <time>February 14, 2014</time></h4>
+                                                <p>As a guy I just want a heap fansionable hair cut. No wait, no hassel. Everyone is very friendly there too.</p>
+                                            </div>
+                                     	</div> 
+                                        <script>
+											$(function(){
+												$( "#accordion" ).accordion({heightStyle: "content"});
+											});
+										</script>
+                                    </div>
+                                    <!-- /.review-accordion -->
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                	<header class="section-header">
+                                        <h2 class="clearfix">write a review</h2>
+                                        <p>you opinion is important! to write a<br /> review, please book with and visit<br /> this business.</p>                                        
+                                    </header>
+                                    <a title="" href="#" class="btn-green btn-book">book now</a>
+                                </div>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                <div id="tabs-4">
+                    <div class="package-tab">
+                        <header class="section-header">
+                            <h2 class="clearfix">
+                                packages:
+                                <a title="" href="#" class="link-favorite hidden-xs"><span class="icon-like"></span> add to favorites</a>
+                            </h2>
+                            <p class="hidden-xs">packages are here for you to help you save money!</p>
+                    	</header>
+                        <div class="no-package hidden-xs">
+                        	this business currently does not have any packages.
+                        </div>
+                        <div class="package-list">
+                        	<div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                
+                                	<!-- .package-block -->
+                                    <div class="package-block">
+                                    	<div class="package-img" style="background-image:url(content/images/package-1.jpg);"></div>
+                                        <div class="package-info">
+                                        	<h3>5 massage pack</h3>
+                                            <div class="package-purchase">
+                                            	<span class="package-price">$90</span>
+                                            	<a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                                            </div>
+                                            <div class="package-service">
+                                            	$18/massage<br />
+                                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">4 services</a><br />
+                                                expires 1 year after purchase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.package-block -->
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                
+                                	<!-- .package-block -->
+                                    <div class="package-block">
+                                    	<div class="package-img" style="background-image:url(content/images/package-1.jpg);"></div>
+                                        <div class="package-info">
+                                        	<h3>5 massage pack</h3>
+                                            <div class="package-purchase">
+                                            	<span class="package-price">$90</span>
+                                            	<a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                                            </div>
+                                            <div class="package-service">
+                                            	$18/massage<br />
+                                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">4 services</a><br />
+                                                expires 1 year after purchase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.package-block -->
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                
+                                	<!-- .package-block -->
+                                    <div class="package-block">
+                                    	<div class="package-img" style="background-image:url(content/images/package-1.jpg);"></div>
+                                        <div class="package-info">
+                                        	<h3>5 massage pack</h3>
+                                            <div class="package-purchase">
+                                            	<span class="package-price">$90</span>
+                                            	<a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                                            </div>
+                                            <div class="package-service">
+                                            	$18/massage<br />
+                                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">4 services</a><br />
+                                                expires 1 year after purchase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.package-block -->
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+
+                                
+                                	<!-- .package-block -->
+                                    <div class="package-block">
+                                    	<div class="package-img" style="background-image:url(content/images/package-1.jpg);"></div>
+                                        <div class="package-info">
+                                        	<h3>5 massage pack</h3>
+                                            <div class="package-purchase">
+                                            	<span class="package-price">$90</span>
+                                            	<a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                                            </div>
+                                            <div class="package-service">
+                                            	$18/massage<br />
+                                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">4 services</a><br />
+                                                expires 1 year after purchase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.package-block -->
+                                    
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                
+                                	<!-- .package-block -->
+                                    <div class="package-block">
+                                    	<div class="package-img" style="background-image:url(content/images/package-1.jpg);"></div>
+                                        <div class="package-info">
+                                        	<h3>5 massage pack</h3>
+                                            <div class="package-purchase">
+                                            	<span class="package-price">$90</span>
+                                            	<a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                                            </div>
+                                            <div class="package-service">
+                                            	$18/massage<br />
+                                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-service">4 services</a><br />
+                                                expires 1 year after purchase
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.package-block -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs-5">
+                    <div class="photo-tab hidden-xs">
+                        <header class="section-header">
+                            <h2>
+                                photos:
+                                <a title="" href="#" class="link-favorite"><span class="icon-unlike"></span> add to favorites</a>
+                            </h2>                            
+                    	</header>
+                        <div class="slide-pika">
+                        	<ul id="slide-pika">
+                                <li><img src="content/images/tab-photos.jpg"/></li>
+                                <li><img src="content/images/2.jpg"/></li>
+                                <li><img src="content/images/3.jpg"/></li>
+                                <li><img src="content/images/4.jpg"/></li>
+                                <li><img src="content/images/5.jpg"/></li>                               
+                            </ul>
+                            <script type="text/javascript">
+        						$(function(){
+									$("#slide-pika").PikaChoose({
+										showTooltips:false,
+										showCaption:false,
+										text:{previous: "", next: "" },
+										thumbOpacity: 1
+									});
+								});
+                            </script>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row receipt-row2">
-                <div class="col-xs-12 col-md-8 sort-by-date-section">
-                    <div class="sort-by-date">sort by date: </div>
-                    <div class="sort-by-date-mobile">search by date, payment or name</div>
-                    <div class="sort-by-date-range">
-                        <input type="text" class="receipt-date date-from" /> to <input type="text" class="receipt-date date-to" />
-                    </div>
-                    <div class="search-form receipt-search-area-mobile">
-                        <fieldset> 
-                            <span class="icon-list"></span>
-                            <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
-                            <div class="clear"></div>                         
-                        </fieldset>
-                    </div>
-                    <div class="sort-by-date-payment">
-                        <select class="any-payment">
-                            <option>any payment</option>
-                            <option>PayPal</option>
-                            <option>pay in person</option>
-                            <option>gift card</option>
-                            <option>packages</option>
-                        </select>
-                    </div>
-                    <div class="div-receipt-download-mobile">
-                        <a href="#" title="Download" class="download-receipt-mobile">
-                            <span class="glyphicon icon-download-receipt"></span>
-                            <span class="glyphicon-class"> download</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 receipt-search-area">
-                    <div class="search-form">
-                        <fieldset> 
-                            <span class="icon-list"></span>
-                            <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
-                            <div class="clear"></div>                         
-                        </fieldset>
-                    </div>
-                </div>
-            </div> 
+            <!-- /#tabs -->
             
-            <div class="list-receipt">
-                <div class="row header">
-                    <div class="col-xs-2 appt-date">
-                        appt. date
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        appt. time
-                    </div>
-                    <div class="col-xs-2">
-                        category
-                    </div>
-                    <div class="col-xs-4">
-                        company name
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        payment
-                    </div>
-                    <div class="col-xs-1"></div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-       	</div>
-    </section>
-    <!-- .receipt-history-section -->
+   		</div>
+    </div>
+    <!-- /.book-detail-page -->
     
-    <script>
-		$(function() {
-			$(".receipt-dropdown").on("click", function(){
-				$(this).parents("div.item").find(".detail-item-receipt").toggle();	
-				if($(this).hasClass("receipt-dropdown-up"))	
-				{
-					$(this).removeClass("receipt-dropdown-up");
-				} else {
-					$(this).addClass("receipt-dropdown-up");
-					//This is mobile case
-					if($(document).width() <= 600)
-					{
-						$(this).css({"bottom": -($(this).parents(".item").height() - 50) + "px"});
-					}
-				}	
-				
-				
-			});
-			
-			$(".date-from, .date-to").datepicker({format: 'mm/dd/yy'});
-		});
-	</script>
+    <!-- .map -->    
+    <div class="map hidden-xs">
+    	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
+		<script type="text/javascript">
+            
+            var map;
+            function initialize(){
+                var myLatlng = new google.maps.LatLng(34.0906351, -118.374025);
+                var myOptions ={
+                    zoom: 16,
+                    disableDefaultUI: true,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                  }
+                  map = new google.maps.Map(document.getElementById("google-map"), myOptions);
+                  var myLatLng = new google.maps.LatLng(34.0906351, -118.374025);
+                  var beachMarker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map
+                  });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize); 
+            
+            
+            function loadmap(lat, lon, googleIcon){
+                var myLatlng = new google.maps.LatLng(lat, lon);
+                var myOptions ={
+                zoom: 16,
+                disableDefaultUI: true,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                map = new google.maps.Map(document.getElementById("google-map"), myOptions);
+                var myLatLng = new google.maps.LatLng(lat, lon);
+                var beachMarker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                icon: googleIcon
+            
+            
+                });
+            }
+        </script>
+        <div id="google-map"></div>
+    </div>
+    <!-- /.map -->
+    
+    <!-- .service-details -->    
+    <div class="modal fade modal-details modal-service" id="modal-service" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h4 class="modal-title">service details</h4>
+      			</div>
+                <div class="modal-body">
+                    <h3>5 massage pack</h3> 
+                    <p>
+                        $18/massage
+                        <br />
+                        expires 1 year after purchase
+                    </p>
+                    <h4>applies to following services:</h4>
+                    <p>
+                        hot stone massage
+                        <br />
+                        deep tissue massage
+                        <br />
+                        swedish massage therapy
+                        <br />                 
+                        aromatherapy massage 
+                    </p>                     
+                </div>
+                <div class="modal-footer clearfix">
+                    <span class="package-price"><span>$75</span></span> 
+                    <button type="button" class="btn-green btn-purchase">purchase</button>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.service-details -->
+    
+    <!-- .class-details -->    
+    <div class="modal fade modal-details modal-class" id="modal-class" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<h4 class="modal-title">class details</h4>
+      			</div>
+                <div class="modal-body">
+                    <h3>spa:</h3> 
+                    <p>
+                        Take advantage of our wonderful spa designed to help you leave your hectic life at the door and close yourself in a world of relaxation and well-being.
+                    </p>                     
+                </div>
+                <div class="modal-footer clearfix">
+                	<span class="package-price">
+                        <span>60 min</span> 
+                        <span>$75</span> 
+                    </span>
+                    <button type="button" class="btn-pink btn-book">book now</button>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.class-details -->
+    
+    <!-- .modal-offer -->
+    <div class="modal fade modal-offer" id="modal-offer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      	<div class="modal-dialog">
+       		<div class="modal-content">
+          		<div class="modal-header clearfix">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <a class="logo-offer" title="" href="">
+                        <img src="content/images/logo_la.png" alt="">
+                    </a>
+                    <div class="event">
+                        Best beautify massage 2nd time
+                        <br />
+                        <span>Jun 01 - Jul 31</span>
+                    </div>
+          		</div>
+          		<div class="modal-body clearfix">
+                
+                	<!-- Nav tabs -->
+                    <ul class="nav nav-tabs clearfix" role="tablist">
+                        <li class="active">
+                            <a href="#tab1" role="tab" data-toggle="tab">
+                                <i>$5.00</i>
+                                <span title="gentle..."> gentle... </span>
+                                <br />
+                                <span title="yoga"> yoga </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab2" role="tab" data-toggle="tab">
+                                <i>$5.00</i>
+                                <span title="back..."> back... </span>
+                                <br />
+                                <span title="body massage"> body massage </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab3" role="tab" data-toggle="tab">
+                                <i>$5.00</i>
+                                <span title="back..."> back... </span>
+                                <br />
+                                <span title="body massage"> body massage </span>
+                            </a>
+                        </li>
+                 	</ul>
+                    <!-- /Nav tabs -->
+                    
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                        	<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                <div class="text-center">                                	
+                                    <h3>the offer</h3>
+                                    <h4><del class="oldprice">$10.0</del> <span class="newprice">$5.0</span> <span class="saleoff">- 50% off</span></h4>
+                                    <a class="btn-brown-gradient" href="#">check for availability</a>
+                                    <p>promotional offers subject to <span class="offer-terms"  data-toggle="modal" data-target="#modal-terms">terms</span></p>
+                                    <hr class="iphone" />
+                                </div>
+                            </div>
+                        	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                            	<div class="offer-info">
+                                    <div class="offer-description"></div>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                    <p> In view of the special pricing for the Beautify LA event, all payments are nonrefundable unless written notice of cancellation is received by Kuyam within 24 hours after Kuyam confirms the appointment; provided that no refund will be given if the appointment is cancelled within 24 hours of the appointment time. </p>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="tab-pane" id="tab2">...</div>
+                        <div class="tab-pane" id="tab3">...</div>
+                    </div>
+                    <!-- /Tab panes -->
+          		</div>
+       		</div>
+      	</div>
+    </div>
+    <!-- /.modal-offer -->
     
 	<!-- InstanceEndEditable -->
     
@@ -572,39 +1132,39 @@
                         <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
                     </div>
                     <div class="live-chat">                
-                        <a class="btnLiveChat off" href="#" title="live chat"></a>   
+                        <a class="btnLiveChat off" href="#" title="live chat"></a> 
                         <a class="link-terms hidden-sm hidden-md hidden-lg" href="terms.html" title="terms of use and privacy">terms of use and privacy</a> 
-                        <a class="link-terms hidden-xs" title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use and privacy</a>         
+                        <a class="link-terms hidden-xs" title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use and privacy</a>                    
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 hidden-md hidden-lg">        
+                <div class="col-xs-12 col-sm-6 col-md-4">        
                     <header class="section-header">
-                        <h2>get kuyam app free!</h2>                        
-                    </header>
-                    <div class="apps"> 
-                        <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
-                        <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
-                    </div>   
-                    <ul class="link-socials clearfix"> 
-                        <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
-                        <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
-                        <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
-                        <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
-                        <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
-                    </ul>
-                </div> 
-                <div class="hidden-xs hidden-sm col-md-4">
-                    <ul class="nav-footer">
-                        <li><a href="#" title="favorites">favorites</a></li>                    
-                        <li><a href="book.html" title="Book">book</a></li>
-                        <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA</a></li>
-                        <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog</a></li>
-                        <li><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works</a></li>
-                        <li><a href="#" title="settings">add company</a></li>  
-                        <li><a href="#" title="settings">settings</a></li>
-                        <li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
-                    </ul>
-                </div>             
+                        <h2>sign up</h2>      
+                    </header>                
+                    <fieldset class="contact-form"> 
+                        <label>name:</label>                
+                        <input class="form-control" type="text" value="Enter Name" onfocus="if (this.value == 'Enter Name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Enter Name'; }" />                
+                        <label>email:</label>               
+                        <input class="form-control" type="email" value="Enter Email" onfocus="if (this.value == 'Enter Email') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Enter Email'; }" />               
+                        <input type="submit" class="btn btn-green" value="Sign up" />                    
+                    </fieldset>
+                    <div class="hidden-md hidden-lg">
+                    	<header class="section-header">
+                            <h2>get kuyam app free!</h2>                        
+                        </header>
+                        <div class="apps"> 
+                            <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
+                            <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
+                        </div>                    
+                        <ul class="link-socials clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
+                            <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
+                        </ul>
+                    </div>
+                </div>            
     		</div>
         </div>
     </section>
@@ -631,7 +1191,7 @@
     
     <div class="loading"></div>
     <div class="light-box"></div>
-    <!-- END HTML -->   
+    <!-- END HTML --> 
     
     <!-- .modal-login -->    
     <div class="modal fade modal-form modal-login" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1608,7 +2168,7 @@
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
-    <!-- /.modal-term -->  
-    
+    <!-- /.modal-term -->
+
 </body>
 <!-- InstanceEnd --></html>
