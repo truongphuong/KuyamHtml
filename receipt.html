@@ -182,13 +182,13 @@
                     <div class="sort-by-date-range">
                         <input type="text" class="receipt-date date-from" /> to <input type="text" class="receipt-date date-to" />
                     </div>
-                    <div class="search-form receipt-search-area-mobile">
+                    <!--<div class="search-form receipt-search-area-mobile">
                         <fieldset> 
                             <span class="icon-list"></span>
                             <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
                             <div class="clear"></div>                         
                         </fieldset>
-                    </div>
+                    </div>-->
                     <div class="sort-by-date-payment">
                         <select class="any-payment">
                             <option>any payment</option>
@@ -198,20 +198,25 @@
                             <option>packages</option>
                         </select>
                     </div>
-                    <div class="div-receipt-download-mobile">
+                    
+                </div>
+                <div class="col-xs-12 col-md-4">
+                	<div class="receipt-search-area">
+                        <div class="search-form">
+                            <fieldset> 
+                                <span class="icon-list"></span>
+                                <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
+                                <div class="clear"></div>                         
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-8 sort-by-date-section">
+                	<div class="div-receipt-download-mobile">
                         <a href="#" title="Download" class="download-receipt-mobile">
                             <span class="glyphicon icon-download-receipt"></span>
                             <span class="glyphicon-class"> download</span>
                         </a>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4 receipt-search-area">
-                    <div class="search-form">
-                        <fieldset> 
-                            <span class="icon-list"></span>
-                            <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
-                            <div class="clear"></div>                         
-                        </fieldset>
                     </div>
                 </div>
             </div> 
@@ -527,7 +532,17 @@
 				
 			});
 			
-			$(".date-from, .date-to").datepicker({format: 'mm/dd/yy'});
+			$('.date-from').datepicker({
+				format: 'mm/dd/yy',
+			}).on('changeDate', function(e){
+				$(this).datepicker('hide');
+			});
+			
+			$('.date-to').datepicker({
+				format: 'mm/dd/yy',
+			}).on('changeDate', function(e){
+				$(this).datepicker('hide');
+			});
 		});
 	</script>
     
