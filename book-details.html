@@ -37,6 +37,10 @@
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 <!-- InstanceBeginEditable name="script" -->
+<link type="text/css" rel="stylesheet" href="content/bootstrap-select.css" /> 
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script>
+<link type="text/css" rel="stylesheet" href="content/bootstrap-checkbox.css" /> 
+<script type="text/javascript" src="scripts/bootstrap-checkbox.js"></script>
 <!-- InstanceEndEditable --> 
 <script type="text/javascript" src="scripts/general.js"></script>  
 <!-- === END SCRIPTS === -->
@@ -68,6 +72,9 @@
                	<h1><a class="btnLiveChat off" href="#" title="live chat"></a>  Amy's Hair Salon</h1>
                 <div class="clear"></div>                
                 <ul class="clearfix">
+                	<li>
+                    	<a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                    </li>
                     <li>spa</li>                                                
                     <li>nails</li>
                     <li>blowout</li>
@@ -90,6 +97,48 @@
                     <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="login.html" title="login">login<span class="hidden-xs"></span></a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green"  href="register.html" title="sign up">sign up<span class="hidden-xs"></span></a></li>
                 </ul>
+                
+                <script>
+					$(function(){
+						var temp = 0;
+						var widthScreen;
+						$( window ).resize(function() {
+							widthScreen = $( window ).width();	
+							if(widthScreen < 768 && temp == 1){
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								$( "#nav-account" ).hide();
+								temp = 0;
+							}					
+						});							
+						
+						function showNavAccount(){
+							if(temp == 0){														
+								$( ".site-banner" ).animate({ "height": "+=186px" }, 500 );
+								temp = 1;
+							}else{
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								temp = 0;
+							}
+												
+							$( "#nav-account" ).toggle('blind', 500);
+						}
+						
+						$( ".link-account" ).click(function(){	
+							showNavAccount();
+						});
+					});
+				</script>
+                
+                <div id="nav-account" class="nav-account">
+                    <dl class="container clearfix">
+                        <dt class="hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
+                        <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
+                        <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
+                        <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
+                        <dt class="hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
+                    </dl>
+                </div>
+                
             </div>
             <!-- /.navbar-collapse -->
             
@@ -561,29 +610,29 @@
                                 <div class="table-css calendar-item-info service-item-info">
                                 	<div class="table-row">
                                     	<div class="table-cell col-time">9:30 am</div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-green btn-book">book</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-green btn-book">book</a></div>
                                     </div>
                                     <div class="table-row">
                                     	<div class="table-cell col-time">9:30 am</div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-green btn-book">book</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-green btn-book">book</a></div>
                                     </div>
                                     <div class="table-row">
                                     	<div class="table-cell col-time">9:30 am</div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-green btn-book">book</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-green btn-book">book</a></div>
                                     </div>
                                	</div>
                                 <div class="table-css calendar-item-info class-item-info">
                                     <div class="table-row">
                                     	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-pink btn-book">book a spot</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-pink btn-book">book a spot</a></div>
                                     </div>
                                     <div class="table-row">
                                     	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-pink btn-book">book a spot</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-pink btn-book">book a spot</a></div>
                                     </div>
                                    	<div class="table-row">
                                     	<div class="table-cell col-time">9:30 am <span>George E. spin class</span></div>
-                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-class" class="btn-pink btn-book">book a spot</a></div>
+                                        <div class="table-cell col-controls"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout" class="btn-pink btn-book">book a spot</a></div>
                                     </div>
                                 </div>                                
                                 
@@ -1133,7 +1182,7 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        			<h4 class="modal-title"><span class="checkout-time-complete">time to complete booing <time>09:39</time></span>checkout</h4>
+        			<h4 class="modal-title"><span class="checkout-time-complete hidden-xs">time to complete booing <time>09:39</time></span>checkout</h4>
       			</div>
                 <div class="modal-body">
                 
@@ -1156,22 +1205,26 @@
                                     <h4>blowout</h4>
                                     <div class="checkout-time-date"><time>Tue, Sept 9th</time> at 11:00 am - 11:45 am</div>
                                 </div>
-                                <div class="checkout-row">
-                                    <select class="checkout-select">
+                                <div class="checkout-row checkout-select">
+                                    <select class="selectpicker">
                                         <option>with George</option>
                                     </select>
                                     <span class="alert-error">invalid</span>
                                 </div>
-                                <div class="checkout-row">
-                                    <select class="checkout-select">
+                                <div class="checkout-row checkout-select">
+                                    <select class="selectpicker">
                                         <option>for Brett</option>
                                     </select>
                                     <span class="alert-error">invalid</span>
                                 </div>
+                                <div class="checkout-time-left hidden-sm hidden-md hidden-lg">
+                                	time left to complete page
+                                	<time><span class="icon-time-left"></span> 09:39</time>
+                                </div>
                                 <div class="checkout-row checkout-confirm">
-                                    comfirmation method:
-                                    <input type="checkbox" id="cbEmail" /><label for="cbEmail">email</label>
-                                    <input type="checkbox" id="cbSMS" /><label for="cbSMS">SMS</label>
+                                    <span class="checkout-confirm-title">comfirmation<span class="hidden-xs"> method</span>:</span>
+                                    <input class="checkbox" type="checkbox" id="cbEmail" /><label for="cbEmail">email</label>
+                                    <input class="checkbox" type="checkbox" id="cbSMS" /><label for="cbSMS">SMS</label>
                                 </div>
                                 <div class="checkout-row checkout-user">
                                 	<div class="checkout-user-info">
@@ -1206,11 +1259,23 @@
                             <div class="checkout-price clearfix">
                             	<div class="table-css">
                                 	<div class="table-row">
-                                    	<div class="table-cell"><p>total due:</p></div>
-                                        <div class="table-cell"></div>
+                                    	<div class="table-cell price-details"><p>total due:</p></div>
+                                        <div class="table-cell price-type"></div>
                                     </div>
                                     <div class="table-row">
                                     	<div class="table-cell price-details"><h3>$75.00</h3></div>
+                                        <div class="table-cell price-type"></div>
+                                    </div>
+                                    <div class="table-row checkout-discount-promo hide">
+                                    	<div class="table-cell price-details"><h3>-$5.00</h3></div>
+                                        <div class="table-cell price-type">promo</div>
+                                    </div>
+                                    <div class="table-row checkout-discount-giftcard hide">
+                                    	<div class="table-cell price-details"><h3>-$30.00</h3></div>
+                                        <div class="table-cell price-type">gift card</div>
+                                    </div>
+                                    <div class="table-row checkout-total hide">
+                                    	<div class="table-cell price-total"><h3><span>$45.00</span></h3></div>
                                         <div class="table-cell price-type"></div>
                                     </div>
                                 </div>                     
@@ -1218,16 +1283,17 @@
                             <!-- /.checkout-price -->
                             
                             <!-- .checkout-payment -->
-                            <div class="checkout-payment">
+                            <div id="checkout-step1" class="checkout-payment">
                             	<header>select payment method</header>
                             	<div class="checkout-method method-promo">
                                 	<span class="icon-method icon-promo"></span>
-                                    <input class="form-control txt-promo" type="text" />
+                                    <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
                                     <input class="btn-green btn-method btn-promo" type="button" value="apply" />
+                                    <div class="discount-applied promo-applied hide">$5.00 applied</div>
                                 </div>
                                 <div class="checkout-method method-gift-card">
                                 	<span class="icon-method icon-gift-card"></span>
-                                    <input class="btn-yellow btn-method btn-gift-card" type="button" value="gift card"  />
+                                    <input id="btn-gift-card" class="btn-yellow btn-method btn-gift-card" type="button" value="gift card"  />
                                 </div>
                                 <div class="checkout-method method-credit">
                                 	<span class="icon-method icon-credit"></span>
@@ -1236,6 +1302,45 @@
                                 <div class="checkout-method method-cash">
                                 	<span class="icon-method icon-cash"></span>
                                     <input class="btn-green btn-method btn-cash" type="button" value="pay in person"  />
+                                </div>
+                            </div>
+                            <!-- /.checkout-payment -->
+                            
+                            <!-- /.checkout-giftcard -->
+                            <div id="checkout-step2" class="checkout-payment checkout-gift-card hide">
+                            	<div class="checkout-method">
+                                    <input class="form-control txt-giftcard" type="text" value="enter gift card number" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" />
+                                    <input class="btn-green btn-method btn-giftcard" type="button" value="redeem" />
+                                </div>
+                                <div class="checkout-balance">
+                                	<p>current gift card balance</p>
+                                    <h3>$0.00</h3>
+                                    <div class="checkout-balance-use">use $30.00 today?</div>
+                                </div>
+                                <div class="checkout-method">
+                                    <input id="btn-confirm" class="btn-yellow btn-method btn-confirm" type="button" value="confirm"  />
+                                </div>
+                                <div class="checkout-back">
+                                    <a id="link-back" class="link-back" title="" href="javascript:void(0);"><span class="icon-back"></span> back</a>
+                                </div>
+                            </div>
+                            <!-- /.checkout-giftcard -->
+                            
+                            <!-- .checkout-payment -->
+                            <div id="checkout-step3" class="checkout-payment checkout-applied hide">
+                            	<div class="checkout-method method-promo">
+                                	<span class="icon-method icon-promo"></span>
+                                    <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
+                                    <input class="btn-green btn-method btn-promo" type="button" value="apply" />
+                                    <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                                </div>
+                                <div class="checkout-method method-gift-card">
+                                	<span class="icon-method icon-gift-card"></span>
+                                    <div class="discount-applied giftcard-applied">$30.00 applied</div>
+                                </div>
+                                <div class="checkout-method method-credit">
+                                	<span class="icon-method icon-credit"></span>
+                                    <input class="btn-blue btn-method btn-credit" type="button" value="PayPal or credit card"  />
                                 </div>
                             </div>
                             <!-- /.checkout-payment -->
@@ -1261,9 +1366,34 @@
     
     <script>         
 		$(document).ready(function() { 
+			$('.selectpicker').selectpicker();
+			
+			$('.checkbox').checkbox();
+		
 			$(".checkout-user-info .link-change").click(function(){
 				$(this).parent().addClass("hide");
 				$(this).parent().parent().find(".checkout-user-input").removeClass("hide");				
+			}) 
+			
+			$("#btn-gift-card").click(function(){
+				$('#checkout-step1').addClass("hide");
+				$('#checkout-step2').removeClass("hide");				
+			}) 
+			
+			$("#link-back").click(function(){
+				$('#checkout-step1').removeClass("hide");
+				$('#checkout-step2').addClass("hide");				
+			}) 
+			
+			$("#btn-confirm").click(function(){
+				$('#checkout-step2').addClass("hide");
+				$('#checkout-step3').removeClass("hide");
+				$('.checkout-discount-giftcard, .checkout-total').removeClass("hide");				
+			})
+			
+			$(".btn-promo").click(function(){
+				$('.method-promo').addClass("checkout-promo-applied");
+				$('.promo-applied, .checkout-discount-promo, .checkout-total').removeClass("hide");
 			}) 
 		})
 	</script>

@@ -68,6 +68,9 @@
                	<h1><a class="btnLiveChat off" href="#" title="live chat"></a>  Amy's Hair Salon</h1>
                 <div class="clear"></div>                
                 <ul class="clearfix">
+                	<li>
+                    	<a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                    </li>
                     <li>spa</li>                                                
                     <li>nails</li>
                     <li>blowout</li>
@@ -90,6 +93,48 @@
                     <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="login.html" title="login">login<span class="hidden-xs"></span></a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green"  href="register.html" title="sign up">sign up<span class="hidden-xs"></span></a></li>
                 </ul>
+                
+                <script>
+					$(function(){
+						var temp = 0;
+						var widthScreen;
+						$( window ).resize(function() {
+							widthScreen = $( window ).width();	
+							if(widthScreen < 768 && temp == 1){
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								$( "#nav-account" ).hide();
+								temp = 0;
+							}					
+						});							
+						
+						function showNavAccount(){
+							if(temp == 0){														
+								$( ".site-banner" ).animate({ "height": "+=186px" }, 500 );
+								temp = 1;
+							}else{
+								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								temp = 0;
+							}
+												
+							$( "#nav-account" ).toggle('blind', 500);
+						}
+						
+						$( ".link-account" ).click(function(){	
+							showNavAccount();
+						});
+					});
+				</script>
+                
+                <div id="nav-account" class="nav-account">
+                    <dl class="container clearfix">
+                        <dt class="hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
+                        <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
+                        <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
+                        <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
+                        <dt class="hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
+                    </dl>
+                </div>
+                
             </div>
             <!-- /.navbar-collapse -->
             
