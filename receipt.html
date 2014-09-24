@@ -101,7 +101,7 @@
 						$( window ).resize(function() {
 							widthScreen = $( window ).width();	
 							if(widthScreen < 768 && temp == 1){
-								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								$( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
 								$( "#nav-account" ).hide();
 								temp = 0;
 							}					
@@ -109,10 +109,10 @@
 						
 						function showNavAccount(){
 							if(temp == 0){														
-								$( ".site-banner" ).animate({ "height": "+=186px" }, 500 );
+								$( ".site-banner" ).animate({ "margin-top": "+=186px" }, 500 );
 								temp = 1;
 							}else{
-								$( ".site-banner" ).animate({ "height": "-=186px" }, 500 );
+								$( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
 								temp = 0;
 							}
 												
