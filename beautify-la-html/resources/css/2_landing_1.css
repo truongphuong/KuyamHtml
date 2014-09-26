@@ -1,0 +1,161 @@
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, time{display:block;}
+audio[controls], canvas, video{display:inline-block;*display:inline;*zoom:1;}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+body{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6, p{padding:0;margin:0;}
+a, a:hover, a:active{outline:0;}
+img{border:0;width:100%;}
+form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
+
+/* =============================================================================
+   PRIMARY STYLES
+   Author:bka Interactive Ltd.
+   ========================================================================== */
+
+   /* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection:www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */ 
+@media print{	
+}
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+.clearfix:before, .clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1;}
+.clearer{clear:both;line-height:0;}
+.clear{clear:both;display:block;line-height:0;height:0;}
+.clear10{clear:both;display:block;line-height:0;height:10px;}
+
+*, *:hover, *:visited, *:focus{outline:0 none;}
+
+body{margin:0;padding:0;background:#ffffff;font-family:Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;font-size:20px;line-height:26px;color:#000000;}
+
+.bg_white{background:#ffffff;}
+.bg_black{background:#170E0C;}
+
+.desktop{display:block;}
+.iphone{display:none;}
+
+.img_100{display:block;}
+.img_80{display:none;}
+
+#header{}
+#header .header_bar{}
+
+.Beautify_LA{width:960px;margin:0 auto;}
+.Beautify_LA .header{}
+.Beautify_LA .header .logo2{display:block;width:361px;height:89px;margin:26px auto 28px;}
+
+.Beautify_LA .main_content{background:#ffffff;}
+.Beautify_LA .main_content .article{background:#ffffff;}
+
+.Beautify_LA .footer{text-align:right;}
+.Beautify_LA .footer .logo{float:left;margin:10px 0;}
+.Beautify_LA .footer .copyright{font-family:Futura, "Trebuchet MS", Arial, sans-serif;font-size:12px;color:#ffffff;}
+
+.content_logo{float:left;width:479px;padding:36px 0;}
+.content_image{width:367px;margin:0 auto;}
+
+.content{float:left;background:#e5e6e7;border-left:1px solid #000000;}
+
+/*thanks*/
+.content_bg{background:#E5E6E7;min-height:359px;padding:30px 40px;width:479px;}
+.thanks ul{margin:0 20px;padding:0;list-style-image:url(../images/beautify_la_100_main_menu_active.png);}
+.thanks ul li{padding:0 40px;list-style-image:url(../images/beautify_la_100_main_menu_active.png);}
+
+@media (min-width:768px) and (max-width:979px) {
+	#header{}
+	
+	.img_100{display:none;}
+	.img_80{display:block;}
+	
+	.Beautify_LA{width:768px;}
+	
+	.Beautify_LA .header .logo2{}
+	
+	.content_logo{width:100%;}
+	.content{border:0 none;}
+	
+	/*thanks*/
+	.content_bg{width:100%;}
+	.thanks ul{list-style-image:url(../images/beautify_la_80_main_menu_active.png);}
+	
+}
+@media (max-width:767px) {
+	#header{}
+	
+	.desktop{display:none;}
+	.iphone{display:block;}
+
+	.img_60{display:block;}
+	.img_40{display:none;}
+	.img_20{display:none;}
+	
+	.Beautify_LA{width:100%;}
+	.Beautify_LA header{}
+	.Beautify_LA header .logo2{display:block;width:256px;height:62px;margin:26px auto 28px;}
+	
+	.Beautify_LA .main_content{padding:0;background:none #e5e6e7 center 10px no-repeat;}	
+	
+	.content_logo{width:100%;float:none;border-top:1px solid #000000;border-bottom:1px solid #000000;background:#ffffff;padding:0;}
+	.content_logo .logo{margin:5px auto;width:130px;}
+	
+	/*thanks*/
+	.content_bg{width:auto;padding:24px 16px;min-height:inherit;font-size:20px;line-height:37px;}
+}
+@media (max-width:480px) {	
+	body{font-size:16px;line-height:22px;}
+	#header{}
+	
+	.desktop{display:none;}
+	.iphone{display:block;}
+
+	.img_60{display:none;}
+	.img_40{display:block;}
+	.img_20{display:none;}
+	
+	.Beautify_LA{width:100%;}
+	.Beautify_LA header{}
+	.Beautify_LA header .logo2{display:block;width:221px;height:53px;margin:26px auto 28px;}
+	
+	.Beautify_LA .main_content{padding:0;background:none #e5e6e7 center 10px no-repeat;}
+	
+	.content_logo{width:100%;float:none;border-top:1px solid #000000;border-bottom:1px solid #000000;background:#ffffff;padding:0;}
+	.content_logo .logo{margin:5px auto;width:113px;}
+	
+	/*thanks*/
+	.content_bg{width:auto;padding:24px 16px;min-height:inherit;font-size:20px;line-height:37px;}	
+}
+@media (max-width:320px) {	
+	body{font-size:16px;line-height:22px;}
+	#header{}
+	
+	.desktop{display:none;}
+	.iphone{display:block;}
+
+	.img_60{display:none;}
+	.img_40{display:none;}	
+	.img_20{display:block;}
+	
+	.Beautify_LA{width:100%;}
+	.Beautify_LA header{}
+	.Beautify_LA header .logo2{display:block;width:184px;height:44px;margin:26px auto 28px;}
+	
+	.Beautify_LA .main_content{padding:0;background:none #e5e6e7 center 10px no-repeat;}
+	
+	.content_logo{width:100%;float:none;border-top:1px solid #000000;border-bottom:1px solid #000000;background:#ffffff;padding:0;}
+	.content_logo .logo{margin:5px auto;width:94px;}
+		
+	/*thanks*/
+	.content_bg{width:auto;padding:24px 16px;min-height:inherit;font-size:16px;line-height:33px;}
+}
