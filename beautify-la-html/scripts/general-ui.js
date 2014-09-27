@@ -31,16 +31,16 @@ $(document).ready(function(){
 		leftHeight = left.height(),
 		leftBottom = leftHeight + heightHeader,
 		offsetContact = $('.site-contact').offset().top;
-		console.log(rightHeight - leftHeight);
-		console.log(leftHeight - rightHeight);
 		
 	$(window).resize(function(){
+		location.reload();
+		getSolution = $(window).width(),
 		heightHeader = $('.site-header').innerHeight() + $('#carousel-desktop').innerHeight(),
 		footerHeight =  $('.site-contact').innerHeight() + $('.site-footer').innerHeight();
-		left.removeAttr("style");
-		right.removeAttr("style");		
-		if(getSolution > 767){
-			sticky();
+		if( !isMobile.any() ) {		
+			if(getSolution > 767){
+				sticky();
+			}
 		}
 	});
 			
