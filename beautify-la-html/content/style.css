@@ -225,14 +225,15 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .site-contact .section-header .logo{float:left;margin:0 0 20px;}
 .site-contact p{margin:0 0 15px;}
 .site-contact .register-form .btn_Join{padding:0;}
+.site-contact .register-form .form-control{background:transparent;border-top:1px solid #777777;border-bottom:1px solid #777777;border-left:1px solid #777777;color:#777777;}
 .site-contact .register-form .btn-facebook{width:100%;padding:0;}
 
 .site-contact .site-address{}
 .site-address ul{margin:0;padding:0;list-style:none;}
 .site-address ul li{background:no-repeat left top;padding:0 0 0 29px;margin:21px 0 0;}
-.site-address ul li.icon-location{background-image:url(images/icons/ico_address.png);}
-.site-address ul li.icon-phone{background-image:url(images/icons/ico_phone.png);}
-.site-address ul li.icon-email{background-image:url(images/icons/ico_email.png);background-position:left 3px;}
+.site-address ul li.icon-location{background-image:url(images/assets/icon_location.png);}
+.site-address ul li.icon-phone{background-image:url(images/assets/icon_phone.png);}
+.site-address ul li.icon-email{background-image:url(images/assets/icon_email.png);background-position:left 3px;}
 .site-address ul li.icon-email a{color:#777777;}
 .site-address ul li.terms{padding:0;}
 .site-address ul li.terms a{color:#96be3d;left:0;}
@@ -283,7 +284,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 
 .register-form .form-group{margin:0 0 15px;}
 .register-form .input-group{width:100%;}
-.register-form .txt_Email{width:70%;height:46px;border:1px solid #F3472D;padding:0 15px;color:#F3472D;font:16px/44px ralewayregular, sans-serif;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.register-form .txt_Email{width:70%;height:46px;border:1px solid #F3472D;padding:0 15px;color:#F3472D;font:20px/44px ralewaymedium, sans-serif;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .register-form .btn_Join{width:30%;background:#F3472D;border:1px solid #F3472D;padding:0 40px;font:20px/44px ralewaymedium, sans-serif;color:#ffffff;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .register-form .btn-facebook{float:left;display:inline-block;font:20px/44px ralewaymedium,sans-serif;padding:0 40px;color:#ffffff;}
 
@@ -299,9 +300,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .category-list .category-item{margin:0 0 15px;}
 
 .event-list{}
-.event-list .section-header{padding:25px 0 15px;}
+.event-list .section-header{padding:25px 0 0;}
 
-.event-block{height:174px;border:2px solid #c9c9c9;margin-bottom:20px;position:relative;overflow:hidden;}
+.event-block{height:174px;border:2px solid #c9c9c9;margin-top:20px;position:relative;overflow:hidden;}
 .event-block:hover{border:2px solid #999;}
 .event-block .avatar{float:left;width:170px;height:170px;margin:0 10px 0 0;overflow:hidden;}
 .event-block .offer{float:right;width:105px;height:104px;margin:10px;overflow:hidden;}
@@ -319,7 +320,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .votes .vote-icon{float:left;width:22px;height:21px;background:no-repeat center center;}
 .votes .yellow-star{background-image:url(images/assets/icon_star_ful.png);}
 .votes .gray-star{background-image:url(images/assets/icon_star_empty.png);}
-.votes .total-review{float:left;font:400 14px/18px ralewayregular, sans-serif;color:#777777;}
+.votes .total-review{float:left;font:14px/18px ralewayregular, sans-serif;color:#777777;}
 .votes .icon-like{background-image:url(images/assets/like_1.png);}
 .votes .icon-unlike{background-image:url(images/assets/unlike.png);}
 
@@ -349,8 +350,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .modal-offer .offer-terms{font-weight:bold;color:#000000;text-decoration:none;}
 .modal-offer .offer-terms:hover{cursor:pointer;}
 
-.modal-term{background:#000000;border:3px solid #c1d82f;}
-.modal-term{border-radius:0;}
+.modal-term{background:#000000;}
+.modal-term .modal-content{border:3px solid #c1d82f;border-radius:0;background:transparent;}
 .modal-term .modal-header{border:0 none;}
 .modal-term .modal-header .close{margin:0 10px 0 0;color:#ffffff;font:bold 40px/40px ralewayregular, sans-serif;opacity:0.5;filter:alpha(opacity=50);}
 .modal-term .modal-header h2{color:#fd620e;font-family:Didot,"Didot LT STD","Hoefler Text",Garamond,"Times New Roman",serif;text-decoration:underline;}
@@ -375,6 +376,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .exclusive-section .section-header h2{margin:0 0 10px;}
 .exclusive-section .section-header h2 span{font:20px/24px ralewaybold,sans-serif;}
 .exclusive-section .section-header h3{font:20px/24px ralewaymedium,sans-serif;}
+
+.dropdown-category{}
+.dropdown-category .dropdown > a{display:block;padding:0 40px 0 10px;height:42px;border:1px solid #333333;font:20px/42px ralewaymedium,sans-serif;color:#333333;text-decoration:none;position:relative;}
+.dropdown-category .dropdown > a .dropdown-icon{display:inline-block;width:40px;height:44px;background:url(images/assets/icon_dropdown.png) center center no-repeat;position:absolute;right:0;}
+.dropdown-category .dropdown-menu{width:100%;}
 
 /*countdown*/
 .countdown{font-family:bebas-neue,sans-serif;display:inline-block;padding:0 0 20px;/*position:absolute;left:0;top:0;right:0;background:url(../images/bg_countdown.png) center bottom repeat-x;*/}
@@ -421,6 +427,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.site-contact .section-header .logo{margin:0 0 17px;}
 	.site-contact p{margin:0 0 20px;}
 	.site-contact .register-form{margin:0 0 20px;}
+	.site-contact .register-form .form-control{background:#ffffff;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;border-left:1px solid #2a2a2a;color:#2a2a2a;}
 	
 	.site-footer p{text-align:center;}
 	
@@ -455,7 +462,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 @media (max-width:530px){
 	.register-section .register-form .form-group{float:none;margin:0 0 15px;}
 	.register-section .register-form .input-group{width:100%;}
-	.register-form .btn_Join{padding:0 12px;}
+	.register-form .btn_Join{padding:0;}
 	.register-form .btn-facebook{float:none;width:100%;padding:0;}
 }
 @media (max-width:515px){
@@ -468,13 +475,21 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.event-block .shortDes{padding:0 5px;}
 	.group_link a{font:400 12px/30px ralewaymedium, sans-serif;}
 }
-@media (max-width:480px){	
-	.category-tooltip .frame{width:100%;float:none;}
-	.category-tooltip .info{width:100%;float:none;margin:0;}
+@media (max-width:480px){
+	.event-block .avatar{width:25%;height:auto;}
+	.event-block .offer{width:25%;height:auto;}
+	.event-block .titles{padding:2px 5px 0;}
+	.event-block .iName{margin-bottom:0;}
+	.event-block .iName a{font:14px/18px ralewaymedium, sans-serif;}
+	.event-block .iAddress{font:12px/16px ralewaymedium, sans-serif;margin-bottom:0;}
+	.votes .total-review{font:10px/14px ralewayregular, sans-serif;}
+	.event-block .shortDes{font:12px/16px ralewaymedium, sans-serif;}
+	.event-block .votes{min-height:inherit;padding:0 5px;margin-bottom:0;}
+	.votes .list-star{float:none;}
+	.votes .total-review{float:none;}
+	.votes .vote-icon{width:12px;height:12px;background-size:contain;margin:0;}
 }
 @media (max-width:320px){	
-	.category-tooltip .frame{width:100%;float:none;}
-	.category-tooltip .info{width:100%;float:none;margin:0;}
 }
 
 .detech-devices .on-device{display:block;}
