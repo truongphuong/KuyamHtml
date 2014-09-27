@@ -31,6 +31,8 @@ $(document).ready(function(){
 		leftHeight = left.height(),
 		leftBottom = leftHeight + heightHeader,
 		offsetContact = $('.site-contact').offset().top;
+		console.log(rightHeight - leftHeight);
+		console.log(leftHeight - rightHeight);
 		
 	$(window).resize(function(){
 		heightHeader = $('.site-header').innerHeight() + $('#carousel-desktop').innerHeight(),
@@ -55,12 +57,14 @@ $(document).ready(function(){
 						if(winBottom <= offsetContact){
 							right.css({
 								'position': 'fixed',
-								'bottom': 0
+								'bottom': 0,
+								'margin-top': 0
 							});
 						}else{
 							right.css({
-								'position': 'fixed',
-								'bottom': footerHeight
+								'position': 'relative',
+								'bottom': 'auto',
+								'margin-top': leftHeight - rightHeight - 325
 							});
 						}
 					}else {
@@ -76,12 +80,14 @@ $(document).ready(function(){
 						if(winBottom <= offsetContact){
 							left.css({
 								'position': 'fixed',
-								'bottom': 0
+								'bottom': 0,
+								'margin-top': 0
 							});
 						}else{
 							left.css({
-								'position': 'fixed',
-								'bottom': footerHeight
+								'position': 'relative',
+								'bottom': 'auto',
+								'margin-top': rightHeight - leftHeight - 325
 							});
 						}
 					} else {
