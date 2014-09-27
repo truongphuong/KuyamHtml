@@ -101,7 +101,7 @@ $(document).ready(function(){
 	if( isMobile.any() ) {
 		$('#detech-devices').addClass("detech-devices");
 	}else{				
-		if(getSolution > 979){
+		if(getSolution > 767){
 			sticky();
 		}
 	}

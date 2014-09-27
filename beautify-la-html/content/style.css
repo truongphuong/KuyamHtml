@@ -243,8 +243,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .section-header h4{font:24px/28px ralewaysemibold, sans-serif;}
 .section-header p{font:24px/28px ralewaymedium, sans-serif;}
 .section-header p.no-ticket{font:20px/24px ralewaymedium, sans-serif;margin:6px 0;}
+.section-header hr{border:0 none;border-top:1px solid #979797;margin:20px 0 0;}
 
-.home-page{padding:40px 0 0;}
+.main-content{padding:40px 0 0;}
 
 .event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#ffffff;overflow:hidden;}
 .event-new .event-content{padding:25px;position:absolute;top:0;right:0;bottom:0;left:0;}
@@ -255,7 +256,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .event-btn .btn-happen{font:28px/62px ralewayextrabold, sans-serif;color:#F3472D;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;padding:0 25px;}
 
 .happen-date{text-align:right;}
-.happen-date .section-header{padding:40px 0;}
+.happen-date .section-header{padding:0 0 40px;}
 .happen-date .section-header h2{color:#F3472D;font:36px/40px ralewaybold,sans-serif;}
 
 .slide-feature{overflow:hidden;position:relative;}
@@ -296,6 +297,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .category-list{padding:15px 0 0;}
 .category-list .section-header{padding:0 0 10px;}
 .category-list .category-item{margin:0 0 15px;}
+
+.event-list{}
+.event-list .section-header{padding:25px 0 15px;}
 
 .event-block{height:174px;border:2px solid #c9c9c9;margin-bottom:20px;position:relative;overflow:hidden;}
 .event-block:hover{border:2px solid #999;}
@@ -366,6 +370,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .partners .partner-item{display:block;margin:0 0 30px;text-align:center;text-decoration:none;color:#000000;font:20px/24px ralewaybold, sans-serif;}
 .partners .partner-item span{display:block;margin:5px 0 0;}
 
+.exclusive-section{}
+.exclusive-section .section-header{margin:0 0 15px;}
+.exclusive-section .section-header h2{margin:0 0 10px;}
+.exclusive-section .section-header h2 span{font:20px/24px ralewaybold,sans-serif;}
+.exclusive-section .section-header h3{font:20px/24px ralewaymedium,sans-serif;}
+
 /*countdown*/
 .countdown{font-family:bebas-neue,sans-serif;display:inline-block;padding:0 0 20px;/*position:absolute;left:0;top:0;right:0;background:url(../images/bg_countdown.png) center bottom repeat-x;*/}
 .countdown .caption{font-size:36px;line-height:42px;text-align:center;color:#ffffff;}
@@ -385,12 +395,19 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.event-block .offer{width:115px;height:115px;margin:2px 10px;}
 	.group_link{margin:0 3px;clear:both;text-align:center;}
 	.group_link a{width:24%;font:400 14px/30px ralewayregular, sans-serif;margin:0 0 5px;}
+	
+	.partners .section-header h3{width:252px;}
 }
 @media (min-width:768px) and (max-width:979px){	
 }
 @media (max-width:767px){
+	.site-header{height:50px;}
+	.site-header .logo{margin:9px 0;}
+	
 	#main-affix{width:100%;}
 	#nav-affix{width:100%;padding:0;}
+	
+	.main-content{padding:15px 0 0;}
 		
 	body{font:14px/18px ralewaymedium, sans-serif;}
 	
@@ -425,6 +442,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}	
 	
 	.group_link a{width:24%;}
+	
+	.partners .section-header h3{width:auto;}
+	
+	.happen-date .section-header{padding:0 0 20px;}
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}
