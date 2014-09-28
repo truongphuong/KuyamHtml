@@ -22,8 +22,8 @@ $(document).ready(function(){
 	};	
 	
 	var getSolution = $(window).width(),
-		heightHeader = $('.site-header').innerHeight() + $('#carousel-desktop').innerHeight(),
-		footerHeight =  $('.site-contact').innerHeight() + $('.site-footer').innerHeight(),
+		heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
+		footerHeight =  $('.site-contact').height() + $('.site-footer').innerHeight(),
 		right = $('#nav-affix'),
 		rightHeight= right.height(),
 		rightBottom = rightHeight + heightHeader,
@@ -33,16 +33,21 @@ $(document).ready(function(){
 		offsetContact = $('.site-contact').offset().top;
 		
 	$(window).resize(function(){
-		location.reload();
+		window.parent.location = window.parent.location.href;
 		getSolution = $(window).width(),
 		heightHeader = $('.site-header').innerHeight() + $('#carousel-desktop').innerHeight(),
 		footerHeight =  $('.site-contact').innerHeight() + $('.site-footer').innerHeight();
+		right.removeAttr("style");
+		left.removeAttr("style");
 		if( !isMobile.any() ) {		
 			if(getSolution > 767){
 				sticky();
 			}
 		}
 	});
+	
+	console.log(rightHeight);
+	console.log(leftHeight);
 			
 	function sticky(){			
 		$(window).scroll(function () {
@@ -53,51 +58,49 @@ $(document).ready(function(){
 			}else{			
 				if (rightBottom < leftBottom) {
 					//when the user reached the bottom of '#nav-affix' set its position to fixed to prevent it from moving on scroll
-					if (winBottom >= rightBottom) {
+					if (winBottom > rightBottom) {
 						if(winBottom <= offsetContact){
 							right.css({
 								'position': 'fixed',
 								'bottom': 0,
-								'margin-top': 0
+								'padding-top': 0
 							});
 						}else{
 							right.css({
 								'position': 'relative',
-								'bottom': 'auto',
-								'margin-top': leftHeight - rightHeight - 325
+								'padding-top': leftHeight - rightHeight - 325
 							});
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
 						right.css({
 							'position': 'relative',
-							'bottom': 'auto'
+							'padding-top': 0
 						});
 					}
-				} else {
+				} else if (rightBottom > leftBottom){
 					//when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
-					if (winBottom >= leftBottom) {
-						if(winBottom <= offsetContact){
+					if (winBottom > leftBottom) {
+						if(winBottom <= offsetContact + 325){
 							left.css({
 								'position': 'fixed',
 								'bottom': 0,
-								'margin-top': 0
+								'padding-top': 0
 							});
 						}else{
 							left.css({
 								'position': 'relative',
-								'bottom': 'auto',
-								'margin-top': rightHeight - leftHeight - 325
+								'padding-top': rightHeight - leftHeight + 325
 							});
 						}
-					} else {
+					}else {
 						//when the user scrolls back up revert its position to relative
 						left.css({
 							'position': 'relative',
-							'bottom': 'auto'
+							'padding-top': 0
 						});
 					}
-				}
+				}				
 			}
 	
 		});
