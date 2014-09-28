@@ -45,9 +45,6 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
-	console.log(rightHeight);
-	console.log(leftHeight);
 			
 	function sticky(){			
 		$(window).scroll(function () {
