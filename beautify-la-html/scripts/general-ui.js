@@ -1,4 +1,7 @@
-$(document).ready(function(){		
+$(document).ready(function(){	
+	$(window).resize(function(){
+		window.parent.location = window.parent.location.href;		
+	});	
 	
 	var isMobile = {
 		Android: function() {
@@ -22,34 +25,37 @@ $(document).ready(function(){
 	};	
 	
 	var getSolution = $(window).width(),
+		getHeightSolution = $(window).height(),
 		heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
 		footerHeight =  $('.site-contact').height() + $('.site-footer').innerHeight(),
-		right = $('#nav-affix'),
-		rightHeight= right.height(),
-		rightBottom = rightHeight + heightHeader,
-		left = $('#main-affix'),
-		leftHeight = left.height(),
-		leftBottom = leftHeight + heightHeader,
+		rightCol = $('#nav-affix'),
+		rightHeight= rightCol.height(),
+		rightBottom,
+		leftCol = $('#main-affix'),
+		leftHeight = leftCol.height(),
+		leftBottom,
 		offsetContact = $('.site-contact').offset().top;
-		
-	$(window).resize(function(){
-		window.parent.location = window.parent.location.href;
-		getSolution = $(window).width(),
-		heightHeader = $('.site-header').innerHeight() + $('#carousel-desktop').innerHeight(),
-		footerHeight =  $('.site-contact').innerHeight() + $('.site-footer').innerHeight();
-		right.removeAttr("style");
-		left.removeAttr("style");
-		if( !isMobile.any() ) {		
-			if(getSolution > 767){
-				sticky();
-			}
-		}
-	});
+	if(rightHeight < getHeightSolution){
+		rightCol.css("height", getHeightSolution);
+		rightHeight = getHeightSolution;
+		rightBottom = rightHeight + heightHeader;
+	}else{		
+		rightBottom = rightHeight + heightHeader;
+	}
+	if(leftHeight < getHeightSolution){
+		leftCol.css("height", getHeightSolution);
+		leftHeight = getHeightSolution;
+		leftBottom = leftHeight + heightHeader;
+	}
+	else{		
+		leftBottom = leftHeight + heightHeader;
+	}
 			
 	function sticky(){			
 		$(window).scroll(function () {
 			var winTop = $(this).scrollTop(),
 				winBottom = winTop + $(this).height();
+				console.log(winTop);
 			if(rightHeight == 0 || leftHeight == 0){
 				return;
 			}else{			
@@ -57,20 +63,20 @@ $(document).ready(function(){
 					//when the user reached the bottom of '#nav-affix' set its position to fixed to prevent it from moving on scroll
 					if (winBottom > rightBottom) {
 						if(winBottom <= offsetContact){
-							right.css({
+							rightCol.css({
 								'position': 'fixed',
 								'bottom': 0,
 								'padding-top': 0
 							});
 						}else{
-							right.css({
+							rightCol.css({
 								'position': 'relative',
 								'padding-top': leftHeight - rightHeight - 325
 							});
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
-						right.css({
+						rightCol.css({
 							'position': 'relative',
 							'padding-top': 0
 						});
@@ -79,20 +85,20 @@ $(document).ready(function(){
 					//when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
 					if (winBottom > leftBottom) {
 						if(winBottom <= offsetContact + 325){
-							left.css({
+							leftCol.css({
 								'position': 'fixed',
 								'bottom': 0,
 								'padding-top': 0
 							});
 						}else{
-							left.css({
+							leftCol.css({
 								'position': 'relative',
 								'padding-top': rightHeight - leftHeight + 325
 							});
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
-						left.css({
+						leftCol.css({
 							'position': 'relative',
 							'padding-top': 0
 						});
