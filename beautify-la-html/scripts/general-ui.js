@@ -50,12 +50,15 @@ $(document).ready(function(){
 	else{		
 		leftBottom = leftHeight + heightHeader;
 	}
+	
+	console.log(leftHeight);
+	console.log(rightHeight);
 			
 	function sticky(){			
 		$(window).scroll(function () {
 			var winTop = $(this).scrollTop(),
 				winBottom = winTop + $(this).height();
-				console.log(winTop);
+				
 			if(rightHeight == 0 || leftHeight == 0){
 				return;
 			}else{			
