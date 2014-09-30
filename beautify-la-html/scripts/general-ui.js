@@ -110,7 +110,7 @@ $(document).ready(function(){
 		//end scroll	
 	}
 	
-	if( isMobile.any() ) {
+	if( !isMobile.any() ) {
 		$('#detech-devices').addClass("detech-devices");
 	}else{	
 		$(window).resize(function(){
