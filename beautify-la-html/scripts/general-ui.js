@@ -1,7 +1,4 @@
-$(document).ready(function(){	
-	$(window).resize(function(){
-		window.parent.location = window.parent.location.href;		
-	});	
+$(document).ready(function(){
 	
 	var isMobile = {
 		Android: function() {
@@ -115,7 +112,10 @@ $(document).ready(function(){
 	
 	if( isMobile.any() ) {
 		$('#detech-devices').addClass("detech-devices");
-	}else{				
+	}else{	
+		$(window).resize(function(){
+			window.parent.location = window.parent.location.href;		
+		});				
 		if(getSolution > 767){
 			sticky();
 		}
