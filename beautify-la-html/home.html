@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
 
 <link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
+<link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 
@@ -29,7 +30,8 @@
 <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>    	
 <script type="text/javascript" src="scripts/bootstrap.js"></script>      
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
-<script type="text/javascript" src="scripts/countdown.js"></script>
+<script type="text/javascript" src="scripts/jquery.plugin.js"></script>
+<script type="text/javascript" src="scripts/jquery.countdown.js"></script>
 <!-- === END SCRIPTS === --> 
 </head>
 <body>
@@ -179,7 +181,7 @@
                             <!-- /.section-header -->
                             
                             <!-- .event-block -->
-                            <div class="event-new" style="background-image:url(content/images/assets/slide_facial.jpeg);">
+                            <div class="event-new" style="background-image:url(content/images/assets/montana_avenue.jpg);">
                                 <div class="event-content bg-black-50">
                                     <h2>Beautify Montana Ave.</h2>
                                     <p>join the event!</p>
@@ -192,7 +194,7 @@
                             
                            
                             <!-- .event-block -->
-                            <div class="event-new" style="background-image:url(content/images/assets/slide_blowout.jpg);">
+                            <div class="event-new" style="background-image:url(content/images/assets/canon_drive.jpg);">
                             	<div class="event-content bg-black-50">
                                     <h2>Beautify Montana Ave.</h2>
                                     <p>join the event!</p>
@@ -204,19 +206,30 @@
                             <!-- /.event-block -->
                             
                             <!-- .event-block -->
-                            <div class="event-new" style="background-image:url(content/images/assets/slide_massage.jpg);">
+                            <div class="event-new" style="background-image:url(content/images/assets/larchmont.jpg);">
                             	<div class="event-content bg-black-50">
                                     <h2>Beautify Montana Ave.</h2>
-                                    <p>join the event!</p>
+                                    <p>event starts in...</p>
                                     <div class="event-btn">
-                                        <a class="btn-white btn-happen" title="" href="#">happening now!</a>
+                                    
+                                        <!-- .countdown -->
+                                        <div id="countdown" class="countdown"></div>
+                                        <script>
+                                        $(function () {
+                                            var austDay = new Date();
+                                            austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+                                            $('#countdown').countdown({until: austDay, format: 'dHM'});
+                                        });
+                                        </script>
+                                        <!-- /.countdown -->
+                                    
                                     </div>
                                 </div>
                             </div>
                             <!-- /.event-block -->
                             
                             <!-- .event-block -->
-                            <div class="event-new" style="background-image:url(content/images/assets/slide_wax.jpg);">
+                            <div class="event-new" style="background-image:url(content/images/assets/sunset_plaza.jpg);">
                             	<div class="event-content bg-black-50">
                                     <h2>Beautify Montana Ave.</h2>
                                     <p>join the event!</p>
