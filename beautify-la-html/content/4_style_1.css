@@ -249,12 +249,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 
 .main-content{padding:40px 0 0;}
 
-.event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#ffffff;overflow:hidden;}
+.event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#ffffff;}
 .event-new .event-content{padding:25px;position:absolute;top:0;right:0;bottom:0;left:0;}
 
 .event-content h2{font:36px/40px ralewaybold, sans-serif;margin:0 0 8px;}
 .event-content p{font:26px/30px ralewaymedium, sans-serif;margin:0 0 15px;}
-.event-content .event-btn{}
+.event-content .event-btn{position:relative;}
 .event-btn .btn-happen{font:28px/62px /*ralewayextrabold*/bebas_neueregular, sans-serif;color:#F3472D;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;padding:0 25px;}
 
 .happen-date{text-align:right;}
@@ -409,7 +409,15 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 .modal-notify .social-icons dt{font:22px/26px ralewaymedium,sans-serif;color:#000000;padding:10px 0 15px;}
 .modal-notify .social-icons dd{margin:0 10px;}
 
-.brach-early-open{width:206px;}
+.branch-img{width:206px;height:61px;background:url(images/assets/Image_Banner.png) no-repeat;background-size:contain;}
+.branch-text{font:20px/24px bebas_neueregular, sans-serif;padding:10px 0;margin-top:-63px;position:relative;z-index:2;color:#ffffff;text-decoration:none;}
+.branch-early-open{position:absolute;right:-42px;top:10px;}
+.branch-early-open:hover{text-decoration:none;}
+.branch-early-open .branch-img{background-position:right center;-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);position:relative;z-index:1px;}
+
+.branch-ticket{position:absolute;left:-42px;top:10px;}
+.branch-ticket:hover{text-decoration:none;}
+.branch-ticket .branch-img{background-position:left center;z-index:1px;}
 
 @media (min-width:980px) and (max-width:1024px){
 	
@@ -433,6 +441,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.group_link a{width:24%;font:400 14px/30px arial, sans-serif;margin:0 0 5px;}
 	
 	.partners .section-header h3{width:252px;}
+	
+	.branch-img{width:160px;height:47px;}
+	.branch-text{font:14px/18px bebas_neueregular, sans-serif;margin-top:-52px;}
+	.branch-early-open{right:-35px;top:5px;}
+	
+	.branch-ticket{left:-35px;top:5px;}
 }
 @media (min-width:768px) and (max-width:979px){	
 }
@@ -462,7 +476,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	
 	.site-footer p{text-align:center;}
 	
-	.event-new{height:142px;margin:20px -15px 0;}
+	.event-new{height:142px;margin:20px -15px 0;overflow:hidden;}
 	.event-new .event-content{padding:20px;}
 	.event-content h2{font:20px/24px ralewaybold, sans-serif;margin:0 0 6px;}
 	.event-content p{font:18px/22px ralewaymedium, sans-serif;margin:0 0 10px;}
@@ -498,17 +512,26 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;}
 	.modal-notify .social-icons{float:none;text-align:center;margin:0 0 13px;}
 	.modal-notify .social-icons dt{font:22px/26px ralewaymedium,sans-serif;color:#000000;padding:0 0 15px;}
 	.modal-notify .social-icons dd{margin:0 18px;}
+	
+	.branch-early-open{display:inline-block;position:relative;top:-5px;right:inherit;left:-10px;}
+	.branch-ticket{display:inline-block;position:relative;top:-5px;left:inherit;right:-10px;}	
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}
 }
 @media (max-width:568px){
+	.branch-img{position:absolute;height:36px;}
+	.branch-text{width:170%;font:12px/16px bebas_neueregular, sans-serif;margin-top:-44px;padding-left:20px;text-align:left;}
+	.branch-early-open{width:20%;top:-2px;}
+	.branch-ticket{width:20%;top:-2px;}
 }
 @media (max-width:530px){
 	.register-section .register-form .form-group{float:none;margin:0 0 15px;}
 	.register-section .register-form .input-group{width:100%;}
 	.register-form .btn_Join{padding:0;}
 	.register-form .btn-facebook{float:none;width:100%;padding:0;}
+}
+@media (max-width:526px){
 }
 @media (max-width:515px){
 	.event-block{height:152px;}
