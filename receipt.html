@@ -42,113 +42,114 @@
 <!-- === END SCRIPTS === -->
 </head>
 <body>
-	<!-- InstanceBeginEditable name="page" -->
+	<div id="detech-devices">
+		<!-- InstanceBeginEditable name="page" -->
     <!-- InstanceEndEditable -->
         
-    <!-- .site-header -->
-    <header class="site-header navbar navbar-static-top bs-docs-nav navbar-fixed-top">
-        <div class="container">
-                
-            <!-- .navbar-header -->
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>                
-                <a class="logo" title="" href="home.html"><img alt="" src="content/images/logo_kuyam.png" /></a>
-                <div class="system-date hidden-xs">
-                    <p>Thursday, July 31 2014</p>
+        <!-- .site-header -->
+        <header class="site-header navbar navbar-static-top bs-docs-nav navbar-fixed-top">
+            <div class="container">
+                    
+                <!-- .navbar-header -->
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>                
+                    <a class="logo" title="" href="home.html"><img alt="" src="content/images/logo_kuyam.png" /></a>
+                    <div class="system-date on-desktop hidden-xs">
+                        <p>thursday, july 31 2014</p>
+                    </div>
+                    <a title="" href="#" class="account-user on-device">hi, Kourosh!</a>
                 </div>
-                <a title="" href="#" class="account-user hidden-sm hidden-md hidden-lg">hi, Kourosh!</a>
-            </div>
-            <!-- /.navbar-header -->
-            
-            <!-- .search-form -->
-            <div class="search-form hidden-xs">
-                <a class="btnLiveChat off" href="#" title="live chat"></a>
-                <fieldset> 
-                    <span class="icon-list"></span>
-                    <input class="form-control" type="text" value="search for a business" onfocus="if (this.value == 'search for a business') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search for a business'; }" />
-                    <input type="button" class="btn-search" value="Search" />                           
-                </fieldset>
-            </div>
-            <!-- /.search-form -->  
-            
-            <div class="clear hidden-xs"></div>
-            
-            <!-- .navbar-collapse --> 
-            <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
-                <ul class="nav navbar-nav navbar-right navMenu">
-                    <li class="hidden-xs active"><a href="#" title="favorites">favorites<span class="hidden-xs"></span></a></li>                    
-                    <li><a href="book.html" title="Book">book<span class="hidden-xs"></span></a></li>
-                    <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-sm hidden-md hidden-lg"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>
-                    <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-xs"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="hidden-xs"></span></a></li>  
-                    <li class="hidden-sm hidden-md hidden-lg"><a href="#" title="settings">settings<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-sm hidden-md hidden-lg"><a class="bg-green" href="#" title="sign out">sign out<span class="hidden-xs"></span></a></li>
-                    <li class="hidden-xs">
-                    	<a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
-                    </li>
-                </ul>
+                <!-- /.navbar-header -->
                 
-                <script>
-					$(function(){
-						var temp = 0;
-						var widthScreen;
-						$( window ).resize(function() {
-							widthScreen = $( window ).width();	
-							if(widthScreen < 768 && temp == 1){
-								$( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
-								$( "#nav-account" ).hide();
-								temp = 0;
-							}					
-						});							
-						
-						function showNavAccount(){
-							if(temp == 0){														
-								$( ".site-banner" ).animate({ "margin-top": "+=186px" }, 500 );
-								temp = 1;
-							}else{
-								$( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
-								temp = 0;
-							}
-												
-							$( "#nav-account" ).toggle('blind', 500);
-						}
-						
-						$( ".link-account" ).click(function(){	
-							showNavAccount();
-						});
-					});
-				</script>
-                
-                <div id="nav-account" class="nav-account">
-                    <dl class="container clearfix">
-                        <dt class="hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
-                        <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
-                        <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
-                        <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
-                        <dt class="hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
-                    </dl>
+                <!-- .search-form -->
+                <div class="search-form on-desktop hidden-xs">
+                    <a class="btnLiveChat off" href="#" title="live chat"></a>
+                    <fieldset> 
+                        <span class="icon-list"></span>
+                        <input class="form-control" type="text" value="search for a business" onfocus="if (this.value == 'search for a business') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search for a business'; }" />
+                        <input type="button" class="btn-search" value="search" />                           
+                    </fieldset>
                 </div>
+                <!-- /.search-form -->  
+                
+                <div class="clear on-desktop"></div>
+                
+                <!-- .navbar-collapse --> 
+                <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right navMenu">
+                        <li class="on-desktop active"><a href="#" title="favorites">favorites<span class="on-device"></span></a></li>                    
+                        <li><a href="book.html" title="Book">book<span class="on-device"></span></a></li>
+                        <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA<span class="on-device"></span></a></li>
+                        <li class="on-device"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="on-device"></span></a></li>
+                        <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog<span class="on-device"></span></a></li>
+                        <li class="on-desktop"><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works<span class="on-device"></span></a></li>  
+                        <li class="on-device"><a href="#" title="settings">settings<span class="on-device"></span></a></li>
+                        <li class="on-device"><a class="bg-green" href="#" title="sign out">sign out<span class="on-device"></span></a></li>
+                        <li class="on-desktop hidden-xs">
+                            <a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                        </li>
+                    </ul>
+                    
+                    <script>
+                        $(function(){
+                            var temp = 0;
+                            var widthScreen;
+                            $( window ).resize(function() {
+                                widthScreen = $( window ).width();	
+                                if(widthScreen < 768 && temp == 1){
+                                    $( ".site-banner" ).animate({ "margin-top": "-=146px" }, 500 );
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }					
+                            });							
+                            
+                            function showNavAccount(){
+                                if(temp == 0){														
+                                    $( ".site-banner" ).animate({ "margin-top": "+=146px" }, 500 );
+                                    temp = 1;
+                                }else{
+                                    $( ".site-banner" ).animate({ "margin-top": "-=146px" }, 500 );
+                                    temp = 0;
+                                }
+                                                    
+                                $( "#nav-account" ).toggle('blind', 500);
+                            }
+                            
+                            $( ".link-account" ).click(function(){	
+                                showNavAccount();
+                            });
+                        });
+                    </script>
+                    
+                    <div id="nav-account" class="nav-account">
+                        <dl class="container clearfix">
+                            <dt class="on-desktop hidden-xs text-right"><a href="#" title="">add company</a> <a href="#" title="">settings</a> | <a href="#" title="" class="link-sign-out">sign out</a></dt>
+                            <dd class="active"><a href="favorites.html" title=""><span class="icon-favorites"></span>favorites<span class="icon-down"></span></a></dd>
+                            <dd><a href="appointments.html" title=""><span class="icon-appointments"><span class="new-items">999</span></span>appointments<span class="icon-down"></span></a></dd>
+                            <dd><a href="receipt.html" title=""><span class="icon-receipt"></span>receipt history<span class="icon-down"></span></a></dd>
+                            <dt class="on-desktop hidden-xs text-right"><a class="link-account" href="#" title="">close</a></dt>
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse --> 
+                
             </div>
-            <!-- /.navbar-collapse --> 
-            
-        </div>
-    </header> 
-    <!-- /.site-header -->
-             
-    <!-- .site-banner -->
-    <div class="site-banner">
-    <!-- InstanceBeginEditable name="banner" -->
+        </header> 
+        <!-- /.site-header -->
+                 
+        <!-- .site-banner -->
+        <div class="site-banner">
+        <!-- InstanceBeginEditable name="banner" -->
     <!-- InstanceEndEditable --> 
-    </div>
-    <!-- /.site-banner --> 
-    
-    <!-- InstanceBeginEditable name="content" -->
+        </div>
+        <!-- /.site-banner --> 
+        
+        <!-- InstanceBeginEditable name="content" -->
     
     <!-- .receipt-history-section -->
     <section class="receipt-history-section">
@@ -545,97 +546,99 @@
 	</script>
     
 	<!-- InstanceEndEditable -->
-    
-    <!-- .site-contact -->
-    <section id="contact" class="site-contact"> 
-    	<div class="container">
-        	<div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4"> 
-                    <header class="section-header clearfix">
-                        <a class="logo" title="" href="#">
-                            <img alt="" src="content/images/logo_kuyam.png" />
-                        </a>    
-                        <div class="live-chat hidden-sm hidden-md hidden-lg">                
-                            <a class="btnLiveChat off" href="#" title="live chat"></a>                    
-                        </div>                
-                    </header>
-                    <p>we love hearing your questions and feedback. send us an email or give us a call!<br /></p>
-                    <address class="site-address">
-                        <ul>
-                            <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
-                            <li class="icon-phone">(310) 461-15151</li>
-                            <li class="icon-email"><a title="" href="mailto:info@kuyam.com">info@kuyam.com</a></li>
-                            <li class="terms hidden-sm hidden-md hidden-lg"><a title="" href="terms.html">terms of userand privacy</a></li>
-                            <li class="terms hidden-xs hidden-md hidden-lg"><a title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use and privacy</a></li>
+        
+        <!-- .site-contact -->
+        <section id="contact" class="site-contact"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4"> 
+                        <header class="section-header clearfix">
+                            <a class="logo" title="" href="#">
+                                <img alt="" src="content/images/logo_kuyam.png" />
+                            </a>    
+                            <div class="live-chat visible-xs">                
+                                <a class="btnLiveChat off" href="#" title="live chat"></a>                    
+                            </div>                
+                        </header>
+                        <p>we love hearing your questions and feedback. send us an email or give us a call!<br /></p>
+                        <address class="site-address">
+                            <ul>
+                                <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
+                                <li class="icon-phone">(310) 461-15151</li>
+                                <li class="icon-email"><a title="" href="mailto:info@kuyam.com">info@kuyam.com</a></li>
+                                <li class="terms on-device"><a title="" href="terms.html">terms of user</a> and <a title="" href="terms.html">privacy</a></li>
+                                <li class="terms on-desktop visible-xs"><a title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a></li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="hidden-xs col-sm-4"> 
+                        <header class="section-header">
+                            <h2>get the kuyam app free!</h2>                        
+                        </header>
+                        <p>download kuyam's FREE app for your devices. with our app book your appointments on the go! available for iPhone &amp; Android phones.</p> 
+                        <div class="apps"> 
+                            <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
+                            <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
+                        </div>
+                        <div class="live-chat">                
+                            <a class="btnLiveChat off" href="#" title="live chat"></a>
+                            <div class="link-terms">
+                            	<a title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 visible-xs">        
+                        <header class="section-header">
+                            <h2>get the kuyam app free!</h2>                        
+                        </header>
+                        <div class="apps"> 
+                            <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
+                            <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
+                        </div>   
+                        <ul class="link-socials clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
+                            <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
                         </ul>
-                    </address>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4"> 
-                    <header class="section-header">
-                        <h2>get the kuyam app free!</h2>                        
-                    </header>
-                    <p>download kuyam's FREE app for your devices. with our app book your appointments on the go! available for iPhone &amp; Android phones.</p> 
-                    <div class="apps"> 
-                        <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
-                        <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
-                    </div>
-                    <div class="live-chat">                
-                        <a class="btnLiveChat off" href="#" title="live chat"></a>   
-                        <a class="link-terms hidden-sm hidden-md hidden-lg" href="terms.html" title="terms of use and privacy">terms of use and privacy</a> 
-                        <a class="link-terms hidden-xs" title="" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use and privacy</a>         
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 hidden-md hidden-lg">        
-                    <header class="section-header">
-                        <h2>get the kuyam app free!</h2>                        
-                    </header>
-                    <div class="apps"> 
-                        <a href="https://itunes.apple.com/us/app/kuyam/id606531094?mt=8" title=""><img alt="" src="content/images/app-store.png" /></a>               
-                        <a href="https://play.google.com/store/apps/details?id=com.kourosh.kuyam" title=""><img alt="" src="content/images/play-store.png" /></a> 
-                    </div>   
-                    <ul class="link-socials clearfix"> 
-                        <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
-                        <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
-                        <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
-                        <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
-                        <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
-                    </ul>
-                </div> 
-                <div class="hidden-xs hidden-sm col-md-4">
-                    <ul class="nav-footer">
-                        <li><a href="#" title="favorites">favorites</a></li>                    
-                        <li><a href="book.html" title="Book">book</a></li>
-                        <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA</a></li>
-                        <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog</a></li>
-                        <li><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works</a></li>
-                        <li><a href="#" title="settings">add company</a></li>  
-                        <li><a href="#" title="settings">settings</a></li>
-                        <li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
-                    </ul>
-                </div>             
-    		</div>
-        </div>
-    </section>
-    <!-- /.site-contact -->
-    
-    <footer class="site-footer">  
-    	<div class="container">
-        	<div class="row">
-                <div class="col-xs-12 col-md-8">  	
-                    <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4">
-                	<ul class="link-socials clearfix"> 
-                        <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
-                        <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
-                        <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
-                        <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
-                        <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
-                    </ul>
+                    </div> 
+                    <div class="on-desktop hidden-xs col-md-4">
+                        <ul class="nav-footer">
+                            <li><a href="#" title="favorites">favorites</a></li>                    
+                            <li><a href="book.html" title="Book">book</a></li>
+                            <li><a href="http://beautify-la.com/" title="Beautify LA">Beautify LA</a></li>
+                            <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">lifestyle blog</a></li>
+                            <li><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="How it works">how it works</a></li>
+                            <li><a href="#" title="settings">add company</a></li>  
+                            <li><a href="#" title="settings">settings</a></li>
+                            <li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
+                        </ul>
+                    </div>             
                 </div>
             </div>
-        </div>        
-    </footer>
+        </section>
+        <!-- /.site-contact -->
+        
+        <footer class="site-footer">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">  	
+                        <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
+                    </div>
+                    <div class="on-desktop hidden-xs col-xs-4">
+                        <ul class="link-socials clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="Twitter" src="content/images/icons/icon_twitter.png"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="Facebook" src="content/images/icons/icon_facebook.png"></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/u/0/b/103779915573360185741/103779915573360185741" title="Google Plus"><img alt="Google Plus" src="content/images/icons/icon_google.png"></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title="Pinterest"><img alt="Pinterest" src="content/images/icons/icon_pinterest.png"></a></li>
+                            <li><a target="_blank" href="http://www.youtube.com/channel/UCei6RmG4G9jLgEHchRzR5jA" title="Youtube"><img alt="Youtube" src="content/images/icons/icon_youtube.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </footer>
+    </div>
     
     <div class="loading"></div>
     <div class="light-box"></div>
@@ -646,7 +649,7 @@
   		<div class="modal-dialog modal-form modal-login">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">welcome back!</h3>
       			</div>
                 <div class="modal-body">
@@ -676,12 +679,12 @@
   		<div class="modal-dialog modal-form modal-sign-up">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">join kuyam free!</h3>
                     <h4>book appointments at home or<br /> on the go!</h4>
       			</div>
                 <div class="modal-body">
-                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">login with facebook</a>
+                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">sign up with Ffacebook</a>
                 	<div class="form-or">                    	
                     	<hr />  
                         <span>or</span>                      
@@ -709,7 +712,7 @@
   		<div class="modal-dialog modal-form modal-forgot">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">forgot password?</h3>
                     <h4>enter your email to reset <br /> password</h4>
       			</div>
@@ -733,9 +736,9 @@
   		<div class="modal-dialog modal-form modal-confirm">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">check your mail</h3>
-                    <h4>we send you an email for you to<br /> reset your password. follow the<br /> link included in the email.</h4>
+                    <h4>we send you an email for you to reset your password. follow the link included in the email.</h4>
       			</div>
                 <div class="modal-footer">
                 	<hr />
@@ -751,7 +754,7 @@
   		<div class="modal-dialog modal-form modal-facebook">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">Facebook sign up</h3>
                     <h4>please double check the info<br /> provided to us by Facebook is<br /> accurate</h4>
       			</div>
@@ -778,7 +781,7 @@
   		<div class="modal-dialog modal-form modal-terms">
     		<div class="modal-content">
       			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        			<button type="button" class="close" data-dismiss="modal"></button>
                     <script>
 					$(function(){
 						$( "#terms-tabs" ).tabs();
