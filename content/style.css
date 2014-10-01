@@ -620,6 +620,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 
 .options-text{display:none;max-height:300px;background:#ffffff;position:absolute;top:63px;right:0;left:0;margin:0;padding:24px 0 0;list-style:none;z-index:11;border:1px solid #999999;border-top:0 none;overflow-y:auto;font:14px/18px ralewayregular, sans-serif;color:#333333;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .options-text hr{margin:0 0 0 20px;padding:0;border:0 none;border-top:1px solid #cccccc;}
+.options-text li{cursor:pointer;}
 .options-text li:last-child hr{border:0 none;}
 .options-text li:hover,
 .options-text li.active{background:#cccccc;}
@@ -715,6 +716,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .modal-form .modal-body .btn-facebook,
 .modal-form .modal-body .btn-facebook:hover{display:block;font:16px/40px ralewaysemibold, sans-serif;color:#ffffff;text-decoration:none;}
 .modal-form .modal-body .form-control{height:40px;font:16px/40px ralewaymedium, sans-serif;margin:0 0 10px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;border:1px solid #ABABAB;}
+.modal-form .modal-body textarea.form-control{height:65px;resize:none;line-height:20px;}
 .modal-form .modal-body .form-read-only{border:0 none;background:transparent;box-shadow:none;}
 .modal-form .modal-body .link-form{margin:5px 0 15px;color:#ABABAB;}
 .modal-form .modal-body .link-form a{color:#96be3d;}
@@ -731,29 +733,31 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .form-or span{background:#ffffff;display:inline-block;padding:0 20px;position:relative;z-index:9;font:16px/20px ralewaymedium, sans-serif;}
 
 .modal-cancel .modal-header{background:#C74124;padding:15px;color:#ffffff;text-align:left;}
-.modal-cancel .modal-header .close{background-image:url(images/icons/btn_close_red.png);}
-.modal-cancel .modal-body h2{font:26px/30px ralewayregular, sans-serif;margin:12px 0;}
-.modal-cancel .modal-body h4{font:16px/20px ralewayregular, sans-serif;margin:0 0 15px;}
+.modal-cancel .modal-header .close{width:25px;height:25px;background-image:url(images/icons/btn_close_red.png);top:-13px;right:-13px;}
+.modal-cancel .modal-header .modal-title{margin:0;}
+.modal-cancel .modal-body h2{font:26px/30px ralewayextrabold, sans-serif;margin:12px 0;}
+.modal-cancel .modal-body h4{font:16px/20px ralewaybold, sans-serif;margin:0 0 15px;}
 .modal-cancel .modal-body h4 time{display:inline-block;margin:0 0 0 10px;}
 .modal-cancel .modal-body a.info-cancel{color:#ff6666;}
 .modal-cancel .modal-body .icon-cancel{margin:0 5px -5px 0;}
 .modal-cancel .modal-body .btn-form, 
-.modal-cancel .modal-body .btn-form:hover{border:0 none;width:auto;padding:0 45px;font:18px/44px ralewayregular, sans-serif;}
+.modal-cancel .modal-body .btn-form:hover{border:0 none;width:auto;padding:0 45px;font:22px/44px ralewaymedium, sans-serif;}
 
 .modal-note .modal-header{background:#97BC47;padding:15px;color:#ffffff;text-align:left;}
-.modal-note .modal-header .close{color:#97bc47;border:0 none;margin:-28px -26px 0 0;}
-.modal-note .modal-body h2{font:26px/30px ralewayregular, sans-serif;margin:12px 0;}
-.modal-note .modal-body h4{font:16px/20px ralewayregular, sans-serif;margin:0 0 15px;}
+.modal-note .modal-header .close{width:25px;height:25px;background-image:url(images/icons/icon_close_green.png);top:-13px;right:-13px;}
+.modal-note .modal-header .modal-title{margin:0;}
+.modal-note .modal-body h2{font:26px/30px ralewayextrabold, sans-serif;margin:12px 0;}
+.modal-note .modal-body h4{font:16px/20px ralewaybold, sans-serif;margin:0 0 15px;}
 .modal-note .modal-body h4 time{display:inline-block;margin:0 0 0 10px;}
 .modal-note .modal-body .btn-form, 
-.modal-note .modal-body .btn-form:hover{border:0 none;width:auto;padding:0 45px;font:18px/44px ralewayregular, sans-serif;}
+.modal-note .modal-body .btn-form:hover{border:0 none;width:auto;padding:0 45px;font:22px/44px ralewaymedium, sans-serif;}
 
 .notes-list{margin:0 0 20px;}
 .notes-block{border:1px solid #ababab;}
 .notes-block .user-avatar{float:left;width:65px;height:65px;margin:0 10px 0 0;}
-.notes-info{font:14px/18px ralewayregular, sans-serif;color:#ababab;}
+.notes-info{font:14px/18px ralewaymedium, sans-serif;color:#ababab;}
 .notes-info p{padding:14px 10px;}
-.notes-time{padding:5px;text-align:right;font:13px/16px ralewayregular, sans-serif;color:#ababab;}
+.notes-time{padding:5px;text-align:right;font:13px/16px ralewaymedium, sans-serif;color:#ababab;}
 
 .modal-terms{width:700px;}
 .modal-terms .modal-header{padding:0;text-align:left;}
@@ -776,7 +780,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .modal-offer{width:656px;}
 .modal-offer .modal-content{border:3px solid #c1d82f;border-radius:0;}
 .modal-offer .modal-header{min-height:100px;background:#000000;padding:0;position:relative;}
-.modal-offer .modal-header .close{background:transparent;margin:0 10px 0 0;color:#ffffff;font:bold 40px/40px ralewayregular, sans-serif;opacity:0.5;filter:alpha(opacity=50);}
+.modal-offer .modal-header .close{width:22px;height:22px;background-image:url(images/icons/icon_close_grey.png);top:15px;right:15px;}
 .modal-offer .logo-offer{float:left;margin:0 0 10px;}
 .modal-offer .event{width:230px;max-height:90px;overflow:hidden;color:#F7941E;font:26px/30px ralewayregular, sans-serif;margin:15px;position:absolute;right:0;bottom:0;}
 .modal-offer .modal-body{padding:0 0 10px;font:14px/18px ralewayregular, sans-serif;}
@@ -931,7 +935,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 .modal-checkout .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .modal-checkout .modal-header{background:#ba337a;font:20px/24px ralewayregular, sans-serif;color:#ffffff;}
 .modal-checkout .modal-header p{font:16px/20px ralewayregular, sans-serif;}
-.modal-checkout .modal-header .close{color:#ba337a;}
+.modal-checkout .modal-header .close{background-image:url(images/icons/icon_close_purple.png);}
 .modal-checkout .modal-body{font:16px/20px ralewayregular, sans-serif;}
 
 .checkout-time-complete{float:right;font:18px/22px ralewayregular, sans-serif;margin:-5px 0 0;}
@@ -1463,7 +1467,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 	.review-accordion .ui-accordion .ui-accordion-content{font-size:14px;line-height:18px;}
 	.review-accordion .ui-accordion .ui-accordion-content h4{font-size:14px;line-height:18px;}
 	
-	.modal-header .close{font-size:46px;line-height:23px;color:#ffffff;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;width:auto;height:auto;margin:-2px 0 0;background:transparent;}
+	.modal-header .close{width:22px;height:22px;background-image:url(images/icons/icon_close_white.png) !important;top:22px;right:20px;}
 	
 	.modal-details .modal-footer{text-align:center;}
 	.modal-details .modal-footer .package-price{display:block;float:none;margin:0 0 20px;}
@@ -1475,6 +1479,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 	.modal-class .modal-footer .package-price{display:block;float:none;text-align:left;}
 	
 	.modal-offer{width:auto;}
+	.modal-offer .modal-header{padding-top:37px;}
 	.modal-offer .logo-offer{float:none;}
 	.modal-offer .event{position:relative;width:90%;margin:0 auto 15px;text-align:center;}
 	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
@@ -1482,7 +1487,13 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 	.modal-offer .nav-tabs li{float:none;width:100%;margin:0;}
 	
 	.modal-form{width:auto;}
+	.modal-form .modal-header .close{width:33px;height:33px;background-image:url(images/icons/btn_close_black.png) !important;}
 	.modal-form .modal-footer .link-form a{margin:0;}
+	
+	.modal-cancel .modal-header .close{width:22px;height:22px;background-image:url(images/icons/icon_close_white.png) !important;top:22px;right:20px;}
+	
+	.modal-note .modal-header .close{width:22px;height:22px;background-image:url(images/icons/icon_close_white.png) !important;top:22px;right:20px;}
+	.modal-note .modal-body .text-right{text-align:center;}
 	
 	.modal-terms .ui-tabs-nav{background:transparent;border-top:1px solid #333333;}
 	.modal-terms .ui-tabs .ui-tabs-nav .ui-state-active .ui-tabs-anchor{color:#333333;}
@@ -1537,7 +1548,6 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 	/****************Tuan UI***************/
 	
 	.modal-checkout{width:auto;}
-	.modal-checkout .modal-header .close{width:25px;height:25px;background:#ffffff;margin:-28px -26px 0 0;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;font-size:30px;line-height:12px;}
 	
 	.checkout-fieldset{background:none;}
 	
@@ -1635,6 +1645,15 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 	.modal-form .modal-header .modal-title{font-size:28px;line-height:32px;}
 	.modal-form .modal-header h4{font-size:18px;line-height:22px;}
 	.modal-form .modal-footer{font-size:12px;line-height:16px;}
+	.modal-form .modal-body .form-control{font-size:14px;}
+	.modal-form .modal-body textarea.form-control{height:100px;}
+	
+	.modal-cancel .modal-header .modal-title{font-size:24px !important;font-family:ralewaymedium, sans-serif;}
+	.modal-cancel .modal-body .btn-form, 
+	.modal-cancel .modal-body .btn-form:hover{padding:0 15px;}
+	
+	.modal-note .modal-header .modal-title{font-size:24px !important;font-family:ralewaymedium, sans-serif;}
+	.notes-info p{padding:5px;}
 
 	.appointments-info .date-price{font-size:13px;line-height:17px;}
 	.appointments-info .date-price .time-info{font-size:13px;line-height:17px;}
