@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).on("load", function(){
 	
 	var isMobile = {
 		Android: function() {
@@ -21,38 +21,95 @@ $(document).ready(function(){
 		}
 	};	
 	
-	var getSolution = $(window).width(),
+	var getWidthSolution = $(window).width(),
 		getHeightSolution = $(window).height(),
+		isScroll,
+		isResize = false,
+		rightCol = $('#nav-affix'),
+		leftCol = $('#main-affix'),
+		heightHeader,
+		footerHeight ,
+		
+		leftHeight,
+		leftBottom,
+		
+		rightHeight,
+		rightBottom,
+		
+		offsetContact;
+		
+	$(window).resize(function(){
+		getWidthSolution = $(window).width();
+		getHeightSolution = $(window).height();
+		isResize = true;
+		leftCol.removeAttr("style");
+		rightCol.removeAttr("style");
+		stateScroll();
+		getValue();
+		if(isScroll == true){
+			sticky();
+		}else{
+			leftCol.removeAttr("style");
+			rightCol.removeAttr("style");
+		}
+		
+	});
+	
+	function stateScroll(){
+		if(getWidthSolution > 767){
+			isScroll = true;
+			console.log(isScroll);
+		}else{
+			isScroll = false;
+			console.log(isScroll);
+		}			
+	}	
+	
+	if(isMobile.any()) {
+		$('#detech-devices').addClass("detech-devices");
+	}else{	
+		stateScroll();	
+		getValue();
+		if(isScroll == true){
+			sticky();
+		}else{
+			leftCol.removeAttr("style");
+			rightCol.removeAttr("style");
+		}
+	}	
+	
+	function getValue(){		
 		heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
 		footerHeight =  $('.site-contact').height() + $('.site-footer').innerHeight(),
-		rightCol = $('#nav-affix'),
-		rightHeight= rightCol.height(),
-		rightBottom,
-		leftCol = $('#main-affix'),
+		
 		leftHeight = leftCol.height(),
-		leftBottom,
-		offsetContact = $('.site-contact').offset().top;
-	if(rightHeight < getHeightSolution){
-		rightCol.css("height", getHeightSolution);
-		rightHeight = getHeightSolution;
-		rightBottom = rightHeight + heightHeader;
-	}else{		
-		rightBottom = rightHeight + heightHeader;
-	}
-	if(leftHeight < getHeightSolution){
-		leftCol.css("height", getHeightSolution);
-		leftHeight = getHeightSolution;
+		
+		rightHeight= rightCol.height(),
+		
+		offsetContact = $('.site-contact').offset().top;	
+			
+		console.log(leftHeight);
+		console.log(rightHeight);						
+		
+		if(rightHeight < getHeightSolution){
+			rightCol.css("height", getHeightSolution);
+			rightHeight = getHeightSolution;
+		}		
+		rightBottom = rightHeight + heightHeader;			
+		
+		if(leftHeight < getHeightSolution){
+			leftCol.css("height", getHeightSolution);
+			leftHeight = getHeightSolution;
+		}		
 		leftBottom = leftHeight + heightHeader;
-	}
-	else{		
-		leftBottom = leftHeight + heightHeader;
+		
 	}
 	
-	console.log(leftHeight);
-	console.log(rightHeight);
-			
-	function sticky(){			
+	function sticky(){
 		$(window).scroll(function () {
+			
+			if(isScroll == false){return;}
+			
 			var winTop = $(this).scrollTop(),
 				winBottom = winTop + $(this).height();
 				
@@ -69,10 +126,18 @@ $(document).ready(function(){
 								'padding-top': 0
 							});
 						}else{
-							rightCol.css({
-								'position': 'relative',
-								'padding-top': leftHeight - rightHeight - 325
-							});
+							if(isResize == false)
+							{
+								rightCol.css({
+									'position': 'relative',
+									'padding-top': leftHeight - rightHeight - 228
+								});
+							}else{
+								rightCol.css({
+									'position': 'relative',
+									'padding-top': leftHeight - rightHeight
+								});
+							}
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
@@ -84,17 +149,32 @@ $(document).ready(function(){
 				} else if (rightBottom > leftBottom){
 					//when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
 					if (winBottom > leftBottom) {
-						if(winBottom <= offsetContact + 325){
-							leftCol.css({
-								'position': 'fixed',
-								'bottom': 0,
-								'padding-top': 0
-							});
+						if(isResize == false){
+							if(winBottom <= offsetContact + 228){
+								leftCol.css({
+									'position': 'fixed',
+									'bottom': 0,
+									'padding-top': 0
+								});
+							}else{
+								leftCol.css({
+									'position': 'relative',
+									'padding-top': rightHeight - leftHeight + 228
+								});
+							}
 						}else{
-							leftCol.css({
-								'position': 'relative',
-								'padding-top': rightHeight - leftHeight + 325
-							});
+							if(winBottom <= offsetContact){
+								leftCol.css({
+									'position': 'fixed',
+									'bottom': 0,
+									'padding-top': 0
+								});
+							}else{
+								leftCol.css({
+									'position': 'relative',
+									'padding-top': rightHeight - leftHeight
+								});
+							}
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
@@ -107,18 +187,6 @@ $(document).ready(function(){
 			}
 	
 		});
-		//end scroll	
 	}
 	
-	if( isMobile.any() ) {
-		$('#detech-devices').addClass("detech-devices");
-	}else{	
-		$(window).resize(function(){
-			window.parent.location = window.parent.location.href;		
-		});				
-		if(getSolution > 767){
-			sticky();
-		}
-	}
-		
 });
