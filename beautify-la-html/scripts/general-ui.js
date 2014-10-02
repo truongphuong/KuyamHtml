@@ -19,7 +19,7 @@ $(window).on("load", function(){
 		any: function() {
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		}
-	};	
+	};
 	
 	var getWidthSolution = $(window).width(),
 		getHeightSolution = $(window).height(),
@@ -89,7 +89,7 @@ $(window).on("load", function(){
 		offsetContact = $('.site-contact').offset().top;	
 			
 		console.log(leftHeight);
-		console.log(rightHeight);						
+		console.log(rightHeight);
 		
 		if(rightHeight < getHeightSolution){
 			rightCol.css("height", getHeightSolution);
@@ -126,18 +126,10 @@ $(window).on("load", function(){
 								'padding-top': 0
 							});
 						}else{
-							if(isResize == false)
-							{
-								rightCol.css({
-									'position': 'relative',
-									'padding-top': leftHeight - rightHeight - 228
-								});
-							}else{
-								rightCol.css({
-									'position': 'relative',
-									'padding-top': leftHeight - rightHeight
-								});
-							}
+							rightCol.css({
+								'position': 'relative',
+								'padding-top': leftHeight - rightHeight
+							});							
 						}
 					}else {
 						//when the user scrolls back up revert its position to relative
@@ -149,33 +141,18 @@ $(window).on("load", function(){
 				} else if (rightBottom > leftBottom){
 					//when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
 					if (winBottom > leftBottom) {
-						if(isResize == false){
-							if(winBottom <= offsetContact + 228){
-								leftCol.css({
-									'position': 'fixed',
-									'bottom': 0,
-									'padding-top': 0
-								});
-							}else{
-								leftCol.css({
-									'position': 'relative',
-									'padding-top': rightHeight - leftHeight + 228
-								});
-							}
+						if(winBottom <= offsetContact){
+							leftCol.css({
+								'position': 'fixed',
+								'bottom': 0,
+								'padding-top': 0
+							});
 						}else{
-							if(winBottom <= offsetContact){
-								leftCol.css({
-									'position': 'fixed',
-									'bottom': 0,
-									'padding-top': 0
-								});
-							}else{
-								leftCol.css({
-									'position': 'relative',
-									'padding-top': rightHeight - leftHeight
-								});
-							}
-						}
+							leftCol.css({
+								'position': 'relative',
+								'padding-top': rightHeight - leftHeight
+							});
+						}						
 					}else {
 						//when the user scrolls back up revert its position to relative
 						leftCol.css({
