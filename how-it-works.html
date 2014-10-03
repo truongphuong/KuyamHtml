@@ -245,13 +245,13 @@
                             <div>
                                 <p>explore and connecting with local businesses is easier than ever before! so get there and discover what your community has to offer.</p>
                                 <p>&nbsp;</p>
-                                <div class="icon-down"></div>
+                                <a title="" href="javascript:void(0);" id="accordion-user-2" class="icon-down"></a>
                             </div>
                             <h3>search</h3>
                             <div>
                                 <p>start browsing your community. select a category or search by company name to find the perfect pamper for you.</p>
                                 <p>&nbsp;</p>
-                                <div class="icon-down"></div>
+                                <a title="" href="javascript:void(0);" id="accordion-user-3" class="icon-down"></a>
                             </div>
                             <h3>schedule</h3>
                             <div>
@@ -354,14 +354,14 @@
                             <div>
                                 <h2>free listings!</h2>
                                 <p>our powerful scheduling service allows you to book appointments during and after business hours. simply add your company and availabilities to kuyam. we'll get you the clients.</p>
-                                 <p><a title="" href="register.html">sign up now</a></p>
-                                <div class="icon-down"></div>
+                                <p><a title="" href="register.html">sign up now</a></p>
+                                <a title="" href="javascript:void(0);" id="accordion-business-2" class="icon-down"></a>
                             </div>
                             <h3>manage</h3>
                             <div>
                                 <p>handling all your new and existing customers is a breeze. we help you keep your slots organized by keeping you up-to-date with notifications and a simple company dashbroad.</p>
                                 <p>&nbsp;</p>
-                                <div class="icon-down"></div>
+                                <a title="" href="javascript:void(0);" id="accordion-business-3" class="icon-down"></a>
                             </div>
                             <h3>thrive</h3>
                             <div>
@@ -458,9 +458,26 @@
     
      <script>
 		$(function() {
-			$( "#tabs-how-it-works" ).tabs();
-			$( "#accordion-user" ).accordion({heightStyle: "content"});
-			$( "#accordion-business" ).accordion({heightStyle: "content"});
+			$("#tabs-how-it-works").tabs();
+			$("#accordion-user").accordion({heightStyle: "content"});
+			$('#accordion-user .icon-down').click(function(){
+				var slideAccordion = $(this).attr("id");
+				if(slideAccordion == "accordion-user-2"){
+					$( "#accordion-user" ).accordion( "option", "active", 1 );
+				}else if(slideAccordion == "accordion-user-3"){
+					$( "#accordion-user" ).accordion( "option", "active", 2 );
+				}			
+			});
+			
+			$("#accordion-business").accordion({heightStyle: "content"});
+			$('#accordion-business .icon-down').click(function(){
+				var slideAccordion = $(this).attr("id");
+				if(slideAccordion == "accordion-business-2"){
+					$( "#accordion-business" ).accordion( "option", "active", 1 );
+				}else if(slideAccordion == "accordion-business-3"){
+					$( "#accordion-business" ).accordion( "option", "active", 2 );
+				}			
+			});
 		});
 	</script>
     
