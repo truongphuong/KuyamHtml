@@ -154,360 +154,393 @@
     <!-- .receipt-history-section -->
     <section class="receipt-history-section">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-8">
-                    <span class="hidden-xs hidden-sm receipt-header">
-                    	appointment and receipt history <span class="total-appointment">5</span>
-                    </span>
-                    <span class="hidden-md hidden-lg receipt-header">
-                    	appointment receipts 
-                    </span>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4 receipt-right-download">
-                    <a href="#" title="Download" class="download-receipt">
-                        <span class="glyphicon icon-download-receipt"></span>
-                        <span class="glyphicon-class"> download</span>
-                    </a>
-                    <a href="#" title="print all" class="download-receipt">
-                        <span class="glyphicon icon-print-receipt"></span>
-                        <span class="glyphicon-class"> print all</span>
-                    </a>
-                </div>
-            </div>
-            <div class="row receipt-row2">
-                <div class="col-xs-12 col-md-8 sort-by-date-section">
-                    <div class="sort-by-date">sort by date: </div>
-                    <div class="sort-by-date-mobile">search by date, payment or name</div>
-                    <div class="sort-by-date-range">
-                        <input type="text" class="receipt-date date-from" /> to <input type="text" class="receipt-date date-to" />
+        
+        	<!-- .receipt-history-content -->
+        	<div class="receipt-history-content">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="section-header">
+                            <h2 class="hidden-xs">appointment and receipt history <span class="receipt-total">5</span></h2>
+                        	<h2 class="visible-xs">appointment receipts</h2>
+                        </div>
                     </div>
-                    <!--<div class="search-form receipt-search-area-mobile">
-                        <fieldset> 
-                            <span class="icon-list"></span>
-                            <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
-                            <div class="clear"></div>                         
-                        </fieldset>
-                    </div>-->
-                    <div class="sort-by-date-payment">
-                        <select class="any-payment">
-                            <option>any payment</option>
-                            <option>PayPal</option>
-                            <option>pay in person</option>
-                            <option>gift card</option>
-                            <option>packages</option>
-                        </select>
+                    <div class="hidden-xs hidden-sm col-md-4 on-desktop">
+                    	<div class="receipt-download">
+                            <a href="#" title="Download">
+                                <span class="glyphicon receipt-icon-download"></span>
+                                <span class="glyphicon-class"> download</span>
+                            </a>
+                            <a href="#" title="print all">
+                                <span class="glyphicon receipt-icon-print"></span>
+                                <span class="glyphicon-class"> print all</span>
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div class="row">
+                	<div class="col-xs-12">
+                    	<!-- .receipt-sort-search -->
+                        <fieldset class="receipt-sort-search clearfix">
+                        	<!-- .receipt-sort -->
+                            <div class="receipt-sort">
+                                <div class="sort-by-date hidden-xs hidden-sm">sort by date: </div>
+                                <div class="sort-by-date visible-xs visible-sm">search by date, payment or name</div>
+                                <div class="sort-by-date-range">
+                                    <input type="text" class="receipt-input-date date-from" /> to <input type="text" class="receipt-input-date date-to" />
+                                </div>
+                                <div class="receipt-select-payment">
+                                    <select>
+                                        <option>any payment</option>
+                                        <option>PayPal</option>
+                                        <option>pay in person</option>
+                                        <option>gift card</option>
+                                        <option>packages</option>
+                                    </select>
+                                </div>                                
+                            </div> 
+                            <!-- /.receipt-sort -->                   
+                            
+                            <!-- .search-form -->
+                            <div class="search-form">
+                           		<input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" />                                 
+                            </div>
+                            <!-- /.search-form -->
+                            
+                            <!-- .receipt-download-mobile -->
+                            <div class="visible-xs visible-sm receipt-download">
+                                <a href="#" title="Download">
+                                    <span class="glyphicon receipt-icon-download"></span>
+                                    <span class="glyphicon-class"> download</span>
+                                </a>
+                            </div> 
+                            <!-- /.receipt-download-mobile -->
+                                               
+                        </fieldset> 
+                        <!-- /.receipt-sort-search -->
+                        
+                	</div>
+                </div>
+                
+                <!-- .receipt-list -->
+                <div class="receipt-list">
+                
+                	<!-- .receipt-header -->
+                    <div class="receipt-header hidden-xs hidden-sm clearfix">
+                        <div class="receipt-col receipt-date">
+                            appt. date
+                        </div>
+                        <div class="receipt-col receipt-time">
+                            appt. time
+                        </div>
+                        <div class="receipt-col receipt-category">
+                            category
+                        </div>
+                        <div class="receipt-col receipt-company-name">
+                            company name
+                        </div>
+                        <div class="receipt-col receipt-payment">
+                            payment
+                        </div>
+                    </div>
+                    <!-- /.receipt-header -->
+                    
+                    <!-- .receipt-item -->
+                    <div class="receipt-item clearfix">
+                    
+                    	<!-- .receipt-item-header -->
+                    	<div class="receipt-item-header clearfix">
+                            <div class="receipt-col receipt-date">
+                                08/03/14                            
+                            </div>
+                            <div class="receipt-col receipt-time hidden-xs hidden-sm">
+                                12:00pm                            
+                            </div>
+                            <div class="receipt-col receipt-category hidden-xs hidden-sm">
+                                blowout                            
+                            </div>
+                            <div class="receipt-col receipt-company-name">
+                                Amy's Hair Salon                             
+                            </div>
+                            <div class="receipt-col receipt-payment receipt-bill">
+                                $90.00
+                            </div>
+                            <div class="clear visible-xs visible-sm"></div>
+                            <div class="receipt-col receipt-time visible-xs visible-sm">
+                                12:00pm
+                            </div>
+                            <div class="receipt-col receipt-category visible-xs visible-sm">
+                                blowout
+                            </div>                      
+                            <div class="receipt-col receipt-more">
+                                <span class="receipt-dropdown"></span>
+                            </div>
+                        </div>
+                        <!-- /.receipt-item-header -->
+                        
+                        <!-- .receipt-item-details -->
+                        <div class="receipt-details clearfix">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-left">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">receipt #:</div>
+                                            <div class="receipt-col-2">73119508</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">purchased on:</div>
+                                            <div class="receipt-col-2">08/03/14</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">status:</div>
+                                            <div class="receipt-col-2">confirmed</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">payment:</div>
+                                            <div class="receipt-col-2">PayPal</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">company:</div>
+                                            <div class="receipt-col-2">Ary's Hair Style</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-right">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">deep tissue message</div>
+                                            <div class="receipt-col-4">$90.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">hot stone</div>
+                                            <div class="receipt-col-4">$0.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <hr />
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">total amount paid</div>
+                                            <div class="receipt-col-4 receipt-bill">$90.00</div>
+                                        </div>
+                                	</div>
+                                </div>
+                            </div>
+                            
+                            <!-- .receipt-review -->
+                            <div class="receipt-download receipt-review on-desktop hidden-xs">
+                                <a href="#" title="give a review">give a review</a>
+                                <a href="#" title="print invoice">
+                                    <span class="glyphicon receipt-icon-print"></span>
+                                    <span class="glyphicon-class"> print invoice</span>
+                                </a>
+                            </div>
+                            <!-- /.receipt-review -->
+                            
+                        </div>
+                        <!-- .receipt-details -->
+                        
+                    </div>
+                    <!-- /.receipt-item -->
+                    
+                    <!-- .receipt-item -->
+                    <div class="receipt-item clearfix">
+                    
+                    	<!-- .receipt-item-header -->
+                    	<div class="receipt-item-header clearfix">
+                            <div class="receipt-col receipt-date">
+                                08/03/14                            
+                            </div>
+                            <div class="receipt-col receipt-time hidden-xs hidden-sm">
+                                12:00pm                            
+                            </div>
+                            <div class="receipt-col receipt-category hidden-xs hidden-sm">
+                                blowout                            
+                            </div>
+                            <div class="receipt-col receipt-company-name">
+                                Amy's Hair Salon                             
+                            </div>
+                            <div class="receipt-col receipt-payment receipt-bill">
+                                $90.00
+                            </div>
+                            <div class="clear visible-xs visible-sm"></div>
+                            <div class="receipt-col receipt-time visible-xs visible-sm">
+                                12:00pm
+                            </div>
+                            <div class="receipt-col receipt-category visible-xs visible-sm">
+                                blowout
+                            </div>                      
+                            <div class="receipt-col receipt-more">
+                                <span class="receipt-dropdown"></span>
+                            </div>
+                        </div>
+                        <!-- /.receipt-item-header -->
+                        
+                        <!-- .receipt-item-details -->
+                        <div class="receipt-details clearfix">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-left">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">receipt #:</div>
+                                            <div class="receipt-col-2">73119508</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">purchased on:</div>
+                                            <div class="receipt-col-2">08/03/14</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">status:</div>
+                                            <div class="receipt-col-2">confirmed</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">payment:</div>
+                                            <div class="receipt-col-2">PayPal</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">company:</div>
+                                            <div class="receipt-col-2">Ary's Hair Style</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-right">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">deep tissue message</div>
+                                            <div class="receipt-col-4">$90.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">hot stone</div>
+                                            <div class="receipt-col-4">$0.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <hr />
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">total amount paid</div>
+                                            <div class="receipt-col-4 receipt-bill">$90.00</div>
+                                        </div>
+                                	</div>
+                                </div>
+                            </div>
+                            
+                            <!-- .receipt-review -->
+                            <div class="receipt-download receipt-review">
+                                <a href="#" title="give a review">give a review</a>
+                                <a href="#" title="print invoice">
+                                    <span class="glyphicon receipt-icon-print"></span>
+                                    <span class="glyphicon-class"> print invoice</span>
+                                </a>
+                            </div>
+                            <!-- /.receipt-review -->
+                            
+                        </div>
+                        <!-- .receipt-details -->
+                        
+                    </div>
+                    <!-- /.receipt-item -->
+                    
+                    <!-- .receipt-item -->
+                    <div class="receipt-item clearfix">
+                    
+                    	<!-- .receipt-item-header -->
+                    	<div class="receipt-item-header clearfix">
+                            <div class="receipt-col receipt-date">
+                                08/03/14                            
+                            </div>
+                            <div class="receipt-col receipt-time hidden-xs hidden-sm">
+                                12:00pm                            
+                            </div>
+                            <div class="receipt-col receipt-category hidden-xs hidden-sm">
+                                blowout                            
+                            </div>
+                            <div class="receipt-col receipt-company-name">
+                                Amy's Hair Salon                             
+                            </div>
+                            <div class="receipt-col receipt-payment receipt-bill">
+                                $90.00
+                            </div>
+                            <div class="clear visible-xs visible-sm"></div>
+                            <div class="receipt-col receipt-time visible-xs visible-sm">
+                                12:00pm
+                            </div>
+                            <div class="receipt-col receipt-category visible-xs visible-sm">
+                                blowout
+                            </div>                      
+                            <div class="receipt-col receipt-more">
+                                <span class="receipt-dropdown"></span>
+                            </div>
+                        </div>
+                        <!-- /.receipt-item-header -->
+                        
+                        <!-- .receipt-item-details -->
+                        <div class="receipt-details clearfix">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-left">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">receipt #:</div>
+                                            <div class="receipt-col-2">73119508</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">purchased on:</div>
+                                            <div class="receipt-col-2">08/03/14</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">status:</div>
+                                            <div class="receipt-col-2">confirmed</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">payment:</div>
+                                            <div class="receipt-col-2">PayPal</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-1">company:</div>
+                                            <div class="receipt-col-2">Ary's Hair Style</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                	<div class="receipt-details-right">
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">deep tissue message</div>
+                                            <div class="receipt-col-4">$90.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">hot stone</div>
+                                            <div class="receipt-col-4">$0.00</div>
+                                        </div>
+                                        <div class="detail-item">
+                                            <hr />
+                                        </div>
+                                        <div class="detail-item">
+                                            <div class="receipt-col-3">total amount paid</div>
+                                            <div class="receipt-col-4 receipt-bill">$90.00</div>
+                                        </div>
+                                	</div>
+                                </div>
+                            </div>
+                            
+                            <!-- .receipt-review -->
+                            <div class="receipt-download receipt-review">
+                                <a href="#" title="give a review">give a review</a>
+                                <a href="#" title="print invoice">
+                                    <span class="glyphicon receipt-icon-print"></span>
+                                    <span class="glyphicon-class"> print invoice</span>
+                                </a>
+                            </div>
+                            <!-- /.receipt-review -->
+                            
+                        </div>
+                        <!-- .receipt-details -->
+                        
+                    </div>
+                    <!-- /.receipt-item -->
                     
                 </div>
-                <div class="col-xs-12 col-md-4">
-                	<div class="receipt-search-area">
-                        <div class="search-form">
-                            <fieldset> 
-                                <span class="icon-list"></span>
-                                <input class="form-control" type="text" value="search by name" onfocus="if (this.value == 'search by name') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'search by name'; }" /> 
-                                <div class="clear"></div>                         
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-8 sort-by-date-section">
-                	<div class="div-receipt-download-mobile">
-                        <a href="#" title="Download" class="download-receipt-mobile">
-                            <span class="glyphicon icon-download-receipt"></span>
-                            <span class="glyphicon-class"> download</span>
-                        </a>
-                    </div>
-                </div>
-            </div> 
-            
-            <div class="list-receipt">
-                <div class="row header">
-                    <div class="col-xs-2 appt-date">
-                        appt. date
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        appt. time
-                    </div>
-                    <div class="col-xs-2">
-                        category
-                    </div>
-                    <div class="col-xs-4">
-                        company name
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        payment
-                    </div>
-                    <div class="col-xs-1"></div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-2 appt-date">
-                        08/03/14
-                    </div>
-                    <div class="col-xs-2 appt-time">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user">
-                        blowout
-                    </div>
-                    <div class="col-xs-4 appt-item-name">
-                        Amy's Hair Salon 
-                    </div>
-                    <div class="col-xs-1 appt-payment">
-                        <b>$90.00</b>
-                    </div>
-                    <div class="col-xs-2 appt-time-mobile">
-                        12:00pm
-                    </div>
-                    <div class="col-xs-2 appt-user-mobile">
-                        blowout
-                    </div>
-                    <div class="col-xs-1 appt-more-detail">
-                        <span class="receipt-dropdown"></span>
-                    </div>
-                    <div class="col-xs-12 detail-item-receipt">
-                        <div class="row">
-                            <div class="col-xs-6 detail-item-receipt-col1">
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">receipt #:</div>
-                                    <div class="col-xs-4 detail-item-col2">73119508</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">purchased on:</div>
-                                    <div class="col-xs-4 detail-item-col2">08/03/14</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">status:</div>
-                                    <div class="col-xs-4 detail-item-col2">confirmed</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">payment:</div>
-                                    <div class="col-xs-4 detail-item-col2">PayPal</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="col-xs-8 detail-item-col1">company:</div>
-                                    <div class="col-xs-4 detail-item-col2">Ary's Hair Style</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 detail-item-receipt-col2">
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">deep tissue message</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">hot stone</div>
-                                    <div class="col-xs-2 appt-payment">$0.00</div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-8 detail-item-line">
-                                        <div class="detail-item-line1"></div>
-                                    </div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="detail-item">
-                                    <div class="col-xs-2">&nbsp;</div>
-                                    <div class="col-xs-6 detail-item-col3">total amount paid</div>
-                                    <div class="col-xs-2 appt-payment"><b>$90.00</b></div>
-                                    <div class="col-xs-2 detail-item-empty">&nbsp;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row receipt-detail-review">
-                            <a href="#" title="give a review" class="download-receipt">give a review</a>
-                            <a href="#" title="print all" class="download-receipt">
-                                <span class="glyphicon icon-print-receipt"></span>
-                                <span class="glyphicon-class"> print invoice</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+                <!-- /.receipt-list -->
+                
+        	</div>   
+            <!-- /.receipt-history-content -->
+             
        	</div>
     </section>
     <!-- .receipt-history-section -->
@@ -515,7 +548,7 @@
     <script>
 		$(function() {
 			$(".receipt-dropdown").on("click", function(){
-				$(this).parents("div.item").find(".detail-item-receipt").toggle();	
+				$(this).parents("div.receipt-item").find(".receipt-details").toggle();	
 				if($(this).hasClass("receipt-dropdown-up"))	
 				{
 					$(this).removeClass("receipt-dropdown-up");
