@@ -33,7 +33,7 @@
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 <!-- TemplateBeginEditable name="script" -->
 <!-- TemplateEndEditable --> 
-<script type="text/javascript" src="scripts/general.js"></script>  
+<script type="text/javascript" src="scripts/general-ui.js"></script>  
 <!-- === END SCRIPTS === -->
 </head>
 <body>
@@ -46,18 +46,18 @@
             <div class="container">
                     
                 <!-- .navbar-header -->
-                <div class="navbar-header">
+                <div class="navbar-header">                	
                     <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>                
+                    </button>       
+                    <a title="" href="#" class="account-user on-device">hi, Kourosh!</a>         
                     <a class="logo" title="" href="home.html"><img alt="" src="content/images/logo_kuyam.png" /></a>
                     <div class="system-date on-desktop hidden-xs">
                         <p>thursday, july 31 2014</p>
-                    </div>
-                    <a title="" href="#" class="account-user on-device">hi, Kourosh!</a>
+                    </div>                    
                 </div>
                 <!-- /.navbar-header -->
                 
@@ -97,7 +97,7 @@
                             $( window ).resize(function() {
                                 widthScreen = $( window ).width();	
                                 if(widthScreen < 768 && temp == 1){
-                                    $( ".site-banner" ).animate({ "margin-top": "-=146px" }, 500 );
+                                    $( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
                                     $( "#nav-account" ).hide();
                                     temp = 0;
                                 }					
@@ -105,10 +105,10 @@
                             
                             function showNavAccount(){
                                 if(temp == 0){														
-                                    $( ".site-banner" ).animate({ "margin-top": "+=146px" }, 500 );
+                                    $( ".site-banner" ).animate({ "margin-top": "+=186px" }, 500 );
                                     temp = 1;
                                 }else{
-                                    $( ".site-banner" ).animate({ "margin-top": "-=146px" }, 500 );
+                                    $( ".site-banner" ).animate({ "margin-top": "-=186px" }, 500 );
                                     temp = 0;
                                 }
                                                     
