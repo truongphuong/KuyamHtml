@@ -16,13 +16,16 @@
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
 
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
 <!-- jQuery UI CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
 
-<link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />
+
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 
@@ -183,7 +186,25 @@
                         	<header class="section-header on-desktop">
                                 <h2>join us for First Thursday of every month!</h2>
                             </header>
-                            <!-- /.section-header -->                            
+                            <!-- /.section-header -->
+                            
+                            <div class="filter-setion clearfix"> 
+                                <select id="select-category" class="selectpicker select-category">
+                                    <option value="">select category</option>
+                                    <option value="">massage</option>
+                                </select>  
+                                <select id="select-city" class="selectpicker select-city">
+                                    <option value="">select location</option>
+                                    <option value="">Los Angeles</option>
+                                    <option value="">US</option>
+                                    <option value="">Canadar</option>
+                                </select>
+                                <script type="text/javascript">
+                                	$(document).ready(function(){	
+										$('#select-category, #select-city').selectpicker();
+									});
+                                </script>    	
+                            </div>                            
                             
                             <!-- .event-new-list -->
                             <div class="event-new-list">
@@ -739,6 +760,7 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+    <script type="text/javascript" src="scripts/bootstrap-select.js"></script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
