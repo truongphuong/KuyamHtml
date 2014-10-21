@@ -37,13 +37,13 @@ function getValue() {
         offsetContact = $('.site-contact').offset().top;
 
         if (rightHeight < getHeightSolution) {
-            rightCol.css("height", getHeightSolution);
+            rightCol.css("min-height", getHeightSolution);
             rightHeight = getHeightSolution;
         }
         rightBottom = rightHeight + heightHeader;
 
         if (leftHeight < getHeightSolution) {
-            leftCol.css("height", getHeightSolution);
+            leftCol.css("min-height", getHeightSolution);
             leftHeight = getHeightSolution;
         }
         leftBottom = leftHeight + heightHeader;
