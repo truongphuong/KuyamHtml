@@ -161,8 +161,19 @@
 								
 									<!-- #tabs -->
 									<script type="text/javascript">
-										$(function(){
-											$( "#tabs" ).tabs();
+										$( document ).ready(function() {
+											$( "#tabs" ).tabs({
+												activate: function( event, ui ) {
+													stateScroll();
+													getValue(); 
+													if(isScroll == true){
+														sticky();
+													}else{
+														leftCol.removeAttr("style");
+														rightCol.removeAttr("style");
+													}
+												}
+											});
 										});
 									</script>
 									<div id="tabs">

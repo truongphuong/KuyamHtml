@@ -48,8 +48,8 @@ function getValue() {
         }
         leftBottom = leftHeight + heightHeader;
 
-        console.log(leftHeight);
-        console.log(rightHeight);   
+        //console.log(leftHeight);
+        //console.log(rightHeight);   
 }
 
 function sticky() {
