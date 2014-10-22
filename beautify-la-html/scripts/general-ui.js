@@ -134,6 +134,17 @@ var isMobile = {
     }
 };
 
+function resetScroll(){
+	stateScroll();
+	getValue();		
+	if(isScroll == true){
+		sticky();
+	}else{
+		leftCol.removeAttr("style");
+		rightCol.removeAttr("style");
+	}
+}
+
 $(document).ready(function () {
 		
 	$(window).resize(function(){
@@ -156,14 +167,7 @@ $(document).ready(function () {
 	if(isMobile.any()) {
 		$('#detech-devices').addClass("detech-devices");
 	}else{	
-	    stateScroll();
-	    $(window).load(function () { getValue();  });		
-		if(isScroll == true){
-			sticky();
-		}else{
-			leftCol.removeAttr("style");
-			rightCol.removeAttr("style");
-		}
+	    resetScroll();
 	}	
 	
 });
