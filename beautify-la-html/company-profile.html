@@ -163,6 +163,9 @@
 									<script type="text/javascript">
 										$( document ).ready(function() {
 											$( "#tabs" ).tabs({
+												create: function( event, ui ) {
+													resetScroll();
+												},
 												activate: function( event, ui ) {
 													resetScroll();
 												}
