@@ -1,9 +1,16 @@
+function getunixtime() {
+    var d = new Date;
+    var unixtime_ms = d.getTime();
+    var unixtime = parseInt(unixtime_ms / 1000);
+    return unixtime;
+}
+
 var getWidthSolution = $(window).width(),
 	getHeightSolution = $(window).height(),
 	isScroll,
 	isResize = false,
-	rightCol,
-	leftCol,
+	rightCol = $('#nav-affix'),
+    leftCol = $('#main-affix'),
 	heightHeader,
 	footerHeight,
 
@@ -23,33 +30,30 @@ function stateScroll() {
     }
 }
 
-function getValue() {   
-        heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
-        footerHeight = $('.site-contact').height() + $('.site-footer').innerHeight(),
+function getValue() {
+    heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
+    footerHeight = $('.site-contact').height() + $('.site-footer').innerHeight(),
 
-        rightCol = $('#nav-affix'),
-        leftCol = $('#main-affix'),
+    leftHeight = leftCol.load().height(),
 
-        leftHeight = leftCol.load().height(),
+    rightHeight = rightCol.load().height(),
 
-        rightHeight = rightCol.load().height(),
+    offsetContact = $('.site-contact').offset().top;
 
-        offsetContact = $('.site-contact').offset().top;
+    if (rightHeight < getHeightSolution) {
+        rightCol.css("min-height", getHeightSolution);
+        rightHeight = getHeightSolution;
+    }
+    rightBottom = rightHeight + heightHeader;
 
-        if (rightHeight < getHeightSolution) {
-            rightCol.css("min-height", getHeightSolution);
-            rightHeight = getHeightSolution;
-        }
-        rightBottom = rightHeight + heightHeader;
+    if (leftHeight < getHeightSolution) {
+        leftCol.css("min-height", getHeightSolution);
+        leftHeight = getHeightSolution;
+    }
+    leftBottom = leftHeight + heightHeader;
 
-        if (leftHeight < getHeightSolution) {
-            leftCol.css("min-height", getHeightSolution);
-            leftHeight = getHeightSolution;
-        }
-        leftBottom = leftHeight + heightHeader;
-
-        //console.log(leftHeight);
-        //console.log(rightHeight);   
+    //console.log(leftHeight);
+    //console.log(rightHeight);   
 }
 
 function sticky() {
@@ -71,13 +75,13 @@ function sticky() {
                             'position': 'fixed',
                             'bottom': 0,
                             'padding-top': 0,
-							'z-index': 2
+                            'z-index': 2
                         });
                     } else {
                         rightCol.css({
                             'position': 'relative',
                             'padding-top': leftHeight - rightHeight,
-							'z-index': 'inherit'
+                            'z-index': 'inherit'
                         });
                     }
                 } else {
@@ -85,7 +89,7 @@ function sticky() {
                     rightCol.css({
                         'position': 'relative',
                         'padding-top': 0,
-						'z-index': 'inherit'
+                        'z-index': 'inherit'
                     });
                 }
             } else if (rightBottom > leftBottom) {
@@ -96,13 +100,13 @@ function sticky() {
                             'position': 'fixed',
                             'bottom': 0,
                             'padding-top': 0,
-							'z-index': 2
+                            'z-index': 2
                         });
                     } else {
                         leftCol.css({
                             'position': 'relative',
                             'padding-top': rightHeight - leftHeight,
-							'z-index': 'inherit'
+                            'z-index': 'inherit'
                         });
                     }
                 } else {
@@ -110,7 +114,7 @@ function sticky() {
                     leftCol.css({
                         'position': 'relative',
                         'padding-top': 0,
-						'z-index': 'inherit'
+                        'z-index': 'inherit'
                     });
                 }
             }
@@ -140,40 +144,32 @@ var isMobile = {
     }
 };
 
-function resetScroll(){
-	stateScroll();
-	getValue();		
-	if(isScroll == true){
-		sticky();
-	}else{
-		leftCol.removeAttr("style");
-		rightCol.removeAttr("style");
-	}
+function resetScroll() {
+    leftCol.removeAttr("style");
+    rightCol.removeAttr("style");
+    stateScroll();
+    getValue();
+    if (isScroll == true) {
+        sticky();
+    } else {
+        leftCol.removeAttr("style");
+        rightCol.removeAttr("style");
+    }
 }
 
 $(document).ready(function () {
-		
-	$(window).resize(function(){
-		getWidthSolution = $(window).width();
-		getHeightSolution = $(window).height();
-		isResize = true;
-		leftCol.removeAttr("style");
-		rightCol.removeAttr("style");
-		stateScroll();
-		getValue();
-		if(isScroll == true){
-			sticky();
-		}else{
-			leftCol.removeAttr("style");
-			rightCol.removeAttr("style");
-		}
-		
-	});
-	
-	if(isMobile.any()) {
-		$('#detech-devices').addClass("detech-devices");
-	}else{	
-	    resetScroll();
-	}	
-	
+
+    $(window).resize(function () {
+        getWidthSolution = $(window).width();
+        getHeightSolution = $(window).height();
+        isResize = true;
+        resetScroll();
+    });
+
+    if (isMobile.any()) {
+        $('#detech-devices').addClass("detech-devices");
+    } else {
+        resetScroll();
+    }
+
 });
