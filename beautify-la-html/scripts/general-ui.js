@@ -75,7 +75,7 @@ function sticky() {
                             'position': 'fixed',
                             'bottom': 0,
                             'padding-top': 0,
-                            'z-index': 2
+                            'z-index': 9
                         });
                     } else {
                         rightCol.css({
@@ -100,7 +100,7 @@ function sticky() {
                             'position': 'fixed',
                             'bottom': 0,
                             'padding-top': 0,
-                            'z-index': 2
+                            'z-index': 9
                         });
                     } else {
                         leftCol.css({
