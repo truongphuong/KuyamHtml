@@ -159,7 +159,7 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 
 .on-device{display:none !important;}
 
-body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;overflow-x:hidden;}
+body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;overflow-x:hidden;word-wrap:break-word;}
 
 .bg-white{background-color:#ffffff;}
 .bg-black{background-color:#170E0C;}
@@ -876,15 +876,19 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 
 .modal-gallery{width:470px;}
 .modal-gallery .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
-.modal-gallery .modal-header .close{background-image:url(images/assets/btn_close_black_1.png);}
-.modal-gallery .modal-header .modal-title{font: 26px/30px ralewaymedium, sans-serif;color:#ffffff;}
-.modal-gallery .modal-header{background:#F3472D;}
-.modal-gallery .modal-body{padding:0;}
-.modal-gallery .modal-footer{text-align:left;margin:0;font-size:14px;}
+.modal-gallery .modal-header .close{background-image:url(images/assets/btn_close_black_1.png);z-index:9;}
+.modal-gallery .modal-header .modal-title{font: 26px/30px ralewaymedium,sans-serif;color:#ffffff;}
+.modal-gallery .modal-header{min-height:0;padding:0;background:#F3472D;border:0 none;}
+.modal-gallery .modal-body{padding:0;overflow:hidden;}
+.modal-gallery .slide-feature,
+.modal-gallery .carousel-inner{overflow:inherit;}
 
-#carousel-view{height:250px;overflow:hidden;}
-#carousel-view .carousel-inner > .item{height:250px;background:center center no-repeat;background-size:cover;}
-#carousel-view .carousel-indicators{display:block;text-align:left;left:15px;}
+#carousel-view{}
+#carousel-view .carousel-inner > .item{}
+#carousel-view .carousel-indicators{display:block;text-align:left;top:256px;right:0;bottom:inherit;left:0;padding:15px;}
+#carousel-view .carousel-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#F3472D;padding:15px;font:26px/30px ralewaymedium,sans-serif;color:#ffffff;}
+#carousel-view .carousel-image{height:250px;background:center center no-repeat;background-size:cover;}
+#carousel-view .carousel-caption{text-shadow:none;position:relative;right:0;bottom:inherit;left:0;background:#ffffff;padding:15px;font-size:14px;color:#000000;text-align:left;}
 
 .single-company-profile-page .book-tab{margin:23px 0 0;}
 
