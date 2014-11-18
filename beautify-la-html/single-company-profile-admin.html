@@ -168,7 +168,7 @@
                                         	<div class="step-order">step<br /> 1</div>
                                             <h3>event page description<span class="alert-error">*</span></h3>
                                             <p>add a 300 word description for your event here.</p>
-                                            <input type="button" class="btn-orange btn-add" value="add description" />
+                                            <input data-toggle="modal" data-target="#modal-description" type="button" class="btn-orange btn-add" value="add description" />
                                         </header>    
                                     </div>   
                                     <!-- /.step-by-step --> 
@@ -181,7 +181,7 @@
                                             <h3>event page description<span class="alert-error">*</span></h3>
                                             <p>Welcome to Amy's Hair Salon opening event! We are pround to finally be open for business. To celebrate, we invite you to the first ever Amy's Hair Salon event spectacular! Drink wine amoung staff and other event goes and learn all about Amy's Hair Salon products and services</p>
                                             <div class="text-right">  
-                                            	<a title="" href="#" class="btn-link">edit description</a>
+                                            	<a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-description" class="btn-link">edit description</a>
                                             </div>
                                         </header>  
                                     </div>
@@ -194,7 +194,7 @@
                                         	<div class="step-order">step<br /> 2</div>
                                             <h3>email invitation message<span class="alert-error">*</span></h3>
                                             <p>add a short invitation to your guest inviting them to come to your event which will be sent via email.</p>
-                                            <input type="button" class="btn-orange btn-add" value="add invitation" />
+                                            <input data-toggle="modal" data-target="#modal-invitation" type="button" class="btn-orange btn-add" value="add invitation" />
                                         </header>
                                     </div>
                                     <!-- /.step-by-step -->
@@ -207,7 +207,7 @@
                                             <h3>email invitation message<span class="alert-error">*</span></h3>
                                             <p>we invite you to Amy's Hair Salon grand opening event! We are so happy to be finally open and we want you to our first client! come join us for discounts, food and wine!</p>
                                             <div class="text-right">
-                                            	<a title="" href="#" class="btn-link">edit message</a>
+                                            	<a title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-invitation" class="btn-link">edit message</a>
                                             </div>
                                         </header>
                                     </div>
@@ -566,7 +566,7 @@
                                             <img src="content/images/assets/icons_social/Youtube.png" alt="">
                                         </a>
                                     </dd>
-                                    <dt><a title="" href="#">click here add social media</a></dt>
+                                    <dt><a title=""  href="javascript:void(0);" data-toggle="modal" data-target="#modal-social">click here add social media</a></dt>
                                 </dl>      
                                 <!-- /.social-icons -->   
                                 
@@ -580,7 +580,7 @@
                                     <div class="bulletin-list">
                                     	<div class="bulletin-guide">
                                         	<p>your event status updates will show up here</p>
-                                        	<input class="btn-orange btn-create" value="create bulletin post" />
+                                        	<input data-toggle="modal" data-target="#modal-bulletin" class="btn-orange btn-create" value="create bulletin post" />
                                         </div>
                                         
                                     	<!-- .bulletin-block -->
@@ -633,6 +633,104 @@
 		</div>     
         <!-- /.main-content -->
         
+        <!-- .modal-description -->    
+        <div class="modal fade" id="modal-description" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-post modal-description">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <span class="icon-bulletin"></span>
+                        <h4 class="modal-title">edit bulletin post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>add a short description for your event.</legend>
+                            <textarea class="form-control txt-description" cols="" rows="">add a 300 word maximum description of the event here</textarea>
+                            <div class="text-right">
+                            	<input class="btn-orange btn-save" type="button" value="save" />
+                            </div>
+                        </fieldset>                     
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-description -->
+        
+        <!-- .modal-invitation -->    
+        <div class="modal fade" id="modal-invitation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-post modal-invitation">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <span class="icon-bulletin"></span>
+                        <h4 class="modal-title">event invite message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>add a short invitation to your guests inviting them to come to your event which will be sent via email.</legend>
+                            <textarea class="form-control txt-message" cols="" rows="">add a 300 word maximum description of the event here</textarea>
+                            <div class="text-right">
+                            	<input class="btn-orange btn-save" type="button" value="save" />
+                            </div>
+                        </fieldset>                   
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-invitation -->
+        
+        <!-- .modal-bullettin -->    
+        <div class="modal fade" id="modal-bulletin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-post modal-bullettin">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <span class="icon-bulletin"></span>
+                        <h4 class="modal-title">edit bulletin post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>add a short description for your event.</legend>
+                            <input class="form-control" type="text" value="Amy's Best Offer Hour" />
+                            <div class="bulletin-des">  
+                            	<textarea class="form-control txt-bulletin" cols="" rows="">Oops. We made a mistake and we want to edit this post.</textarea>
+                                <div class="text-right clearfix">
+                                	<time>post on:<br />11/3/14</time>
+                                    <input class="btn-orange btn-save" type="button" value="save" />
+                                </div>
+                            </div>
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-bullettin -->
+        
+        <!-- .modal-social -->    
+        <div class="modal fade" id="modal-social" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-post modal-social">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">social media</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>add a short description for your event.</legend>
+                            <input class="form-control" type="text" value="Amy's Best Offer Hour" />
+                            <div class="bulletin-des">  
+                            	<textarea class="form-control txt-bulletin" cols="" rows="">Oops. We made a mistake and we want to edit this post.</textarea>
+                                <div class="text-right clearfix">
+                                	<time>post on:<br />11/3/14</time>
+                                    <input class="btn-orange btn-save" type="button" value="save" />
+                                </div>
+                            </div>
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-social -->
         
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
