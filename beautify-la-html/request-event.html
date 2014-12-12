@@ -24,6 +24,7 @@
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
 <!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" type="text/css" href="content/datepicker3.css" />
 <!-- InstanceEndEditable -->
 
 <link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
@@ -447,7 +448,7 @@
 						slideCurrent = "#" + $(this).attr("slideCurrent");
 					$(slideCurrent).addClass("hide");
 					$(slideNext).removeClass("hide");
-				})
+				});
             });
         </script> 
         
@@ -720,6 +721,16 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+	<script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
+	<script type="text/javascript">
+		$(function() {					   
+			$('.col-date .form-control').datepicker({
+				format: 'mm/dd/yy',
+			}).on('changeDate', function(e){
+				$(this).datepicker('hide');
+			});
+		});
+	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
