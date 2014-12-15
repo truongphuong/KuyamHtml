@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://ww.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/event_work.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/event_work.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=edge" />
@@ -20,11 +20,12 @@
 <!-- jQuery UI CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
 
+<link rel="stylesheet" type="text/css" href="content/datepicker3.css" />
+
 <!-- countdown CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" type="text/css" href="content/datepicker3.css" />
 <!-- InstanceEndEditable -->
 
 <link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
@@ -34,8 +35,9 @@
 <!-- === SCRIPTS === -->  
 <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>    	
 <script type="text/javascript" src="scripts/bootstrap.js"></script>
-<script type="text/javascript" src="scripts/bootstrap-select.js"></script>      
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script> 
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>     
 <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
 <script type="text/javascript" src="scripts/jquery.countdown.js"></script>
 <script type="text/javascript" src="scripts/jquery.mobile.custom.min.js"></script>
@@ -449,6 +451,12 @@
 					$(slideCurrent).addClass("hide");
 					$(slideNext).removeClass("hide");
 				});
+								
+				$('#txtDate1, #txtDate2, #txtDate3').datepicker({
+					format: 'mm/dd/yy',
+				}).on('changeDate', function(e){
+					$(this).datepicker('hide');
+				});
             });
         </script> 
         
@@ -654,7 +662,7 @@
                 
                     <!-- .checkout-title -->
                     <div class="ticket-title">
-                        <h3>your've succesfully purchased tickets to:</h3>
+                        <h3>your've succesfully purchased tickets to:</h3>  
                         <p>
                         	Beautify LA: Montana Ave<br />
                             Thurs, Oct. 2nd<br />
@@ -720,17 +728,7 @@
     <!-- END HTML --> 
     
     <!-- === SCRIPTS === --> 
-    <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>
-	<script type="text/javascript">
-		$(function() {					   
-			$('.col-date .form-control').datepicker({
-				format: 'mm/dd/yy',
-			}).on('changeDate', function(e){
-				$(this).datepicker('hide');
-			});
-		});
-	</script>
+    <!-- InstanceBeginEditable name="script" -->	
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
