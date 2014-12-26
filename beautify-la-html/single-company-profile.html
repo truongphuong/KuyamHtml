@@ -23,6 +23,9 @@
 <!-- countdown CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
+<!-- idangerous.swiper -->
+<link rel="stylesheet" type="text/css" href="content/idangerous.swiper.css" />
+
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 
@@ -37,7 +40,8 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
 <script type="text/javascript" src="scripts/jquery.countdown.js"></script>
-<script type="text/javascript" src="scripts/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="scripts/idangerous.swiper.js"></script>
+
 <!-- === END SCRIPTS === --> 
 </head>
 <body>
@@ -939,67 +943,27 @@
                     </div>
                     <div class="modal-body"> 
                     
-                        <!-- slide-feature -->
-                        <div class="slide-feature">
-                            <div id="carousel-view" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-view" data-slide-to="0" class="active"></li>    
-                                    <li data-target="#carousel-view" data-slide-to="1"></li>
-                                    <li data-target="#carousel-view" data-slide-to="2"></li>
-                                    <li data-target="#carousel-view" data-slide-to="3"></li>
-                                    <li data-target="#carousel-view" data-slide-to="4"></li>                
-                                </ol>
-                            
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <div class="carousel-title">gallery</div>
-                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
-                                        <div class="carousel-caption">
-                                            This is a photo album from our last Beautify LA event!
-                                        </div>
-                                    </div>  
-                                    <div class="item">
-                                        <div class="carousel-title">gallery</div>
-                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
-                                        <div class="carousel-caption">
-                                            This is a photo album from our last Beautify LA event!
-                                        </div>
-                                    </div> 
-                                    <div class="item">
-                                        <div class="carousel-title">gallery</div>
-                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
-                                        <div class="carousel-caption">
-                                            This is a photo album from our last Beautify LA event!
-                                        </div>
-                                    </div> 
-                                    <div class="item">
-                                        <div class="carousel-title">gallery</div>
-                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
-                                        <div class="carousel-caption">
-                                            This is a photo album from our last Beautify LA event!
-                                        </div>
-                                    </div> 
-                                    <div class="item">
-                                        <div class="carousel-title">gallery</div>
-                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
-                                        <div class="carousel-caption">
-                                            This is a photo album from our last Beautify LA event!
-                                        </div>
-                                    </div>                                                     
-                                </div>
-                            
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-view" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-view" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div>
+                   		<div class="swiper-container">
+                          	<div class="swiper-wrapper">
+                            	<div class="swiper-slide">
+                                	<div class="title-slide">gallery</div>
+									<div class="image-slide" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+									<div class="content-slide">This is a photo album from our last Beautify LA event!</div>
+								</div>
+                            	<div class="swiper-slide">
+                                	<div class="title-slide">gallery</div>
+									<div class="image-slide" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+									<div class="content-slide">This is a photo album from our last Beautify LA event!</div>
+								</div>
+                                <div class="swiper-slide">
+                                	<div class="title-slide">gallery gallery gallery gallery gallery gallery gallery gallery</div>
+									<div class="image-slide" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+									<div class="content-slide">This is a photo album from our last Beautify LA event! This is a photo album from our last Beautify LA event! This is a photo album from our last Beautify LA event!</div>
+								</div>
+                          	</div>
                         </div>
-                        <!-- /slide-feature -->
+                        
+                        <div class="pagination"></div>
                                                
                     </div>            
                 </div><!-- /.modal-content -->
@@ -1009,15 +973,12 @@
         
         <script type="text/javascript">			
 			
-			$(document).ready(function() {
-				$("#carousel-view").swiperight(function() {
-					$("#carousel-view").carousel('prev');
-				});
-				$("#carousel-view").swipeleft(function() {
-					$("#carousel-view").carousel('next');
-				});
-				
-			});
+			var mySwiper = new Swiper('.swiper-container',{
+				pagination: '.pagination',
+				loop:true,
+				grabCursor: true,
+				paginationClickable: true
+			})
 			
 		</script>      
         
