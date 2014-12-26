@@ -738,7 +738,7 @@
                                                 </div>
                                             </div>
                                             <div class="bulletin-content">
-                                            	<a class="" title="" data-target="#modal-gallery" data-toggle="modal" href="javascript:void(0);" style="background-image:url(content/images/assets/canon_drive.jpg);">
+                                            	<a class="view-gallery" title="" href="javascript:void(0);" style="background-image:url(content/images/assets/canon_drive.jpg);">
                                                 	<span class="bulletin-caption"><span>view gallery</span></span>
                                                 </a>
                                             </div>
@@ -935,11 +935,11 @@
         <!-- /.modal-class -->
         
         <!-- .modal-gallery -->    
-        <div class="modal fade" id="modal-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-gallery-view" id="modal-gallery">
             <div class="modal-dialog modal-gallery">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <button type="button" class="close"></button>
                     </div>
                     <div class="modal-body"> 
                     
@@ -961,24 +961,39 @@
 									<div class="content-slide">This is a photo album from our last Beautify LA event! This is a photo album from our last Beautify LA event! This is a photo album from our last Beautify LA event!</div>
 								</div>
                           	</div>
-                        </div>
-                        
-                        <div class="pagination"></div>
+                            <div class="pagination"></div>
+                        </div> 
                                                
                     </div>            
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <!-- /.modal-gallery -->   
+        <!-- /.modal-gallery --> 
         
-        <script type="text/javascript">			
+        <script type="text/javascript">	
 			
 			var mySwiper = new Swiper('.swiper-container',{
 				pagination: '.pagination',
-				loop:true,
-				paginationClickable: true
-			})
-			
+				paginationClickable: true,
+				loop: true
+			});	
+				
+			$(document).ready(function () {
+				$('.view-gallery').click(function(){
+					$('#modal-gallery').css({'visibility': 'visible'});	
+					$('body').addClass('modal-open');			
+				});
+				
+				$('#modal-gallery').click(function(e){
+					var className = $(e.target).attr('class');
+					if(className == "close" || className == "modal-gallery-view")
+					{
+						$('#modal-gallery').css({'visibility': 'hidden'});
+						$('body').removeClass('modal-open');	
+					}
+				});
+				
+			})	
 		</script>      
         
         <!-- InstanceEndEditable --> 
