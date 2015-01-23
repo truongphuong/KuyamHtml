@@ -1218,8 +1218,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 
 .rsvp-section{padding:15px;background:#f2f6f9;margin:0 0 50px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;}
 .rsvp-section .btn-RSVP{float:left;margin:0;}
-.rsvp-section .social-icons{float:right;margin:0;}
-.rsvp-section .social-icons dt{float:left;padding:0;font-size:20px;line-height:44px;margin-right:20px;}
+.rsvp-section .social-icons{margin:0;text-align:right;}
+.rsvp-section .social-icons dt{display:inline;padding:0;font-size:20px;line-height:44px;margin-right:20px;}
 .rsvp-section .social-icons dd{width:auto;margin:5px 0 0 7px;}
 .rsvp-section .spot-info{padding:10px 0;}
 .rsvp-section .spot-info p{font:20px/24px ralewaymedium,sans-serif;}
@@ -1440,7 +1440,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.modal-offer{width:95%;}
 	.modal-offer .event{width:58%;}
 }
-@media (min-width:768px) and (max-width:979px){			
+@media (min-width:768px) and (max-width:979px){	
+	.rsvp-section .social-icons{clear:both;padding-top:10px;text-align:left;}		
 }
 @media (max-width:767px){
 	.book-detail-page{margin-left:-15px;margin-right:-15px;}
@@ -1835,7 +1836,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.modal-rsvp .timer-form .ticket-calendar{width:100%;}
 	
 	.rsvp-section .social-icons{text-align:center;}
-	.rsvp-section .social-icons dt{float:none;}
+	.rsvp-section .social-icons dt{float:none;display:block;}
 	.rsvp-section .social-icons dd{width:20%;}
 	
 	.event-block .progress{height:18px;margin-top:0;}
