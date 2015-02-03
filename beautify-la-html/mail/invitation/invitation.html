@@ -26,6 +26,25 @@
 	.invitation-book{}
 	.invitation-socials{background-color:#333333;padding-top:30px;padding-bottom:30px;}
 	.invitation-footer{background-color:#e7e7e7;padding-top:50px;padding-bottom:50px;font-size:16px;line-height:30px;}
+	.invitation-device{display:none;}
+	
+	@media only screen and (max-device-width:480px){
+		.invitation-mail{width:320px !important;font-size:16px !important;line-height:20px !important;}
+		.invitation-banner{height:auto !important;}
+		.invitation-banner img{width:100%;}
+		.invitation-company span{font-size:24px !important;}
+		.invitation-time span{font-size:20px !important;}
+		.invitation-info span{font-size:16px !important;}
+		.invitation-socials img{width:30px;}
+		.invitation-footer{padding-left:15px !important;padding-right:15px !important;font-size:14px !important;line-height:18px !important;}
+		.invitation-contact span{font-size:16px !important;}
+		.invitation-date{font-size:12px !important;line-height:16px !important;}
+		.invitation-bulletin{font-size:12px !important;line-height:16px !important;}
+		.invitation-bulletin img{width:100%;}
+		.invitation-address{font-size:12px !important;line-height:16px !important;}
+		.invitation-desktop{display:none;}
+		.invitation-device{display:block;}
+	}
 </style>
 </head>
 <body>
@@ -71,7 +90,7 @@
                         	Get the best deals this week during the annual Amy's Hair Salon event! Get a free glass of wine, free ZICO water, goodie bag and 20% off on all bookings during the event days! Come spend some time with us here at Amy's Hair Salon!
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="invitation-desktop">
                     	<td valign="top" style="padding-top:15px;padding-bottom:15px;">
                         	<img width="272" alt="" src="images/invitation_img.png" />
                         </td>
@@ -80,6 +99,16 @@
                         	Amy's Hair Salon<br />5130 235th PL SE<br /> Los Angeles, CA, 90012<br />(360) 399-1393
                         </td>
                     </tr>
+					<tr class="invitation-device">
+                    	<td colspan="3"  style="padding-top:15px;padding-bottom:0;">
+							<img width="272" alt="" src="images/invitation_img.png" />
+						</td>
+					</tr>
+					<tr class="invitation-device">
+                    	<td colspan="3"  style="padding-top:15px;padding-bottom:0;">
+							Amy's Hair Salon<br />5130 235th PL SE<br /> Los Angeles, CA, 90012<br />(360) 399-1393
+						</td>
+					</tr>
                     <tr>
                     	<td class="invitation-note" colspan="3" style="padding-top:0;padding-bottom:15px;">
                         	one free glass of wine per person

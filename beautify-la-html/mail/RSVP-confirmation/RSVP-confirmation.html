@@ -26,6 +26,25 @@
 	.invitation-book{}
 	.invitation-socials{background-color:#333333;padding-top:30px;padding-bottom:30px;}
 	.invitation-footer{background-color:#e7e7e7;padding-top:50px;padding-bottom:50px;font-size:16px;line-height:30px;}
+	.invitation-device{display:none;}
+	
+	@media only screen and (max-device-width:480px){
+		.invitation-mail{width:320px !important;font-size:16px !important;line-height:20px !important;}
+		.invitation-banner{height:auto !important;}
+		.invitation-banner img{width:100%;}
+		.invitation-company span{font-size:24px !important;}
+		.invitation-time span{font-size:20px !important;}
+		.invitation-info span{font-size:16px !important;}
+		.invitation-socials img{width:30px;}
+		.invitation-footer{padding-left:15px !important;padding-right:15px !important;font-size:14px !important;line-height:18px !important;}
+		.invitation-contact span{font-size:16px !important;}
+		.invitation-date{font-size:12px !important;line-height:16px !important;}
+		.invitation-bulletin{font-size:12px !important;line-height:16px !important;}
+		.invitation-bulletin img{width:100%;}
+		.invitation-address{font-size:12px !important;line-height:16px !important;}
+		.invitation-desktop{display:none;}
+		.invitation-device{display:block;}
+	}
 </style>
 </head>
 <body>
@@ -86,7 +105,7 @@
                         	<span style="font-weight:700;font-family:'raleway', sans-serif;">Location:</span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="invitation-desktop">
                     	<td class="invitation-description" colspan="3" style="padding-top:0;padding-bottom:0;">
                         	<table width="100%" cellspacing="0" cellpadding="0" border="0">
 								<tr>
@@ -99,7 +118,19 @@
 								</tr>
 							</table>
                         </td>
-                    </tr> 
+                    </tr>
+					<tr class="invitation-device">
+                    	<td class="invitation-description" colspan="3"  style="padding-top:15px;padding-bottom:0;">
+							11420 5th ave suite 213<br /> Seattle, Washington 98101
+						</td>
+					</tr>
+					<tr class="invitation-device">
+                    	<td class="invitation-description" colspan="3"  style="padding-top:15px;padding-bottom:0;">
+							<a href="#" title="">
+								<img src="images/confirmation_directions.jpg" alt="">
+							</a>
+						</td>
+					</tr>					
 					<tr>
                     	<td class="invitation-info" colspan="3"  style="padding-top:15px;padding-bottom:0;">
                         	<span style="font-weight:700;font-family:'raleway', sans-serif;">Guest in your party:</span>
