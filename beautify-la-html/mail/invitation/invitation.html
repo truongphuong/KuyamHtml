@@ -6,7 +6,6 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,800' rel='stylesheet' type='text/css'>
 
 <style type="text/css">	
-	@import url(http://fonts.googleapis.com/css?family=Raleway:500,600,700,800);
 	body{margin:0;padding:0;background:#E7E7E7;}
 	.invitation-mail{width:600px;background:#ffffff;font-size:18px;line-height:22px;font-weight:500;font-family:'raleway', sans-serif;color:#000000;}
 	.invitation-banner{height:142px;}
@@ -26,12 +25,12 @@
 	.invitation-book{}
 	.invitation-socials{background-color:#333333;padding-top:30px;padding-bottom:30px;}
 	.invitation-footer{background-color:#e7e7e7;padding-top:50px;padding-bottom:50px;font-size:16px;line-height:30px;}
-	.invitation-device{display:none;}
 	
-	@media only screen and (max-device-width:480px){
-		.invitation-mail{width:320px !important;font-size:16px !important;line-height:20px !important;}
+	@media only screen and (max-width:480px){
+		.invitation-mail{width:100% !important;font-size:16px !important;line-height:20px !important;}
 		.invitation-banner{height:auto !important;}
-		.invitation-banner img{width:100%;}
+		.invitation-banner img{width:100% !important;}
+		.invitation-nav a{font-size:18px !important;line-height:22px !important;}
 		.invitation-company span{font-size:24px !important;}
 		.invitation-time span{font-size:20px !important;}
 		.invitation-info span{font-size:16px !important;}
@@ -40,10 +39,10 @@
 		.invitation-contact span{font-size:16px !important;}
 		.invitation-date{font-size:12px !important;line-height:16px !important;}
 		.invitation-bulletin{font-size:12px !important;line-height:16px !important;}
-		.invitation-bulletin img{width:100%;}
+		.invitation-bulletin img{width:100% !important;}
 		.invitation-address{font-size:12px !important;line-height:16px !important;}
-		.invitation-desktop{display:none;}
-		.invitation-device{display:block;}
+		.invitation-manipulation{width:100% !important;}
+		.invitation-manipulation img{width:100% !important;}
 	}
 </style>
 </head>
@@ -72,8 +71,8 @@
             </td>
         </tr>
         <tr>
-        	<td width="30">&nbsp;</td>
-        	<td width="550">
+        	<td width="30"></td>
+        	<td>
             	<table class="invitation-details" width="100%" cellpadding="0" cellspacing="0">
                 	<tr>
                     	<td class="invitation-time" colspan="3" style="padding-top:15px;padding-bottom:15px;border-bottom:2px solid #cccccc;">
@@ -86,27 +85,26 @@
                         </td>
                     </tr>
                     <tr>
-                    	<td class="invitation-description" colspan="3" style="padding-top:15px;padding-bottom:15px;">
+                    	<td class="invitation-description" colspan="3" style="padding-top:15px;padding-bottom:0;">
                         	Get the best deals this week during the annual Amy's Hair Salon event! Get a free glass of wine, free ZICO water, goodie bag and 20% off on all bookings during the event days! Come spend some time with us here at Amy's Hair Salon!
                         </td>
                     </tr>
-                    <tr class="invitation-desktop">
-                    	<td valign="top" style="padding-top:15px;padding-bottom:15px;">
-                        	<img width="272" alt="" src="images/invitation_img.png" />
-                        </td>
-                        <td width="27">&nbsp;</td>
-                        <td width="251" valign="top" style="padding-top:15px;padding-bottom:15px;">
-                        	Amy's Hair Salon<br />5130 235th PL SE<br /> Los Angeles, CA, 90012<br />(360) 399-1393
-                        </td>
-                    </tr>
-					<tr class="invitation-device">
-                    	<td colspan="3"  style="padding-top:15px;padding-bottom:0;">
-							<img width="272" alt="" src="images/invitation_img.png" />
-						</td>
-					</tr>
-					<tr class="invitation-device">
-                    	<td colspan="3"  style="padding-top:15px;padding-bottom:0;">
-							Amy's Hair Salon<br />5130 235th PL SE<br /> Los Angeles, CA, 90012<br />(360) 399-1393
+                    <tr>
+						<td colspan="3" style="padding-top:15px;padding-bottom:0;">
+							<table class="invitation-manipulation" align="right" width="251" cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="top" style="padding-top:0;padding-bottom:15px;">
+										Amy's Hair Salon<br />5130 235th PL SE<br /> Los Angeles, CA, 90012<br />(360) 399-1393
+									</td>
+								</tr>
+							</table>
+							<table class="invitation-manipulation" align="left" width="272" cellpadding="0" cellspacing="0">
+								<tr>
+									<td valign="top" style="padding-top:0;padding-bottom:15px;">
+										<img alt="" src="images/invitation_img.png" />
+									</td>
+								</tr>
+							</table>						
 						</td>
 					</tr>
                     <tr>
@@ -121,7 +119,7 @@
                     </tr>                    
                 </table>
             </td>
-            <td width="20">&nbsp;</td>
+            <td width="20"></td>
         </tr>
         <tr>
         	<td class="invitation-socials" colspan="3" align="center" style="background-color:#333333;padding-top:30px;padding-bottom:30px;">
