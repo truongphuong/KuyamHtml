@@ -38,7 +38,6 @@
 <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
 <script type="text/javascript" src="scripts/jquery.countdown.js"></script>
 <script type="text/javascript" src="scripts/jquery.mobile.custom.min.js"></script>
-
 <!-- === END SCRIPTS === --> 
 </head>
 <body>
@@ -886,9 +885,8 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"></button>
-                        <h4 class="modal-title">gallery</h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body"> 
                     
                         <!-- slide-feature -->
                         <div class="slide-feature">
@@ -904,20 +902,40 @@
                             
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
-                                    <div class="item active" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                                        <div class="carousel-caption"></div>
+                                    <div class="item active">
+                                        <div class="carousel-title">gallery</div>
+                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+                                        <div class="carousel-caption">
+                                            This is a photo album from our last Beautify LA event!
+                                        </div>
                                     </div>  
-                                    <div class="item" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                                        <div class="carousel-caption"></div>
+                                    <div class="item">
+                                        <div class="carousel-title">gallery</div>
+                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+                                        <div class="carousel-caption">
+                                            This is a photo album from our last Beautify LA event!
+                                        </div>
                                     </div> 
-                                    <div class="item" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                                        <div class="carousel-caption"></div>
+                                    <div class="item">
+                                        <div class="carousel-title">gallery</div>
+                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+                                        <div class="carousel-caption">
+                                            This is a photo album from our last Beautify LA event!
+                                        </div>
                                     </div> 
-                                    <div class="item" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                                        <div class="carousel-caption"></div>
+                                    <div class="item">
+                                        <div class="carousel-title">gallery</div>
+                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+                                        <div class="carousel-caption">
+                                            This is a photo album from our last Beautify LA event!
+                                        </div>
                                     </div> 
-                                    <div class="item" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                                        <div class="carousel-caption"></div>
+                                    <div class="item">
+                                        <div class="carousel-title">gallery</div>
+                                        <div class="carousel-image" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+                                        <div class="carousel-caption">
+                                            This is a photo album from our last Beautify LA event!
+                                        </div>
                                     </div>                                                     
                                 </div>
                             
@@ -931,15 +949,26 @@
                             </div>
                         </div>
                         <!-- /slide-feature -->
-                        
-                    </div>     
-                    <div class="modal-footer">
-                        This is a photo album from our last Beautify LA event!
-                     </div>           
+                                               
+                    </div>            
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <!-- /.modal-gallery -->
+        <!-- /.modal-gallery -->   
+        
+        <script type="text/javascript">			
+			
+			$(document).ready(function() {
+				$("#carousel-view").swiperight(function() {
+					$("#carousel-view").carousel('prev');
+				});
+				$("#carousel-view").swipeleft(function() {
+					$("#carousel-view").carousel('next');
+				});
+				
+			});
+			
+		</script>  
         
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
@@ -1210,7 +1239,7 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
-	<!-- InstanceEndEditable --> 
+	<!-- InstanceEndEditable -->   
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
     <script type="text/javascript" src="scripts/general-ui.js"></script>

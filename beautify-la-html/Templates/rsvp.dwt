@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/4_master_1.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=edge" />
@@ -7,12 +7,12 @@
 <meta http-equiv="ScreenOrientation" content="autoRotate:enabled" /> 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Beautify LA - Login</title>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Beautify LA - RSVP</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />
@@ -23,8 +23,8 @@
 <!-- countdown CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 
 <link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
 
@@ -37,6 +37,7 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
 <script type="text/javascript" src="scripts/jquery.countdown.js"></script>
+<script type="text/javascript" src="scripts/jquery.mobile.custom.min.js"></script>
 <!-- === END SCRIPTS === --> 
 </head>
 <body>
@@ -44,135 +45,24 @@
         <div id="site-header" class="site-header bg-black"> 
             <div class="container"> 
                 <a class="logo" href="home.html" title="">
-                    <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
-                    <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
+                    <img class="hidden-xs" src="content/images/assets/header_BLA_logo.png" alt="" />
+                    <img class="visible-xs" src="content/images/assets/mobile/header_BLA_Logo.png" alt="" />
                 </a>
                 <dl class="social-icons hidden-xs on-desktop clearfix">
-                    <dt>join the community</dt>
-                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
-                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
-                    <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
-                    <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
-                    <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
+                    <dt>share this event</dt>
+                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter _share_small.png" /></a></dd>
+                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook_share_small.png" /></a></dd>                    
+                    <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Email_share_small.png" /></a></dd>
+                    <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Share_link_small.png" /></a></dd>
                 </dl> 
-                <div class="clear hidden-xs"></div>
-                
-                <!-- .navbar-collapse --> 
-                <div>
-                    <ul class="nav navbar-nav navbar-right nav-main">
-                        <li><a href="javascript:void(0);"><img alt="" src="content/images/assets/image_help.png" /></a></li>
-                        <li>
-                            <a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
-                        </li>
-                    </ul>
-                    
-                    <script type="text/javascript">
-                        $(function(){
-                            var temp = 0;
-                            var widthScreen;
-                            $( window ).resize(function() {
-                                widthScreen = $( window ).width();	
-                                if(widthScreen < 768){
-                                    $( "#site-header" ).animate({ "height": "100px" }, 500 ); 
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }else if(widthScreen > 768){
-                                    $( "#site-header" ).animate({ "height": "160px" }, 500 );
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }				
-                            });							
-                            
-                            function showNavAccount(){
-                                if(temp == 0){														
-                                    $( "#site-header" ).animate({ "height": "+=40px" }, 500 );
-                                    temp = 1;
-                                }else{
-                                    $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
-                                    temp = 0;
-                                }
-                                                    
-                                $( "#nav-account" ).toggle('blind', 500);
-                            }
-                            
-                            $( ".link-account" ).click(function(){	
-                                showNavAccount();
-                            });
-                        });
-                    </script>
-                    
-                    <div id="nav-account" class="nav-account">
-                        <dl class="container clearfix">
-                            <dt class="text-right"><a href="#" title="sign out" class="link-sign-out">sign out</a></dt>                            
-                        </dl>
-                    </div>
-                </div>
-                <!-- /.navbar-collapse --> 
-                <!-- InstanceBeginEditable name="form" -->
-                <!-- InstanceEndEditable --> 
+                <!-- TemplateBeginEditable name="form" -->
+                <!-- TemplateEndEditable --> 
             </div>            
         </div>          
-        <!-- InstanceBeginEditable name="banner" -->  
-        <!-- InstanceEndEditable -->      
-        <!-- InstanceBeginEditable name="content" -->
-        
-        <div class="main-content login-page clearfix" style="background-image:url(content/images/assets/Dollarphotoclub_69565956.jpg);"> 
-            <div class="container">
-                <!-- .modal-login -->    
-                <div class="modal-form modal-login">  		
-                    <div class="modal-header">
-                        <h3 class="modal-title">welcome to Beautify LA events!</h3>
-                        <p>if you have been approved you will be sent an email with a 6 digit code and login info. you can manage and modify your event details from your events dashboard.</p>
-                    </div>
-                    <div class="modal-body">
-                        <a title="" href="facebook-login.html" class="btn-blue btn-facebook">login with facebook</a>
-                        <div class="form-or">                    	
-                            <hr />  
-                            <span>or</span>                      
-                        </div>
-                        <fieldset>
-                            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
-                            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
-                            <div class="text-right link-form"><a class="link-forgot" title="" href="forgot-password.html">don't have your password?</a></div>
-                            <button type="button" class="btn-orange btn-form btn-login" data-toggle="modal" data-target="#modal-welcome">login</button>
-                            <div class="alert-error">invalid</div>
-                        </fieldset>                    
-                    </div>
-                    <div class="modal-footer">
-                        
-                     </div>
-                </div><!-- /.modal -->
-                <!-- /.modal-login -->  
-                
-          	</div>
-      	</div>
-        
-        <!-- .modal-welcome -->    
-        <div class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-welcome">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"></button>
-                        <h3 class="modal-title">welcome to Beautify LA!</h3>
-                        <h4>before we can have fun setting up events we must first ask you to update and confirm some general information first in the dashboard settings.</h4>
-                    </div>
-                    <div class="modal-body">
-                        <dl class="social-icons clearfix">                            
-                            <dd><img alt="" src="content/images/assets/image_business.png" /></dd>
-                            <dd><img alt="" src="content/images/assets/image_contact.png" /></dd>
-                            <dd><img alt="" src="content/images/assets/image_payment.png" /></dd>
-                            <dt>3 easy steps to help you launch your event!</dt>
-                            <dt><button type="button" class="btn-orange btn-start" data-dismiss="modal">get started!</button></dt>
-                        </dl>               
-                    </div>
-                    <div class="modal-footer">                	
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-        <!-- /.modal-welcome --> 
-        
-        <!-- InstanceEndEditable --> 
+        <!-- TemplateBeginEditable name="banner" -->         
+        <!-- TemplateEndEditable -->      
+        <!-- TemplateBeginEditable name="content" -->
+        <!-- TemplateEndEditable --> 
        <!-- .site-contact -->
         <section id="contact" class="site-contact"> 
             <div class="container">
@@ -180,8 +70,7 @@
                     <div class="col-xs-12 col-md-4"> 
                         <header class="section-header clearfix">
                             <a class="logo" title="" href="#">
-                                <img class="hidden-xs" alt="" src="content/images/assets/bla-logo_registered_trademark_footer.png" />
-                                <img class="visible-xs" alt="" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_footer.png" />
+                                <img alt="" src="content/images/assets/footer_BLA_logo.png" />
                             </a>               
                         </header>
                         <div class="site-address">
@@ -272,23 +161,6 @@
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
     <!-- /.modal-notify --> 
-    
-    <!-- .modal-alert -->    
-    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  		<div class="modal-dialog modal-alert">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"></button>
-      			</div>
-                <div class="modal-body">
-                	<p>message</p>                                   
-                </div>
-                <div class="modal-footer">                	
-                 </div>
-    		</div><!-- /.modal-content -->
-  		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-    <!-- /.modal-alert --> 
     
     <!-- .modal-ticket -->    
     <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -458,11 +330,11 @@
     <!-- END HTML --> 
     
     <!-- === SCRIPTS === --> 
-    <!-- InstanceBeginEditable name="script" -->
-	<!-- InstanceEndEditable --> 
+    <!-- TemplateBeginEditable name="script" -->  
+	<!-- TemplateEndEditable -->   
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
     <script type="text/javascript" src="scripts/general-ui.js"></script>
     <!-- === END SCRIPTS === -->    
 </body>
-<!-- InstanceEnd --></html>
+</html>

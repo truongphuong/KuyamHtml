@@ -1,0 +1,1118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/4_master_1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="ScreenOrientation" content="autoRotate:enabled" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Beautify LA - Settings</title>
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- InstanceEndEditable -->
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />
+
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
+
+<!-- countdown CSS -->
+<link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
+
+<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
+
+<!-- === SCRIPTS === -->  
+<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>    	
+<script type="text/javascript" src="scripts/bootstrap.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script>      
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/jquery.plugin.js"></script>
+<script type="text/javascript" src="scripts/jquery.countdown.js"></script>
+<!-- === END SCRIPTS === --> 
+</head>
+<body>
+	<div id="detech-devices">
+        <div id="site-header" class="site-header bg-black"> 
+            <div class="container"> 
+                <a class="logo" href="home.html" title="">
+                    <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
+                    <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
+                </a>
+                <dl class="social-icons hidden-xs on-desktop clearfix">
+                    <dt>join the community</dt>
+                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
+                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
+                    <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
+                    <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
+                    <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
+                </dl> 
+                <div class="clear hidden-xs"></div>
+                
+                <!-- .navbar-collapse --> 
+                <div>
+                    <ul class="nav navbar-nav navbar-right nav-main">
+                        <li><a href="javascript:void(0);"><img alt="" src="content/images/assets/image_help.png" /></a></li>
+                        <li>
+                            <a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                        </li>
+                    </ul>
+                    
+                    <script type="text/javascript">
+                        $(function(){
+                            var temp = 0;
+                            var widthScreen;
+                            $( window ).resize(function() {
+                                widthScreen = $( window ).width();	
+                                if(widthScreen < 768){
+                                    $( "#site-header" ).animate({ "height": "100px" }, 500 ); 
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }else if(widthScreen > 768){
+                                    $( "#site-header" ).animate({ "height": "160px" }, 500 );
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }				
+                            });							
+                            
+                            function showNavAccount(){
+                                if(temp == 0){														
+                                    $( "#site-header" ).animate({ "height": "+=40px" }, 500 );
+                                    temp = 1;
+                                }else{
+                                    $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
+                                    temp = 0;
+                                }
+                                                    
+                                $( "#nav-account" ).toggle('blind', 500);
+                            }
+                            
+                            $( ".link-account" ).click(function(){	
+                                showNavAccount();
+                            });
+                        });
+                    </script>
+                    
+                    <div id="nav-account" class="nav-account">
+                        <dl class="container clearfix">
+                            <dt class="text-right"><a href="#" title="sign out" class="link-sign-out">sign out</a></dt>                            
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse --> 
+                <!-- InstanceBeginEditable name="form" -->
+                <!-- InstanceEndEditable --> 
+            </div>            
+        </div>          
+        <!-- InstanceBeginEditable name="banner" -->  
+        <div class="relative">
+            <!-- slide-feature -->
+            <div class="slide-feature hidden-xs">
+                <div id="carousel-desktop" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>                    
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <a title="" href="javascript:void(0);" class="item active" style="background-image:url(content/images/assets/banner_default.png);" data-toggle="modal" data-target="#modal-banner">
+                            <div class="carousel-caption"></div>
+                        </a>                                                      
+                    </div>
+                
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-desktop" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-desktop" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- /slide-feature -->
+            
+            <!-- slide-feature -->
+            <div class="slide-feature visible-xs">
+                <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>                    
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <a title="" href="javascript:void(0);" class="item active" style="background-image:url(content/images/assets/mobile/banner_default.png);" data-toggle="modal" data-target="#modal-banner">
+                            <div class="carousel-caption"></div>
+                        </a>                                                      
+                    </div>
+                
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-mobile" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-mobile" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- /slide-feature -->        
+                
+            <div class="relative">
+                <!-- register-form -->
+                <div class="register-section company-profile-section bg-black-50">        	 
+                    <div class="container"> 
+                        <header class="section-header clearfix"> 
+                        	<a title="" href="javascript:void(0);" class="company-profile-avatar hidden-xs" style="background-image:url(content/images/assets/avatar_default.png);" data-toggle="modal" data-target="#modal-avatar"></a>
+                            <div class="company-profile-info">
+                            	<h2>Amy's Hair Salon!</h2>
+                                <div class="site-address hidden-xs">
+                                    <ul>
+                                        <li class="icon-location">
+                                            1901 Avenue of the Stars, Suite 1900
+                                            <br />
+                                            Los Angeles, CA 90067
+                                        </li>
+                                        <li class="icon-phone">(310) 461-1515</li>
+                                    </ul>
+                                </div>
+                            </div>                               
+                            <div class="back-section">
+                                <a class="hidden-xs" title="" href="#"><span class="icon-back"></span> Back to event</a>
+                                <a class="visible-xs" title="" href="#">event details <span class="icon-details"></span></a>
+                            </div>                          
+                        </header>
+                    </div>
+                </div>
+                <!-- /register-form -->
+            </div>        
+            
+        </div>  
+        <!-- InstanceEndEditable -->      
+        <!-- InstanceBeginEditable name="content" -->
+        <!-- .main-content -->
+        <div class="main-content settings-page clearfix"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12"> 
+                    
+                        <!-- tabs -->
+                        <div class="tabbable">
+                          	<ul class="nav nav-tabs">
+                                <li class="active"><a href="#one" data-toggle="tab">events</a></li>
+                                <li><a href="#two" data-toggle="tab">settings</a></li>
+                          	</ul>
+                          	<div class="tab-content">
+                            	<div class="tab-pane active" id="one">  
+                                	
+                                    <!-- .events-content -->
+                                  	<div class="events-content clearfix">
+                                    	<h2>company events</h2>
+                                    </div>   
+                                    <!-- /.events-content -->                                 
+                                     
+                            	</div>
+                            	<div class="tab-pane" id="two">
+                                	
+                                    <!-- .settings-content -->
+                                  	<div class="settings-content clearfix">
+                                    	<h2>company settings</h2>
+                                        
+                                    	<!-- .col-left -->
+                                    	<div class="col-left">
+                                            <ul id="settings-steps">
+                                                <li class="setting-1 active">company info</li>
+                                                <li class="setting-2">primary contact</li>
+                                                <li class="setting-3">payment method</li>
+                                            </ul>
+                                        </div>
+                                        <!-- /.col-left -->
+                                        
+                                        <!-- .col-right -->
+                                    	<div class="col-right">
+                                        
+                                        	<!-- #setting-1 -->
+                                     		<fieldset id="setting-1">
+                                            	<header class="clearfix">
+                                                	<img alt="" src="content/images/assets/image_step1.png" />
+                                                    <h2>confirm your business info</h2>
+                                                </header>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                		<p>please check to see if your company info is up to date. this info will show up on your event page for guests to see.</p>
+                                                	</div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>business name <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-l" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>business categories <span class="error">*</span></label>
+                                                        <p>add categories that are associated with your business.</p>
+                                                        <ul class="tab-list clearfix">
+                                                            <li>
+                                                                <button class="active"><span>blowout</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>facial</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>massage</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>massage</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>massage</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>massage</span></button>
+                                                            </li>
+                                                            <li>
+                                                                <button><span>massage</span></button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>business phone number <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-s" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>company website</label>
+                                                        <input type="text" class="form-control txt-l" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>company address line 1 <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-l" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>company address line 2</label>
+                                                        <input type="text" class="form-control txt-l" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <label>city</label>
+                                                        <input type="text" class="form-control txt-m" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <label>state</label><br />
+                                                        <select class="selectpicker select-100">
+                                                            <option>California</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-6">
+                                                        <label>zip</label><br />
+                                                        <input type="text" class="form-control txt-s" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>business hours</label>
+                                           			</div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <div class="hour-row">
+                                                            <p>Monday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose1" /> <label class="label-close" for="cbClose1">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Tuesday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose2" /> <label class="label-close" for="cbClose2">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Wednesday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose3" /> <label class="label-close" for="cbClose3">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Thursday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose4" /> <label class="label-close" for="cbClose4">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Friday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose5" /> <label class="label-close" for="cbClose5">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Saturday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose6" /> <label class="label-close" for="cbClose6">closed</label>
+                                                        </div>
+                                                        <div class="hour-row">
+                                                            <p>Sunday</p>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <span class="hour-to">to</span>
+                                                            <select class="selectpicker select-m">
+                                                                <option>9:30</option>
+                                                            </select>
+                                                            <select class="selectpicker select-s">
+                                                                <option>am</option>
+                                                                <option>pm</option>
+                                                            </select>
+                                                            <input type="checkbox" id="cbClose7" /> <label class="label-close" for="cbClose7">closed</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <footer>
+                                                    <h2>i'm ready for the next step!</h2>
+                                                    <p></p>
+                                                    <a class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                    <a slideCurrent="setting-1" slideNext="setting-2" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-next"></span> next</a>
+                                                </footer>
+                                     		</fieldset>
+                                            <!-- /#setting-1 -->
+                                            
+                                            <!-- #setting-2 -->
+                                     		<fieldset id="setting-2" class="hide">
+                                            	<header class="clearfix">
+                                                	<img alt="" src="content/images/assets/image_step2.png" />
+                                                    <h2>how do we book with you?</h2>
+                                                </header>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                               			<p>please keep primary contact info up to date. we will need to get in contact  with someone in the future for booking appointments with your business.</p>
+                                                	</div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12 col-md-5">
+                                                        <label>contact first name: <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-100" />
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-5">
+                                                        <label>contact last name: <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-100" />
+                                                    </div>
+                                                </div>													
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>contact email: <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-l" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>contact cell number: <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-s" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>contact office number <span class="error">*</span></label>
+                                                        <input type="text" class="form-control txt-s" />
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>prefered method to confirm booking <span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-l">
+                                                            <option>business number</option>
+                                                            <option>contact cell number</option>
+                                                            <option>contact cell SMS</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <input type="button" class="btn-orange btn-settings btn-save" value="save" />
+                                                    </div>
+                                                </div>
+                                                <footer>
+                                                    <h2>i'm ready for the next step!</h2>
+                                                    <p>please make sure all the info is correct before procceding. it is very important that this info is kept up to date.</p>
+                                                    <a slideCurrent="setting-2" slideNext="setting-1" class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                    <a slideCurrent="setting-2" slideNext="setting-3" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-next"></span> next</a>
+                                                </footer>
+                                     		</fieldset>
+                                            <!-- /#setting-2 -->
+                                            
+                                            <!-- #setting-3 -->
+                                     		<fieldset id="setting-3" class="hide">
+                                            	<header class="clearfix">
+                                                	<img alt="" src="content/images/assets/image_step3.png" />
+                                                    <h2>how do you want to get paid?</h2>
+                                                </header>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                		<p>choose a method for how you will be paid for appointment bookings and events. we perfer Paypal but we can send a check to your business or bank transfer.</p>
+                                                	</div>
+                                                </div>                                                
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>preferred method of payment: <span class="error">*</span></label><br />
+                                                        <select id="select-payment" class="selectpicker select-l">
+                                                            <option value="1">send me a check</option>
+                                                            <option value="2">Paypal</option>
+                                                            <option value="3">Bank transfer</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                              	<div id="payment-1" class="payment-section">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <p>you're checks will be sent to the business address you supplied in the company info section.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <input type="button" class="btn-orange btn-settings btn-save" value="save" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="payment-2" class="payment-section hide">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>paypal account email ore number: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" placeholder="ex: johndoe@email.com" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <p>you're payment will be sent via Paypal</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="payment-3" class="payment-section hide">                                                    
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>bank name: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>beneficiary's account name: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>rounting number: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>account number: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <p>you're payment will be sent via bank transfer</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <footer>
+                                                    <a slideCurrent="setting-3" slideNext="setting-2" class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                    <a class="btn-orange btn-settings btn-dashboard" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-dashboard">view dashboard</a>
+                                                </footer>
+                                     		</fieldset>
+                                            <!-- /#setting-3 -->
+                                            
+                                            <script type="text/javascript">
+												$(document).ready(function(){	
+													$('.selectpicker').selectpicker();
+													$('.btn-settings').click(function(e){
+														var slideNext = "#" + $(this).attr("slideNext"),
+															slideCurrent = "#" + $(this).attr("slideCurrent"),
+															navClass = "." + $(this).attr("slideNext");
+														$(slideCurrent).addClass("hide");
+														$(slideNext).removeClass("hide");
+														$('#settings-steps li').removeClass("active");
+														$('#settings-steps').find(navClass).addClass("active");
+													})
+													
+													$('#select-payment').change(function(e){
+														var optValue = $(this).val(),
+														paymentID = '#payment-' + optValue;
+														
+														console.log(paymentID);
+														$('.payment-section').addClass("hide");
+														$(paymentID).removeClass("hide");
+													})
+												});
+											</script>
+                                    	</div>
+                                        <!-- /.col-right -->
+                                        
+                                	</div>  
+                                    <!-- /.settings-content -->                                    
+                                	
+                            	</div>
+                           	</div>
+                        </div>
+                        <!-- /tabs -->
+												   
+					</div>
+				</div>
+			</div>
+		</div>     
+        <!-- /.main-content --> 
+        
+        <!-- .modal-banner -->   
+        <div class="modal fade" id="modal-banner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-settings modal-banner">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">add background image</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>event background image:</legend>
+                            <p>upload up to 10 images to create your photo gallery.</p>
+                            <div class="settings-image">
+                            	<div class="col-left">
+                                	<input type="button" value="done" class="btn-orange btn-dones" />
+                                </div>
+                                <div class="col-right">
+                                	<input type="button" value="upload image" class="btn-orange btn-upload" />
+                                    <p>recommended image<br />size: 2560 x 1440<br />max file size: 3mb</p>
+                                    <p><a title="" href="#">remove image</a></p>
+                                </div>
+                            </div>
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-banner --> 
+        
+        <!-- .modal-avatar -->    
+        <div class="modal fade" id="modal-avatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-settings modal-avatar">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">profile image</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>company logo:</legend>
+                            <p>upload up to a 3mb file of your company logo, or something that represents your business.</p>
+                            <div class="settings-image">
+                            	<div class="col-left">
+                                </div>
+                                <div class="col-right">
+                                	<input type="button" value="upload image" class="btn-orange btn-upload" />
+                                    <p>3mb max file size</p>
+                                </div>
+                            </div>
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-avatar --> 
+        
+        <!-- .modal-social -->    
+        <div class="modal fade" id="modal-social" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-settings modal-social">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">social media</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<p>link your social media accounts to your events page.</p>
+                            <div class="txt-socials txt-twitter">
+                            	<input type="text" class="form-control" />
+                            </div>
+                            <div class="txt-socials txt-twitter">
+                            	<input type="text" class="form-control" />
+                            </div>
+                            <div class="txt-socials txt-twitter">
+                            	<input type="text" class="form-control" />
+                            </div>
+                            <div class="txt-socials txt-twitter">
+                            	<input type="text" class="form-control" />
+                            </div>
+                            <div class="txt-socials txt-twitter">
+                            	<input type="text" class="form-control" />
+                            </div>
+                            <input type="button" value="done" class="btn-orange btn-save" />
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-social -->
+        
+        <!-- .modal-dashboard -->    
+        <div class="modal fade" id="modal-dashboard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-welcome modal-dashboard">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">event dashboard</h3>
+                        <h4>in the events dashboard you can modify current and upcoming events, make bulletin posts for each event and even request new events!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="social-icons clearfix">                            
+                            <dd><img alt="" src="content/images/assets/image_launch.png" /></dd>
+                            <dt>1 new event waiting for confirmation</dt>
+                            <dt><button type="button" class="btn-orange btn-start" data-dismiss="modal">go!</button></dt>
+                        </dl>               
+                    </div>
+                    <div class="modal-footer">                	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-dashboard --> 
+        
+        <!-- .modal-delete -->    
+        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-welcome modal-delete">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">are you sure?</h3>
+                        <h4>by leaving or deleting your event you are completely removing your event form Beautifay LA.</h4>
+                        <p>leaving or deleting too many events can lead to a freezing of your Beautify LA account. you will not be able to create new events when your account if frozen.</p>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="social-icons clearfix">
+                            <dt><button type="button" class="btn-orange btn-start" data-dismiss="modal">delete event</button></dt>
+                        </dl>               
+                    </div>
+                    <div class="modal-footer">                	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-delete --> 
+        
+        <!-- .modal-confirmed -->    
+        <div class="modal fade" id="modal-confirmed" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-welcome modal-confirmed">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">event confirmed!</h3>
+                        <h4>Amy's Hair Salon Grand Opening</h4>
+                        <p>you've completed your event customization! we will be sending you a confirmation to the contact email.</p>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="social-icons clearfix">
+                            <dt><button type="button" class="btn-orange btn-start" data-dismiss="modal">back to dashboard</button></dt>
+                        </dl>               
+                    </div>
+                    <div class="modal-footer">                	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-confirmed --> 
+        
+        <!-- InstanceEndEditable --> 
+       <!-- .site-contact -->
+        <section id="contact" class="site-contact"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4"> 
+                        <header class="section-header clearfix">
+                            <a class="logo" title="" href="#">
+                                <img class="hidden-xs" alt="" src="content/images/assets/bla-logo_registered_trademark_footer.png" />
+                                <img class="visible-xs" alt="" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_footer.png" />
+                            </a>               
+                        </header>
+                        <div class="site-address">
+                            <ul>
+                                <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
+                                <li class="icon-phone">(310) 461-1515</li>
+                                <li class="icon-email"><a title="" href="mailto:info@Beautify-LA.com">info@Beautify-LA.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4"> 
+                        <header class="section-header">
+                            <h4>about Beautify LA</h4>                        
+                        </header>
+                        <p>Beautify LA started as an effort to bring the local community together. our goal is to help develop long lasting relationships between consumers and local businesses, large and small, by offering exclusive offers and unique experiences at thousands of locations.</p> 
+                        <p><a class="color-white" title="" href="https://kuyam.com/">powered by kuyam.com!</a></p>
+                    </div>
+                    <div class="col-xs-12 col-md-4">        
+                        <header class="section-header on-desktop">
+                            <h4>sign up for insider info!</h4>      
+                        </header>                
+                        <fieldset class="register-form clearfix">                    	
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control txt_Email" onblur="if (this.value == '') { this.value = 'enter your email'; }" onfocus="if (this.value == 'enter your email') { this.value = ''; }" value="enter your email" />
+                                    <input type="button" class="input-group-addon btn_Join" value="sign up" data-toggle="modal" data-target="#modal-notify" />
+                                </div>
+                            </div>
+                            <a title="" href="#" class="btn-blue btn-facebook">sign up with Facebook</a>
+                        </fieldset>  
+                        <ul class="link-socials visible-xs clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/beautifyla" title=""><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/BeautifyLA" title=""><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts" title=""><img alt="Google Plus" src="content/images/assets/icons_social/Google_Plus.png" /></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title=""><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg" title=""><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></li>
+                        </ul>                  
+                    </div>            
+                </div>
+            </div>
+        </section>
+        <!-- /.site-contact -->
+        
+        <footer class="site-footer">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">  	
+                        <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
+                    </div>
+                    <div class="col-md-4 hidden-xs">
+                        <ul class="link-socials clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/beautifyla" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/BeautifyLA" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts" title=""><img alt="Google Plus" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title=""><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg" title=""><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </footer>
+    </div>
+    
+    <div class="loading"></div>
+    <div class="light-box"></div> 
+    
+    <!-- .modal-notify -->    
+    <div class="modal fade" id="modal-notify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-notify">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h3 class="modal-title">your sign up for<br /> Beautify LA: Montana Ave</h3>
+                    <h4>check your mail you'll get notified of any<br class="hidden-xs" /> updates about this upcoming event.</h4>
+      			</div>
+                <div class="modal-body">
+                    <dl class="social-icons clearfix">
+                        <dt>share this event to my:</dt>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></dd>
+                    </dl>               
+                </div>
+                <div class="modal-footer">                	
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-notify --> 
+    
+    <!-- .modal-alert -->    
+    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-alert">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+      			</div>
+                <div class="modal-body">
+                	<p>message</p>                                   
+                </div>
+                <div class="modal-footer">                	
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-alert --> 
+    
+    <!-- .modal-ticket -->    
+    <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-ticket">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h4 class="modal-title">exclusive experience!<br /><span>buy tickets!</span></h4>
+      			</div>
+                <div class="modal-body">
+                
+                    <!-- .checkout-title -->
+                    <div class="ticket-title">
+                        <h3>get tickets to the exclusive experience!</h3>
+                        <p>explore local businesses on Montana Avenue on October 2nd! for only 15$ a ticket, drink wine, eat great food and more at the kickoff event. 1$ of each ticket purchased will be donated to the Boys &amp; Girls Club of Santa Monica!</p>
+                    </div>
+                    <!-- /.checkout-title -->
+                    
+                    <!-- .ticket-info -->
+                    <div class="ticket-info">
+                        <div class="checkout-row">
+                            <h4>enjoy a free:</h4>
+                            <ul>
+                            	<li>ZICO Coconut Water</li>
+                                <li>Kogi Taco Plate &amp; Beverage</li>
+                                <li>Glass of Wine</li>
+                                <li>Exclusive Beautify LA Gift Box</li>
+                            </ul>
+                        </div>
+                	</div>
+                    <!-- /.ticket-info -->
+                    
+                    <fieldset class="ticket-form">
+                    	<header class="section-header on-desktop">
+                        	<h2>purchase tickets!</h2>
+                            <p>please fill out the require info below</p>
+                        </header>
+                        <div class="row">
+                        	<div class="col-xs-6 col-sm-4"><label for="selectNumber"># of tickets <span class="ticket-deal visible-xs">$15 per ticket</span></label></div>
+                            <div class="col-xs-6 col-sm-8 ticket-select"><select id="select-number" class="selectpicker select-number"><option>1</option></select> <span class="ticket-deal hidden-xs">$15 per ticket</span></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtFirstName">first name <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtFirstName" type="text" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtLastName">last name <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtLastName" type="text" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtEmail">email address <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtEmail" type="email" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                            	<div class="ticket-price">
+                                	<div class="table-css">
+                                        <div class="table-row">
+                                            <div class="table-cell price-details">
+                                            	<p>total due:</p>
+                                            </div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell price-details">
+                                            	<h3>$75.00</h3>
+                                            </div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-method">
+                                    <span class="icon-method icon-credit"></span>
+                                    <input class="btn-blue btn-method btn-credit" type="button" data-target="#modal-thanks" data-toggle="modal" value="PayPal or credit card">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+            	</div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-ticket -->
+    
+    <script type="text/javascript">
+		$(document).ready(function(){	
+			$('#select-number').selectpicker();
+		});
+	</script>
+    
+    <!-- .modal-thanks -->    
+    <div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-ticket modal-thanks">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h4 class="modal-title">your order has been recieved!<br /><span>thank you!</span></h4>
+      			</div>
+                <div class="modal-body">
+                
+                    <!-- .checkout-title -->
+                    <div class="ticket-title">
+                        <h3>your've succesfully purchased tickets to:</h3>
+                        <p>
+                        	Beautify LA: Montana Ave<br />
+                            Thurs, Oct. 2nd<br />
+                            Montana Ave 1401-1355<br />
+                            3 tickets purchased
+                        </p>
+                    </div>
+                    <!-- /.checkout-title -->
+                    
+                    <!-- .checkout-info -->
+                    <div class="ticket-info">
+                        <div class="checkout-row">
+                            <h4>your tickets have been sent to...</h4>
+                            <p>kourosh@kuyam.com</p>
+                        </div>
+                	</div>
+                    <!-- /.checkout-info -->
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                    
+                            <!-- .ticket-calendar -->
+                            <div class="ticket-calendar">
+                                <div class="ticket-back">
+                                    add this appointment to my...
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                   <input class="btn-dark-green btn-method btn-google-calendar" type="button" value="google calendar" />
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                    <input class="btn-brown btn-method btn-apple-calendar" type="button" value="apple calendar" />
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                    <input class="btn-light-blue btn-method btn-facebook-calendar" type="button" value="facebook calendar" />
+                                </div>
+                                <div class="ticket-back">
+                                    share this event to my...
+                                </div>
+                                <ul class="link-share clearfix"> 
+                                    <li><a target="_blank" href="#" title="Twitter"><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Facebook"><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Google Plus"><img alt="" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Email"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></li>
+                                </ul>
+                                <div class="ticket-back">
+                                    <a class="link-back" title="" href="javascript:void(0);">back to event page</a>
+                                </div>
+                            </div>
+                            <!-- /.ticket-calendar -->
+                
+                		</div>
+                 	</div>                    
+            	</div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-thanks -->
+    
+    <noscript>
+        <!-- must remain last thing before the form tag -->
+        <p class="noJS">YOU NEED JAVASCRIPT TO RUN THIS SITE. PLEASE ENABLE JAVASCRIPT IN YOUR INTERNET OPTIONS.</p>
+    </noscript>
+    <!-- END HTML --> 
+    
+    <!-- === SCRIPTS === --> 
+    <!-- InstanceBeginEditable name="script" -->
+	<!-- InstanceEndEditable --> 
+    
+    <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
+    <script type="text/javascript" src="scripts/general-ui.js"></script>
+    <!-- === END SCRIPTS === -->    
+</body>
+<!-- InstanceEnd --></html>

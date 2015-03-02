@@ -55,6 +55,59 @@
                     <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
                     <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
                 </dl> 
+                <div class="clear hidden-xs"></div>
+                
+                <!-- .navbar-collapse --> 
+                <div>
+                    <ul class="nav navbar-nav navbar-right nav-main">
+                        <li><a href="javascript:void(0);"><img alt="" src="../content/images/assets/image_help.png" /></a></li>
+                        <li>
+                            <a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
+                        </li>
+                    </ul>
+                    
+                    <script type="text/javascript">
+                        $(function(){
+                            var temp = 0;
+                            var widthScreen;
+                            $( window ).resize(function() {
+                                widthScreen = $( window ).width();	
+                                if(widthScreen < 768){
+                                    $( "#site-header" ).animate({ "height": "100px" }, 500 ); 
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }else if(widthScreen > 768){
+                                    $( "#site-header" ).animate({ "height": "160px" }, 500 );
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }				
+                            });							
+                            
+                            function showNavAccount(){
+                                if(temp == 0){														
+                                    $( "#site-header" ).animate({ "height": "+=40px" }, 500 );
+                                    temp = 1;
+                                }else{
+                                    $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
+                                    temp = 0;
+                                }
+                                                    
+                                $( "#nav-account" ).toggle('blind', 500);
+                            }
+                            
+                            $( ".link-account" ).click(function(){	
+                                showNavAccount();
+                            });
+                        });
+                    </script>
+                    
+                    <div id="nav-account" class="nav-account">
+                        <dl class="container clearfix">
+                            <dt class="text-right"><a href="#" title="sign out" class="link-sign-out">sign out</a></dt>                            
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse --> 
                 <!-- TemplateBeginEditable name="form" -->
                 <!-- TemplateEndEditable --> 
             </div>            
