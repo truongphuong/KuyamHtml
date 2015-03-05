@@ -215,11 +215,11 @@
                                 	
                                     <!-- .events-content -->
                                   	<div class="events-content clearfix">
-                                    	<div id="event-1" class="event-dashboard">
+                                    	<div id="event-1" class="event-dashboard hide">
                                             <div class="event-header">
-                                            	<h2>company events</h2>
+                                            	<h2>events dashboard</h2>
                                                 <div class="text-right clearfix">
-                                                	<a class="btn-orange btn-create" title="" href="javascript:void(0);"><span class="icon icon-add"></span> create new event</a>
+                                                	<a class="btn-orange btn-create" title="" href="javascript:void(0);"><span class="icon-add"></span> create new event</a>
                                                     2 event(s) awaiting edit and confirmation <span class="icon-down"></span>
                                                 </div>
                                             </div>
@@ -227,15 +227,19 @@
                                             	<h3>upcoming events:</h3>
                                                 <div class="list">
                                                 	<div class="item">
-                                                    	<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
-                                                        <div class="">
-                                                        	<span>pending confirmation</span>
+                                                    	<div class="clearfix">
+                                                    		<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
                                                         </div>
-                                                        <div class="controls">
-                                                        	<a title="" href="javascript:void(0);">delete event</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
+                                                        <div class="status clearfix">
+                                                        	<ul>
+                                                            	<li>pending confirmation</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="controls clearfix">
+                                                        	<a class="btn-white-black btn-control" data-target="#modal-delete" data-toggle="modal" title="" href="javascript:void(0);">delete event</a>
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                            <a class="btn-orange btn-control btn-edit" title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -244,11 +248,13 @@
                                             	<h3>current events:</h3>
                                                 <div class="list">
                                                 	<div class="item">
-                                                    	<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
-                                                        <div class="">
-                                                        	<span>pending confirmation</span>
+                                                    	<div class="clearfix">
+                                                    		<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
+                                                        </div>
+                                                        <div class="status clearfix">                                                        	
                                                             <ul>
-                                                            	<li>45 attending</li>
+                                                            	<li>event live</li>
+                                                            	<li><span>45 attending</span></li>
                                                             </ul>
                                                             
                                                             <!-- .social-icons -->
@@ -257,28 +263,30 @@
                                                                 <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
                                                                 <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
                                                                 <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
-                                                                <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/email.png" /></a></dd>
+                                                                <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></dd>
                                                             </dl> 
                                                             <!-- /.social-icons -->
                                                             
                                                         </div>
-                                                        <div class="controls">
-                                                        	<a title="" href="javascript:void(0);">leave event</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-view"></span> view event</a>
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
+                                                        <div class="controls clearfix">
+                                                        	<a class="btn-white-black btn-control" data-target="#modal-delete" data-toggle="modal" title="" href="javascript:void(0);">leave event</a>
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-view"></span> view event</a>
+                                                            <a class="btn-orange btn-control btn-edit" title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="past-section">
+                                            <div class="available-section past-section">
                                             	<h3>past events <span class="icon icon-up"></span></h3>
                                                 <div class="list">
                                                 	<div class="item">
-                                                    	<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
-                                                        <div class="controls">
-                                                            <a title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                    	<div class="clearfix">
+                                                    		<h3>Amy's Hair Salon special offer event! <span>Sunday, Nov. 16th</span></h3>
+                                                        </div>
+                                                        <div class="controls clearfix">
+                                                            <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
                                                             <ul>
                                                             	<li>150 invited</li>
                                                                 <li>45 attended</li>
@@ -288,9 +296,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="event-2" class="event-guest hide">                                        
-                                    		<h2>guest list</h2>
-                                            <h3>Amy's Hair Salon opening event! <span>Nov. 7th</span></h3>
+                                        <div id="event-2" class="available-section event-guest">                                        
+                                            <div class="list">
+                                             	<div class="item">
+                                                	<div class="clearfix">
+                                                    	<h3><span>guest list</span> <span>Nov. 7th</span></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="controls">
                                             	<input type="submit" value="45 guests confirmed" />
                                             </div>

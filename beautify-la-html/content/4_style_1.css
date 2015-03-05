@@ -204,6 +204,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .btn-orange{width:100%;text-align:center;background:#F3472D;color:#ffffff;}
 .btn-orange:hover{background:#cccccc;color:#ffffff;}
 
+.btn-white-black{width:100%;text-align:center;background:#fff;color:#000;border:1px solid #000;}
+.btn-white-black:hover{background:#cccccc;color:#000;}
+
 .btn-green{width:100%;text-align:center;background:#96BE3D;color:#ffffff;}
 .btn-green:hover{background:#cccccc;color:#ffffff;}
 
@@ -1116,7 +1119,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 
 .group-rsvp{position:relative;line-height:38px;padding:0 114px 0 0;}
 .group-rsvp p{font:14px/18px ralewaymedium,sans-serif;}
-.group-rsvp p strong{font:14px/18px ralewaybold,sans-serif;}
+.group-rsvp p strong{font:14px/18px ralewaybold, sans-serif;}
 .group-rsvp a{position:absolute;top:-1px;right:3px;}
 
 .modal-create{}
@@ -1227,13 +1230,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .rsvp-section .social-icons dd{width:auto;margin:5px 0 0 7px;}
 .rsvp-section .spot-info{padding:10px 0;}
 .rsvp-section .spot-info p{font:20px/24px ralewaymedium,sans-serif;}
-.rsvp-section .spot-info strong{font:20px/24px ralewaybold,sans-serif;}
+.rsvp-section .spot-info strong{font:20px/24px ralewaybold, sans-serif;}
 
 .modal-rsvp .timer-form .rsvp-header{text-align:left;}
 .modal-rsvp .timer-form .rsvp-header h4{margin:15px 0 10px;font-size:20px;line-height:24px;}
 
 .rsvp-voucher{background:#f3472d;padding:10px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;color:#ffffff;text-align:center;}
-.rsvp-voucher strong{font-weight:normal;font-family:ralewaybold,sans-serif;}
+.rsvp-voucher strong{font-weight:normal;font-family:ralewaybold, sans-serif;}
 
 .modal-rsvp .progress{margin:15px 0;}
 
@@ -1321,7 +1324,6 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .settings-page .select-100{width:100%;}
 .settings-page .select-100:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width:100%;}
 
-
 .modal-settings{width:760px;}
 .modal-settings .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .modal-settings .modal-header{height:64px;color:#ffffff;background:#f3472d;}
@@ -1345,12 +1347,44 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .modal-settings .modal-body .btn-save{width:170px;font:20px/44px ralewaymedium,sans-serif;border:0 none;margin:10px 0;}
 
 .event-dashboard{}
-.event-dashboard .event-header{}
-.event-dashboard .event-header h2{}
-.event-dashboard .event-header > div{}
-.event-dashboard .event-header .btn-create{float:left;display:inline-block;border:0 none;font:20px/44px ralewaymedium,sans-serif;width:auto;padding:0 6px;}
+.event-dashboard .event-header{border-bottom:1px dashed #000;margin-bottom:20px;}
+.event-dashboard .event-header h2{font-family:ralewaybold, sans-serif;}
+.event-dashboard .event-header > div{color:#f3472d;margin:20px 0;}
+.event-dashboard .event-header .btn-create{float:left;display:inline-block;border:0 none;font:20px/44px ralewaymedium,sans-serif;width:auto;padding:0 20px;text-decoration:none;}
 .event-dashboard .event-header .icon-add{background:url(images/assets/icon_add.png) no-repeat scroll center center rgba(0, 0, 0, 0);display:inline-block;height:32px;margin-bottom:-8px;width:32px;}
 .event-dashboard .event-header .icon-down{background:url(images/assets/icon_arrow_down_red.png) no-repeat scroll center center rgba(0, 0, 0, 0);display:inline-block;height:32px;margin-bottom:-8px;width:32px;}
+
+.available-section{}
+.available-section h3{font-family:ralewaybold, sans-serif;margin-bottom:10px;}
+.available-section h3 .icon-up{display:inline-block;width:24px;height:12px;background:url(images/assets/icon-up.png) center center no-repeat;margin:0 0 0 5px;}
+.available-section .list{margin:20px 0;}
+.available-section .item{border:1px solid #000;padding:10px;}
+.available-section .item h3 span{float:right;color:#f3472d;}
+.available-section .item h3 span:first-child{float:left;}
+.available-section .item .status{margin-bottom:10px;font-family:ralewaybold,sans-serif;}
+.available-section .item .status ul{float:left;max-width:600px;margin:0 0 10px;padding:0;list-style:none;}
+.available-section .item .status ul li{display:inline-block;color:#f3472d;padding-left:30px;background:center 10px no-repeat;background:url(images/assets/ul-point.png) 10px center no-repeat;}
+.available-section .item .status ul li:first-child{padding-left:0;background:none;}
+.available-section .item .status ul li span{margin-left:5px;color:#999;}
+.available-section .item .status span:before{}
+.available-section .social-icons{margin:0;max-width:300px;}
+.available-section .social-icons dt{float:left;color:#999;padding:0;font-size:20px;font-family:ralewaybold,sans-serif;}
+
+.available-section .item .controls{}
+.available-section .item .controls .btn-control{width:160px;display:inline-block;padding:5px 10px;text-decoration:none;font-size:16px;}
+.available-section .item .controls .icon{display:inline-block;width:20px;height:20px;background:center center no-repeat;background-size:contain;margin:0 5px -5px 0;}
+.available-section .item .controls .icon-message{background-image:url(images/assets/icon_bulletin_2.png);}
+.available-section .item .controls .icon-guest{background-image:url(images/assets/icon_guest.png);}
+.available-section .item .controls .icon-view{background-image:url(images/assets/icon_eye.png);}
+.available-section .item .controls .icon-edit{background-image:url(images/assets/icon_edit.png);}
+.available-section .item .controls .btn-edit{float:right;border:1px solid #f3472d;}
+.available-section .item .controls ul{float:right;margin:0;padding:0;list-style:none;}
+.available-section .item .controls ul li{display:inline-block;margin-left:20px;font-size:16px;}
+
+.past-section .item{border:0 none;border-top:1px dashed #999;}
+.past-section .item:first-child{border:0 none;}
+.past-section .item h3,
+.past-section .item h3 span{color:#999;}
 
 @media (min-width:980px) and (max-width:1024px){
 	
