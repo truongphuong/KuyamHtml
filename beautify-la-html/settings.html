@@ -215,7 +215,9 @@
                                 	
                                     <!-- .events-content -->
                                   	<div class="events-content clearfix">
-                                    	<div id="event-1" class="event-dashboard">
+                                    
+                                    	<!-- #event-1 -->
+                                    	<div id="event-1" class="event-dashboard hide">
                                             <div class="event-header">
                                             	<h2>events dashboard</h2>
                                                 <div class="text-right clearfix">
@@ -296,6 +298,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- /#event-1 -->
+                                        
+                                        <!-- #event-2 -->
                                         <div id="event-2" class="available-section event-guest hide">   
                                         	<div class="event-header">
                                                 <h2>guest list</h2>
@@ -473,7 +478,10 @@
                                             </div>
                                             
                                         </div>
-                                        <div id="event-3" class="event-edit hide">      
+                                        <!-- /#event-2 -->
+                                        
+                                        <!-- #event-3 -->
+                                        <div id="event-3" class="event-edit">      
                                         	<div class="col-xs-12 col-sm-8">
                                             	<div class="event-header">
                                                     <h2>edit your event</h2>
@@ -481,69 +489,293 @@
                                                 </div>
                                                 
                                                 <!-- #event-type-1 -->
-                                                <fieldset id="event-type-1">
+                                                <fieldset id="event-type-1" class="hide">
                                                     <header class="clearfix">
                                                         <img alt="" src="content/images/assets/image_step1.png" />
                                                         <h2>event type</h2>
-                                                    </header>
-                                                    <div class="section-list">
-                                                        <div class="section-row">	
-                                                            <div class="row form-row">
-                                                                <div class="col-xs-12">
-                                                                    <label>is your event rsvp or special pricing? <span class="error">*</span></label><br />
-                                                                    <select class="selectpicker select-l">
-                                                                        <option>business number</option>
-                                                                        <option>contact cell number</option>
-                                                                        <option>contact cell SMS</option>
-                                                                    </select>
-                                                                    <p>RSVP events are typically for bussinesses who want to offer an experience and Special pricing events are for businesses who have a special price on a service.</p>
-                                                                </div>
+                                                    </header>                                                    
+                                                    <div class="section-row">	
+                                                        <div class="row form-row">
+                                                            <div class="col-xs-12">
+                                                                <label class="label-note">is your event rsvp or special pricing? <span class="error">*</span></label><br />
+                                                                <select class="selectpicker select-l">
+                                                                    <option>Special pricing</option>
+                                                                    <option>RSVP</option>
+                                                                </select>
+                                                                <p>RSVP events are typically for bussinesses who want to offer an experience and Special pricing events are for businesses who have a special price on a service.</p>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    
+                                                    <!-- #special-section -->
+                                               		<div id="special-section">
                                                         <div class="section-row">	
                                                             <div class="row form-row">
                                                                 <div class="col-xs-12">
                                                                     <label>how long is your event</label>
-                                                                    <div class="clear-fix">
+                                                                    <div class="available-date clear-fix">
                                                                     	<div class="start-date">
-                                                                        	<label>start date <span class="error">*</span></label>
-                                                                            <input type="text" class="form-control txt-date" />
-                                                                            <input type="text" class="form-control txt-month" />
-                                                                            <input type="text" class="form-control txt-year" />
+                                                                        	<label>start date <span class="error">*</span></label><br />
+                                                                            <input type="text" class="form-control txt-date" placeholder="dd" />
+                                                                            <input type="text" class="form-control txt-month" placeholder="mm" />
+                                                                            <input type="text" class="form-control txt-year" placeholder="yyyy" />
                                                                         </div>
-                                                                        <div>to</div>
+                                                                        <div class="div-to">to</div>
                                                                         <div class="end-date">
-                                                                        	<label>end date <span class="error">*</span></label>
-                                                                            <input type="text" class="form-control txt-date" />
-                                                                            <input type="text" class="form-control txt-month" />
-                                                                            <input type="text" class="form-control txt-year" />
+                                                                        	<label>end date <span class="error">*</span></label><br />
+                                                                            <input type="text" class="form-control txt-date" placeholder="dd" />
+                                                                            <input type="text" class="form-control txt-month" placeholder="mm" />
+                                                                            <input type="text" class="form-control txt-year" placeholder="yyyy" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="section-row">											
-                                                            <div class="row form-row">
-                                                                <div class="col-xs-12">
-                                                                    <label>contact email: <span class="error">*</span></label>
-                                                                    <input type="text" class="form-control txt-l" />
-                                                                </div>
-                                                            </div>
-                                                        </div>                                                    
+                                                        </div>   
                                                         <div class="section-row">												
                                                             <div class="row form-row">
                                                                 <div class="col-xs-12">
-                                                                    <label>contact email: <span class="error">*</span></label>
+                                                                    <label>event name: <span class="error">*</span></label>
                                                                     <input type="text" class="form-control txt-l" />
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div>                                              
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event page description: <span class="error">*</span></label>
+                                                                    <label class="label-note">add a 300 words description for your event here.</label>
+                                                                    <textarea cols="" rows="" class="form-control txt-l"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                        <footer>
+                                                            <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                        </footer>
                                                     </div>
-                                                    <footer>
-                                                        <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-next"></span> next</a>
-                                                    </footer>
+                                                    <!-- /#special-section -->
+                                                    
+                                                    <!-- #rsvp-section -->
+                                               		<div id="rsvp-section" class="hide">
+                                                        <div class="section-row">                                                        		
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>when is your event?</label>
+                                                                    <div class="available-date clear-fix">
+                                                                    	<div class="start-date">
+                                                                        	<label>date <span class="error">*</span></label><br />
+                                                                            <input type="text" class="form-control txt-date" placeholder="dd" />
+                                                                            <input type="text" class="form-control txt-month" placeholder="mm" />
+                                                                            <input type="text" class="form-control txt-year" placeholder="yyyy" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <div class="hour-row">
+                                                                        <label class="label-note">time <span class="error">*</span></label><br />
+                                                                        <select class="selectpicker select-m">
+                                                                            <option>9:30</option>
+                                                                        </select>
+                                                                        <select class="selectpicker select-s">
+                                                                            <option>am</option>
+                                                                            <option>pm</option>
+                                                                        </select>
+                                                                        <span class="hour-to">to</span>
+                                                                        <select class="selectpicker select-m">
+                                                                            <option>9:30</option>
+                                                                        </select>
+                                                                        <select class="selectpicker select-s">
+                                                                            <option>am</option>
+                                                                            <option>pm</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>    
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event name: <span class="error">*</span></label><br />
+                                                                    <input type="text" class="form-control txt-l" />
+                                                                </div>
+                                                            </div>
+                                                        </div>                                             
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event page description: <span class="error">*</span></label>
+                                                                    <label class="label-note">add a 300 words description for your event here.</label>
+                                                                    <textarea cols="" rows="" class="form-control txt-l"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                        <footer>
+                                                            <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                        </footer>
+                                                    </div>
+                                                    <!-- /#rsvp-section -->
+                                                    
                                                 </fieldset>
                                                 <!-- /#event-type-1 -->
+                                                
+                                                <!-- #event-type-2 -->
+                                                <fieldset id="event-type-2">
+                                                
+                                                	<!-- #special-detail-section -->
+                                               		<div id="special-detail-section" class="hide">
+                                                        <header class="clearfix">
+                                                            <img alt="" src="content/images/assets/image_step2.png" />
+                                                            <h2>event pricing</h2>
+                                                        </header>                                                    
+                                                        <div class="section-row">	
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label class="label-title">service 1:</label>
+                                                                    <label>choose appointment type: <span class="error">*</span></label>
+                                                                    <select class="selectpicker select-l">
+                                                                        <option>select service type</option>
+                                                                        <option>class</option>
+                                                                        <option>service</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                    	</div>
+                                                        <div class="section-row">
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label class="label-title">service 1:</label>
+                                                                    <label>choose service or class: <span class="error">*</span></label>
+                                                                    <select class="selectpicker select-l">
+                                                                        <option>dance, 1 hour, $50, 10 people</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section-row">	
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label class="label-title">service 1:</label>
+                                                                    <label>choose service or class: <span class="error">*</span></label>
+                                                                    <select class="selectpicker select-l">
+                                                                        <option>dance, 1 hour, $50, 10 people</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label class="label-title">service 1:</label>
+                                                                    <label>new event price: <span class="error">*</span></label>
+                                                                    <input type="text" class="form-control txt-m" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    
+                                                        <div class="section-row">	
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>how long is your event</label>
+                                                                    <div class="available-date clear-fix">
+                                                                    	<div class="start-date">
+                                                                        	<label class="label-note">start date <span class="error">*</span></label>
+                                                                            <input type="text" class="form-control txt-date" placeholder="dd" />
+                                                                            <input type="text" class="form-control txt-month" placeholder="mm" />
+                                                                            <input type="text" class="form-control txt-year" placeholder="yyyy" />
+                                                                        </div>
+                                                                        <div class="div-to">to</div>
+                                                                        <div class="end-date">
+                                                                        	<label class="label-note">end date <span class="error">*</span></label>
+                                                                            <input type="text" class="form-control txt-date" placeholder="dd" />
+                                                                            <input type="text" class="form-control txt-month" placeholder="mm" />
+                                                                            <input type="text" class="form-control txt-year" placeholder="yyyy" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event name: <span class="error">*</span></label>
+                                                                    <input type="text" class="form-control txt-l" />
+                                                                </div>
+                                                            </div>
+                                                        </div>                                              
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event page description: <span class="error">*</span></label>
+                                                                    <label class="label-note">add a 300 words description for your event here.</label>
+                                                                    <textarea cols="" rows="" class="form-control txt-l"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                        <footer>
+                                                            <a  slideCurrent="event-type-2" slideNext="event-type-1" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a> 
+                                                            <a class="btn-orange btn-settings btn-dashboard" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-confirmed"><span class="icon icon-confirm"></span> confirm event</a>
+
+                                                        </footer>
+                                                    </div>
+                                                    <!-- /#special-detail-section -->
+                                                    
+                                                    <!-- #rsvp-detail-section -->
+                                               		<div id="rsvp-detail-section">
+                                                    	<header class="clearfix">
+                                                            <img alt="" src="content/images/assets/image_step2.png" />
+                                                            <h2>event PSVP details</h2>
+                                                        </header> 
+                                                        <div class="section-row">                                                        		
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>maximum RSVP spots available: <span class="error">*</span></label><br />
+                                                                    <input type="text" class="form-control txt-xs" />
+                                                                </div>
+                                                            </div>                                                            
+                                                        </div>    
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>attendee goat reward number: <span class="error">*</span></label>
+                                                                    <label class="label-note">how many attendees must RSVP to event to recieve goal reward.</label>
+                                                                    <input type="text" class="form-control txt-xs" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>goal reward: <span class="error">*</span></label>
+                                                                    <label class="label-note">what are you offering as the RSVP goal reward? this reward must be available to all attendees who RSVP</label>
+                                                                    <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: free product figt bag!"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                             
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>early bird reward</label>
+                                                                    <label class="label-note">to give attendees mor of an incentive to RSVP first and invite their friends, we like to reward the early birds.</label>
+                                                                    <label>number of RSVP available for early bird reward</label><br />
+                                                                    <input type="text" class="form-control txt-xs" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>early bird reward:</label><br />
+                                                                    <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: get 30% off all services or products in store!"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                    
+                                                        <footer class="footer-type">
+                                                        	<h3>confirm your event so it can go live!</h3>
+                                                            <p>by confirming the event, you are agreeing to the <a title="" href="#">terms of use and privacy</a>. your event will go live after you confirm the event.</p>
+                                                            <a  slideCurrent="event-type-2" slideNext="event-type-1"  class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                            <a class="btn-orange btn-settings btn-dashboard" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-confirmed"><span class="icon icon-confirm"></span> confirm event</a>
+                                                        </footer>
+                                                    </div>
+                                                    <!-- /#rsvp-detail-section -->
+                                                    
+                                                </fieldset>
+                                                <!-- /#event-type-2 -->
                                                 
                                             </div>
                                             <div class="col-xs-12 col-sm-4 col-right-edit">
@@ -660,6 +892,8 @@
                                             </div>
                                     		 
                                         </div>
+                                        <!-- /#event-3 -->
+                                        
                                     </div>   
                                     <!-- /.events-content -->                                 
                                      
@@ -918,7 +1152,7 @@
                                                     <h2>i'm ready for the next step!</h2>
                                                     <p></p>
                                                     <a class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
-                                                    <a slideCurrent="setting-1" slideNext="setting-2" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-next"></span> next</a>
+                                                    <a slideCurrent="setting-1" slideNext="setting-2" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
                                                 </footer>
                                      		</fieldset>
                                             <!-- /#setting-1 -->
@@ -981,7 +1215,7 @@
                                                     <h2>i'm ready for the next step!</h2>
                                                     <p>please make sure all the info is correct before procceding. it is very important that this info is kept up to date.</p>
                                                     <a slideCurrent="setting-2" slideNext="setting-1" class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
-                                                    <a slideCurrent="setting-2" slideNext="setting-3" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-next"></span> next</a>
+                                                    <a slideCurrent="setting-2" slideNext="setting-3" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
                                                 </footer>
                                      		</fieldset>
                                             <!-- /#setting-2 -->
@@ -1259,6 +1493,7 @@
                         <button type="button" class="close" data-dismiss="modal"></button>
                         <h3 class="modal-title">event confirmed!</h3>
                         <h4>Amy's Hair Salon Grand Opening</h4>
+                        <h4><time>November 7th</time></h4>
                         <p>you've completed your event customization! we will be sending you a confirmation to the contact email.</p>
                     </div>
                     <div class="modal-body">
