@@ -1157,8 +1157,8 @@
                                                 <footer>
                                                     <h2>i'm ready for the next step!</h2>
                                                     <p></p>
-                                                    <a class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
-                                                    <a slideCurrent="setting-1" slideNext="setting-2" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                    <button class="btn-orange btn-settings btn-disable"><span class="icon icon-back"></span> back</button>
+                                                    <button slideCurrent="setting-1" slideNext="setting-2" class="btn-orange btn-settings btn-disable">next <span class="icon icon-next"></span></button>
                                                 </footer>
                                      		</fieldset>
                                             <!-- /#setting-1 -->
@@ -1220,8 +1220,8 @@
                                                 <footer>
                                                     <h2>i'm ready for the next step!</h2>
                                                     <p>please make sure all the info is correct before procceding. it is very important that this info is kept up to date.</p>
-                                                    <a slideCurrent="setting-2" slideNext="setting-1" class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
-                                                    <a slideCurrent="setting-2" slideNext="setting-3" class="btn-orange btn-settings btn-disable" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                    <button slideCurrent="setting-2" slideNext="setting-1" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                                                    <button slideCurrent="setting-2" slideNext="setting-3" class="btn-orange btn-settings btn-disable">next <span class="icon icon-next"></span></button>
                                                 </footer>
                                      		</fieldset>
                                             <!-- /#setting-2 -->
@@ -1352,7 +1352,7 @@
         
         <!-- .modal-banner -->   
         <div class="modal fade" id="modal-banner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-settings modal-banner">
+            <div class="modal-dialog modal-settings modal-crop modal-banner">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"></button>
@@ -1364,7 +1364,8 @@
                             <p>upload up to 10 images to create your photo gallery.</p>
                             <div class="settings-image">
                             	<div class="col-left">
-                                	<input type="button" value="done" class="btn-orange btn-dones" />
+                                	<div class="crop-section"></div>
+                                	<input type="button" value="done" class="btn-orange btn-done" />
                                 </div>
                                 <div class="col-right">
                                 	<input type="button" value="upload image" class="btn-orange btn-upload" />
@@ -1381,7 +1382,7 @@
         
         <!-- .modal-avatar -->    
         <div class="modal fade" id="modal-avatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-settings modal-avatar">
+            <div class="modal-dialog modal-settings modal-crop modal-avatar">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"></button>
@@ -1391,12 +1392,14 @@
                         <fieldset>
                         	<legend>company logo:</legend>
                             <p>upload up to a 3mb file of your company logo, or something that represents your business.</p>
-                            <div class="settings-image">
+                            <div class="settings-image clearfix">
                             	<div class="col-left">
+                                	<div class="crop-section"></div>
                                 </div>
                                 <div class="col-right">
                                 	<input type="button" value="upload image" class="btn-orange btn-upload" />
                                     <p>3mb max file size</p>
+                                    <input type="button" value="finished" class="btn-orange btn-finished" />
                                 </div>
                             </div>
                         </fieldset>                
@@ -1513,6 +1516,42 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
         <!-- /.modal-confirmed --> 
+        
+        <!-- .modal-bullettin -->    
+        <div class="modal fade" id="modal-bulletin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-settings modal-crop modal-bullettin">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <span class="icon-bulletin"></span>
+                        <h4 class="modal-title">post a message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <fieldset>
+                        	<legend>post an update or special information about your event. the update will show up in the right side column.</legend>
+                            <input class="form-control" type="text" value="" placeholder="event update title" />  
+          					<textarea class="form-control txt-bulletin" cols="" rows="" placeholder="add a 140 word maximum update about the event."></textarea>
+                            <div class="settings-image">
+                            	<p><strong>event photo gallery:</strong></p>
+                                <p>upload up to 10 images to create your photo gallery.</p>
+                            	<div class="clearfix">
+                                    <div class="col-left">
+                                        <div class="crop-section"></div>
+                                    </div>
+                                    <div class="col-right">
+                                        <input type="button" value="upload image" class="btn-orange btn-upload" />
+                                        <p>3mb max file size</p>
+                                        <p><a title="" href="#">remove image</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="btn-orange btn-post" type="button" value="post" />
+                        </fieldset>                
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-bullettin -->
         
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
