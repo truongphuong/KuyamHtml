@@ -636,7 +636,7 @@
                                                             <div class="table-cell col-img">
                                                                 <img alt="" src="content/images/assets/image_step1.png" />
                                                             </div>
-                                                            <div class="table-cell">
+                                                            <div class="table-cell col-text">
                                                                 <h2>event type</h2>
                                                             </div>
                                                         </div>
@@ -776,7 +776,7 @@
                                                                 <div class="table-cell col-img">
                                                                     <img alt="" src="content/images/assets/image_step2.png" />
                                                                 </div>
-                                                                <div class="table-cell">
+                                                                <div class="table-cell col-text">
                                                                     <h2>event pricing</h2>
                                                                 </div>
                                                             </div>
@@ -855,7 +855,7 @@
                                                                 <div class="table-cell col-img">
                                                                     <img alt="" src="content/images/assets/image_step2.png" />
                                                                 </div>
-                                                                <div class="table-cell">
+                                                                <div class="table-cell col-text">
                                                                     <h2>event PSVP details</h2>
                                                                 </div>
                                                             </div>
@@ -1066,7 +1066,7 @@
                                                         <div class="table-cell col-img">
                                                             <img alt="" src="content/images/assets/image_step1.png" />
                                                         </div>
-                                                        <div class="table-cell">
+                                                        <div class="table-cell col-text">
                                                             <h2>confirm your business info</h2>
                                                         </div>
                                                     </div>
@@ -1311,7 +1311,7 @@
                                                         <div class="table-cell col-img">
                                                            	<img alt="" src="content/images/assets/image_step2.png" />
                                                         </div>
-                                                        <div class="table-cell">
+                                                        <div class="table-cell col-text">
                                                             <h2>how do we book with you?</h2>
                                                         </div>
                                                     </div>
@@ -1380,7 +1380,7 @@
                                                         <div class="table-cell col-img">
                                                            	<img alt="" src="content/images/assets/image_step3.png" />
                                                         </div>
-                                                        <div class="table-cell">
+                                                        <div class="table-cell col-text">
                                                             <h2>how do you want to get paid?</h2>
                                                         </div>
                                                     </div>
@@ -1774,7 +1774,7 @@
                                     <div class="table-cell col-img">
                                         <img src="content/images/assets/image_step1.png" alt="">
                                     </div>
-                                    <div class="table-cell">
+                                    <div class="table-cell col-text">
                                         <h2>add/edit services</h2>
                                     </div>
                                 </div>
@@ -1816,12 +1816,22 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-row clearfix">
+                            	<div class="offering-col">
+                                	<label>class start date: <span class="error">*</span></label><br />
+                                	<input class="form-control txt-s" type="text" />
+                                </div>
+                                <div class="offering-col">
+                                	<label>class end date: <span class="error">*</span></label><br />
+                                	<input class="form-control txt-s" type="text" />
+                                </div>
+                            </div>
                             <div class="form-row">
                             	<label>short description of service: <span class="error">*</span></label><br />
                                 <textarea class="form-control" cols="" rows=""></textarea>
                             </div>
                             <div class="form-btn">
-                            	<button class="btn-orange btn-settings"><span class="icon icon-add"></span> add service</button>
+                            	<button class="btn-orange btn-settings btn-200"><span class="icon icon-add"></span> add service</button>
                             </div>
                             <div class="list-header clearfix">
                             	<label>your services</label>
@@ -1906,7 +1916,7 @@
                                     <div class="table-cell col-img">
                                         <img src="content/images/assets/image_step2.png" alt="">
                                     </div>
-                                    <div class="table-cell">
+                                    <div class="table-cell col-text">
                                         <h2>add/edit your employees and tag their services</h2>
                                     </div>
                                 </div>
@@ -1917,8 +1927,9 @@
                                     <option>Joe</option>
                                 </select>
                             </div>
-                            <div class="form-row">
-                            	
+                            <div class="form-row relative">
+                            	<hr />
+                            	<span class="span-or">or</span>
                             </div>
                             <div class="form-row">
                             	<label>add employee</label><br />
@@ -1989,8 +2000,11 @@
 									<label class="label-style" for="cb-7">hot yoga, 30 min, $20, 15 people</label>
 								</div>
                            	</div>
+                            <div class="form-btn">
+                            	<button class="btn-orange btn-settings"><span class="icon icon-add"></span> add</button>
+                            </div>
                             <footer>
-                            	<button data-dismiss="modal" class="btn-orange btn-settings">close</button>
+                            	<button slideCurrent="offering-2" slideNext="offering-1" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
                                 <button slideCurrent="offering-2" slideNext="offering-3" class="btn-orange btn-settings">next <span class="icon icon-next"></span></button>
                             </footer>
                         </fieldset>
@@ -2003,125 +2017,125 @@
                                     <div class="table-cell col-img">
                                         <img src="content/images/assets/image_step3.png" alt="">
                                     </div>
-                                    <div class="table-cell">
-                                        <h2>add/edit services</h2>
+                                    <div class="table-cell col-text">
+                                        <h2>list/edit hours for each employee</h2>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <label>choose appointment type:</label><br />
-                                <select class="selectpicker select-l">
-                                    <option>service</option>
-                                    <option>class</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                            	<label>choose class type:</label><br />
-                                <select class="selectpicker select-l">
-                                    <option>pilates</option>
-                                </select>
-                            </div>
-                            <div class="form-row">
-                            	<label>choose specific class:</label><br />
-                                <select class="selectpicker select-l">
-                                    <option>dance</option>
-                                </select>
-                            </div>
-                            <div class="form-row clearfix">
-                            	<div class="offering-col">
-                                	<label>original price: <span class="error">*</span></label><br />
-                                	<input class="form-control txt-s" type="text" />
-                                </div>
-                                <div class="offering-col">
-                                	<label>service duration: <span class="error">*</span></label><br />
-                                    <select class="selectpicker select-s">
-                                        <option>1 hour</option>
+                            
+                            <!-- /#time-service -->
+                            <div id="time-service" class="time-section">
+                                <div class="form-row">
+                                    <label>choose employee/instructor</label><br />
+                                    <select class="selectpicker select-l">
+                                        <option>service</option>
+                                        <option>class</option>
                                     </select>
                                 </div>
-                                <div class="offering-col">
-                                	<label>max people per class: <span class="error">*</span></label><br />
-                                    <select class="selectpicker select-s">
-                                        <option>10</option>
-                                    </select>
+                                <div class="form-row">
+                                    <label>fill in available hours for employee/instructor</label><br />
+                                    <div class="list-hours">
+                                    
+                                    	<!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Monday <a title="" href="#">remove</a></label>
+                                            
+                                            <!-- .hour-item-sub -->
+                                            <div class="hour-item-sub clearfix">
+                                            	<div class="shift">
+                                                	<div>
+                                                    	<label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                    	<label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="shift">
+                                                	<div>
+                                                    	<label><span class="shift-section">shift 2</span><br /> start time<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                    	<label><span class="shift-section">shift 2</span><br /> start time<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.hour-item-sub -->
+                                            
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Tuesday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Wednesday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                      	</div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Thursday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Friday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Saturday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                    	<div class="hour-item">
+                                        	<label>Sunday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                    </div>
                                 </div>
+                                <footer>
+                                    <button slideCurrent="offering-3" slideNext="offering-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                                    <button class="btn-orange btn-settings">done</button>
+                                </footer>
                             </div>
-                            <div class="form-row">
-                            	<label>short description of service: <span class="error">*</span></label><br />
-                                <textarea class="form-control" cols="" rows=""></textarea>
-                            </div>
-                            <div class="form-btn">
-                            	<button class="btn-orange btn-settings"><span class="icon icon-add"></span> add service</button>
-                            </div>
-                            <div class="list-header clearfix">
-                            	<label>your services</label>
-                            	<div class="offering-col relative">
-                                	<input id="cb-all" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-all">select all</label>
+                            <!-- /#time-service -->
+                            
+                            <!-- #time-class -->
+                            <div id="time-class"  class="time-section hide">
+                                <div class="form-row">
+                                    <label>select the days you offer classes and fill in the details</label><br />
+                                    <div class="list-hours">
+                                    
+                                    </div>
                                 </div>
-                                <a title="" href="javascript:void(0);">delete selected</a>
+                                <footer>
+                                    <button slideCurrent="offering-3" slideNext="offering-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                                    <button class="btn-orange btn-settings">done</button>
+                                </footer>
                             </div>
-                            <div class="list">
-                                <div class="relative">
-                                	<input id="cb-1" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-1">nutrition bootcamp, 2 hour, $200, 5 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-2" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-2">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-3" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-3">belly dance, 50 min, $80, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-4" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-4">square dance, 45 min, $35, 8 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-5" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-5">break dance, 1 hour, $55, 30 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-6" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-6">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-7" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-7">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-1" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-1">nutrition bootcamp, 2 hour, $200, 5 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-2" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-2">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-3" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-3">belly dance, 50 min, $80, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-4" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-4">square dance, 45 min, $35, 8 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-5" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-5">break dance, 1 hour, $55, 30 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-6" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-6">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                                <div class="relative">
-                                	<input id="cb-7" class="cb-style" type="checkbox">
-									<label class="label-style" for="cb-7">hot yoga, 30 min, $20, 15 people</label>
-								</div>
-                           	</div>
-                            <footer>
-                            	<button data-dismiss="modal" class="btn-orange btn-settings">close</button>
-                                <button slideCurrent="offering-1" slideNext="offering-2" class="btn-orange btn-settings">next <span class="icon icon-next"></span></button>
-                            </footer>
+                            <!--/ #time-class --> 
+                            
                         </fieldset>
                         <!-- /#offering-3 -->
                         
