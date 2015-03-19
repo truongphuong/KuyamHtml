@@ -1550,6 +1550,18 @@
 														$('.payment-section').addClass("hide");
 														$(paymentID).removeClass("hide");
 													})
+													
+													$('.popover-delete').click(function(e){
+														$(this).siblings('.popover-confirm').show();
+													})
+													
+													$('.popover-confirm .icon-no').click(function(e){
+														$(this).parents('.popover-confirm').hide();
+													})
+													
+													$('.popover-confirm .icon-yes').click(function(e){
+														$(this).parents('.popover-confirm').hide();
+													})
 												});
 											</script>
                                     	</div>
@@ -1839,7 +1851,26 @@
                                 	<input id="cb-all" class="cb-style" type="checkbox">
 									<label class="label-style" for="cb-all">select all</label>
                                 </div>
-                                <a title="" href="javascript:void(0);">delete selected</a>
+                                <div class="delete-section relative">
+                                
+                                	<a title="" href="javascript:void(0);" class="popover-delete">delete selected</a>
+                                    
+                                    <!-- .popover -->
+                                    <div class="popover bottom popover-confirm">
+                                        <div class="arrow"></div>
+                                        <h3 id="popover-bottom" class="popover-title">
+                                            are you sure?
+                                            <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                <span class="icon icon-yes"></span>
+                                            </a>
+                                            <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                <span class="icon icon-no"></span>
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <!-- .popover -->
+                                    
+                                </div>
                             </div>
                             <div class="list">
                                 <div class="relative">
@@ -2005,7 +2036,7 @@
                             </div>
                             <footer>
                             	<button slideCurrent="offering-2" slideNext="offering-1" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
-                                <button slideCurrent="offering-2" slideNext="offering-3" class="btn-orange btn-settings">next <span class="icon icon-next"></span></button>
+                                <button slideCurrent="offering-2" slideNext="offering-3" class="btn-orange btn-settings btn-disable">next <span class="icon icon-next"></span></button>
                             </footer>
                         </fieldset>
                         <!-- /#offering-2 -->
@@ -2024,7 +2055,7 @@
                             </div>
                             
                             <!-- /#time-service -->
-                            <div id="time-service" class="time-section">
+                            <div id="time-service" class="time-section time-service hide">
                                 <div class="form-row">
                                     <label>choose employee/instructor</label><br />
                                     <select class="selectpicker select-l">
@@ -2032,42 +2063,148 @@
                                         <option>class</option>
                                     </select>
                                 </div>
+                              	<label>fill in available hours for employee/instructor</label>
+                                
+                                <!-- .list-hours -->
+                                <div class="list-hours">
+                                
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Monday</span> <a title="" href="#">remove</a></label>
+                                        
+                                        <!-- .hour-item-sub -->
+                                        <div class="hour-item-sub clearfix">
+                                            <div class="shift">
+                                                <div>
+                                                    <label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
+                                                    <select class="selectpicker select-xs">
+                                                        <option>9:30am</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
+                                                    <select class="selectpicker select-xs">
+                                                        <option>9:30am</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="shift">
+                                                <div>
+                                                    <label><span class="shift-section">shift 2</span><br /> start time</label><br />
+                                                    <select class="selectpicker select-xs">
+                                                        <option>9:30am</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label><span class="shift-section">shift 2</span><br /> start time</label><br />
+                                                    <select class="selectpicker select-xs">
+                                                        <option>9:30am</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.hour-item-sub -->
+                                        
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Tuesday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Wednesday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Thursday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Friday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Saturday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                    <!-- .hour-item -->
+                                    <div class="hour-item">
+                                        <label><span>Sunday</span> <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                    </div>
+                                    <!-- /.hour-item -->
+                                    
+                                </div>
+                                <!-- /.list-hours -->
+                           
+                                <footer>
+                                    <button slideCurrent="offering-3" slideNext="offering-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                                    <button class="btn-orange btn-settings">done</button>
+                                </footer>
+                            </div>
+                            <!-- /#time-service -->
+                            
+                            <!-- #time-class -->
+                            <div id="time-class"  class="time-section time-class">
                                 <div class="form-row">
-                                    <label>fill in available hours for employee/instructor</label><br />
+                                    <label>select the days you offer classes and fill in the details</label><br />
+                                    <!-- .list-hours -->
                                     <div class="list-hours">
                                     
-                                    	<!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Monday <a title="" href="#">remove</a></label>
+                                        <!-- .hour-item -->
+                                        <div class="hour-item">
+                                            <label><span>Monday</span></label>
                                             
                                             <!-- .hour-item-sub -->
                                             <div class="hour-item-sub clearfix">
-                                            	<div class="shift">
-                                                	<div>
-                                                    	<label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
-                                                        <select class="selectpicker select-xs">
-                                                            <option>9:30am</option>
-                                                        </select>
-                                                    </div>
-                                                    <div>
-                                                    	<label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
-                                                        <select class="selectpicker select-xs">
-                                                            <option>9:30am</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
                                                 <div class="shift">
-                                                	<div>
-                                                    	<label><span class="shift-section">shift 2</span><br /> start time<span class="error">*</span></label><br />
+                                                    <div>
+                                                        <label>start time<span class="error">*</span></label><br />
                                                         <select class="selectpicker select-xs">
                                                             <option>9:30am</option>
                                                         </select>
                                                     </div>
                                                     <div>
-                                                    	<label><span class="shift-section">shift 2</span><br /> start time<span class="error">*</span></label><br />
-                                                        <select class="selectpicker select-xs">
-                                                            <option>9:30am</option>
+                                                        <label>choose class<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-xl">
+                                                            <option>hot yoga 1 hour, $10, 25 people</option>
                                                         </select>
+                                                    </div>
+                                                    <div>
+                                                        <label>choose instructor<span class="error">*</span></label><br />
+                                                        <select class="selectpicker select-s">
+                                                            <option>joe</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="relative">
+                                                        <label>&nbsp;</label><br />
+                                                        <a title="" href="javascript:void(0);" class="btn-settings btn-delete popover-delete"><span class="icon icon-delete"></span></a>
+                                                        
+                                                        <!-- .popover -->
+                                                        <div class="popover bottom popover-confirm">
+                                                            <div class="arrow"></div>
+                                                            <h3 id="popover-bottom" class="popover-title">
+                                                                delete this item?
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                    <span class="icon icon-yes"></span>
+                                                                </a>
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                    <span class="icon icon-no"></span>
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                        <!-- .popover -->
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -2077,57 +2214,43 @@
                                         <!-- /.hour-item -->
                                         
                                         <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Tuesday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        <div class="hour-item">
+                                            <label><span>Tuesday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
                                         </div>
                                         <!-- /.hour-item -->
                                         
                                         <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Wednesday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
-                                      	</div>
-                                        <!-- /.hour-item -->
-                                        
-                                        <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Thursday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        <div class="hour-item">
+                                            <label><span>Wednesday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
                                         </div>
                                         <!-- /.hour-item -->
                                         
                                         <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Friday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        <div class="hour-item">
+                                            <label><span>Thursday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
                                         </div>
                                         <!-- /.hour-item -->
                                         
                                         <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Saturday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        <div class="hour-item">
+                                            <label><span>Friday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
                                         </div>
                                         <!-- /.hour-item -->
                                         
                                         <!-- .hour-item -->
-                                    	<div class="hour-item">
-                                        	<label>Sunday <a title="" href="#"><span class="icon icon-add"></span> add hours</a></label>
+                                        <div class="hour-item">
+                                            <label><span>Saturday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
+                                        </div>
+                                        <!-- /.hour-item -->
+                                        
+                                        <!-- .hour-item -->
+                                        <div class="hour-item">
+                                            <label><span>Sunday</span> <a title="" href="#"><span class="icon icon-add"></span> add class</a></label>
                                         </div>
                                         <!-- /.hour-item -->
                                         
                                     </div>
-                                </div>
-                                <footer>
-                                    <button slideCurrent="offering-3" slideNext="offering-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
-                                    <button class="btn-orange btn-settings">done</button>
-                                </footer>
-                            </div>
-                            <!-- /#time-service -->
-                            
-                            <!-- #time-class -->
-                            <div id="time-class"  class="time-section hide">
-                                <div class="form-row">
-                                    <label>select the days you offer classes and fill in the details</label><br />
-                                    <div class="list-hours">
-                                    
-                                    </div>
+                                    <!-- /.list-hours -->
                                 </div>
                                 <footer>
                                     <button slideCurrent="offering-3" slideNext="offering-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
