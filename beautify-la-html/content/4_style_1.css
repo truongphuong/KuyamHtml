@@ -1329,7 +1329,6 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .settings-page .form-row .error{font-size:20px;}
 .settings-page .btn-delete,
 .settings-page .btn-popover{width:auto;}
-.settings-page .list-hours .hour-item .popover-confirm{top:34px;}
 .settings-page .btn-settings .icon-delete{margin-top:5px;}
 .settings-page .hour-to{line-height:32px;}
 .settings-page .txt-100{width:100%;}
@@ -1448,7 +1447,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .modal-offerings .list{border:1px solid #ccc;max-height:275px;overflow-y:auto;}
 .modal-offerings .list div{padding:5px 10px;}
 .modal-offerings .list div:nth-child(odd){background:#F8F8F8;}
-.modal-offerings .time-class .list-hours .shift{margin-bottom:10px;}
+.modal-offerings .time-class .list-hours .shift{margin-bottom:10px;margin-left:0;}
 
 .popover-confirm{left:inherit;right:0;top:20px;background:#f3472d;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;width:200px;}
 .popover-confirm.bottom > .arrow{left:inherit;right:10px;border-bottom-color:#f3472d;}
@@ -1461,7 +1460,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .list-hours .hour-item > label{font-size:24px;color:#000;}
 .list-hours .hour-item > label > span{display:inline-block;width:160px}
 .list-hours .hour-item > label a{color:#f3472d;font-size:16px;}
-.list-hours .hour-item .popover-confirm{top:60px;right:-12px;width:230px;}
+.list-hours .hour-item .popover-confirm{top:34px;right:-12px;width:230px;}
 .list-hours .icon{display:inline-block;width:21px;height:21px;background:center center no-repeat;margin-bottom:-5px;}
 .list-hours .icon-add{background-image:url(images/assets/icon_add_red.png);}
 .list-hours .hour-item-sub{}
@@ -1469,8 +1468,17 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .list-hours .shift:first-child{margin-left:0;}
 .list-hours .shift > div{float:left;margin-left:10px;}
 .list-hours .shift > div:first-child{margin-left:0;}
-.list-hours .shift label{}
 .list-hours .shift .shift-section{font-size:16px;}
+.list-hours .list-label label{display:block;float:left;margin-left:10px;}
+.list-hours .list-label label:first-child{margin-left:0;}
+.list-hours .hour-item-row{margin-top:10px;}
+.list-hours .hour-item-row:first-child{margin-top:0;}
+.list-hours .label-time{width:120px;}
+.list-hours .label-class{width:350px;}
+.list-hours .label-instructor{width:180px;}
+
+
+.list-time-operation .shift{float:none;margin-left:0;margin-bottom:10px;}
 
 .cb-style{position:absolute;opacity:0;top:0;left:0;}
 .cb-style ~ .label-style{position:relative;padding-left:25px;cursor:pointer;display:inline-block !important;color:#000 !important;}

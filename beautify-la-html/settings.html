@@ -1158,7 +1158,7 @@
                                                         <label>business hours</label>                                           			
                                                     
                                                         <!-- .list-hours -->
-                                                        <div class="list-hours">
+                                                        <div class="list-hours list-time-operation">
                                                         
                                                             <!-- .hour-item -->
                                                             <div class="hour-item">
@@ -1166,7 +1166,51 @@
                                                                 
                                                                 <!-- .hour-item-sub -->
                                                                 <div class="hour-item-sub clearfix">
-                                                                    <div class="shift">
+                                                                    <div class="shift clearfix">
+                                                                        <div>
+                                                                            <select class="selectpicker select-m">
+                                                                                <option>9:30</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div>
+                                                                            <select class="selectpicker select-s">
+                                                                                <option>am</option>
+                                                                                <option>pm</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="hour-to">to</div>
+                                                                        <div>
+                                                                            <select class="selectpicker select-m">
+                                                                                <option>9:30</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div>
+                                                                            <select class="selectpicker select-s">
+                                                                                <option>am</option>
+                                                                                <option>pm</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="relative">
+                                                                            <a title="" href="javascript:void(0);" class="btn-settings btn-delete popover-delete"><span class="icon icon-delete"></span></a>
+                                                                            
+                                                                            <!-- .popover -->
+                                                                            <div class="popover bottom popover-confirm">
+                                                                                <div class="arrow"></div>
+                                                                                <h3 id="popover-bottom" class="popover-title">
+                                                                                    delete this item?
+                                                                                    <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                                        <span class="icon icon-yes"></span>
+                                                                                    </a>
+                                                                                    <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                                        <span class="icon icon-no"></span>
+                                                                                    </a>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <!-- .popover -->
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="shift clearfix">
                                                                         <div>
                                                                             <select class="selectpicker select-m">
                                                                                 <option>9:30</option>
@@ -2031,37 +2075,114 @@
                                     <!-- .hour-item -->
                                     <div class="hour-item">
                                         <label><span>Monday</span> <a title="" href="#">remove</a></label>
-                                        
                                         <!-- .hour-item-sub -->
                                         <div class="hour-item-sub clearfix">
-                                            <div class="shift">
-                                                <div>
-                                                    <label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
-                                                    <select class="selectpicker select-xs">
-                                                        <option>9:30am</option>
-                                                    </select>
+                                        
+                                        	<!-- .list-label -->
+                                        	<div class="list-label clearfix">
+                                                <div class="shift">
+                                                    <label class="label-time"><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label>
+                                                    <label class="label-time"><span class="shift-section">shift 1</span><br /> end time<span class="error">*</span></label>
                                                 </div>
-                                                <div>
-                                                    <label><span class="shift-section">shift 1</span><br /> start time<span class="error">*</span></label><br />
-                                                    <select class="selectpicker select-xs">
-                                                        <option>9:30am</option>
-                                                    </select>
+                                                <div class="shift">
+                                                    <label class="label-time"><span class="shift-section">shift 2</span><br /> start time</label>
+                                                    <label class="label-time"><span class="shift-section">shift 2</span><br /> end time</label>
                                                 </div>
                                             </div>
-                                            <div class="shift">
-                                                <div>
-                                                    <label><span class="shift-section">shift 2</span><br /> start time</label><br />
-                                                    <select class="selectpicker select-xs">
-                                                        <option>9:30am</option>
-                                                    </select>
+                                            <!-- /.list-label -->
+                                            
+                                        	<!-- .hour-item-row -->
+                                        	<div class="hour-item-row clearfix">
+                                                <div class="shift">
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <label><span class="shift-section">shift 2</span><br /> start time</label><br />
-                                                    <select class="selectpicker select-xs">
-                                                        <option>9:30am</option>
-                                                    </select>
+                                                <div class="shift">
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="relative">
+                                                        <a class="btn-settings btn-delete popover-delete" href="javascript:void(0);" title="">
+                                                        <span class="icon icon-delete"></span>
+                                                        </a>
+                                                        <div class="popover bottom popover-confirm">
+                                                            <div class="arrow"></div>
+                                                            <h3 id="popover-bottom" class="popover-title">
+                                                                delete this item?
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                <span class="icon icon-yes"></span>
+                                                                </a>
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                <span class="icon icon-no"></span>
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <!-- .hour-item-row -->
+                                            
+                                            <!-- .hour-item-row -->
+                                        	<div class="hour-item-row clearfix">
+                                                <div class="shift">
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="shift">
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="relative">
+                                                        <a class="btn-settings btn-delete popover-delete" href="javascript:void(0);" title="">
+                                                        <span class="icon icon-delete"></span>
+                                                        </a>
+                                                        <div class="popover bottom popover-confirm">
+                                                            <div class="arrow"></div>
+                                                            <h3 id="popover-bottom" class="popover-title">
+                                                                delete this item?
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                <span class="icon icon-yes"></span>
+                                                                </a>
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                <span class="icon icon-no"></span>
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- .hour-item-row -->
+                                            
                                         </div>
                                         <!-- /.hour-item-sub -->
                                         
@@ -2124,30 +2245,66 @@
                                         <!-- .hour-item -->
                                         <div class="hour-item">
                                             <label><span>Monday</span></label>
-                                            
+                                            <div class="list-label clearfix">
+                                            	<label class="label-time">start time<span class="error">*</span></label>
+                                                <label class="label-class">choose class<span class="error">*</span></label>
+                                                <label class="label-instructor">choose instructor<span class="error">*</span></label>
+                                            </div>
                                             <!-- .hour-item-sub -->
                                             <div class="hour-item-sub clearfix">
                                                 <div class="shift">
                                                     <div>
-                                                        <label>start time<span class="error">*</span></label><br />
                                                         <select class="selectpicker select-xs">
                                                             <option>9:30am</option>
                                                         </select>
                                                     </div>
                                                     <div>
-                                                        <label>choose class<span class="error">*</span></label><br />
                                                         <select class="selectpicker select-xl">
                                                             <option>hot yoga 1 hour, $10, 25 people</option>
                                                         </select>
                                                     </div>
                                                     <div>
-                                                        <label>choose instructor<span class="error">*</span></label><br />
                                                         <select class="selectpicker select-s">
                                                             <option>joe</option>
                                                         </select>
                                                     </div>
                                                     <div class="relative">
-                                                        <label>&nbsp;</label><br />
+                                                        <a title="" href="javascript:void(0);" class="btn-settings btn-delete popover-delete"><span class="icon icon-delete"></span></a>
+                                                        
+                                                        <!-- .popover -->
+                                                        <div class="popover bottom popover-confirm">
+                                                            <div class="arrow"></div>
+                                                            <h3 id="popover-bottom" class="popover-title">
+                                                                delete this item?
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                    <span class="icon icon-yes"></span>
+                                                                </a>
+                                                                <a class="btn-settings btn-popover" href="javascript:void(0);">
+                                                                    <span class="icon icon-no"></span>
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                        <!-- .popover -->
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="shift">
+                                                    <div>
+                                                        <select class="selectpicker select-xs">
+                                                            <option>9:30am</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-xl">
+                                                            <option>hot yoga 1 hour, $10, 25 people</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <select class="selectpicker select-s">
+                                                            <option>joe</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="relative">
                                                         <a title="" href="javascript:void(0);" class="btn-settings btn-delete popover-delete"><span class="icon icon-delete"></span></a>
                                                         
                                                         <!-- .popover -->
