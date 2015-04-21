@@ -3288,12 +3288,27 @@ email the message<span class="icon icon-next"></span>
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"></button>
                         <h3 class="modal-title">confirm your email message</h3>
-                        <p>if you confirm, you will be sending the bulletin message to all attendees of the event.</p>
-                        <p>are you sure you want to send?</p>
+                        <h4>if you confirm, you will be sending the bulletin message to all attendees of the event.</h4>
+                    	<p>are you sure you want to send?</p>
+                        <button type="button" class="btn-orange btn-settings btn-back" data-dismiss="modal"><span class="icon icon-back"></span> back</button>
+                        <button type="button" class="btn-orange btn-settings btn-confirm" data-toggle="modal" data-target="#modal-sending">confirm and send</button>
                     </div>
-                    <div class="modal-body">
-                        <button type="button" class="btn-orange btn-back" data-dismiss="modal">back</button>
-                        <button type="button" class="btn-orange btn-confirm" data-dismiss="modal">confirm and send</button>
+                    <div class="modal-footer">                	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-email --> 
+        
+        <!-- .modal-email -->    
+        <div class="modal fade" id="modal-sending" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-welcome modal-email modal-sending">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">your email is sending!</h3>
+                        <h4>we're in the process of emailing all your current attendees of the event.</h4>
+                        <button type="button" class="btn-orange btn-settings btn-done" data-dismiss="modal"> done</button>
                     </div>
                     <div class="modal-footer">                	
                     </div>
