@@ -125,7 +125,7 @@
                         <p>if you have been approved you will be sent an email with login info. You can manage and modify your event details from your events dashboard.</p>
                     </div>
                     <div class="modal-body">
-                        <a title="" href="facebook-login.html" class="btn-blue btn-facebook">login with facebook</a>
+                        <a title="" data-toggle="modal" data-target="#modal-upcomming" class="btn-blue btn-facebook">login with facebook</a>
                         <div class="form-or">                    	
                             <hr />  
                             <span>or</span>                      
@@ -171,6 +171,148 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
         <!-- /.modal-welcome --> 
+        
+        <!-- .modal-upcomming -->    
+        <div class="modal fade" id="modal-upcomming" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-upcomming">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <div class="bg-black-50">
+                        	<h3>
+                                be a part of the next big event!
+                                <strong>starts April 30th</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                    	<h2>here are your offers from the last event</h2>
+                        <p>take a look at the offers from your last event. you can confirm your participation, or customize you offering. at this time there's no cost for participation.</p>
+                        <div class="offers-list">
+                            <div class="table-css">                        	
+                                <div class="table-row">
+                                    <div class="table-cell col-num">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        shampoo with blowout 50% off - $15
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell col-num">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        manicure/pedicure 50% off - $20
+                                    </div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell col-num">
+                                        <span>3</span>
+                                    </div>
+                                    <div class="table-cell">
+                                        (class) beauty tips 10% off - $90
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>          
+                    </div>
+                    <div class="modal-footer"> 
+                    	<input class="btn-orange btn-change" type="button" value="change the offers" />
+                        <input class="btn-orange btn-confirm" data-toggle="modal" data-target="#modal-confirmation" type="button" value="confirm my spot" />               	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-upcomming --> 
+        
+        <!-- .modal-confirmation -->    
+        <div class="modal fade" id="modal-confirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-upcomming modal-confirmation">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <div class="bg-black-50">
+                        	<h3>
+                                you're confirmed for the event!
+                                <strong>thank you!</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                    	<h2>share the event</h2>
+                        <p>help get the word out that you are participating. please share the event with your friends and followers!</p>
+                        
+                        <dl class="social-icons clearfix">
+                            <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter_share_2.png"></a></dd>
+                            <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook_share_2.png"></a></dd>
+                            <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/email_share_2.png"></a></dd>
+                            <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Share_link_2.png"></a></dd>
+                        </dl>
+                        
+                        <!-- .m-tooltip -->
+                        <div class="m-tooltip" id="dropdown1">
+                          <div class="input-box" ><div class="glyphicon icon-calendar" ></div> add to calendar</div>
+                          <ul class="custom-dropbox">
+                            <li><div class="glyphicon icon-apple" ></div> Apple iCalendar</li>
+                            <li><div class="glyphicon icon-google"></div> Google</li>
+                            <li><div class="glyphicon icon-outlook"></div> Out look</li>
+                            <li><div class="glyphicon icon-yahoo"></div> Yahoo</li>
+                          </ul>
+                        </div>
+                        <!-- /.m-tooltip -->  
+                    </div>
+                    <div class="modal-footer">  
+                    	<input class="btn-orange btn-done" type="button" value="done" />                                     	
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-confirmation --> 
+        
+        <script type="text/javascript">
+			$('#modal-confirmation').on('shown.bs.modal', function () {
+				/* tooltip event */
+				tooltipEvent();
+				
+				/* custom dropbox event */
+			    customDropboxEvent();
+			});
+			
+			function tooltipEvent() {
+				var tempId, currentId;
+			
+				$(document).click(function () {
+					 tempId = "";
+					$(".m-tooltip ul").hide();
+				});
+			
+				$('.m-tooltip').click(function (e) {
+					e.stopPropagation();
+					currentId = $(this).attr('id');
+					if (currentId != null) {
+			
+						if (currentId != tempId) {
+							$('.m-tooltip').find('ul').hide();
+							$(this).find('ul').show();
+							tempId = currentId;
+						}
+						else {
+							tempId = "";
+							$('.m-tooltip').find('ul').hide();
+						}
+					}
+				});
+			}
+			
+			function customDropboxEvent() {
+
+				$('.custom-dropbox li').click(function () {			
+					var _parentTarget = $(this).parents('.m-tooltip');
+					_parentTarget.find('.input-box').html($(this).html());			
+				});
+			}
+        </script>
         
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
