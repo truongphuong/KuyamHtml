@@ -16,18 +16,27 @@
 			/*@editable*/background-color:#333333;
 		}
 	/*
-	@tab title
-	@section title_event
-	@tip Set the styling for title_event in your emails.
+	@tab Sidetop
+	@section sidetop_content
+	@tip Set the styling for your email's sidetop_content text. Choose a size and color that is easy to read.
 	*/
-		#title_event{
+		#sidetop_content{
+			/*@editable*/background-color:#333333;
+			/*@editable*/color:#adadad;
 			/*@editable*/font-family:'raleway', sans-serif;
-			/*@editable*/font-size:24px;
+			/*@editable*/font-size:11px;
 			/*@editable*/line-height:150%;
-			/*@editable*/color:#2E4255;
 		}
 	/*
-	@tab body
+	@tab Header
+	@section header_content
+	@tip Set the styling for header_content in your emails.
+	*/
+		#header_content{
+			/*@editable*/background-color:#333333;
+		}
+	/*
+	@tab Body
 	@section body_content
 	@tip Set the styling for your email's body_content text. Choose a size and color that is easy to read.
 	*/
@@ -38,30 +47,19 @@
 			/*@editable*/line-height:150%;
 			/*@editable*/font-weight:600;
 		}
-	/*
-	@tab body
-	@section body_content
-	@tip Set the styling for your email's body_content text. Choose a size and color that is easy to read.
-	*/
-		.image_event{
-			/*@editable*/color:#505050;
-			/*@editable*/font-family:Helvetica;
-			/*@editable*/font-size:20px;
-			/*@editable*/font-weight:bold;
-			/*@editable*/line-height:100%;
-			/*@editable*/padding-top:0px;
-			/*@editable*/padding-right:0;
-			/*@editable*/padding-bottom:0;
-			/*@editable*/padding-left:0;
-			/*@editable*/text-align:center;
-			/*@editable*/vertical-align:middle;
+		#title_event{
+			/*@editable*/font-family:'raleway', sans-serif;
+			/*@editable*/font-size:24px;
+			/*@editable*/line-height:150%;
+			/*@editable*/color:#2E4255;
 		}
 	/*
-	@tab footer
+	@tab Footer
 	@section footer_content
 	@tip Set the styling for your email's footer_content text. Choose a size and color that is easy to read.
 	*/
 		#footer_content{
+			/*@editable*/background-color:#333333;
 			/*@editable*/font-family:Arial, sans-serif;
 			/*@editable*/color:#A7AFB3;
 			/*@editable*/font-size:11px;
@@ -74,14 +72,13 @@
 			<td align="center" valign="top" style="padding:20px;">				
 				<table border="0" cellpadding="0" cellspacing="0" width="600">
 					<tr>
-						<td align="right" style="padding:18px;color:#adadad;font-family:'raleway', sans-serif;font-size:11px;line-height:150%;">
-							<a title="" href="#" style="color:#adadad;text-decoration:underline;">View in browser</a>													
-						</td>
+						<td id="sidetop_content" mc:edit="sidetop_content00" style="padding:18px;"><div style="text-align: right;"><a href="#" style="color:#adadad;text-decoration:underline;" title="">View in browser</a></div>
+</td>
 					</tr>
 					<tr>
-						<td align="center" valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;">												
+						<td id="header_content" align="center" valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;">												
 							<a title="" href="http://beautify-la.com/" target="_blank" style="border:0;outline:0;text-decoration:none;">
-								<img alt="" src="images/logo.png" width="215">
+								<img alt="" src="images/logo.png" width="215" style="max-width:215px;" mc:edit="header_image">
 							</a>
 						</td>
 					</tr>
@@ -107,18 +104,14 @@
 									</td>
 								</tr>
 								<tr>		
-									<td class="body_content" mc:edit="body_content00" style="padding:18px;"><div style="text-align: center;">We would love to see you back for our next event on April 30th.<br>
-See what you did last time - click the link below</div>
-</td>
-								</tr>
-								<tr>
-									<td align="center" style="padding-top:22px;padding-right:18px;padding-bottom:22px;padding-left:18px;">
-										<a title="" href="#"><img alt="" src="images/btn.jpg" width="253"></a>
-									</td>								
-								</tr>								
-								<tr>		
-									<td class="body_content" mc:edit="body_content01" style="padding-top:18px;padding-right:18px;padding-bottom:40px;padding-left:18px;"><div style="text-align: center;">log in with: sven@vinasource.com<br>
-Password: 123456</div>
+									<td class="body_content" mc:edit="body_content00" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;"><div style="text-align: center;">We would love to see you back for our next event on April 30th.<br>
+See what you did last time - click the link below<br>
+<br>
+<a href="#" title=""><img alt="" src="images/btn.jpg" width="253"></a><br>
+<br>
+log in with: sven@vinasource.com<br>
+Password: 123456<br>
+&nbsp;</div>
 </td>
 								</tr>
 								<tr>
@@ -127,9 +120,11 @@ Password: 123456</div>
 									</td>								
 								</tr>
 								<tr>	
-									<td class="body_content" mc:edit="body_content02" style="padding-top:30px;padding-right:18px;padding-bottom:40px;padding-left:18px;"><div style="text-align: center;">this event is aimed at bringing together the best hair<br>
+									<td class="body_content" mc:edit="body_content02" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;"><div style="text-align: center;"><br>
+this event is aimed at bringing together the best hair<br>
 stylists from around the city to offer a unique experience to<br>
-new and returning customers!</div>
+new and returning customers!<br>
+&nbsp;</div>
 </td>
 								</tr>
 								<tr>
@@ -138,16 +133,16 @@ new and returning customers!</div>
 											<tr>
 												<td width="58"></td>
 												<td id="social_event" align="center" valign="middle" style="padding-left:85px" width="399">
-													<table border="0" cellpadding="0" cellspacing="5">
-														<tr>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Twitter@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event00"></a></td>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Facebook@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event01"></a></td>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Google-Plus@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event02"></a></td>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Pinterest@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event03"></a></td>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Instagram@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event04"></a></td>
-															<td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Youtube@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event05"></a></td>
-														</tr>
-													</table>
+                                                    <table border="0" cellpadding="0" cellspacing="5">
+                                                        <tr>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Twitter@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event00"></a></td>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Facebook@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event01"></a></td>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Google-Plus@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event02"></a></td>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Pinterest@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event03"></a></td>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Instagram@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event04"></a></td>
+                                                            <td><a title="" href="#" style="border:0;outline:0;text-decoration:none;"><img alt="" src="images/Youtube@1x.png" width="30" style="max-width:30px;max-height:30px;" mc:edit="social_event05"></a></td>
+                                                        </tr>
+                                                    </table>
 												</td>
 												<td align="center" style="font-size:11px" width="85">
 													<table width="100%" style="font-family:Arial, sans-serif;line-height:150%;font-size:11px;" border="0" cellpadding="0" cellspacing="0">
