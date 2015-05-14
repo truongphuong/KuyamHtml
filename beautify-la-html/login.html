@@ -250,17 +250,7 @@
                             <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Share_link_2.png"></a></dd>
                         </dl>
                         
-                        <!-- .m-tooltip -->
-                        <div class="m-tooltip" id="dropdown1">
-                          <div class="input-box" ><div class="glyphicon icon-calendar" ></div> add to calendar</div>
-                          <ul class="custom-dropbox">
-                            <li><div class="glyphicon icon-apple" ></div> Apple iCalendar</li>
-                            <li><div class="glyphicon icon-google"></div> Google</li>
-                            <li><div class="glyphicon icon-outlook"></div> Out look</li>
-                            <li><div class="glyphicon icon-yahoo"></div> Yahoo</li>
-                          </ul>
-                        </div>
-                        <!-- /.m-tooltip -->  
+                        <div class="addtocalendar"></div>
                     </div>
                     <div class="modal-footer">  
                     	<input class="btn-orange btn-done" type="button" value="done" />                                     	
@@ -268,52 +258,8 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-        <!-- /.modal-confirmation --> 
-        
-        <script type="text/javascript">
-			$('#modal-confirmation').on('shown.bs.modal', function () {
-				/* tooltip event */
-				tooltipEvent();
-				
-				/* custom dropbox event */
-			    customDropboxEvent();
-			});
-			
-			function tooltipEvent() {
-				var tempId, currentId;
-			
-				$(document).click(function () {
-					 tempId = "";
-					$(".m-tooltip ul").hide();
-				});
-			
-				$('.m-tooltip').click(function (e) {
-					e.stopPropagation();
-					currentId = $(this).attr('id');
-					if (currentId != null) {
-			
-						if (currentId != tempId) {
-							$('.m-tooltip').find('ul').hide();
-							$(this).find('ul').show();
-							tempId = currentId;
-						}
-						else {
-							tempId = "";
-							$('.m-tooltip').find('ul').hide();
-						}
-					}
-				});
-			}
-			
-			function customDropboxEvent() {
-
-				$('.custom-dropbox li').click(function () {			
-					var _parentTarget = $(this).parents('.m-tooltip');
-					_parentTarget.find('.input-box').html($(this).html());			
-				});
-			}
-        </script>
-        
+        <!-- /.modal-confirmation -->        
+                
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
         <section id="contact" class="site-contact"> 
@@ -601,6 +547,59 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+    <script src="scripts/addtocalendar.js"></script>
+    <link rel="stylesheet" href="content/addtocalendar.css" />
+    <script type="text/javascript">
+		$('#modal-confirmation').on('shown.bs.modal', function () {				
+			
+      		var myCalendar = createCalendar({
+        		options: {
+          			class: 'my-calendar',
+          			id: 'my-calendar'                               // You need to pass an ID. If you don't, one will be generated for you.
+        		},
+        		data: {
+				  	title: 'Get on the front page of HN',     // Event title
+				  	start: new Date('June 15, 2013 19:00'),   // Event start date
+				  	duration: 120,                            // Event duration (IN MINUTES)
+				  	end: new Date('June 15, 2013 23:00'),     // You can also choose to set an end time.
+															// If an end time is set, this will take precedence over duration
+				  	address: 'The internet',
+				  	description: 'Get on the front page of HN, then prepare for world domination.'
+        		}
+      		});
+
+      		document.querySelector('.addtocalendar').appendChild(myCalendar);
+			
+			dropdownCalendar();			
+	  	});
+		
+		function dropdownCalendar() {
+			var tempId, currentId;
+		
+			$(document).click(function () {
+				 tempId = "";
+				$(".add-to-calendar ul").hide();
+			});
+		
+			$('.add-to-calendar').on('click', function (e) {
+				e.stopPropagation();
+				currentId = $(this).attr('id');
+				if (currentId != null) {
+		
+					if (currentId != tempId) {
+						$('.add-to-calendar').find('ul').hide();
+						$(this).find('ul').show();
+						tempId = currentId;
+					}
+					else {
+						tempId = "";
+						$('.add-to-calendar').find('ul').hide();
+					}
+				}
+			});
+		}
+		
+  	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
