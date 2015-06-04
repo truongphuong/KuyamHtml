@@ -43,6 +43,12 @@
 	<div id="detech-devices">
         <div id="site-header" class="site-header bg-black"> 
             <div class="container"> 
+            	<button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="logo" href="home.html" title="">
                     <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
                     <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
@@ -55,58 +61,15 @@
                     <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
                     <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
                 </dl> 
-                <div class="clear hidden-xs"></div>
+                <div class="clear"></div>
                 
                 <!-- .navbar-collapse --> 
-                <div>
+                <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right nav-main">
-                        <li class="active"><a href="javascript:void(0);" title="">lifestyle blog</a></li>
-                        <li>
-                            <a href="javascript:void(0);" title="">login</a>                    
-                        </li>
-                        <li><a href="javascript:void(0);" title="">sign up</a></li>
+                        <li class="active"><a href="lifestyle-blog.html" title="">lifestyle blog<span class="on-desktop hidden-xs"></span></a></li>
+                        <!--<li><a href="javascript:void(0);" title="">login</a> </li>
+                        <li><a href="javascript:void(0);" title="">sign up</a></li>-->
                     </ul>
-                    
-                    <script type="text/javascript">
-                        $(function(){
-                            var temp = 0;
-                            var widthScreen;
-                            $( window ).resize(function() {
-                                widthScreen = $( window ).width();	
-                                if(widthScreen < 768){
-                                    $( "#site-header" ).animate({ "height": "100px" }, 500 ); 
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }else if(widthScreen > 768){
-                                    $( "#site-header" ).animate({ "height": "160px" }, 500 );
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }				
-                            });							
-                            
-                            function showNavAccount(){
-                                if(temp == 0){														
-                                    $( "#site-header" ).animate({ "height": "+=40px" }, 500 );
-                                    temp = 1;
-                                }else{
-                                    $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
-                                    temp = 0;
-                                }
-                                                    
-                                $( "#nav-account" ).toggle('blind', 500);
-                            }
-                            
-                            $( ".link-account" ).click(function(){	
-                                showNavAccount();
-                            });
-                        });
-                    </script>
-                    
-                    <div id="nav-account" class="nav-account">
-                        <dl class="container clearfix">
-                            <dt class="text-right"><a href="#" title="sign out" class="link-sign-out">sign out</a></dt>                            
-                        </dl>
-                    </div>
                 </div>
                 <!-- /.navbar-collapse --> 
                 <!-- InstanceBeginEditable name="form" -->
@@ -131,21 +94,15 @@
                                         by
                                         <strong>Theresa Heim</strong>
                                     </q>
+                                </div>                                
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
                                 </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class="item" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
-                        <div class="carousel-caption">
-                        	<div class="container">
-                                <div class="carousel-caption-content">
-                                    <h2>lifestyle blog</h2>
-                                    <p>Dating: LA's Best Inexpensive Spots For A First Date</p>
-                                    <q>
-                                        by
-                                        <strong>Theresa Heim</strong>
-                                    </q>
-                                </div>
+                                <!-- /.blog-commnet -->
+                                
                             </div>
                         </div>
                     </div> 
@@ -159,10 +116,18 @@
                                         by
                                         <strong>Theresa Heim</strong>
                                     </q>
+                                </div>                                
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
                                 </div>
+                                <!-- /.blog-commnet -->
+                                
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="item" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
@@ -173,24 +138,62 @@
                                         by
                                         <strong>Theresa Heim</strong>
                                     </q>
+                                </div>                                
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
                                 </div>
+                                <!-- /.blog-commnet -->
+                                
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="item" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
-                            	<div class="carousel-caption-content">
+                                <div class="carousel-caption-content">
                                     <h2>lifestyle blog</h2>
                                     <p>Dating: LA's Best Inexpensive Spots For A First Date</p>
                                     <q>
                                         by
                                         <strong>Theresa Heim</strong>
                                     </q>
+                                </div>                                
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
                                 </div>
+                                <!-- /.blog-commnet -->
+                                
                             </div>
                         </div>
-                    </div>                                                     
+                    </div> 
+                    <div class="item" style="background-image:url(content/images/assets/Dollarphotoclub_71684155.jpg);">
+                        <div class="carousel-caption">
+                        	<div class="container">
+                                <div class="carousel-caption-content">
+                                    <h2>lifestyle blog</h2>
+                                    <p>Dating: LA's Best Inexpensive Spots For A First Date</p>
+                                    <q>
+                                        by
+                                        <strong>Theresa Heim</strong>
+                                    </q>
+                                </div>                                
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+                                
+                            </div>
+                        </div>
+                    </div>                                                    
                 </div>
                 
                 <!-- Indicators -->
@@ -222,11 +225,11 @@
             <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>                    
+                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-mobile" data-slide-to="1" class=""></li> 
                     <li data-target="#carousel-mobile" data-slide-to="2" class=""></li> 
                     <li data-target="#carousel-mobile" data-slide-to="3" class=""></li> 
-                    <li data-target="#carousel-mobile" data-slide-to="4" class=""></li> 
+                    <li data-target="#carousel-mobile" data-slide-to="4" class=""></li>  
                 </ol>
             
                 <!-- Wrapper for slides -->
@@ -240,9 +243,17 @@
                                     by
                                     <strong>Theresa Heim</strong>
                                 </q>
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+
                             </div>
                         </div>
-                    </div>  
+                    </div> 
                     <div class="item" style="background-image:url(content/images/assets/mobile/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
@@ -252,9 +263,17 @@
                                     by
                                     <strong>Theresa Heim</strong>
                                 </q>
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+
                             </div>
                         </div>
-                    </div>  
+                    </div>   
                     <div class="item" style="background-image:url(content/images/assets/mobile/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
@@ -264,9 +283,17 @@
                                     by
                                     <strong>Theresa Heim</strong>
                                 </q>
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+
                             </div>
                         </div>
-                    </div>  
+                    </div>   
                     <div class="item" style="background-image:url(content/images/assets/mobile/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
@@ -276,9 +303,17 @@
                                     by
                                     <strong>Theresa Heim</strong>
                                 </q>
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+
                             </div>
                         </div>
-                    </div>  
+                    </div>   
                     <div class="item" style="background-image:url(content/images/assets/mobile/Dollarphotoclub_71684155.jpg);">
                         <div class="carousel-caption">
                         	<div class="container">
@@ -288,9 +323,17 @@
                                     by
                                     <strong>Theresa Heim</strong>
                                 </q>
+                               	
+                                <!-- .blog-comment -->
+                                <div class="blog-commnet clearfix">
+                                    <div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
+                                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
+                                </div>
+                                <!-- /.blog-commnet -->
+
                             </div>
                         </div>
-                    </div>                                                      
+                    </div>                                                     
                 </div>
             
                 <!-- Controls -->
@@ -308,12 +351,6 @@
         <!-- InstanceBeginEditable name="content" -->
         <div class="main-content blog-page clearfix">
         	<div class="container">
-                <!-- .blog-comment -->
-                <div class="blog-commnet clearfix">
-                	<div class="blog-comment-total"><span class="icon-comment"></span> <span class="blog-comment-num">10</span></div>
-                    <div class="blog-comment-content">You want to choose a space that provides you and your date with an experience that will enable you to observe one another under... <a class="hidden-xs" title="" href="#">click to read more</a></div>                    
-                </div>
-                <!-- /.blog-commnet -->
             
                 <!-- .blog-category -->
                 <div class="blog-category">
@@ -367,6 +404,12 @@
                         <span class="blog-caption">Top 10 Ways to Relax This Summer</span>
                     </a>
                     <!-- /.blog-block -->  
+                    
+                    <!-- .blog-block -->
+                    <a title="" href="#" class="blog-block" style="background-image:url(content/images/assets/business_image.png);">
+                        <span class="blog-caption">Top 10 Ways to Relax This Summer</span>
+                    </a>
+                    <!-- /.blog-block -->
                     
                     <!-- .blog-block -->
                     <a title="" href="#" class="blog-block" style="background-image:url(content/images/assets/business_image.png);">

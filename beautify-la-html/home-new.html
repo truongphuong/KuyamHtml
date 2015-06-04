@@ -68,19 +68,27 @@
                     
                     <script type="text/javascript">
                         $(function(){
+							$( "#nav-account" ).css({top: $( "#site-header" ).height()});
+							
                             var temp = 0;
                             var widthScreen;
                             $( window ).resize(function() {
-                                widthScreen = $( window ).width();	
-                                if(widthScreen < 768){
-                                    $( "#site-header" ).animate({ "height": "100px" }, 500 ); 
+								widthScreen = $( window ).width();	
+								if(widthScreen < 335){
+                                    $( "#site-header" ).animate({ "height": "100px" }, 500 );
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }else if(widthScreen > 335 && widthScreen < 768){
+                                    $( "#site-header" ).animate({ "height": "50px" }, 500 );
                                     $( "#nav-account" ).hide();
                                     temp = 0;
                                 }else if(widthScreen > 768){
                                     $( "#site-header" ).animate({ "height": "160px" }, 500 );
                                     $( "#nav-account" ).hide();
                                     temp = 0;
-                                }				
+                                }	
+								
+								$( "#nav-account" ).css({top: $( "#site-header" ).height()});				
                             });							
                             
                             function showNavAccount(){
@@ -645,7 +653,7 @@
                                             <h3><a title="" href="#">what to eat before you exercise</a></h3> 
                                         </header>
                                         <p>Some people think that working out on an empty stomach can help you lose weight and achieve a slimmer, toner body. The thuth is...</p>
-                                        <q>by <strong>Theresa Heim</strong></q>
+                                        <q>by <a title="" href="#"><strong>Theresa Heim</strong></a></q>
                                     </div>
                                 </div> 
                                 <!-- /.article-block -->
@@ -664,7 +672,7 @@
                                             <h3><a title="" href="#">Dating: LA's best Inexpensive Spots for a First Date</a></h3> 
                                         </header>
                                         <p>You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...</p>
-                                        <q>by <strong>Melissa Chapnam</strong></q>
+                                        <q>by <a title="" href="#"><strong>Theresa Heim</strong></a></q>
                                     </div>
                                 </div> 
                                 <!-- /.article-block --> 

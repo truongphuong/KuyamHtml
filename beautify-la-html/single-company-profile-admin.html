@@ -69,19 +69,27 @@
                     
                     <script type="text/javascript">
                         $(function(){
+							$( "#nav-account" ).css({top: $( "#site-header" ).height()});
+							
                             var temp = 0;
                             var widthScreen;
-                            $( window ).resize(function() {
+                            $( window ).resize(function() {								
                                 widthScreen = $( window ).width();	
-                                if(widthScreen < 768){
+								if(widthScreen < 335){
                                     $( "#site-header" ).animate({ "height": "100px" }, 500 );
+                                    $( "#nav-account" ).hide();
+                                    temp = 0;
+                                }else if(widthScreen > 335 && widthScreen < 768){
+                                    $( "#site-header" ).animate({ "height": "50px" }, 500 );
                                     $( "#nav-account" ).hide();
                                     temp = 0;
                                 }else if(widthScreen > 768){
                                     $( "#site-header" ).animate({ "height": "160px" }, 500 );
                                     $( "#nav-account" ).hide();
                                     temp = 0;
-                                }				
+                                }	
+								
+								$( "#nav-account" ).css({top: $( "#site-header" ).height()});			
                             });							
                             
                             function showNavAccount(){
@@ -91,8 +99,7 @@
                                 }else{
                                     $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
                                     temp = 0;
-                                }
-                                                    
+                                }                     
                                 $( "#nav-account" ).toggle('blind', 500);
                             }
                             
