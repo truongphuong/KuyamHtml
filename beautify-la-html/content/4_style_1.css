@@ -1738,9 +1738,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .blog-category-select .bootstrap-select.btn-group .btn .caret{width:23px;height:13px;background:url(images/assets/icon_dropdown.png) center center no-repeat;border:0 none;margin-top:-5px;}
 
 .blog-list{padding:0 21px;}
-.blog-block{float:left;width:289px;height:289px;position:relative;margin:0 10px 10px 0;background:center center no-repeat;background-size:cover;}
+.blog-block{float:left;width:289px;position:relative;margin:0 10px 10px 0;background:center center no-repeat;background-size:cover;}
 .blog-block:nth-child(3n){margin:0 0 10px;}
-.blog-caption{height:68px;padding:10px;position:absolute;right:0;bottom:0;left:0;color:#ffffff;background:rgba(0, 0, 0, 0.5);font:20px/24px ralewaybold, sans-serif;}
+.blog-caption{min-height:68px;padding:10px;position:absolute;right:0;bottom:0;left:0;color:#ffffff;background:rgba(0, 0, 0, 0.5);font:20px/24px ralewaybold, sans-serif;}
 
 .blog-commnet{position:absolute;bottom:-131px;left:0;right:0;padding:21px;border-top:5px solid #B5BFBE;-webkit-box-shadow:0 0 5px 0 #B5BFBE;-moz-box-shadow:0 0 5px 0 #B5BFBE;box-shadow:0 0 5px 0 #B5BFBE;margin-bottom:10px;font-size:18px;line-height:22px;color:#000;text-shadow:none;}
 .blog-comment-content{padding-right:161px;}
@@ -1773,6 +1773,30 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 
 .blogger-footer .section-header{margin:0 0 20px;}
 .blogger-footer .section-header h3{font-size:26px;line-height:30px;color:#333;}
+
+.blog-details-section{padding:0 21px;}
+
+.blog-frame{float:right;margin:0 0 10px 10px;width: 485px;height:277px;background:center center no-repeat;background-size:cover;position:relative;}
+.blog-frame-caption{padding:10px;position:absolute;right:0;bottom:0;left:0;color:#ffffff;background:#000000;color:#ffffff;font-family:ralewaybold,sans-serif;}
+
+.blog-details-info{font-size:16px;line-height:20px;}
+.blog-details-info h1{font-family:ralewaybold,sans-serif;}
+.blog-details-info p{margin:0 0 15px;}
+.blog-details-info em{font-weight:normal;color:#29abe2;font-style:normal;}
+.blog-details-info time{}
+
+.blog-details-section .blog-list{padding:0;}
+.blog-details-section .blog-block{width:24%;margin-right:1%;}
+.blog-details-section .blog-block:last-child{margin-right:0;}
+
+.tags-list{float:right;width:50%;margin:0 0 0 10px;color:#f3472d;font:16px/20px ralewaymedium,sans-serif;text-align:right;}
+.tags-list .icon-tags{display:inline-block;width:23px;height:23px;background:url(images/assets/tags.png) center center no-repeat;position:relative;bottom:-5px;margin-right:5px;}
+.tags-list a{color:#f3472d;}
+
+.blog-footer .section-header{margin:20px 0;}
+.blog-footer .section-header h3{font-size:26px;line-height:30px;color:#333;}
+.blog-footer .social-icons{float:left;text-align:left;margin:0;}
+.blog-footer .social-icons dd img{width:30px;}
 
 @media (max-width:991px){
 	.div-zip{margin-top:20px;}
@@ -1981,6 +2005,16 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.available-section .item .controls .btn-edit{float:none;margin-bottom:0;}
 	
 	.settings-page .txt-l{width:100%;}
+	
+	.blog-details-section .blog-block{width:49%;margin-right:0;}
+	.blog-details-section .blog-block:first-child,
+	.blog-details-section .blog-block:nth-child(3n){margin-right:2%;}
+	
+	.tags-list{width:100%;float:none;text-align:left;margin-bottom:20px;}
+	
+	.blog-frame{width:100%;}
+	
+	.blog-footer .social-icons{float:none;text-align:center;}
 }
 @media (max-width:968px){
 	.modal-offer{width:95%;}
@@ -2388,7 +2422,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.blog-comment-total .blog-comment-num{top:inherit;}
 	
 	.blog-category,
-	.blogger-section{padding:0;}
+	.blogger-section,
+	.blog-details-section{padding:0;}
 	
 	.blog-block{width:100%;margin:0 0 20px !important;}
 	
@@ -2399,6 +2434,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.blogger-info .social-icons{}
 	.blogger-info .social-icons dt{display:block;padding-bottom:10px;font-size:16px;}
 	.blogger-footer .section-header h3{font-size:22px;line-height:26px;}
+	
+	.blog-details-section .blog-block{width:100%;}
 }
 @media (max-width:640px){.group_link a{width:23.8%;}
 	.group-rsvp{width:98%;padding-right:24.8%;margin-left:0.5%;}
