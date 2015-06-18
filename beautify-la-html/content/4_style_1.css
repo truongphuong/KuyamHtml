@@ -249,14 +249,17 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 
 .navbar-collapse{background:#2a2a2a;}
 .navbar-collapse .navbar-nav.navbar-right:last-child{margin-right:-25px;}
-.navbar-collapse .navbar-nav{margin:-10px 0 0;padding-bottom:21px;}
+.navbar-collapse .navbar-nav{padding-bottom:20px;}
 .navbar-collapse .navbar-nav li{vertical-align:top;padding:0 10px;}
-.navbar-collapse .navbar-nav > li > a{position:relative;display:block;color:#ffffff;font:14px/18px ralewaymedium, sans-serif;color:#ffffff;text-decoration:none;margin:0;padding:0 2px;}
+.navbar-collapse .navbar-nav > li > a{position:relative;display:inline-block;color:#ffffff;font:14px/18px ralewaymedium, sans-serif;color:#ffffff;text-decoration:none;margin:0;padding:0 2px;}
 .navbar-collapse .navbar-nav > li > a:hover{color:#f3472d;background:transparent;}
 .navbar-collapse .navbar-nav > li > a:focus,
 .navbar-collapse .navbar-nav > li > a:visited{color:#ffffff;background:transparent;}
 .navbar-collapse .navbar-nav li.active a{color:#f3472d;}
 .navbar-collapse .navbar-nav li.active span{display:block;height:7px;background:#f3472d;position:absolute;left:0;right:0;bottom:-21px;}
+
+.welcome-user,
+.welcome-user:hover{float:right;display:inline-block;padding:9px 10px;line-height:32px;color:#fff;text-decoration:none;}
 
 .detech-devices .navbar-toggle{display:block;float:right;}
 
@@ -1312,17 +1315,17 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .event-block .progress{border:2px solid #F3472D;height:24px;margin:-3px 6px 6px 0;}
 .event-block .progress-bar{line-height:22px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 
-.nav-main{margin:9px -15px;}
+.nav-main{margin:9px -15px 0;}
 .nav-main li{padding:0 10px;}
 .nav-main li img{margin-top:-20px;width:auto;}
 .nav-main > li > a,
 .nav-main > li > a:hover,
 .nav-main > li > a:focus, 
-.nav-main > li > a:visited{background:transparent;color:#fff;display:block;font-size:14px;line-height:18px;position:relative;padding:0 2px;margin:0;}
+.nav-main > li > a:visited{background:transparent;color:#fff;display:inline-block;font-size:14px;line-height:18px;position:relative;padding:0 2px;margin:0;}
 
 .link-account-user span{display:inline-block;width:24px;height:19px;background:center center no-repeat;}
-.link-account-user .icon-user{background-image:url(images/assets/icon_user.png);margin:0 10px -3px 0;background-size:contain;}
-.link-account-user .icon-down{background-image:url(images/assets/icon_dashboard_dropdown.png);margin:0 -10px -3px 10px;}
+.link-account-user .icon-user{background-image:url(images/assets/icon_user.png);margin:0 10px 0 0;background-size:contain;position:relative;bottom:-3px;}
+.link-account-user .icon-down{background-image:url(images/assets/icon_dashboard_dropdown.png);margin:0 -10px 0 10px;position:relative;bottom:-3px;}
 
 .nav-account{display:none;background:#2a2a2a;border-top:1px solid #979797;border-top:1px solid #979797;position:absolute;top:160px;left:0;right:0;}
 .nav-account dt{color:#fff;font-size:14px;line-height:18px;}
@@ -2098,7 +2101,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.navbar-collapse .navbar-nav.navbar-right:last-child{margin:0 -15px;}
 	.navbar-collapse .navbar-nav{padding:16px 14px 8px 0;margin:0 -15px;float:none;}	
 	.navbar-collapse .navbar-nav li{float:left;width:50%;margin:0 0 15px;}
-	.navbar-collapse .navbar-nav li a{margin:0 0 0 14px;padding:12px;background:#333333;border:1px solid #ffffff;text-align:center;}
+	.navbar-collapse .navbar-nav li a{display:block;margin:0 0 0 14px;padding:12px;background:#333333;border:1px solid #ffffff;text-align:center;}
+	.navbar-collapse .navbar-nav li.link-help{float:none;width:100%;clear:both;}
+	.navbar-collapse .navbar-nav li.link-help a,
+	.navbar-collapse .navbar-nav li.link-help a:hover{border:0;background:transparent;text-align:left;}
+	.nav-main li img{margin-top:0;}
 	.navbar-collapse .navbar-nav li a:hover{background:#cccccc;border:1px solid #cccccc;}
 	.navbar-collapse .navbar-nav li a.bg-green,
 	.navbar-collapse .navbar-nav li a.bg-green:hover{background:#97BC47;color:#ffffff;border:1px solid #97BC47;}

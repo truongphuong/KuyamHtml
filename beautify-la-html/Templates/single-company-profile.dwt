@@ -49,6 +49,13 @@
                     <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
                     <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
                 </a>
+                <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="welcome-user visible-xs">hi, kourosh!</span>
                 <dl class="social-icons hidden-xs on-desktop clearfix">
                     <dt>share this event on...</dt>
                     <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
@@ -59,37 +66,22 @@
                 <div class="clear hidden-xs"></div>
                 
                 <!-- .navbar-collapse --> 
-                <div>
+                <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right nav-main">
-                        <li><a href="javascript:void(0);"><img alt="" src="../content/images/assets/image_help.png" /></a></li>
+                    	<li class="visible-xs"><a href="#" title="">sign out</a></li>
+                        <li class="link-help"><a href="javascript:void(0);"><img alt="" src="../content/images/assets/image_help.png" /></a></li>
                         <li>
                             <a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a>                    
                         </li>
                     </ul>
                     
                     <script type="text/javascript">
-                        $(function(){
-							$( "#nav-account" ).css({top: $( "#site-header" ).height()});
-							
+                        $(function(){							
                             var temp = 0;
-                            var widthScreen;
-                            $( window ).resize(function() {								
-                                widthScreen = $( window ).width();	
-								if(widthScreen < 335){
-                                    $( "#site-header" ).animate({ "height": "100px" }, 500 );
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }else if(widthScreen > 335 && widthScreen < 768){
-                                    $( "#site-header" ).animate({ "height": "50px" }, 500 );
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }else if(widthScreen > 768){
-                                    $( "#site-header" ).animate({ "height": "160px" }, 500 );
-                                    $( "#nav-account" ).hide();
-                                    temp = 0;
-                                }	
-								
-								$( "#nav-account" ).css({top: $( "#site-header" ).height()});			
+                            $( window ).resize(function() {
+								$( "#site-header" ).css({ "height": "" });	
+								$( "#nav-account" ).hide();	
+								temp = 0;	
                             });							
                             
                             function showNavAccount(){
@@ -99,7 +91,8 @@
                                 }else{
                                     $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
                                     temp = 0;
-                                }                     
+                                }
+                                $( "#nav-account" ).css({top: $( "#site-header" ).height()});                    
                                 $( "#nav-account" ).toggle('blind', 500);
                             }
                             
