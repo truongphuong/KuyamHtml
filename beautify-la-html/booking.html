@@ -1,0 +1,1043 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/4_master_1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="ScreenOrientation" content="autoRotate:enabled" /> 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Beautify LA - Booking</title>
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- InstanceEndEditable -->
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />
+
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
+
+<!-- countdown CSS -->
+<link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="content/4_style_1.css" /> 
+<link rel="stylesheet" type="text/css" href="content/book.css" />  
+
+<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
+
+<!-- === SCRIPTS === -->  
+<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>    	
+<script type="text/javascript" src="scripts/bootstrap.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/jquery.plugin.js"></script>
+<script type="text/javascript" src="scripts/jquery.countdown.js"></script>
+<!-- === END SCRIPTS === --> 
+</head>
+<body>
+	<div id="detech-devices">
+        <div id="site-header" class="site-header bg-black"> 
+            <div class="container">             	
+                <a class="logo" href="home.html" title="">
+                    <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
+                    <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
+                </a>
+                <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="welcome-user visible-xs">hi, kourosh!</span>
+                <dl class="social-icons hidden-xs on-desktop clearfix">
+                    <dt>join the community</dt>
+                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
+                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
+                    <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
+                    <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
+                    <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
+                </dl> 
+                <div class="clear"></div>
+                
+                <!-- .navbar-collapse --> 
+                 <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right nav-main"> 
+                    	<li><a href="lifestyle-blog.html" title="">lifestyle blog<span class="on-desktop hidden-xs"></span></a></li>
+                        <li class="visible-xs"><a href="#" title="">sign out</a></li> 
+                        <li class="link-help"><a href="javascript:void(0);"><img alt="" src="content/images/assets/image_help.png" /></a></li>
+                        <li class="hidden-xs"><a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a></li>                         
+                    </ul>
+                    
+                    <script type="text/javascript">
+                        $(function(){							
+                            var temp = 0;
+                            $( window ).resize(function() {
+								$( "#site-header" ).css({ "height": "" });	
+								$( "#nav-account" ).hide();	
+								temp = 0;	
+                            });							
+                            
+                            function showNavAccount(){
+                                if(temp == 0){														
+                                    $( "#site-header" ).animate({ "height": "+=40px" }, 500 );
+                                    temp = 1;
+                                }else{
+                                    $( "#site-header" ).animate({ "height": "-=40px" }, 500 );
+                                    temp = 0;
+                                }
+                                $( "#nav-account" ).css({top: $( "#site-header" ).height()});                    
+                                $( "#nav-account" ).toggle('blind', 500);
+                            }
+                            
+                            $( ".link-account" ).click(function(){	
+                                showNavAccount();
+                            });
+                        });
+                    </script>
+                    <div id="nav-account" class="nav-account"> 
+                        <dl class="container clearfix">
+                            <dt class="text-right"><a href="#" title="sign out" class="link-sign-out">sign out</a></dt>                            
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse --> 
+                <!-- InstanceBeginEditable name="form" -->
+                        <!-- InstanceEndEditable --> 
+            </div>            
+        </div>          
+        <!-- InstanceBeginEditable name="banner" -->  
+    <div class="relative">
+        <!-- slide-feature -->
+        <div class="slide-feature hidden-xs">
+            <div id="carousel-desktop" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>                    
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image:url(content/images/assets/slide_nails.jpg);">
+                        <div class="carousel-caption"></div>
+                    </div>                                                      
+                </div>
+            
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-desktop" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-desktop" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+     	</div>
+        <!-- /slide-feature -->
+        
+        <!-- slide-feature -->
+        <div class="slide-feature visible-xs">
+            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>                    
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image:url(content/images/assets/mobile/slide_nails.jpg);">
+                        <div class="carousel-caption"></div>
+                    </div>                                                      
+                </div>
+            
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-mobile" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-mobile" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+        <!-- /slide-feature -->        
+            
+        <div class="relative">
+        	<!-- register-form -->
+        	<div class="register-section bg-black-50">        	 
+            	<div class="container"> 
+                    <header class="section-header">
+                    	<div class="skip-section on-device">
+                        	<a title="" href="#">skip <span class="icon-skip"></span></a>
+                        </div>
+                        <h2>the best new beauty/fitness events in Los Angeles</h2>
+                        <p><span>sign up for insider updates!</span></p>
+                    </header>
+                    <fieldset class="register-form clearfix">                    	
+                        <div class="form-group">
+                            <div class="input-group">
+                           		<input type="text" class="form-control txt_Email" onblur="if (this.value == '') { this.value = 'enter your email'; }" onfocus="if (this.value == 'enter your email') { this.value = ''; }" value="enter your email" />
+                              	<input type="button" class="input-group-addon btn_Join" value="sign up" data-toggle="modal" data-target="#modal-notify" />
+                            </div>
+                      	</div>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- /register-form -->
+        </div>        
+        
+    </div>      
+	<!-- InstanceEndEditable -->      
+        <!-- InstanceBeginEditable name="content" -->                       
+                        
+    <!-- .main-content -->
+    <div class="main-content book-details-page single-company-profile-page book-page clearfix"> 
+    	<div class="container">
+        	<div class="row">
+                <div class="col-xs-12 col-sm-8"> 
+                
+                    <!-- #main-affix -->                            
+                    <div id="main-affix">
+                        <div class="affix-content event-section"> 
+                            <div class="book-tab">
+                                <header class="section-header section-header-pink">
+                                    <h2>choose an offer</h2>
+                                    <p class="visible-xs">event date - sept 26th - 30th</p>
+                                </header>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><img class="img-active" alt="" src="content/images/assets/icon_circle1_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle1_white.png" /><span class="offer">50% off</span> shampoo with blowout <span class="icon-down"></span> </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <div class="panel-info">
+                                                	<div class="table-css price-info">
+                                                    	<div class="table-row regular-price-row">
+                                                        	<div class="table-cell">
+                                                            	regular price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$100.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row new-price-row">
+                                                        	<div class="table-cell">
+                                                            	new price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$90.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row savings-row">
+                                                        	<div class="table-cell">
+                                                            	savings
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	10%
+                                                        	</div>
+                                                        </div>
+                                                    </div>
+                                                    <input data-target="#modal-confirm" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
+                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                </div>
+                                                <div class="panel-description">
+                                                    <h3>description</h3>
+                                                    <p>this is where the description goes</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed"><img class="img-active" alt="" src="content/images/assets/icon_circle2_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle2_white.png" /><span class="offer">50% off</span> manicure/pedicure <span class="icon-down"></span> </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                            	<div class="panel-info">
+                                                	<div class="table-css price-info">
+                                                    	<div class="table-row regular-price-row">
+                                                        	<div class="table-cell">
+                                                            	regular price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$100.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row new-price-row">
+                                                        	<div class="table-cell">
+                                                            	new price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$90.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row savings-row">
+                                                        	<div class="table-cell">
+                                                            	savings
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	10%
+                                                        	</div>
+                                                        </div>
+                                                    </div>
+                                                    <input type="button" value="purchase offer" class="btn btn-orange" />
+                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                </div>
+                                                <div class="panel-description">
+                                                    <h3>description</h3>
+                                                    <p>this is where the description goes</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><img class="img-active" alt="" src="content/images/assets/icon_circle3_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle3_white.png" /><span class="offer">60 min</span> beautify tips <span class="icon-down"></span> </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                            	<div class="panel-info">
+                                                	<div class="table-css price-info">
+                                                    	<div class="table-row regular-price-row">
+                                                        	<div class="table-cell">
+                                                            	regular price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$100.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row new-price-row">
+                                                        	<div class="table-cell">
+                                                            	new price
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	$90.00
+                                                        	</div>
+                                                        </div>
+                                                        <div class="table-row savings-row">
+                                                        	<div class="table-cell">
+                                                            	savings
+                                                        	</div>
+                                                            <div class="table-cell">
+                                                            	10%
+                                                        	</div>
+                                                        </div>
+                                                    </div>
+                                                    <input type="button" value="purchase offer" class="btn btn-orange" />
+                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                </div>
+                                                <h2>select a class time below to purchase</h2>
+                                                <!-- calendar -->
+                                                <div class="site-calendar clearfix">
+                                                    
+                                                    <!-- .slide-calendar -->
+                                                    <div class="slide-calendar hidden-xs">
+                                                        <a href="#" class="rslides_nav rslides1_nav prev">last 4 days</a>
+                                                        <a href="#" class="rslides_nav rslides1_nav next">next 4 days</a>
+                                                        
+                                                        <!-- .table-calendar -->
+                                                        <span class="table-css table-calendar">
+                                                        
+                                                            <!-- .table-calendar-header -->
+                                                            <span class="table-row table-calendar-header">
+                                                                <span class="table-cell">
+                                                                    <span class="day">Today</span>
+                                                                    <span class="datetime">Sep 1, 2014</span>
+                                                                </span>
+                                                                <span class="table-cell">
+                                                                    <span class="day">Tuesday</span>
+                                                                    <span class="datetime">Sep 2, 2014</span>
+                                                                </span>
+                                                                <span class="table-cell">
+                                                                    <span class="day">Wednesday</span>
+                                                                    <span class="datetime">Sep 3, 2014</span>
+                                                                </span>
+                                                                <span class="table-cell">
+                                                                    <span class="day">Thursday</span>
+                                                                    <span class="datetime">Sep 4, 2014</span>
+                                                                </span>
+                                                            </span>
+                                                            <!-- /.table-calendar-header -->
+                                                            
+                                                            <!-- /.table-calendar-body -->
+                                                            <span class="table-row table-calendar-body">
+                                                            
+                                                                <!-- .table-cell -->
+                                                                <span class="table-cell">
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- /.table-cell -->
+                                                                
+                                                                <!-- .table-cell -->
+                                                                <span class="table-cell">
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- /.table-cell -->
+                                                                
+                                                                <!-- .table-cell -->
+                                                                <span class="table-cell">
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>				
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- /.table-cell -->
+                                                                
+                                                                <!-- .table-cell -->
+                                                                <span class="table-cell">
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>				
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="session">
+                                                                        <span class="session-item session-class">
+                                                                            <span class="session-time">9:30am <br>George E. Spin</span>
+                                                                            <a href="#" title="" class="btn-orange btn-book">puchase</a>
+                                                                        </span>
+                                                                    </span>
+                                                                </span>
+                                                                <!-- /.table-cell -->	                      
+                                                                                                              
+                                                            </span>
+                                                            <!-- /.table-calendar-body -->
+                                                            
+                                                        </span>
+                                                        <!-- /.table-calendar -->
+                                                        
+                                                    </div>
+                                                    <!-- /.slide-calendar -->  
+                                                    
+                                                    <script type="text/javascript">		
+                                                        $(document).ready(function(){
+                                                            $('.session-item').hover(function(){
+                                                                $(this).addClass("active");
+                                                            }, function(){
+                                                                $(this).removeClass("active");
+                                                            })								
+                                                        });
+                                                    </script>                          
+                                                                              
+                                                    <!-- .slide-calendar -->
+                                                    <div class="slide-calendar-mobile hidden-sm hidden-md hidden-lg">
+                                                        <a href="#" class="rslides_nav rslides2_nav prev"></a>
+                                                        <a href="#" class="rslides_nav rslides2_nav next"></a>
+                                                        <div class="table-css table-calendar-header">
+                                                            <div class="table-row">
+                                                                <span class="table-cell calendar-item active">
+                                                                    <span class="day">Today</span>
+                                                                    <span class="datetime">Sep 1, 2014</span>
+                                                                </span>
+                                                                <span class="table-cell calendar-item">
+                                                                    <span class="day">Tue</span>
+                                                                    <span class="datetime">Sep 2, 2014</span>
+                                                                </span>
+                                                                <span class="table-cell calendar-item">
+                                                                    <span class="day">Wed</span>
+                                                                    <span class="datetime">Sep 3, 2014</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>                                                            
+                                                        <div class="table-css calendar-item-info class-item-info">
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="table-css calendar-item-info class-item-info">
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                            <div class="table-row">
+                                                                <div class="table-cell col-time">9:30 am <span>George E.<br> spin class</span></div>
+                                                                <div class="table-cell col-controls"><a class="btn-orange btn-book" href="#" title="">puchase</a></div>
+                                                            </div>
+                                                        </div>                                
+                                                        
+                                                    </div>
+                                                    <!-- .slide-calendar -->
+                                                    
+                                                </div>
+                                                <!-- /calendar -->
+                                                
+                                                <div class="panel-description">
+                                                    <h3>description</h3>
+                                                    <p>this is where the description goes</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        	</div>
+                               
+                        </div>
+                    </div> 
+                    <!-- /#main-affix -->
+                    
+                </div>
+                <div class="col-xs-12 col-sm-4">  
+                
+                    <!-- #nav-affix -->                             
+                    <div id="nav-affix">
+                        <div class="affix-content">
+                        	<div class="happen-date hidden-xs">
+                                <header class="section-header">
+                                    <h2>Oct. 2nd</h2>                                    
+                                </header>
+                            </div>
+                            <dl class="social-icons clearfix">
+                                <dt>follow this business on</dt>
+                                <dd>
+                                    <img alt="" src="content/images/assets/icons_social/Twitter_default.png">
+                                </dd>
+                                <dd>
+                                    <img alt="" src="content/images/assets/icons_social/Facebook_default.png">
+                                </dd>
+                                <dd>
+                                    <img alt="" src="content/images/assets/icons_social/Google_Plus_default.png">
+                                </dd>
+                                <dd>
+                                    <img alt="" src="content/images/assets/icons_social/Pinterest_default.png">
+                                </dd>
+                                <dd>
+                                    <img alt="" src="content/images/assets/icons_social/Instagram_default.png">
+                                </dd>
+                            </dl>
+                        
+                            <!-- .social_twitter -->
+                            <div class="social_twitter on-desktop">
+    							<a class="twitter-timeline" href="https://twitter.com/search?q=%40beautifyla+OR+%23beautifyla" data-widget-id="516673367047282688">Tweets about "@beautifyla OR #beautifyla"</a>
+
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </div>
+                            <!-- /.social_twitter -->
+                            
+                            <!-- .partners -->
+                            <div class="row partners partners-logo on-desktop">
+                            	<div class="col-xs-12">
+                                    <header class="section-header">
+                                         <h3>partners</h3>
+                                    </header>
+                                </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://kevita.com/" title="">
+                                        <img src="content/images/assets/partner_logos/kevita.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://www.lacolors.com/" title="">
+                                        <img src="content/images/assets/partner_logos/LA_Colors.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://www.youtheory.com/" title="">
+                                        <img src="content/images/assets/partner_logos/youtheory.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://zico.com" title="">
+                                        <img src="content/images/assets/partner_logos/ZICO.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- /.partners -->
+                            
+                            <!-- .partners -->
+                            <div class="row partners">
+                            	<div class="col-xs-12">
+                                    <header class="section-header">
+                                         <h3>media partners</h3>
+                                    </header>
+                                </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://findbliss.com/" title="">
+                                        <img src="content/images/assets/partner_logos/sponsor_findbliss.gif" alt="" />
+                                    </a>
+                                </div>       
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://www.lamag.com/" title="">
+                                        <img src="content/images/assets/partner_logos/LAMagLogo_Black.jpg" alt="" />
+                                    </a>
+                                </div>    
+                                <div class="clear"></div> 
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://la-confidential-magazine.com/" title="">
+                                        <img src="content/images/assets/partner_logos/LA_Confidential.jpg" alt="" />
+                                    </a>
+                                </div>                      
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://layoga.com/" title="">
+                                        <img src="content/images/assets/partner_logos/sponsor_layoga.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- /.partners -->
+                            
+                            <!-- .partners -->
+                            <div class="row partners">
+                            	<div class="col-xs-12">
+                                    <header class="section-header">
+                                         <h3>non-profit partners</h3>
+                                    </header>
+                                </div>
+                                <div class="col-xs-6 col-md-12">
+                                    <a target="_blank" class="partner-item" href="http://www.venicefamilyclinic.org/" title="">
+                                        <img src="content/images/assets/partner_logos/sponsor_venice_family_clinic.png" alt="" />
+                                    </a>
+                                </div> 
+                            </div>
+                            <!-- /.partners -->
+                            
+                        </div>
+                    </div>                                 
+                    <!-- /#nav-affix -->     
+                                               
+                </div>
+			</div>
+    	</div>
+    </div>
+    <!-- /.main-content --> 
+    <!-- .modal-rsvp -->    
+    <div class="modal fade" id="modal-confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <header class="section-header">
+                        <img alt="" src="content/images/assets/icon_check_2.png" />
+                        <h2>booking confirmed!</h2>                        
+                    </header>
+                    <p>we'll be sending you an email with confirmation of purchase.</p>
+                    <div class="booking-details">
+                    	<h3>Amy's Hair Salon</h3>
+                        <p>beauty tips with Laura<br /> Tuesday Sept, 26th at 10:00am<br /> 60min</p>
+                    </div>
+                    
+                    <div class="confirm-body">
+                        <!-- .ticket-calendar -->
+                        <div class="ticket-calendar">
+                            <div class="ticket-back">
+                                <h4>share this event</h4>
+                            </div>
+                            <ul class="link-share clearfix"> 
+                                <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                                <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                                <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Email_share.png" /></a></li>
+                                <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Share_link.png" /></a></li>
+                            </ul>   
+                            <div class="ticket-back">
+                                <h4>add to my...</h4>
+                            </div>
+                            <div class="ticket-method ticket-method-calendar">
+                               <a title="" href="#" class="btn-dark-green btn-method1 btn-google-calendar">Google calendar</a>
+                            </div>
+                            <div class="ticket-method ticket-method-calendar">
+                                <a title="" href="#" class="btn-brown btn-method1 btn-apple-calendar">Apple calendar</a>
+                            </div>
+                            <div class="ticket-method ticket-method-calendar">
+                                <a title="" href="#" class="btn-light-blue btn-method1 btn-facebook-calendar">Facebook calendar</a>
+                            </div>                                
+                        </div>
+                        <!-- /.ticket-calendar -->
+                        
+                        <div class="text-center">
+                            <input class="btn-orange btn-timer" type="button" value="done" data-dismiss="modal" />
+                        </div>
+                    </div>
+                              
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- /.modal-rsvp -->  
+                        <!-- InstanceEndEditable --> 
+       <!-- .site-contact -->
+        <section id="contact" class="site-contact"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4"> 
+                        <header class="section-header clearfix">
+                            <a class="logo" title="" href="#">
+                                <img class="hidden-xs" alt="" src="content/images/assets/bla-logo_registered_trademark_footer.png" />
+                                <img class="visible-xs" alt="" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_footer.png" />
+                            </a>               
+                        </header>
+                        <div class="site-address">
+                            <ul>
+                                <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
+                                <li class="icon-phone">(310) 461-1515</li>
+                                <li class="icon-email"><a title="" href="mailto:info@Beautify-LA.com">info@Beautify-LA.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4"> 
+                        <header class="section-header">
+                            <h4>about Beautify LA</h4>                        
+                        </header>
+                        <p>Beautify LA started as an effort to bring the local community together. our goal is to help develop long lasting relationships between consumers and local businesses, large and small, by offering exclusive offers and unique experiences at thousands of locations.</p> 
+                        <p><a class="color-white" title="" href="https://kuyam.com/">powered by kuyam.com!</a></p>
+                    </div>
+                    <div class="col-xs-12 col-md-4">        
+                        <header class="section-header on-desktop">
+                            <h4>sign up for insider info!</h4>      
+                        </header>                
+                        <fieldset class="register-form clearfix">                    	
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control txt_Email" onblur="if (this.value == '') { this.value = 'enter your email'; }" onfocus="if (this.value == 'enter your email') { this.value = ''; }" value="enter your email" />
+                                    <input type="button" class="input-group-addon btn_Join" value="sign up" data-toggle="modal" data-target="#modal-notify" />
+                                </div>
+                            </div>
+                            <a title="" href="#" class="btn-blue btn-facebook">sign up with Facebook</a>
+                        </fieldset>  
+                        <ul class="link-socials visible-xs clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/beautifyla" title=""><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/BeautifyLA" title=""><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts" title=""><img alt="Google Plus" src="content/images/assets/icons_social/Google_Plus.png" /></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title=""><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg" title=""><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></li>
+                        </ul>                  
+                    </div>            
+                </div>
+            </div>
+        </section>
+        <!-- /.site-contact -->
+        
+        <footer class="site-footer">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">  	
+                        <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
+                    </div>
+                    <div class="col-md-4 hidden-xs">
+                        <ul class="link-socials clearfix"> 
+                            <li><a target="_blank" href="https://twitter.com/beautifyla" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/BeautifyLA" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                            <li><a target="_blank" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts" title=""><img alt="Google Plus" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></li>
+                            <li><a target="_blank" href="http://pinterest.com/kuyam/" title=""><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg" title=""><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </footer>
+    </div>
+    
+    <div class="loading"></div>
+    <div class="light-box"></div> 
+    
+    <!-- .modal-notify -->    
+    <div class="modal fade" id="modal-notify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-notify">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h3 class="modal-title">your sign up for<br /> Beautify LA: Montana Ave</h3>
+                    <h4>check your mail you'll get notified of any<br class="hidden-xs" /> updates about this upcoming event.</h4>
+      			</div>
+                <div class="modal-body">
+                    <dl class="social-icons clearfix">
+                        <dt>share this event to my:</dt>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></dd>
+                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></dd>
+                    </dl>               
+                </div>
+                <div class="modal-footer">                	
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-notify --> 
+    
+    <!-- .modal-alert -->    
+    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-alert">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+      			</div>
+                <div class="modal-body">
+                	<p>message</p>                                   
+                </div>
+                <div class="modal-footer">                	
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-alert --> 
+    
+    <!-- .modal-ticket -->    
+    <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-ticket">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h4 class="modal-title">exclusive experience!<br /><span>buy tickets!</span></h4>
+      			</div>
+                <div class="modal-body">
+                
+                    <!-- .checkout-title -->
+                    <div class="ticket-title">
+                        <h3>get tickets to the exclusive experience!</h3>
+                        <p>explore local businesses on Montana Avenue on October 2nd! for only 15$ a ticket, drink wine, eat great food and more at the kickoff event. 1$ of each ticket purchased will be donated to the Boys &amp; Girls Club of Santa Monica!</p>
+                    </div>
+                    <!-- /.checkout-title -->
+                    
+                    <!-- .ticket-info -->
+                    <div class="ticket-info">
+                        <div class="checkout-row">
+                            <h4>enjoy a free:</h4>
+                            <ul>
+                            	<li>ZICO Coconut Water</li>
+                                <li>Kogi Taco Plate &amp; Beverage</li>
+                                <li>Glass of Wine</li>
+                                <li>Exclusive Beautify LA Gift Box</li>
+                            </ul>
+                        </div>
+                	</div>
+                    <!-- /.ticket-info -->
+                    
+                    <fieldset class="ticket-form">
+                    	<header class="section-header on-desktop">
+                        	<h2>purchase tickets!</h2>
+                            <p>please fill out the require info below</p>
+                        </header>
+                        <div class="row">
+                        	<div class="col-xs-6 col-sm-4"><label for="selectNumber"># of tickets <span class="ticket-deal visible-xs">$15 per ticket</span></label></div>
+                            <div class="col-xs-6 col-sm-8 ticket-select"><select id="select-number" class="selectpicker select-number"><option>1</option></select> <span class="ticket-deal hidden-xs">$15 per ticket</span></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtFirstName">first name <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtFirstName" type="text" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtLastName">last name <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtLastName" type="text" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-4"><label for="txtEmail">email address <span class="error">*</span></label></div>
+                            <div class="col-xs-12 col-sm-8"><input id="txtEmail" type="email" class="form-control" /></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                            	<div class="ticket-price">
+                                	<div class="table-css">
+                                        <div class="table-row">
+                                            <div class="table-cell price-details">
+                                            	<p>total due:</p>
+                                            </div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell price-details">
+                                            	<h3>$75.00</h3>
+                                            </div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-method">
+                                    <span class="icon-method icon-credit"></span>
+                                    <input class="btn-blue btn-method btn-credit" type="button" data-target="#modal-thanks" data-toggle="modal" value="PayPal or credit card">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+            	</div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-ticket -->
+    
+    <script type="text/javascript">
+		$(document).ready(function(){	
+			$('#select-number').selectpicker();
+		});
+	</script>
+    
+    <!-- .modal-thanks -->    
+    <div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-ticket modal-thanks">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h4 class="modal-title">your order has been recieved!<br /><span>thank you!</span></h4>
+      			</div>
+                <div class="modal-body">
+                
+                    <!-- .checkout-title -->
+                    <div class="ticket-title">
+                        <h3>your've succesfully purchased tickets to:</h3>
+                        <p>
+                        	Beautify LA: Montana Ave<br />
+                            Thurs, Oct. 2nd<br />
+                            Montana Ave 1401-1355<br />
+                            3 tickets purchased
+                        </p>
+                    </div>
+                    <!-- /.checkout-title -->
+                    
+                    <!-- .checkout-info -->
+                    <div class="ticket-info">
+                        <div class="checkout-row">
+                            <h4>your tickets have been sent to...</h4>
+                            <p>kourosh@kuyam.com</p>
+                        </div>
+                	</div>
+                    <!-- /.checkout-info -->
+                    
+                    <div class="row">
+	                    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+                    
+                            <!-- .ticket-calendar -->
+                            <div class="ticket-calendar">
+                                <div class="ticket-back">
+                                    add this appointment to my...
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                   <input class="btn-dark-green btn-method btn-google-calendar" type="button" value="google calendar" />
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                    <input class="btn-brown btn-method btn-apple-calendar" type="button" value="apple calendar" />
+                                </div>
+                                <div class="ticket-method ticket-method-calendar">
+                                    <input class="btn-light-blue btn-method btn-facebook-calendar" type="button" value="facebook calendar" />
+                                </div>
+                                <div class="ticket-back">
+                                    share this event to my...
+                                </div>
+                                <ul class="link-share clearfix"> 
+                                    <li><a target="_blank" href="#" title="Twitter"><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Facebook"><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Google Plus"><img alt="" src="content/images/assets/icons_social/Google_Plus_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title="Email"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></li>
+                                </ul>
+                                <div class="ticket-back">
+                                    <a class="link-back" title="" href="javascript:void(0);">back to event page</a>
+                                </div>
+                            </div>
+                            <!-- /.ticket-calendar -->
+                
+                		</div>
+                 	</div>                    
+            	</div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-thanks -->
+    
+    <noscript>
+        <!-- must remain last thing before the form tag -->
+        <p class="noJS">YOU NEED JAVASCRIPT TO RUN THIS SITE. PLEASE ENABLE JAVASCRIPT IN YOUR INTERNET OPTIONS.</p>
+    </noscript>
+    <!-- END HTML --> 
+    
+    <!-- === SCRIPTS === --> 
+    <!-- InstanceBeginEditable name="script" -->    
+	<!-- InstanceEndEditable --> 
+    
+    <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
+    <script type="text/javascript" src="scripts/general-ui.js"></script>
+    <!-- === END SCRIPTS === -->    
+</body>
+<!-- InstanceEnd --></html>
