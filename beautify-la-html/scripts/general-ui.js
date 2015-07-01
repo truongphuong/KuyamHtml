@@ -171,5 +171,11 @@ $(document).ready(function () {
     } else {
         resetScroll();
     }
+	
+	$("#accordion-booking").on('show.bs.collapse', function(){
+		setTimeout(function(){
+			resetScroll();
+		}, 300);
+	}); 
 
 });

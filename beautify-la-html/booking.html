@@ -210,7 +210,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><img class="img-active" alt="" src="content/images/assets/icon_circle1_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle1_white.png" /><span class="offer">50% off</span> shampoo with blowout <span class="icon-down"></span> </a>
+                                                <a data-toggle="collapse" data-parent="#accordion-booking" href="#collapseOne"><span class="number">1</span><span class="offer">50% off</span> shampoo with blowout <span class="icon-down"></span> </a>
                                             </h4>
                                         </div>
                                         <div id="collapseOne" class="panel-collapse collapse in">
@@ -222,7 +222,7 @@
                                                             	regular price
                                                         	</div>
                                                             <div class="table-cell">
-                                                            	$100.00
+                                                            	<del>$100.00</del>
                                                         	</div>
                                                         </div>
                                                         <div class="table-row new-price-row">
@@ -255,7 +255,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed"><img class="img-active" alt="" src="content/images/assets/icon_circle2_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle2_white.png" /><span class="offer">50% off</span> manicure/pedicure <span class="icon-down"></span> </a>
+                                                <a data-toggle="collapse" data-parent="#accordion-booking" href="#collapseTwo" class="collapsed"><span class="number">2</span><span class="offer">50% off</span> manicure/pedicure <span class="icon-down"></span> </a>
                                             </h4>
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse">
@@ -267,7 +267,7 @@
                                                             	regular price
                                                         	</div>
                                                             <div class="table-cell">
-                                                            	$100.00
+                                                            	<del>$100.00</del>
                                                         	</div>
                                                         </div>
                                                         <div class="table-row new-price-row">
@@ -300,7 +300,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><img class="img-active" alt="" src="content/images/assets/icon_circle3_red.png" /><img class="img-normal" alt="" src="content/images/assets/icon_circle3_white.png" /><span class="offer">60 min</span> beautify tips <span class="icon-down"></span> </a>
+                                                <a data-toggle="collapse" data-parent="#accordion-booking" href="#collapseThree" class="collapsed"><span class="number">3</span><span class="offer">60 min</span> beautify tips <span class="icon-down"></span> </a>
                                             </h4>
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse">
@@ -312,7 +312,7 @@
                                                             	regular price
                                                         	</div>
                                                             <div class="table-cell">
-                                                            	$100.00
+                                                            	<del>$100.00</del>
                                                         	</div>
                                                         </div>
                                                         <div class="table-row new-price-row">
@@ -750,25 +750,27 @@
                         <h4 class="modal-title">checkout</h4>
                     </div>
                     <div class="modal-body">
-                    	<header>
-                            <div class="header-content">
-                                <div class="valid-section">valid for Sept 26 - Sept 30</div>
+                    	<section class="checkout-content">
+                            <div class="checkout-info">
+                                <div class="checkout-valid">valid for Sept 26 - Sept 30</div>
                                 <h3>Amy's Hair Salon</h3>
-                                <p>beauty tips with Laura <time>60 min</time></p>
-                                <ul>
-                                    <li>regular price <sub>$100</sub></li>
+                                <p><strong>beauty tips with Laura</strong> <time>60 min</time></p>
+                                <ul class="menu-price">
+                                    <li>regular price <del>$100</del></li>
                                     <li>new price <strong>$90.00</strong></li>
                                     <li>savings <strong>19%</strong></li>
                                 </ul>
                                 <p><time>Tuesday Sept 26th at 10:00 am</time></p>
                             </div>
-                        </header>
-                      	<section class="checkout-content hide">  
+                        </section>
+                      	<section class="checkout-content">  
                         	<fieldset>                       	
                                 <div class="checkout-step">
-                                    <img alt="" src="content/images/assets/image_step1.png" />
-                                    <h2>please add or confirm you contact info</h2>
-                                    <p>we may need to confirm an appointment with you or contact you in regards to the event.</p>
+                                	<header>
+                                        <img alt="" src="content/images/assets/image_step1.png" />
+                                        <h4>please add or confirm you contact info</h4>
+                                        <p>we may need to confirm an appointment with you or contact you in regards to the event.</p>
+                                    </header>
                                     <div class="checkout-input">
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-4">
@@ -796,12 +798,14 @@
                                 </footer>
                             </fieldset>
                          </section> 
-                         <section class="checkout-content hide">                         	
+                         <section class="checkout-content">                         	
                             <fieldset>
                                 <div class="checkout-step">
-                                    <img alt="" src="content/images/assets/image_step1.png" />
-                                    <h2>would you like us to schedule your appointment?</h2>
-                                    <p>we'll ask you for available times after your purchase is complete, or you can schedule on your own.</p>
+                                	<header>
+                                        <img alt="" src="content/images/assets/image_step2.png" />
+                                        <h4>would you like us to schedule your appointment?</h4>
+                                        <p>we'll ask you for available times after your purchase is complete, or you can schedule on your own.</p>
+                                    </header>
                                     <div class="checkout-input">
                                         <span class="relative">
                                             <input type="radio" class="cb-style" id="r-yes">
@@ -822,10 +826,20 @@
                          <section class="checkout-content">                         	
                             <fieldset>
                                 <div class="checkout-step">
-                                    <img alt="" src="content/images/assets/image_step1.png" />
-                                    <h2>payment</h2>
-                                    <p>add a tip for your service professional and apply any gift card amount or promo code.</p>
+                                	<header>
+                                        <img alt="" src="content/images/assets/image_step3.png" />
+                                        <h4>payment</h4>
+                                        <p>add a tip for your service professional and apply any gift card amount or promo code.</p>
+                                    </header>
                                     <div class="checkout-input">
+                                    	<div class="checkout-payment checkout-tip">
+                                        	<header>add a tip amount</header>
+                                        	<div class="checkout-method method-tip">
+                                        	<input type="text" onblur="if (this.value == '') { this.value = 'tip'; }" onfocus="if (this.value == 'tip') { this.value = ''; }" value="tip" class="form-control txt-tip">
+                                                <input type="button" value="add" class="btn-orange btn-method btn-tip">
+                                        	</div>
+                                        </div>
+                                    
                                         <!-- .checkout-price -->
                                         <div class="checkout-price clearfix">
                                             <div class="table-css">
@@ -859,20 +873,16 @@
                                             <div class="checkout-method method-promo">
                                                 <span class="icon-method icon-promo"></span>
                                                 <input type="text" onblur="if (this.value == '') { this.value = 'promo code'; }" onfocus="if (this.value == 'promo code') { this.value = ''; }" value="promo code" class="form-control txt-promo">
-                                                <input type="button" value="apply" class="btn-green btn-method btn-promo">
+                                                <input type="button" value="apply" class="btn-orange btn-method btn-promo">
                                                 <div class="discount-applied promo-applied hide">$5.00 applied</div>
                                             </div>
                                             <div class="checkout-method method-gift-card">
                                                 <span class="icon-method icon-gift-card"></span>
-                                                <input type="button" value="gift card" class="btn-yellow btn-method btn-gift-card" id="btn-gift-card">
+                                                <input type="button" value="gift card" class="btn-orange btn-method btn-gift-card" id="btn-gift-card">
                                             </div>
                                             <div class="checkout-method method-credit">
                                                 <span class="icon-method icon-credit"></span>
-                                                <input type="button" data-target="#modal-request" data-toggle="modal" value="PayPal or credit card" class="btn-blue btn-method btn-credit">
-                                            </div>
-                                            <div class="checkout-method method-cash">
-                                                <span class="icon-method icon-cash"></span>
-                                                <input type="button" value="pay in person" class="btn-green btn-method btn-cash">
+                                                <input type="button" data-target="#modal-request" data-toggle="modal" value="PayPal or credit card" class="btn-orange btn-method btn-credit">
                                             </div>
                                         </div>
                                         <!-- /.checkout-payment -->
@@ -881,7 +891,7 @@
                                         <div class="checkout-payment checkout-gift-card hide" id="checkout-step2">
                                             <div class="checkout-method">
                                                 <input type="text" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" value="enter gift card number" class="form-control txt-giftcard">
-                                                <input type="button" value="redeem" class="btn-green btn-method btn-giftcard">
+                                                <input type="button" value="redeem" class="btn-orange btn-method btn-giftcard">
                                             </div>
                                             <div class="checkout-balance">
                                                 <p>current gift card balance</p>
@@ -889,10 +899,10 @@
                                                 <div class="checkout-balance-use">use $30.00 today?</div>
                                             </div>
                                             <div class="checkout-method method-confirm">
-                                                <input type="button" value="confirm" class="btn-yellow btn-method btn-confirm">
+                                                <input type="button" value="confirm" class="btn-orange btn-method btn-confirm">
                                             </div>
                                             <div class="checkout-back">
-                                                <a href="javascript:void(0);" title="" class="link-back" id="link-back"><span class="icon-back"></span> back</a>
+                                                <a href="javascript:void(0);" title="" class="link-back" id="link-back"><span class="icon-goback"></span> back</a>
                                             </div>
                                         </div>
                                         <!-- /.checkout-giftcard -->
@@ -911,17 +921,22 @@
                                             </div>
                                             <div class="checkout-method method-credit">
                                                 <span class="icon-method icon-credit"></span>
-                                                <input type="button" data-target="#modal-confirm-request" data-toggle="modal" value="PayPal or credit card" class="btn-blue btn-method btn-credit">
+                                                <input type="button" data-target="#modal-confirm-request" data-toggle="modal" value="PayPal or credit card" class="btn-orange btn-method btn-credit">
                                             </div>
                                             <div class="checkout-method method-confirm">
-                                                <input type="button" value="confirm" class="btn-yellow btn-method btn-confirm">
+                                                <input type="button" value="confirm" class="btn-orange btn-method btn-confirm">
                                             </div>
                                         </div>
                                         <!-- /.checkout-payment -->
+                                        
+                                        <div class="checkout-policy">
+                                        	view cancellation and refund policy <a title="" href="#">here</a>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <footer>
-                                    <button class="btn-orange"><span class="icon icon-back"></span> back</button>
+                                    <button class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
                                 </footer>
                             </fieldset>
                          </section>         
@@ -1216,7 +1231,31 @@
     <!-- END HTML --> 
     
     <!-- === SCRIPTS === --> 
-    <!-- InstanceBeginEditable name="script" -->    
+    <!-- InstanceBeginEditable name="script" -->
+    <script type="text/javascript">         
+		$(document).ready(function() { 			
+			$("#btn-gift-card").click(function(){
+				$('#checkout-step1').addClass("hide");
+				$('#checkout-step2').removeClass("hide");				
+			}) 
+			
+			$("#link-back").click(function(){
+				$('#checkout-step1').removeClass("hide");
+				$('#checkout-step2').addClass("hide");				
+			}) 
+			
+			$("#btn-confirm").click(function(){
+				$('#checkout-step2').addClass("hide");
+				$('#checkout-step3').removeClass("hide");
+				$('.checkout-discount-giftcard, .checkout-total').removeClass("hide");				
+			})
+			
+			$(".btn-promo").click(function(){
+				$('.method-promo').addClass("checkout-promo-applied");
+				$('.promo-applied, .checkout-discount-promo, .checkout-total').removeClass("hide");
+			}) 
+		})
+	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
