@@ -206,7 +206,7 @@
                                     <h2>choose an offer</h2>
                                     <p class="visible-xs">event date - sept 26th - 30th</p>
                                 </header>
-                                <div class="panel-group" id="accordion">
+                                <div class="panel-group" id="accordion-booking">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
@@ -242,7 +242,7 @@
                                                         	</div>
                                                         </div>
                                                     </div>
-                                                    <input data-target="#modal-confirm" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
+                                                    <input data-target="#modal-checkout-class" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
                                                     <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
                                                 </div>
                                                 <div class="panel-description">
@@ -740,6 +740,196 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <!-- /.modal-confirm -->  
+    
+    <!-- .modal-checkout -->    
+        <div class="modal fade" id="modal-checkout-class" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-checkout">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">checkout</h4>
+                    </div>
+                    <div class="modal-body">
+                    	<header>
+                            <div class="header-content">
+                                <div class="valid-section">valid for Sept 26 - Sept 30</div>
+                                <h3>Amy's Hair Salon</h3>
+                                <p>beauty tips with Laura <time>60 min</time></p>
+                                <ul>
+                                    <li>regular price <sub>$100</sub></li>
+                                    <li>new price <strong>$90.00</strong></li>
+                                    <li>savings <strong>19%</strong></li>
+                                </ul>
+                                <p><time>Tuesday Sept 26th at 10:00 am</time></p>
+                            </div>
+                        </header>
+                      	<section class="checkout-content hide">  
+                        	<fieldset>                       	
+                                <div class="checkout-step">
+                                    <img alt="" src="content/images/assets/image_step1.png" />
+                                    <h2>please add or confirm you contact info</h2>
+                                    <p>we may need to confirm an appointment with you or contact you in regards to the event.</p>
+                                    <div class="checkout-input">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4">
+                                                <label>cell number: <span>*</span></label><br />
+                                                <input type="tel" />
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8">
+                                                <label>email: <span>*</span></label><br />
+                                                <input type="email" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                send me appointment reminders via SMS 
+                                                <span class="relative">
+                                                    <input type="radio" class="cb-style" id="r-yes">
+                                                    <label for="r-yes" class="label-style">yes</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <footer>
+                                    <button class="btn-orange">next <span class="icon icon-next"></span></button>
+                                </footer>
+                            </fieldset>
+                         </section> 
+                         <section class="checkout-content hide">                         	
+                            <fieldset>
+                                <div class="checkout-step">
+                                    <img alt="" src="content/images/assets/image_step1.png" />
+                                    <h2>would you like us to schedule your appointment?</h2>
+                                    <p>we'll ask you for available times after your purchase is complete, or you can schedule on your own.</p>
+                                    <div class="checkout-input">
+                                        <span class="relative">
+                                            <input type="radio" class="cb-style" id="r-yes">
+                                            <label for="r-yes" class="label-style">yes</label>
+                                        </span>
+                                        <span class="relative">
+                                            <input type="radio" class="cb-style" id="r-yes">
+                                            <label for="r-yes" class="label-style">yes</label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <button class="btn-orange"><span class="icon icon-back"></span> back</button>
+                                    <button class="btn-orange">next <span class="icon icon-next"></span></button>
+                                </footer>
+                            </fieldset>
+                         </section>   
+                         <section class="checkout-content">                         	
+                            <fieldset>
+                                <div class="checkout-step">
+                                    <img alt="" src="content/images/assets/image_step1.png" />
+                                    <h2>payment</h2>
+                                    <p>add a tip for your service professional and apply any gift card amount or promo code.</p>
+                                    <div class="checkout-input">
+                                        <!-- .checkout-price -->
+                                        <div class="checkout-price clearfix">
+                                            <div class="table-css">
+                                                <div class="table-row">
+                                                    <div class="table-cell price-details"><p>total due:</p></div>
+                                                    <div class="table-cell price-type"></div>
+                                                </div>
+                                                <div class="table-row">
+                                                    <div class="table-cell price-details"><h3>$75.00</h3></div>
+                                                    <div class="table-cell price-type"></div>
+                                                </div>
+                                                <div class="table-row checkout-discount-promo hide">
+                                                    <div class="table-cell price-details"><h3>-$5.00</h3></div>
+                                                    <div class="table-cell price-type">promo</div>
+                                                </div>
+                                                <div class="table-row checkout-discount-giftcard hide">
+                                                    <div class="table-cell price-details"><h3>-$30.00</h3></div>
+                                                    <div class="table-cell price-type">gift card</div>
+                                                </div>
+                                                <div class="table-row checkout-total hide">
+                                                    <div class="table-cell price-total"><h3><span>$45.00</span></h3></div>
+                                                    <div class="table-cell price-type"></div>
+                                                </div>
+                                            </div>                     
+                                        </div>
+                                        <!-- /.checkout-price -->
+                                        
+                                        <!-- .checkout-payment -->
+                                        <div class="checkout-payment" id="checkout-step1">
+                                            <header>select payment method</header>
+                                            <div class="checkout-method method-promo">
+                                                <span class="icon-method icon-promo"></span>
+                                                <input type="text" onblur="if (this.value == '') { this.value = 'promo code'; }" onfocus="if (this.value == 'promo code') { this.value = ''; }" value="promo code" class="form-control txt-promo">
+                                                <input type="button" value="apply" class="btn-green btn-method btn-promo">
+                                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                                            </div>
+                                            <div class="checkout-method method-gift-card">
+                                                <span class="icon-method icon-gift-card"></span>
+                                                <input type="button" value="gift card" class="btn-yellow btn-method btn-gift-card" id="btn-gift-card">
+                                            </div>
+                                            <div class="checkout-method method-credit">
+                                                <span class="icon-method icon-credit"></span>
+                                                <input type="button" data-target="#modal-request" data-toggle="modal" value="PayPal or credit card" class="btn-blue btn-method btn-credit">
+                                            </div>
+                                            <div class="checkout-method method-cash">
+                                                <span class="icon-method icon-cash"></span>
+                                                <input type="button" value="pay in person" class="btn-green btn-method btn-cash">
+                                            </div>
+                                        </div>
+                                        <!-- /.checkout-payment -->
+                                        
+                                        <!-- /.checkout-giftcard -->
+                                        <div class="checkout-payment checkout-gift-card hide" id="checkout-step2">
+                                            <div class="checkout-method">
+                                                <input type="text" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" value="enter gift card number" class="form-control txt-giftcard">
+                                                <input type="button" value="redeem" class="btn-green btn-method btn-giftcard">
+                                            </div>
+                                            <div class="checkout-balance">
+                                                <p>current gift card balance</p>
+                                                <h3>$0.00</h3>
+                                                <div class="checkout-balance-use">use $30.00 today?</div>
+                                            </div>
+                                            <div class="checkout-method method-confirm">
+                                                <input type="button" value="confirm" class="btn-yellow btn-method btn-confirm">
+                                            </div>
+                                            <div class="checkout-back">
+                                                <a href="javascript:void(0);" title="" class="link-back" id="link-back"><span class="icon-back"></span> back</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.checkout-giftcard -->
+                                        
+                                        <!-- .checkout-payment -->
+                                        <div class="checkout-payment checkout-applied hide" id="checkout-step3">
+                                            <div class="checkout-method method-promo">
+                                                <span class="icon-method icon-promo"></span>
+                                                <input type="text" onblur="if (this.value == '') { this.value = 'promo code'; }" onfocus="if (this.value == 'promo code') { this.value = ''; }" value="promo code" class="form-control txt-promo">
+                                                <input type="button" value="apply" class="btn-green btn-method btn-promo">
+                                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                                            </div>
+                                            <div class="checkout-method method-gift-card">
+                                                <span class="icon-method icon-gift-card"></span>
+                                                <div class="discount-applied giftcard-applied">$30.00 applied</div>
+                                            </div>
+                                            <div class="checkout-method method-credit">
+                                                <span class="icon-method icon-credit"></span>
+                                                <input type="button" data-target="#modal-confirm-request" data-toggle="modal" value="PayPal or credit card" class="btn-blue btn-method btn-credit">
+                                            </div>
+                                            <div class="checkout-method method-confirm">
+                                                <input type="button" value="confirm" class="btn-yellow btn-method btn-confirm">
+                                            </div>
+                                        </div>
+                                        <!-- /.checkout-payment -->
+                                    </div>
+                                </div>
+                                <footer>
+                                    <button class="btn-orange"><span class="icon icon-back"></span> back</button>
+                                </footer>
+                            </fieldset>
+                         </section>         
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-checkout -->
                         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
         <section id="contact" class="site-contact"> 

@@ -1823,22 +1823,22 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .blog-footer .social-icons dd img{width:30px;}
 
 /* Book */
-#accordion{padding:15px;background:#EBF2F6;}
-#accordion .panel{box-shadow:none;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
-#accordion .panel + .panel{margin-top:10px;}
-#accordion .panel-title img{width:49px;margin-right:20px;}
-#accordion .panel-title a{display:block;color:#fff;font-size:24px;padding:10px 15px;text-decoration:none;background:#f3472d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-#accordion .panel-title a.collapsed{background:#fff;color:#f3472d;}
-#accordion .panel-default > .panel-heading{	padding:0;border:0 none;background:transparent;}
-#accordion .panel-default > .panel-heading .offer{font-family:ralewaybold, sans-serif;float:right;margin:10px 0 0 20px;}
-#accordion .panel-default > .panel-heading .icon-down{width:22px;height:12px;display:inline-block;background:url(images/assets/arrow_up_white.png) center center no-repeat;background-size:contain;}
-#accordion .panel-title .img-normal{}
-#accordion .panel-title .img-active{display:none;}
-#accordion .panel-title .collapsed .img-normal{display:none;}
-#accordion .panel-title .collapsed .img-active{display:inline-block;}
-#accordion .panel-title .collapsed .icon-down{background-image:url(images/assets/icon_arrow_red_down.png);}
-#accordion .panel-default > .panel-heading + .panel-collapse .panel-body{border:0 none;}
-#accordion .panel-body h2{text-align:center;font:28px/32px ralewaybold, sans-serif;color:#f3472d;}
+#accordion-booking{padding:15px;background:#EBF2F6;}
+#accordion-booking .panel{box-shadow:none;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+#accordion-booking .panel + .panel{margin-top:10px;}
+#accordion-booking .panel-title img{width:49px;margin-right:20px;}
+#accordion-booking .panel-title a{display:block;color:#fff;font-size:24px;padding:10px 15px;text-decoration:none;background:#f3472d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#accordion-booking .panel-title a.collapsed{background:#fff;color:#f3472d;}
+#accordion-booking .panel-default > .panel-heading{	padding:0;border:0 none;background:transparent;}
+#accordion-booking .panel-default > .panel-heading .offer{font-family:ralewaybold, sans-serif;float:right;margin:10px 0 0 20px;}
+#accordion-booking .panel-default > .panel-heading .icon-down{width:22px;height:12px;display:inline-block;background:url(images/assets/arrow_up_white.png) center center no-repeat;background-size:contain;}
+#accordion-booking .panel-title .img-normal{}
+#accordion-booking .panel-title .img-active{display:none;}
+#accordion-booking .panel-title .collapsed .img-normal{display:none;}
+#accordion-booking .panel-title .collapsed .img-active{display:inline-block;}
+#accordion-booking .panel-title .collapsed .icon-down{background-image:url(images/assets/icon_arrow_red_down.png);}
+#accordion-booking .panel-default > .panel-heading + .panel-collapse .panel-body{border:0 none;}
+#accordion-booking .panel-body h2{text-align:center;font:28px/32px ralewaybold, sans-serif;color:#f3472d;}
 
 .book-page .happen-date{height:auto;min-height:40px;margin-top:23px;}
 .book-page .social-icons{margin-top:0;}
@@ -1888,6 +1888,74 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 .modal-booked .table-steps{text-align:left;}
 .modal-booked .table-steps .col-img{width:103px;}
 .modal-booked .table-steps h3{font:24px/28px ralewaybold,sans-serif;}
+
+.modal-checkout{width:760px;}
+.modal-checkout .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.modal-checkout .modal-header{min-height:64px;color:#ffffff;background:#f3472d;}
+.modal-checkout .modal-header .close{background-image:url(images/assets/icon_close.png);}
+.modal-checkout .modal-header .modal-title{font:26px/30px ralewaybold, sans-serif;}
+.modal-checkout .modal-body{color:#333333;font:20px/24px ralewaymedium, sans-serif;}
+
+.checkout-price{min-height:80px;font:20px/24px ralewaymedium, sans-serif;padding:0 40px;}
+.checkout-price .table-css{width:100%;}
+.checkout-price .table-cell{padding:0 5px;}
+.checkout-price .price-details{width:66%;text-align:right;}
+.checkout-price .price-total{text-align:right;}
+.checkout-price .price-total span{display:inline-block;padding:0 0 0 10px;border-top:1px solid #ababab;}
+.checkout-price .price-type{width:34%;color:#cccccc;}
+.checkout-price h3{font:28px/32px ralewayextrabold, sans-serif;}
+.checkout-price p{margin:0 0 10px;}
+
+.alert-error{color:#ff0000 !important;}
+
+.checkout-payment{padding:10px 0 10px 15px;}
+.checkout-payment header{padding:0 0 0 60px;margin:0 0 5px;font:16px/20px ralewaymedium, sans-serif;}
+
+.checkout-method{padding:0 0 0 60px;height:44px;margin:0 0 5px;position:relative;}
+.checkout-method .icon-method{display:inline-block;width:48px;height:44px;background:center center no-repeat;position:absolute;top:0;left:0;}
+.checkout-method .icon-promo{background-image:url(images/icons/icon_promo_black.png);}
+.checkout-method .icon-gift-card{background-image:url(images/icons/icon_giftcard_black.png);}
+.checkout-method .icon-credit{background-image:url(images/icons/icon_creditcard.png);}
+.checkout-method .icon-cash{background-image:url(images/icons/icon_payinperson_black.png);}
+.checkout-method .btn-method{height:44px;border:0 none;}
+.checkout-method .btn-credit{background:#4A90E2;}
+.checkout-method .form-control{height:44px;border:1px solid #ababab;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;font:16px/44px ralewaymedium, sans-serif;}
+.checkout-method .txt-promo{padding-right:87px;}
+.checkout-method .txt-giftcart{padding-right:92px;}
+.checkout-method .btn-promo{width:75px;position:absolute;top:0;right:0;}
+.checkout-method .btn-giftcard{width:80px;position:absolute;top:0;right:0;font-size:16px;}
+.checkout-method .discount-applied{height:44px;line-height:44px;border:1px solid #ababab;text-align:center;color:#ababab;}
+
+.checkout-gift-card{padding:25px 0 10px 15px;}
+.checkout-gift-card .checkout-method{padding:0;}
+
+.method-confirm{padding:0;}
+
+.checkout-balance{height:85px;text-align:center;}
+.checkout-balance h3{font:20px/24px ralewayregular, sans-serif;}
+.checkout-balance p{margin:5px 0 0;}
+
+.checkout-balance-use{padding:10px 0 0;}
+
+.checkout-back{padding:10px 0 0;text-align:center;}
+.checkout-back .link-back{color:#000000;}
+.checkout-back .icon-back{margin:0 5px -2px 0;}
+.checkout-back .link-nothanks{color:#96be3d;}
+.checkout-back .icon-nothanks{margin:0 0 -2px 5px;}
+
+.icon-back{display:inline-block;width:9px;height:14px;background:url(images/icons/icon_goback.png);}
+
+.icon-nothanks{display:inline-block;width:9px;height:14px;background:url(images/icons/icon_nothanks.png);}
+
+.checkout-applied{padding:30px 0 10px 15px;}
+.checkout-applied .icon-gift-card{background-image:url(images/icons/icon_giftcard_grey.png);}
+
+.checkout-promo-applied .icon-promo{background-image:url(images/icons/icon_promo_grey.png);}
+.checkout-promo-applied .txt-promo,
+.checkout-promo-applied .btn-promo{display:none;}
+
+.checkout-rule{padding:20px;font:16px/20px ralewaymedium, sans-serif;color:#969696;}
+.checkout-rule header{color:#F06373;}
 
 @media (max-width:991px){
 	.div-zip{margin-top:20px;}
@@ -2525,10 +2593,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	
 	.panel-info{width:90%;}
 	
-	#accordion{padding-left:0;padding-right:0;}
-	#accordion .panel-title a{font-size:16px;padding:10px;}
-	#accordion .panel-title img{width:32px;margin-right:10px;}
-	#accordion .panel-default > .panel-heading .offer{margin:5px 0 0 10px;}
+	#accordion-booking{padding-left:0;padding-right:0;}
+	#accordion-booking .panel-title a{font-size:16px;padding:10px;}
+	#accordion-booking .panel-title img{width:32px;margin-right:10px;}
+	#accordion-booking .panel-default > .panel-heading .offer{margin:5px 0 0 10px;}
 	
 	.price-info{font-size:18px;line-height:22px;}
 	
@@ -2557,6 +2625,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000000;o
 	.settings-page .txt-s,
 	.settings-page .txt-m,
 	.settings-page .txt-l{width:100%;}
+	
+	.modal-checkout{width:auto;}
+	.modal-checkout .modal-header .close{width:60px;height:60px;background-image:url(images/assets/icon_close_white.png);top:0;right:0;}
 }
 @media (max-width:589px){
 	.modal-offerings .time-service .list-hours .shift{margin-left:0;}
