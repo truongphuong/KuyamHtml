@@ -1952,10 +1952,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .checkout-price{min-height:80px;font:20px/24px ralewaymedium, sans-serif;}
 .checkout-price .table-css{width:100%;}
 .checkout-price .table-cell{padding:0 5px;}
-.checkout-price .price-details{width:78%;text-align:right;}
+.checkout-price .price-details{width:66%;text-align:right;}
 .checkout-price .price-total{text-align:right;}
 .checkout-price .price-total span{display:inline-block;padding:0 0 0 10px;border-top:1px solid #ababab;}
-.checkout-price .price-type{width:22%;color:#ccc;}
+.checkout-price .price-type{color:#ccc;}
 .checkout-price h3{font:28px/32px ralewayextrabold, sans-serif;color:#f3472d;}
 .checkout-price p{margin:0 0 10px;}
 
@@ -2021,8 +2021,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .modal-booked-yet .modal-body{padding-left:70px;padding-right:70px;}
 .modal-booked-yet .ticket-calendar{width:260px;}
-.modal-booked-yet .error{font-size:inherit;margin:0 30px;}
+.modal-booked-yet .error{font-size:inherit;margin:0 30px 30px;}
 .modal-booked-yet .booking-details h3{font-family:ralewaylight,sans-serif;}
+.modal-booked-yet .booking-details h3 .phone{display:block;text-decoration:none;color:#000;}
+.modal-booked-yet .use-la{padding-bottom:30px;}
+
+.use-la a{color:#f3472d;text-decoration:none;}
 
 @media (max-width:991px){
 	.div-zip{margin-top:20px;}
@@ -2696,11 +2700,23 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.modal-checkout footer .btn-orange{width:110px;}
 	
 	.checkout-content-info{background:transparent;}
+	
 	.checkout-info{border:1px solid #999;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 	
 	.checkout-input-info label{text-align:center;margin-top:10px;}
 	.checkout-input-info .txt-cell{width:159px;margin:0 auto;}
+		
 	.schedule-section{margin:0;text-align:left;}
+	
+	.method-tip{width:240px;padding-left:0;margin:0 auto;}	
+	
+	.checkout-price .price-details{width:56%;}
+	
+	.modal-booked-yet .modal-body{padding:20px;}
+	.modal-booked-yet .section-header h2{font-size:22px;line-height:26px;margin-bottom:10px;}
+	.modal-booked-yet .booking-details h3{font-family:ralewaymedium,sans-serif;}
+	.modal-booked-yet .booking-details h3 .phone{padding:30px 0 10px;color:#4A90E2;}
+	.modal-booked-yet .error{margin:0 0 30px;}
 	
 }
 @media (max-width:640px){
@@ -2731,8 +2747,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.event-coming-soon .branch-ticket a{right:0;}
 	.event-coming-soon .branch-ticket .branch-text{right:0;text-right:left;padding-right:20px;}
 	
-	.event-coming-soon .branch-rsvp .branch-img{top:-20px;left:-60px;}	
+	.event-coming-soon .branch-rsvp .branch-img{top:-20px;left:-60px;}		
 	
+	.checkout-method .form-control{font-size:13px;}
 }
 @media (max-width:540px){
 	.modal-details .modal-footer .package-price{font-size:18px;line-height:22px;}
@@ -2765,6 +2782,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 }
 @media (max-width:500px){	
 	.modal-upcomming .btn-orange{width:100%;margin-left:0;margin-right:0;}
+	
+	.checkout-price .price-type{font-size:12px;}
 }
 @media (max-width:480px){
 	.event-block{height:149px;}
@@ -2808,6 +2827,14 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.list-hours .hour-item > label > span{width:138px;}
 	
 	.modal-offerings .btn-settings{width:116px;}
+
+	.checkout-input{width:100%;}
+	
+	.checkout-payment{padding-left:0;}
+	
+	.checkout-method .txt-promo{width:100%;}  
+	
+	.checkout-price .price-details{width:75%;}
 }
 @media (max-width:372px){
 	.event-block{height:116px;}
@@ -2817,6 +2844,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.available-section .social-icons{width:100%;text-align:center;}
 	.available-section .social-icons dt{float:none;text-align:left;}
 	.available-section .item .controls .btn-control{width:100%;}	
+}
+@media (max-width:359px){		
+	.checkout-method .btn-method{font-size:16px;}
 }
 @media (max-width:330px){
 	.event-openning .branch-ticket{left:0;}	
