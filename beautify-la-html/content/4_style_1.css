@@ -575,7 +575,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .session-item .btn-book{display:none;color:#fff;position:relative;z-index:8;text-decoration:none;}
 
 .session-class.active{position:relative;z-index:9;}
-.session-class.active .session-time{padding:8px;height:76px;border:1px solid #F3472D;color:#F3472D;font:14px/18px ralewaysemibold, sans-serif;}
+.session-class.active .session-time{padding:8px;min-height:33px;height:auto;max-height:76px;border:1px solid #F3472D;color:#F3472D;font:14px/18px ralewaysemibold, sans-serif;}
 .session-class.active .btn-book{display:block;background:#F3472D;}
 .session-class.active .btn-pink:hover{background:#F3472D;}
 
@@ -1575,7 +1575,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .modal-offerings .list div{padding:5px 10px;}
 .modal-offerings .list div:nth-child(odd){background:#F8F8F8;}
 .modal-offerings .time-class .list-hours .shift{margin-bottom:10px;margin-left:0;}
-.modal-offerings .time-service .list-hours .shift{height:112px;}
+.modal-offerings .time-service .list-hours .shift{max-height:112px;}
 .modal-offerings .time-service .list-hours .hour-item .popover-confirm{top:82px;}
 
 .popover-confirm{left:inherit;right:0;top:20px;background:#f3472d;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;width:200px;}
@@ -1898,9 +1898,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .booking-details{text-align:center;padding:0 0 20px;font:20px/24px ralewaysemibold, sans-serif;}
 .booking-details h3{font:24px/28px ralewaybold, sans-serif;}
 
+.modal-booked h3{font:24px/28px ralewaybold,sans-serif;}
+.modal-booked .error{font-size:inherit;}
 .modal-booked .table-steps{text-align:left;}
 .modal-booked .table-steps .col-img{width:103px;}
-.modal-booked .table-steps h3{font:24px/28px ralewaybold,sans-serif;}
+.modal-booked .table-steps h3{padding-top:20px;color:#f3472d;}
 
 .modal-checkout{width:760px;}
 .modal-checkout .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
@@ -2016,6 +2018,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .table-steps .table-css{margin:0 auto;position:relative;width:100%;z-index:2;}
 .table-steps .table-cell .num{display:inline-block;width:50px;height:50px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;border:3px solid #f3472d;color:#f3472d;text-align:center;line-height:40px;background:#fff;}
 .table-steps .table-cell.active .num{background:#f3472d;color:#fff;}
+
+.modal-booked-yet .modal-body{padding-left:70px;padding-right:70px;}
+.modal-booked-yet .ticket-calendar{width:260px;}
+.modal-booked-yet .error{font-size:inherit;margin:0 30px;}
+.modal-booked-yet .booking-details h3{font-family:ralewaylight,sans-serif;}
 
 @media (max-width:991px){
 	.div-zip{margin-top:20px;}
