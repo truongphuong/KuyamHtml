@@ -243,7 +243,7 @@
                                                         </div>
                                                     </div>
                                                     <input data-target="#modal-checkout" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
-                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                    <p>promotional offers subject to <a data-toggle="modal" data-target="#modal-checkout-term" title="" href="javascript:void(0);">terms</a></p>
                                                 </div>
                                                 <div class="panel-description">
                                                     <h3>description</h3>
@@ -288,7 +288,7 @@
                                                         </div>
                                                     </div>
                                                     <input data-target="#modal-checkout" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
-                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                    <p>promotional offers subject to <a data-toggle="modal" data-target="#modal-checkout-term" title="" href="javascript:void(0);">terms</a></p>
                                                 </div>
                                                 <div class="panel-description">
                                                     <h3>description</h3>
@@ -333,7 +333,7 @@
                                                         </div>
                                                     </div>
                                                     <input data-target="#modal-checkout" data-toggle="modal" type="button" value="purchase offer" class="btn btn-orange" />
-                                                    <p>promotional offers subject to <a title="" href="javascript:void(0);">terms</a></p>
+                                                    <p>promotional offers subject to <a data-toggle="modal" data-target="#modal-checkout-term" title="" href="javascript:void(0);">terms</a></p>
                                                 </div>
                                                 <h2>select a class time below to purchase</h2>
                                                 <!-- calendar -->
@@ -907,10 +907,38 @@
                                     </div>
                                 </div>
                                 <footer>
-                                    <button slidenext="checkout-service-2" slidecurrent="checkout-service-3" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                                    <button data-toggle="modal" data-target="#modal-checkout-term" slidenext="checkout-service-2" slidecurrent="checkout-service-3" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
                                 </footer>
                             </fieldset>
                          </section>         
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /#modal-checkout -->
+        
+        <!-- #modal-checkout -->    
+        <div class="modal fade" id="modal-checkout-term" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-checkout modal-checkout-term">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">cancellation and refund policy</h4>
+                    </div>
+                    <div class="modal-body"> 
+                    	<div class="checkout-term-section">
+                            <div id="checkout-term" class="scroller-wrapper">
+                                <div class="scroll-bar">
+                                    <p>Last Updated: September 9, 2012</p>
+                                    <p><strong>cancellation policy:</strong></p>
+                                    <p>This User Agreement (the "Agreement") and the policies referred to herein contain the complete terms and conditions that apply to your use of the appointment services (the "Services") being offered at the URL:<a title="" href="http://www.kuyam.com">http://www.kuyam.com</a> and all affiliated web sites owned and operated solely by Kuyam (collectively, the "Website"). As used in this Agreement, "Kuyam" refers to Kuyam Companies, Inc. and any of its subsidiaries, and "User" or "you" refers to you. USE OF THE SERVICES AND THE WEBSITE CONSTITUTES KNOWING ACCEPTANCE AND ACKNOWLEDGEMENT OF THIS USER AGREEMENT, KUYAM'S PRIVACY POLICY, KUYAM'S SERVICES LISTINGS, AND KUYAM'S TERMS AND CONDITIONS.</p>
+                                    <p>Kuyam may modify this Agreement's terms and conditions at any time without notice. Continued use of the Services and the Kuyam Website after a change in this Agreement, a change in the Privacy Policy, a change in the Services Listings, or after implementation of anv other new policy constitues acceptance of such change or</p>
+                                </div>
+                            </div>
+                        </div>      
+                    </div>
+                    <div class="modal-footer">
+                    	<button data-dismiss="modal" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -1255,8 +1283,25 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+    <script type="text/javascript" src="scripts/iscroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="content/iscroll.css" />
     <script type="text/javascript">         
-		$(document).ready(function() { 			
+		var checkoutTerm = new IScroll('#checkout-term', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true,
+			click: true 
+		});
+        
+        $( document ).ready(function() {
+			$('#modal-checkout-term').on('show.bs.modal', function (e) {
+                setTimeout(function(){
+                    checkoutTerm.refresh();
+                }, 300);
+            });
+			 			
 			$("#btn-gift-card").click(function(){
 				$('#checkout-step1').addClass("hide");
 				$('#checkout-step2').removeClass("hide");				
