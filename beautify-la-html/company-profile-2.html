@@ -1350,25 +1350,29 @@
                     <div class="table-css table-steps">
                         <div class="table-row">
                             <div class="table-cell col-img">
-                            	<img alt="" src="content/images/assets/icon_addtime_1.png">
+                            	<img class="hidden-xs" alt="" src="content/images/assets/icon_addtime_1.png" />
+                                <span class="img-calendar visible-xs"><span>1</span></span>
                             </div>
                             <div class="table-cell col-text">
                             	<h3>add available time:<span class="error">*</span></h3>
-                                <p>please give us a time range during the day so we have better chances of finding you an appointment.</p>
+                                <p class="hidden-xs">please give us a time range during the day so we have better chances of finding you an appointment.</p>
                             </div>
                         </div>
                     </div>
+                    <div class="p-section visible-xs">
+                    	<p>please give us a time range during the day so we have better chances of finding you an appointment.</p>
+                    </div>
                     
-                    <div class="list-hours">
+                    <div class="list-hours clearfix">
                     	<div>
                         	<label>date <span class="error">*</span></label>
-                            <input type="text" />
+                            <input id="txtDate1" type="text" class="form-control" placeholder="mm/dd/yy" readonly="readonly" />
                         </div>
                         <div>
                         	<label>time <span class="error">*</span></label>
                             <div class="available-date clear-fix">
                                 <div class="start-date">
-                                    <select class="selectpicker select-m">
+                                    <select class="selectpicker select-s">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -1382,7 +1386,7 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
-                                    <select class="selectpicker select-m">
+                                    <select class="selectpicker select-s">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -1451,7 +1455,7 @@
                                 </div>
                                 <div class="div-to">to</div>
                                 <div class="end-date">
-                                    <select class="selectpicker select-m">
+                                    <select class="selectpicker select-s">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -1465,7 +1469,383 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                        <option>32</option>
+                                        <option>33</option>
+                                        <option>34</option>
+                                        <option>35</option>
+                                        <option>36</option>
+                                        <option>37</option>
+                                        <option>38</option>
+                                        <option>39</option>
+                                        <option>40</option>
+                                        <option>41</option>
+                                        <option>42</option>
+                                        <option>43</option>
+                                        <option>44</option>
+                                        <option>45</option>
+                                        <option>46</option>
+                                        <option>47</option>
+                                        <option>48</option>
+                                        <option>49</option>
+                                        <option>50</option>
+                                        <option>51</option>
+                                        <option>52</option>
+                                        <option>53</option>
+                                        <option>54</option>
+                                        <option>55</option>
+                                        <option>56</option>
+                                        <option>57</option>
+                                        <option>58</option>
+                                        <option>59</option>
+                                        <option>60</option>
+                                    </select>
                                     <select class="selectpicker select-m">
+                                        <option>am</option>
+                                        <option>pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-css table-steps">
+                        <div class="table-row">
+                            <div class="table-cell col-img">
+                            	<img class="hidden-xs" alt="" src="content/images/assets/icon_addtime_2.png" />
+                                <span class="img-calendar visible-xs"><span>2</span></span>
+                            </div>
+                            <div class="table-cell col-text">
+                            	<h3>add available time<span class="hidden-xs"> (optional)</span>:</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-hours clearfix">
+                    	<div>
+                        	<label>date <span class="error">*</span></label>
+                            <input id="txtDate2" type="text" class="form-control" placeholder="mm/dd/yy" readonly="readonly" />
+                        </div>
+                        <div>
+                        	<label>time <span class="error">*</span></label>
+                            <div class="available-date clear-fix">
+                                <div class="start-date">
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                        <option>32</option>
+                                        <option>33</option>
+                                        <option>34</option>
+                                        <option>35</option>
+                                        <option>36</option>
+                                        <option>37</option>
+                                        <option>38</option>
+                                        <option>39</option>
+                                        <option>40</option>
+                                        <option>41</option>
+                                        <option>42</option>
+                                        <option>43</option>
+                                        <option>44</option>
+                                        <option>45</option>
+                                        <option>46</option>
+                                        <option>47</option>
+                                        <option>48</option>
+                                        <option>49</option>
+                                        <option>50</option>
+                                        <option>51</option>
+                                        <option>52</option>
+                                        <option>53</option>
+                                        <option>54</option>
+                                        <option>55</option>
+                                        <option>56</option>
+                                        <option>57</option>
+                                        <option>58</option>
+                                        <option>59</option>
+                                        <option>60</option>
+                                    </select>
+                                    <select class="selectpicker select-m">
+                                        <option>am</option>
+                                        <option>pm</option>
+                                    </select>
+                                </div>
+                                <div class="div-to">to</div>
+                                <div class="end-date">
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                        <option>32</option>
+                                        <option>33</option>
+                                        <option>34</option>
+                                        <option>35</option>
+                                        <option>36</option>
+                                        <option>37</option>
+                                        <option>38</option>
+                                        <option>39</option>
+                                        <option>40</option>
+                                        <option>41</option>
+                                        <option>42</option>
+                                        <option>43</option>
+                                        <option>44</option>
+                                        <option>45</option>
+                                        <option>46</option>
+                                        <option>47</option>
+                                        <option>48</option>
+                                        <option>49</option>
+                                        <option>50</option>
+                                        <option>51</option>
+                                        <option>52</option>
+                                        <option>53</option>
+                                        <option>54</option>
+                                        <option>55</option>
+                                        <option>56</option>
+                                        <option>57</option>
+                                        <option>58</option>
+                                        <option>59</option>
+                                        <option>60</option>
+                                    </select>
+                                    <select class="selectpicker select-m">
+                                        <option>am</option>
+                                        <option>pm</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-css table-steps">
+                        <div class="table-row">
+                            <div class="table-cell col-img">
+                            	<img class="hidden-xs" alt="" src="content/images/assets/icon_addtime_3.png" />
+                                <span class="img-calendar visible-xs"><span>3</span></span>
+                            </div>
+                            <div class="table-cell col-text">
+                            	<h3>add available time<span class="hidden-xs"> (optional)</span>:</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list-hours clearfix">
+                    	<div>
+                        	<label>date <span class="error">*</span></label>
+                            <input id="txtDate3" type="text" class="form-control" placeholder="mm/dd/yy" readonly="readonly" />
+                        </div>
+                        <div>
+                        	<label>time <span class="error">*</span></label>
+                            <div class="available-date clear-fix">
+                                <div class="start-date">
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                        <option>25</option>
+                                        <option>26</option>
+                                        <option>27</option>
+                                        <option>28</option>
+                                        <option>29</option>
+                                        <option>30</option>
+                                        <option>31</option>
+                                        <option>32</option>
+                                        <option>33</option>
+                                        <option>34</option>
+                                        <option>35</option>
+                                        <option>36</option>
+                                        <option>37</option>
+                                        <option>38</option>
+                                        <option>39</option>
+                                        <option>40</option>
+                                        <option>41</option>
+                                        <option>42</option>
+                                        <option>43</option>
+                                        <option>44</option>
+                                        <option>45</option>
+                                        <option>46</option>
+                                        <option>47</option>
+                                        <option>48</option>
+                                        <option>49</option>
+                                        <option>50</option>
+                                        <option>51</option>
+                                        <option>52</option>
+                                        <option>53</option>
+                                        <option>54</option>
+                                        <option>55</option>
+                                        <option>56</option>
+                                        <option>57</option>
+                                        <option>58</option>
+                                        <option>59</option>
+                                        <option>60</option>
+                                    </select>
+                                    <select class="selectpicker select-m">
+                                        <option>am</option>
+                                        <option>pm</option>
+                                    </select>
+                                </div>
+                                <div class="div-to">to</div>
+                                <div class="end-date">
+                                    <select class="selectpicker select-s">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    <select class="selectpicker select-s">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -1537,10 +1917,15 @@
                     </div>
                     
                     <!-- .ticket-calendar -->
-                    <div class="ticket-calendar">                         
+                    <div class="ticket-calendar">   
+                    	<button class="btn-white visible-xs"><span class="icon-add"></span> add another time</button>                      
                         <input class="btn-orange" type="button" value="done" data-dismiss="modal" />                              
                     </div>
-                    <!-- /.ticket-calendar -->   
+                    <!-- /.ticket-calendar -->        
+                    
+                    <div class="use-la">
+                    	<a title="" href="#">skip and book on my own ></a>
+                    </div>   
                     
                 </div>
             </div><!-- /.modal-content -->
@@ -1968,6 +2353,17 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+    <link rel="stylesheet" type="text/css" href="content/datepicker3.css" />
+    <script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script> 
+    <script>
+	$(document).ready(function(){	
+		$('#txtDate1, #txtDate2, #txtDate3').datepicker({
+			format: 'mm/dd/yy',
+		}).on('changeDate', function(e){
+			$(this).datepicker('hide');
+		});
+	});
+	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
