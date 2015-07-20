@@ -9,10 +9,10 @@ var getWidthSolution = $(window).width(),
 	getHeightSolution = $(window).height(),
 	isScroll,
 	isResize = false,
+	mainCol = $('.main-content'),
 	rightCol = $('#nav-affix'),
     leftCol = $('#main-affix'),
 	heightHeader,
-	footerHeight,
 
 	leftHeight,
 	leftBottom,
@@ -30,15 +30,13 @@ function stateScroll() {
     }
 }
 
-function getValue() {
-    heightHeader = $('.site-header').height() + $('#carousel-desktop').height(),
-    footerHeight = $('.site-contact').height() + $('.site-footer').innerHeight(),
-
+function getValue() { 	
     leftHeight = leftCol.load().height(),
 
     rightHeight = rightCol.load().height(),
 
-    offsetContact = $('.site-contact').offset().top;
+    offsetContact = $('.site-contact').offset().top,
+	heightHeader = mainCol.offset().top;		
 
     if (rightHeight < getHeightSolution) {
         rightCol.css("min-height", getHeightSolution);
@@ -50,10 +48,7 @@ function getValue() {
         leftCol.css("min-height", getHeightSolution);
         leftHeight = getHeightSolution;
     }
-    leftBottom = leftHeight + heightHeader;
-
-    //console.log(leftHeight);
-    //console.log(rightHeight);   
+    leftBottom = leftHeight + heightHeader;  
 }
 
 function sticky() {
@@ -62,7 +57,7 @@ function sticky() {
         if (isScroll == false) { return; }
 
         var winTop = $(this).scrollTop(),
-            winBottom = winTop + $(this).height();
+            winBottom = winTop + getHeightSolution;
 
         if (rightHeight == 0 || leftHeight == 0) {
             return;
@@ -74,23 +69,20 @@ function sticky() {
                         rightCol.css({
                             'position': 'fixed',
                             'bottom': 0,
-                            'padding-top': 0,
+                            'padding-top': offsetContact - heightHeader - rightHeight,
                             'z-index': 9
                         });
                     } else {
                         rightCol.css({
-                            'position': 'relative',
-                            'padding-top': leftHeight - rightHeight,
-                            'z-index': 'inherit'
+                            'position': 'relative'
                         });
                     }
                 } else {
-                    //when the user scrolls back up revert its position to relative
-                    rightCol.css({
-                        'position': 'relative',
-                        'padding-top': 0,
-                        'z-index': 'inherit'
-                    });
+					//when the user scrolls back up revert its position to relative
+					rightCol.css({
+						'position': 'relative',
+						'padding-top': ''
+					});
                 }
             } else if (rightBottom > leftBottom) {
                 //when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
@@ -98,24 +90,21 @@ function sticky() {
                     if (winBottom <= offsetContact) {
                         leftCol.css({
                             'position': 'fixed',
-                            'bottom': 0,
-                            'padding-top': 0,
-                            'z-index': 9
+							'bottom': 0,
+                            'padding-top':  offsetContact - heightHeader - leftHeight,
+							'z-index': 9
                         });
                     } else {
                         leftCol.css({
-                            'position': 'relative',
-                            'padding-top': rightHeight - leftHeight,
-                            'z-index': 'inherit'
+                            'position': 'relative'
                         });
                     }
                 } else {
-                    //when the user scrolls back up revert its position to relative
-                    leftCol.css({
-                        'position': 'relative',
-                        'padding-top': 0,
-                        'z-index': 'inherit'
-                    });
+					//when the user scrolls back up revert its position to relative
+					leftCol.css({
+						'position': 'relative',
+						'padding-top': ''
+					});
                 }
             }
         }
