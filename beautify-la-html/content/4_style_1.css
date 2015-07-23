@@ -171,11 +171,15 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .relative{position:relative;}
 
+.fixed{position:fixed !important;}
+
 .affix-content{margin-bottom:15px;}
 
 .mh-0{min-height:0 !important;}
 
 .p10{padding:10px;}
+
+.visible-xs.ng-hide{ display: none !important;}
 
 .loading{background:url(images/assets/progress.gif) center center no-repeat #000;display:none;position:fixed;top:0;left:0;bottom:0;right:0;z-index:9999;opacity:0.5;filter:alpha(opacity=50);}
 .light-box{display:none;background:#000;position:fixed;top:0;left:0;right:0;bottom:0;opacity:0.5;filter:alpha(opacity=50);z-index:2;}
@@ -330,7 +334,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .section-note h4{font:24px/28px ralewaysemibold, sans-serif;}
 .section-note p{font:16px/20px ralewaymedium, sans-serif;}
 
-.main-content{padding:40px 0 0;}
+.main-content{padding:40px 0 0;min-height:500px;}
 
 .event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#fff;}
 .event-new .event-content{padding:25px;position:absolute;top:0;right:0;bottom:0;left:0;}
@@ -2806,6 +2810,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.event-coming-soon .branch-rsvp .branch-img{top:-20px;left:-60px;}		
 	
 	.checkout-method .form-control{font-size:13px;}
+    .checkout-step > header{text-align:center;}
+    .checkout-step > header h4{ color:#333;padding-top:0;}
 }
 @media (max-width:540px){
 	.modal-details .modal-footer .package-price{font-size:18px;line-height:22px;}
