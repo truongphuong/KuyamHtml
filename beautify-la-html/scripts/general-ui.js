@@ -9,7 +9,6 @@ var getWidthSolution = $(window).width(),
 	getHeightSolution = $(window).height(),
 	isScroll,
 	isResize = false,
-	mainCol = $('.main-content'),
 	rightCol = $('#nav-affix'),
     leftCol = $('#main-affix'),
 	heightHeader,
@@ -31,24 +30,16 @@ function stateScroll() {
 }
 
 function getValue() { 	
-    leftHeight = leftCol.load().height(),
-
-    rightHeight = rightCol.load().height(),
-
     offsetContact = $('.site-contact').offset().top,
-	heightHeader = mainCol.offset().top;		
+	heightHeader = $('.main-content').offset().top,	
 
-    if (rightHeight < getHeightSolution) {
-        rightCol.css("min-height", getHeightSolution);
-        rightHeight = getHeightSolution;
-    }
-    rightBottom = rightHeight + heightHeader;
+    rightCol.css("min-height", getHeightSolution),
+    rightHeight = rightCol.load().height(),
+    rightBottom = rightHeight + heightHeader,
 
-    if (leftHeight < getHeightSolution) {
-        leftCol.css("min-height", getHeightSolution);
-        leftHeight = getHeightSolution;
-    }
-    leftBottom = leftHeight + heightHeader;  
+    leftCol.css("min-height", getHeightSolution),	
+    leftHeight = leftCol.load().height(),
+    leftBottom = leftHeight + heightHeader; 
 }
 
 function sticky() {
@@ -58,53 +49,110 @@ function sticky() {
 
         var winTop = $(this).scrollTop(),
             winBottom = winTop + getHeightSolution;
+		console.log(rightHeight);
 
         if (rightHeight == 0 || leftHeight == 0) {
             return;
         } else {
-            if (rightBottom < leftBottom) {
+            if (rightHeight < leftHeight) {
                 //when the user reached the bottom of '#nav-affix' set its position to fixed to prevent it from moving on scroll
                 if (winBottom > rightBottom) {
                     if (winBottom <= offsetContact) {
-                        rightCol.css({
-                            'position': 'fixed',
-                            'bottom': 0,
-                            'padding-top': offsetContact - heightHeader - rightHeight,
-                            'z-index': 9
-                        });
+						if(rightHeight > getHeightSolution)
+						{
+							rightCol.css({
+								'position': 'fixed',
+								'bottom': 0,
+								'padding-top': offsetContact - heightHeader - rightHeight,
+								'z-index': 9
+							});
+						}else{
+							rightCol.css({
+								'position': 'fixed',
+								'bottom': 0,
+								'top':  heightHeader + rightHeight - offsetContact,
+								'padding-top': offsetContact - heightHeader - rightHeight,
+								'z-index': 9
+							});
+						}
                     } else {
-                        rightCol.css({
-                            'position': 'relative'
-                        });
+						if(rightHeight > getHeightSolution)
+						{
+							rightCol.css({
+								'position': 'relative'
+							});
+						}else{
+							rightCol.css({
+								'position': 'relative',
+								'top': ''
+							});
+						}
                     }
                 } else {
 					//when the user scrolls back up revert its position to relative
-					rightCol.css({
-						'position': 'relative',
-						'padding-top': ''
-					});
+					if(rightHeight > getHeightSolution)
+					{
+						rightCol.css({
+							'position': 'relative',
+							'padding-top':''
+						});
+					}else{
+						rightCol.css({
+							'position': 'relative',
+							'padding-top':'',
+							'top': ''
+						});
+					}
                 }
             } else if (rightBottom > leftBottom) {
                 //when the user reached the bottom of '#main-affix' set its position to fixed to prevent it from moving on scroll
                 if (winBottom > leftBottom) {
                     if (winBottom <= offsetContact) {
-                        leftCol.css({
-                            'position': 'fixed',
-							'bottom': 0,
-                            'padding-top':  offsetContact - heightHeader - leftHeight,
-							'z-index': 9
-                        });
+						if(leftHeight > getHeightSolution)
+						{
+							leftCol.css({
+								'position': 'fixed',
+								'bottom': 0,
+								'padding-top': offsetContact - heightHeader - leftHeight,
+								'z-index': 9
+							});
+						}else{
+							leftCol.css({
+								'position': 'fixed',
+								'bottom': 0,
+								'top':  heightHeader + leftHeight - offsetContact,
+								'padding-top': offsetContact - heightHeader - leftHeight,
+								'z-index': 9
+							});
+						}
                     } else {
-                        leftCol.css({
-                            'position': 'relative'
-                        });
+						if(leftHeight > getHeightSolution)
+						{
+							leftCol.css({
+								'position': 'relative'
+							});
+						}else{
+							leftCol.css({
+								'position': 'relative',
+								'top': ''
+							});
+						}
                     }
                 } else {
 					//when the user scrolls back up revert its position to relative
-					leftCol.css({
-						'position': 'relative',
-						'padding-top': ''
-					});
+					if(leftHeight > getHeightSolution)
+					{
+						leftCol.css({
+							'position': 'relative',
+							'padding-top':''
+						});
+					}else{
+						leftCol.css({
+							'position': 'relative',
+							'padding-top':'',
+							'top': ''
+						});
+					}
                 }
             }
         }

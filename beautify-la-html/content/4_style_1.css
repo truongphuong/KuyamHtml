@@ -169,6 +169,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .bg-white-50{background:rgba(255, 255, 255, 0.5);}
 .bg-black-50{background-color:rgba(0, 0, 0, 0.5);}
 
+.modal{background-color:rgba(0, 0, 0, 0.5);}
+.modal-backdrop{display:none;}
+
 .relative{position:relative;}
 
 .fixed{position:fixed !important;}
@@ -334,7 +337,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .section-note h4{font:24px/28px ralewaysemibold, sans-serif;}
 .section-note p{font:16px/20px ralewaymedium, sans-serif;}
 
-.main-content{padding:40px 0 0;min-height:500px;}
+.main-content{padding:40px 0 0;}
 
 .event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#fff;}
 .event-new .event-content{padding:25px;position:absolute;top:0;right:0;bottom:0;left:0;}
@@ -1851,15 +1854,15 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 #accordion-booking .panel{box-shadow:none;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 #accordion-booking .panel + .panel{margin-top:10px;}
 #accordion-booking .panel-title img{width:49px;margin-right:20px;}
-#accordion-booking .panel-title a{display:block;color:#fff;font-size:24px;padding:10px 15px;text-decoration:none;background:#f3472d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#accordion-booking .panel-title a{display:block;color:#fff;font-size:24px;padding:22px 15px 22px 65px;text-decoration:none;background:#f3472d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;position:relative;}
 #accordion-booking .panel-title a .offer-time{display:block;}
 #accordion-booking .panel-title a .offer-sale-off{display:none;}
 #accordion-booking .panel-title a.collapsed{background:#fff;color:#f3472d;}
 #accordion-booking .panel-title a.collapsed .offer-time{display:none;}
 #accordion-booking .panel-title a.collapsed .offer-sale-off{display:block;}
 #accordion-booking .panel-default > .panel-heading{	padding:0;border:0 none;background:transparent;}
-#accordion-booking .panel-default > .panel-heading .number{display:inline-block;width:49px;height:49px;border:3px solid #fff;text-align:center;line-height:38px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;}
-#accordion-booking .panel-default > .panel-heading .offer{font-family:ralewaybold, sans-serif;float:right;margin:10px 0 0 20px;}
+#accordion-booking .panel-default > .panel-heading .number{position:absolute;top:10px;left:10px;display:inline-block;width:49px;height:49px;border:3px solid #fff;text-align:center;line-height:38px;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;}
+#accordion-booking .panel-default > .panel-heading .offer{font-family:ralewaybold, sans-serif;float:right;margin:0 0 0 20px;}
 #accordion-booking .panel-default > .panel-heading .icon-down{width:22px;height:12px;display:inline-block;background:url(images/assets/arrow_up_white.png) center center no-repeat;background-size:contain;}
 #accordion-booking .panel-title .collapsed .number{border:3px solid #f3472d;}
 #accordion-booking .panel-title .collapsed .icon-down{background-image:url(images/assets/icon_arrow_red_down.png);}
@@ -2184,6 +2187,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.book-detail-page .reviews-tab .col-lg-12{padding-left:20px;padding-right:20px;}
 }
 @media (max-width:979px){
+    .happen-date .section-header h2{font-size:30px;line-height:34px;}
+
 	#main-affix{width:470px;}
 	#nav-affix{width:220px;padding:0;}
 	
@@ -2305,6 +2310,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.booked-page .site-calendar{margin-left:0;margin-right:0;}
 }
 @media (max-width:767px){
+    #main-affix,
+    #nav-affix{overflow:inherit;}
+
+    .select-text{border:0 none;}
+
+    .calendar-item-info .table-row:first-child .table-cell{ border-top: 2px solid #bababa;}
+
 	.book-detail-page{margin-left:-15px;margin-right:-15px;}
 	.book-detail-page .row{margin-left:-10px;margin-right:-10px;}
 	.book-detail-page .col-xs-1, 
@@ -2716,9 +2728,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.panel-info{width:90%;}
 	
 	#accordion-booking{padding-left:0;padding-right:0;}
-	#accordion-booking .panel-title a{font-size:16px;padding:10px;font-family:ralewaybold, sans-serif;}
+	#accordion-booking .panel-title a{padding-left:52px;font-size:16px;padding:17px 10px 17px 52px;font-family:ralewaybold, sans-serif;}
 	#accordion-booking .panel-default > .panel-heading .number{width:32px;height:32px;line-height:23px;margin-right:10px;}
-	#accordion-booking .panel-default > .panel-heading .offer{margin:5px 0 0 10px;}
+	#accordion-booking .panel-default > .panel-heading .offer{margin-left:10px;}
 	
 	.price-info{font-size:18px;line-height:22px;}
 	
