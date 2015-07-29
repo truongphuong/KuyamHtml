@@ -214,13 +214,13 @@
                                     <div class="book-tab"> 
                                         <header class="section-header">
                                             <h2>Amy's grand opening event!</h2>
-                                            <p>Welcome to Amy's Hair Salon opening event! We are pround to finally be open for business. To celebrate, we invite you to the first ever Amy's Hair Salon event spectacular! Drink wine amoung staff and other event goers and learn all about Amy's Hair Salon products and services.</p>
+                                            <p>Welcome to Amy's Hair Salon opening event! We are pround to finally be open for business. To celebrate, we invite you to the first ever Amy's Hair Salon event spectacular!</p>
                                         </header>
                                         
                                         <!-- .rsvp-section -->
                                         <div class="rsvp-section">
                                         	<div class="clearfix">
-                                                <input data-target="#modal-rsvp" data-toggle="modal" class="btn-orange btn-RSVP" type="button" value="RSVP" />
+                                                <input data-target="#modal-rsvp" data-toggle="modal" class="btn-orange btn-ticket" type="button" value="buy tickets" />
                                                 <dl class="social-icons clearfix hidden-xs">
                                                     <dt>share this event</dt>
                                                     <dd>
@@ -247,10 +247,10 @@
                                             </div>
                                             <div class="spot-info">
                                                 <p class="hidden-xs">
-                                                	<strong>10 spots left to RSVP now</strong> and get 30% off in-store purchase
+                                                	<strong>10 spots left to buy now</strong> and get 30% off in-store purchase
                                                 </p>
                                                 <p class="visible-xs">
-                                                	<strong>RSVP now</strong> and get 30% off in-store purchase<br />
+                                                	<strong>buy now</strong> and get 30% off in-store purchase<br />
                                                     <strong class="color-orange">10 spots left for reward</strong>
                                                 </p>
                                             </div>
@@ -353,7 +353,7 @@
                                                 <!-- /.timer-map -->
                                                 
                                                 <div class="hidden-xs">
-                                              		<input data-target="#modal-sold-out" data-toggle="modal" class="btn-orange btn-RSVP link-disable " type="button" value="RSVP" />
+                                              		<input data-target="#modal-sold-out" data-toggle="modal" class="btn-orange btn-ticket link-disable " type="button" value="buy tickets" />
                                                 </div>
                                                 
                                             </div>
@@ -666,7 +666,7 @@
                             <header class="section-header timer-form-header rsvp-header">    
                        			<h4>early bird reward</h4>
                                 <div class="rsvp-voucher">
-                                	<strong>RSVP now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                                	<strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
                                 </div>                       		
                          		<h4>contact info</h4>
                        		</header>
@@ -698,10 +698,11 @@
                                         <select id="select-guest" class="selectpicker select-guest">
                                             <option>2</option>
                                         </select>
+                                        <span class="ticket-price visible-xs">$15 per ticket</span>
                                     </div>
                                 </header>
                                 <div class="btn-controls">
-                                	<input slideCurrent="timer-form1" slideNext="timer-form2" class="btn-orange btn-timer" type="button" value="next" />
+                                	<input slideCurrent="timer-form1" slideNext="timer-form2" class="btn-orange btn-timer" type="button" value="next" /> <span class="ticket-price hidden-xs">$15 per ticket</span>
                                 </div>
                                 <div class="timer-error alert-error">
                                     <p>please enter required information before proceeding</p>
@@ -720,7 +721,7 @@
                             <header class="section-header timer-form-header rsvp-header">    
                        			<h4>early bird reward</h4>
                                 <div class="rsvp-voucher">
-                                	<strong>RSVP now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                                	<strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
                                 </div>                       		
                          		<h4>guest info</h4>
                        		</header>
@@ -755,7 +756,7 @@
                                 
                                 <div class="btn-controls">
                                     <a title="" href="javascript:void(0);" slideCurrent="timer-form2" slideNext="timer-form1" class="btn-orange btn-timer"><span class="icon-back"></span> back</a>
-                                    <input slideCurrent="timer-form2" slideNext="timer-form3" class="btn-orange btn-timer" type="button" value="next" />
+                                    <input slideCurrent="timer-form2" slideNext="timer-form4" class="btn-orange btn-timer" type="button" value="next" />
                                 </div>
                                 <div class="timer-error alert-error">
                                     <p>please enter required information before proceeding</p>
@@ -805,6 +806,98 @@
                             
                             <div class="text-center">
                             	<input class="btn-orange btn-timer" type="button" value="done" data-dismiss="modal" />
+                            </div>
+                            
+                        </div>
+                        <!-- /.timer-form -->
+                        
+                        <!-- .timer-form -->
+                        <div id="timer-form4" class="timer-form hide">
+                            <header class="section-header timer-form-header">
+                              	<h3>confirm your spot <span class="icon-down"></span></h3>
+                                <h2>10:00</h2>
+                               	<p>time to complete RSVP</p>
+                            </header>
+                            <header class="section-header timer-form-header rsvp-header">    
+                       			<h4>early bird reward</h4>
+                                <div class="rsvp-voucher">
+                                	<strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                                </div>                       		
+                         		<h4>checkout</h4>
+                       		</header>
+                           	<fieldset class="ticket-fieldset">
+                                <div class="table-css table-ticket">
+                                	<div class="table-row">
+                                    	<div class="table-cell td-info">
+                                        	John <span>Doe</span><br />
+                                            johndoe@gmail.com
+                                        </div>
+                                        <div class="table-cell td-price">
+                                        	$15
+                                        </div>
+                                	</div>
+                                </div>
+                                <div class="table-css table-ticket">
+                                	<div class="table-row">
+                                    	<div class="table-cell td-info">
+                                        	Lisa<span> Johnson</span><br />
+                                            lisajohnson@gmail.com
+                                        </div>
+                                        <div class="table-cell td-price">
+                                        	$15
+                                        </div>
+                                	</div>
+                                </div>
+                                <div class="table-css table-total">
+                                	<div class="table-row">
+                                    	<div class="table-cell td-info">
+                                        	total due:
+                                        </div>
+                                        <div class="table-cell td-price">
+                                        	$15
+                                        </div>
+                                	</div>
+                                </div>
+                                
+                                <div class="btn-controls btn-control-paypal"> 
+                                    <a title="" href="javascript:void(0);" slideCurrent="timer-form4" slideNext="timer-form2" class="btn-orange btn-timer"><span class="icon-back"></span> back</a>
+                                    <button slideCurrent="timer-form4" slideNext="timer-form5" class="btn-orange btn-timer btn-paypal"><span class="icon-paypal"></span> PayPal or credit card</button>
+                                </div> 
+                        	</fieldset>
+                        </div>
+                        <!-- /.timer-form -->  
+                        
+                        <!-- .timer-form -->
+                        <div id="timer-form5" class="timer-form hide">
+                            <header class="section-header timer-form-header">
+                                <h3>purchase complete!</h3>
+                                <p>you're going to the event! we will send you a confirmation<br class="visible-lg" /> email with the event details.</p>
+                            </header>
+                            <header class="section-header timer-form-header rsvp-header">
+                            	<div class="progress">
+                                	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> 60% </div>
+                                </div>
+                               	<strong>invite your friends for event more rewards</strong> - if the attendee goal is reached, everyone who attends will recieve a gift bag sponsored by Beauty Works LA
+                                
+                       		</header>
+                            <!-- .ticket-calendar -->
+                            <div class="ticket-calendar">
+                                <div class="ticket-back">
+                                    <h4>share this event</h4>
+                                </div>
+                                <ul class="link-share clearfix"> 
+                                    <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                                    <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Email_share.png" /></a></li>
+                                    <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Share_link.png" /></a></li>
+                                </ul> 
+                                
+                                <div class="addtocalendar"></div>                               
+                            </div>
+                            <!-- /.ticket-calendar -->
+                            
+                            <div class="text-center">
+                            	<input class="btn-orange btn-timer" type="button" value="done" data-dismiss="modal" /><br /><br />
                             </div>
                             
                         </div>
@@ -969,6 +1062,63 @@
 			});
 			
 		</script>  
+        
+        <script src="scripts/addtocalendar.js"></script>
+        <link rel="stylesheet" href="content/addtocalendar.css" />
+        <script type="text/javascript">
+            $('#modal-rsvp').on('shown.bs.modal', function () {	
+				var contentCalendar = $('.addtocalendar').html();
+                if(contentCalendar ==  ''){
+					var myCalendar = createCalendar({
+						options: {
+							class: 'my-calendar',
+							id: 'my-calendar'                               // You need to pass an ID. If you don't, one will be generated for you.
+						},
+						data: {
+							title: 'Get on the front page of HN',     // Event title
+							start: new Date('June 15, 2013 19:00'),   // Event start date
+							duration: 120,                            // Event duration (IN MINUTES)
+							end: new Date('June 15, 2013 23:00'),     // You can also choose to set an end time.
+																	// If an end time is set, this will take precedence over duration
+							address: 'The internet',
+							description: 'Get on the front page of HN, then prepare for world domination.'
+						}
+					});
+		
+					document.querySelector('.addtocalendar').appendChild(myCalendar);
+				}	
+				
+				dropdownCalendar();		
+				
+            });
+            
+            function dropdownCalendar() {
+                var tempId, currentId;
+            
+                $(document).click(function () {
+                     tempId = "";
+                    $(".add-to-calendar ul").hide();
+                });
+            
+                $('.add-to-calendar').on('click', function (e) {
+                    e.stopPropagation();
+                    currentId = $(this).attr('id');
+                    if (currentId != null) {
+            
+                        if (currentId != tempId) {
+                            $('.add-to-calendar').find('ul').hide();
+                            $(this).find('ul').show();
+                            tempId = currentId;
+                        }
+                        else {
+                            tempId = "";
+                            $('.add-to-calendar').find('ul').hide();
+                        }
+                    }
+                });
+            }
+            
+        </script>
         
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->

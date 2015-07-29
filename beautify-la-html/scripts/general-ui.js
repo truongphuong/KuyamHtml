@@ -49,7 +49,6 @@ function sticky() {
 
         var winTop = $(this).scrollTop(),
             winBottom = winTop + getHeightSolution;
-		console.log(rightHeight);
 
         if (rightHeight == 0 || leftHeight == 0) {
             return;
