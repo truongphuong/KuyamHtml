@@ -2083,11 +2083,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .modal-checkout-term .modal-footer{border:0 none;text-align:left;padding-top:0;}
 
 .ticket-fieldset{}
-.ticket-fieldset .table-css{width:100%;margin-bottom:10px;}
+.ticket-fieldset .table-border{background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;margin-bottom:10px;}
+.ticket-fieldset .table-css{width:100%;}
 .ticket-fieldset .table-cell{padding:10px;}
-.ticket-fieldset .table-ticket{background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
 .ticket-fieldset .td-info{}
-.ticket-fieldset .td-price{width:100px;font-family:ralewaybold, sans-serif;text-align:center;vertical-align:middle;}
+.ticket-fieldset .td-price{width:100px;font-family:ralewaybold, sans-serif;text-align:right;vertical-align:middle;}
+.ticket-fieldset .td-email{padding:0 10px 10px;word-break:break-all;}
 .ticket-fieldset .table-total{}
 .ticket-fieldset .table-total .td-info{font-family:ralewayextrabold, sans-serif;}
 
@@ -2821,6 +2822,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.modal-booked .table-steps h3{padding-top:0;}
 	
 	.modal-checkout-term .modal-header{padding-right:60px;}	
+	
+	.ticket-fieldset .table-cell{padding-bottom:0;}
+	.ticket-fieldset .table-total{border-top:2px dashed #ddd;}
+	.ticket-fieldset .table-total .table-cell{padding-bottom:10px;}
+	.ticket-fieldset .td-price{vertical-align:top;}
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}
@@ -2947,6 +2953,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.modal-rsvp .timer-form .btn-paypal{padding:0 10px;font-size:17px;}
 	.icon-paypal{width:24px;background-size:contain;}
 	.btn-paypal .icon-paypal{bottom:-10px;}
+	
+	.ticket-fieldset .td-info{width:60%;}
+	.ticket-fieldset .td-price{width:40%;}
 }
 @media (max-width:372px){
 	.event-block{height:116px;}
