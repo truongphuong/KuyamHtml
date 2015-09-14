@@ -52,20 +52,113 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <span class="welcome-user visible-xs">hi, kourosh!</span>
+                </button>                
                 <dl class="social-icons hidden-xs on-desktop clearfix">
                     <dt>join the community</dt>
-                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
-                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
-                    <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
-                    <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest.png" /></a></dd>
-                    <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube.png" /></a></dd>
+                    <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter_share_small.png" /></a></dd>
+                    <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook_share_small.png" /></a></dd>
+                    <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus_share_small.png" /></a></dd>
+                    <dd><a title="" href="http://pinterest.com/kuyam/"><img alt="" src="content/images/assets/icons_social/Pinterest_share_small.png" /></a></dd>
+                    <dd><a title="" href="https://www.youtube.com/channel/UCxQN7WyQsSc57qxcAIeZEXg"><img alt="" src="content/images/assets/icons_social/Youtube_share_small.png" /></a></dd>
                 </dl> 
+                <section class="area-section">
+                	<select id="select-area" class="selectpicker select-area">
+                        <option value="">LA</option>
+                        <option value="">OC</option>
+                        <option value="">SD</option>
+                    </select>
+                </section>
+                <section class="region-section">
+                	<select id="select-region" class="selectpicker select-region" data-header='<form class="filter-form" action="#"><input type="text" placeholder="Filter by name" class="form-control filter-input"></form>'>
+                        <option value="">Entire region</option>
+                        <option>Australia</option>
+                        <option>Austria</option>
+                        <option>Belgium</option>
+                        <option>Brazil</option>
+                        <option>Canada</option>
+                        <option>Denmark</option>
+                        <option>Finland</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Greece</option>
+                        <option>Ireland</option>
+                        <option>Israel</option>
+                        <option>Italy</option>
+                        <option>Japan</option>
+                        <option>Luxembourg</option>
+                        <option>Mexico</option>
+                        <option>Netherlands</option>
+                        <option>Norway</option>
+                        <option>Poland</option>
+                        <option>Portugal</option>
+                        <option>Russia</option>
+                        <option>Spain</option>
+                        <option>Sweden</option>
+                        <option>Switzerland</option>
+                        <option>Turkey</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                    </select>
+                </section>
+                <script type="text/javascript">
+					$(document).ready(function(){	
+						$('#select-area, #select-region').selectpicker();
+						selectArea();
+					});
+					$(window).resize(function(){
+						selectArea();
+					});
+					function selectArea(){
+						var areaLeft = $('.area-section').offset().left;
+						if($(window).width() < 768){
+							$('.area-section div.dropdown-menu').css({'margin-left': - areaLeft});
+							$('.area-section ul.dropdown-menu').css({'width': $(window).width()});
+						}else{
+							$('.area-section div.dropdown-menu').css({'margin-left': ''});
+							$('.area-section ul.dropdown-menu').css({'width': ''});
+						}
+					}
+					
+					(function ($) {
+					  	// custom css expression for a case-insensitive contains()
+					  	jQuery.expr[':'].Contains = function(a,i,m){
+						  	return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+					  	};
+					
+					
+					  	function listFilter(header, list) { 						
+							$('input.filter-input').change( function (e) {
+								e.preventDefault();
+								var filter = $(this).val();
+								if(filter) {
+									// this finds all links in a list that contain the input,
+									// and hide the ones not containing the input while showing the ones that do
+									$(list).find(".text:not(:Contains(" + filter + "))").parents("li").slideUp();
+									$(list).find(".text:Contains(" + filter + ")").parents("li").slideDown();
+								} else {
+									$(list).find(".text").parents("li").slideDown();
+								}
+								return false;
+							}).keyup( function () {
+								// fire the above change event after every letter
+								$(this).change();
+							});
+					  	}
+					
+					
+					  	//ondomready
+					  	$(function () {
+							listFilter($(".select-region .popover-title"), $(".select-region ul.dropdown-menu"));
+					  	});
+					}(jQuery));
+
+				</script>
                 <div class="clear"></div>
                 
                 <!-- .navbar-collapse --> 
                  <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
+                 	<span class="welcome-user visible-xs">hi, kourosh!</span>
+                    <div class="clear"></div>
                     <ul class="nav navbar-nav navbar-right nav-main"> 
                     	<li><a href="lifestyle-blog.html" title="">lifestyle blog<span class="on-desktop hidden-xs"></span></a></li>
                         <li class="visible-xs"><a href="#" title="">sign out</a></li> 
@@ -428,7 +521,7 @@
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
-    <script type="text/javascript" src="scripts/general-ui.js"></script>
+    <!--<script type="text/javascript" src="scripts/general-ui.js"></script>-->
     <!-- === END SCRIPTS === -->    
 </body>
 <!-- InstanceEnd --></html>
