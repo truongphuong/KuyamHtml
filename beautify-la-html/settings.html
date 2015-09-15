@@ -752,6 +752,48 @@
                                                             </div>
                                                         </div>                                                   
                                                         <div class="section-row section-row-first">	
+															<div class="row form-row">
+                                                                <div class="col-xs-6">
+																	<select id="select-area-event" class="select-settings select-100">
+																		<option value="">Select area</option>
+																		<option value="">LA</option>
+																		<option value="">OC</option>
+																		<option value="">SD</option>
+																	</select>
+																</div>
+																<div class="col-xs-6">
+																	<select id="select-region-event" class="select-settings select-100">
+																		<option value="">Entire region</option>
+																		<option>Australia</option>
+																		<option>Austria</option>
+																		<option>Belgium</option>
+																		<option>Brazil</option>
+																		<option>Canada</option>
+																		<option>Denmark</option>
+																		<option>Finland</option>
+																		<option>France</option>
+																		<option>Germany</option>
+																		<option>Greece</option>
+																		<option>Ireland</option>
+																		<option>Israel</option>
+																		<option>Italy</option>
+																		<option>Japan</option>
+																		<option>Luxembourg</option>
+																		<option>Mexico</option>
+																		<option>Netherlands</option>
+																		<option>Norway</option>
+																		<option>Poland</option>
+																		<option>Portugal</option>
+																		<option>Russia</option>
+																		<option>Spain</option>
+																		<option>Sweden</option>
+																		<option>Switzerland</option>
+																		<option>Turkey</option>
+																		<option>United Kingdom</option>
+																		<option>United States</option>
+																	</select>
+																</div>
+															</div>
                                                             <div class="row form-row">
                                                                 <div class="col-xs-12">
                                                                     <label class="label-title">service 1:</label>
@@ -830,7 +872,51 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="section-row section-row-first">                                                        		
+														<div class="section-row section-row-first">   
+															<div class="row form-row">
+																<div class="col-xs-6">
+																	<select id="select-area-PSVP" class="select-settings select-100">
+																		<option value="">Select area</option>
+																		<option value="">LA</option>
+																		<option value="">OC</option>
+																		<option value="">SD</option>
+																	</select>
+																</div>
+																<div class="col-xs-6">
+																	<select id="select-region-PSVP" class="select-settings select-100">
+																		<option value="">Entire region</option>
+																		<option>Australia</option>
+																		<option>Austria</option>
+																		<option>Belgium</option>
+																		<option>Brazil</option>
+																		<option>Canada</option>
+																		<option>Denmark</option>
+																		<option>Finland</option>
+																		<option>France</option>
+																		<option>Germany</option>
+																		<option>Greece</option>
+																		<option>Ireland</option>
+																		<option>Israel</option>
+																		<option>Italy</option>
+																		<option>Japan</option>
+																		<option>Luxembourg</option>
+																		<option>Mexico</option>
+																		<option>Netherlands</option>
+																		<option>Norway</option>
+																		<option>Poland</option>
+																		<option>Portugal</option>
+																		<option>Russia</option>
+																		<option>Spain</option>
+																		<option>Sweden</option>
+																		<option>Switzerland</option>
+																		<option>Turkey</option>
+																		<option>United Kingdom</option>
+																		<option>United States</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+                                                        <div class="section-row">                                                        		
                                                             <div class="row form-row">
                                                                 <div class="col-xs-12">
                                                                     <label>maximum RSVP spots available: <span class="error">*</span></label><br />
@@ -1512,7 +1598,8 @@
                                             <!-- /#setting-4 -->
                                             
                                             <script type="text/javascript">
-												$(document).ready(function(){	
+												$(document).ready(function(){
+													$('.select-settings').selectpicker();
 													$('.selectpicker-settings').selectpicker();
 													$('.btn-settings').click(function(e){
 														var slideNext = "#" + $(this).attr("slideNext"),
