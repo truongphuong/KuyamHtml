@@ -182,7 +182,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .p10{padding:10px;}
 
-.visible-xs.ng-hide{ display: none !important;}
+.visible-xs.ng-hide{ display:none !important;}
 
 .loading{background:url(images/assets/progress.gif) center center no-repeat #000;display:none;position:fixed;top:0;left:0;bottom:0;right:0;z-index:9999;opacity:0.5;filter:alpha(opacity=50);}
 .light-box{display:none;background:#000;position:fixed;top:0;left:0;right:0;bottom:0;opacity:0.5;filter:alpha(opacity=50);z-index:2;}
@@ -2191,12 +2191,24 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	z-index:1036 !important;
 }
 .region-section .iScrollIndicator{
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important; 
-	border-radius: 0 !important; 
+	-webkit-border-radius:0 !important;
+	-moz-border-radius:0 !important; 
+	border-radius:0 !important; 
 	border:#666 !important;
 	background:#666 !important;
 }
+
+.modal-geo-location{width:370px;}
+.modal-geo-location .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.modal-geo-location .modal-header{border:0 none;padding:25px 20px 10px;}
+.modal-geo-location .modal-header .modal-title{font:18px/30px ralewaybold, sans-serif;margin:16px 0 10px;color:#333;}
+.modal-geo-location .modal-header h4{font:14px/20px ralewaymedium, sans-serif;margin:0 0 10px;color:#333;}
+.modal-geo-location .modal-header .close{width:33px;height:33px;background:url(images/assets/icon_close.png) center center no-repeat;opacity:1;top:-16px;right:-16px;}
+.modal-geo-location .modal-body{padding:15px 20px 12px;font:15px/18px ralewaymedium, sans-serif;}
+.modal-geo-location .modal-footer{border:0 none;}
+.modal-geo-location .register-form .txt_Email{font-size:14px;color:#333;}
+.modal-geo-location .register-form .btn_Join{padding:0;font-size:14px;}
+.modal-geo-location .btn{-webkit-border-radius:0 !important;-moz-border-radius:0 !important;border-radius:0 !important;}
 
 @media (max-width:991px){
 	.div-zip{margin-top:20px;}
@@ -2439,11 +2451,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
     .select-text{border:0 none;}
 
-    .checkout-payment header{ padding: 0;text-align:center;}
+    .checkout-payment header{ padding:0;text-align:center;}
 
     .checkout-info p time{display:inline-block !important;}
 
-    .calendar-item-info .table-row:first-child .table-cell{ border-top: 2px solid #bababa;}
+    .calendar-item-info .table-row:first-child .table-cell{ border-top:2px solid #bababa;}
 
 	.book-detail-page{margin-left:-15px;margin-right:-15px;}
 	.book-detail-page .row{margin-left:-10px;margin-right:-10px;}
@@ -2941,6 +2953,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.region-section .bootstrap-select{height:44px;overfloat:hidden;}
 	.region-section .bootstrap-select.open{height:auto;}
 	.region-section .dropdown-menu > li > a{font-size:16px;line-height:20px;}
+	
+	.modal-geo-location{width:auto;}
+	.modal-geo-location .modal-header .close{width:62px;height:62px;background-image:url(images/assets/mobile/icon_close.png) !important;top:0;right:0;}
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}

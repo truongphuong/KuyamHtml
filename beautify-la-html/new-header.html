@@ -250,6 +250,57 @@
         <!-- InstanceBeginEditable name="banner" -->  
         <!-- InstanceEndEditable -->      
         <!-- InstanceBeginEditable name="content" -->
+        
+        <center>
+        	<br /><br />
+            <input class="btn" type="button" data-target="#modal-hey" data-toggle="modal" value="Hey popup" />
+            <input class="btn" type="button" data-target="#modal-thank-you" data-toggle="modal" value="Thank you popup" />
+            <br /><br />
+        </center>
+        
+        <!-- .modal-notify -->    
+        <div class="modal fade" id="modal-hey" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-geo-location">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">Hey! It looks like you are in New York.</h3>
+                        <h4>Your area is not supported yet, but we can send you an email as soon as we reach your area.</h4>
+                    </div>
+                    <div class="modal-body">
+                  		<fieldset class="register-form clearfix">                    	
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" value="enter your email" onfocus="if (this.value == 'enter your email') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'enter your email'; }" class="form-control txt_Email" />
+                                    <input type="button" value="sign up" class="input-group-addon btn_Join" />
+                                </div>
+                            </div>
+                        </fieldset>            
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-notify --> 
+        
+         <!-- .modal-notify -->    
+        <div class="modal fade" id="modal-thank-you" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-geo-location">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h3 class="modal-title">Thank you!</h3>
+                        <h4>We will now redirect you to the closet area.</h4>
+                    </div>
+                    <div class="modal-body">
+                   		<input type="button" data-dismiss="modal" value="Enter the website" class="btn btn-orange" />          
+                    </div>
+                    <div class="modal-footer">                	
+                     </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- /.modal-notify --> 
+        
         <!-- InstanceEndEditable --> 
        <!-- .site-contact -->
         <section id="contact" class="site-contact"> 
