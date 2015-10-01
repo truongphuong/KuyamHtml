@@ -146,7 +146,6 @@
 								click: true 
 							});
 						}
-						selectAreaScroll.refresh();
 						
 						var hasContent = $('.region-section').find('.dropdown-menu.open').length;
 						if(hasContent)
@@ -231,6 +230,7 @@
 								}
 							}
 							setTimeout(function(){
+								selectAreaScroll.refresh();
 								selectScroll.refresh();
 							}, 300);
 						});
