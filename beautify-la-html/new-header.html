@@ -69,6 +69,30 @@
                         <option data-subtext="(CA)" value="">OC</option>
                         <option value="">SD</option>
                         <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
+                        <option value="">LA</option>
+                        <option data-subtext="(CA)" value="">OC</option>
+                        <option value="">SD</option>
+                        <option data-subtext="(NJ)" value="">OC</option>
                     </select>
                 </section>
                 <section class="region-section">
@@ -104,11 +128,25 @@
                     </select>
                 </section>
                 <script type="text/javascript">
-					var selectScroll;
-										
+					var selectScroll,
+						selectAreaScroll;					
 					$(document).ready(function(){	
 						$('#select-area, #select-region').selectpicker();
 						selectArea();
+						
+						var hasContentArea = $('.area-section').find('.dropdown-menu.open').length;
+						if(hasContentArea){
+							$('.area-section .dropdown-menu.open').attr("id", "selectArea");
+							selectAreaScroll = new IScroll('#selectArea', {
+								scrollbars: true,
+								mouseWheel: true,
+								interactiveScrollbars: true,
+								shrinkScrollbars: 'scale',
+								fadeScrollbars: true,
+								click: true 
+							});
+						}
+						selectAreaScroll.refresh();
 						
 						var hasContent = $('.region-section').find('.dropdown-menu.open').length;
 						if(hasContent)
@@ -129,6 +167,7 @@
 					$(window).resize(function(){
 						selectArea();
 						selectScroll.refresh();
+						selectAreaScroll.refresh();
 					});
 					
 					function selectArea(){

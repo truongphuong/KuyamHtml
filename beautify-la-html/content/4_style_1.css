@@ -2119,7 +2119,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .area-section .bootstrap-select.open{background:#333333;}
 .area-section .bootstrap-select.btn-group .btn .caret{background-image:url(images/assets/icon_dropdown_white.png);}
 .area-section .dropdown-menu{background:#333333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
-.area-section .bootstrap-select.btn-group .dropdown-menu.inner{max-height:280px !important;}
+.area-section .bootstrap-select.btn-group .dropdown-menu.open{max-height:370px !important;}
+.area-section .bootstrap-select.btn-group .dropdown-menu.inner{max-height:initial !important;}
 .area-section .dropdown-menu > li{border:0 none;}
 .area-section .dropdown-menu > li.selected{display:none;}
 .area-section .dropdown-menu > li > a{font:50px/60px ralewayextralight,sans-serif;color:#fff;padding:6px 12px;}
@@ -2154,6 +2155,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .region-section .dropdown-menu > li > a:hover, 
 .region-section .dropdown-menu > li > a:focus{background:transparent;color:#f14836;}
 
+.area-section .dropdown-menu,
 .region-section .dropdown-menu{
 	display:block;
     background-clip:padding-box;
@@ -2179,6 +2181,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
     -o-transition:all 0.2s linear;
     transition:all 0.2s linear;
 }
+.area-section .open > .dropdown-menu,
 .region-section .open > .dropdown-menu{
 	-webkit-transform:scale(1, 1);
     -moz-transform:scale(1, 1);
@@ -2188,11 +2191,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   	filter:alpha(opacity=100);
 }
+.area-section .iScrollVerticalScrollbar,
 .region-section .iScrollVerticalScrollbar{
 	width:9px !important;
 	opacity:1 !important;
 	z-index:1036 !important;
 }
+.area-section .iScrollIndicator,
 .region-section .iScrollIndicator{
 	-webkit-border-radius:0 !important;
 	-moz-border-radius:0 !important; 
@@ -2946,6 +2951,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	
 	.area-section{margin:0 12px;}
 	.area-section .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width:90px;}
+	.area-section .bootstrap-select{height:44px;overfloat:hidden;}
+	.area-section .bootstrap-select.open{height:auto;}
+	.area-section .bootstrap-select.btn-group .dropdown-menu.open{max-height:410px !important;}
 	.area-section .bootstrap-select .selectpicker{font-size:20px;line-height:24px;}
 	.area-section .dropdown-menu{position:inherit;}
 	.area-section .dropdown-menu > li{float:left;width:50%;text-align:center;height:82px;}
