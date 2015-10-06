@@ -820,7 +820,9 @@
                                         <header class="section-header">
                                             <h3><a title="" href="#">what to eat before you exercise</a></h3> 
                                         </header>
-                                        <p>Some people think that working out on an empty stomach can help you lose weight and achieve a slimmer, toner body. The thuth is...</p>
+                                        <div class="article-short-des">
+                                        	<p>Some people think that working out on an empty stomach can help you lose weight and achieve a slimmer, toner body. The thuth is Some people think that working out on an empty stomach can help you lose weight and achieve a slimmer, toner body. The thuth is</p>
+                                        </div>
                                         <q>by <a title="" href="#"><strong>Theresa Heim</strong></a></q>
                                     </div>
                                 </div> 
@@ -839,11 +841,34 @@
                                         <header class="section-header">
                                             <h3><a title="" href="#">Dating: LA's best Inexpensive Spots for a First Date</a></h3> 
                                         </header>
-                                        <p>You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...</p>
+                                        <div class="article-short-des">
+                                        	<p>You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances Some people think that working out on an empty stomach can help you lose weight and achieve a slimmer, toner body. The thuth is</p>
+                                        </div>
                                         <q>by <a title="" href="#"><strong>Theresa Heim</strong></a></q>
                                     </div>
                                 </div> 
                                 <!-- /.article-block --> 
+                                
+                                <!-- .article-block --> 
+                                <div class="article-block">
+                                    <a title="" href="#" class="article-img" style="background-image:url(content/images/assets/canon_drive.jpg);">
+                                        <span class="article-caption">
+                                            <header class="section-header">
+                                                <h3>read article</h3> 
+                                            </header>
+                                        </span> 
+                                    </a>
+                                    <div class="article-intro">
+                                        <header class="section-header">
+                                            <h3><a title="" href="#">what to eat before you exercise</a></h3> 
+                                        </header>
+                                        <div class="article-short-des">
+                                        	<p>Some people think that working out on </p>
+                                        </div>
+                                        <q>by <a title="" href="#"><strong>Theresa Heim</strong></a></q>
+                                    </div>
+                                </div> 
+                                <!-- /.article-block -->
                         	
                             </div>
                             <!-- /.article-list --> 
@@ -1414,7 +1439,28 @@
     <!-- END HTML --> 
     
     <!-- === SCRIPTS === --> 
-    <!-- InstanceBeginEditable name="script" -->    
+    <!-- InstanceBeginEditable name="script" -->   
+    <script>
+    $(document).ready(function(){	
+		setDotForArticle();
+    }); 
+	
+	$(window).resize(function(){
+		setDotForArticle();
+	});
+	
+	function setDotForArticle(){
+		$('.article-short-des p').each(function(){		
+			var p=$(this);
+			var divh=$(this).parent().height();
+			while ($(p).outerHeight()>divh) {
+				$(p).text(function (index, text) {
+					return text.replace(/\W*\s(\S)*$/, '...');
+				});
+			}
+		});
+	}
+	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
