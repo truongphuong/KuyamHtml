@@ -351,6 +351,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .section-note p{font:16px/20px ralewaymedium, sans-serif;}
 
 .main-content{padding:40px 0 0;}
+.main-content > .container{position:relative;}
 
 .event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#fff;}
 .event-new .event-content{padding:25px;position:absolute;top:0;right:0;bottom:0;left:0;}
@@ -412,8 +413,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .slide-feature-blog-details .carousel-caption q strong{font:26px/30px ralewaybold, sans-serif;}
 .slide-feature-blog-details .carousel-caption q time{float:right;font:26px/30px ralewaybold, sans-serif;}
 
-#main-affix{width:630px;overflow:hidden;}
-#nav-affix{width:290px;padding:0 0 0 60px;overflow:hidden;}
+#main-affix{width:630px;}
+#nav-affix{width:290px;padding:0 0 0 60px;}
 
 .skip-section{text-align:right;padding:0 0 20px;}
 .skip-section a{color:#fff;font:26px/30px ralewayregular, sans-serif;}
@@ -895,7 +896,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .filter-setion{}
 .filter-setion .bootstrap-select{float:left;width:308px !important;margin:0 0 0 7px !important;}
 .filter-setion .select-category{margin-left:0 !important;}
-.filter-setion .select-full{width:100% !important;}
+.filter-setion .select-full{width:100% !important;margin-left:0 !important;}
 
 .link-share{margin:0;padding:0;list-style:none;text-align:center;}
 .link-share li{display:inline-block;width:37px;margin:10px 15px;}
@@ -2276,6 +2277,23 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .new-spot.single-ticket-spot .section-ellipsis,
 .new-spot.single-rsvp-spot  .section-ellipsis{height:96px;}
 
+.multi-section .section-header h2{font-size:32px;font-family:ralewaybold, sans-serif;}
+.multi-section .section-header h4{font-size:21px;font-family:ralewaybold, sans-serif;margin-bottom:10px;}
+.offer-spot{height:auto;}
+.offer-spot .spot-right .spot-content{padding-top:10px;}
+.offer-spot .spot-left .spot-img{height:210px;}
+.offer-spot .social-icons{text-align:left;padding:3px 20px;margin:0;float:none;}
+.offer-spot .social-icons dt{display:inline-block;font:14px/35px ralewaysemibold, sans-serif;color:#000;}
+.offer-spot .spot-right .spot-content h2{margin-bottom:0;color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.offer-spot .section-item{border:1px solid #2c2c2c;padding:5px;margin-bottom:10px;background:#fff;}
+.offer-spot .section-type{height:150px;}
+.offer-spot .section-title{float:left;width:70%;font:16px/28px ralewaymedium, sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.offer-spot .section-title span{width:28px;height:28px;display:block;font:14px/22px ralewaymedium, sans-serif;float:left;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;border:1px solid #2c2c2c;text-align:center;margin-right:5px;}
+.offer-spot .section-offer{float:left;width:30%;font:16px/28px ralewaybold, sans-serif;text-align:right;color:#f3472d;}
+.offer-spot .btn-orange{font:24px/40px bebas_neueregular, sans-serif;margin-bottom:10px;}
+
+.back-to-top{display:block;width:45px;padding-top:55px;text-align:center;color:#000;text-decoration:none;background:url(images/assets/options-icon-up.png) center top no-repeat;background-size:45px;position:absolute;bottom:10px;right:15px;}
+
 @media (min-width:992px){
 	.region-section .bootstrap-select.btn-group .btn .filter-option{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 }
@@ -2524,6 +2542,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.new-spot.single-ticket-spot .section-ellipsis, 
 	.new-spot.single-rsvp-spot .section-ellipsis{max-height:72px;height:auto;}
 	.new-spot .spot-right .spot-content h2{font-size:20px;}
+	
+	.offer-spot .spot-right .spot-content{padding-left:10px;padding-right:10px;}
+	.offer-spot .spot-left .spot-img{display:block;}
+	.offer-spot .social-icons{position:absolute;top:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.5);text-align:right;}
+	.offer-spot .social-icons dt{color:#fff;}
 }
 @media (max-width:968px){
 	.modal-offer{width:95%;}
