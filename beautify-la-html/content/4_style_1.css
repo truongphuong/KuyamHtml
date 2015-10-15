@@ -2291,9 +2291,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .multi-page .section-header,
 .multi-page .timer-section{padding:0 !important;}
-.multi-page .section-header h2{font-size:32px;font-family:ralewaybold, sans-serif;}
-.multi-page .section-header h3{font-size:24px;font-family:ralewaybold, sans-serif;}
-.multi-page .section-header h4{font-size:21px;font-family:ralewaybold, sans-serif;margin-bottom:10px;}
+.multi-page .event-section .section-header h2{font-size:32px;font-family:ralewaybold, sans-serif;}
+.multi-page .event-section .section-header h3{font-size:24px;font-family:ralewaybold, sans-serif;}
+.multi-page .event-section .section-header h4{font-size:22px;font-family:ralewaybold, sans-serif;}
+.multi-page .event-section .section-header h5{font-size:18px;font-family:ralewaybold, sans-serif;margin-bottom:10px;}
 .multi-page .article-list .section-header h3{font-family:ralewaybold,sans-serif;font-size:24px;margin:15px 0;}
 .multi-page .article-list .section-header{margin:0;}
 .multi-page .article-block{margin-top:15px;}
@@ -2315,7 +2316,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .back-to-top{display:block;width:45px;padding-top:55px;text-align:center;color:#000;text-decoration:none;background:url(images/assets/options-icon-up.png) center top no-repeat;background-size:45px;position:absolute;bottom:10px;right:15px;}
 
-.new-spot-event .btn-orange{display:block;font:24px/51px bebas_neueregular, sans-serif;text-decoration:none;margin-bottom:15px;}
+.new-spot-event .bar-btn .btn-orange{display:block;font:24px/51px bebas_neueregular, sans-serif;text-decoration:none;margin-bottom:15px;}
+.new-spot-event .spot-content h2{font-size:36px;}
+.new-spot-event .spot-content p{font-size:16px;}
 .new-spot-event .spot-bar{background:#f1f6f9;height:57px;}
 .new-spot-event .spot-bar .progress{height:10px;background:#CCDAE3;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
 .new-spot-event .spot-bar .spot-guests{background-image:url(images/assets/Guests_icon.png);}
@@ -2324,6 +2327,29 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .new-spot-event .timer-section .address-block .section-header{margin-bottom:15px;}
 .new-spot-event .timer-section .address-block .section-header h4{margin:0;font:19px/150% ralewaybold, sans-serif;}
 .new-spot-event .timer-section .address-block .section-header p{margin:0;font:16px/150% ralewaymedium, sans-serif;}
+
+.booking-multi{padding:15px 0 5px;}
+.booking-multi > .section-header{margin-bottom:10px;}
+.booking-multi #accordion-booking .panel{border:1px solid #D5D9DC;}
+.booking-multi #accordion-booking .panel-default > .panel-heading .number{border-color:#333;color:#333;width:30px;height:30px;line-height:24px;border-width:2px;top:8px;}
+.booking-multi #accordion-booking .panel-title a{background:#fff;color:#333;font-size:16px;font-family:ralewaybold, sans-serif;padding:15px 50px;}
+.booking-multi #accordion-booking .panel-default > .panel-heading .icon-down{position:absolute;right:20px;top:18px;background-image:url(images/assets/icon-down-black.png);height:9px;width:14px;}
+.booking-multi #accordion-booking .panel-default > .panel-heading .collapsed .icon-down{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.booking-multi .panel-info{width:auto;padding-bottom:10px;}
+.booking-multi .panel-info > .btn-orange{font-size:24px;font-family:bebas_neueregular, sans-serif;text-decoration:none;}
+.booking-multi .price-info{font-size:16px;line-height:20px;font-family:ralewaybold, sans-serif;}
+.booking-multi .price-info .table-cell{padding:10px 5px;}
+.booking-multi .price-info .table-cell:first-child{padding-left:35px;}
+.booking-multi .price-info .table-cell:last-child{padding-right:35px;}
+.booking-multi .regular-price-row{color:#333;font-family:ralewaysemibold, sans-serif;}
+.booking-multi .regular-price-row .table-cell{padding-top:0;padding-bottom:20px;}
+.booking-multi .new-price-row{color:#333;background:#ebf2f6;}
+.booking-multi #accordion-booking .panel-title a .offer-sale-off,
+.booking-multi .savings-row{color:#f3472d;}
+.booking-multi .savings-row .table-cell{padding-top:20px;padding-bottom:0;}
+.booking-multi #accordion-booking .panel-body h2{margin:15px 0;}
+.booking-multi .panel-info > .btn{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:40px;}
+.booking-multi .panel-info p{font-size:12px;line-height:16px;}
 
 @media (min-width:992px){
 	.region-section .bootstrap-select.btn-group .btn .filter-option{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
@@ -3121,6 +3147,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.multi-page .section-header h4{font-size:16px;line-height:22px;}
 	
 	.new-spot-event .address-block{padding:10px;}
+	.multi-page .event-section .section-header h5{font-size:16px;line-height:20px;}
+	.multi-page .event-section .section-header h4{font-size:18px;line-height:22px;}
+	.multi-page .event-section .section-header h3{font-size:20px;line-height:24px;}
+	.new-spot-event .spot-content h2{font-size:22px;line-height:26px;}
+	
+	.booking-multi #accordion-booking{padding-left:10px;padding-right:10px;}
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}
