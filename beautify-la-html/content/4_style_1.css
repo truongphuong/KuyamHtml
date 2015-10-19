@@ -248,15 +248,18 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .btn-disable,
 .btn-disable:hover,
 .btn-disable:active,
+.btn-disable:focus,
 .btn-disable:visited,
 .btn_disable,
 .btn_disable:hover,
 .btn_disable:active,
+.btn_disable:focus,
 .btn_disable:visited{background:#ccc;}
 
 .link-disable,
 .link-disable:hover,
 .link-disable:active,
+.link-disable:focus,
 .link-disable:visited{background:#999;}
 
 .color-white,
@@ -2240,7 +2243,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .spot-left{float:left;width:30%;text-align:center;position:relative;}
 .spot-left .spot-img{display:block;height:274px;background:center center no-repeat;background-size:cover;}
 .spot-left .btn-black-50{position:absolute;top:0;left:0;right:0;text-decoration:none;font:34px/65px bebas_neueregular, sans-serif;}
-.spot-left .spot-date{background:#fff;border:1px solid #D5D9DC;border-top:0;font-size:15px;font:28px/50px bebas_neueregular, sans-serif;}
+.spot-left .spot-date{background:#fff;border:1px solid #D5D9DC;border-top:0;font-size:15px;font:29px/50px bebas_neueregular, sans-serif;}
 
 .spot-right{float:left;width:70%;position:relative;font-size:14px;font-family:ralewayregular, sans-serif;}
 
@@ -2252,8 +2255,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 
 .spot-bar{height:50px;position:relative;padding:5px 20px 0 50px;}
 .spot-bar .spot-guests{position:absolute;top:0;left:0;width:50px;height:50px;background:url(images/assets/GuestsBox_icon.png) center center no-repeat;background-size:13px auto;}
-.spot-bar .guests-going{font-size:16px;}
-.spot-bar .spots-left{float:right;font-size:16px;}
+.spot-bar .guests-going{font-size:14px;}
+.spot-bar .spots-left{float:right;font-size:14px;}
+.spot-bar .guests-going strong,
+.spot-bar .spots-left strong{font-size:16px;}
 .spot-bar .progress{margin-top:5px;height:3px;background:#fff;}
 .spot-bar .progress-bar{color:transparent;}
 
@@ -2301,6 +2306,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .multi-page .article-block{margin-top:15px;}
 .multi-page .social-icons{background:#f1f6f9;padding:20px 0;}
 .multi-page .social-icons dt{text-align:center !important;font:20px/24px ralewaysemibold,sans-serif;}
+.multi-page .spot-bar .guests-going,
+.multi-page .spot-bar .spots-left{font-size:16px;}
+.multi-page .new-spot-event .bar-btn .btn-orange{font-size:30px;line-height:60px;}
 
 .offer-spot{height:auto;}
 .offer-spot .spot-content{padding-top:10px;height:auto;}
@@ -2308,9 +2316,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .offer-spot .spot-left .spot-img{height:210px;}
 .offer-spot .spot-right .social-icons{display:none;}
 .offer-spot .social-icons{text-align:left;padding:3px 20px;margin:0;float:none;}
-.offer-spot .social-icons dt{display:inline-block;font:14px/35px ralewaysemibold, sans-serif;color:#000;}
+.offer-spot .social-icons dt{display:inline-block;font:14px/35px ralewaysemibold, sans-serif;color:#333;}
 .offer-spot .spot-content h2{margin-bottom:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.offer-spot .section-item{border:1px solid #2c2c2c;padding:5px;margin-bottom:10px;background:#fff;}
+.offer-spot .section-item{border:1px solid #D5D9DC;padding:5px;margin-bottom:10px;background:#fff;}
 .offer-spot .section-type{height:150px;}
 .offer-spot .section-title{float:left;width:70%;font:16px/28px ralewaymedium, sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .offer-spot .section-title span{width:28px;height:28px;display:block;font:14px/22px ralewaymedium, sans-serif;float:left;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;border:1px solid #2c2c2c;text-align:center;margin-right:5px;}
@@ -2344,7 +2352,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .booking-multi .price-info .table-cell{padding:10px 5px;}
 .booking-multi .price-info .table-cell:first-child{padding-left:35px;}
 .booking-multi .price-info .table-cell:last-child{padding-right:35px;}
-.booking-multi .regular-price-row{color:#333;font-family:ralewaysemibold, sans-serif;}
+.booking-multi .regular-price-row{font-size:13px;color:#333;font-family:ralewaysemibold, sans-serif;}
 .booking-multi .regular-price-row .table-cell{padding-top:0;padding-bottom:20px;}
 .booking-multi .new-price-row{color:#333;background:#ebf2f6;}
 .booking-multi #accordion-booking .panel-title a .offer-sale-off,
@@ -2352,7 +2360,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .booking-multi .savings-row .table-cell{padding-top:20px;padding-bottom:0;}
 .booking-multi #accordion-booking .panel-body h2{margin:15px 0;}
 .booking-multi .panel-info > .btn{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:40px;}
-.booking-multi .panel-info p{font-size:12px;line-height:16px;}
+.booking-multi .panel-info p{font-size:11px;line-height:15px;}
+
+.multi-section .section-header h4{font:21px/25px ralewaybold,sans-serif;}
+.multi-section .section-header h2{font:32px/36px ralewaybold,sans-serif;}
+.multi-section .event-list h4{color:#333;}
 
 @media (min-width:992px){
 	.region-section .bootstrap-select.btn-group .btn .filter-option{max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
@@ -2599,20 +2611,17 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.spot-left .spot-img{display:none;}
 	
 	.spot-left .btn-black-50,
-	.new-spot .countDownBtn{width:50%;position:relative;display:block;background:#2C2C2C;}
-	.spot-left .btn-black-50{font-size:20px;}
+	.new-spot .countDownBtn{width:50%;position:relative;display:block;background:#2C2C2C;}	
 	
 	.new-spot .countdown-section{max-width:60px;min-width:60px;}
 	
-	.spot-left .spot-date{float:right;width:50%;background:#fff;border:1px solid #2C2C2C;color:#2C2C2C;font-style:normal;font:28px/63px bebas_neueregular, sans-serif;}	
+	.spot-left .spot-date{float:right;width:50%;background:#fff;border:1px solid #2C2C2C;color:#2C2C2C;font-style:normal;font:29px/63px bebas_neueregular, sans-serif;}	
 	
 	.section-ellipsis{width:100%;}
 	.multi-spot .section-ellipsis, 
 	.single-special-spot .section-ellipsis{max-height:108px;height:auto;}
 	.single-ticket-spot .section-ellipsis, 
-	.single-rsvp-spot .section-ellipsis{max-height:72px;height:auto;}
-	
-	.spot-content h2{font-size:20px;}
+	.single-rsvp-spot .section-ellipsis{max-height:72px;height:auto;}	
 	
 	.offer-spot .spot-left,
 	.offer-spot .spot-right-header{float:left;width:50%;}
@@ -2624,6 +2633,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.offer-spot .spot-left .social-icons{display:none;}
 	.offer-spot .spot-right .social-icons{display:block;text-align:left;padding:0;}
 	.offer-spot .social-icons{text-align:right;}
+	.offer-spot .btn-orange{font-size:20px;}
 }
 @media (max-width:968px){
 	.modal-offer{width:95%;}
@@ -2639,9 +2649,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 @media (min-width:768px){	
 	.booked-page .site-calendar{margin-left:0;margin-right:0;}
 }
-@media (max-width:767px){
+@media (max-width:767px){		
+	body{font:14px/18px ralewaymedium, sans-serif;}
+
     #main-affix,
     #nav-affix{overflow:inherit;}
+	
+	.bootstrap-select .selectpicker{font-size:16px;}
 
     .select-text{border:0 none;}
 
@@ -2718,13 +2732,11 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.navbar-collapse .navbar-nav li a:hover{background:#ccc;border:1px solid #ccc;}
 	.navbar-collapse .navbar-nav li a.bg-green,
 	.navbar-collapse .navbar-nav li a.bg-green:hover{background:#97BC47;color:#fff;border:1px solid #97BC47;}
-	
+		
 	#main-affix{width:100%;}
 	#nav-affix{width:100%;padding:0;}
 	
 	.main-content{padding:15px 0 0;}
-		
-	body{font:14px/18px ralewaymedium, sans-serif;}
 	
 	.section-header h2{font:24px/30px ralewaysemibold, sans-serif;}	
 	.section-header h3{font:20px/24px ralewaysemibold, sans-serif;}
@@ -2733,7 +2745,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	
 	.site-contact{padding:60px 0 40px;}
 	.site-contact .section-header{margin:0 0 7px;width:auto;}
-	.site-contact .section-header h4{font:30px/34px ralewaysemibold, sans-serif;}
+	/*.site-contact .section-header h4{font:30px/34px ralewaysemibold, sans-serif;}*/
 	.site-contact .section-header .logo{height:37px;margin:0 0 17px;}
 	.site-contact p{margin:0 0 20px;}
 	.site-contact .register-form{margin:0 0 20px;}
@@ -2747,8 +2759,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.event-content p{font:18px/22px ralewaymedium, sans-serif;margin:0 0 10px;}
 	.event-btn .btn-happen{font-size:15px;line-height:42px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;padding:0 17px;}
 		
+	.blogger-frame{width:80px;height:80px;}	
+		
 	.partners .section-header{margin:0 0 20px;}
-	.partners .partner-item{margin:0 0 20px;}
+	.partners .partner-item{margin:0 0 20px;font:14px/18px ralewayextrabold, sans-serif;}
 	
 	.book-detail-page .section-header{text-align:left;padding:0;}
 	.register-section .section-header .back-section{float:none;}
@@ -3158,15 +3172,68 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	
 	.article-short-des{width:100%;}
 	
-	.multi-page .section-header h4{font-size:16px;line-height:22px;}
+	.spot-left .btn-black-50{font-size:23px;line-height:46px;}
+	.spot-left .spot-date{font-size:21px;line-height:44px;}
+	
+	.spot-footer .spot-companies{width:40px;height:40px;background-size:20px auto;}
+	.spot-footer .btn-orange{line-height:46px;}
+	
+	.spot-content h2{font-size:20px;}
+	.spot-content p{font-size:13px;}
+	
+	.new-spot .spot-content{padding:10px 10px 0;}
+	.new-spot .countDownBtn{padding:0;}
+	.new-spot .countdown-section{max-width:30px;min-width:30px;min-height:46px;}
+	.new-spot .countdown-amount{font-size:16px;line-height:30px;padding-top:0;}
+	.new-spot .countdown-period{font-size:8px;}	
+	.new-spot .spot-bar{height:40px;}
+	
+	.multi-spot .spot-footer .spot-text{padding-left:40px;height:40px;line-height:40px;}
+	.multi-spot .spot-footer .spot-text .color-orange{font-size:16px;}
+	
+	.spot-bar{padding-left:30px;}
+	.spot-bar .spot-guests{width:30px;height:40px;background-size:10px auto;}
+	
+	.multi-page .section-header h4{font-size:16px;line-height:22px;}	
+	.multi-page .event-section .section-header h5{font-size:16px;line-height:20px;margin-bottom:0;}
+	.multi-page .event-section .section-header h4{font-size:15px;line-height:22px;}
+	.multi-page .event-section .section-header h3{font-size:15px;line-height:24px;}
+	.multi-page .event-section .section-header .multi-time h5{font-size:14px;line-height:18px;}
+	.multi-page .new-spot-event .spot-content h2{font-size:20px;line-height:24px;margin-bottom:5px;}
+	.multi-page .new-spot-event .spot-content p{font-size:12px;line-height:16px;}
+	.multi-page .social-icons{border:1px solid #d5d9dc;padding:10px 0;}
+	.multi-page .social-icons dt{font-size:12px;float:left;padding:0 40px 0 10px}
+	.multi-page .social-icons dd{float:left;width:inherit;margin-left:10px;}
+	.multi-page .social-icons dd img{width:25px;}
+	.multi-page .spot-bar .guests-going strong, 
+	.multi-page .spot-bar .spots-left strong,
+	.multi-page .spot-bar .guests-going, 
+	.multi-page .spot-bar .spots-left{font-size:11px;line-height:15px;}
+	.multi-page .new-spot-event .bar-btn .btn-orange{font-size:20px;line-height:30px;}	
+	.multi-page .new-spot-event .spot-bar{border:1px solid #d5d9dc;border-bottom:0;height:40px;}
+	.multi-page .new-spot-event .spot-bar .progress{height:6px;}
 	
 	.new-spot-event .address-block{padding:10px;}
-	.multi-page .event-section .section-header h5{font-size:16px;line-height:20px;}
-	.multi-page .event-section .section-header h4{font-size:18px;line-height:22px;}
-	.multi-page .event-section .section-header h3{font-size:20px;line-height:24px;}
 	.new-spot-event .spot-content h2{font-size:22px;line-height:26px;}
+	.new-spot-event .timer-section .address-block .section-header h5,
+	.new-spot-event .timer-section .address-block .section-header p{font-size:12px;}
 	
-	.booking-multi #accordion-booking{padding-left:10px;padding-right:10px;}
+	.booking-multi #accordion-booking{padding:10px;}	
+	.booking-multi #accordion-booking .panel-title a{font-size:13px;}
+	.booking-multi .price-info{font-size:14px;}
+	.booking-multi .new-price-row .table-cell:first-child,
+	.booking-multi .regular-price-row{font-size:12px;}
+	.booking-multi .panel-info > .btn-orange{font-size:20px;line-height:32px;}
+	
+	.multi-section .section-header h4{font-size:16px;line-height:20p;}
+	.multi-section .section-header h2{font-size:20px;line-height:24px;}
+	
+	.offer-spot .spot-content h2, 
+	.offer-spot .spot-content h2 a{color:#000;font-size:18px;line-height:22px;}
+	.offer-spot .spot-content small strong{font-size:10px;}
+	.offer-spot .social-icons dt{font-size:12px;}
+	.offer-spot .section-title{font-size:13px;}
+	.offer-spot .section-offer{font-size:14px;}
 }
 @media (max-width:640px){
 	.group_link a{width:23.8%;}
@@ -3297,15 +3364,6 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.btn-paypal .icon-paypal{bottom:-10px;}
 	
 	.ticket-fieldset .td-price{width:40%;}
-	
-	.multi-spot .spot-footer .spot-text,
-	.spot-bar{padding-left:20px;}
-	.hide-480{display:none;}
-	
-	.new-spot .countdown-section{max-width:30px;min-width:30px;}
-	.new-spot .countdown-amount{font-size:16px;}
-	.new-spot .countdown-period{font-size:8px;}
-	.spot-left .spot-date{font-size:20px;}
 }
 @media (max-width:372px){
 	.event-block{height:116px;}
