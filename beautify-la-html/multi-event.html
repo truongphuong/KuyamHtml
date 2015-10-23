@@ -108,7 +108,12 @@
                                                     <div id="collapseOne" class="panel-collapse collapse in">
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
-                                                            	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                            	<div class="short-description">
+                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                                </div>
+                                                                <div class="full-description">
+                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
+                                                                </div>
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -129,8 +134,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-row savings-row">
-                                                                        <div class="table-cell">
-                                                                        </div>
+                                                                        <div class="table-cell"></div>
                                                                         <div class="table-cell">
                                                                             10% off
                                                                         </div>
@@ -151,7 +155,12 @@
                                                     <div id="collapseTwo" class="panel-collapse collapse">
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
-                                                            	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                            	<div class="short-description">
+                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                                </div>
+                                                                <div class="full-description">
+                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
+                                                                </div>
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -172,8 +181,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-row savings-row">
-                                                                        <div class="table-cell">
-                                                                        </div>
+                                                                        <div class="table-cell"></div>
                                                                         <div class="table-cell">
                                                                             10% off
                                                                         </div>
@@ -194,7 +202,12 @@
                                                     <div id="collapseThree" class="panel-collapse collapse">
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
-                                                            	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                            	<div class="short-description">
+                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                                </div>
+                                                                <div class="full-description">
+                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
+                                                                </div>
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -215,8 +228,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="table-row savings-row">
-                                                                        <div class="table-cell">
-                                                                        </div>
+                                                                        <div class="table-cell"></div>
                                                                         <div class="table-cell">
                                                                             10% off
                                                                         </div>
@@ -1104,6 +1116,11 @@
 			setTimeout(function(){
 				checkoutTerm.refresh();
 			}, 300);
+		});
+		
+		$('.panel-description a.color-orange').click(function(e){
+			e.preventDefault();
+			$(this).parents('.panel-description').addClass('show-full');
 		});
 	});
 	</script>   

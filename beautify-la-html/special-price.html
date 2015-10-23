@@ -870,6 +870,25 @@
     
     <!-- === SCRIPTS === --> 
     <!-- InstanceBeginEditable name="script" -->
+    <script>
+    $(document).ready(function(){
+		 var wscrollY = $(window).scrollTop();
+		showScrollTop(wscrollY);
+
+		$(window).scroll(function () {
+			wscrollY = $(window).scrollTop();
+			showScrollTop(wscrollY);
+		});
+	});
+	
+	 function showScrollTop(valY){
+        if (valY > 0) {
+            $('.back-to-top').show();
+        } else {
+            $('.back-to-top').hide();
+        }
+    }
+	</script>
 	<!-- InstanceEndEditable --> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
