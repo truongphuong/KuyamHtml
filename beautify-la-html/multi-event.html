@@ -108,11 +108,11 @@
                                                     <div id="collapseOne" class="panel-collapse collapse in">
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
-                                                            	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                                <div class="short-description">
+                                                                    <p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
                                                                 </div>
                                                                 <div class="full-description">
-                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
+                                                                    <p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
                                                                 </div>
                                                             </div>
                                                             <div class="panel-info">
@@ -156,7 +156,7 @@
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
                                                             	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
                                                                 </div>
                                                                 <div class="full-description">
                                                                 	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
@@ -203,7 +203,7 @@
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
                                                             	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text... <a class="color-orange" title="" href="#">more</a></p>
+                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
                                                                 </div>
                                                                 <div class="full-description">
                                                                 	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
@@ -1084,11 +1084,13 @@
     $(document).ready(function(){	
 		setTimeout(function(){
 			set3Dot('.article-short-des');
-		});
+			setMore('.short-description');
+		}, 300);
     }); 
 	
 	$(window).resize(function(){
 		set3Dot('.article-short-des');
+		setMore('.short-description');
 	});
 	
 	function set3Dot(section){
@@ -1118,11 +1120,28 @@
 			}, 300);
 		});
 		
-		$('.panel-description a.color-orange').click(function(e){
-			e.preventDefault();
-			$(this).parents('.panel-description').addClass('show-full');
+		$('#accordion-booking').on('show.bs.collapse', function (e) {
+			$('.panel-description').removeClass('show-full');
+			setTimeout(function(){
+				setMore('.short-description');
+			}, 300);
 		});
 	});
+	
+	function setMore(section){
+		$(section + ' p').each(function(){		
+			var p = $(this);
+			var divh = $(this).parent().height();
+			$(this).parent().find('.link-more').remove();
+			if($(p).outerHeight() > divh){
+				$('.panel-description .short-description').append('<a class="color-orange link-more" title="" href="#"><span class="color-black">&nbsp;...</span> more</a>');
+				$('.panel-description .short-description .link-more').click(function(e){
+					e.preventDefault(e);
+					$(e.target).parents('.panel-description').addClass('show-full');
+				});
+			}
+		});
+	}
 	</script>   
 	<!-- InstanceEndEditable --> 
     
