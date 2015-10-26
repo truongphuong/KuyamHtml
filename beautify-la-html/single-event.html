@@ -1091,9 +1091,10 @@
 		}, 300);
 		
 		$('#accordion-booking').on('show.bs.collapse', function (e) {
+			var accordionID = $(e.target).attr("id");
 			$('.panel-description').removeClass('show-full');
 			setTimeout(function(){
-				setMore('.short-description');
+				setMoreAccordionShow('#' + accordionID);
 			}, 300);
 		});
     }); 
@@ -1122,6 +1123,20 @@
 			$(this).parent().find('.link-more').remove();
 			if($(p).outerHeight() > divh){
 				$('.panel-description .short-description').append('<a class="color-orange link-more" title="" href="#"><span class="color-black">&nbsp;...</span> more</a>');
+				$('.panel-description .short-description .link-more').click(function(e){
+					e.preventDefault(e);
+					$(e.target).parents('.panel-description').addClass('show-full');
+				});
+			}
+		});
+	}
+	function setMoreAccordionShow(section){
+		$(section + ' .short-description p').each(function(){ 
+			var p = $(this);
+			var divh = $(this).parent().height();
+			$(this).parent().find('.link-more').remove();
+			if($(p).outerHeight() > divh){
+				$(section + ' .short-description').append('<a class="color-orange link-more" title="" href="#"><span class="color-black">&nbsp;...</span> more</a>');
 				$('.panel-description .short-description .link-more').click(function(e){
 					e.preventDefault(e);
 					$(e.target).parents('.panel-description').addClass('show-full');
