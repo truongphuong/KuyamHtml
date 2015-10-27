@@ -135,37 +135,49 @@
 						selectArea();
 						
 						var hasContentArea = $('.area-section').find('.dropdown-menu.open').length;
-						if(hasContentArea){
-							$('.area-section .dropdown-menu.open').attr("id", "selectArea");
-							selectAreaScroll = new IScroll('#selectArea', {
-								scrollbars: true,
-								mouseWheel: true,
-								interactiveScrollbars: true,
-								shrinkScrollbars: 'scale',
-								fadeScrollbars: true,
-								click: true 
-							});
+						console.log(hasContentArea);
+						if(hasContentArea == 1){
+							setTimeout(function(){
+								$('.area-section .dropdown-menu.open').attr("id", "selectArea");
+								selectAreaScroll = new IScroll('#selectArea', {
+									scrollbars: true,
+									mouseWheel: true,
+									interactiveScrollbars: true,
+									shrinkScrollbars: 'scale',
+									fadeScrollbars: true,
+									click: true 
+								});
+							}, 100)
 						}
 						
 						var hasContent = $('.region-section').find('.dropdown-menu.open').length;
-						if(hasContent)
-						{
-							$('.region-section .dropdown-menu.open').attr("id", "selectScroll");							
-							selectScroll = new IScroll('#selectScroll', {
-								scrollbars: true,
-								mouseWheel: true,
-								interactiveScrollbars: true,
-								shrinkScrollbars: 'scale',
-								fadeScrollbars: true,
-								click: true 
-							});	
-							$('<div class="popover-title"><form class="filter-form" action="#"><input type="text" placeholder="Filter by name" class="form-control filter-input"></form></div>').appendTo(".region-section .dropdown-menu.open");							
-						}					
-					});
+						console.log(hasContentArea);
+						if(hasContent == 1){
+							setTimeout(function(){
+								$('.region-section .dropdown-menu.open').attr("id", "selectRegion");							
+								selectRegionScroll = new IScroll('#selectRegion', {
+									scrollbars: true,
+									mouseWheel: true,
+									interactiveScrollbars: true,
+									shrinkScrollbars: 'scale',
+									fadeScrollbars: true,
+									click: true 
+								});	
+							}, 100);
+							$('<div class="popover-title"><form class="filter-form" action="#"><input type="text" placeholder="Filter by name" class="form-control filter-input"></form></div>').appendTo(".region-section .dropdown-menu.open");
+						}
+							
+						
+						$('.region-section').click(function() {
+							setTimeout(function(){
+								$('.region-section .filter-input').trigger('focus');
+							}, 100);
+						 });
+					});	
 					
 					$(window).resize(function(){
 						selectArea();
-						selectScroll.refresh();
+						selectRegionScroll.refresh();
 						selectAreaScroll.refresh();
 					});
 					
@@ -210,7 +222,7 @@
 								// fire the above change event after every letter
 								$(this).change();
 								setTimeout(function(){
-									selectScroll.refresh();
+									selectRegionScroll.refresh();
 								}, 300);
 							});
 					  	}
@@ -231,7 +243,7 @@
 							}
 							setTimeout(function(){
 								selectAreaScroll.refresh();
-								selectScroll.refresh();
+								selectRegionScroll.refresh();
 							}, 300);
 						});
 						

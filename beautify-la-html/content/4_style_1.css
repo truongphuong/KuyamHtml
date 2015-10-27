@@ -155,6 +155,9 @@ form, fieldset, legend{display:block;border:0;margin:0;padding:0;}
 
 *, *:hover, *:visited, *:focus{outline:0 none;}
 
+::-ms-reveal{display: none;}
+::-ms-clear{display: none;}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
 input[type=number]{-moz-appearance:textfield;}
@@ -2144,7 +2147,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .area-section .bootstrap-select.btn-group .btn .caret{background-image:url(images/assets/icon_dropdown_white.png);}
 .area-section .dropdown-menu{background:#333333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .area-section .bootstrap-select.btn-group .dropdown-menu.open{max-height:390px !important;width:100%;}
-.area-section .bootstrap-select.btn-group .dropdown-menu.inner{max-height:initial !important;}
+.area-section .bootstrap-select.btn-group .dropdown-menu.inner{min-height:none !important;max-height:none !important;}
 .area-section .dropdown-menu > li{border:0 none;}
 .area-section .dropdown-menu > li.selected{display:none;}
 .area-section .dropdown-menu > li > a{font:50px/60px ralewayextralight,sans-serif;color:#fff;padding:6px 12px;}
@@ -2172,7 +2175,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .region-section .bootstrap-select.btn-group .btn .caret{background-image:url(images/assets/icon_dropdown_white.png);position:relative;margin-left:24px;}
 .region-section .dropdown-menu{background:#333333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;min-height:auto !important;max-height:462px !important;}
 .region-section .bootstrap-select.btn-group .dropdown-menu.open{}
-.region-section .bootstrap-select.btn-group .dropdown-menu.inner{min-height:initial !important;max-height:initial !important;padding-top:46px;}
+.region-section .bootstrap-select.btn-group .dropdown-menu.inner{min-height:none !important;max-height:none !important;padding-top:46px;}
 .region-section .dropdown-menu > li{border:0 none;}
 .region-section .dropdown-menu > li:first-child > a{font-family:ralewaybold,sans-serif;}
 .region-section .dropdown-menu > li > a{font:14px/30px ralewaylight,sans-serif;color:#fff;padding:6px 12px;}
@@ -2639,7 +2642,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	
 	.single-rsvp-spot .spot-footer .spot-text,
 	.single-ticket-spot	.spot-footer .spot-text,
-	.single-special-spot .spot-footer .spot-text{border-right:1px solid #d5d9dc;border-left:1px solid #d5d9dc;}
+	.single-special-spot .spot-footer .spot-text{border-right:1px solid #d5d9dc;border-left:1px solid #d5d9dc;text-align:center;}
 	
 	.multi-spot .spot-content,
 	.single-special-spot .spot-content,
