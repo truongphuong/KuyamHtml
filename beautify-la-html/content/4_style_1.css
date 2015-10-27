@@ -2248,9 +2248,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .article-short-des{width:598px;max-height:44px;overflow:hidden;margin-bottom:10px;}
 
 .spot-left{float:left;width:33%;text-align:center;position:relative;}
-.spot-left .spot-img{display:block;height:274px;background:center center no-repeat;background-size:cover;}
+.spot-left .spot-img{display:block;height:274px;background:center center no-repeat;background-size:cover;border:1px solid #d5d9dc;border-bottom:0;}
 .spot-left .btn-black-50{position:absolute;top:0;left:0;right:0;text-decoration:none;font:34px/65px bebas_neueregular, sans-serif;}
-.spot-left .spot-date{display:block;color:#000;background:#fff;border:1px solid #D5D9DC;border-top:0;font-size:15px;font:29px/50px bebas_neueregular, sans-serif;text-decoration:none;}
+.spot-left .spot-date{display:block;color:#000;background:#fff;border:1px solid #D5D9DC;font-size:15px;font:29px/49px bebas_neueregular, sans-serif;text-decoration:none;}
 
 .spot-right{float:left;width:67%;position:relative;font-size:14px;font-family:ralewayregular, sans-serif;}
 
@@ -2270,7 +2270,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .spot-bar .progress-bar{color:transparent;min-width:inherit;padding:0;}
 
 .spot-footer{background:#fff;height:51px;position:relative;border-bottom:1px solid #D5D9DC;}
-.spot-footer .spot-text{float:left;width:70%;padding:0 20px;font:17px/50px ralewaysemibold, sans-serif;display:block;color:#000;text-decoration:none;}
+.spot-footer .spot-text{float:left;width:70%;padding:0 20px;font:17px/50px ralewaysemibold, sans-serif;display:block;color:#000;text-decoration:none;border-top:1px solid #d5d9dc;}
 .spot-footer .spot-companies{position:absolute;top:0;left:0;width:50px;height:50px;background:url(images/assets/icon-companies.png) center center no-repeat;background-size:23px auto;}
 .spot-footer .btn-orange{float:right;width:30%;font:24px/51px bebas_neueregular, sans-serif;}
 
@@ -2289,7 +2289,12 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .multi-spot .spot-content,
 .single-special-spot .spot-content{height:274px;}
 
-.multi-spot .spot-footer .spot-text{padding-left:50px;background:#2C2C2C;color:#fff;font-size:14px;}
+.multi-spot .spot-content,
+.single-rsvp-spot .spot-content,
+.single-ticket-spot .spot-content,
+.single-special-spot .spot-content{border-top:1px solid #d5d9dc;border-right:1px solid #d5d9dc;}
+
+.multi-spot .spot-footer .spot-text{padding-left:50px;background:#2C2C2C;color:#fff;font-size:14px;border-top:1px solid #2C2C2C;}
 .multi-spot .spot-footer .spot-text .color-orange{font-size:19px;}
 
 .section-ellipsis{width:100%;overflow:hidden;margin-bottom:15px;}
@@ -2322,7 +2327,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .offer-spot{height:auto;}
 .offer-spot .spot-content{padding-top:10px;height:auto;}
 .offer-spot .spot-right-content .spot-content{padding-top:0;}
-.offer-spot .spot-left .spot-img{height:210px;}
+.offer-spot .spot-left .spot-img{height:210px;border:1px solid #d5d9dc;border-top:0 none;border-left:0 none;}
 .offer-spot .spot-right .social-icons{display:none;}
 .offer-spot .social-icons{text-align:left;padding:3px 20px;margin:0;float:none;}
 .offer-spot .social-icons dt{display:inline-block;font:14px/35px ralewaysemibold, sans-serif;color:#333;}
@@ -2647,7 +2652,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.multi-spot .spot-content,
 	.single-special-spot .spot-content,
 	.single-ticket-spot .spot-content,
-	.single-rsvp-spot .spot-content{border-right:1px solid #d5d9dc;border-left:1px solid #d5d9dc;padding-bottom:1px !important;}
+	.single-rsvp-spot .spot-content{border-top:0 none;border-left:1px solid #d5d9dc;padding-bottom:1px !important;}
 	
 	.offer-spot{border:1px solid #d5d9dc;}
 	.offer-spot .spot-left,
