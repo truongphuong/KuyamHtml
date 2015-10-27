@@ -129,7 +129,8 @@
                 </section>
                 <script type="text/javascript">
 					var selectScroll,
-						selectAreaScroll;					
+						selectAreaScroll,
+						isFocus = false;				
 					$(document).ready(function(){	
 						$('#select-area, #select-region').selectpicker();
 						selectArea();
@@ -166,11 +167,15 @@
 							}, 100);
 							$('<div class="popover-title"><form class="filter-form" action="#"><input type="text" placeholder="Filter by name" class="form-control filter-input"></form></div>').appendTo(".region-section .dropdown-menu.open");
 						}
-							
 						
 						$('.region-section').click(function() {
 							setTimeout(function(){
-								$('.region-section .filter-input').trigger('focus');
+								if(!isFocus){
+									$('.region-section .filter-input').trigger('focus');
+									isFocus = true;
+								}else{
+									isFocus = false;
+								}
 							}, 100);
 						 });
 					});	
