@@ -170,11 +170,10 @@
 							var isButton = $(e.target).hasClass('btn');
 							setTimeout(function(){
 								if(isButton && !isFocus){
-									$('.region-section .filter-input').trigger('focus');
+									$('.region-section .filter-input').focus();
 									isFocus = true;
 								}else{
 									isFocus = false;
-									return;
 								}
 							}, 100);
 						 });
