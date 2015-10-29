@@ -112,7 +112,7 @@
                                                         <div class="panel-body">
                                                         	<div class="panel-description">
                                                             	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
+                                                            		<p>This is a brief description about the service. </p>
                                                                 </div>
                                                                 <div class="full-description">
                                                                 	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
@@ -1117,7 +1117,8 @@
 	}
 	
 	function setMore(section){
-		$(section + ' p').each(function(){		
+		$(section + ' p').each(function(){
+			$('.short-description').css({'height': ''});		
 			var p = $(this);
 			var divh = $(this).parent().height();
 			$(this).parent().find('.link-more').remove();
@@ -1127,11 +1128,15 @@
 					e.preventDefault(e);
 					$(e.target).parents('.panel-description').addClass('show-full');
 				});
+			}else{
+				console.log('hello');
+				$(section).css({'height': 'inherit'});
 			}
 		});
 	}
 	function setMoreAccordionShow(section){
 		$(section + ' .short-description p').each(function(){ 
+			$('.panel-description .short-description').css({'height': ''});
 			var p = $(this);
 			var divh = $(this).parent().height();
 			$(this).parent().find('.link-more').remove();
@@ -1141,6 +1146,9 @@
 					e.preventDefault(e);
 					$(e.target).parents('.panel-description').addClass('show-full');
 				});
+			}else{
+				console.log('hello');
+				$(section + ' .short-description').css({'height': 'inherit'});
 			}
 		});
 	}
