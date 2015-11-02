@@ -130,7 +130,8 @@
                 </section>
                 <script type="text/javascript">
 					var selectScroll,
-						selectAreaScroll;				
+						selectAreaScroll,
+						selectRegionScroll;				
 					$(document).ready(function(){	
 						$('#select-area, #select-region').selectpicker();
 						selectArea();
@@ -150,8 +151,8 @@
 							}, 100)
 						}
 						
-						var hasContent = $('.region-section').find('.dropdown-menu.open').length;
-						if(hasContent == 1){
+						var hasContentRegion = $('.region-section').find('.dropdown-menu.open').length;
+						if(hasContentRegion == 1){
 							setTimeout(function(){
 								$('.region-section .dropdown-menu.open').attr("id", "selectRegion");							
 								selectRegionScroll = new IScroll('#selectRegion', {
@@ -169,8 +170,14 @@
 					
 					$(window).resize(function(){
 						selectArea();
-						selectRegionScroll.refresh();
-						selectAreaScroll.refresh();
+						
+						if(hasContentRegion == 1){
+							selectRegionScroll.refresh();
+						}
+						
+						if(hasContentArea == 1){
+							selectAreaScroll.refresh();
+						}
 					});
 					
 					function selectArea(){
@@ -214,7 +221,9 @@
 								// fire the above change event after every letter
 								$(this).change();
 								setTimeout(function(){
-									selectRegionScroll.refresh();
+									if(hasContentRegion == 1){
+										selectRegionScroll.refresh();
+									}
 								}, 300);
 							});
 					  	}
@@ -234,27 +243,27 @@
 								}
 							}
 							setTimeout(function(){
-								selectAreaScroll.refresh();
-								selectRegionScroll.refresh();
+								if(hasContentRegion == 1){
+									selectRegionScroll.refresh();
+								}
+								
+								if(hasContentArea == 1){
+									selectAreaScroll.refresh();
+								}
 							}, 300);
 						});
 						
 					}(jQuery));
 					
-					var regionShow = false;
+					var isOpen = $('div.bootstrap-select.select-region').hasClass('open');
 					$(document).click(function(e){
 						var regionClick = $(e.target).hasClass('region-click');
-						if(regionClick){
-							if(!regionShow){
-								$('div.select-region').addClass('open');
-								regionShow = true;
-								$('.region-section .filter-input').focus();
-							}else{
-								$('div.select-region').removeClass('open');
-								regionShow = false;
-							}
-						}else{
-							regionShow = false;
+						if(regionClick && !isOpen){
+							$('div.bootstrap-select.select-region').addClass('open');
+							isOpen = true;
+						}else if(regionClick && isOpen){
+							$('div.bootstrap-select.select-region').removeClass('open');
+							isOpen = false;
 						}
 					});
 				</script>
