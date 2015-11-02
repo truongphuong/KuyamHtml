@@ -96,6 +96,7 @@
                     </select>
                 </section>
                 <section class="region-section">
+                	<div class="region-click"></div>
                 	<select id="select-region" class="selectpicker select-region">
                         <option value="">Entire region</option>
                         <option>Australia</option>
@@ -129,8 +130,7 @@
                 </section>
                 <script type="text/javascript">
 					var selectScroll,
-						selectAreaScroll,
-						isFocus = false;				
+						selectAreaScroll;				
 					$(document).ready(function(){	
 						$('#select-area, #select-region').selectpicker();
 						selectArea();
@@ -165,18 +165,6 @@
 							}, 100);
 							$('<div class="popover-title"><form class="filter-form" action="#"><input type="text" placeholder="Filter by name" class="form-control filter-input"></form></div>').appendTo(".region-section .dropdown-menu.open");
 						}
-						
-						$('.region-section').click(function(e) {
-							var isButton = $(e.target).hasClass('btn');
-							setTimeout(function(){
-								if(isButton && !isFocus){
-									$('.region-section .filter-input').focus();
-									isFocus = true;
-								}else{
-									isFocus = false;
-								}
-							}, 100);
-						 });
 					});	
 					
 					$(window).resize(function(){
@@ -252,7 +240,23 @@
 						});
 						
 					}(jQuery));
-
+					
+					var regionShow = false;
+					$(document).click(function(e){
+						var regionClick = $(e.target).hasClass('region-click');
+						if(regionClick){
+							if(!regionShow){
+								$('div.select-region').addClass('open');
+								regionShow = true;
+								$('.region-section .filter-input').focus();
+							}else{
+								$('div.select-region').removeClass('open');
+								regionShow = false;
+							}
+						}else{
+							regionShow = false;
+						}
+					});
 				</script>
                 <div class="clear"></div>
                 

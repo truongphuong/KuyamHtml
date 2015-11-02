@@ -2157,7 +2157,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .area-section .bootstrap-select.btn-group .dropdown-menu > li > a:hover small.text-muted, 
 .area-section .bootstrap-select.btn-group .dropdown-menu > li > a:focus small.text-muted{color:#f3472d;}
 
-.region-section{float:left;;margin:31px 0 0;}
+.region-section{float:left;;margin:31px 0 0;position:relative;}
 .region-section .popover-title{background:#333;border:0 none;padding:6px 12px;position:absolute;top:0;right:0;left:0;z-index:1037;}
 .region-section .popover-title button.close{display:none;}
 .region-section .popover-title .form-control{background:#222222;border-color:#363636;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;color:#fff;}
@@ -2174,13 +2174,15 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .region-section .bootstrap-select.btn-group .btn .filter-option{width:auto;}
 .region-section .bootstrap-select.btn-group .btn .caret{background-image:url(images/assets/icon_dropdown_white.png);position:relative;margin-left:24px;}
 .region-section .dropdown-menu{background:#333333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;min-height:auto !important;max-height:462px !important;}
-.region-section .bootstrap-select.btn-group .dropdown-menu.open{}
+.region-section .bootstrap-select.btn-group .dropdown-menu.open{overflow:hidden;}
 .region-section .bootstrap-select.btn-group .dropdown-menu.inner{min-height:none !important;max-height:none !important;padding-top:46px;}
 .region-section .dropdown-menu > li{border:0 none;}
 .region-section .dropdown-menu > li:first-child > a{font-family:ralewaybold,sans-serif;}
 .region-section .dropdown-menu > li > a{font:14px/30px ralewaylight,sans-serif;color:#fff;padding:6px 12px;}
 .region-section .dropdown-menu > li > a:hover, 
 .region-section .dropdown-menu > li > a:focus{background:transparent;color:#f14836;}
+
+.region-click{position:absolute;top:0;right:0;left:0;bottom:0;z-index:20;cursor:pointer;}
 
 .area-section .dropdown-menu,
 .region-section .dropdown-menu{
