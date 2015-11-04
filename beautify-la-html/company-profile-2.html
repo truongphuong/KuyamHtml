@@ -210,7 +210,7 @@
 						$('input.filter-input').change( function (e) {
 							e.preventDefault();
 							var filter = $(this).val();
-							if(filter) {
+							if(filter != null) {
 								// this finds all links in a list that contain the input,
 								// and hide the ones not containing the input while showing the ones that do
 								$(list).find(".text:not(:Contains(" + filter + "))").parents("li").slideUp();
@@ -222,7 +222,6 @@
 									if (!filter) return $(this).text();
 									return $(this).text().replace(match, '<u>$&</u>');
 								});
-								console.log(filter);
 							} else {
 								$(list).find(".text").parents("li").slideDown();
 							}
