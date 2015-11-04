@@ -1113,7 +1113,7 @@
 
   $(document)
       .data('keycount', 0)
-      .on('keydown', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role=menu], .bs-searchbox input', Selectpicker.prototype.keydown)
+      .on('keydown', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select:not(".select-scroll") [role=menu], .bs-searchbox input', Selectpicker.prototype.keydown)
       .on('focusin.modal', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role=menu], .bs-searchbox input', function (e) {
         e.stopPropagation();
       });
