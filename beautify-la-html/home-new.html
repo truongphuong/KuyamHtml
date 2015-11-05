@@ -181,6 +181,14 @@
 							}
 						});	
 						
+						$('.region-section').click(function(e){							
+							$('.filter-input').val('');	
+							$(".select-region ul.dropdown-menu li").css({'display': ''});
+							if(hasContentRegion == 1){
+								selectRegionScroll.refresh();
+							}				
+						});
+						
 						$('.region-section').keydown(function(e){
 							$('.filter-input').focus();
 							e.stopPropagation();
@@ -215,7 +223,7 @@
 						}
 					}				
 					
-					function listFilter(header, list) { 						
+					function listFilter(header, list) { 
 						$('input.filter-input').change( function (e) {
 							e.preventDefault();
 							var filter = $(this).val();
@@ -245,6 +253,10 @@
 								}	
 							}, 500);
 						});
+							
+						if($('input.filter-input').val() == null){
+							$(list).find(".text").parents("li").slideDown();
+						}
 					}
 				</script>
                 <div class="clear"></div>
