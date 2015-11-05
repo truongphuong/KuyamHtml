@@ -182,20 +182,17 @@
 						});	
 						
 						$('.region-section').click(function(e){							
-							$('.filter-input').val('');	
-							$(".select-region ul.dropdown-menu li").css({'display': ''});
-							if(hasContentRegion == 1){
-								selectRegionScroll.refresh();
-							}				
-						});
-						
-						$('.region-section').keydown(function(e){
-							$('.filter-input').focus();
-							e.stopPropagation();
-						});
-						
-						$('.area-section').keydown(function(e){
-							e.stopPropagation();
+							var inputVal = $('.filter-input').val();	
+							if(inputVal !=''){
+								$('.filter-input').val('');
+								$(".select-region ul.dropdown-menu li").css({'display': ''});
+								if(hasContentRegion == 1){
+									selectRegionScroll.refresh();
+								}
+							}
+							setTimeout(function(){
+								$('.filter-input').focus();
+							}, 50);
 						});
 					});	
 					
