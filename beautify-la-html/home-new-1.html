@@ -179,6 +179,15 @@
 									temp = 0;
 								}
 							}
+						});	
+						
+						$('.region-section').keydown(function(e){
+							$('.filter-input').focus();
+							e.stopPropagation();
+						});
+						
+						$('.area-section').keydown(function(e){
+							e.stopPropagation();
 						});
 					});	
 					
