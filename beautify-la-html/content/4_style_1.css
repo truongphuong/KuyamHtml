@@ -2135,6 +2135,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .form-ticket .form-control{display:inline-block;margin-left:10px;}
 
 .area-section{float:left;margin:15px 25px 0;}
+.area-section .bs-searchbox{display:none;}
 .area-section .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width:150px;}
 .area-section .btn-default:active, 
 .area-section .btn-default.active, 
@@ -2178,7 +2179,10 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .region-section .dropdown-menu li{border:0 none;}
 .region-section .dropdown-menu li:first-child > a{font-family:ralewaybold,sans-serif;}
 .region-section .dropdown-menu li.no-results,
-.region-section .dropdown-menu li > a{font:14px/30px ralewaylight,sans-serif;color:#fff;padding:6px 12px;}
+.region-section .dropdown-menu li > a,
+.region-section .dropdown-menu li.active > a, 
+.region-section .dropdown-menu li.active > a:hover, 
+.region-section .dropdown-menu li.active > a:focus{background:transparent;font:14px/30px ralewaylight,sans-serif;color:#fff;padding:6px 12px;}
 .region-section .dropdown-menu li > a:hover, 
 .region-section .dropdown-menu li > a:focus,
 .region-section .dropdown-menu li.selected > a, 
