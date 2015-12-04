@@ -111,13 +111,8 @@
                                                     </div>
                                                     <div id="collapseOne" class="panel-collapse collapse in">
                                                         <div class="panel-body">
-                                                        	<div class="panel-description">
-                                                            	<div class="short-description">
-                                                            		<p>This is a brief description about the service. </p>
-                                                                </div>
-                                                                <div class="full-description">
-                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
-                                                                </div>
+                                                        	<div id="panelDescription1" class="panel-description">
+                                                            	This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -158,13 +153,8 @@
                                                     </div>
                                                     <div id="collapseTwo" class="panel-collapse collapse">
                                                         <div class="panel-body">
-                                                        	<div class="panel-description">
-                                                            	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
-                                                                </div>
-                                                                <div class="full-description">
-                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
-                                                                </div>
+                                                        	<div id="panelDescription2" class="panel-description">
+                                                            	This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -205,13 +195,8 @@
                                                     </div>
                                                     <div id="collapseThree" class="panel-collapse collapse">
                                                         <div class="panel-body">
-                                                        	<div class="panel-description">
-                                                            	<div class="short-description">
-                                                            		<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
-                                                                </div>
-                                                                <div class="full-description">
-                                                                	<p>This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text</p>
-                                                                </div>
+                                                        	<div id="panelDescription3" class="panel-description">
+                                                            	This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text This is a brief description about the service. Just two lines of text. This is a brief description about the service. Just two lines of text
                                                             </div>
                                                             <div class="panel-info">
                                                                 <div class="table-css price-info">
@@ -548,7 +533,7 @@
                                                         <h3><a title="" href="#">Dating: LA's best Inexpensive Spots for a First Date</a></h3> 
                                                     </header>
                                                     <div class="article-short-des">
-                                                        <p>You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...</p>
+                                                        You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...
                                                     </div>
                                                     <q>by <strong>Theresa Heim</strong></q>
                                                 </div>
@@ -741,7 +726,7 @@
                                                     <h3><a title="" href="#">Dating: LA's best Inexpensive Spots for a First Date</a></h3> 
                                                 </header>
                                                 <div class="article-short-des">
-                                                    <p>You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...</p>
+                                                    You want to choose a space that provides you and your date with an experience that will enable you to observe one another under ordinary circumstances...
                                                 </div>
                                                 <q>by <strong>Theresa Heim</strong></q>
                                             </div>
@@ -1086,65 +1071,95 @@
     <link rel="stylesheet" type="text/css" href="content/iscroll.css" />
     <script type="text/javascript">
     $(document).ready(function(){	
-		setTimeout(function(){
-			set3Dot('.article-short-des');
-			setMore('.short-description');
-		}, 300);
+		$('.article-short-des').dotdotdot();		
 		
-		$('#accordion-booking').on('show.bs.collapse', function (e) {
+		var $panelDescription = $('.panel-description'),
+			$panelDescription1 = $('#panelDescription1'),
+			$panelDescription2 = $('#panelDescription2'),
+			$panelDescription3 = $('#panelDescription3');
+			
+		$panelDescription.append( ' <a class="toggle" href="#"><span class="open">More</span></a>' );
+
+		function createDots($ID)
+		{
+			$ID.dotdotdot({
+				after: 'a.toggle'
+			});
+		}
+		
+		function destroyDots($ID) {
+			$ID.trigger( 'destroy' );
+		}
+		
+		createDots($panelDescription1);
+		$panelDescription1.on(
+			'click',
+			'a.toggle',
+			function() {
+				$panelDescription1.toggleClass( 'opened' );
+
+				if ( $panelDescription1.hasClass( 'opened' ) ) {
+					destroyDots($panelDescription1);
+					$panelDescription1.find('.toggle').hide();
+				} else {
+					createDots($panelDescription1);
+				}
+				return false;
+			}
+		);
+		
+		createDots($panelDescription2);
+		$panelDescription2.on(
+			'click',
+			'a.toggle',
+			function() {
+				$panelDescription2.toggleClass( 'opened' );
+
+				if ( $panelDescription2.hasClass( 'opened' ) ) {
+					destroyDots($panelDescription2);
+					$panelDescription2.find('.toggle').hide();
+				} else {
+					createDots($panelDescription2);
+				}
+				return false;
+			}
+		);
+		
+		createDots($panelDescription3);
+		$panelDescription3.on(
+			'click',
+			'a.toggle',
+			function() {
+				$panelDescription3.toggleClass( 'opened' );
+
+				if ( $panelDescription3.hasClass( 'opened' ) ) {
+					destroyDots($panelDescription3);
+					$panelDescription3.find('.toggle').hide();
+				} else {
+					createDots($panelDescription3);
+				}
+				return false;
+			}
+		);
+		
+		$('#accordion-booking').on('shown.bs.collapse', function (e) {
 			var accordionID = $(e.target).attr("id");
-			$('.panel-description').removeClass('show-full');
-			setTimeout(function(){
-				setMoreAccordionShow('#' + accordionID);
-			}, 300);
+			if(accordionID === "collapseOne"){
+				createDots($panelDescription1);
+			}else if(accordionID === "collapseTwo"){
+				createDots($panelDescription2);
+			} else if(accordionID === "collapseThree"){
+				createDots($panelDescription3);
+			}
+		});
+		
+		$(window).resize(function(){
+			$('.article-short-des').dotdotdot();
+			createDots($panelDescription1);
+			createDots($panelDescription2);
+			createDots($panelDescription3);
 		});
     }); 
-	
-	$(window).resize(function(){
-		set3Dot('.article-short-des');
-		setMore('.short-description');
-	});
-	
-	function set3Dot(section){
-		$(section + ' p').each(function(){		
-			var p = $(this);
-			var divh = $(this).parent().height();
-			while ($(p).outerHeight()>divh) {
-				$(p).text(function (index, text) {
-					return text.replace(/\W*\s(\S)*$/, '...');
-				});
-			}
-		});
-	}
-	
-	function setMore(section){
-		$(section + ' p').each(function(){	
-			var p = $(this);
-			var divh = $(this).parent().height();
-			$(this).parent().find('.link-more').remove();
-			if($(p).outerHeight() > divh){
-				$('.panel-description .short-description').append('<a class="color-orange link-more" title="" href="#"><span class="color-black">&nbsp;...</span> more</a>');
-				$('.panel-description .short-description .link-more').click(function(e){
-					e.preventDefault(e);
-					$(e.target).parents('.panel-description').addClass('show-full');
-				});
-			}
-		});
-	}
-	function setMoreAccordionShow(section){
-		$(section + ' .short-description p').each(function(){ 
-			var p = $(this);
-			var divh = $(this).parent().height();
-			$(this).parent().find('.link-more').remove();
-			if($(p).outerHeight() > divh){
-				$(section + ' .short-description').append('<a class="color-orange link-more" title="" href="#"><span class="color-black">&nbsp;...</span> more</a>');
-				$('.panel-description .short-description .link-more').click(function(e){
-					e.preventDefault(e);
-					$(e.target).parents('.panel-description').addClass('show-full');
-				});
-			}
-		});
-	}
 	</script>
 	<!-- InstanceEndEditable --> 
     
