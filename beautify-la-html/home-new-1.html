@@ -26,6 +26,8 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 
+<link rel="stylesheet" type="text/css" href="content/iscroll.css" />
+
 <link rel="stylesheet" type="text/css" href="content/4_style_1.css" /> 
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
@@ -247,6 +249,8 @@
                  <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav navbar-right nav-main"> 
                     	<li><a href="lifestyle-blog.html" title="">lifestyle blog<span class="on-desktop hidden-xs"></span></a></li>
+                        <li><a href="javascript:void(0);" title="" data-target="#modal-login" data-toggle="modal">login</a></li>
+                        <li><a href="javascript:void(0);" title="" data-target="#modal-sign-up" data-toggle="modal">sign up</a></li>
                         <li class="visible-xs"><a href="#" title="">sign out</a></li> 
                         <li class="link-help"><a href="javascript:void(0);"><img alt="" src="content/images/assets/image_help.png" /></a></li>
                         <li class="hidden-xs"><a class="link-account link-account-user" href="javascript:void(0);" title=""><span class="icon-user"></span>hi, Kourosh<span class="icon-down"></span></a></li>                         
@@ -1042,7 +1046,7 @@
     <div class="light-box"></div> 
     
     <!-- .modal-notify -->    
-    <div class="modal fade" id="modal-notify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-notify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   		<div class="modal-dialog modal-notify">
     		<div class="modal-content">
       			<div class="modal-header">
@@ -1067,7 +1071,7 @@
     <!-- /.modal-notify --> 
     
     <!-- .modal-alert -->    
-    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   		<div class="modal-dialog modal-alert">
     		<div class="modal-content">
       			<div class="modal-header">
@@ -1084,7 +1088,7 @@
     <!-- /.modal-alert --> 
     
     <!-- .modal-ticket -->    
-    <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   		<div class="modal-dialog modal-ticket">
     		<div class="modal-content">
       			<div class="modal-header">
@@ -1174,7 +1178,7 @@
 	</script>
     
     <!-- .modal-thanks -->    
-    <div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   		<div class="modal-dialog modal-ticket modal-thanks">
     		<div class="modal-content">
       			<div class="modal-header">
@@ -1244,6 +1248,94 @@
 	</div><!-- /.modal -->
     <!-- /.modal-thanks -->
     
+    <!-- .modal-login -->    
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  		<div class="modal-dialog modal-form modal-login">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h3 class="modal-title">welcome to Beautify LA events!</h3>
+                    <p>if you have been approved you will be sent an email with login info. You can manage and modify your event details from your events dashboard.</p>
+      			</div>
+                <div class="modal-body">
+                	<a title="" href="javascript:void(0);" class="btn-blue btn-facebook">login with facebook</a>
+                	<div class="form-or">                    	
+                    	<hr />  
+                        <span>or</span>                      
+                    </div>
+                	<fieldset>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+                        <div class="text-right link-form"><a data-dismiss="modal" class="link-forgot" title="forgot password?" href="#modal-forgot-pass">forgot password?</a></div>
+                    	<button type="button" class="btn-orange btn-form btn-login">login</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                	<hr />
+                    <div class="text-right link-form"><span>don't have an account?</span> <a class="link-create" title="create account now" href="#modal-sign-up">create account now</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-login -->  
+    
+    <!-- .modal-sign-up -->    
+    <div class="modal fade" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  		<div class="modal-dialog modal-form modal-sign-up">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h3 class="modal-title">join beautify free!</h3>
+                    <h4>book appointments at home or<br /> on the go!</h4>
+      			</div>
+                <div class="modal-body">
+                	<a title="" href="javascript:void(0);" class="btn-blue btn-facebook">sign up with facebook</a>
+                	<div class="form-or">                    	
+                    	<hr />  
+                        <span>or</span>                      
+                    </div>
+                	<fieldset>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+                    	<button type="button" class="btn-orange btn-form btn-sign-up">sign up</button>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                	<hr />
+                    <div class="text-right link-form">already have an account? <a data-dismiss="modal" class="link-login" title="login" href="#modal-login">login</a></div>
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-sign-up -->
+    
+    <!-- .modal-forgot-pass -->    
+    <div class="modal fade" id="modal-forgot-pass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+  		<div class="modal-dialog modal-form modal-forgot-pass">
+    		<div class="modal-content">
+				<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+                    <h3 class="modal-title">forgot password?</h3>
+                    <h4>enter your email to reset password</h4>
+                </div>
+                <div class="modal-body">                	
+                    <fieldset>                    	
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <button type="button" class="btn-orange btn-form btn-continue">continue</button>
+                        <div class="alert-error">invalid</div>
+                    </fieldset>                    
+                </div>
+                <div class="modal-footer">
+                    <hr />
+                    <div class="text-right link-form"><a class="link-login" title="" href="#modal-login">back to login</a></div>
+                 </div>    		
+        	</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-forgot-pass -->
+    
     <noscript>
         <!-- must remain last thing before the form tag -->
         <p class="noJS">YOU NEED JAVASCRIPT TO RUN THIS SITE. PLEASE ENABLE JAVASCRIPT IN YOUR INTERNET OPTIONS.</p>
@@ -1280,9 +1372,26 @@
     }
 	</script>
 	<!-- InstanceEndEditable --> 
+    <script type="text/javascript">
+		$(document).ready(function(){				
+			var modalID, modalIDOpen;
+			$('.link-form > a').click(function(e){
+				e.preventDefault();
+				modalID = "#" + $(this).parents('.modal').attr('id'),
+				modalIDOpen = $(this).attr('href');
+				$(modalID).modal('hide'); 	
+			
+				$(modalID).on('hidden.bs.modal', function () {
+					setTimeout(function(){
+						$(modalIDOpen).modal('show'); 
+					}, 300);
+				});
+			});				
+		});	
+    </script> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
-    <!--<script type="text/javascript" src="scripts/general-ui.js"></script>-->
+    <!--<script type="text/javascript" src="scripts/general-ui.js"></script>-->     
     <!-- === END SCRIPTS === -->    
 </body>
 <!-- InstanceEnd --></html>

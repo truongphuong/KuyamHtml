@@ -360,7 +360,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .section-note h4{font:24px/28px ralewaysemibold, sans-serif;}
 .section-note p{font:16px/20px ralewaymedium, sans-serif;}
 
-.main-content{padding:40px 0 0;}
+.main-content{padding:40px 0 0;background:#fff;position:relative;z-index:2;}
 .main-content > .container{position:relative;}
 
 .event-new{height:212px;position:relative;margin:30px 0 0;background:center center no-repeat;background-size:cover;text-align:center;color:#fff;}
@@ -1054,13 +1054,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .single-company-profile-page .happen-date{height:auto;min-height:40px;margin-top:23px;}
 .single-company-profile-page .social-icons{margin-top:0;}
 
-.modal-form{width:510px;margin:0 auto;}
+.modal-form{width:510px;margin-left:auto;margin-right:auto;}
 .modal-form .modal-content{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .modal-form .modal-header{text-align:center;border:0 none;padding:15px 25px 10px;}
 .modal-form .modal-header .modal-title{font:30px/34px ralewaybold, sans-serif;margin:16px 0 5px;}
 .modal-form .modal-header h4{font:26px/30px ralewaymedium, sans-serif;margin:0 0 10px;}
 .modal-form .modal-header p{font:20px/24px ralewaymedium, sans-serif;margin:10px 0;}
-.modal-form .modal-header .close{width:33px;height:33px;background-image:url(images/icons/btn_close_black.png);top:-16px;right:-16px;z-index:1;}
+.modal-form .modal-header .close{width:33px;height:33px;background-image:url(images/assets/icon_close.png);top:-16px;right:-16px;z-index:1;}
 .modal-form .modal-body{width:430px;margin:0 auto;padding:5px 35px 20px;font:16px/20px ralewaymedium, sans-serif;}
 .modal-form .modal-body .btn-facebook,
 .modal-form .modal-body .btn-facebook:hover{display:block;font:16px/40px ralewaysemibold, sans-serif;color:#fff;text-decoration:none;}
@@ -2718,6 +2718,8 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 }
 @media (min-width:768px){	
 	.booked-page .site-calendar{margin-left:0;margin-right:0;}
+	
+	.menu-list{margin-top:-62px;}
 }
 @media (max-width:767px){		
 	body{font:14px/18px ralewaymedium, sans-serif;}
@@ -3003,9 +3005,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.modal-post .modal-header .icon-bulletin{display:none;}
 	
 	.email-section .email-footer{padding:0;text-align:center;}
-	
+		
+	.modal-form .modal-header .close{width:62px;height:62px;background-image:url(images/assets/mobile/icon_close.png) !important;top:0;right:0;}
 	.modal-form,
 	.modal-form .modal-body{width:auto;}
+	
+	.modal .modal-form{margin:10px;}
+	.modal .modal-form .modal-footer{margin:0 35px;width:auto;}
 	
 	.login-page,
 	.forgot-page{padding-bottom:128px;}
@@ -3447,6 +3453,9 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 	.slide-calendar-mobile .rslides_nav{padding:0 10px;}
 	
 	.comment-reply{margin-left:15px;}
+}
+@media (max-width:440px){
+	.modal-form .modal-footer .link-form span{display:block;}
 }
 @media (max-width:372px){
 	.event-block{height:116px;}
