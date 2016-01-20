@@ -1,0 +1,786 @@
+/* =============================================================================
+   Fonts
+   ========================================================================== */
+@font-face{
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/bebasneue-webfont.woff2') format('woff2'), 
+		 url('../fonts/bebasneue-webfont.woff') format('woff'), 
+		 url('../fonts/bebasneue-webfont.ttf') format('truetype'), 
+		 url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light-webfont.eot');
+    src: url('../fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-light-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-light-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-light-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-light-webfont.svg#ralewaylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold-webfont.eot');
+    src: url('../fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-semibold-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-semibold-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-semibold-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewayheavy';
+    src: url('../fonts/raleway-heavy-webfont.eot');
+    src: url('../fonts/raleway-heavy-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-heavy-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-heavy-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-heavy-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-heavy-webfont.svg#ralewayheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewayextralight';
+    src: url('../fonts/raleway-extralight-webfont.eot');
+    src: url('../fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-extralight-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-extralight-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-extralight-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.eot');
+    src: url('../fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-regular-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-regular-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-regular-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewaythin';
+    src: url('../fonts/raleway-thin-webfont.eot');
+    src: url('../fonts/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-thin-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-thin-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-thin-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-thin-webfont.svg#ralewaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium-webfont.eot');
+    src: url('../fonts/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-medium-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-medium-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-medium-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-bold-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-bold-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-bold-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold-webfont.eot');
+    src: url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'), 
+		 url('../fonts/raleway-extrabold-webfont.woff') format('woff'), 
+		 url('../fonts/raleway-extrabold-webfont.ttf') format('truetype'), 
+		 url('../fonts/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, time{
+    display: block;
+}
+
+audio[controls], canvas, video{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+body{
+    margin: 0;
+    padding: 0;
+    font: 16px/140% ralewaymedium, sans-serif;
+    color: #292929;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+
+*, *:hover, *:active, *:focus, *:visited{
+    outline: 0 none !important;
+    outline-offset: inherit;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+img{
+    border: 0;
+    width: 100%;
+}
+
+form, fieldset, legend{
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label{
+	font-weight:normal;
+}
+
+/* =============================================================================
+   Bootstrap grid
+   ========================================================================== */
+.container{
+	width: auto !important;
+}
+.row{
+	margin-left: -8px;
+	margin-right: -8px;
+}
+div[class*="col-"]{
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/* =============================================================================
+   form
+   ========================================================================== */
+form div[class*="col-"]{
+	margin-bottom: 25px;
+}
+.form-label{
+	font-size: 1em;
+	font-family: ralewaysemibold, sans-serif;
+}
+.form-control,
+.form-control:focus{
+	font-size: 1em;
+	font-family: ralewaylight, sans-serif;
+	border-color: #000;
+	height: 40px;
+	color:#292929;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+textarea.form-control,
+textarea.form-control:focus{
+	height:125px;
+	resize:none;
+}
+
+.form-placeholder{
+	position:relative;
+}
+.form-placeholder .form-control{
+	background:transparent;
+	position:relative;
+	z-index:2;
+}
+.form-placeholder .form-control:focus{
+	background:#fff;
+}
+.form-placeholder label{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	padding:0 12px;
+	line-height:40px;
+	z-index:1;
+}
+
+.cb-mark {
+	position:absolute;
+	opacity:0;
+	top:0;
+	left:0;
+}
+.cb-mark ~ .cb-label {
+	position:relative;
+	padding-left:25px;
+	cursor:pointer;
+	display:inline-block !important;
+	font-size:1.25em;
+}
+.cb-mark:checked ~ .cb-label:before {
+	background:#CED8E2;
+}
+.cb-mark ~ .cb-label:before {
+	content:'';
+	display:block;
+	width:15px;
+	height:15px;
+	-webkit-border-radius:4px; 
+	-moz-border-radius:4px; 
+	-o-border-radius:4px; 
+	border-radius:4px;	
+	vertical-align:middle;
+	position:absolute;
+	background:#CED8E2;
+	top:2px;
+	left:0;
+	cursor:pointer;
+}
+
+.radio-mark {
+	position:absolute;
+	opacity:0;
+	top:0;
+	left:0;
+}
+.radio-mark ~ .radio-label {
+	position:relative;
+	padding-left:25px;
+	cursor:pointer;
+	display:inline-block !important;
+	font-size:1em;
+}
+.radio-mark:checked ~ .radio-label:before {
+	background:#292929;
+	border:1px solid #292929;
+}
+.radio-mark ~ .radio-label:before {
+	content:'';
+	display:block;
+	width:15px;
+	height:15px;
+	-webkit-border-radius:100%; 
+	-moz-border-radius:100%; 
+	-o-border-radius:100%; 
+	border-radius:100%;	
+	vertical-align:middle;
+	position:absolute;
+	border:1px solid #c6c6c6;
+	background:#fff;
+	top:5px;
+	left:0;
+	cursor:pointer;
+}
+
+.txt-required{
+	color: #ae422c;
+	font-family: ralewaybold, sans-serif;
+}
+
+.txt-error{
+	color: #ae422c;
+}
+
+.input-error{
+	border-color: #ae422c;
+}
+
+/* =============================================================================
+   Button
+   ========================================================================== */
+.btn-form,
+.btn-form:hover,
+.btn-form:focus{
+	border: 1px solid #292929;
+	color: #fff;
+	font-size: .9375em;
+	font-family: ralewaysemibold, sans-serif;
+	width: 100%;
+	height:40px;
+	color: #fff;
+	text-transform:uppercase;
+}
+
+.btn-black,
+.btn-black:hover,
+.btn-black:focus{
+	background: #292929;
+}
+
+.btn-white,
+.btn-white:hover,
+.btn-white:focus{
+	background: #fff;
+	color: #292929;
+}
+
+.close{
+	font-size: 1.0625em;
+	font-family: ralewaysemibold, sans-serif;
+	text-transform: uppercase;
+	color: #292929;
+	opacity: 1;
+	height: 40px;
+	width: 40px;
+}
+
+/* =============================================================================
+	Bootstrap modal
+	========================================================================== */
+.modal-content{
+	border-color: #888;
+}
+.modal-header{
+	text-align: center;
+	border: 0 none;	
+	padding-top: 25px;	
+	padding-bottom: 0;
+	position: relative;
+}
+.modal-header h4{
+	font-size: 1.1875em;
+	font-family: ralewaysemibold, sans-serif;
+	padding-bottom: 0;
+}
+.modal-header .close{
+	margin-top: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.modal-body{
+	padding-bottom: 0;
+}
+.modal-footer{
+	padding-top: 0;
+	padding-bottom: 25px;
+	border: 0 none;
+}
+
+/* =============================================================================
+   jscrollpane
+   ========================================================================== */
+.jspPane{
+    width: 100% !important;
+    z-index: 1;
+}
+
+.jspVerticalBar{
+    width: 9px;
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 2;
+}
+.jspScrollable:hover .jspVerticalBar{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.jspTrack{
+    background: transparent;
+}
+
+.jspDrag{
+    background: #E4E3E3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* =============================================================================
+   Bootstrap select
+   ========================================================================== */
+select.selectpicker{
+    display: none;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+    width: 100%;
+}
+.bootstrap-select > .btn,
+.bootstrap-select > .btn:focus,
+.bootstrap-select > .btn:active,
+.bootstrap-select > .btn-default.disabled,
+.bootstrap-select > .btn-default.disabled:focus,
+.bootstrap-select > .btn-default.disabled:active{
+    padding-left: 10px;
+    text-align: left;
+    outline: 0 none !important;
+}
+.bootstrap-select.btn-group .btn .filter-option{
+    color: #292929;
+}
+.bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+    background: #fff;
+    border-color: #737373;
+}
+.bootstrap-select .btn-default.disabled,
+.bootstrap-select .btn-default.disabled:hover,
+.bootstrap-select .btn-default.disabled:focus,
+.bootstrap-select .btn-default.disabled:active{
+    cursor: text;
+}
+.bootstrap-select .dropdown-menu{
+    margin-top: -1px;
+    padding: 0;
+    font-size: auto;
+}
+.bootstrap-select.dropup .dropdown-menu{
+    margin-top: inherit;
+    margin-bottom: -1px;
+}
+.bootstrap-select .dropdown-menu > li > a{
+    padding: 10px;
+}
+.bootstrap-select .dropdown-menu > li.selected{
+    display: none;
+}
+.bootstrap-select .dropdown-menu.open{
+    border-color: #737373;
+}
+.bootstrap-select.btn-group .btn .caret{
+    border: 0 none;
+    margin-top: -6px;
+    width: 6px;
+    height: 10px;
+    background-image: url(../images/ui/icon_next_black.png);
+    background-size: 6px auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.bootstrap-select.btn-group.dropup .btn .caret{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.bootstrap-select.btn-group .btn.disabled .caret{
+    background-image: url(../images/ui/icon_next_grey.png);
+}
+.form-select .bootstrap-select.btn-group .dropdown-menu.inner li:first-child{
+    display: none;
+}
+.bootstrap-select .dropdown-menu{
+    display: block;
+    background-clip: padding-box;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    -ms-transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    max-height: none !important;
+    min-height: auto !important;
+}
+.bootstrap-select.open .dropdown-menu{
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+.bootstrap-select .bootstrap-scroll{
+    height: 180px;
+    overflow: hidden;
+}
+
+.calendar-select{
+}
+.calendar-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+	width: auto;
+}
+.calendar-select .bootstrap-select > .btn,
+.calendar-select .bootstrap-select > .btn:focus,
+.calendar-select .bootstrap-select > .btn:active,
+.calendar-select .bootstrap-select > .btn-default.disabled,
+.calendar-select .bootstrap-select > .btn-default.disabled:focus,
+.calendar-select .bootstrap-select > .btn-default.disabled:active{
+	border-color: transparent;
+	border-width: 2px;
+	background: transparent;
+}
+.calendar-select .bootstrap-select.btn-group .btn .filter-option{
+    width: auto;
+	text-transform:uppercase;
+}
+.calendar-select .bootstrap-select.btn-group .btn .caret{
+    margin-top: -3px;
+    margin-left: 5px;
+    position: inherit;
+    right: inherit;
+    top: inherit;
+}
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	background: #fff;
+	border-color: #737373;
+	border-bottom-color: transparent;
+}
+.calendar-select .bootstrap-select .dropdown-menu{
+	margin-top: -4px;
+}
+.calendar-select .bootstrap-select .dropdown-menu.open{
+	border-width: 2px;
+	border-color: #737373;
+	border-top-color: transparent;
+}
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default,
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:hover,
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:focus{
+	border-top-color: transparent;
+	border-bottom-color: inherit;
+}
+.calendar-select .bootstrap-select.dropup .dropdown-menu{
+	margin-top: inherit;
+	margin-bottom: -4px;
+}
+.calendar-select .bootstrap-select.dropup .dropdown-menu.open{
+	border-top-color: #737373;
+	border-bottom-color: transparent;
+}
+
+.form-select{
+}
+.form-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+	width: 100%;
+}
+.form-select .bootstrap-select > .btn,
+.form-select .bootstrap-select > .btn:focus,
+.form-select .bootstrap-select > .btn:active,
+.form-select .bootstrap-select > .btn-default.disabled,
+.form-select .bootstrap-select > .btn-default.disabled:focus,
+.form-select .bootstrap-select > .btn-default.disabled:active,
+.form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	background: #fff;
+	border-color: #000;
+	height:40px;
+}
+.form-select .bootstrap-select .dropdown-menu{
+	margin-top: -1px;
+}
+.form-select .bootstrap-select .dropdown-menu.open{
+	border-color: #000;
+	border-top-color: #acacac;
+}
+.form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default,
+.form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:hover,
+.form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:focus{
+	border-top-color: #acacac;
+	border-bottom-color: inherit;
+}
+.form-select .bootstrap-select.dropup .dropdown-menu{
+	margin-top: inherit;
+	margin-bottom: -1px;
+}
+.form-select .bootstrap-select.dropup .dropdown-menu.open{
+	border-top-color: #000;
+	border-bottom-color: transparent;
+}
+
+/* =============================================================================
+   Icon
+   ========================================================================== */
+.icon{
+    display: inline-block;
+    background: center center no-repeat;
+}
+
+.icon-chat{
+    width: 91px;
+    height: 38px;
+    background-image: url(../images/ui/icon_chat.png);
+    background-size: 91px auto;
+}
+.active .icon-chat{
+    background-image: url(../images/ui/icon_chat_active.png);
+}
+
+.icon-user{
+    width: 15px;
+    height: 17px;
+    background-image: url(../images/ui/icon_user.png);
+    background-size: 15px auto;
+}
+
+.icon-facebook{
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/ui/icon_facebook.png);
+    background-size: 28px auto;
+}
+
+.icon-twitter{
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/ui/icon_twitter.png);
+    background-size: 28px auto;
+}
+
+.icon-next{
+    width: 7px;
+    height: 12px;
+    background-image: url(../images/ui/icon_next_black.png);
+    background-size: 7px auto;
+}
+.disabled .icon-next{
+    background-image: url(../images/ui/icon_next_grey.png);
+}
+
+.icon-pre{
+    width: 7px;
+    height: 12px;
+    background-image: url(../images/ui/icon_next_black.png);
+    background-size: 7px auto;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.disabled .icon-pre{
+    background-image: url(../images/ui/icon_next_grey.png);
+}
+
+/* =============================================================================
+   Primaty styles
+   ========================================================================== */
+.kuyam-header{
+    background: #292929;
+    border: 0 none;
+    margin-bottom: 0;
+}
+
+.kuyam-header .navbar-brand{
+	width: 159px;
+	margin-left: 0 !important;
+	margin-right: 35px;
+	background: url(../images/ui/logo.png) center center no-repeat;
+	background-size: 159px auto;
+}
+.kuyam-header .navbar-nav > li > a,
+.kuyam-header .navbar-nav > li > a:focus,
+.kuyam-header .navbar-nav > li > a:hover{
+	color: #fff;
+	background:transparent;
+}
+
+.kuyam-header .navbar-nav > li.active > a,
+.kuyam-header .navbar-nav > li.active > a:focus,
+.kuyam-header .navbar-nav > li.active > a:hover{
+	background: #95be31;
+}
+
+.kuyam-footer{
+    min-height: 65px;
+    line-height: 65px;
+    background: #292929;
+    color: #fff;
+    font-size: .93em;
+}
+.kuyam-footer ul{
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.kuyam-footer ul li{
+	float: left;
+	margin-left: 20px;
+}
+.kuyam-footer ul li .icon{
+	margin-bottom: -10px;
+}
+.kuyam-footer a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.kuyam-section{
+    overflow: hidden;
+}
+
+@media (min-width:1024px){
+	/* =============================================================================
+	Bootstrap modal
+	========================================================================== */	
+	.modal-body{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.modal-s .modal-dialog{
+		width: 450px;
+	}
+	.modal-m .modal-dialog{
+		width: 550px;
+	}
+	.modal-l .modal-dialog{
+		width: 650px;
+	}
+}
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+.clearfix:before, .clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
