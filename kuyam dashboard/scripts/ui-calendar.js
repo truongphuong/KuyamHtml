@@ -6,7 +6,6 @@ $(document).ready(function(){
 	$('select.select-status').change(function(){
 		var thisVal = $(this).val();
 		if(thisVal === "0"){
-			console.log(thisVal);
 			$('#cancelCalendarModal').modal('show')
 		}
 	});
