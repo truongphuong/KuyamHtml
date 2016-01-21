@@ -37,9 +37,16 @@
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />  
-<link rel="stylesheet" type="text/css" href="content/css/datepicker3.css"/>
+<link rel="stylesheet" type="text/css" href="content/css/bootstrap-datetimepicker.css"/>
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap-select.css"/>
+
+<!-- Jscrollpane core CSS -->
 <link type="text/css" rel="stylesheet" href="content/css/jquery.jscrollpane.css" />
+
+<!-- Tooltipster core CSS -->
+<link rel="stylesheet" type="text/css" href="content/css/tooltipster.css"/>
+
+<!-- Site core CSS -->
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-base.css" /> 
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-style.css" /> 
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-retina.css" /> 
@@ -359,7 +366,7 @@
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
                                 
-                                	<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />
+                                	<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addClientModal" />
                                     
                                 </div>
                                 <!-- /.calendar-day -->
@@ -456,113 +463,414 @@
 					<h4 id="addCalendarModalLabel" class="modal-title">Add appointment</h4>
 				</div>
 				<div class="modal-body">
+				
+					<!-- .tab-section -->
+					<section class="tab-section">
+
+						<!-- .nav-tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab"><span class="dot"></span> Appointment</a></li>
+							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab"><span class="dot"></span> Class</a></li>
+							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab"><span class="dot"></span> Blocker</a></li>
+						</ul>
+						<!-- /.nav-tabs -->
+
+						<!-- .tab-content -->
+						<div class="tab-content">
+						
+							<!-- #formAppointment -->
+							<div role="tabpanel" class="tab-pane active" id="formAppointment">
+								<form>
+									<fieldset>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectClient">Client</label>
+												<select id="selectClient">
+													<option value="1" selected>Carl Viduka</option>
+													<option value="2">Caroline Spencer</option>
+													<option value="3" selected>Mark calahan</option>
+													<option value="4">Caroline</option>
+												</select>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectStaff">Staff</label>
+												<select id="selectStaff">
+													<option value="1" selected>Carl Viduka</option>
+													<option value="2">Caroline Spencer</option>
+													<option value="3" selected>Mark calahan</option>
+													<option value="4">Caroline</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="txtDate">Starting date</label>
+												<input id="txtDate" type="text" class="form-control" />
+											</div>
+											<div class="col-xs-12 col-sm-6">									
+												<label class="form-label" for="txtTime">Time</label>
+												<div id="timepickerAppointment" class="dropdown form-timepicker">
+													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<table>
+																				<tr>
+																					<td>
+																						<span class="timepicker-hour">1</span>
+																					</td>
+																					<td class="separator">:</td>
+																					<td>
+																						<span class="timepicker-minute">00</span>
+																					</td>
+																					<td>
+																						<span class="timepicker-period">AM</span>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectRepeat">Repeat</label>
+												<div class="form-select repeat-select">
+													<select id="selectRepeat" class="select-form">
+														<option value="0" selected>never</option>
+														<option value="1">custom</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label">&nbsp;</label>
+												<ul class="week-list hide">
+													<li class="active">m</li>
+													<li>t</li>
+													<li>w</li>
+													<li>t</li>
+													<li>f</li>
+													<li>s</li>
+													<li>s</li>
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectCategory">Category</label>
+												<div class="form-select category-select">
+													<select id="selectCategory" class="select-form">
+														<option value="2" selected>Yoga</option>
+														<option value="1">Make up</option>
+														<option value="0">Massage</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectService">Service</label>
+												<div class="form-select service-select">
+													<select id="selectService" class="select-status">
+														<option value="2" selected>Restoration yoga</option>
+														<option value="1">Restoration</option>
+														<option value="0">yoga</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12">
+												<label class="form-label" for="txtNote">Internal notes</label>
+												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row">				
+											<div class="col-lg-12">
+												<button class="btn btn-form btn-black">add appointment</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- #formAppointment -->
+							
+							<!-- #formClass -->
+							<div role="tabpanel" class="tab-pane" id="formClass">
+								<form>
+									<fieldset>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectStaff">Staff</label>
+												<select id="selectStaff">
+													<option value="1" selected>Carl Viduka</option>
+													<option value="2">Caroline Spencer</option>
+													<option value="3" selected>Mark calahan</option>
+													<option value="4">Caroline</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="txtStartDate">Starting date</label>
+												<input id="txtStartDate" type="text" class="form-control" />
+											</div>
+											<div class="col-xs-12 col-sm-6">									
+												<label class="form-label" for="txtTime">Time</label>
+												<div id="timepickerAppointment" class="dropdown form-timepicker">
+													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<table>
+																				<tr>
+																					<td>
+																						<span class="timepicker-hour">1</span>
+																					</td>
+																					<td class="separator">:</td>
+																					<td>
+																						<span class="timepicker-minute">00</span>
+																					</td>
+																					<td>
+																						<span class="timepicker-period">AM</span>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="txtEndDate">Ending date</label>
+												<input id="txtEndDate" type="text" class="form-control" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectRepeat">Repeat</label>
+												<div class="form-select repeat-select">
+													<select id="selectRepeat" class="select-status">
+														<option value="0" selected>never</option>
+														<option value="1">custom</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label">&nbsp;</label>
+												<ul class="week-list hide">
+													<li class="active">m</li>
+													<li>t</li>
+													<li>w</li>
+													<li>t</li>
+													<li>f</li>
+													<li>s</li>
+													<li>s</li>
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectCategory">Category</label>
+												<div class="form-select category-select">
+													<select id="selectCategory" class="select-status">
+														<option value="2" selected>Yoga</option>
+														<option value="1">Make up</option>
+														<option value="0">Massage</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectClass">Class</label>
+												<div class="form-select service-select">
+													<select id="selectClass" class="select-status">
+														<option value="2" selected>Restoration yoga</option>
+														<option value="1">Restoration</option>
+														<option value="0">yoga</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12">
+												<label class="form-label" for="txtNote">Internal notes</label>
+												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row">				
+											<div class="col-lg-12">
+												<button class="btn btn-form btn-black">add class</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- #formClass -->
+							
+							<!-- #formBlocker -->
+							<div role="tabpanel" class="tab-pane" id="formBlocker">
+								<form>
+									<fieldset>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectClient">Client</label>
+												<select id="selectClient">
+													<option value="1" selected>Carl Viduka</option>
+													<option value="2">Caroline Spencer</option>
+													<option value="3" selected>Mark calahan</option>
+													<option value="4">Caroline</option>
+												</select>
+											</div>											
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectService">Service</label>
+												<div class="form-select service-select">
+													<select id="selectService" class="select-status">
+														<option value="2" selected>Restoration yoga</option>
+														<option value="1">Restoration</option>
+														<option value="0">yoga</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="txtDateBlocker">Starting date</label>
+												<input id="txtDateBlocker" type="text" class="form-control" />
+											</div>
+											<div class="col-xs-12 col-sm-6">									
+												<label class="form-label" for="txtTime">Time</label>
+												<div id="timepickerAppointment" class="dropdown form-timepicker">
+													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<table>
+																				<tr>
+																					<td>
+																						<span class="timepicker-hour">1</span>
+																					</td>
+																					<td class="separator">:</td>
+																					<td>
+																						<span class="timepicker-minute">00</span>
+																					</td>
+																					<td>
+																						<span class="timepicker-period">AM</span>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label" for="selectRepeat">Repeat</label>
+												<div class="form-select repeat-select">
+													<select id="selectRepeat" class="select-status">
+														<option value="0" selected>never</option>
+														<option value="1">custom</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<label class="form-label">&nbsp;</label>
+												<ul class="week-list hide">
+													<li class="active">m</li>
+													<li>t</li>
+													<li>w</li>
+													<li>t</li>
+													<li>f</li>
+													<li>s</li>
+													<li>s</li>
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12">
+												<label class="form-label" for="txtNote">Internal notes</label>
+												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row">				
+											<div class="col-lg-12">
+												<button class="btn btn-form btn-black">add appointment</button>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<!-- #formBlocker -->
+						
+						</div>
+						<!-- /.tab-content -->
+						
+					</section>
+					<!-- .tab-section -->	
 					
-					<form>
-						<fieldset>
-							<div class="row">
-								<div class="col-xs-12 text-center">
-									<span>
-										<input name="type" id="radioAppointment" class="radio-mark" type="radio">
-										<label class="radio-label" for="radioAppointment"> Appointment</label>
-									</span>
-									<span>
-										<input name="type" id="radioClass" class="radio-mark" type="radio">
-										<label class="radio-label" for="radioClass"> Class</label>
-									</span>
-									<span>
-										<input name="type" id="radioBlocker" class="radio-mark" type="radio">
-										<label class="radio-label" for="radioBlocker"> Blocker</label>
-									</span>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="selectClient">Client</label>
-									<select id="selectClient">
-										<option value="1" selected>Carl Viduka</option>
-										<option value="2">Caroline Spencer</option>
-										<option value="3" selected>Mark calahan</option>
-										<option value="4">Caroline</option>
-									</select>
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="selectStaff">Staff</label>
-									<select id="selectStaff">
-										<option value="1" selected>Carl Viduka</option>
-										<option value="2">Caroline Spencer</option>
-										<option value="3" selected>Mark calahan</option>
-										<option value="4">Caroline</option>
-									</select>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtDate">Starting date</label>
-									<input id="txtDate" type="text" class="form-control" />
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtTime">Time</label>
-									<input id="txtTime" type="text" class="form-control" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="selectRepeat">Repeat</label>
-									<div class="form-select repeat-select">
-										<select id="selectRepeat" class="select-status">
-											<option value="0" selected>never</option>
-											<option value="1">custom</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label">&nbsp;</label>
-									<ul class="week-list">
-										<li class="active">m</li>
-										<li>t</li>
-										<li>w</li>
-										<li>t</li>
-										<li>f</li>
-										<li>s</li>
-										<li>s</li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="selectCategory">Category</label>
-									<div class="form-select category-select">
-										<select id="selectCategory" class="select-status">
-											<option value="2" selected>Yoga</option>
-											<option value="1">Make up</option>
-											<option value="0">Massage</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="selectService">Service</label>
-									<div class="form-select service-select">
-										<select id="selectService" class="select-status">
-											<option value="2" selected>Restoration yoga</option>
-											<option value="1">Restoration</option>
-											<option value="0">yoga</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<label class="form-label" for="txtNote">Internal notes</label>
-									<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
-								</div>
-							</div>
-							<div class="row">				
-								<div class="col-lg-12">
-									<button class="btn btn-form btn-black">add appointment</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
@@ -613,6 +921,52 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#addStaffModal -->
+	
+	<!-- #addClientModal -->
+	<div id="addClientModal" class="modal fade modal-m" role="dialog" aria-labelledby="addClientModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-add-staff">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="addClientModalLabel" class="modal-title">Add new client</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<fieldset>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
+									<input id="txtFirstName" type="text" class="form-control" />
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
+									<input id="txtLastName" type="text" class="form-control" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtPhone">Cell phone number</label>
+									<input id="txtPhone" type="text" class="form-control" />
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtEmail">Email address <span class="txt-required">*</span></label>
+									<input id="txtEmail" type="text" class="form-control" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6 hidden-lg">
+									<input class="btn btn-form btn-white" type="button" value="no" />
+								</div>						
+								<div class="col-xs-6 col-lg-12">
+									<button class="btn btn-form btn-black"><span class="visible-lg">add new client</span><span class="hidden-lg">yes</span></button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#addClientModal -->
 	
 	<!-- #cancelCalendarModal -->
 	<div id="cancelCalendarModal" class="modal fade modal-m" role="dialog" aria-labelledby="cancelCalendarModalLabel" data-keyboard="false" data-backdrop="static">
@@ -693,13 +1047,22 @@
     
     <!-- === SCRIPTS === -->  
 	<script type="text/javascript" src="scripts/libs/modernizr.custom.js"></script>
-    <script type="text/javascript" src="scripts/libs/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="scripts/libs/jquery-ui.js"></script>	    	
+    <script type="text/javascript" src="scripts/libs/jquery-1.9.1.js"></script>	
+    <script type="text/javascript" src="scripts/libs/moment.js"></script>
+    
+    <!-- Bootstrap js -->
     <script type="text/javascript" src="scripts/libs/bootstrap.min.js"></script>
-    <script type="text/javascript" src="scripts/libs/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="scripts/libs/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="scripts/libs/bootstrap-select.js"></script>
+    
+    <!-- Jscrollpane js -->
 	<script type="text/javascript" src="scripts/libs/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="scripts/libs/jquery.jscrollpane.min.js"></script> 
+    
+    <!-- Tooltipster js -->
+	<script type="text/javascript" src="scripts/libs/jquery.tooltipster.min.js"></script>
+    
+    <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
 	<script type="text/javascript">

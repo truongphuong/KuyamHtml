@@ -21,11 +21,10 @@ var isMobile = {
 nowTemp = new Date(),
 now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-function checkCustomizeSelect(sectionClass, selectClass, headerTitle, scrollName, modalName){
-	var $sectionClass = $('.' + sectionClass),
-		$selectClass = $('.' + selectClass);
+function checkCustomizeSelect(sectionClass, headerTitle, scrollName, modalName){
+	var $sectionClass = $('.' + sectionClass);
 	if($sectionClass.length !== 0){
-		$selectClass.selectpicker();
+		$sectionClass.find('select').selectpicker();
 		
 		var positionInsert = '.' +  sectionClass + ' .dropdown-menu.inner',
 			$sectionAppend = $(positionInsert),
@@ -45,10 +44,9 @@ function checkCustomizeSelect(sectionClass, selectClass, headerTitle, scrollName
 }
 
 function checkExistSelect(sectionClass, selectClass){
-	var $sectionClass = $('.' + sectionClass),
-		$selectClass = $('.' + selectClass);
+	var $sectionClass = $('.' + sectionClass);
 	if($sectionClass.length !== 0){
-		$selectClass.selectpicker();
+		$sectionClass.find('select').selectpicker();
 	}
 }
 
@@ -85,45 +83,37 @@ function weekRepeat(){
 	});
 }
 
-function subfixDate($txtInput){
-	var thisVal = $txtInput.val(),
-		thisArr = thisVal.split(', '),
-		numDate = "",
-		subfixDate = "",
-		customDate = "";
-	if(thisArr.length !== 0){
-		var splitArr = thisArr[1].split(" ");
-		if(splitArr.length !== 0){
-			if(splitArr[1].length > 1){
-				if(splitArr[1] == 11 || splitArr[1] == 12){
-					subfixDate = "th";
-				}else{
-					numDate = splitArr[1].substring(1,2);
-					if(numDate==1){
-						subfixDate = "st";
-					}else if(numDate == 2){
-						subfixDate = "nd";
-					}else if(numDate == 3){
-						subfixDate = "rd";
-					}else{
-						subfixDate = "th";
-					}
-				}
-			}else{
-				if(splitTwoArr[1] == 1){
-					subfixDate = "st";
-				}else if(splitTwoArr[1] == 2){
-					subfixDate = "nd";
-				}else if(splitTwoArr[1] == 3){
-					subfixDate = "rd";
-				}else{
-					subfixDate = "th";
-				}
-			}
+function customPickTime($id, thisVal){
+	var thisArr = thisVal.split(' '),
+		periodVal = thisArr[1],
+		
+		TimeArr = thisArr[0].split(':'),
+		hourVal = TimeArr[0],
+		minuteVal = TimeArr[1],
+		
+		hourToVal = parseInt(hourVal) + 1,
+		minuteToVal = minuteVal,
+		periodToVal = periodVal,
+		
+		txtTimeVal = thisVal + ' - ';
+	
+	if(hourToVal === 13){
+		hourToVal = "1";
+	}
+	if(hourToVal === 12){
+		if(periodVal.toUpperCase() === "AM"){
+			periodToVal = "PM";
+		}else{
+			periodToVal = "AM";
 		}
 	}
-	customDate = thisVal + subfixDate;
-	$txtInput.val(customDate);
+	
+	txtTimeVal += hourToVal + ':' + minuteToVal + ' ' + periodToVal;
+	$id.find('input[data-toggle="dropdown"]').val(txtTimeVal);
+	
+	return $id.find('tfoot .timepicker-hour').text(hourToVal),
+	$id.find('tfoot .timepicker-minute').text(minuteToVal),
+	$id.find('tfoot tfoot .timepicker-period').text(periodToVal);
 }
 
 $(document).ready(function(){

@@ -1,7 +1,7 @@
 $(document).ready(function(){
-	checkCustomizeSelect('calendar-select-staff', 'select-staff', 'Add staff', 'selectStaff', 'addStaffModal');	
+	checkCustomizeSelect('calendar-select-staff', 'Add staff', 'selectStaff', 'addStaffModal');	
 	
-	checkExistSelect('calendar-select-status', 'select-status');
+	checkExistSelect('calendar-select-status');
 	
 	$('select.select-status').change(function(){
 		var thisVal = $(this).val();
@@ -11,28 +11,29 @@ $(document).ready(function(){
 	});
 	
 	$('#addCalendarModal').on('shown.bs.modal', function (e) {
+		checkExistSelect('form-select');
+		
 		weekRepeat();
 		
-		$('#txtDate').datepicker({
-			format: 'D, M d',
-    		todayHighlight: true,
-			startDate: now
-		}).on('changeDate', function(e){
-			$(this).datepicker('hide');
-			subfixDate($(this))
+		$('#txtDate').datetimepicker({
+			format: 'ddd, MMM Do'
 		});
 		
-		$('#txtTime').datepicker({
-			format: 'mm/dd/yy',
-    		todayHighlight: true,
-			startDate: now
-		}).on('changeDate', function(e){
-			$(this).datepicker('hide');
-			if($(this).val() != ''){
-				$(this).css({"background":"#fff"});
-			}
+		$('#timepickerHour').datetimepicker({
+			inline: true,
+			sideBySide: true,
+			format: 'LT'
+		}).on('dp.change', function(e){
+			var thisVal = e.date.format("h:mm A"),
+				dataSection = $(this).attr('data-section');
+				$parent = $('#' + dataSection);
+			customPickTime($parent, thisVal);
 		});
-	})
+		
+		$('.form-timepicker .dropdown-menu').click(function(event){
+			event.stopPropagation();
+		});
+	});
 });
 
 $(window).on('resize', function(){	

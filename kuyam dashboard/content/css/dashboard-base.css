@@ -199,10 +199,14 @@ form div[class*="col-"]{
 	font-family: ralewaylight, sans-serif;
 	border-color: #000;
 	height: 40px;
-	color:#292929;
+	color: #292929;
 	-webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+.form-control[readonly]{
+	cursor: text;
+	background: #fff;
 }
 textarea.form-control,
 textarea.form-control:focus{
@@ -630,6 +634,108 @@ select.selectpicker{
 }
 
 /* =============================================================================
+   timepicker
+   ========================================================================== */
+.form-timepicker{
+	position: relative;
+}
+.form-timepicker .dropdown-menu{
+	top: 0;
+	border: 1px solid #000;
+	margin-top: 0;
+	width: 100%;
+	padding:0;
+}
+.form-timepicker .dropdown-section{
+	position: relative;
+}
+.form-timepicker .dropdown-section > footer{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	bottom: 0;
+	background: #f0f0f0;
+	border-top: 1px solid #a8a8a8;
+}
+.form-timepicker .dropdown-section > table{
+	position: relative;
+}
+.form-timepicker  tbody .td-timepicker{
+	height: 90px;
+}
+.form-timepicker  tfoot .td-timepicker{
+	height: 40px;
+}
+.form-timepicker  tfoot .td-timepicker > table td{
+	width: 28px;
+	text-align: center;
+}
+.form-timepicker  tfoot .td-timepicker > table td .timepicker-period{
+	display: inline-block;
+	margin-left: 15px;
+	width: 34px;
+}
+.form-timepicker .td-field{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.form-timepicker .bootstrap-datetimepicker-widget table td,
+.form-timepicker .bootstrap-datetimepicker-widget table td span{
+	height: 27px;
+	width: 27px;
+	line-height: 27px;
+}
+.form-timepicker .bootstrap-datetimepicker-widget table td span:hover{
+	background-color: transparent;
+}
+.form-timepicker .glyphicon,
+.form-timepicker .glyphicon:hover{
+	background: url(../images/ui/icon_next_black.png) no-repeat center center;
+    background-size: 7px auto;
+	color:transparent;
+}
+.form-timepicker .glyphicon-chevron-up{
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.form-timepicker .glyphicon-chevron-down{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.form-timepicker .bootstrap-datetimepicker-widget .timepicker-hour, 
+.form-timepicker .bootstrap-datetimepicker-widget .timepicker-minute, 
+.form-timepicker .bootstrap-datetimepicker-widget .timepicker-second{
+	font-weight: normal;
+}
+.form-timepicker .bootstrap-datetimepicker-widget table td span{
+	margin: 0;
+}
+.form-timepicker .bootstrap-datetimepicker-widget a[data-action]{
+	padding: 0;
+}
+.form-timepicker .bootstrap-datetimepicker-widget button[data-action]{
+	background: transparent;
+	border: 0 none;
+	color: #292929;
+	margin-left: 15px;
+}
+.form-timepicker .table-condensed > thead > tr > th, 
+.form-timepicker .table-condensed > tbody > tr > th, 
+.form-timepicker .table-condensed > tfoot > tr > th, 
+.form-timepicker .table-condensed > thead > tr > td, 
+.form-timepicker .table-condensed > tbody > tr > td, 
+.form-timepicker .table-condensed > tfoot > tr > td{
+	padding: 0;
+}
+
+/* =============================================================================
    Icon
    ========================================================================== */
 .icon{
@@ -669,7 +775,7 @@ select.selectpicker{
 }
 
 .icon-next{
-    width: 7px;
+    width: 8px;
     height: 12px;
     background-image: url(../images/ui/icon_next_black.png);
     background-size: 7px auto;
@@ -679,7 +785,7 @@ select.selectpicker{
 }
 
 .icon-pre{
-    width: 7px;
+    width: 8px;
     height: 12px;
     background-image: url(../images/ui/icon_next_black.png);
     background-size: 7px auto;
@@ -691,6 +797,30 @@ select.selectpicker{
 }
 .disabled .icon-pre{
     background-image: url(../images/ui/icon_next_grey.png);
+}
+
+.icon-down{
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/ui/icon_next_black.png);
+    background-size: 7px auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.icon-up{
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/ui/icon_next_black.png);
+    background-size: 7px auto;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
 
 /* =============================================================================
