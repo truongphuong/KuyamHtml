@@ -81,7 +81,7 @@
         	<!-- .calendar-page -->
         	<div class="calendar-page">
             	<div class="calendar-select calendar-select-staff">
-                    <select class="select-staff">
+                    <select>
 						<option selected>all staff members</option>
                     	<option>John Smith</option>
                         <option>Jane Loid</option>
@@ -136,7 +136,17 @@
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
-                                
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-blocker block-past">
+										<p class="calendar-user">Carl Viduka</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+										<div class="calendar-control">
+											<a class="disabled" title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+										</div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
                                 	<!-- .calendar-block -->
                                 	<div class="calendar-block block-confirmed block-past">
 										<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
@@ -144,7 +154,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select disabled class="select-status">
+                                        	<select disabled>
                                             	<option value="2">pending</option>
                                                 <option value="1" selected>confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -177,7 +187,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select disabled class="select-status">
+                                        	<select disabled>
                                             	<option value="2">pending</option>
                                                 <option value="1" selected>confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -210,7 +220,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select disabled class="select-status">
+                                        	<select disabled>
                                             	<option value="2">pending</option>
                                                 <option value="1" selected>confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -226,7 +236,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select disabled class="select-status">
+                                        	<select disabled>
                                             	<option value="2">pending</option>
                                                 <option value="1" selected>confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -242,7 +252,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select class="select-status">
+                                        	<select>
                                             	<option value="2">pending</option>
                                                 <option value="1">confirmed</option>
                                                 <option value="0" selected>cancelled</option>
@@ -275,7 +285,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select class="select-status">
+                                        	<select>
                                             	<option value="2">pending</option>
                                                 <option value="1" selected>confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -306,7 +316,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <div class="calendar-select calendar-select-status">
-                                        	<select class="select-status">
+                                        	<select>
                                             	<option value="2" selected>pending</option>
                                                 <option value="1">confirmed</option>
                                                 <option value="0">cancelled</option>
@@ -331,7 +341,18 @@
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
-                                
+								
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-blocker">
+										<p class="calendar-user">Carl Viduka</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+										<div class="calendar-control">
+											<a title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+										</div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
                                     <input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />
                                     
                                 </div>
@@ -521,7 +542,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerAppointment"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -554,11 +575,11 @@
 												</div>
 											</div>
 										</div>
-										<div class="row">
+										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectRepeat">Repeat</label>
 												<div class="form-select repeat-select">
-													<select id="selectRepeat" class="select-form">
+													<select id="selectRepeat">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>
@@ -581,7 +602,7 @@
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectCategory">Category</label>
 												<div class="form-select category-select">
-													<select id="selectCategory" class="select-form">
+													<select id="selectCategory">
 														<option value="2" selected>Yoga</option>
 														<option value="1">Make up</option>
 														<option value="0">Massage</option>
@@ -591,7 +612,7 @@
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectService">Service</label>
 												<div class="form-select service-select">
-													<select id="selectService" class="select-status">
+													<select id="selectService">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
 														<option value="0">yoga</option>
@@ -637,8 +658,8 @@
 											</div>
 											<div class="col-xs-12 col-sm-6">									
 												<label class="form-label" for="txtTime">Time</label>
-												<div id="timepickerAppointment" class="dropdown form-timepicker">
-													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+												<div id="timepickerClass" class="dropdown form-timepicker">
+													<input id="txtTimeClass" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
 														<div class="dropdown-section">
 															<footer></footer>
@@ -649,7 +670,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerClass"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -688,11 +709,11 @@
 												<input id="txtEndDate" type="text" class="form-control" />
 											</div>
 										</div>
-										<div class="row">
+										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectRepeat">Repeat</label>
 												<div class="form-select repeat-select">
-													<select id="selectRepeat" class="select-status">
+													<select id="selectRepeat">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>
@@ -715,7 +736,7 @@
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectCategory">Category</label>
 												<div class="form-select category-select">
-													<select id="selectCategory" class="select-status">
+													<select id="selectCategory">
 														<option value="2" selected>Yoga</option>
 														<option value="1">Make up</option>
 														<option value="0">Massage</option>
@@ -725,7 +746,7 @@
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectClass">Class</label>
 												<div class="form-select service-select">
-													<select id="selectClass" class="select-status">
+													<select id="selectClass">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
 														<option value="0">yoga</option>
@@ -766,7 +787,7 @@
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectService">Service</label>
 												<div class="form-select service-select">
-													<select id="selectService" class="select-status">
+													<select id="selectService">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
 														<option value="0">yoga</option>
@@ -781,8 +802,8 @@
 											</div>
 											<div class="col-xs-12 col-sm-6">									
 												<label class="form-label" for="txtTime">Time</label>
-												<div id="timepickerAppointment" class="dropdown form-timepicker">
-													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+												<div id="timepickerBlocker" class="dropdown form-timepicker">
+													<input id="txtTimeBlocker" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
 														<div class="dropdown-section">
 															<footer></footer>
@@ -793,7 +814,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" data-section="timepickerAppointment"></div>
+																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerBlocker"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -826,11 +847,11 @@
 												</div>
 											</div>
 										</div>
-										<div class="row">
+										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectRepeat">Repeat</label>
 												<div class="form-select repeat-select">
-													<select id="selectRepeat" class="select-status">
+													<select id="selectRepeat">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>

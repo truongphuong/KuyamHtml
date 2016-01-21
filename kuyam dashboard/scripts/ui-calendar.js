@@ -19,7 +19,7 @@ $(document).ready(function(){
 			format: 'ddd, MMM Do'
 		});
 		
-		$('#timepickerHour').datetimepicker({
+		$('.timepicker-section').datetimepicker({
 			inline: true,
 			sideBySide: true,
 			format: 'LT'
