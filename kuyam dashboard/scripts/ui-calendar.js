@@ -46,7 +46,7 @@ $(document).ready(function(){
 		
 		weekRepeat();
 		
-		$('.repeat-select select').change(function(){
+		$('.form-select-repeat select').change(function(){
 			if($(this).val() === "0"){
 				$(this).parents('.repeat-section').find('.week-list').addClass('hide');
 			}else{
