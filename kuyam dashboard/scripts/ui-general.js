@@ -17,33 +17,96 @@ var isMobile = {
 	any: function() {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
-},
-nowTemp = new Date(),
-now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+};
 
-function checkCustomizeSelect(sectionClass, headerTitle, scrollName, modalName){
-	var $sectionClass = $('.' + sectionClass);
-	if($sectionClass.length !== 0){
-		$sectionClass.find('select').selectpicker();
+document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
+
+function iscrollSelectModal(sectionID, scrollName, modalName){
+	var $sectionID = $('#' + sectionID),
+		$modalID = $('#' + modalName),
+		scrollID = '#' + scrollName;
 		
-		var positionInsert = '.' +  sectionClass + ' .dropdown-menu.inner',
-			$sectionAppend = $(positionInsert),
-			modalID = '#' + modalName,
-			scrollID = '#' + scrollName;
-			
-		$('<header><a data-toggle="modal" data-target="' + modalID + '" title="" href="javascript:void(0);">' + headerTitle + '</a></header>').insertBefore(positionInsert);	
+	if($sectionID.length !== 0){
+		$sectionID.find('select').selectpicker({liveSearch: true});
+		$sectionID.find('.form-control').attr('readonly', 'true');		
+		
+		$sectionID.find('.popover-title').click(function(){
+			$modalID.modal('show');
+		});
+		
+		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+			$sectionAppend = $(positionInsert);			
+		
 		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 		$sectionAppend.appendTo(scrollID);
 		
-		if(!isMobile.any()){			
-			$(scrollID).jScrollPane({
-				autoReinitialise: true
+		var selectScroll = new IScroll(scrollID, { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
 			});
-		}
 	}
 }
 
-function checkExistSelect(sectionClass, selectClass){
+function iscrollSelectSearchModal(sectionID, scrollName, modalName){
+	var $sectionID = $('#' + sectionID),
+		$modalID = $('#' + modalName),
+		scrollID = '#' + scrollName;
+		
+	if($sectionID.length !== 0){
+		$sectionID.find('select').selectpicker({liveSearch: true});	
+		
+		$sectionID.find('.popover-title').click(function(){
+			$modalID.modal('show');
+		});
+		
+		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+			$sectionAppend = $(positionInsert);			
+		
+		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
+		$sectionAppend.appendTo(scrollID);
+		
+		var selectScroll = new IScroll(scrollID, { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+	}
+}
+
+function iscrollSelect(sectionID, scrollName){
+	var $sectionID = $('#' + sectionID),
+		scrollID = '#' + scrollName;
+	if($sectionID.length !== 0){
+		$sectionID.find('select').selectpicker();
+		
+		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+			$sectionAppend = $(positionInsert);
+		
+		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
+		$sectionAppend.appendTo(scrollID);
+		
+		var selectScroll = new IScroll(scrollID, { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+	}
+}
+
+function existSelect(sectionClass){
 	var $sectionClass = $('.' + sectionClass);
 	if($sectionClass.length !== 0){
 		$sectionClass.find('select').selectpicker();
@@ -78,8 +141,12 @@ function minHeightBody(){
 
 function weekRepeat(){
 	$('.week-list li').on('click', function(){
-		$(this).parent().find('li').removeClass('active');
-		$(this).addClass('active');
+		var isActive = $(this).hasClass('active');
+		if(isActive){
+			$(this).removeClass('active');			
+		}else{
+			$(this).addClass('active');
+		}
 	});
 }
 

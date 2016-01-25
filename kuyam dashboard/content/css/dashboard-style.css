@@ -11,38 +11,61 @@
     left: 15px;
 }
 .calendar-select-staff .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
-	width: 168px;
+	width: 184px;
 }
 .calendar-select-staff .bootstrap-select.btn-group .btn .filter-option{
 	font: .875em/20px ralewaysemibold, sans-serif;
 	color: #292929;
 }
-.calendar-select-staff header a{
-	display: block;
-	padding: 9px 10px;
-	text-decoration: underline;
-	font-family: ralewaybold, sans-serif;
-	font-size: .875em;
-	color: #292929;
+.calendar-select-staff .bootstrap-select .bs-searchbox{
+	height: 0;
 }
-.calendar-select-staff .dropdown-menu > li > a{
+.calendar-select-staff .bootstrap-select .dropdown-menu.inner{
+	width: 180px;
+}
+.calendar-select-staff .bootstrap-select .dropdown-menu > li > a{
 	font-family: ralewaymedium, sans-serif;
 	font-size: .875em;
 	color: #292929;
+}
+.calendar-select-staff .bootstrap-select .bootstrap-scroll{
+	max-height: 170px;
 }
 
 .calendar-select-status{
     margin-left: -12px;
 }
 .calendar-select-status .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
-	width: 100px;
+	width: 104px;
 }
 .calendar-select-status .btn-default.disabled .caret{
 	display: none;
 }
 
+#calendarMobile{
+	display: none;
+}
+
+.calendar-schedule .btn-add,
+.calendar-schedule .btn-add:active,
+.calendar-schedule .btn-add:visited{
+	width: 100%;
+	height: 40px;
+	background: #fff;
+	border: 2px dashed #959595;
+	color: #959595;
+	text-decoration: underline;
+}
+.calendar-schedule .btn-add:hover{
+	background: #242424;
+	border-color: #242424;
+	color: #fff;
+	text-decoration: none;
+}
+
 .calendar-header{
     text-align: center;
+	position: relative;
 }
 .calendar-header > div{
 	display: inline-block;
@@ -80,32 +103,50 @@
 	border-color: #bababa;
 	color: #bababa;
 }
+.calendar-header .btn-add{
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
-.calendar-section > .calendar-day-title{
+.calendar-owl .item{
+	border-bottom: 1px solid #e6e6e6;
+}
+.calendar-owl .calendar-date-title div{
+	border: 0 none;
+}
+.calendar-owl .calendar-date-title.active div{
+	background: transparent;
+	border: 0 none;
+	color: #bc347c;
+}
+.calendar-owl .calendar-date-detials{
+	text-align: center;
+	color: #bc347c;
+	padding:10px 15px;
+}
+
+.calendar-day-title{
     display: -webkit-flex;
     display: flex;
 }
-.calendar-section > .calendar-day-title > .calendar-date-title{
+.calendar-date-title{
 	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 	border-left: 1px solid transparent;
 }
-.calendar-section > .calendar-day-title > .calendar-date-title div{
+.calendar-date-title div{
 	padding: 5px 0;
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
+    text-align: center;
 }
-.calendar-section > .calendar-day-title > .calendar-date-title.active div{
+.calendar-date-title.active div{
 	background: #bc347c;
 	border-color: #bc347c;
 	color: #fff;
 	margin-right: -1px;
 	margin-left: -1px;
-}
-
-.calendar-day-title > div{
-    text-align: center;
 }
 
 .calendar-days-wrap{
@@ -132,22 +173,6 @@
     border-right: 2px solid transparent;
     margin-right: -1px;
     margin-left: -1px;
-}
-.calendar-day .btn-add,
-.calendar-day .btn-add:active,
-.calendar-day .btn-add:visited{
-	width: 100%;
-	height: 40px;
-	background: #fff;
-	border: 2px dashed #959595;
-	color: #959595;
-	text-decoration: underline;
-}
-.calendar-day .btn-add:hover{
-	background: #242424;
-	border-color: #242424;
-	color: #fff;
-	text-decoration: none;
 }
 
 .calendar-block
@@ -179,7 +204,7 @@
 	font-family: ralewaysemibold, sans-serif;
 }
 .calendar-block .calendar-control{
-	text-align:right;
+	text-align: right;
 }
 .calendar-block .bootstrap-select.btn-group .btn .filter-option{
 	font: .6875em/20px ralewaybold, sans-serif;
@@ -218,7 +243,7 @@
 	border-color: #737373;
 }
 .block-blocker .calendar-control{
-	margin-top:-5px;
+	margin-top: -5px;
 }
 
 .block-class{
@@ -266,6 +291,20 @@
 	color: #797979;
 }
 
+/* =============================================================================
+   settings page
+   ========================================================================== */
+.settings-page{
+	padding: 70px 0;
+}
+.settings-page a{
+	text-decoration: underline;
+	color: #292929;
+} 
+
+/* =============================================================================
+   modals
+   ========================================================================== */
 .modal-cancel-calendar h5{
 	font-size: 1.125em;
 	font-family: ralewaysemibold, sans-serif;
@@ -277,14 +316,9 @@
 	text-decoration: underline;
 }
 
-.settings-page{
-	padding: 70px 0;
-}
-.settings-page a{
-	text-decoration: underline;
-	color: #292929;
-} 
-
+/* =============================================================================
+   .week-list
+   ========================================================================== */
 .week-list{
 	margin: 0;
 	padding: 0;
@@ -312,10 +346,129 @@
 	color: #fff;
 }
 
-@media (max-width:991px){
+/* =============================================================================
+   .txt-date
+   ========================================================================== */
+.txt-date{
+	background-image: url(../images/ui/icon_calendar_grey_2.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 30px auto;
+	padding-right: 30px;
 }
 
-@media (min-width:768px){
+/* =============================================================================
+   .txt-time
+   ========================================================================== */
+.txt-hour{
+	background-image: url(../images/ui/icon_time_grey_2.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 30px auto;
+	padding-right: 30px;
+}
+
+/* =============================================================================
+   tabs
+   ========================================================================== */
+.calendar-tabs{}
+.calendar-tabs .nav-tabs{
+	text-align: center;
+	border: 0 none;
+	margin-bottom: 25px;
+}
+.calendar-tabs .nav-tabs > li{
+	float: none;
+	display: inline-block;
+	margin: 0 15px;
+}
+.calendar-tabs .nav-tabs > li .dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #c6c6c6;
+	margin-right: 10px;
+	margin-bottom: -1px;
+	-webkit-border-radius: 100% !important; 
+	-moz-border-radius: 100% !important;
+	border-radius: 100% !important;	
+}
+.calendar-tabs .nav-tabs > li a,
+.calendar-tabs .nav-tabs > li a:hover,
+.calendar-tabs .nav-tabs > li.active a,
+.calendar-tabs .nav-tabs > li.active a:hover{
+	border: 0 none;
+	background: transparent;
+	color: #292929;
+	font-size: .9375em;
+	padding:0;
+}
+.calendar-tabs .nav-tabs > li.active .dot{
+	background: #292929;
+	border: 1px solid #292929;
+}
+
+@media (max-width: 1023px){
+	#calendarMobile{
+		display: block;
+	}
+	#calendarDesktop{
+		display: none;	
+	}
+	.calendar-header{
+		text-align: right;
+	}
+	.calendar-header > div{
+		padding: 0 15px;
+	}
+	
+	.calendar-select-staff{
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	.calendar-select-staff .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+		width: auto;
+		margin-right: 77px;
+	}
+	.calendar-select-staff .bootstrap-select.open:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+		width: 100%;
+		margin-right: 0;
+	}
+	.calendar-select .bootstrap-select > .dropdown-toggle.btn-default{
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
+	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		border-color: #292929 #292929 transparent;
+		background: #292929;
+		color: #fff;
+	}
+	.calendar-select-staff .bootstrap-select.btn-group.open .bs-caret{
+		display: none;
+	}
+	.calendar-select .bootstrap-select .dropdown-menu{
+		background: #292929;
+	}
+	.calendar-select .bootstrap-select .dropdown-menu.open{
+		border-color: transparent #292929 #292929;
+	}
+	.calendar-select-staff .bootstrap-select.btn-group.open .btn .filter-option,
+	.bootstrap-select .popover-title,
+	.calendar-select-staff .bootstrap-select .dropdown-menu > li > a{
+		color: #fff;
+	}
+	.calendar-select-staff .bootstrap-select .dropdown-menu > li > a:hover{
+		color: #292929;
+	}
+}
+
+@media (max-width: 991px){
+}
+
+@media (min-width: 768px){
     .kuyam-header .navbar-nav > li > a{
         padding-left: 0;
         padding-right: 0;
@@ -333,5 +486,5 @@
     }
 }
 
-@media (max-width:767px){
+@media (max-width: 767px){
 }

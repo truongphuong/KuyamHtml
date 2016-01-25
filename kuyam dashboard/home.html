@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/master1.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,24 +6,24 @@
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
 
 <!-- http://www.favicon-generator.org/ -->
-<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-<link rel="manifest" href="favicon/manifest.json" />
+<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png?v2" />
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png?v2" />
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png?v2" />
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png?v2" />
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png?v2" />
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png?v2" />
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png?v2" />
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png?v2" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png?v2" />
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png?v2" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png?v2" />
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png?v2" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png?v2" />
+<link rel="manifest" href="favicon/manifest.json?v2" />
 <meta name="msapplication-TileColor" content="transparent" />
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
-<meta name="theme-color" content="transparent" />
-<meta name="msapplication-config" content="favicon/browserconfig.xml" />
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png?v2" />
+<meta name="theme-color" content="transparent?v2" />
+<meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Kuyam Admin - Dashboard</title>
@@ -45,6 +45,10 @@
 
 <!-- Tooltipster core CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/tooltipster.css"/>
+
+<!-- owl carousel CSS -->
+<link rel="stylesheet" type="text/css" href="content/css/owl.carousel.css"/>
+<link rel="stylesheet" type="text/css" href="content/css/owl.theme.css"/>
 
 <!-- Site core CSS -->
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-base.css" /> 
@@ -80,10 +84,10 @@
 		<!-- InstanceBeginEditable name="content" -->
         	<!-- .calendar-page -->
         	<div class="calendar-page">
-            	<div class="calendar-select calendar-select-staff">
-                    <select>
+            	<div id="divStaffCalenar" class="calendar-select calendar-select-staff">
+                    <select data-header="Add staff">
 						<option selected>all staff members</option>
-                    	<option>John Smith</option>
+                    	<option>John SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn Smith</option>
                         <option>Jane Loid</option>
                         <option>Amber Clark</option>
                         <option>Dorothy Ben</option>
@@ -96,7 +100,7 @@
                     </select>
                 </div>
                 
-                <!-- .calendar-schedule -->
+                <!-- #calendarDesktop -->
                 <div id="calendarDesktop" class="calendar-schedule">  
                 
                 	<!-- .calendar-header -->                  
@@ -114,7 +118,7 @@
                     <section class="calendar-section">
                     	
                         <!-- .calendar-day-title -->
-                    	<div class="calendar-day-title clearfix hidden-xs">
+                    	<div class="calendar-day-title clearfix">
                         	<div class="calendar-date-title"><div>Monday<br />Nov 16th</div></div>
                             <div class="calendar-date-title active"><div>Today<br />Nov 17th</div></div>
                             <div class="calendar-date-title"><div>Wednesday<br />Nov 18th</div></div>
@@ -130,9 +134,6 @@
                         	
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -173,9 +174,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date active">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -206,9 +204,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -271,9 +266,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -335,9 +327,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -363,9 +352,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -380,9 +366,6 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date">
-                            	<!-- .calendar-day-title -->
-                            	<div class="calendar-day-title visible-xs"></div>
-                                <!-- /.calendar-day-title -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -402,8 +385,209 @@
                     <!-- /.calendar-section -->
                     
                 </div>
-                <!-- /.calendar-schedule -->
+                <!-- /#calendarDesktop -->
                 
+				<!-- #calendarMobile -->
+                <div id="calendarMobile" class="calendar-schedule">  
+                
+                	<!-- .calendar-header -->                  
+                    <header class="calendar-header">
+                    	<div class="">
+                            <input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />                                    
+                        </div>
+                    </header>
+                    <!-- /.calendar-header -->
+                    
+                    <!-- .calendar-section -->
+                    <section class="calendar-section">
+						
+						<div id="calendarOwl" class="owl-carousel owl-theme calendar-owl">
+							<div class="item">
+								<!-- .calendar-day-title -->
+								<div class="calendar-day-title clearfix hidden-xs">
+									<div class="calendar-date-title"><div>M<br />11</div></div>
+									<div class="calendar-date-title active"><div>T<br />12</div></div>
+									<div class="calendar-date-title"><div>W<br />13</div></div>
+									<div class="calendar-date-title"><div>T<br />14</div></div>
+									<div class="calendar-date-title"><div>F<br />15</div></div>
+									<div class="calendar-date-title"><div>S<br />16</div></div>
+									<div class="calendar-date-title"><div>S<br />17</div></div>
+								</div>
+								<!-- /.calendar-day-title -->
+								
+								<div class="calendar-date-detials">Monday, january 12th</div>
+							</div>
+							<div class="item">
+								<!-- .calendar-day-title -->
+								<div class="calendar-day-title clearfix hidden-xs">
+									<div class="calendar-date-title"><div>M<br />18</div></div>
+									<div class="calendar-date-title active"><div>T<br />19</div></div>
+									<div class="calendar-date-title"><div>W<br />20</div></div>
+									<div class="calendar-date-title"><div>T<br />21</div></div>
+									<div class="calendar-date-title"><div>F<br />22</div></div>
+									<div class="calendar-date-title"><div>S<br />23</div></div>
+									<div class="calendar-date-title"><div>S<br />24</div></div>
+								</div>
+								<!-- /.calendar-day-title -->
+								
+								<div class="calendar-date-detials">Monday, january 19th</div>
+							</div>
+							<div class="item">
+								<!-- .calendar-day-title -->
+								<div class="calendar-day-title clearfix hidden-xs">
+									<div class="calendar-date-title"><div>M<br />25</div></div>
+									<div class="calendar-date-title active"><div>T<br />26</div></div>
+									<div class="calendar-date-title"><div>W<br />27</div></div>
+									<div class="calendar-date-title"><div>T<br />28</div></div>
+									<div class="calendar-date-title"><div>F<br />29</div></div>
+									<div class="calendar-date-title"><div>S<br />30</div></div>
+									<div class="calendar-date-title"><div>S<br />31</div></div>
+								</div>
+								<!-- /.calendar-day-title -->
+								
+								<div class="calendar-date-detials">Monday, january 26th</div>
+							</div>
+							<div class="item">
+								<!-- .calendar-day-title -->
+								<div class="calendar-day-title clearfix hidden-xs">
+									<div class="calendar-date-title"><div>M<br />1</div></div>
+									<div class="calendar-date-title active"><div>T<br />2</div></div>
+									<div class="calendar-date-title"><div>W<br />3</div></div>
+									<div class="calendar-date-title"><div>T<br />4</div></div>
+									<div class="calendar-date-title"><div>F<br />5</div></div>
+									<div class="calendar-date-title"><div>S<br />6</div></div>
+									<div class="calendar-date-title"><div>S<br />7</div></div>
+								</div>
+								<!-- /.calendar-day-title -->
+								
+								<div class="calendar-date-detials">Monday, january 2rd</div>
+							</div>						
+						</div>
+                        
+                        <!-- .calendar-days-wrap -->
+                        <div id="calendarDaysWrap" class="calendar-days-wrap clearfix">
+                        	
+                            <!-- .calendar-date -->
+                        	<div class="calendar-date">
+                                
+                                <!-- .calendar-day -->
+                                <div class="calendar-day">
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-blocker block-past">
+										<p class="calendar-user">Carl Viduka</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+										<div class="calendar-control">
+											<a class="disabled" title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+										</div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
+                                	<!-- .calendar-block -->
+                                	<div class="calendar-block block-confirmed block-past">
+										<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+                                        <div class="calendar-select calendar-select-status">
+                                        	<select disabled>
+                                            	<option value="2">pending</option>
+                                                <option value="1" selected>confirmed</option>
+                                                <option value="0">cancelled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-cancelled">
+                                    	<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
+                                        <p class="calendar-type">David cameron</p>
+                                        <div class="calendar-select calendar-select-status">
+                                        	<select>
+                                            	<option value="2">pending</option>
+                                                <option value="1">confirmed</option>
+                                                <option value="0" selected>cancelled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-confirmed">
+                                    	<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
+                                        <p class="calendar-type">David cameron</p>
+                                        <div class="calendar-select calendar-select-status">
+                                        	<select>
+                                            	<option value="2">pending</option>
+                                                <option value="1" selected>confirmed</option>
+                                                <option value="0">cancelled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+                                    
+                                    <!-- .calendar-block -->
+                                	<div class="calendar-block block-class">
+                                    	<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+                                        <ul class="clearfix">
+                                        	<li><span class="calendar-num-title">max</span><span class="calendar-num">15</span></li>
+                                            <li><span class="calendar-num-title">booked</span><span class="calendar-num">5</span></li>
+                                            <li><span class="calendar-num-title">avail</span><span class="calendar-num">10</span></li>
+                                        </ul>
+										<a class="calendar-attendee" title="" href="#">attendee list</a>
+                                    </div>
+                                    <!-- /.calendar-block -->
+                                
+                                	<!-- .calendar-block -->
+                                	<div class="calendar-block block-pending">
+                                    	<p class="calendar-user"><span class="icon icon-user"></span> Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+                                        <div class="calendar-select calendar-select-status">
+                                        	<select>
+                                            	<option value="2" selected>pending</option>
+                                                <option value="1">confirmed</option>
+                                                <option value="0">cancelled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									
+									<!-- .calendar-block -->
+                                	<div class="calendar-block block-blocker">
+										<p class="calendar-user">Carl Viduka</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+										<div class="calendar-control">
+											<a title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+										</div>
+                                    </div>
+                                    <!-- /.calendar-block -->
+                                    
+                                </div>
+                                <!-- /.calendar-day -->
+                                
+                            </div>
+                            <!-- /.calendar-date -->  
+                            
+                        </div>
+                        <!-- /.calendar-days-wrap -->
+                        
+                    </section>
+                    <!-- /.calendar-section -->
+                    
+                </div>
+                <!-- /#calendarMobile -->
+				
             </div>
             <!-- /.calendar-page -->
         <!-- InstanceEndEditable -->
@@ -485,14 +669,14 @@
 				</div>
 				<div class="modal-body">
 				
-					<!-- .tab-section -->
-					<section class="tab-section">
+					<!-- .calendar-tabs -->
+					<section id="tabsCalendar" class="calendar-tabs">
 
 						<!-- .nav-tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab"><span class="dot"></span> Appointment</a></li>
-							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab"><span class="dot"></span> Class</a></li>
-							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab"><span class="dot"></span> Blocker</a></li>
+							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Appointment</a></li>
+							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Class</a></li>
+							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Blocker</a></li>
 						</ul>
 						<!-- /.nav-tabs -->
 
@@ -505,34 +689,60 @@
 									<fieldset>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectClient">Client</label>
-												<select id="selectClient">
-													<option value="1" selected>Carl Viduka</option>
-													<option value="2">Caroline Spencer</option>
-													<option value="3" selected>Mark calahan</option>
-													<option value="4">Caroline</option>
-												</select>
+												<label class="form-label" for="selectClientAppointment">Client</label>
+												
+												<!-- .form-select -->
+												<div id="divClientAppointment" class="form-select form-select-search right">
+													<select id="selectClientAppointment" data-header="Add client">
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="0" selected>Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2">Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4">Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6">Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8">Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
+													</select>
+												</div>
+												<!-- /.form-select -->
+												
 											</div>
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectStaff">Staff</label>
-												<select id="selectStaff">
-													<option value="1" selected>Carl Viduka</option>
-													<option value="2">Caroline Spencer</option>
-													<option value="3" selected>Mark calahan</option>
-													<option value="4">Caroline</option>
-												</select>
+												<label class="form-label" for="selectStaffAppointment">Staff</label>
+												
+												<!-- .form-select -->
+												<div id="divStaffAppointment" class="form-select form-select-search left">
+													<select id="selectStaffAppointment" data-header="Add staff" multiple>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</span>" value="0" selected>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2" selected>Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4" selected>Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6" selected>Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8" selected>Carl Viduka</option>
+														<option data-content="<button class='btn-details'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
+													</select>
+												</div>
+												<!-- /.form-select -->
+												
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="txtDate">Starting date</label>
-												<input id="txtDate" type="text" class="form-control" />
+												<label class="form-label" for="txtDateAppointment">Starting date</label>
+												<div class="form-timepicker">
+													<input id="txtDateAppointment" type="text" class="form-control txt-date" />												
+												</div>
 											</div>
 											<div class="col-xs-12 col-sm-6">									
-												<label class="form-label" for="txtTime">Time</label>
+												<label class="form-label" for="txtTimeAppointment">Time</label>
 												<div id="timepickerAppointment" class="dropdown form-timepicker">
-													<input id="txtTime" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+													<input id="txtTimeAppointment" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
 														<div class="dropdown-section">
 															<footer></footer>
 															<table>
@@ -542,7 +752,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerAppointment"></div>
+																			<div class="timepicker-section" data-section="timepickerAppointment"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -577,9 +787,9 @@
 										</div>
 										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectRepeat">Repeat</label>
-												<div class="form-select repeat-select">
-													<select id="selectRepeat">
+												<label class="form-label" for="selectRepeatAppointment">Repeat</label>
+												<div class="form-select form-select-repeat">
+													<select id="selectRepeatAppointment">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>
@@ -600,9 +810,9 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectCategory">Category</label>
-												<div class="form-select category-select">
-													<select id="selectCategory">
+												<label class="form-label" for="selectCategoryAppointment">Category</label>
+												<div id="divCategoryAppointment" class="form-select">
+													<select id="selectCategoryAppointment">
 														<option value="2" selected>Yoga</option>
 														<option value="1">Make up</option>
 														<option value="0">Massage</option>
@@ -610,9 +820,9 @@
 												</div>
 											</div>
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectService">Service</label>
-												<div class="form-select service-select">
-													<select id="selectService">
+												<label class="form-label" for="selectServiceAppointment">Service</label>
+												<div id="divServiceAppointment" class="form-select">
+													<select id="selectServiceAppointment">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
 														<option value="0">yoga</option>
@@ -622,8 +832,8 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12">
-												<label class="form-label" for="txtNote">Internal notes</label>
-												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+												<label class="form-label" for="txtNoteAppointment">Internal notes</label>
+												<textarea id="txtNoteAppointment" cols="" rows="" class="form-control"></textarea>
 											</div>
 										</div>
 										<div class="row">				
@@ -642,25 +852,39 @@
 									<fieldset>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectStaff">Staff</label>
-												<select id="selectStaff">
-													<option value="1" selected>Carl Viduka</option>
-													<option value="2">Caroline Spencer</option>
-													<option value="3" selected>Mark calahan</option>
-													<option value="4">Caroline</option>
-												</select>
+												<label class="form-label" for="selectStaffClass">Staff</label>
+												
+												<!-- .form-select -->
+												<div id="divStaffClass" class="form-select form-select-search">
+													<select id="selectStaffClass" data-header="Add staff">
+														<option value="0" selected>Carl Viduka</option>
+														<option value="1">Caroline Spencer</option>
+														<option value="2">Carl Viduka</option>
+														<option value="3">Caroline Spencer</option>
+														<option value="4">Carl Viduka</option>
+														<option value="5">Caroline Spencer</option>
+														<option value="6">Carl Viduka</option>
+														<option value="7">Caroline Spencer</option>
+														<option value="8">Carl Viduka</option>
+														<option value="9">Caroline Spencer</option>
+													</select>
+												</div>
+												<!-- /.form-select -->
+												
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="txtStartDate">Starting date</label>
-												<input id="txtStartDate" type="text" class="form-control" />
+												<label class="form-label" for="txtStartDateClass">Starting date</label>
+												<div class="form-timepicker">
+													<input id="txtStartDateClass" type="text" class="form-control txt-date" />
+												</div>
 											</div>
 											<div class="col-xs-12 col-sm-6">									
-												<label class="form-label" for="txtTime">Time</label>
+												<label class="form-label" for="txtTimeClass">Time</label>
 												<div id="timepickerClass" class="dropdown form-timepicker">
-													<input id="txtTimeClass" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+													<input id="txtTimeClass" type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
 														<div class="dropdown-section">
 															<footer></footer>
 															<table>
@@ -670,7 +894,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerClass"></div>
+																			<div class="timepicker-section" data-section="timepickerClass"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -705,15 +929,17 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="txtEndDate">Ending date</label>
-												<input id="txtEndDate" type="text" class="form-control" />
+												<label class="form-label" for="txtEndDateClass">Ending date</label>
+												<div class="form-timepicker">
+													<input id="txtEndDateClass" type="text" class="form-control txt-date" />
+												</div>
 											</div>
 										</div>
 										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectRepeat">Repeat</label>
-												<div class="form-select repeat-select">
-													<select id="selectRepeat">
+												<label class="form-label" for="selectRepeatClass">Repeat</label>
+												<div class="form-select form-select-repeat">
+													<select id="selectRepeatClass">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>
@@ -734,9 +960,9 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectCategory">Category</label>
-												<div class="form-select category-select">
-													<select id="selectCategory">
+												<label class="form-label" for="selectCategoryClass">Category</label>
+												<div id="divCategoryClass" class="form-select">
+													<select id="selectCategoryClass">
 														<option value="2" selected>Yoga</option>
 														<option value="1">Make up</option>
 														<option value="0">Massage</option>
@@ -745,7 +971,7 @@
 											</div>
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="selectClass">Class</label>
-												<div class="form-select service-select">
+												<div id="divClass" class="form-select">
 													<select id="selectClass">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
@@ -756,8 +982,8 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12">
-												<label class="form-label" for="txtNote">Internal notes</label>
-												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+												<label class="form-label" for="txtNoteClass">Internal notes</label>
+												<textarea id="txtNoteClass" cols="" rows="" class="form-control"></textarea>
 											</div>
 										</div>
 										<div class="row">				
@@ -776,18 +1002,30 @@
 									<fieldset>
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectClient">Client</label>
-												<select id="selectClient">
-													<option value="1" selected>Carl Viduka</option>
-													<option value="2">Caroline Spencer</option>
-													<option value="3" selected>Mark calahan</option>
-													<option value="4">Caroline</option>
-												</select>
+												<label class="form-label" for="selectStaffBlocker">Client</label>
+												
+												<!-- .form-select -->
+												<div id="divStaffBlocker" class="form-select form-select-search">
+													<select id="selectStaffBlocker" data-header="Add staff">
+														<option value="0" selected>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</option>
+														<option value="1">Caroline Spencer</option>
+														<option value="2">Carl Viduka</option>
+														<option value="3">Caroline Spencer</option>
+														<option value="4">Carl Viduka</option>
+														<option value="5">Caroline Spencer</option>
+														<option value="6">Carl Viduka</option>
+														<option value="7">Caroline Spencer</option>
+														<option value="8">Carl Viduka</option>
+														<option value="9">Caroline Spencer</option>
+													</select>
+												</div>
+												<!-- /.form-select -->
+												
 											</div>											
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectService">Service</label>
-												<div class="form-select service-select">
-													<select id="selectService">
+												<label class="form-label" for="selectServiceBlocker">Service</label>
+												<div id="divServiceBlocker" class="form-select">
+													<select id="selectServiceBlocker">
 														<option value="2" selected>Restoration yoga</option>
 														<option value="1">Restoration</option>
 														<option value="0">yoga</option>
@@ -798,13 +1036,15 @@
 										<div class="row">
 											<div class="col-xs-12 col-sm-6">
 												<label class="form-label" for="txtDateBlocker">Starting date</label>
-												<input id="txtDateBlocker" type="text" class="form-control" />
+												<div class="form-timepicker">
+													<input id="txtDateBlocker" type="text" class="form-control txt-date" />
+												</div>
 											</div>
 											<div class="col-xs-12 col-sm-6">									
-												<label class="form-label" for="txtTime">Time</label>
+												<label class="form-label" for="txtTimeBlocker">Time</label>
 												<div id="timepickerBlocker" class="dropdown form-timepicker">
-													<input id="txtTimeBlocker" readonly type="text" class="form-control" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-													<section class="dropdown-menu" class="" aria-labelledby="txtTime">
+													<input id="txtTimeBlocker" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
 														<div class="dropdown-section">
 															<footer></footer>
 															<table>
@@ -814,7 +1054,7 @@
 																			From
 																		</td>	
 																		<td class="td-timepicker">
-																			<div id="timepickerHour" class="timepicker-section" data-section="timepickerBlocker"></div>
+																			<div class="timepicker-section" data-section="timepickerBlocker"></div>
 																		</td>	
 																	</tr>
 																</tbody>
@@ -849,9 +1089,9 @@
 										</div>
 										<div class="row repeat-section">
 											<div class="col-xs-12 col-sm-6">
-												<label class="form-label" for="selectRepeat">Repeat</label>
-												<div class="form-select repeat-select">
-													<select id="selectRepeat">
+												<label class="form-label" for="selectRepeatBlocker">Repeat</label>
+												<div class="form-select form-select-repeat">
+													<select id="selectRepeatBlocker">
 														<option value="0" selected>never</option>
 														<option value="1">custom</option>
 													</select>
@@ -872,8 +1112,8 @@
 										</div>
 										<div class="row">
 											<div class="col-xs-12">
-												<label class="form-label" for="txtNote">Internal notes</label>
-												<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+												<label class="form-label" for="txtNoteBlocker">Internal notes</label>
+												<textarea id="txtNoteBlocker" cols="" rows="" class="form-control"></textarea>
 											</div>
 										</div>
 										<div class="row">				
@@ -890,7 +1130,7 @@
 						<!-- /.tab-content -->
 						
 					</section>
-					<!-- .tab-section -->	
+					<!-- /.calendar-tabs -->	
 					
 				</div>
 			</div><!-- /.modal-content -->
@@ -910,22 +1150,22 @@
 						<fieldset>
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
-									<input id="txtFirstName" type="text" class="form-control" />
+									<label class="form-label" for="txtFirstNameStaff">First name <span class="txt-required">*</span></label>
+									<input id="txtFirstNameStaff" type="text" class="form-control" />
 								</div>
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
-									<input id="txtLastName" type="text" class="form-control" />
+									<label class="form-label" for="txtLastNameStaff">Last name <span class="txt-required">*</span></label>
+									<input id="txtLastNameStaff" type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtPhone">Cell phone number</label>
-									<input id="txtPhone" type="text" class="form-control" />
+									<label class="form-label" for="txtPhoneStaff">Cell phone number</label>
+									<input id="txtPhoneStaff" type="text" class="form-control" />
 								</div>
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtEmail">Email address <span class="txt-required">*</span></label>
-									<input id="txtEmail" type="text" class="form-control" />
+									<label class="form-label" for="txtEmailStaff">Email address <span class="txt-required">*</span></label>
+									<input id="txtEmailStaff" type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="row">
@@ -956,22 +1196,22 @@
 						<fieldset>
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
-									<input id="txtFirstName" type="text" class="form-control" />
+									<label class="form-label" for="txtFirstNameClient">First name <span class="txt-required">*</span></label>
+									<input id="txtFirstNameClient" type="text" class="form-control" />
 								</div>
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
-									<input id="txtLastName" type="text" class="form-control" />
+									<label class="form-label" for="txtLastNameClient">Last name <span class="txt-required">*</span></label>
+									<input id="txtLastNameClient" type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtPhone">Cell phone number</label>
-									<input id="txtPhone" type="text" class="form-control" />
+									<label class="form-label" for="txtPhoneClient">Cell phone number</label>
+									<input id="txtPhoneClient" type="text" class="form-control" />
 								</div>
 								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtEmail">Email address <span class="txt-required">*</span></label>
-									<input id="txtEmail" type="text" class="form-control" />
+									<label class="form-label" for="txtEmailClient">Email address <span class="txt-required">*</span></label>
+									<input id="txtEmailClient" type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="row">
@@ -1076,12 +1316,14 @@
     <script type="text/javascript" src="scripts/libs/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="scripts/libs/bootstrap-select.js"></script>
     
-    <!-- Jscrollpane js -->
-	<script type="text/javascript" src="scripts/libs/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="scripts/libs/jquery.jscrollpane.min.js"></script> 
+    <!-- iscroll js -->
+	<script type="text/javascript" src="scripts/libs/iscroll.js"></script> 
     
     <!-- Tooltipster js -->
 	<script type="text/javascript" src="scripts/libs/jquery.tooltipster.min.js"></script>
+    
+    <!-- owl carousel js -->
+	<script type="text/javascript" src="scripts/libs/owl.carousel.js"></script>
     
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
