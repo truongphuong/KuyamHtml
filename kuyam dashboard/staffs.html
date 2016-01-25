@@ -26,7 +26,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Settings</title>
+<title>Kuyam Admin - </title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -79,46 +79,11 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-			<!-- .settings-page -->
-        	<div class="settings-page">
-				<div class="container">
-					<form class="row">
-						<fieldset class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
-									<input id="txtFirstName" type="text" class="form-control" />
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
-									<input id="txtLastName" type="text" class="form-control" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtPhone">Cell phone number</label>
-									<input id="txtPhone" type="text" class="form-control" />
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<label class="form-label" for="txtEmail">Email address <span class="txt-required">*</span></label>
-									<input id="txtEmail" type="text" class="form-control" />
-								</div>
-							</div>
-							<div class="row">				
-								<div class="col-xs-12 text-center">
-									<a title="" href="javascript:void(0);"  data-toggle="modal" data-target="#changePassModal">change password</a>
-								</div>
-							</div>
-							<div class="row">				
-								<div class="col-xs-12">
-									<button class="btn btn-form btn-black">save change</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
+        	<div class="staffs-page">
+				<div style="position:relative;">
+					<input type="text" class="form-control txt-date" />
 				</div>
             </div>
-			<!-- .settings-page -->
         <!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer"> 
@@ -187,47 +152,6 @@
 	</div><!-- /#saveModal -->
      
     <!-- InstanceBeginEditable name="modal" -->
-	<!-- #addStaffModal -->
-	<div id="changePassModal" class="modal fade modal-m" role="dialog" aria-labelledby="changePasModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="changePasModalLabel" class="modal-title">Change password</h4>
-				</div>
-				<div class="modal-body">
-					<form>
-						<fieldset>
-							<div class="row">
-								<div class="col-xs-12 col-sm-6">
-									<div class="form-placeholder">
-										<input id="txtFirstName" type="text" class="form-control" />
-										<label class="form-label" for="txtFirstName">New password <span class="txt-required">*</span></label>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-6">
-									<div class="form-placeholder">
-										<input id="txtLastName" type="text" class="form-control" />
-										<label class="form-label" for="txtLastName">Re-enter password <span class="txt-required">*</span></label>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12 text-center">
-									* Password minumum 6 characters
-								</div>
-							</div>
-							<div class="row">				
-								<div class="col-xs-12">
-									<button class="btn btn-form btn-black">change password</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#changePassModal -->
     <!-- InstanceEndEditable --> 
     
     <!-- === SCRIPTS === -->  
@@ -252,9 +176,7 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript">
-		document.getElementById('navSettings').className = "active";
-	</script>
+    <script type="text/javascript" src="scripts/ui-staffs.js"></script> 
     <!-- InstanceEndEditable -->
         
 </body>
