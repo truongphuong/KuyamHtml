@@ -150,37 +150,12 @@ function weekRepeat(){
 	});
 }
 
-function customPickTime($id, thisVal){
-	var thisArr = thisVal.split(' '),
-		periodVal = thisArr[1],
-		
-		TimeArr = thisArr[0].split(':'),
-		hourVal = TimeArr[0],
-		minuteVal = TimeArr[1],
-		
-		hourToVal = parseInt(hourVal) + 1,
-		minuteToVal = minuteVal,
-		periodToVal = periodVal,
-		
-		txtTimeVal = thisVal + ' - ';
-	
-	if(hourToVal === 13){
-		hourToVal = "1";
-	}
-	if(hourToVal === 12){
-		if(periodVal.toUpperCase() === "AM"){
-			periodToVal = "PM";
-		}else{
-			periodToVal = "AM";
-		}
-	}
-	
-	txtTimeVal += hourToVal + ':' + minuteToVal + ' ' + periodToVal;
-	$id.find('input[data-toggle="dropdown"]').val(txtTimeVal);
-	
-	return $id.find('tfoot .timepicker-hour').text(hourToVal),
-	$id.find('tfoot .timepicker-minute').text(minuteToVal),
-	$id.find('tfoot tfoot .timepicker-period').text(periodToVal);
+function customPickTime($id, date, increment){
+    var todate = moment(date).add(increment, "m");
+
+    return $id.find('tfoot .timepicker-hour').text(todate.format("h")),
+    $id.find('tfoot .timepicker-minute').text(todate.format("mm")),
+    $id.find('tfoot .timepicker-period').text(todate.format("A"));
 }
 
 $(document).ready(function(){

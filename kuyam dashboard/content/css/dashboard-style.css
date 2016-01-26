@@ -9,6 +9,7 @@
     position: absolute;
     top: 9px;
     left: 15px;
+	z-index: 9;
 }
 .calendar-select-staff .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
 	width: 184px;
@@ -66,6 +67,7 @@
 .calendar-header{
     text-align: center;
 	position: relative;
+	z-index: 1;
 }
 .calendar-header > div{
 	display: inline-block;
@@ -106,6 +108,10 @@
 .calendar-header .btn-add{
 	padding-left: 20px;
 	padding-right: 20px;
+	width: 75px;
+	position: absolute;
+	top: 7px;
+	right: 15px;
 }
 
 .calendar-owl .item{
@@ -140,6 +146,7 @@
 	border-top: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
     text-align: center;
+	cursor: pointer;
 }
 .calendar-date-title.active div{
 	background: #bc347c;
@@ -182,6 +189,7 @@
     border-style: solid;
     margin-bottom: 3px;
     color: #292929;
+	position: relative;
 }
 .calendar-block .icon-user{
 	margin-bottom: -3px;
@@ -289,6 +297,10 @@
 }
 .calendar-block.block-past .calendar-attendee{
 	color: #797979;
+}
+
+.calendar-details{
+
 }
 
 /* =============================================================================
@@ -415,12 +427,6 @@
 	#calendarDesktop{
 		display: none;	
 	}
-	.calendar-header{
-		text-align: right;
-	}
-	.calendar-header > div{
-		padding: 0 15px;
-	}
 	
 	.calendar-select-staff{
 		left: 0;
@@ -428,16 +434,15 @@
 		width: 100%;
 	}
 	.calendar-select-staff .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
-		width: auto;
-		margin-right: 77px;
+		width: 30%;
 	}
 	.calendar-select-staff .bootstrap-select.open:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
 		width: 100%;
 		margin-right: 0;
 	}
 	.calendar-select .bootstrap-select > .dropdown-toggle.btn-default{
-		padding-top: 18px;
-		padding-bottom: 18px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
 	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
@@ -463,6 +468,10 @@
 	.calendar-select-staff .bootstrap-select .dropdown-menu > li > a:hover{
 		color: #292929;
 	}
+	
+	.calendar-block p.calendar-user{
+		text-decoration: underline;
+	}
 }
 
 @media (max-width: 991px){
@@ -487,4 +496,18 @@
 }
 
 @media (max-width: 767px){
+	.calendar-tabs .nav-tabs > li{
+		margin: 0;
+		float: left;
+		width: 33.33%;
+	}
+	.calendar-tabs .nav-tabs > li .dot{
+		display: none;
+	}	 
+	.calendar-tabs .nav-tabs > li a:hover, 
+	.calendar-tabs .nav-tabs > li.active a, 
+	.calendar-tabs .nav-tabs > li.active a:hover{
+		text-decoration: underline;
+		font-family:  ralewaybold, sans-serif;
+	}
 }

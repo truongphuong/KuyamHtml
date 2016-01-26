@@ -977,10 +977,19 @@ textarea.form-control:focus{
     border: 0 none;
     margin-bottom: 0;
 }
-
+.kuyam-header .navbar-toggle{
+	margin: 0;
+	padding:17px 15px;
+}
+.kuyam-header .navbar-toggle.collapsed .icon-bar{
+	background: #fff;
+}
+.kuyam-header .navbar-toggle .icon-bar{
+	background: #9eca35;
+}
 .kuyam-header .navbar-brand{
 	width: 159px;
-	margin-left: 0 !important;
+	margin-left: 0;
 	margin-right: 35px;
 	background: url(../images/logo.png) center center no-repeat;
 	background-size: 159px auto;
@@ -1043,6 +1052,35 @@ textarea.form-control:focus{
 	}
 	.modal-l .modal-dialog{
 		width: 650px;
+	}
+}
+
+@media (max-width:991px){
+	.kuyam-footer{
+		text-align: center;	
+		padding:20px 0;
+		font-size: .85em;
+	}
+	.kuyam-footer ul{
+		float: none;
+	}
+	.kuyam-footer ul li{
+		float: none;
+		display: inline-block;
+		margin: 0 15px 20px;
+	}
+	.kuyam-footer ul li:last-child{
+		display: none;
+	}
+	.kuyam-footer{
+		line-height: 140%;
+	}
+}
+
+
+@media (max-width:767px){
+	.kuyam-header .navbar-brand{
+		margin-left: 15px;
 	}
 }
 

@@ -17,12 +17,6 @@ function iscrollSelectTabs(tabContentID){
 }
 
 $(document).ready(function(){
-	$("#calendarOwl").owlCarousel({
-		slideSpeed : 300,
-		paginationSpeed : 400,
-		singleItem: true,
-		pagination: false		  
-	});
 	
 	iscrollSelectModal('divStaffCalenar', 'iscrollStaffCalendar', 'addStaffModal');	
 	
@@ -59,10 +53,9 @@ $(document).ready(function(){
 			sideBySide: true,
 			format: 'LT'
 		}).on('dp.change', function(e){
-			var thisVal = e.date.format("h:mm A"),
-				dataSection = $(this).attr('data-section');
+			var dataSection = $(this).attr('data-section');
 				$parent = $('#' + dataSection);
-			customPickTime($parent, thisVal);
+			customPickTime($parent, e.date, 30);
 		});
 		
 		var tabContentID = $('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-controls'),
