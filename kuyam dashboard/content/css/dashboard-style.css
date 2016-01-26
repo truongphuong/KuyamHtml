@@ -182,6 +182,15 @@
     margin-left: -1px;
 }
 
+.calendar-details,
+.calendar-details:hover,
+.calendar-details:focus{
+	font-family: ralewaysemibold, sans-serif;
+	color: #292929;
+	text-decoration: underline;
+	font-size:.8125em;
+}
+
 .calendar-block
 {
     padding: 15px;
@@ -213,6 +222,11 @@
 }
 .calendar-block .calendar-control{
 	text-align: right;
+}
+.calendar-block > .calendar-details{
+	position: absolute;
+	bottom: 35px;
+	right: 15px;
 }
 .calendar-block .bootstrap-select.btn-group .btn .filter-option{
 	font: .6875em/20px ralewaybold, sans-serif;
@@ -252,6 +266,11 @@
 }
 .block-blocker .calendar-control{
 	margin-top: -5px;
+}
+.block-blocker .calendar-details{
+	margin-left: 10px;
+	top: -2px;
+	position: relative;
 }
 
 .block-class{
@@ -297,10 +316,6 @@
 }
 .calendar-block.block-past .calendar-attendee{
 	color: #797979;
-}
-
-.calendar-details{
-
 }
 
 /* =============================================================================
@@ -471,6 +486,15 @@
 	
 	.calendar-block p.calendar-user{
 		text-decoration: underline;
+	}
+	
+	.block-class ul li{
+		width: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.block-class ul li:first-child{
+		float: right;
 	}
 }
 
