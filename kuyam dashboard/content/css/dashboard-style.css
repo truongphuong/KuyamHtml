@@ -89,6 +89,9 @@
 .calendar-header .calendar-title{
 	line-height: 34px;
 }
+.calendar-header .calendar-title span:last-child{
+	display: none;
+}
 .calendar-header .btn-today{
 	background: #fff;
 	padding: 5px 10px;
@@ -476,16 +479,24 @@
 	.calendar-header .btn-today,
 	.calendar-section > .calendar-day-title,
 	.calendar-date,
-	.calendar-date .btn-add{
+	.calendar-date .btn-add,
+	.calendar-header .calendar-title span:first-child{
 		display: none;
 	}
 	
 	.calendar-slide,
 	.calendar-date.active,
 	.calendar-details,
-	.block-class ul li{
+	.block-class ul li,
+	.calendar-header .calendar-title span:last-child{
 		display: block;
 	}
+	
+	.calendar-header{
+		margin-left: 30%;
+		margin-right: 30%;
+	}
+	
 	.calendar-date.active .calendar-day{
 		border-color: transparent;
 	}
