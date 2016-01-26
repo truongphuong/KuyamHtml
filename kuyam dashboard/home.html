@@ -20,8 +20,8 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png?v2" />
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png?v2" />
 <link rel="manifest" href="favicon/manifest.json?v2" />
-<meta name="msapplication-TileColor" content="transparent" />
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png?v2" />
+<meta name="msapplication-titleColor" content="transparent" />
+<meta name="msapplication-titleImage" content="favicon/ms-icon-144x144.png?v2" />
 <meta name="theme-color" content="transparent?v2" />
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
@@ -78,7 +78,7 @@
 		<!-- InstanceBeginEditable name="content" -->
         	<!-- .calendar-page -->
         	<div class="calendar-page">
-            	<div id="divStaffCalenar" class="calendar-select calendar-select-staff">
+            	<div id="divStaffCalendar" class="calendar-select calendar-select-staff">
                     <select data-header="Add staff">
 						<option selected>all staff members</option>
                     	<option>John SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn SmithJohn Smith</option>
@@ -103,42 +103,67 @@
                             <input disabled class="btn-today" type="button" value="Today" />
                             <a title="" href="javascript:void(0);" class="calendar-controls calendar-pre disabled"><span class="icon icon-pre"></span></a>
                             <a title="" href="javascript:void(0);" class="calendar-controls calendar-next"><span class="icon icon-next"></span></a>
-                            <div class="calendar-title"><span>Nov 16 - 22</span><span>Week</span></div>
+                            <div class="calendar-title">
+								<span class="full-title">Nov 16 - 22</span>
+								<span class="short-title">Week</span>
+							</div>
                         </div>
+						<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#repeatCalendarModal" />
                     </header>
                     <!-- /.calendar-header -->
                     
                     <!-- .calendar-section -->
                     <section class="calendar-section">
-                    	
-                        <!-- .calendar-day-title -->
-                    	<div class="calendar-day-title">
-                        	<div class="calendar-date-title"><div>Monday<br />Nov 16th</div></div>
-                            <div class="calendar-date-title active"><div>Today<br />Nov 17th</div></div>
-                            <div class="calendar-date-title"><div>Wednesday<br />Nov 18th</div></div>
-                            <div class="calendar-date-title"><div>Thursday<br />Nov 19th</div></div>
-                            <div class="calendar-date-title"><div>Friday<br />Nov 20th</div></div>
-                            <div class="calendar-date-title"><div>Saturday<br />Nov 21st</div></div>
-                            <div class="calendar-date-title"><div>Sunday<br />Nov 22nd</div></div>
-                        </div>
-                        <!-- /.calendar-day-title -->
-						
-						<div class="calendar-slide">
-						
+						<header>						
 							<!-- .calendar-day-title -->
 							<div class="calendar-day-title">
-								<div class="calendar-date-title"><div>M<br />11</div></div>
-								<div class="calendar-date-title active"><div>T<br />12</div></div>
-								<div class="calendar-date-title"><div>W<br />13</div></div>
-								<div class="calendar-date-title"><div>T<br />14</div></div>
-								<div class="calendar-date-title"><div>F<br />15</div></div>
-								<div class="calendar-date-title"><div>S<br />16</div></div>
-								<div class="calendar-date-title"><div>S<br />17</div></div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Monday<br />Nov 11th</span>
+										<span class="short-title">M<br />11</span>
+									</div>
+								</div>
+								<div class="calendar-date-title active">
+									<div>
+										<span class="full-title">Today<br />Nov 12th</span>
+										<span class="short-title">T<br />12</span>
+									</div>
+								</div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Wednesday<br />Nov 13th</span>
+										<span class="short-title">W<br />13</span>
+									</div>
+								</div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Thursday<br />Nov 14th</span>
+										<span class="short-title">T<br />14</span>
+									</div>
+								</div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Friday<br />Nov 15th</span>
+										<span class="short-title">F<br />15</span>
+									</div>
+								</div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Saturday<br />Nov 16th</span>
+										<span class="short-title">S<br />16</span>
+									</div>
+								</div>
+								<div class="calendar-date-title">
+									<div>
+										<span class="full-title">Sunday<br />Nov 17th</span>
+										<span class="short-title">S<br />17</span>
+									</div>
+								</div>
 							</div>
 							<!-- /.calendar-day-title -->
 							
 							<div class="calendar-date-detials">Monday, january 12th</div>
-						</div>
+						</header>
                         
                         <!-- .calendar-days-wrap -->
                         <div id="calendarDaysWrap" class="calendar-days-wrap clearfix">

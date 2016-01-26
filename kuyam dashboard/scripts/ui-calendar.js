@@ -18,7 +18,7 @@ function iscrollSelectTabs(tabContentID){
 
 $(document).ready(function(){
 	
-	iscrollSelectModal('divStaffCalenar', 'iscrollStaffCalendar', 'addStaffModal');	
+	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
 	
 	existSelect('calendar-select-status');
 	
