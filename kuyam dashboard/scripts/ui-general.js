@@ -151,8 +151,10 @@ function weekRepeat(){
 }
 
 function customPickTime($id, date, increment){
+    var fromdate = moment(date);
     var todate = moment(date).add(increment, "m");
 
+    $id.find('.txt-hour').val(fromdate.format("h:mm A") + ' - ' + todate.format("h:mm A"))
     return $id.find('tfoot .timepicker-hour').text(todate.format("h")),
     $id.find('tfoot .timepicker-minute').text(todate.format("mm")),
     $id.find('tfoot .timepicker-period').text(todate.format("A"));

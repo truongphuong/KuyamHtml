@@ -67,9 +67,9 @@
                     <ul class="nav navbar-nav"> 
                         <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li> 
                     </ul> 
-                    <ul class="nav navbar-nav navbar-right"> 
-                        <li><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li> 
+                    <ul class="nav navbar-nav navbar-right">
                         <li id="navSettings"><a title="" href="settings.html"><span>Account settings</span></a></li> 
+                        <li><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li> 
                     </ul> 
               	</nav>
             </div>
@@ -95,7 +95,7 @@
                 </div>
                 
                 <!-- #calendarDesktop -->
-                <div id="calendarDesktop" class="calendar-schedule">  
+                <div class="calendar-schedule">  
                 
                 	<!-- .calendar-header -->                  
                     <header class="calendar-header">
@@ -122,6 +122,23 @@
                             <div class="calendar-date-title"><div>Sunday<br />Nov 22nd</div></div>
                         </div>
                         <!-- /.calendar-day-title -->
+						
+						<div class="calendar-slide">
+						
+							<!-- .calendar-day-title -->
+							<div class="calendar-day-title">
+								<div class="calendar-date-title"><div>M<br />11</div></div>
+								<div class="calendar-date-title active"><div>T<br />12</div></div>
+								<div class="calendar-date-title"><div>W<br />13</div></div>
+								<div class="calendar-date-title"><div>T<br />14</div></div>
+								<div class="calendar-date-title"><div>F<br />15</div></div>
+								<div class="calendar-date-title"><div>S<br />16</div></div>
+								<div class="calendar-date-title"><div>S<br />17</div></div>
+							</div>
+							<!-- /.calendar-day-title -->
+							
+							<div class="calendar-date-detials">Monday, january 12th</div>
+						</div>
                         
                         <!-- .calendar-days-wrap -->
                         <div id="calendarDaysWrap" class="calendar-days-wrap clearfix">
@@ -138,6 +155,7 @@
                                         <p class="calendar-type">David cameron</p>
 										<div class="calendar-control">
 											<a class="disabled" title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+											<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
 										</div>
                                     </div>
                                     <!-- /.calendar-block -->
@@ -155,6 +173,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -185,6 +204,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -215,6 +235,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -231,6 +252,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -247,6 +269,7 @@
                                                 <option value="0" selected>cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->   
                                     
@@ -277,6 +300,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -287,6 +311,7 @@
                                     	<p class="calendar-time">9:00 AM - 10:00 AM</p>
                                         <p class="calendar-type">David cameron</p>
                                         <ul class="clearfix">
+											<li><a class="calendar-details" title="" href="javascript:void(0);">Details</a></li>
                                         	<li><span class="calendar-num-title">max</span><span class="calendar-num">15</span></li>
                                             <li><span class="calendar-num-title">booked</span><span class="calendar-num">5</span></li>
                                             <li><span class="calendar-num-title">avail</span><span class="calendar-num">10</span></li>
@@ -308,6 +333,7 @@
                                                 <option value="0">cancelled</option>
                                             </select>
                                         </div>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
                                     </div>
                                     <!-- /.calendar-block -->
                                     
@@ -332,6 +358,7 @@
                                         <p class="calendar-type">David cameron</p>
 										<div class="calendar-control">
 											<a title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
+											<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
 										</div>
                                     </div>
                                     <!-- /.calendar-block -->
@@ -381,170 +408,6 @@
                 </div>
                 <!-- /#calendarDesktop -->
                 
-				<!-- #calendarMobile -->
-                <div id="calendarMobile" class="calendar-schedule">  
-                
-                	<!-- .calendar-header -->                  
-                    <header class="calendar-header">
-                    	<div class="">
-                            <a title="" href="javascript:void(0);" class="calendar-controls calendar-pre disabled"><span class="icon icon-pre"></span></a>
-                            <a title="" href="javascript:void(0);" class="calendar-controls calendar-next"><span class="icon icon-next"></span></a>
-                            <div class="calendar-title">Week</div>
-                        </div>
-						<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />                                    
-                    </header>
-                    <!-- /.calendar-header -->
-                    
-                    <!-- .calendar-section -->
-                    <section class="calendar-section">
-						<div class="calendar-slide">
-						
-							<!-- .calendar-day-title -->
-							<div class="calendar-day-title">
-								<div class="calendar-date-title"><div>M<br />11</div></div>
-								<div class="calendar-date-title active"><div>T<br />12</div></div>
-								<div class="calendar-date-title"><div>W<br />13</div></div>
-								<div class="calendar-date-title"><div>T<br />14</div></div>
-								<div class="calendar-date-title"><div>F<br />15</div></div>
-								<div class="calendar-date-title"><div>S<br />16</div></div>
-								<div class="calendar-date-title"><div>S<br />17</div></div>
-							</div>
-							<!-- /.calendar-day-title -->
-							
-							<div class="calendar-date-detials">Monday, january 12th</div>
-						</div>
-						
-                        <!-- .calendar-days-wrap -->
-                        <div id="calendarDaysWrap" class="calendar-days-wrap">
-                        	
-                            <!-- .calendar-date -->
-                        	<div class="calendar-date">
-                                
-                                <!-- .calendar-day -->
-                                <div class="calendar-day">
-									<!-- .calendar-block -->
-                                	<div class="calendar-block block-blocker block-past">
-										<p class="calendar-user">Carl Viduka</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
-                                        <p class="calendar-type">David cameron</p>
-										<div class="calendar-control">
-											<a class="disabled" title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>											
-											<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-										</div>
-                                    </div>
-                                    <!-- /.calendar-block -->
-									
-                                	<!-- .calendar-block -->
-                                	<div class="calendar-block block-confirmed block-past">
-										<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-										<p class="calendar-with">with John Smith</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
-                                        <p class="calendar-type">David cameron</p>
-                                        <div class="calendar-select calendar-select-status">
-                                        	<select disabled>
-                                            	<option value="2">pending</option>
-                                                <option value="1" selected>confirmed</option>
-                                                <option value="0">cancelled</option>
-                                            </select>
-                                        </div>
-										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-                                    </div>
-                                    <!-- /.calendar-block -->
-									
-									<!-- .calendar-block -->
-                                	<div class="calendar-block block-cancelled">
-                                    	<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-										<p class="calendar-with">with John Smith</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
-                                        <p class="calendar-type">David cameron</p>
-                                        <div class="calendar-select calendar-select-status">
-                                        	<select>
-                                            	<option value="2">pending</option>
-                                                <option value="1">confirmed</option>
-                                                <option value="0" selected>cancelled</option>
-                                            </select>
-                                        </div>
-										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-                                    </div>
-                                    <!-- /.calendar-block -->
-									
-									<!-- .calendar-block -->
-                                	<div class="calendar-block block-confirmed">
-                                    	<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-										<p class="calendar-with">with John Smith</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>                                        
-                                        <p class="calendar-type">David cameron</p>
-                                        <div class="calendar-select calendar-select-status">
-                                        	<select>
-                                            	<option value="2">pending</option>
-                                                <option value="1" selected>confirmed</option>
-                                                <option value="0">cancelled</option>
-                                            </select>
-                                        </div>
-										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-                                    </div>
-                                    <!-- /.calendar-block -->
-                                    
-                                    <!-- .calendar-block -->
-                                	<div class="calendar-block block-class">
-                                    	<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-										<p class="calendar-with">with John Smith</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
-                                        <p class="calendar-type">David cameron</p>
-                                        <ul class="clearfix">
-											<li><br /><a class="calendar-details" title="" href="javascript:void(0);">Details</a></li>
-                                        	<li><span class="calendar-num-title">max</span><span class="calendar-num">15</span></li>
-                                            <li><span class="calendar-num-title">booked</span><span class="calendar-num">5</span></li>
-                                            <li><span class="calendar-num-title">avail</span><span class="calendar-num">10</span></li>
-                                        </ul>
-										<a class="calendar-attendee" title="" href="#">attendee list</a>
-                                    </div>
-                                    <!-- /.calendar-block -->
-                                
-                                	<!-- .calendar-block -->
-                                	<div class="calendar-block block-pending">
-                                    	<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-										<p class="calendar-with">with John Smith</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
-                                        <p class="calendar-type">David cameron</p>
-                                        <div class="calendar-select calendar-select-status">
-                                        	<select>
-                                            	<option value="2" selected>pending</option>
-                                                <option value="1">confirmed</option>
-                                                <option value="0">cancelled</option>
-                                            </select>
-                                        </div>
-										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-                                    </div>
-                                    <!-- /.calendar-block -->
-									
-									<!-- .calendar-block -->
-                                	<div class="calendar-block block-blocker">
-										<p class="calendar-user">Carl Viduka</p>
-                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
-                                        <p class="calendar-type">David cameron</p>
-										<div class="calendar-control">
-											<a title="" href="javascript:void(0);"><span class="icon icon-delete"></span></a>
-											<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
-										</div>
-                                    </div>
-                                    <!-- /.calendar-block -->
-                                    
-                                </div>
-                                <!-- /.calendar-day -->
-                                
-                            </div>
-                            <!-- /.calendar-date -->  
-                            
-                        </div>
-                        <!-- /.calendar-days-wrap -->
-                        
-                    </section>
-                    <!-- /.calendar-section -->
-                    
-                </div>
-                <!-- /#calendarMobile -->
-				
             </div>
             <!-- /.calendar-page -->
         <!-- InstanceEndEditable -->

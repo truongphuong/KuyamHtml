@@ -9,7 +9,6 @@
     position: absolute;
     top: 9px;
     left: 15px;
-	z-index: 9;
 }
 .calendar-select-staff .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
 	width: 184px;
@@ -43,10 +42,6 @@
 	display: none;
 }
 
-#calendarMobile{
-	display: none;
-}
-
 .calendar-schedule .btn-add,
 .calendar-schedule .btn-add:active,
 .calendar-schedule .btn-add:visited{
@@ -67,7 +62,8 @@
 .calendar-header{
     text-align: center;
 	position: relative;
-	z-index: 1;
+	margin-right: 215px;
+	margin-left: 215px;
 }
 .calendar-header > div{
 	display: inline-block;
@@ -114,6 +110,9 @@
 	right: 15px;
 }
 
+.calendar-slide{
+	display: none;
+}
 .calendar-slide .calendar-date-detials{
 	text-align: center;
 	color: #bc347c;
@@ -178,6 +177,7 @@
 	color: #292929;
 	text-decoration: underline;
 	font-size:.8125em;
+	display: none;
 }
 
 .calendar-block
@@ -428,9 +428,6 @@
 	#calendarMobile{
 		display: block;
 	}
-	#calendarDesktop{
-		display: none;	
-	}
 	
 	.calendar-select-staff{
 		left: 0;
@@ -473,6 +470,22 @@
 		color: #292929;
 	}
 	
+	.calendar-header .btn-today,
+	.calendar-section > .calendar-day-title,
+	.calendar-date,
+	.calendar-date .btn-add{
+		display: none;
+	}
+	
+	.calendar-slide,
+	.calendar-date.active,
+	.calendar-details{
+		display: block;
+	}
+	.calendar-date.active .calendar-day{
+		border-color: transparent;
+	}
+	
 	.calendar-block p.calendar-user{
 		text-decoration: underline;
 	}
@@ -488,24 +501,6 @@
 }
 
 @media (max-width: 991px){
-}
-
-@media (min-width: 768px){
-    .kuyam-header .navbar-nav > li > a{
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-	.kuyam-header .navbar-nav > li > a span{
-		display: block;
-		padding-left: 15px;
-		padding-right: 15px;
-		border-left: 1px solid #fff;
-	}
-
-    .kuyam-header .navbar-nav > li:first-child > a span{
-        border-left-color: transparent;
-    }
 }
 
 @media (max-width: 767px){
