@@ -442,13 +442,13 @@
 		width: 100%;
 		margin-right: 0;
 	}
-	.calendar-select .bootstrap-select > .dropdown-toggle.btn-default{
+	.calendar-select-staff .bootstrap-select > .dropdown-toggle.btn-default{
 		padding-top: 14px;
 		padding-bottom: 14px;
 	}
-	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
-	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
-	.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	.calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
+	.calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
 		border-color: #292929 #292929 transparent;
 		background: #292929;
 		color: #fff;
@@ -456,19 +456,23 @@
 	.calendar-select-staff .bootstrap-select.btn-group.open .bs-caret{
 		display: none;
 	}
-	.calendar-select .bootstrap-select .dropdown-menu{
+	.calendar-select-staff .bootstrap-select .dropdown-menu{
 		background: #292929;
 	}
-	.calendar-select .bootstrap-select .dropdown-menu.open{
+	.calendar-select-staff .bootstrap-select .dropdown-menu.open{
 		border-color: transparent #292929 #292929;
 	}
 	.calendar-select-staff .bootstrap-select.btn-group.open .btn .filter-option,
-	.bootstrap-select .popover-title,
+	.calendar-select-staff .bootstrap-select .popover-title,
 	.calendar-select-staff .bootstrap-select .dropdown-menu > li > a{
 		color: #fff;
 	}
 	.calendar-select-staff .bootstrap-select .dropdown-menu > li > a:hover{
 		color: #292929;
+	}
+	
+	.calendar-select-status .bootstrap-select.btn-group .dropdown-menu li a{
+		border-top: 2px solid #737373;
 	}
 	
 	.calendar-header .btn-today,
@@ -505,6 +509,10 @@
 		padding-right: 30%;
 	}
 	
+	.calendar-day{
+		margin-left: 0;
+		margin-right: 0;
+	}
 	.calendar-date.active .calendar-day{
 		border-color: transparent;
 	}
