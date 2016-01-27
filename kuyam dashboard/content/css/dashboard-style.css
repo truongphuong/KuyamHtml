@@ -288,9 +288,6 @@
 	text-align: center;
 	padding: 10px 5px;
 }
-.block-class ul li:first-child{
-	display: none;
-}
 .block-class ul li span{
 	display: block;
 	font-family: ralewaysemibold, sans-serif;
@@ -599,14 +596,25 @@
 		text-decoration: underline;
 	}
 	
-	.block-class ul li{
-		width: auto;
-		padding-left: 15px;
-		padding-right: 15px;
+	.block-class .calendar-attendee{
+		display: inline-block;
 	}
-	.block-class ul li:first-child{
-		float: right;
-		display: block;
+	
+	.calendar-block.block-class > .calendar-details{
+		float:right;
+		position: relative;
+		right: inherit;
+		bottom: inherit;
+		padding-top: 5px;
+		padding-bottom:5px;
+	}
+	
+	.block-blocker .calendar-control .icon-delete{
+		position: absolute;
+		top: 0;
+		right: 0;	
+		width: 45px;
+		height: 45px;
 	}
 }
 
