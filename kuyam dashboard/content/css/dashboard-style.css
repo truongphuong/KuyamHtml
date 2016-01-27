@@ -305,6 +305,8 @@
 	display: block;
 	text-align: center;
 	padding: 5px 15px;
+	margin-right: -15px;
+	margin-left: -15px;
 	text-decoration: underline;
 	color: #292929;
 	font-family: ralewaysemibold, sans-serif;
@@ -452,10 +454,14 @@
 	text-align: right;
 	white-space: nowrap;	
 }
+.block-details .col-info{
+	text-align: left;
+}
 .block-details .notes-section{
 	border: 1px solid #dcdcdc;
 	padding: 10px 15px;
 	margin: 8px 0;
+	text-align: left;
 }
 .block-details .notes-section > div{
 	max-height: 88px;
@@ -488,6 +494,17 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	text-align: left;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px){
+	.calendar-block{
+		padding: 5px;
+	}
+	.block-class ul{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
 }
 
 @media (max-width: 1023px){	

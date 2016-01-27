@@ -14,20 +14,6 @@ function iscrollSelectTabs(tabContentID){
 	}
 }
 
-function hello(sectionID, $button){
-	var liTag = $button.parentElement.parentElement;
-	var liData = liTag.attributes.getNamedItem('data-original-index').value;
-	var liClass = liTag.className;
-	debugger
-	if(liClass === 'selected'){
-		$('#' + sectionID).find('li[data-original-index=' + liData +']').addClass('selected');
-		$('#' + sectionID).find('option[value=' + liData +']').prop('selected', true);
-	}else{
-		$('#' + sectionID).find('li[data-original-index=' + liData +']').removeClass('selected');
-		$('#' + sectionID).find('option[value=' + liData +']').prop('selected', false);
-	}
-}
-
 $(document).ready(function(){
 	
 	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
@@ -106,11 +92,22 @@ $(document).ready(function(){
 		iscrollContent('#iscrollAttendeeList');
 	});
 	
+	if(wScreen < 1024){
 	
-	if(!isMobile.any()){
+		$('.calendar-details').click(function(e){
+			e.preventDefault();
+			$('#detailsModal').modal('show');
+		});
+		
+		$('.calendar-attendee').click(function(e){
+			e.preventDefault();
+			$('#attendeeModal').modal('show');
+		});
+	}else{
 		var detailContent = '';
 			detailContent += '<div id="appointmentDetails" class="block-details">';
 			detailContent += '<div class="modal-header">';
+			detailContent += '<button type="button" class="close">x</button>';
 			detailContent += '<h4>Wedmesday, Nov 18th</h4>';
 			detailContent += '<p>11:00 AM - 12:30 PM</p>';
 			detailContent += '</div>';
@@ -158,38 +155,84 @@ $(document).ready(function(){
 			detailContent += '</div>';
 			detailContent += '</div>';
 			detailContent += '</div>';			
-			detailContent += '</div>';
-		
+			detailContent += '</div>';		
 		$('.calendar-block').tooltipster({
 			content: $(detailContent),
 			trigger: 'click',
-			position: 'right'			
-		});
+			position: 'right',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true,
+			functionReady: function(){
+				$('.block-details .close').click(function(){
+					$('.calendar-block').tooltipster('hide');
+				});	
+			}
+		});	
+
+		$('.calendar-block').click(function(e){
+			$('.calendar-block').tooltipster('hide');
+			if($(e.target).hasClass('calendar-attendee')){				
+				return;
+			}
+			$(this).tooltipster('show', function(){
+				maxCol('#appointmentDetails');
+				iscrollContent('#iscrollAppointmentNotes');
+			});
+		});	
 		
-		
+		var attendeeContent = '';
+			attendeeContent += '<div id="classAttendee" class="block-attendee">';
+			attendeeContent += '<div class="modal-header">';
+			attendeeContent += '<button type="button" class="close">x</button>';
+			attendeeContent += '<h4>Attendee</h4>';
+			attendeeContent += '</div>';
+			attendeeContent += '<div class="modal-body">';
+			attendeeContent += '<div id="iscrollAttendeeList" class="attendee-list">';
+			attendeeContent += '<ul>';
+			attendeeContent += '<li>Jane Lois</li>';
+			attendeeContent += '<li>Valentina Lucas</li>';
+			attendeeContent += '<li>Kourosh Gohar</li>';
+			attendeeContent += '<li>Sven Larson</li>';
+			attendeeContent += '<li>John Smith</li>';
+			attendeeContent += '<li>Nick Brown</li>';				
+			attendeeContent += '<li>Jane Lois</li>';
+			attendeeContent += '<li>Valentina Lucas</li>';
+			attendeeContent += '<li>Kourosh Gohar</li>';
+			attendeeContent += '<li>Sven Larson</li>';
+			attendeeContent += '<li>Jane Lois</li>';
+			attendeeContent += '<li>Valentina Lucas</li>';
+			attendeeContent += '<li>Kourosh Gohar</li>';
+			attendeeContent += '<li>Sven Larson</li>';
+			attendeeContent += '<li>John Smith</li>';
+			attendeeContent += '<li>Nick Brown</li>';					
+			attendeeContent += '<li>Jane Lois</li>';
+			attendeeContent += '<li>Valentina Lucas</li>';
+			attendeeContent += '<li>Kourosh Gohar</li>';
+			attendeeContent += '<li>Sven Larson</li>';							
+			attendeeContent += '</ul>';
+			attendeeContent += '</div>';						
+			attendeeContent += '</div>';		
+			attendeeContent += '</div>';
 		$('.calendar-attendee').tooltipster({
-			content: $(detailContent),
+			content: $(attendeeContent),
 			trigger: 'click',
-			position: 'right'			
-		});
-		
-		$(document).on('click', '.btn-details', function(e){
-			e.stoppropagation();
-		});
-		$('.btn-details').tooltipster({
-				content: 'hello'
-		});
-	}else{
-		$(document).on('click', '.btn-details', function(e){
-			e.stopPropagation();
-		});
-		$('.btn-details').tooltipster({
-				content: 'hello'
-		});
+			position: 'right',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true,
+			functionReady: function(){
+				$('.block-attendee .close').click(function(){
+					console.log('hello');
+					$('.calendar-attendee').tooltipster('hide');
+				});	
+			}
+		});	
 	}
 });
 
-$(window).on('resize', function(){	
-	maxCol('#blockDetails');
-	iscrollContent('#iscrollBlockNotes');
+$(window).on('resize', function(){		
+	if(wScreen < 1024){
+		$('.tooltipster-default').remove();
+	}
 });

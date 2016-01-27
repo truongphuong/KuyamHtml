@@ -17,7 +17,8 @@ var isMobile = {
 	any: function() {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
-};
+},
+wScreen = window.innerWidth;
 
 document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
 
@@ -195,7 +196,9 @@ $(document).ready(function(){
 	centerModals($('.modal'));
 });
 
-$(window).on('resize', function(){	 
+$(window).on('resize', function(){
+	wScreen = window.innerWidth;
+	
 	minHeightBody();
 	
 	centerModals($('.modal'));
