@@ -181,7 +181,7 @@ $(document).ready(function(){
 		});
 	}else{
 		$(document).on('click', '.btn-details', function(e){
-			e.stoppropagation();
+			e.stopPropagation();
 		});
 		$('.btn-details').tooltipster({
 				content: 'hello'
