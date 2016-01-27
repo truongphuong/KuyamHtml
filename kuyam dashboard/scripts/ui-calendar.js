@@ -113,12 +113,14 @@ $(document).ready(function(){
 			offsetX: -5,
 			interactive: true,
 			positionTracker: true,
+			functionInit: function(){
+				maxCol('#calendarDetails');
+				iscrollContent('#iscrollDetailsNotes');
+			},
 			functionReady: function(){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
-				});	
-				maxCol('#calendarDetails');
-				iscrollContent('#iscrollDetailsNotes');
+				});
 			}
 		});	
 
