@@ -10,9 +10,7 @@ function iscrollSelectTabs(tabContentID){
 		iscrollSelect('divCategoryClass', 'iscrollCategoryClass');
 		iscrollSelect('divClass', 'iscrollClass');
 	}else{		
-		iscrollSelectSearchModal('divClientBlocker', 'iscrollClientBlocker', 'addClientModal');		
 		iscrollSelectSearchModal('divStaffBlocker', 'iscrollStaffBlocker', 'addStaffModal');
-		iscrollSelect('divServiceBlocker', 'iscrollServiceBlocker');
 	}
 }
 
@@ -86,69 +84,7 @@ $(document).ready(function(){
 		iscrollSelectTabs(tabContentID);
 		
 	});
-	$(document).on('click', '.btn-details', function(e){
-		e.stoppropagation();
-	});
-	$('.btn-details').tooltipster({
-			content: 'hello'
-	});
-	
-	var detailContent = '';
-		detailContent += '<div id="appointmentDetails" class="block-details">';
-		detailContent += '<div class="modal-header">';
-		detailContent += '<h4>Wedmesday, Nov 18th</h4>';
-		detailContent += '<p>11:00 AM - 12:30 PM</p>';
-		detailContent += '</div>';
-		detailContent += '<div class="modal-body">';
-		detailContent += '<div class="table-css">';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Client:</div>';
-		detailContent += '<div class="td col-info">Jane Rodriguez</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Staff:</div>';
-		detailContent += '<div class="td col-info">Candlelight vinyasa</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Repeat:</div>';
-		detailContent += '<div class="td col-info">Custom (M, W, F)</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Caterory:</div>';
-		detailContent += '<div class="td col-info">Yoga</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Service:</div>';
-		detailContent += '<div class="td col-info">Restoration yoga</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title">Internal notes:</div>';
-		detailContent += '<div class="td col-info"></div>';
-		detailContent += '</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="notes-section">';
-		detailContent += '<div id="iscrollAppointmentNotes">';
-		detailContent += "<div>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.</div>";
-		detailContent += '</div>';
-		detailContent += '</div>';
-		detailContent += '</div>';
-		detailContent += '<div class="modal-footer">';
-		detailContent += '<div class="table-css">';
-		detailContent += '<div class="tr">';
-		detailContent += '<div class="td col-title"></div>';
-		detailContent += '<div class="td col-info">';
-		detailContent += '<a title="" href="">Modify appointment</a><br />';
-		detailContent += '<a title="" href="">Cancel appointment</a>';
-		detailContent += '</div>';
-		detailContent += '</div>';
-		detailContent += '</div>';
-		detailContent += '</div>';			
-		detailContent += '</div>';
-	
-	$('.calendar-block').tooltipster({
-			content: $(detailContent)
-	});
-	
+		
 	$('#tabsCalendar a[data-toggle="tab"]').on('shown.bs.tab', function (e){
 		var tabContentID = $(e.target).attr('aria-controls'),
 			iscrollActive = $(e.target).attr('aria-iscroll');
@@ -170,6 +106,87 @@ $(document).ready(function(){
 		iscrollContent('#iscrollAttendeeList');
 	});
 	
+	
+	if(!isMobile.any()){
+		var detailContent = '';
+			detailContent += '<div id="appointmentDetails" class="block-details">';
+			detailContent += '<div class="modal-header">';
+			detailContent += '<h4>Wedmesday, Nov 18th</h4>';
+			detailContent += '<p>11:00 AM - 12:30 PM</p>';
+			detailContent += '</div>';
+			detailContent += '<div class="modal-body">';
+			detailContent += '<div class="table-css">';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Client:</div>';
+			detailContent += '<div class="td col-info">Jane Rodriguez</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Staff:</div>';
+			detailContent += '<div class="td col-info">Candlelight vinyasa</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Repeat:</div>';
+			detailContent += '<div class="td col-info">Custom (M, W, F)</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Caterory:</div>';
+			detailContent += '<div class="td col-info">Yoga</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Service:</div>';
+			detailContent += '<div class="td col-info">Restoration yoga</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title">Internal notes:</div>';
+			detailContent += '<div class="td col-info"></div>';
+			detailContent += '</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="notes-section">';
+			detailContent += '<div id="iscrollAppointmentNotes">';
+			detailContent += "<div>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.</div>";
+			detailContent += '</div>';
+			detailContent += '</div>';
+			detailContent += '</div>';
+			detailContent += '<div class="modal-footer">';
+			detailContent += '<div class="table-css">';
+			detailContent += '<div class="tr">';
+			detailContent += '<div class="td col-title"></div>';
+			detailContent += '<div class="td col-info">';
+			detailContent += '<a title="" href="">Modify appointment</a><br />';
+			detailContent += '<a title="" href="">Cancel appointment</a>';
+			detailContent += '</div>';
+			detailContent += '</div>';
+			detailContent += '</div>';
+			detailContent += '</div>';			
+			detailContent += '</div>';
+		
+		$('.calendar-block').tooltipster({
+			content: $(detailContent),
+			trigger: 'click',
+			position: 'right'			
+		});
+		
+		
+		$('.calendar-attendee').tooltipster({
+			content: $(detailContent),
+			trigger: 'click',
+			position: 'right'			
+		});
+		
+		$(document).on('click', '.btn-details', function(e){
+			e.stoppropagation();
+		});
+		$('.btn-details').tooltipster({
+				content: 'hello'
+		});
+	}else{
+		$(document).on('click', '.btn-details', function(e){
+			e.stoppropagation();
+		});
+		$('.btn-details').tooltipster({
+				content: 'hello'
+		});
+	}
 });
 
 $(window).on('resize', function(){	
