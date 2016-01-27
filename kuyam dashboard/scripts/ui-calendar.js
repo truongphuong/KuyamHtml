@@ -118,11 +118,11 @@ $(document).ready(function(){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
 				});
-				console.log('hello');
+				
 				setTimeout(function(){
 					maxCol('#calendarDetails');
 					iscrollContent('#iscrollDetailsNotes');
-				}, 1000);
+				}, 300);
 			}
 		});	
 
