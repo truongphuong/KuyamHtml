@@ -172,7 +172,7 @@ $(document).ready(function(){
 
 		$('.calendar-block').click(function(e){
 			$('.calendar-block').tooltipster('hide');
-			if($(e.target).hasClass('calendar-attendee')){				
+			if($(e.target).hasClass('calendar-attendee') || $(e.target).parents().hasClass('calendar-select-status')){				
 				return;
 			}
 			$(this).tooltipster('show', function(){
