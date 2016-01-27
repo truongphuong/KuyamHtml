@@ -104,60 +104,10 @@ $(document).ready(function(){
 			$('#attendeeModal').modal('show');
 		});
 	}else{
-		var detailContent = '';
-			detailContent += '<div id="appointmentDetails" class="block-details">';
-			detailContent += '<div class="modal-header">';
-			detailContent += '<button type="button" class="close">x</button>';
-			detailContent += '<h4>Wedmesday, Nov 18th</h4>';
-			detailContent += '<p>11:00 AM - 12:30 PM</p>';
-			detailContent += '</div>';
-			detailContent += '<div class="modal-body">';
-			detailContent += '<div class="table-css">';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Client:</div>';
-			detailContent += '<div class="td col-info">Jane Rodriguez</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Staff:</div>';
-			detailContent += '<div class="td col-info">Candlelight vinyasa</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Repeat:</div>';
-			detailContent += '<div class="td col-info">Custom (M, W, F)</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Caterory:</div>';
-			detailContent += '<div class="td col-info">Yoga</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Service:</div>';
-			detailContent += '<div class="td col-info">Restoration yoga</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title">Internal notes:</div>';
-			detailContent += '<div class="td col-info"></div>';
-			detailContent += '</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="notes-section">';
-			detailContent += '<div id="iscrollAppointmentNotes">';
-			detailContent += "<div>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.</div>";
-			detailContent += '</div>';
-			detailContent += '</div>';
-			detailContent += '</div>';
-			detailContent += '<div class="modal-footer">';
-			detailContent += '<div class="table-css">';
-			detailContent += '<div class="tr">';
-			detailContent += '<div class="td col-title"></div>';
-			detailContent += '<div class="td col-info">';
-			detailContent += '<a title="" href="">Modify appointment</a><br />';
-			detailContent += '<a title="" href="">Cancel appointment</a>';
-			detailContent += '</div>';
-			detailContent += '</div>';
-			detailContent += '</div>';
-			detailContent += '</div>';			
-			detailContent += '</div>';		
+		var detailContent = $('#dataDetails').html();		
 		$('.calendar-block').tooltipster({
-			content: $(detailContent),
+			contentAsHTML: true,
+			content: detailContent,
 			trigger: 'click',
 			position: 'right',
 			offsetX: -5,
@@ -181,41 +131,10 @@ $(document).ready(function(){
 			});
 		});	
 		
-		var attendeeContent = '';
-			attendeeContent += '<div id="classAttendee" class="block-attendee">';
-			attendeeContent += '<div class="modal-header">';
-			attendeeContent += '<button type="button" class="close">x</button>';
-			attendeeContent += '<h4>Attendee</h4>';
-			attendeeContent += '</div>';
-			attendeeContent += '<div class="modal-body">';
-			attendeeContent += '<div id="iscrollAttendeeList" class="attendee-list">';
-			attendeeContent += '<ul>';
-			attendeeContent += '<li>Jane Lois</li>';
-			attendeeContent += '<li>Valentina Lucas</li>';
-			attendeeContent += '<li>Kourosh Gohar</li>';
-			attendeeContent += '<li>Sven Larson</li>';
-			attendeeContent += '<li>John Smith</li>';
-			attendeeContent += '<li>Nick Brown</li>';				
-			attendeeContent += '<li>Jane Lois</li>';
-			attendeeContent += '<li>Valentina Lucas</li>';
-			attendeeContent += '<li>Kourosh Gohar</li>';
-			attendeeContent += '<li>Sven Larson</li>';
-			attendeeContent += '<li>Jane Lois</li>';
-			attendeeContent += '<li>Valentina Lucas</li>';
-			attendeeContent += '<li>Kourosh Gohar</li>';
-			attendeeContent += '<li>Sven Larson</li>';
-			attendeeContent += '<li>John Smith</li>';
-			attendeeContent += '<li>Nick Brown</li>';					
-			attendeeContent += '<li>Jane Lois</li>';
-			attendeeContent += '<li>Valentina Lucas</li>';
-			attendeeContent += '<li>Kourosh Gohar</li>';
-			attendeeContent += '<li>Sven Larson</li>';							
-			attendeeContent += '</ul>';
-			attendeeContent += '</div>';						
-			attendeeContent += '</div>';		
-			attendeeContent += '</div>';
+		var attendeeContent = $('#dataAttendee').html();
 		$('.calendar-attendee').tooltipster({
-			content: $(attendeeContent),
+			contentAsHTML: true,
+			content: attendeeContent,
 			trigger: 'click',
 			position: 'right',
 			offsetX: -5,
