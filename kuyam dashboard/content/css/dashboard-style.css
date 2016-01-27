@@ -113,7 +113,10 @@
 	right: 15px;
 	display: none;
 }
-
+.calendar-header .btn-add:hover,
+.calendar-header .btn-add:focus{
+	width: 75px;
+}
 .calendar-date-detials{
 	text-align: center;
 	color: #bc347c;
@@ -172,6 +175,9 @@
     margin-left: -1px;
 }
 
+.calendar-details{
+	display: none;
+}
 .calendar-details,
 .calendar-details:hover,
 .calendar-details:focus{
@@ -179,7 +185,6 @@
 	color: #292929;
 	text-decoration: underline;
 	font-size:.8125em;
-	display: none;
 }
 
 .calendar-block
@@ -429,6 +434,59 @@
 	border: 1px solid #292929;
 }
 
+.block-details{
+	width:348px;
+}
+.block-details .modal-body{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.block-details .td{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.block-details .col-title{
+	text-align: right;
+	white-space: nowrap;	
+}
+.block-details .notes-section{
+	border: 1px solid #dcdcdc;
+	padding: 10px 15px;
+	margin: 8px 0;
+}
+.block-details .notes-section > div{
+	max-height: 88px;
+	overflow: hidden;
+	position: relative;
+}
+.block-details .modal-footer a,
+.block-details .modal-footer a:hover,
+.block-details .modal-footer a:focus{
+	text-decoration: underline;
+	color: #949494;
+}
+
+.block-attendee{
+	width: 257px;
+}
+.block-attendee .modal-header{
+	text-align: left;
+}
+.block-attendee .modal-body{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.block-attendee .attendee-list{
+	height: 224px;
+	overflow: hidden;
+	position: relative;
+}
+.block-attendee .attendee-list ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 @media (max-width: 1023px){	
 	.calendar-select-staff{
 		left: 0;
@@ -528,6 +586,7 @@
 	}
 	.block-class ul li:first-child{
 		float: right;
+		display: block;
 	}
 }
 
@@ -548,5 +607,11 @@
 	.calendar-tabs .nav-tabs > li.active a:hover{
 		text-decoration: underline;
 		font-family:  ralewaybold, sans-serif;
+	}
+	
+	.modal-dialog.block-attendee,
+	.modal-dialog.block-details{
+		width: auto;
+		font-size: .8125em;
 	}
 }

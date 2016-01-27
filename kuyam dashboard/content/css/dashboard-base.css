@@ -562,6 +562,7 @@ textarea.form-control:focus{
 .bootstrap-select .bootstrap-scroll{
     overflow: hidden;
 	max-height: 180px;
+	position: relative;
 }
 
 .bootstrap-select .popover-title{
@@ -795,6 +796,13 @@ textarea.form-control:focus{
     background-size: 7px auto;
 	color: transparent;
 }
+.form-timepicker .glyphicon-chevron-left{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 .form-timepicker .glyphicon-chevron-up{
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -802,7 +810,6 @@ textarea.form-control:focus{
     -o-transform: rotate(270deg);
     transform: rotate(270deg);
 }
-
 .form-timepicker .glyphicon-chevron-down{
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -967,6 +974,19 @@ textarea.form-control:focus{
 	font-size: 1.6875em;
 	font-family: ralewaylight, sans-serif;
 	text-align:center;
+}
+
+/* =============================================================================
+   table css
+   ========================================================================== */
+.table-css{
+	display: table;
+}
+.tr{
+	display: table-row;
+}
+.td{
+	display: table-cell;
 }
 
 /* =============================================================================

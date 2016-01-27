@@ -108,7 +108,7 @@
 								<span class="short-title">Week</span>
 							</div>
                         </div>
-						<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#repeatCalendarModal" />
+						<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#detailsModal" />
                     </header>
                     <!-- /.calendar-header -->
                     
@@ -401,8 +401,8 @@
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
-                                
-                                    <input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />
+       
+									<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#attendeeModal" />
                                     
                                 </div>
                                 <!-- /.calendar-day -->
@@ -1148,6 +1148,113 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#callModal -->
+	
+	<!-- #detailsModal -->
+	<div id="detailsModal" class="modal fade modal-s" role="dialog" aria-labelledby="detailsModalLabel" data-keyboard="false" data-backdrop="static">
+		<div id="blockDetails" class="modal-dialog block-details">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="detailsModalLabel">Wedmesday, Nov 18th</h4>
+					<p>11:00 AM - 12:30 PM</p>
+				</div>
+				<div class="modal-body">
+					
+					<!-- .table-css -->
+					<div class="table-css">
+						<div class="tr">
+							<div class="td col-title">Client:</div>
+							<div class="td col-info">Jane Rodriguez</div>
+						</div>
+						<div class="tr">
+							<div class="td col-title">Staff:</div>
+							<div class="td col-info">Candlelight vinyasa</div>
+						</div>
+						<div class="tr">
+							<div class="td col-title">Repeat:</div>
+							<div class="td col-info">Custom (M, W, F)</div>
+						</div>
+						<div class="tr">
+							<div class="td col-title">Caterory:</div>
+							<div class="td col-info">Yoga</div>
+						</div>
+						<div class="tr">
+							<div class="td col-title">Service:</div>
+							<div class="td col-info">Restoration yoga</div>
+						</div>
+						<div class="tr">
+							<div class="td col-title">Internal notes:</div>
+							<div class="td col-info"></div>
+						</div>
+					</div>
+					<!-- /.table-css -->
+					
+					<div class="notes-section">
+						<div id="iscrollBlockNotes">
+							<div>
+								With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="table-css">
+						<div class="tr">
+							<div class="td col-title"></div>
+							<div class="td col-info">
+								<a title="" href="">Modify appointment</a><br />
+								<a title="" href="">Cancel appointment</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#detailsModal -->
+	
+	<!-- #attendeeModal -->
+	<div id="attendeeModal" class="modal fade modal-s" role="dialog" aria-labelledby="attendeeModalLabel" data-keyboard="false" data-backdrop="static">
+		<div id="classAttendee" class="modal-dialog block-attendee">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="attendeeModalLabel">Attendee</h4>
+				</div>
+				<div class="modal-body">
+				
+					<!-- .attendee-list -->
+					<div id="iscrollAttendeeList" class="attendee-list">
+						<ul>
+							<li>Jane Lois</li>
+							<li>Valentina Lucas</li>
+							<li>Kourosh Gohar</li>
+							<li>Sven Larson</li>
+							<li>John Smith</li>
+							<li>Nick Brown</li>					
+							<li>Jane Lois</li>
+							<li>Valentina Lucas</li>
+							<li>Kourosh Gohar</li>
+							<li>Sven Larson</li>
+							<li>Jane Lois</li>
+							<li>Valentina Lucas</li>
+							<li>Kourosh Gohar</li>
+							<li>Sven Larson</li>
+							<li>John Smith</li>
+							<li>Nick Brown</li>						
+							<li>Jane Lois</li>
+							<li>Valentina Lucas</li>
+							<li>Kourosh Gohar</li>
+							<li>Sven Larson</li>							
+						</ul>
+					</div>
+					<!-- /.attendee-list -->
+					
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#detailsModal -->
 	
     <!-- InstanceEndEditable --> 
     

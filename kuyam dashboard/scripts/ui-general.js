@@ -106,6 +106,21 @@ function iscrollSelect(sectionID, scrollName){
 	}
 }
 
+function iscrollContent(sectionID){
+	var $sectionID = $(sectionID);
+	if($sectionID.length !== 0){
+		var contentScroll = new IScroll(sectionID, { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'scale',
+				fadeScrollbars: true
+			});
+	}
+}
+
 function existSelect(sectionClass){
 	var $sectionClass = $('.' + sectionClass);
 	if($sectionClass.length !== 0){
@@ -158,6 +173,20 @@ function customPickTime($id, date, increment){
     return $id.find('tfoot .timepicker-hour').text(todate.format("h")),
     $id.find('tfoot .timepicker-minute').text(todate.format("mm")),
     $id.find('tfoot .timepicker-period').text(todate.format("A"));
+}
+
+function maxCol(section){
+	if($(section).length === 0){
+		return;
+	}
+	var maxCol = 0;
+	$(section).find('.col-title').css({'width': ''});
+	$(section).find('.col-title').each(function(){
+		if($(this).width() > maxCol){
+			maxCol = $(this).innerWidth();
+		}		
+	});
+	$(section).find('.col-title').css({'width': maxCol});
 }
 
 $(document).ready(function(){
