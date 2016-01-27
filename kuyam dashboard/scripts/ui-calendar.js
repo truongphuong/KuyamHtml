@@ -117,18 +117,16 @@ $(document).ready(function(){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
 				});	
+				maxCol('#calendarDetails');
+				iscrollContent('#iscrollDetailsNotes');
 			}
 		});	
 
-		$('.calendar-block').click(function(e){
-			$('.calendar-block').tooltipster('hide');
-			if($(e.target).hasClass('calendar-attendee') || $(e.target).parents().hasClass('calendar-select-status')){				
+		$('.calendar-block').click(function(e){			
+			if($(e.target).hasClass('calendar-attendee') || $(e.target).parents().hasClass('calendar-select-status')){	
+				$('.calendar-block').tooltipster('hide');
 				return;
 			}
-			$(this).tooltipster('show', function(){
-				maxCol('#appointmentDetails');
-				iscrollContent('#iscrollAppointmentNotes');
-			});
 		});	
 		
 		var attendeeContent = $('#dataAttendee').html();
@@ -142,7 +140,6 @@ $(document).ready(function(){
 			positionTracker: true,
 			functionReady: function(){
 				$('.block-attendee .close').click(function(){
-					console.log('hello');
 					$('.calendar-attendee').tooltipster('hide');
 				});	
 			}
