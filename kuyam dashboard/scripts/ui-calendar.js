@@ -104,7 +104,8 @@ $(document).ready(function(){
 			$('#attendeeModal').modal('show');
 		});
 	}else{
-		var detailContent = $('#dataDetails').html();		
+		var detailContent = $('#dataDetails').html();	
+		$('#dataDetails').remove();
 		$('.calendar-block').tooltipster({
 			contentAsHTML: true,
 			content: detailContent,
@@ -113,14 +114,15 @@ $(document).ready(function(){
 			offsetX: -5,
 			interactive: true,
 			positionTracker: true,
-			functionInit: function(){
-				maxCol('#calendarDetails');
-				iscrollContent('#iscrollDetailsNotes');
-			},
 			functionReady: function(){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
 				});
+				console.log('hello');
+				setTimeout(function(){
+					maxCol('#calendarDetails');
+					iscrollContent('#iscrollDetailsNotes');
+				}, 1000);
 			}
 		});	
 
