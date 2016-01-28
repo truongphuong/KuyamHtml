@@ -176,18 +176,54 @@ function customPickTime($id, date, increment){
     $id.find('tfoot .timepicker-period').text(todate.format("A"));
 }
 
-function maxCol(section){
-	if($(section).length === 0){
-		return;
+function showPesonalInfo($this){
+	var liTag = $this.parentElement.parentElement;
+	var liData = liTag.attributes.getNamedItem('data-original-index').value;
+	var liClass = liTag.className;
+	
+	if(wScreen < 1024){
+		$('#personalModal').modal('show');
+	}else{
+		var personalContent = $('#dataPersonal').html();			
+		$('.single-left .btn-personal').tooltipster({
+			contentAsHTML: true,
+			content: personalContent,
+			trigger: 'custom',
+			position: 'left',
+			theme: 'tooltipster-default tooltipster-personal',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true
+		});	
+		
+		$('.single-right .btn-personal').tooltipster({
+			contentAsHTML: true,
+			content: personalContent,
+			trigger: 'custom',
+			position: 'right',
+			theme: 'tooltipster-default tooltipster-personal',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true
+		});
+		
+		$('.multi-right .btn-personal').tooltipster({
+			contentAsHTML: true,
+			content: personalContent,
+			trigger: 'custom',
+			position: 'right',
+			theme: 'tooltipster-default tooltipster-personal',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true
+		});
+		
+		if($('.tooltipster-default').length !== 0){
+			$('.tooltipster-default').remove();
+		}
+		
+		$($this).tooltipster('show');
 	}
-	var maxCol = 0;
-	$(section).find('.col-title').css({'width': ''});
-	$(section).find('.col-title').each(function(){
-		if($(this).width() > maxCol){
-			maxCol = $(this).innerWidth();
-		}		
-	});
-	$(section).find('.col-title').css({'width': maxCol});
 }
 
 $(document).ready(function(){

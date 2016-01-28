@@ -703,7 +703,7 @@ textarea.form-control:focus{
 .form-select-search .bootstrap-select .bs-searchbox .form-control{
 	border-color:transparent transparent #acacac;
 }
-.form-select-search .btn-details{
+.form-select-search .btn-personal{
 	background: transparent;
     border: 0 none;
     height: 36px;
@@ -719,20 +719,36 @@ textarea.form-control:focus{
 	color: transparent;
 	margin-top: 12px;
 }
-.form-select-search .bootstrap-select .btn .filter-option .btn-details{
+.form-select-search .bootstrap-select .btn .filter-option .btn-personal{
 	display: none;
 }
-.form-select-search.left  .btn-details{
+.form-select-search.single-left  .btn-personal{
 	left: 0;
 }
-.form-select-search.left .bootstrap-select .dropdown-menu > li > a{
+.form-select-search.single-left .bootstrap-select .dropdown-menu > li > a{
 	padding-left: 40px;
 }
-.form-select-search.right  .btn-details{
+.form-select-search.single-right  .btn-personal{
 	right: 0;
 }
-.form-select-search.right .bootstrap-select .dropdown-menu > li > a{
+.form-select-search.single-right .bootstrap-select .dropdown-menu > li > a{
 	padding-right: 40px;
+}
+
+.form-select-search.multi-left  .btn-personal{
+	left: 0;
+}
+.form-select-search.multi-left .bootstrap-select .dropdown-menu > li > a{
+	padding-left: 40px;
+}
+.form-select-search.multi-right  .btn-personal{
+	right: 0;
+}
+.form-select-search.multi-right .bootstrap-select .dropdown-menu > li > a{
+	padding-right: 40px;
+}
+.form-select-search.multi-right .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark{
+	right: 44px;
 }
 
 /* =============================================================================
@@ -841,6 +857,10 @@ textarea.form-control:focus{
 .form-timepicker .table-condensed > tbody > tr > td, 
 .form-timepicker .table-condensed > tfoot > tr > td{
 	padding: 0;
+}
+
+.form-timepicker-range .dropdown-section > footer{
+	height: 91px;
 }
 
 /* =============================================================================
