@@ -14,31 +14,8 @@ function iscrollSelectTabs(tabContentID){
 	}
 }
 
-$(document).ready(function(){
-	
-	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
-	
-	existSelect('calendar-select-status');
-	
-	$('.calendar-select-status select').change(function(){
-		
-		var thisVal = $(this).val();
-		if(thisVal === "0"){
-			$('#cancelCalendarModal').modal('show');
-		}
-	});
-	
-	if(wScreen < 1024){	
-		$('.calendar-details').click(function(e){
-			e.preventDefault();
-			$('#detailsModal').modal('show');
-		});
-		
-		$('.calendar-attendee').click(function(e){
-			e.preventDefault();
-			$('#attendeeModal').modal('show');
-		});
-	}else{
+function more1023(){
+	if(wScreen > 1023){
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
 		$('.calendar-block').tooltipster({
@@ -92,10 +69,114 @@ $(document).ready(function(){
 			}
 			$(this).tooltipster('show');
 		});
+				
+		$('#addCalendarModal').on('click', function(e){
+			if($(e.target).hasClass('btn-personal') || $(e.target).parent().hasClass('btn-personal')){
+				return;
+			}
+					
+			if($('.tooltipster-personal').length !== 0){
+				$('.tooltipster-personal').remove();
+			}
+		});	
+		
+		if($('#addCalendarModal').hasClass('in')){
+			if($('.kuyam-section').find('#addCalendarModal').length === 1){
+				$('#addCalendarModal').appendTo('body');
+				
+				$('.calendar-page').removeClass('hide');
+				
+				$('body').css({'padding-right': 17});
+				$('body').addClass('modal-open');	
+				$('#addCalendarModal').css({'z-index': ''});			
+				$('<div class="modal-backdrop fade in"></div>').appendTo('body');
+			}
+		}
 	}
+}
+
+function less1024(){
+	if(wScreen < 1024){	
+		if($('.tooltipster-attendee').length !== 0){
+			$('.tooltipster-attendee').remove();
+		}
+		
+		if($('.tooltipster-personal').length !== 0){
+			$('.tooltipster-personal').remove();
+		}
+		
+		if($('.tooltipster-details').length !== 0){
+			$('.tooltipster-details').remove();
+		}
+		
+		$('.calendar-details').click(function(e){
+			e.preventDefault();
+			$('#detailsModal').modal('show');
+		});
+		
+		$('.calendar-attendee').click(function(e){
+			e.preventDefault();
+			$('#attendeeModal').modal('show');
+		});
+		
+		if($('#addCalendarModal').hasClass('in')){
+			if($('.kuyam-section').find('#addCalendarModal').length === 0){
+				$('#addCalendarModal').appendTo('.kuyam-section');
+				
+				$('.calendar-page').addClass('hide');
+				
+				$('body').css({'padding-right': ''});
+				$('body').removeClass('modal-open');
+				$('.modal-backdrop').remove();
+				$('#addCalendarModal').css({'z-index': 1000});
+			}
+		}
+		
+		$('.calendar-header .btn-add').click(function(){
+			if($('.kuyam-section').find('#addCalendarModal').length === 0){
+				$('#addCalendarModal').appendTo('.kuyam-section');
+			}
+			$('#addCalendarModal').modal('show');
+			
+			$('.calendar-page').addClass('hide');
+		});	
+		
+		$('#addCalendarModal').on('shown.bs.modal', function(e){		
+			$('body').css({'padding-right': ''});
+			$('body').removeClass('modal-open');
+			$('.modal-backdrop').remove();
+			$('#addCalendarModal').css({'z-index': 1000});
+		});
+
+		$('#addCalendarModal .close').click(function(){			
+			$('.calendar-page').removeClass('hide');
+		});	
+	}
+}
+
+$(document).ready(function(){
+	
+	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
+	
+	existSelect('calendar-select-status');
+	
+	$('.calendar-select-status select').change(function(){
+		
+		var thisVal = $(this).val();
+		if(thisVal === "0"){
+			$('#cancelCalendarModal').modal('show');
+		}
+	});
+	
+	// btn-personal
+	$(document).on('click', '.btn-personal', function(e){
+		e.stopPropagation();
+	});
+	
+	more1023();
+	less1024();
 	
 	$('#addCalendarModal').on('shown.bs.modal', function(e){
-	
 		// Repeat select
 		existSelect('form-select-repeat');
 		
@@ -134,24 +215,7 @@ $(document).ready(function(){
 			inline: true,
 			sideBySide: true,
 			format: 'LT'
-		});	
-		
-		// btn-personal
-		$(document).on('click', '.btn-personal', function(e){
-			e.stopPropagation();
 		});
-		
-		if(wScreen > 1023){	
-			$(document).click(function(e){	
-				if($(e.target).hasClass('btn-personal') === true || $(e.target).parent().hasClass('btn-personal') === true){
-					return;
-				}
-						
-				if($('.tooltipster-personal').length !== 0){
-					$('.tooltipster-personal').remove();
-				}
-			});
-		}
 		
 		// Tabs
 		var tabContentID = $('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-controls'),
@@ -162,18 +226,10 @@ $(document).ready(function(){
 		
 		$('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-iscroll', 'true');
 		
-		iscrollSelectTabs(tabContentID);
-		
+		iscrollSelectTabs(tabContentID);	
 	});
 		
 	$('#tabsCalendar a[data-toggle="tab"]').on('shown.bs.tab', function (e){
-		
-		if(wScreen > 1023){			
-			if($('.tooltipster-personal').length !== 0){
-				$('.tooltipster-personal').remove();
-			}
-		}
-		
 		var tabContentID = $(e.target).attr('aria-controls'),
 			iscrollActive = $(e.target).attr('aria-iscroll');
 		if(iscrollActive === true){
@@ -194,18 +250,7 @@ $(document).ready(function(){
 	});
 });
 
-$(window).on('resize', function(){		
-	if(wScreen < 1024){
-		if($('.tooltipster-attendee').length !== 0){
-			$('.tooltipster-attendee').remove();
-		}
-		
-		if($('.tooltipster-personal').length !== 0){
-			$('.tooltipster-personal').remove();
-		}
-		
-		if($('.tooltipster-details').length !== 0){
-			$('.tooltipster-details').remove();
-		}
-	}
+$(window).on('resize', function(){
+	more1023();
+	less1024();
 });

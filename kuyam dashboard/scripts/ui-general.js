@@ -65,6 +65,8 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 			$modalID.modal('show');
 		});
 		
+		$sectionID.find('.btn-personal').attr('onClick', 'showPesonalInfo(this)');
+		
 		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
 			$sectionAppend = $(positionInsert);			
 		
@@ -191,7 +193,7 @@ function maxCol(section){
     $(section).find('.col-title').css({ 'width': maxColW });
 }
 
-function showPesonalInfo($this){
+function showPesonalInfo($this, sectionID){
 	var liTag = $this.parentElement.parentElement;
 	var liData = liTag.attributes.getNamedItem('data-original-index').value;
 	var liClass = liTag.className;
@@ -199,23 +201,25 @@ function showPesonalInfo($this){
 	if(wScreen < 1024){
 		$('#personalModal').modal('show');
 	}else{
-		var personalContent = $('#dataPersonal').html();			
-		$('.single-left .btn-personal').tooltipster({
-			contentAsHTML: true,
-			content: personalContent,
-			trigger: 'custom',
-			position: 'left',
-			theme: 'tooltipster-default tooltipster-personal',
-			offsetX: -5,
-			interactive: true,
-			positionTracker: true
-		});	
+		console.log('hello');
+		var personalContent = $('#dataPersonal').html();
 		
 		$('.single-right .btn-personal').tooltipster({
 			contentAsHTML: true,
 			content: personalContent,
 			trigger: 'custom',
 			position: 'right',
+			theme: 'tooltipster-default tooltipster-personal',
+			offsetX: -5,
+			interactive: true,
+			positionTracker: true
+		});
+		
+		$('.single-left .btn-personal').tooltipster({
+			contentAsHTML: true,
+			content: personalContent,
+			trigger: 'custom',
+			position: 'left',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
 			interactive: true,
