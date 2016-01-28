@@ -55,9 +55,8 @@ $(document).ready(function(){
 					$('.calendar-block').tooltipster('hide');
 				});
 				
-				setTimeout(function(){
-					iscrollContent('#iscrollDetailsNotes');
-				}, 300);
+				maxCol('#calendarDetails');
+				iscrollContent('#iscrollDetailsNotes');
 			}
 		});	
 

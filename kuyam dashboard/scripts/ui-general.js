@@ -176,6 +176,21 @@ function customPickTime($id, date, increment){
     $id.find('tfoot .timepicker-period').text(todate.format("A"));
 }
 
+function maxCol(section){
+    if ($(section).length === 0) {
+        return;
+    }
+    var maxColW = 0;
+    $(section).find('.col-title').css({ 'width': '' });
+    $(section).find('.col-title').each(function ()
+    {
+        if ($(this).width() > maxColW) {
+            maxColW = $(this).innerWidth();
+        }
+    });
+    $(section).find('.col-title').css({ 'width': maxColW });
+}
+
 function showPesonalInfo($this){
 	var liTag = $this.parentElement.parentElement;
 	var liData = liTag.attributes.getNamedItem('data-original-index').value;
