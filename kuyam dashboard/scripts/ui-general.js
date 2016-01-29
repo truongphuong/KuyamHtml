@@ -62,7 +62,18 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		$sectionID.find('select').selectpicker({liveSearch: true});	
 		
 		$sectionID.find('.popover-title').click(function(){
-			$modalID.modal('show');
+			if($('.tooltipster-personal').length !== 0){
+				$('.tooltipster-personal').remove();
+			}
+			$('#addCalendarModal').modal('hide');			
+			
+			$('#addCalendarModal').on('hidden.bs.modal', function(e){				
+				$modalID.modal('show');
+			});
+			
+			$modalID.on('hidden.bs.modal', function(e){				
+				$('#addCalendarModal').modal('show');
+			});
 		});
 		
 		$sectionID.find('.btn-personal').attr('onClick', 'showPesonalInfo(this)');
@@ -211,8 +222,7 @@ function showPesonalInfo($this, sectionID){
 			position: 'right',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true,
-			positionTracker: true
+			interactive: true
 		});
 		
 		$('.single-left .btn-personal').tooltipster({
@@ -222,8 +232,7 @@ function showPesonalInfo($this, sectionID){
 			position: 'left',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true,
-			positionTracker: true
+			interactive: true
 		});
 		
 		$('.multi-right .btn-personal').tooltipster({
@@ -233,12 +242,11 @@ function showPesonalInfo($this, sectionID){
 			position: 'right',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true,
-			positionTracker: true
+			interactive: true
 		});
 		
-		if($('.tooltipster-default').length !== 0){
-			$('.tooltipster-default').remove();
+		if($('.tooltipster-personal').length !== 0){
+			$('.tooltipster-personal').remove();
 		}
 		
 		$($this).tooltipster('show');

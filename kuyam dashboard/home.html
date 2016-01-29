@@ -20,8 +20,8 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png?v2" />
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png?v2" />
 <link rel="manifest" href="favicon/manifest.json?v2" />
-<meta name="msapplication-titleColor" content="transparent" />
-<meta name="msapplication-titleImage" content="favicon/ms-icon-144x144.png?v2" />
+<meta name="msapplication-TileColor" content="transparent" />
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png?v2" />
 <meta name="theme-color" content="transparent?v2" />
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
@@ -309,6 +309,22 @@
                             
                             <!-- .calendar-date -->
                         	<div class="calendar-date active">
+							
+								<!-- .calendar-block -->
+								<div class="calendar-block block-class">
+									<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+									<p class="calendar-with">with John Smith</p>
+									<p class="calendar-time">9:00 AM - 10:00 AM</p>
+									<p class="calendar-type">David cameron</p>
+									<ul class="clearfix">
+										<li><span class="calendar-num-title">max</span><span class="calendar-num">15</span></li>
+										<li><span class="calendar-num-title">booked</span><span class="calendar-num">5</span></li>
+										<li><span class="calendar-num-title">avail</span><span class="calendar-num">10</span></li>
+									</ul>
+									<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
+									<a class="calendar-attendee" title="" href="javascript:void(0);">attendee list</a>
+								</div>
+								<!-- /.calendar-block -->
                                 
                                 <!-- .calendar-day -->
                                 <div class="calendar-day">
@@ -375,6 +391,34 @@
                                     </div>
                                     <!-- /.calendar-block -->
                                     
+									<!-- .calendar-block -->
+									<div class="calendar-block block-blocker block-past tooltipstered">
+										<p class="calendar-user">Carl Viduka</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+										<div class="calendar-control">
+											<a href="javascript:void(0);" title="" class="disabled"><span class="icon icon-delete"></span></a>
+											<a href="javascript:void(0);" title="" class="calendar-details">Details</a>
+										</div>
+                                    </div>
+									 <!-- /.calendar-block -->
+									 
+									 <!-- .calendar-block -->
+                                	<div class="calendar-block block-class">
+                                    	<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+										<p class="calendar-with">with John Smith</p>
+                                    	<p class="calendar-time">9:00 AM - 10:00 AM</p>
+                                        <p class="calendar-type">David cameron</p>
+                                        <ul class="clearfix">
+                                        	<li><span class="calendar-num-title">max</span><span class="calendar-num">15</span></li>
+                                            <li><span class="calendar-num-title">booked</span><span class="calendar-num">5</span></li>
+                                            <li><span class="calendar-num-title">avail</span><span class="calendar-num">10</span></li>
+                                        </ul>
+										<a class="calendar-details" title="" href="javascript:void(0);">Details</a>
+										<a class="calendar-attendee" title="" href="javascript:void(0);">attendee list</a>
+                                    </div>
+                                    <!-- /.calendar-block -->
+									 
                                     <input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#addCalendarModal" />
                                     
                                 </div>
@@ -489,7 +533,7 @@
     
     <!-- #signOutModal -->
 	<div id="signOutModal" class="modal fade modal-s" role="dialog" aria-labelledby="signOutModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
+		<div class="modal-dialog modal-signout">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -515,7 +559,7 @@
     
     <!-- #saveModal -->
 	<div id="saveModal" class="modal fade modal-s" role="dialog" aria-labelledby="saveModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
+		<div class="modal-dialog modal-save">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -523,7 +567,7 @@
 				</div>
 				<div class="modal-body">
 					<form>
-						<fieldset>
+						<fieldset>  
 							<div class="row">	
                             	<div class="col-xs-6">
 									<button class="btn btn-form btn-white">no</button>
@@ -543,7 +587,7 @@
 	
 	<!-- #addCalendarModal -->
 	<div id="addCalendarModal" class="modal fade modal-m" role="dialog" aria-labelledby="addCalendarModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
+		<div class="modal-dialog modal-add-calendar">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -1010,7 +1054,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-6 hidden-lg">
-									<input class="btn btn-form btn-white" type="button" value="no" />
+									<input class="btn btn-form btn-white" type="button" value="no" data-dismiss="modal" />
 								</div>						
 								<div class="col-xs-6 col-lg-12">
 									<button class="btn btn-form btn-black"><span class="visible-lg">add staff</span><span class="hidden-lg">yes</span></button>
@@ -1025,7 +1069,7 @@
 	
 	<!-- #addClientModal -->
 	<div id="addClientModal" class="modal fade modal-m" role="dialog" aria-labelledby="addClientModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
+		<div class="modal-dialog modal-add-client">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -1056,7 +1100,7 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-6 hidden-lg">
-									<input class="btn btn-form btn-white" type="button" value="no" />
+									<input class="btn btn-form btn-white" type="button" value="no" data-dismiss="modal" />
 								</div>						
 								<div class="col-xs-6 col-lg-12">
 									<button class="btn btn-form btn-black"><span class="visible-lg">add new client</span><span class="hidden-lg">yes</span></button>
@@ -1097,7 +1141,7 @@
 	
 	<!-- #repeatCalendarModal -->
 	<div id="repeatCalendarModal" class="modal fade modal-s" role="dialog" aria-labelledby="repeatCalendarModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-cancel-calendar">
+		<div class="modal-dialog modal-cancel-repeat">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -1120,7 +1164,7 @@
 	
 	<!-- #callModal -->
 	<div id="callModal" class="modal fade modal-s" role="dialog" aria-labelledby="callModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
+		<div class="modal-dialog modal-call">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
@@ -1218,7 +1262,7 @@
 				<div class="modal-body">
 				
 					<!-- .attendee-list -->
-					<div id="iscrollAttendeeList" class="attendee-list">
+					<div id="iscrollBlockAttendeeList" class="attendee-list">
 						<ul>
 							<li>Jane Lois</li>
 							<li>Valentina Lucas</li>

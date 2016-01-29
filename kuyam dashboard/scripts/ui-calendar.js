@@ -26,14 +26,37 @@ function more1023(){
 			theme: 'tooltipster-default tooltipster-details',
 			offsetX: -5,
 			interactive: true,
-			positionTracker: true,
-			functionReady: function(){
+			autoClose: false,
+			functionReady: function(origin, tooltip){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
 				});
 				
 				maxCol('#calendarDetails');
 				iscrollContent('#iscrollDetailsNotes');
+				
+				var topCalendar = $('.calendar-section').offset().top;
+				var bottomCalendar = $('.kuyam-footer').offset().top;
+				
+				var topOrigin = $(this).offset().top;
+				var bottomOrigin = topOrigin + $(this).innerHeight();
+				
+				var topTooltip = parseInt(tooltip.css('top'));
+				var bottomTooltip = topTooltip + tooltip.innerHeight();
+				
+				if(topTooltip < topCalendar){
+					tooltip.css({'top': 127});
+					$('.tooltipster-arrow span').css({'top' : 62});
+				}else{
+					var totalMinus = '';
+					if(bottomTooltip > bottomCalendar){
+						totalMinus = tooltip.innerHeight() - $(this).innerHeight();
+						tooltip.css({'top': topOrigin - totalMinus});
+					}else{
+						totalMinus = (tooltip.innerHeight() - $(this).innerHeight()) / 2;
+					}
+					$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
+				}
 			}
 		});	
 
@@ -56,15 +79,30 @@ function more1023(){
 			theme: 'tooltipster-default tooltipster-attendee',
 			offsetX: -5,
 			interactive: true,
-			positionTracker: true,
-			functionReady: function(){
+			autoClose: false,
+			functionReady: function(origin, tooltip){
 				$('.block-attendee .close').click(function(){
 					$('.calendar-attendee').tooltipster('hide');
 				});	
+				
+				iscrollContent('#iscrollAttendeeList');
+				
+				var bottomCalendar = $('.kuyam-footer').offset().top;
+				
+				var topOrigin = $(this).offset().top;
+				
+				var topTooltip = parseInt(tooltip.css('top'));
+				var bottomTooltip = topTooltip + tooltip.innerHeight();				
+				
+				if(bottomTooltip > bottomCalendar){
+					totalMinus = tooltip.innerHeight() - $(this).innerHeight();
+					tooltip.css({'top': topOrigin - totalMinus - 1});
+					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
+				}
 			}
 		});	
 		$('.calendar-attendee').click(function(e){	
-			if($('.tooltipster-attendee').length !== 0){
+			if($('.tooltipster-default').length !== 0){
 				return;
 			}
 			$(this).tooltipster('show');
@@ -246,7 +284,7 @@ $(document).ready(function(){
 	});
 	
 	$('#attendeeModal').on('shown.bs.modal', function(e){
-		iscrollContent('#iscrollAttendeeList');
+		iscrollContent('#iscrollBlockAttendeeList');
 	});
 });
 
