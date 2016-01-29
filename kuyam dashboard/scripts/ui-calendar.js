@@ -30,7 +30,7 @@ function more1023(){
 	
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
-		$('.calendar-block').tooltipster({
+		$('.calendar-day .calendar-block').tooltipster({
 			contentAsHTML: true,
 			content: detailContent,
 			trigger: 'custom',
@@ -43,7 +43,7 @@ function more1023(){
 			debug: false,
 			functionReady: function(origin, tooltip){
 				$('.block-details .close').click(function(){
-					$('.calendar-block').tooltipster('hide');
+					$('.calendar-day .calendar-block').tooltipster('hide');
 				});
 				
 				maxCol('#calendarDetails');
@@ -75,34 +75,34 @@ function more1023(){
 		});	
 				
 		$(window).scroll(function(e) {
-			e.stopPropagation();
-			if($('.tooltipster-details').length !== 0){				
-				if(topTooltip < topCalendar){
-					$('.tooltipster-details').css({'top': 127});
-					$('.tooltipster-arrow span').css({'top' : 62});
-				}else{					
-					var totalMinus = 0;
+			setTimeout(function(){
+				if($('.tooltipster-details').length !== 0){				
+					if(topTooltip < topCalendar){
+						$('.tooltipster-details').css({'top': 127});
+						$('.tooltipster-arrow span').css({'top' : 62});
+					}else{					
+						var totalMinus = 0;
+						if(bottomTooltip > bottomCalendar){
+							totalMinus = hTooltip - hOrigin;
+							$('.tooltipster-details').css({'top': topOrigin - totalMinus});
+						}else{
+							totalMinus = (hTooltip - hOrigin) / 2;
+						}
+						$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
+					}
+				}
+				
+				if($('.tooltipster-attendee').length !== 0){
 					if(bottomTooltip > bottomCalendar){
 						totalMinus = hTooltip - hOrigin;
-						$('.tooltipster-details').css({'top': topOrigin - totalMinus});
-					}else{
-						totalMinus = (hTooltip - hOrigin) / 2;
+						$('.tooltipster-attendee').css({'top': topOrigin - totalMinus - 1});
+						$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
 					}
-					$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
 				}
-			}
-			
-			if($('.tooltipster-attendee').length !== 0){
-				if(bottomTooltip > bottomCalendar){
-					totalMinus = hTooltip - hOrigin;
-					$('.tooltipster-attendee').css({'top': topOrigin - totalMinus - 1});
-					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
-				}
-			}
-			
+			}, 5);			
 		});
 
-		$('.calendar-block').click(function(e){	
+		$('.calendar-day .calendar-block').click(function(e){	
 			if($('.tooltipster-default').length !== 0){
 				return;
 			}
@@ -258,6 +258,10 @@ $(document).ready(function(){
 	
 	more1023();
 	less1024();
+	
+	$('#overwriteModal').on('shown.bs.modal', function(e){
+		iscrollContent('#blockList');
+	});
 	
 	$('#addCalendarModal').on('shown.bs.modal', function(e){
 		// Repeat select

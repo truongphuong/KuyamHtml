@@ -310,6 +310,14 @@
 	font-size: .9375em;
 }
 
+.block-overwrite{
+	border:0 none;
+	border-bottom: 2px solid #737373;
+}
+.block-overwrite:first-child{
+	border-top: 2px solid #737373;
+}
+
 .calendar-block.block-past{
 	border-color: #f0f0f0;
 	background: #f0f0f0;
@@ -353,6 +361,10 @@
 .modal-repeat-calendar h5 a{
 	color: #ae422c;
 	text-decoration: underline;
+}
+
+.modal-overwrite .modal-footer{
+	padding: 25px;
 }
 
 /* =============================================================================
@@ -575,6 +587,12 @@
 }
 .block-personal.modal-dialog .modal-body{
 	padding: 15px;	
+}
+
+.block-list{
+	max-height: 253px;
+    overflow: hidden;
+    position: relative;
 }
 
 @media (min-width: 1024px) and (max-width: 1279px){

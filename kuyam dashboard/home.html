@@ -203,6 +203,8 @@
                                     </div>
                                     <!-- /.calendar-block -->
                                     
+									<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#overwriteModal" />                                    
+									
                                 	<input class="btn-add" type="button" value="Add" data-toggle="modal" data-target="#repeatCalendarModal" />                                    
                                     
                                 </div>
@@ -540,19 +542,16 @@
 					<h4 id="signOutModalLabel" class="modal-title">Are you sure you want to log out?</h4>
 				</div>
 				<div class="modal-body">
-					<form>
-						<fieldset>
-							<div class="row">	
-                            	<div class="col-xs-6">
-									<button class="btn btn-form btn-white">no</button>
-								</div>			
-								<div class="col-xs-6">
-									<button class="btn btn-form btn-black">yes</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
+                    <div class="row">	
+                        <div class="col-xs-6">
+                            <button class="btn btn-form btn-white">no</button>
+                        </div>			
+                        <div class="col-xs-6">
+                            <button class="btn btn-form btn-black">yes</button>
+                        </div>
+                    </div>
 				</div>
+                <div class="modal-footer"></div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#signOutModal -->
@@ -566,19 +565,16 @@
 					<h4 id="saveModalLabel" class="modal-title">Do you want to save the changes?</h4>
 				</div>
 				<div class="modal-body">
-					<form>
-						<fieldset>  
-							<div class="row">	
-                            	<div class="col-xs-6">
-									<button class="btn btn-form btn-white">no</button>
-								</div>			
-								<div class="col-xs-6">
-									<button class="btn btn-form btn-black">yes</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
+                    <div class="row">	
+                        <div class="col-xs-6">
+                            <button class="btn btn-form btn-white">no</button>
+                        </div>			
+                        <div class="col-xs-6">
+                            <button class="btn btn-form btn-black">yes</button>
+                        </div>
+                    </div>
 				</div>
+                <div class="modal-footer"></div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#saveModal -->
@@ -1119,7 +1115,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="cancelCalendarModalLabel" class="modal-title">Are you sure you want to cancel this class</h4>
+					<h4 id="cancelCalendarModalLabel" class="modal-title">Are you sure you want to cancel<br /> this appointment</h4>
 				</div>
 				<div class="modal-body">
 					<h5><a title="" href="">Cancel for this appointment only</a></h5>
@@ -1163,6 +1159,70 @@
 	</div><!-- /#repeatCalendarModal -->
 	
 	<!-- #callModal -->
+	<div id="overwriteModal" class="modal fade modal-s" role="dialog" aria-labelledby="overwriteModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-overwrite">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="overwriteModalLabel" class="modal-title">Are you sure you want to overwrite these appointment?</h4>
+				</div>
+				<div class="modal-body">
+					<div id="blockList" class="block-list">
+						<div class="block-scroll">
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+							<div class="calendar-block block-overwrite">
+								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
+								<p class="calendar-with">with John Smith</p>
+								<p class="calendar-time">9:00 AM - 10:00 AM</p>
+								<p class="calendar-type">David cameron</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">					
+					<div class="row">	
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-white">no</button>
+						</div>			
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-black">yes</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#callModal -->
+	
+	<!-- #callModal -->
 	<div id="callModal" class="modal fade modal-s" role="dialog" aria-labelledby="callModalLabel" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog modal-call">
 			<div class="modal-content">
@@ -1171,19 +1231,16 @@
 					<h4 id="callModalLabel" class="modal-title">Call Jan L?</h4>
 				</div>
 				<div class="modal-body">
-					<form>
-						<fieldset>
-							<div class="row">	
-                            	<div class="col-xs-6">
-									<button class="btn btn-form btn-white">no</button>
-								</div>			
-								<div class="col-xs-6">
-									<button class="btn btn-form btn-black">yes</button>
-								</div>
-							</div>
-						</fieldset>
-					</form>
+					<div class="row">	
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-white">no</button>
+						</div>			
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-black">yes</button>
+						</div>
+					</div>
 				</div>
+				<div class="modal-footer"></div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#callModal -->
