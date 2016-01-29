@@ -222,7 +222,9 @@ function showPesonalInfo($this, sectionID){
 			position: 'right',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true
+			interactive: true,
+			debug: false,
+			onlyOne: true
 		});
 		
 		$('.single-left .btn-personal').tooltipster({
@@ -232,7 +234,9 @@ function showPesonalInfo($this, sectionID){
 			position: 'left',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true
+			interactive: true,
+			debug: false,
+			onlyOne: true
 		});
 		
 		$('.multi-right .btn-personal').tooltipster({
@@ -242,7 +246,9 @@ function showPesonalInfo($this, sectionID){
 			position: 'right',
 			theme: 'tooltipster-default tooltipster-personal',
 			offsetX: -5,
-			interactive: true
+			interactive: true,
+			debug: false,
+			onlyOne: true
 		});
 		
 		if($('.tooltipster-personal').length !== 0){

@@ -16,6 +16,18 @@ function iscrollSelectTabs(tabContentID){
 
 function more1023(){
 	if(wScreen > 1023){
+		var topCalendar = $('.calendar-section').offset().top;
+		var bottomCalendar = $('.kuyam-footer').offset().top;
+		
+		var hOrigin = 0;
+		var hTooltip = 0;
+		
+		var topOrigin = 0;
+		var bottomOrigin = 0;
+		
+		var topTooltip = 0;
+		var bottomTooltip = 0;
+	
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
 		$('.calendar-block').tooltipster({
@@ -26,7 +38,9 @@ function more1023(){
 			theme: 'tooltipster-default tooltipster-details',
 			offsetX: -5,
 			interactive: true,
+			positionTracker: true,
 			autoClose: false,
+			debug: false,
 			functionReady: function(origin, tooltip){
 				$('.block-details .close').click(function(){
 					$('.calendar-block').tooltipster('hide');
@@ -35,30 +49,58 @@ function more1023(){
 				maxCol('#calendarDetails');
 				iscrollContent('#iscrollDetailsNotes');
 				
-				var topCalendar = $('.calendar-section').offset().top;
-				var bottomCalendar = $('.kuyam-footer').offset().top;
+				hOrigin = $(this).innerHeight();
+				hTooltip = tooltip.innerHeight();
 				
-				var topOrigin = $(this).offset().top;
-				var bottomOrigin = topOrigin + $(this).innerHeight();
+				topOrigin = $(this).offset().top;
+				bottomOrigin = topOrigin + hOrigin;
 				
-				var topTooltip = parseInt(tooltip.css('top'));
-				var bottomTooltip = topTooltip + tooltip.innerHeight();
+				topTooltip = parseInt(tooltip.css('top'));
+				bottomTooltip = topTooltip + hTooltip;
 				
 				if(topTooltip < topCalendar){
 					tooltip.css({'top': 127});
 					$('.tooltipster-arrow span').css({'top' : 62});
-				}else{
-					var totalMinus = '';
+				}else{					
+					var totalMinus = 0;
 					if(bottomTooltip > bottomCalendar){
-						totalMinus = tooltip.innerHeight() - $(this).innerHeight();
+						totalMinus = hTooltip - hOrigin;
 						tooltip.css({'top': topOrigin - totalMinus});
 					}else{
-						totalMinus = (tooltip.innerHeight() - $(this).innerHeight()) / 2;
+						totalMinus = (hTooltip - hOrigin) / 2;
 					}
 					$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
 				}
 			}
 		});	
+				
+		$(window).scroll(function(e) {
+			e.stopPropagation();
+			if($('.tooltipster-details').length !== 0){				
+				if(topTooltip < topCalendar){
+					$('.tooltipster-details').css({'top': 127});
+					$('.tooltipster-arrow span').css({'top' : 62});
+				}else{					
+					var totalMinus = 0;
+					if(bottomTooltip > bottomCalendar){
+						totalMinus = hTooltip - hOrigin;
+						$('.tooltipster-details').css({'top': topOrigin - totalMinus});
+					}else{
+						totalMinus = (hTooltip - hOrigin) / 2;
+					}
+					$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
+				}
+			}
+			
+			if($('.tooltipster-attendee').length !== 0){
+				if(bottomTooltip > bottomCalendar){
+					totalMinus = hTooltip - hOrigin;
+					$('.tooltipster-attendee').css({'top': topOrigin - totalMinus - 1});
+					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
+				}
+			}
+			
+		});
 
 		$('.calendar-block').click(function(e){	
 			if($('.tooltipster-default').length !== 0){
@@ -79,23 +121,26 @@ function more1023(){
 			theme: 'tooltipster-default tooltipster-attendee',
 			offsetX: -5,
 			interactive: true,
+			positionTracker: true,
 			autoClose: false,
+			debug: false,
 			functionReady: function(origin, tooltip){
 				$('.block-attendee .close').click(function(){
 					$('.calendar-attendee').tooltipster('hide');
-				});	
-				
+				});		
+					
 				iscrollContent('#iscrollAttendeeList');
 				
-				var bottomCalendar = $('.kuyam-footer').offset().top;
+				hOrigin = $(this).innerHeight();
+				hTooltip = tooltip.innerHeight();
 				
-				var topOrigin = $(this).offset().top;
+				topOrigin = $(this).offset().top;
 				
-				var topTooltip = parseInt(tooltip.css('top'));
-				var bottomTooltip = topTooltip + tooltip.innerHeight();				
+				topTooltip = parseInt(tooltip.css('top'));
+				bottomTooltip = topTooltip + hTooltip;				
 				
 				if(bottomTooltip > bottomCalendar){
-					totalMinus = tooltip.innerHeight() - $(this).innerHeight();
+					totalMinus = hTooltip - hOrigin;
 					tooltip.css({'top': topOrigin - totalMinus - 1});
 					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
 				}
