@@ -14,20 +14,16 @@ function iscrollSelectTabs(tabContentID){
 	}
 }
 
+function cssRepositionTooltipster(strCSS){
+	if($(document).find('#styleRepositionTooltipster').length !== 0){
+		$('#styleRepositionTooltipster').remove();
+	}
+	$('<style id="styleRepositionTooltipster"></style>').appendTo('head');
+	$('#styleRepositionTooltipster').append(strCSS);
+}
+
 function more1023(){
-	if(wScreen > 1023){
-		var topCalendar = $('.calendar-section').offset().top;
-		var bottomCalendar = $('.kuyam-footer').offset().top;
-		
-		var hOrigin = 0;
-		var hTooltip = 0;
-		
-		var topOrigin = 0;
-		var bottomOrigin = 0;
-		
-		var topTooltip = 0;
-		var bottomTooltip = 0;
-	
+	if(wScreen > 1023){	
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
 		$('.calendar-day .calendar-block').tooltipster({
@@ -44,63 +40,54 @@ function more1023(){
 			functionReady: function(origin, tooltip){
 				$('.block-details .close').click(function(){
 					$('.calendar-day .calendar-block').tooltipster('hide');
+					$('#styleRepositionTooltipster').remove();
 				});
 				
 				maxCol('#calendarDetails');
-				iscrollContent('#iscrollDetailsNotes');
+				iscrollContent('#iscrollDetailsNotes');	
 				
-				hOrigin = $(this).innerHeight();
-				hTooltip = tooltip.innerHeight();
+				var topCalendar = $('.calendar-section').offset().top;
+				var bottomCalendar = $('.kuyam-footer').offset().top;
 				
-				topOrigin = $(this).offset().top;
-				bottomOrigin = topOrigin + hOrigin;
+				var hOrigin = $(this).innerHeight();
+				var hTooltip = tooltip.innerHeight();
 				
-				topTooltip = parseInt(tooltip.css('top'));
-				bottomTooltip = topTooltip + hTooltip;
+				var topOrigin = $(this).offset().top;
+				var bottomOrigin = topOrigin + hOrigin;
+				
+				var topTooltip = parseInt(tooltip.css('top'));
+				var bottomTooltip = topTooltip + hTooltip;
 				
 				if(topTooltip < topCalendar){
 					tooltip.css({'top': 127});
 					$('.tooltipster-arrow span').css({'top' : 62});
+					
+					var cssDefine = '';
+						cssDefine += '.tooltipster-details{top: 127px !important;}';
+						cssDefine += '.tooltipster-details .tooltipster-arrow span{top: 62px !important;}';
+					cssRepositionTooltipster(cssDefine);
 				}else{					
 					var totalMinus = 0;
 					if(bottomTooltip > bottomCalendar){
 						totalMinus = hTooltip - hOrigin;
-						tooltip.css({'top': topOrigin - totalMinus});
+						tooltip.css({'top': topOrigin - totalMinus});					
+						$('.tooltipster-arrow span').css({'top' : totalMinus + 25});						
+						
+						var cssDefine = '';
+							cssDefine += '.tooltipster-details{top: ' + (topOrigin - totalMinus) + 'px !important;}';
+							cssDefine += '.tooltipster-details .tooltipster-arrow span{top: ' + (totalMinus + 25) + 'px !important;}';
+						cssRepositionTooltipster(cssDefine);
 					}else{
 						totalMinus = (hTooltip - hOrigin) / 2;
+						$('.tooltipster-arrow span').css({'top' : totalMinus + 25});						
+						
+						var cssDefine = '';
+							cssDefine += '.tooltipster-details .tooltipster-arrow span{top:' + (totalMinus + 25) + 'px !important;}';
+						cssRepositionTooltipster(cssDefine);
 					}
-					$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
 				}
 			}
 		});	
-				
-		$(window).scroll(function(e) {
-			setTimeout(function(){
-				if($('.tooltipster-details').length !== 0){				
-					if(topTooltip < topCalendar){
-						$('.tooltipster-details').css({'top': 127});
-						$('.tooltipster-arrow span').css({'top' : 62});
-					}else{					
-						var totalMinus = 0;
-						if(bottomTooltip > bottomCalendar){
-							totalMinus = hTooltip - hOrigin;
-							$('.tooltipster-details').css({'top': topOrigin - totalMinus});
-						}else{
-							totalMinus = (hTooltip - hOrigin) / 2;
-						}
-						$('.tooltipster-arrow span').css({'top' : totalMinus + 25});
-					}
-				}
-				
-				if($('.tooltipster-attendee').length !== 0){
-					if(bottomTooltip > bottomCalendar){
-						totalMinus = hTooltip - hOrigin;
-						$('.tooltipster-attendee').css({'top': topOrigin - totalMinus - 1});
-						$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
-					}
-				}
-			}, 5);			
-		});
 
 		$('.calendar-day .calendar-block').click(function(e){	
 			if($('.tooltipster-default').length !== 0){
@@ -127,22 +114,29 @@ function more1023(){
 			functionReady: function(origin, tooltip){
 				$('.block-attendee .close').click(function(){
 					$('.calendar-attendee').tooltipster('hide');
+					$('#styleRepositionTooltipster').remove();
 				});		
 					
 				iscrollContent('#iscrollAttendeeList');
 				
-				hOrigin = $(this).innerHeight();
-				hTooltip = tooltip.innerHeight();
+				var bottomCalendar = $('.kuyam-footer').offset().top;
 				
-				topOrigin = $(this).offset().top;
+				var hOrigin = $(this).innerHeight();
+				var hTooltip = tooltip.innerHeight();
 				
-				topTooltip = parseInt(tooltip.css('top'));
-				bottomTooltip = topTooltip + hTooltip;				
+				var topOrigin = $(this).offset().top;
+				
+				var topTooltip = parseInt(tooltip.css('top'));
+				var bottomTooltip = topTooltip + hTooltip;				
 				
 				if(bottomTooltip > bottomCalendar){
 					totalMinus = hTooltip - hOrigin;
 					tooltip.css({'top': topOrigin - totalMinus - 1});
-					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});
+					$('.tooltipster-arrow span').css({'top' : totalMinus + 14});					
+					
+					var cssDefine = '';
+						cssDefine += '.tooltipster-attendee .tooltipster-arrow span{top:' + (totalMinus + 14) + 'px !important;}';
+					cssRepositionTooltipster(cssDefine);
 				}
 			}
 		});	
