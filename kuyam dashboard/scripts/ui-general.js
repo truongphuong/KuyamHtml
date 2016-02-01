@@ -204,7 +204,7 @@ function maxCol(section){
     $(section).find('.col-title').css({ 'width': maxColW });
 }
 
-function showPesonalInfo($this, sectionID){
+function showPesonalInfo($this){
 	var liTag = $this.parentElement.parentElement;
 	var liData = liTag.attributes.getNamedItem('data-original-index').value;
 	var liClass = liTag.className;
