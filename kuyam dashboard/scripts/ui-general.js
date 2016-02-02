@@ -87,7 +87,6 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
-				click: true,
 				scrollbars: true,
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'scale',
@@ -212,7 +211,6 @@ function showPesonalInfo($this){
 	if(wScreen < 1024){
 		$('#personalModal').modal('show');
 	}else{
-		console.log('hello');
 		var personalContent = $('#dataPersonal').html();
 		
 		$('.single-right .btn-personal').tooltipster({
