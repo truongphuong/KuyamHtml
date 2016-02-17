@@ -47,7 +47,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 				click: true,
 				scrollbars: true,
 				interactiveScrollbars: true,
-				shrinkScrollbars: 'scale',
+				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
 			});
 	}
@@ -89,7 +89,7 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 				mouseWheel: true, 
 				scrollbars: true,
 				interactiveScrollbars: true,
-				shrinkScrollbars: 'scale',
+				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
 			});
 	}
@@ -113,7 +113,7 @@ function iscrollSelect(sectionID, scrollName){
 				click: true,
 				scrollbars: true,
 				interactiveScrollbars: true,
-				shrinkScrollbars: 'scale',
+				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
 			});
 	}
@@ -128,7 +128,7 @@ function iscrollContent(sectionID){
 				click: true,
 				scrollbars: true,
 				interactiveScrollbars: true,
-				shrinkScrollbars: 'scale',
+				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
 			});
 	}
