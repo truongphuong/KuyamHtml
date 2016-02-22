@@ -1064,6 +1064,9 @@ textarea.form-control:focus{
     border: 0 none;
     margin-bottom: 0;
 }
+.kuyam-header .navbar-header{
+	margin-left:0;
+}
 .kuyam-header .navbar-toggle{
 	margin: 0;
 	padding:17px 15px;
@@ -1076,8 +1079,6 @@ textarea.form-control:focus{
 }
 .kuyam-header .navbar-brand{
 	width: 159px;
-	margin-left: 0;
-	margin-right: 35px;
 	background: url(../images/logo.png) center center no-repeat;
 	background-size: 159px auto;
 }
@@ -1129,94 +1130,78 @@ textarea.form-control:focus{
 .modal-terms {
     width: 700px;
 }
-
-    .modal-terms .modal-header {
-        padding: 0;
-        text-align: left;
-    }
-
-    .modal-terms .ui-tabs {
-        padding: 0;
-        border: 0 none;
-        background: none transparent;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-
-    .modal-terms .ui-tabs-nav {
-        padding: 0;
-        border: 0 none;
-        background: none #333333;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-
-    .modal-terms .ui-tabs .ui-tabs-nav li {
-        margin: 0;
-        width: 33.33%;
-    }
-
-    .modal-terms .ui-tabs .ui-tabs-nav .ui-state-default,
-    .modal-terms .ui-tabs .ui-tabs-nav .ui-state-hover,
-    .modal-terms .ui-tabs .ui-tabs-nav .ui-state-active {
-        background: none transparent;
-        border: 0 none;
-    }
-
-        .modal-terms .ui-tabs .ui-tabs-nav .ui-state-default .ui-tabs-anchor {
-            float: none;
-            display: block;
-            padding: 30px 0;
-            text-align: center;
-            font: 24px/28px ralewayextrabold, sans-serif;
-            color: #ABABAB;
-        }
-
-            .modal-terms .ui-tabs .ui-tabs-nav .ui-state-default .ui-tabs-anchor span {
-                display: block;
-                height: 32px;
-                background: url(../images/icons/arrow_down_2.png) center center no-repeat;
-                margin: 10px 0 0;
-            }
-
-        .modal-terms .ui-tabs .ui-tabs-nav .ui-state-active .ui-tabs-anchor {
-            color: #ffffff;
-        }
-
-            .modal-terms .ui-tabs .ui-tabs-nav .ui-state-active .ui-tabs-anchor span {
-                display: block;
-                height: 32px;
-                background: url(../images/icons/arrow_down_3.png) center center no-repeat;
-                margin: 10px 0 0;
-            }
-
-    .modal-terms .ui-tabs-panel {
-        margin: 0 15px;
-        padding: 20px 10px;
-        border: 2px solid #ABABAB;
-        font: 20px/24px ralewaymedium, sans-serif;
-        overflow-y: auto;
-    }
-
-        .modal-terms .ui-tabs-panel h3 {
-            font: 20px/24px ralewayextrabold, sans-serif;
-            margin: 20px 0 15px;
-        }
-
-        .modal-terms .ui-tabs-panel p {
-            margin: 0 0 15px;
-        }
-
-            .modal-terms .ui-tabs-panel p a {
-                color: Blue;
-            }
-
-        .modal-terms .ui-tabs-panel .scroll-bar {
-            height: 310px;
-            overflow-y: auto;
-        }
+.modal-terms .modal-header .close,
+.modal-terms .modal-header .close:hover{
+	width: 33px;
+	height: 33px;
+	background-image: url(../images/icons/btn_close_black.png);
+	top: -16px;
+	right: -16px;
+	z-index: 1;
+	opacity:1;
+}
+.modal-terms .modal-header {
+	padding: 0 0 15px;
+	text-align: left;
+}
+.modal-terms .nav-tabs {
+	padding: 0;
+	border: 0 none;
+	background: none #333333;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.modal-terms .nav-tabs > li {
+	margin: 0;
+	width: 33.33%;
+}
+.modal-terms .nav-tabs > li > a,
+.modal-terms .nav-tabs > li > a:hover,
+.modal-terms .nav-tabs > li.active > a {
+	background: none transparent;
+	border: 0 none;
+}
+.modal-terms .nav-tabs > li > a {
+	float: none;
+	display: block;
+	padding: 30px 0;
+	text-align: center;
+	font: 24px/28px ralewayextrabold, sans-serif;
+	color: #ABABAB;
+}
+.modal-terms .nav-tabs > li > a span {
+	display: block;
+	height: 32px;
+	background: url(../images/icons/arrow_down_2.png) center center no-repeat;
+	margin: 10px 0 0;
+}
+.modal-terms .nav-tabs > li.active > a {
+	color: #ffffff;
+}
+.modal-terms .nav-tabs > li.active > a span {
+	background: url(../images/icons/arrow_down_3.png) center center no-repeat;
+}
+.modal-terms .tab-content{
+	margin: 0 15px;
+	padding: 20px 10px;
+	border: 2px solid #ABABAB;
+	font: 20px/24px ralewaymedium, sans-serif;
+}
+.modal-terms .tab-pane {
+	height: 310px;
+	overflow-y: auto;
+}
+.modal-terms .ui-tabs-panel h3 {
+	font: 20px/24px ralewayextrabold, sans-serif;
+	margin: 20px 0 15px;
+}
+.modal-terms .ui-tabs-panel p {
+	margin: 0 0 15px;
+}
+.modal-terms .ui-tabs-panel p a {
+	color: Blue;
+}
 
 @media (min-width:1024px){
 	/* =============================================================================
@@ -1267,9 +1252,18 @@ textarea.form-control:focus{
 
 
 @media (min-width: 768px){
+	.kuyam-header .navbar-header{
+		padding-left: 30px;
+		margin-left: -15px;
+		overflow:hidden;
+	}
+	.kuyam-header .navbar-brand{
+		margin-right:35px;
+	}
     .kuyam-header .navbar-nav > li > a{
         padding-left: 0;
         padding-right: 0;
+		text-align:center;
     }
 
 	.kuyam-header .navbar-nav > li > a span{
@@ -1282,6 +1276,9 @@ textarea.form-control:focus{
     .kuyam-header .navbar-nav > li:last-child > a span{
         border-right-color: transparent;
     }
+	.kuyam-header .navbar-right > li{
+		width:auto !important;
+	}
 	.kuyam-header .navbar-right > li:last-child > a span{
         border-right-color: #fff;
     }
@@ -1290,12 +1287,6 @@ textarea.form-control:focus{
     }
 	.kuyam-header .navbar-right > li:first-child{
 		float: right;
-	}
-}
-
-@media (max-width:767px){
-	.kuyam-header .navbar-brand{
-		margin-left: 15px;
 	}
 }
 

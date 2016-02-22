@@ -125,7 +125,9 @@ function cssRepositionTooltipster(strCSS){
 
 function more1023(){
 	if(wScreen > 1023){	
-		$('.calendar-date').css({'max-width': wScreen / 7});
+		$('.calendar-date-title').css({'max-width': wScreen / 7});
+		$('.calendar-date').css({'max-width': wScreen / 7 - 2});
+		
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
 		$('.calendar-day .calendar-block').tooltipster({
@@ -276,7 +278,7 @@ function more1023(){
 
 function less1024(){
 	if(wScreen < 1024){	
-		$('.calendar-date').css({'max-width': ''});
+		$('.calendar-date-title, .calendar-date').css({'max-width': ''});
 		
 		if($('.tooltipster-attendee').length !== 0){
 			$('.tooltipster-attendee').remove();

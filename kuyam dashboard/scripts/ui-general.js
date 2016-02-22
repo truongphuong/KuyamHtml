@@ -164,6 +164,11 @@ function minHeightBody(){
 	if(hSite < hScreen){
 		$('.kuyam-section').css({'min-height': hScreen - hHeader - hFooter});
 	}
+	if($('#calendarDaysWrap').length !== 0){
+		var hCalendarHeader = $('.calendar-header').height(),
+			hCalendarSectionHeader = $('.calendar-section header').height();
+		$('#calendarDaysWrap').css({'min-height': hScreen - hHeader - hFooter - hCalendarHeader - hCalendarSectionHeader});
+	}
 }
 
 function weekRepeat(){
@@ -257,16 +262,41 @@ function showPesonalInfo($this){
 	}
 }
 
+function siteHeader(){
+	if(wScreen > 1023){	
+		$('.kuyam-header .navbar-header, .kuyam-header .navbar-nav > li').css({'width': wScreen / 7});
+	}else{
+		$('.kuyam-header .navbar-header, .kuyam-header .navbar-nav > li').css({'width': ''});
+	}
+}
+
 $(document).ready(function(){
 	minHeightBody();
 	
+	siteHeader();
+	
 	centerModals($('.modal'));
+	
+	var termActive;
+	$('.link-terms').click(function(e){
+		e.preventDefault();
+		termActive = $(this).attr('href');		
+		$('#termsModal').modal('show');
+	});
+	$('#termsModal').on('show.bs.modal', function (e) {
+		$('.terms-tabs').tab('show');
+		$('.terms-tabs a[href="' + termActive +'"]').tab('show');
+		
+		centerModals($('#termsModal'));
+	});
 });
 
 $(window).on('resize', function(){
 	wScreen = window.innerWidth;
 	
 	minHeightBody();
+	
+	siteHeader();
 	
 	centerModals($('.modal'));
 });
