@@ -285,18 +285,21 @@ $(document).ready(function(){
 				$parent = $('#' + dataSection);
 			customPickTime($parent, e.date, 30);
 		});
+		//$('.timepicker-section').data("DateTimePicker").defaultDate('02/19/2016 12:00 AM');
 		
 		$('.timepicker-from').datetimepicker({
 			inline: true,
 			sideBySide: true,
 			format: 'LT'
 		});
+		//$('.timepicker-from').data("DateTimePicker").defaultDate('02/19/2016 12:00 AM');
 		
 		$('.timepicker-to').datetimepicker({
 			inline: true,
 			sideBySide: true,
 			format: 'LT'
 		});
+		//$('.timepicker-to').data("DateTimePicker").defaultDate('02/19/2016 12:00 AM');
 		
 		// Tabs
 		var tabContentID = $('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-controls'),
