@@ -277,17 +277,65 @@ $(document).ready(function(){
 	
 	centerModals($('.modal'));
 	
+	if($('#tabTerms').length !== 0){
+		var iscrollTabTerms = new IScroll('#tabTerms', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+	}
+	
+	if($('#tabPrivacy').length !== 0){	
+		var iscrollTabPrivacy = new IScroll('#tabPrivacy', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+	}
+	
+	if($('#tabServices').length !== 0){		
+		var iscrollTabServices = new IScroll('#tabServices', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+	}
+	
 	var termActive;
 	$('.link-terms').click(function(e){
 		e.preventDefault();
 		termActive = $(this).attr('href');		
 		$('#termsModal').modal('show');
-	});
+	});	
+	
 	$('#termsModal').on('show.bs.modal', function (e) {
 		$('.terms-tabs').tab('show');
 		$('.terms-tabs a[href="' + termActive +'"]').tab('show');
-		
 		centerModals($('#termsModal'));
+	});
+	
+	$('#termsModal').on('shown.bs.modal', function (e) {
+		iscrollTabTerms.refresh();
+		iscrollTabPrivacy.refresh();
+		iscrollTabServices.refresh();
+	});
+	
+	$('.terms-tabs').on('shown.bs.tab', function (e) {
+		iscrollTabTerms.refresh();
+		iscrollTabPrivacy.refresh();
+		iscrollTabServices.refresh();
 	});
 });
 
