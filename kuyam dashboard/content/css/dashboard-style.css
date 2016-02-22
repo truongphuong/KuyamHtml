@@ -174,8 +174,7 @@
     z-index: 2;
     border-left: 2px solid transparent;
     border-right: 2px solid transparent;
-    margin-right: -1px;
-    margin-left: -1px;
+    margin-left: -3px;
 }
 
 .calendar-details{
@@ -210,6 +209,10 @@
 .calendar-block p.calendar-with{
 	font-size: .875em;
 	font-family: ralewaybold, sans-serif;
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;*/
+	word-wrap: break-word;
 }
 .calendar-block p.calendar-time{
 	font-size: .8125em;
@@ -218,6 +221,10 @@
 .calendar-block p.calendar-type{
 	font-size: .75em;
 	font-family: ralewaysemibold, sans-serif;
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;*/
+	word-wrap: break-word;
 }
 .calendar-block .calendar-control{
 	text-align: right;
@@ -475,24 +482,34 @@
 }
 .block-details .table-css{
 	width: 100%;
+	display:block;
+}
+.block-details .tr{
+	display: block;
+	clear: both;
 }
 .block-details .td{
+	display:block;
 	padding-top: 4px;
 	padding-bottom: 4px;
+	word-wrap: break-word;
 }
 .block-details .col-title{
 	text-align: right;
 	white-space: nowrap;	
 	width: 38%;
+	float:left;
 }
 .block-details .col-info{
 	text-align: left;
+	float:left;
 }
 .block-details .notes-section{
 	border: 1px solid #dcdcdc;
 	padding: 10px 15px;
 	margin: 8px 0;
 	text-align: left;
+	clear: both;
 }
 .block-details .notes-section > div{
 	height: 88px;
@@ -501,6 +518,8 @@
 }
 .block-details .modal-footer{
 	padding-bottom: 12px;
+	padding-left:5px;
+	padding-right:5px;
 }
 .block-details .modal-footer a,
 .block-details .modal-footer a:hover,

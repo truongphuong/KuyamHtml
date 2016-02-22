@@ -1,16 +1,117 @@
+var iscrollStaffCalendar,
+
+	iscrollClientAppointment,
+	iscrollStaffAppointment,
+	iscrollCategoryAppointment,
+	iscrollServiceAppointment,
+	
+	iscrollClientClass,
+	iscrollStaffClass,
+	iscrollCategoryClass,
+	iscrollClass,
+	
+	iscrollStaffBlocker;
+
 function iscrollSelectTabs(tabContentID){	
 	if(tabContentID === "formAppointment"){
 		iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');
+		iscrollClientAppointment = new IScroll('#iscrollClientAppointment', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelectSearchModal('divStaffAppointment', 'iscrollStaffAppointment', 'addStaffModal');
+		iscrollStaffAppointment = new IScroll('#iscrollStaffAppointment', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelect('divCategoryAppointment', 'iscrollCategoryAppointment');
+		iscrollCategoryAppointment = new IScroll('#iscrollCategoryAppointment', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelect('divServiceAppointment', 'iscrollServiceAppointment');
+		iscrollServiceAppointment = new IScroll('#iscrollServiceAppointment', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
 	}else if(tabContentID === "formClass"){		
 		iscrollSelectSearchModal('divClientClass', 'iscrollClientClass', 'addClientModal');
+		iscrollClientClass = new IScroll('#iscrollClientClass', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelectSearchModal('divStaffClass', 'iscrollStaffClass', 'addStaffModal');
+		iscrollStaffClass = new IScroll('#iscrollStaffClass', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelect('divCategoryClass', 'iscrollCategoryClass');
+		iscrollCategoryClass = new IScroll('#iscrollCategoryClass', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
 		iscrollSelect('divClass', 'iscrollClass');
+		iscrollClass = new IScroll('#iscrollClass', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
 	}else{		
 		iscrollSelectSearchModal('divStaffBlocker', 'iscrollStaffBlocker', 'addStaffModal');
+		iscrollStaffBlocker = new IScroll('#iscrollStaffBlocker', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
 	}
 }
 
@@ -24,6 +125,7 @@ function cssRepositionTooltipster(strCSS){
 
 function more1023(){
 	if(wScreen > 1023){	
+		$('.calendar-date').css({'max-width': wScreen / 7});
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();
 		$('.calendar-day .calendar-block').tooltipster({
@@ -174,6 +276,8 @@ function more1023(){
 
 function less1024(){
 	if(wScreen < 1024){	
+		$('.calendar-date').css({'max-width': ''});
+		
 		if($('.tooltipster-attendee').length !== 0){
 			$('.tooltipster-attendee').remove();
 		}
@@ -234,6 +338,15 @@ function less1024(){
 $(document).ready(function(){
 	
 	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
+	iscrollStaffCalendar = new IScroll('#iscrollStaffCalendar', { 
+		keyBindings: true, 
+		mouseWheel: true, 
+		click: true,
+		scrollbars: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'clip',
+		fadeScrollbars: true
+	});
 	
 	existSelect('calendar-select-status');
 	

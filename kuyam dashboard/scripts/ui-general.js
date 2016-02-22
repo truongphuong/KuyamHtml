@@ -27,7 +27,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 		$modalID = $('#' + modalName),
 		scrollID = '#' + scrollName;
 		
-	if($sectionID.length !== 0){
+	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker({liveSearch: true});
 		$sectionID.find('.form-control').attr('readonly', 'true');		
 		
@@ -41,7 +41,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 		$sectionAppend.appendTo(scrollID);
 		
-		var selectScroll = new IScroll(scrollID, { 
+		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
 				click: true,
@@ -49,16 +49,15 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
-			});
+			});*/
 	}
 }
 
 function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
 		$modalID = $('#' + modalName),
-		scrollID = '#' + scrollName;
-		
-	if($sectionID.length !== 0){
+		scrollID = '#' + scrollName;	
+	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker({liveSearch: true});	
 		
 		$sectionID.find('.popover-title').click(function(){
@@ -84,21 +83,21 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 		$sectionAppend.appendTo(scrollID);
 		
-		var selectScroll = new IScroll(scrollID, { 
+		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
 				scrollbars: true,
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
-			});
+			});*/
 	}
 }
 
 function iscrollSelect(sectionID, scrollName){
 	var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
-	if($sectionID.length !== 0){
+	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker();
 		
 		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
@@ -107,7 +106,7 @@ function iscrollSelect(sectionID, scrollName){
 		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 		$sectionAppend.appendTo(scrollID);
 		
-		var selectScroll = new IScroll(scrollID, { 
+		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
 				click: true,
@@ -115,7 +114,7 @@ function iscrollSelect(sectionID, scrollName){
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
-			});
+			});*/
 	}
 }
 
@@ -201,6 +200,7 @@ function maxCol(section){
         }
     });
     $(section).find('.col-title').css({ 'width': maxColW });
+	$(section).find('.col-info').css({ 'width': $(section).find('.table-css').width() - maxColW });
 }
 
 function showPesonalInfo($this){
