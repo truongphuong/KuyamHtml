@@ -94,6 +94,7 @@
 }
 .calendar-header .calendar-title{
 	line-height: 34px;
+	font-family: ralewaybold, sans-serif;
 }
 .calendar-header .btn-today{
 	background: #fff;
@@ -190,14 +191,14 @@
 	font-size:.8125em;
 }
 
-.calendar-block
-{
+.calendar-block{
     padding: 15px;
     border-width: 2px;
     border-style: solid;
     margin-bottom: 3px;
     color: #292929;
 	position: relative;
+	line-height:130%;
 }
 .calendar-block .icon-user{
 	margin-bottom: -3px;
@@ -295,11 +296,12 @@
 	float: left;
 	width: 33.33%;
 	text-align: center;
-	padding: 10px 5px;
+	padding: 8px 5px;
+	line-height:115%;
 }
 .block-class ul li span{
 	display: block;
-	font-family: ralewaysemibold, sans-serif;
+	font-family: ralewaybold, sans-serif;
 }
 .block-class ul li .calendar-num-title{
 	font-size: .8125em;
@@ -679,6 +681,10 @@
 		display: none;
 	}
 	
+	.calendar-date{
+		border-left:0 none;
+	}
+	
 	.calendar-date.active,
 	.calendar-details,
 	.block-class ul li,
@@ -716,6 +722,7 @@
 	
 	.calendar-block p.calendar-user{
 		text-decoration: underline;
+		margin-right:30px;
 	}
 	
 	.block-class .calendar-attendee{
