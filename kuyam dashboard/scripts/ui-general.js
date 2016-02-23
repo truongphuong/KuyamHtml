@@ -20,7 +20,7 @@ var isMobile = {
 },
 wScreen = window.innerWidth;
 
-document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
+//document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
 
 function iscrollSelectModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
@@ -157,17 +157,13 @@ function centerModals($element){
 }
 
 function minHeightBody(){
-	var hScreen = window.innerHeight,
-		hSite = $('.kuyam-wrapper').height(),
+	$('.kuyam-section, #calendarDaysWrap').css({'min-height': ''});
+	var hScreen = $(window).height(),
 		hHeader = $('.kuyam-header').height(),
 		hFooter = $('.kuyam-footer').height();
-	if(hSite < hScreen){
-		$('.kuyam-section').css({'min-height': hScreen - hHeader - hFooter});
-	}
-	if($('#calendarDaysWrap').length !== 0){
-		var hCalendarHeader = $('.calendar-header').height(),
-			hCalendarSectionHeader = $('.calendar-section header').height();
-		$('#calendarDaysWrap').css({'min-height': hScreen - hHeader - hFooter - hCalendarHeader - hCalendarSectionHeader});
+	$('.kuyam-section').css({'min-height': hScreen - hHeader - hFooter});
+	if($('#calendarDaysWrap').length !== 0 && $(window).width() > 1023){
+		$('#calendarDaysWrap').css({'min-height': hScreen - hHeader - hFooter - 110});
 	}
 }
 
