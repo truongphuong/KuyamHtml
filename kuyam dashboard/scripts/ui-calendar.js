@@ -125,7 +125,7 @@ function cssRepositionTooltipster(strCSS){
 
 function more1023(){
 	if(wScreen > 1023){	
-		$('.calendar-date-title, .calendar-date').css({'max-width': wScreen / 7});
+		$('.calendar-date-title, .calendar-date').css({'max-width': $('.calendar-date-title').width()});
 		
 		var detailContent = $('#dataDetails').html();	
 		$('#dataDetails').remove();

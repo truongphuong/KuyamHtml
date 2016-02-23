@@ -173,20 +173,18 @@
     -ms-flex: 1;
     flex: 1;
     border-left: 1px solid #e3e3e3;
-}
-.calendar-date.active .calendar-day{
-	border-color: #bc347c;
+	position:relative;
 }
 
 .calendar-day{
     height: 100%;
     padding: 3px;
     position: relative;
-    z-index: 2;
-    border-left: 2px solid transparent;
+    z-index: 3;
+    /*border-left: 2px solid transparent;
     border-right: 2px solid transparent;
     margin-left: -1px;
-	margin-right: -1px;
+	margin-right: -1px;*/
 }
 
 .calendar-details{
@@ -635,6 +633,19 @@
 	.block-class ul{
 		margin-left: -5px;
 		margin-right: -5px;
+	}
+}
+
+@media (min-width: 1024px){
+	.calendar-date.active .calendar-border{
+		border-left: 2px solid #bc347c;
+		border-right: 2px solid #bc347c;
+		position:absolute;
+		top:0;
+		right:-1px;
+		left:-1px;
+		bottom:0;
+		z-index:2;
 	}
 }
 
