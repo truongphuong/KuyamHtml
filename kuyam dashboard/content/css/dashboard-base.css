@@ -1356,6 +1356,9 @@ textarea.form-control:focus{
 }
 
 @media (min-width: 768px){
+	.kuyam-header{
+		overflow:hidden;
+	}
 	.kuyam-header .navbar-header{
 		padding-left: 30px;
 		margin-left: -15px;
@@ -1369,17 +1372,25 @@ textarea.form-control:focus{
         padding-right: 0;
 		text-align:center;
     }
-
+	.kuyam-header .navbar-nav > li.active > a{
+        margin-left:-1px;
+		margin-right:-1px;
+		position:relative;
+		z-index:2;
+    }
 	.kuyam-header .navbar-nav > li > a span{
 		display: block;
 		padding-left: 15px;
 		padding-right: 15px;
 		border-right: 1px solid #fff;
 	}
-
-    .kuyam-header .navbar-nav > li:last-child > a span{
+    .kuyam-header .navbar-nav > li:last-child > a span,
+	.kuyam-header .navbar-nav > li.active > a span{
         border-right-color: transparent;
     }
+	.kuyam-header .navbar-nav > li > a span{
+	
+	}
 	.kuyam-header .navbar-right{
 		margin-right:-30px;
 	}
@@ -1389,7 +1400,8 @@ textarea.form-control:focus{
 	.kuyam-header .navbar-right > li:last-child > a span{
         border-right-color: #fff;
     }
-	.kuyam-header .navbar-right > li:first-child > a span{
+	.kuyam-header .navbar-right > li:first-child > a span,	
+	.kuyam-header .navbar-right > li.active > a span{
         border-right-color: transparent;
     }
 	.kuyam-header .navbar-right > li:first-child{
