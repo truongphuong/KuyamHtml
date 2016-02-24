@@ -1164,7 +1164,6 @@ textarea.form-control:focus{
     border: 0 none;
     margin-bottom: 0;
 	height:50px;
-	z-index:9;
 }
 .kuyam-header .navbar-header{
 	margin-left:0;
@@ -1224,10 +1223,6 @@ textarea.form-control:focus{
 .kuyam-section{
     overflow: hidden;
 	position: relative;
-}
-.kuyam-section #addCalendarModal{
-    z-index:inherit !important;
-    overflow-y: auto;
 }
 
 /* =============================================================================
@@ -1402,7 +1397,10 @@ textarea.form-control:focus{
 	}
 }
 
-@media (max-width: 767px){	
+@media (max-width: 767px){
+    .kuyam-header {
+        z-index:9;
+    }
 	.kuyam-header .navbar-collapse{
 		background: #292929;
 	}
@@ -1410,6 +1408,11 @@ textarea.form-control:focus{
 		margin-top:0;
 		margin-bottom:0;
 	}
+    
+    #addCalendarModal{
+        z-index:1041 !important;
+        overflow-y: auto;
+    }
 }
 
 /* =============================================================================
