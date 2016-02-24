@@ -399,6 +399,37 @@ textarea.form-control:focus{
 	border: 0 none;
 }
 
+.modal.fade:not(.in).left .modal-dialog {
+	-webkit-transform: translate3d(-25%, 0, 0);
+	transform: translate3d(-25%, 0, 0);
+}
+.modal.fade:not(.in).right .modal-dialog {
+	-webkit-transform: translate3d(25%, 0, 0);
+	transform: translate3d(25%, 0, 0);    
+}
+.modal.fade:not(.in).bottom .modal-dialog {
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+
+/* Alternative Angles */
+.modal.fade:not(.in).top-left .modal-dialog {
+	-webkit-transform: translate3d(-25%, -25%, 0);
+	transform: translate3d(-25%, -25%, 0);
+}
+.modal.fade:not(.in).top-right .modal-dialog {
+	-webkit-transform: translate3d(25%, -25%, 0);
+	transform: translate3d(25%, -25%, 0);
+}
+.modal.fade:not(.in).bottom-left .modal-dialog {
+	-webkit-transform: translate3d(-25%, 25%, 0);
+	transform: translate3d(-25%, 25%, 0);
+}
+.modal.fade:not(.in).bottom-right .modal-dialog {
+	-webkit-transform: translate3d(25%, 25%, 0);
+	transform: translate3d(25%, 25%, 0);
+}
+
 /* =============================================================================
    Iscroll
    ========================================================================== */
@@ -1065,6 +1096,7 @@ textarea.form-control:focus{
     border: 0 none;
     margin-bottom: 0;
 	height:50px;
+	z-index:9;
 }
 .kuyam-header .navbar-header{
 	margin-left:0;
@@ -1124,6 +1156,10 @@ textarea.form-control:focus{
 .kuyam-section{
     overflow: hidden;
 	position: relative;
+}
+.kuyam-section #addCalendarModal{
+    z-index:inherit !important;
+    overflow-y: auto;
 }
 
 /* =============================================================================
@@ -1298,40 +1334,14 @@ textarea.form-control:focus{
 	}
 }
 
-
-.modal.fade:not(.in).left .modal-dialog {
-	-webkit-transform: translate3d(-25%, 0, 0);
-	transform: translate3d(-25%, 0, 0);
-}
-.modal.fade:not(.in).right .modal-dialog {
-	-webkit-transform: translate3d(25%, 0, 0);
-	transform: translate3d(25%, 0, 0);    
-}
-.modal.fade:not(.in).bottom .modal-dialog {
-	-webkit-transform: translate3d(0, 25%, 0);
-	transform: translate3d(0, 25%, 0);
-}
-
-/* Alternative Angles */
-.modal.fade:not(.in).top-left .modal-dialog {
-	-webkit-transform: translate3d(-25%, -25%, 0);
-	transform: translate3d(-25%, -25%, 0);
-}
-.modal.fade:not(.in).top-right .modal-dialog {
-	-webkit-transform: translate3d(25%, -25%, 0);
-	transform: translate3d(25%, -25%, 0);
-}
-.modal.fade:not(.in).bottom-left .modal-dialog {
-	-webkit-transform: translate3d(-25%, 25%, 0);
-	transform: translate3d(-25%, 25%, 0);
-}
-.modal.fade:not(.in).bottom-right .modal-dialog {
-	-webkit-transform: translate3d(25%, 25%, 0);
-	transform: translate3d(25%, 25%, 0);
-}
-
-body #addCalendarModal {
-    overflow-y: auto;
+@media (max-width: 767px){	
+	.kuyam-header .navbar-collapse{
+		background: #292929;
+	}
+	.kuyam-header .navbar-nav{
+		margin-top:0;
+		margin-bottom:0;
+	}
 }
 
 /* =============================================================================
