@@ -162,6 +162,9 @@ function minHeightBody(){
 		hHeader = $('.kuyam-header').height(),
 		hFooter = $('.kuyam-footer').height();
 	$('.kuyam-section').css({'min-height': hScreen - hHeader - hFooter});
+	if($('.calendar-page').length !== 0){
+		$('.calendar-page').css({'width': $(window).width()});
+	}
 	if($('#calendarDaysWrap').length !== 0 && $(window).width() > 1023){
 		$('#calendarDaysWrap').css({'min-height': hScreen - hHeader - hFooter - 110});
 	}
