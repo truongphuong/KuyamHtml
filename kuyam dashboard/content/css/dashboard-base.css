@@ -594,6 +594,9 @@ textarea.form-control:focus{
 	display: block;
 	max-width: 100%;
 }
+.bootstrap-select > .dropdown-toggle{
+	padding-right: 30px;
+}
 .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
     background: #fff;
@@ -725,6 +728,9 @@ textarea.form-control:focus{
 .calendar-select .bootstrap-select.btn-group .btn .filter-option{
     width: auto;
 	text-transform:uppercase;
+}
+.calendar-select .bootstrap-select > .dropdown-toggle{
+	padding-right:25px;
 }
 .calendar-select .bootstrap-select.btn-group .btn .caret{
     margin-top: -5px;
@@ -1434,11 +1440,43 @@ textarea.form-control:focus{
 }
 
 @media (max-width: 767px){
+	.form-control, .form-control:focus{
+		height: 43px;
+		border-color: #747474;
+	}
+	
+	form div[class*="col-"]{
+		margin-bottom: 16px;
+	}
+	.form-select .bootstrap-select > .btn,
+	.form-select .bootstrap-select > .btn:focus,
+	.form-select .bootstrap-select > .btn:active,
+	.form-select .bootstrap-select > .btn-default.disabled,
+	.form-select .bootstrap-select > .btn-default.disabled:focus,
+	.form-select .bootstrap-select > .btn-default.disabled:active,
+	.form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+	.form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		border-color: #747474;
+		height: 43px;
+	}
+	.bootstrap-select.btn-group .btn .caret{
+		margin-top:-5px;
+		width:8px;
+		height:14px;
+		background-image:url(../images/mobile/icon_next_black.png);
+		background-size:8px auto;
+	}
+	
     .kuyam-header {
         z-index:9;
     }
 	.kuyam-header .navbar-collapse{
 		background: #292929;
+	}
+	.kuyam-header .navbar-brand{
+		width:103px;
+		background-size:103px auto;
 	}
 	.kuyam-header .navbar-nav{
 		margin-top:0;
