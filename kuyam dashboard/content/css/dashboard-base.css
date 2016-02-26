@@ -181,7 +181,16 @@ label{
     padding-right:0 !important;
 }
 
-.on-desktop .modal-open{
+.on-desktop body{
+    padding-right:0 !important;
+}
+.on-desktop body.modal-open{
+    padding-right:17px !important;
+}
+.on-desktop.ie body{
+    padding-right:0 !important;
+}
+.on-desktop.ie body.modal-open{
     padding-right:17px !important;
 }
 
@@ -1266,6 +1275,7 @@ textarea.form-control:focus{
 	width: 33px;
 	height: 33px;
 	background-image: url(../images/icons/btn_close_black.png);
+	background-size:33px auto;
 	top: -16px;
 	right: -16px;
 	z-index: 1;
@@ -1305,6 +1315,7 @@ textarea.form-control:focus{
 	display: block;
 	height: 32px;
 	background: url(../images/icons/arrow_down_2.png) center center no-repeat;
+	background-size:34px auto;
 	margin: 10px 0 0;
 }
 .modal-terms .nav-tabs > li.active > a {
@@ -1317,6 +1328,9 @@ textarea.form-control:focus{
 	margin: 0 15px;
 	padding: 20px 10px;
 	border: 2px solid #ABABAB;
+}
+.modal-terms .tab-content,
+.modal-terms .tab-content h3{	
 	font: 1.25em/24px ralewaymedium, sans-serif;
 }
 .modal-terms .tab-pane{
@@ -1487,6 +1501,38 @@ textarea.form-control:focus{
         overflow-y: auto;
         z-index:inherit !important;
     }
+	
+	.modal-terms{
+		width:auto;
+	}
+	.modal-terms .nav-tabs{
+		background:#fff;
+	}
+	.modal-terms .nav-tabs > li > a{
+		font-size:1.125em;
+		color:#ababab;
+	}
+	.modal-terms .nav-tabs > li > a span{
+		background-image:url(../images/icons/arrow_down_2.png);
+	}
+	.modal-terms .nav-tabs > li.active > a{
+		color:#292929;
+	}
+	.modal-terms .nav-tabs > li.active > a span{
+		background-image:url(../images/icons/arrow_down.png);
+	}
+	.modal-terms .tab-content{
+		border:0 none;
+	}
+}
+@media (max-width: 479px){
+	.modal-terms .nav-tabs > li > a{
+		font-size:.75em;
+	}
+	.modal-terms .tab-content, 
+	.modal-terms .tab-content h3{
+		font-size:.875em
+	}
 }
 
 /* =============================================================================
