@@ -66,20 +66,7 @@ function iscrollSelectTabs(tabContentID){
 				fadeScrollbars: true
 			});
 		}
-	}else if(tabContentID === "formClass"){		
-		iscrollSelectSearchModal('divClientClass', 'iscrollClientClass', 'addClientModal');
-		if(!isMobile.any()){
-			iscrollClientClass = new IScroll('#iscrollClientClass', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
-		
+	}else if(tabContentID === "formClass"){			
 		iscrollSelectSearchModal('divStaffClass', 'iscrollStaffClass', 'addStaffModal');
 		if(!isMobile.any()){
 			iscrollStaffClass = new IScroll('#iscrollStaffClass', { 
