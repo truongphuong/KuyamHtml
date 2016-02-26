@@ -156,7 +156,8 @@ h1, h2, h3, h4, h5, h6, p{
     -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
-.on-device input[type="text"], .on-device input[type="email"], .on-device input[type="search"],.on-device  input[type="password"], .on-device textarea{
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -580,6 +581,10 @@ textarea.form-control:focus{
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
     width: 100%;
 }
+.bootstrap-select.btn-group .no-results{
+	margin:0;
+	padding:10px;
+}
 .bootstrap-select > .btn{
 	font-size: 16px;
 }
@@ -618,8 +623,11 @@ textarea.form-control:focus{
 .bootstrap-select .dropdown-menu{
     margin-top: -1px;
     padding: 0;
-    font-size: auto;
+    font-size: 16px;
 	max-width:100%;
+}
+.on-device .bootstrap-select .dropdown-menu.inner{
+	max-height:180px !important;
 }
 .bootstrap-select.dropup .dropdown-menu{
     margin-top: inherit;
@@ -662,7 +670,7 @@ textarea.form-control:focus{
 .bootstrap-select.btn-group .btn.disabled .caret{
     background-image: url(../images/icon_next_grey.png);
 }
-.bootstrap-select .dropdown-menu{
+.on-desktop .bootstrap-select .dropdown-menu{
     display: block;
     background-clip: padding-box;
     opacity: .3;
@@ -685,7 +693,7 @@ textarea.form-control:focus{
     max-height: none !important;
     min-height: auto !important;
 }
-.bootstrap-select.open .dropdown-menu{
+.on-desktop .bootstrap-select.open .dropdown-menu{
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
@@ -694,7 +702,7 @@ textarea.form-control:focus{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
 }
-.bootstrap-select .bootstrap-scroll{
+.on-desktop .bootstrap-select .bootstrap-scroll{
     overflow: hidden;
 	max-height: 180px;
 	position: relative;
@@ -832,6 +840,9 @@ textarea.form-control:focus{
 .form-select-search .bootstrap-select .dropdown-menu.open{
 	border-color: #000;
 	top: 0;
+}
+.on-device .form-select-search .bootstrap-select .dropdown-menu.open{
+	max-height: 256px !important;
 }
 .form-select-search .bootstrap-select .popover-title{
 	position:relative;
