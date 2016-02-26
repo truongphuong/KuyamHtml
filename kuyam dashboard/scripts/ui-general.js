@@ -270,6 +270,16 @@ function siteHeader(){
 }
 
 $(document).ready(function(){
+	$(document).on('hidden.bs.modal', '.modal', function () {
+		$('.modal:visible').length && $(document.body).addClass('modal-open');
+	});
+	
+	if(isMobile.any()){
+		$('html').addClass('on-device');
+	}else{
+		$('html').addClass('on-desktop');
+	}
+	
 	minHeightBody();
 	
 	siteHeader();

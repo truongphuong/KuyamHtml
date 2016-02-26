@@ -9,10 +9,16 @@ only screen and ( min-resolution:120dpi) and (min-width:320px),
 only screen and ( min-resolution:2dppx) and (min-width:320px)
 {
 	.bootstrap-select.btn-group .btn .caret{
-		background-image: url(../images/icon_next_black@2x.png);
+		background-image: url(../images/mobile/icon_next_black@2x.png);
 	}
 	.bootstrap-select.btn-group .btn.disabled .caret{
-		background-image: url(../images/icon_next_grey@2x.png);
+		background-image: url(../images/mobile/icon_next_grey@2x.png);
+	}
+	.block-cancelled .bootstrap-select.btn-group .btn .caret{
+		background-image:url(../images/mobile/icon_next_red@2x.png);
+	}
+	.block-cancelled .bootstrap-select.btn-group.open .btn .caret{
+		background-image:url(../images/mobile/icon_next_black@2x.png);
 	}
 	
 	.form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark{
@@ -88,6 +94,17 @@ only screen and ( min-resolution:2dppx) and (min-width:320px)
 		background-image: url(../images/logo@2x.png);
 	}
 	
+	.modal-terms .modal-header .close,
+	.modal-terms .modal-header .close:hover{
+		background-image: url(../images/icons/btn_close_black@2x.png);
+	}
+	.modal-terms .nav-tabs > li > a span{
+		background-image:url(../images/icons/arrow_down_2@2x.png);
+	}
+	.modal-terms .nav-tabs > li.active > a span{
+		background-image:url(../images/icons/arrow_down@2x.png);
+	}
+	
 	.block-cancelled .bootstrap-select .caret{
 		background-image: url(../images/icon_next_red@2x.png);
 	}
@@ -111,6 +128,25 @@ only screen and ( min-device-pixel-ratio:1.25) and (min-width:768px),
 only screen and ( min-resolution:120dpi) and (min-width:768px), 
 only screen and ( min-resolution:2dppx) and (min-width:768px)
 {
+	.bootstrap-select.btn-group .btn .caret{
+		background-image: url(../images/icon_next_black@2x.png);
+	}
+	.bootstrap-select.btn-group .btn.disabled .caret{
+		background-image: url(../images/icon_next_grey@2x.png);
+	}
+	.block-cancelled .bootstrap-select.btn-group .btn .caret{
+		background-image:url(../images/icon_next_red@2x.png);
+	}
+	.block-cancelled .bootstrap-select.btn-group.open .btn .caret{
+		background-image:url(../images/icon_next_black@2x.png);
+	}
+	
+	.modal-terms .nav-tabs > li > a span {
+		background-image: url(../images/icons/arrow_down_2@2x.png);
+	}
+	.modal-terms .nav-tabs > li.active > a span {
+		background-image: url(../images/icons/arrow_down_3@2x.png);
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:1.25) and (min-width:1024px), 
