@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 
-*, *:hover, *:active, *:focus, *:visited{
+*, *:hover, *:active, *:focus, *:visited {
     outline: 0 none !important;
     outline-offset: inherit;
     border-radius: 0 !important;
@@ -155,6 +155,11 @@ h1, h2, h3, h4, h5, h6, p{
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
+}
+.on-device input[type="text"], .on-device input[type="email"], .on-device input[type="search"],.on-device  input[type="password"], .on-device textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 img{
@@ -179,19 +184,6 @@ label{
 
 .pr0 {
     padding-right:0 !important;
-}
-
-.on-desktop body{
-    padding-right:0 !important;
-}
-.on-desktop body.modal-open{
-    padding-right:17px !important;
-}
-.on-desktop.ie body{
-    padding-right:0 !important;
-}
-.on-desktop.ie body.modal-open{
-    padding-right:17px !important;
 }
 
 /* =============================================================================
@@ -466,6 +458,12 @@ textarea.form-control:focus{
 .on-device .modal-open .kuyam-wrapper {
     position: fixed;
     width: 100%;
+}
+.modal {
+   background:rgba(0, 0, 0, 0.5);
+}
+.modal-backdrop {
+    display: none;
 }
 .modal-content{
 	border-color: #888;
@@ -1481,6 +1479,15 @@ textarea.form-control:focus{
 		background-image:url(../images/mobile/icon_next_black.png);
 		background-size:8px auto;
 	}
+    
+    .form-select-search.single-left  .btn-personal{
+        left: inherit;
+	    right: 0;
+    }
+    .form-select-search.single-left .bootstrap-select .dropdown-menu > li > a{
+        padding-left: 10px;
+	    padding-right: 40px;
+    }
 	
     .kuyam-header {
         z-index:9;
