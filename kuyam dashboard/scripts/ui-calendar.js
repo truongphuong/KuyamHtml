@@ -13,105 +13,111 @@ var iscrollStaffCalendar,
 	iscrollStaffBlocker;
 
 function iscrollSelectTabs(tabContentID){	
+	
 	if(tabContentID === "formAppointment"){
 		iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');
-		iscrollClientAppointment = new IScroll('#iscrollClientAppointment', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollClientAppointment = new IScroll('#iscrollClientAppointment', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 		
 		iscrollSelectSearchModal('divStaffAppointment', 'iscrollStaffAppointment', 'addStaffModal');
-		iscrollStaffAppointment = new IScroll('#iscrollStaffAppointment', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollStaffAppointment = new IScroll('#iscrollStaffAppointment', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 		
 		iscrollSelect('divCategoryAppointment', 'iscrollCategoryAppointment');
-		iscrollCategoryAppointment = new IScroll('#iscrollCategoryAppointment', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollCategoryAppointment = new IScroll('#iscrollCategoryAppointment', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 		
 		iscrollSelect('divServiceAppointment', 'iscrollServiceAppointment');
-		iscrollServiceAppointment = new IScroll('#iscrollServiceAppointment', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-	}else if(tabContentID === "formClass"){		
-		iscrollSelectSearchModal('divClientClass', 'iscrollClientClass', 'addClientModal');
-		iscrollClientClass = new IScroll('#iscrollClientClass', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-		
+		if(!isMobile.any()){
+			iscrollServiceAppointment = new IScroll('#iscrollServiceAppointment', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
+	}else if(tabContentID === "formClass"){			
 		iscrollSelectSearchModal('divStaffClass', 'iscrollStaffClass', 'addStaffModal');
-		iscrollStaffClass = new IScroll('#iscrollStaffClass', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollStaffClass = new IScroll('#iscrollStaffClass', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 		
 		iscrollSelect('divCategoryClass', 'iscrollCategoryClass');
-		iscrollCategoryClass = new IScroll('#iscrollCategoryClass', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollCategoryClass = new IScroll('#iscrollCategoryClass', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 		
 		iscrollSelect('divClass', 'iscrollClass');
-		iscrollClass = new IScroll('#iscrollClass', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollClass = new IScroll('#iscrollClass', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 	}else{		
 		iscrollSelectSearchModal('divStaffBlocker', 'iscrollStaffBlocker', 'addStaffModal');
-		iscrollStaffBlocker = new IScroll('#iscrollStaffBlocker', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
+		if(!isMobile.any()){
+			iscrollStaffBlocker = new IScroll('#iscrollStaffBlocker', { 
+				keyBindings: true, 
+				mouseWheel: true, 
+				click: true,
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+		}
 	}
 }
 
@@ -339,15 +345,17 @@ function less1024(){
 $(document).ready(function(){
 	
 	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
-	iscrollStaffCalendar = new IScroll('#iscrollStaffCalendar', { 
-		keyBindings: true, 
-		mouseWheel: true, 
-		click: true,
-		scrollbars: true,
-		interactiveScrollbars: true,
-		shrinkScrollbars: 'clip',
-		fadeScrollbars: true
-	});
+	if(!isMobile.any()){
+		iscrollStaffCalendar = new IScroll('#iscrollStaffCalendar', { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+	}
 	
 	existSelect('calendar-select-status');
 	

@@ -20,7 +20,30 @@ var isMobile = {
 },
 wScreen = window.innerWidth;
 
-//document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
+if(!isMobile.any()){
+	document.addEventListener('touchmove', function (e){e.preventDefault();}, false);
+}	
+
+function listFilter(inputSearch, list) {
+	var $object = $(inputSearch); 
+	var filter = $object.val();
+	$object.change( function (e) {
+		e.preventDefault();
+		filter = $(this).val();
+		if(filter != null) {
+			//highlighted letters in the list when it match key
+			var match = RegExp(this.value, 'gi');
+			$(list).find(".text").html(function(){
+				if (!filter) return $(this).text();
+				return $(this).text().replace(match, '<u>$&</u>');
+			});
+		} 
+		return false;
+	}).keyup( function () {
+		// fire the above change event after every letter									
+		$(this).change();
+	});
+}
 
 function iscrollSelectModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
@@ -35,12 +58,13 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 			$modalID.modal('show');
 		});
 		
-		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
-			$sectionAppend = $(positionInsert);			
-		
-		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
-		$sectionAppend.appendTo(scrollID);
-		
+		if(!isMobile.any()){
+			var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+				$sectionAppend = $(positionInsert);			
+			
+			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
+			$sectionAppend.appendTo(scrollID);
+		}
 		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
@@ -51,7 +75,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 				fadeScrollbars: true
 			});*/
 	}
-}
+}	
 
 function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
@@ -59,6 +83,9 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		scrollID = '#' + scrollName;	
 	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker({liveSearch: true});	
+		$sectionID.find('select').on('loaded.bs.select', function (e) {
+			listFilter('#' + sectionID + ' .bs-searchbox input', $('#' + sectionID + ' ul.dropdown-menu'));
+		});
 		
 		$sectionID.find('.popover-title').click(function(){
 			if($('.tooltipster-personal').length !== 0){
@@ -77,11 +104,13 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		
 		$sectionID.find('.btn-personal').attr('onClick', 'showPesonalInfo(this)');
 		
-		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
-			$sectionAppend = $(positionInsert);			
-		
-		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
-		$sectionAppend.appendTo(scrollID);
+		if(!isMobile.any()){
+			var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+				$sectionAppend = $(positionInsert);			
+			
+			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
+			$sectionAppend.appendTo(scrollID);
+		}
 		
 		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
@@ -100,11 +129,13 @@ function iscrollSelect(sectionID, scrollName){
 	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker();
 		
-		var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
-			$sectionAppend = $(positionInsert);
-		
-		$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
-		$sectionAppend.appendTo(scrollID);
+		if(!isMobile.any()){
+			var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
+				$sectionAppend = $(positionInsert);
+			
+			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
+			$sectionAppend.appendTo(scrollID);
+		}
 		
 		/*var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
@@ -120,7 +151,7 @@ function iscrollSelect(sectionID, scrollName){
 
 function iscrollContent(sectionID){
 	var $sectionID = $(sectionID);
-	if($sectionID.length !== 0){
+	if(!isMobile.any() && $sectionID.length !== 0){
 		var contentScroll = new IScroll(sectionID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
@@ -356,4 +387,26 @@ $(window).on('resize', function(){
 	siteHeader();
 	
 	centerModals($('.modal'));
+	
+	 // prevent screen flashing when multiple modals shown
+    $(document).on('hidden.bs.modal', '.modal', function (){
+		if(isMobile.any()){
+			if($('.modal:visible').length){ 
+				$(document.body).addClass('modal-open');
+			}
+		}else{
+			if($('.modal:not("#addCalendarModal"):visible').length){ 
+				$(document.body).addClass('modal-open');
+			}
+		}
+    });
+
+    // get padding right of body when a modal shown, only once. Reason: prevent screen flashing
+    $(document).one('shown.bs.modal', '.modal', function (){
+        if (typeof window.verifyScrollbarWidth == "undefined") {
+            window.verifyScrollbarWidth = $('body').css("padding-right");
+            window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
+            $(window.verifyScrollbarWidth).appendTo($('head'));
+        }
+    });
 });
