@@ -315,7 +315,7 @@ $(document).ready(function(){
 	
 	siteHeader();
 	
-	$('.modal').on('show.bs.modal', function(){
+	$(document).on('show.bs.modal', '.modal' function(){
 		centerModals($(this));
 	});
 	
@@ -388,9 +388,6 @@ $(window).on('resize', function(){
 	siteHeader();
 	
 	centerModals($(this));
-	$('.modal').on('show.bs.modal', function(){
-		centerModals($(this));
-	});
 	
 	 // prevent screen flashing when multiple modals shown
     $(document).on('hidden.bs.modal', '.modal', function (){
