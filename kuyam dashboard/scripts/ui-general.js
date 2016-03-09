@@ -315,7 +315,7 @@ $(document).ready(function(){
 	
 	siteHeader();
 	
-	$(document).on('show.bs.modal', '.modal' function(){
+	$(document).on('show.bs.modal', '.modal', function(){
 		centerModals($(this));
 	});
 	
