@@ -12,8 +12,9 @@ var iscrollStaffCalendar,
 	
 	iscrollStaffBlocker;
 
-function iscrollSelectTabs(tabContentID){	
-	
+function iscrollSelectTabs(tabContentID){
+	$('.txt-date').val('03/10/2016').change();
+
 	if(tabContentID === "formAppointment"){
 		iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');
 		if(!isMobile.any()){
@@ -395,9 +396,13 @@ $(document).ready(function(){
 		
 		// Datetimepicker
 		$('.txt-date').datetimepicker({
-			format: 'ddd, MMM Do'
+			inline: true,
+			sideBySide: true,
+			format: 'ddd, MMM Do',
+			defaultDate: moment(),
+			minDate: '03/10/2016'
 		});
-		
+				
 		$('.timepicker-section').datetimepicker({
 			inline: true,
 			sideBySide: true,
