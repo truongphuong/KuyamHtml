@@ -396,7 +396,6 @@ $(document).ready(function(){
 		
 		// Datetimepicker
 		$('.txt-date').datetimepicker({
-			inline: true,
 			sideBySide: true,
 			format: 'ddd, MMM Do',
 			defaultDate: moment(),
