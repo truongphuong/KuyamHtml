@@ -315,7 +315,9 @@ $(document).ready(function(){
 	
 	siteHeader();
 	
-	centerModals($('.modal'));
+	$(document).on('show.bs.modal', '.modal', function(){
+		centerModals($(this));
+	});
 	
 	if($('#tabTerms').length !== 0){
 		var iscrollTabTerms = new IScroll('#tabTerms', { 
@@ -363,7 +365,6 @@ $(document).ready(function(){
 	$('#termsModal').on('show.bs.modal', function (e) {
 		$('.terms-tabs').tab('show');
 		$('.terms-tabs a[href="' + termActive +'"]').tab('show');
-		centerModals($('#termsModal'));
 	});
 	
 	$('#termsModal').on('shown.bs.modal', function (e) {
@@ -386,7 +387,7 @@ $(window).on('resize', function(){
 	
 	siteHeader();
 	
-	centerModals($('.modal'));
+	centerModals($(this));
 	
 	 // prevent screen flashing when multiple modals shown
     $(document).on('hidden.bs.modal', '.modal', function (){
