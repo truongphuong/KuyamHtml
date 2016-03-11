@@ -249,6 +249,15 @@ div[class*="col-"] {
 .dropdown-menu {
     font-size: 16px;
 }
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .selected > a,
+.dropdown-menu > .selected > a:hover,
+.dropdown-menu > .selected > a:focus{
+    background-color: #95be31;
+    color: #fff;
+}
 
 /* =============================================================================
    form
@@ -917,6 +926,12 @@ textarea.form-control:focus {
     padding: 0 12px;
     position: absolute;
     top: 0;
+}
+
+.form-select-search .selected .btn-personal .icon-details,
+.form-select-search .active .btn-personal .icon-details{
+	color: #fff;
+	border-color:#fff;
 }
 
 .form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
@@ -1760,12 +1775,6 @@ textarea.form-control:focus {
     zoom: 1;
 }
 
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
-.dropdown-menu > .selected > a,
-.dropdown-menu > .selected > a:hover,
-.dropdown-menu > .selected > a:focus,
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
     background-color: #95be31;
