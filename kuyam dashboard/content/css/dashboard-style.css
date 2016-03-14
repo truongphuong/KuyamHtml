@@ -24,10 +24,6 @@
         color: #292929;
     }
 
-    .calendar-select-staff .bootstrap-select .bs-searchbox {
-        height: 0;
-    }
-
     .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
         width: 180px;
     }
@@ -36,7 +32,25 @@
         font-family: ralewaymedium, sans-serif;
         font-size: .875em;
         color: #292929;
-    }
+    }	
+	.calendar-select-staff .bootstrap-select .dropdown-menu > li.selected{
+		display: block;	
+	}
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .selected > a, 
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .selected > a:hover, 
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .selected > a:focus, 
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a, 
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a:hover, 
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a:focus {
+		background-color: #95be31;
+		color: #fff;
+	}
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active > a,
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active > a:hover,
+	.calendar-select-staff .bootstrap-select .dropdown-menu > .active > a:focus{
+		background-color: #f5f5f5;
+		color: #262626;
+	}
 
     .calendar-select-staff .bootstrap-select .bootstrap-scroll {
         max-height: 170px;

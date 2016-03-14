@@ -52,7 +52,11 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 		
 	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker({liveSearch: true});
-		$sectionID.find('.form-control').attr('readonly', 'true');		
+		$sectionID.find('.form-control').attr('readonly', 'true');	
+		
+		$sectionID.find('select').on('hide.bs.select', function(){
+			$sectionID.find('.form-control').trigger('blur');
+		});
 		
 		$sectionID.find('.popover-title').click(function(){
 			$modalID.modal('show');
@@ -64,16 +68,46 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 			
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 			$sectionAppend.appendTo(scrollID);
-		}
-		/*var selectScroll = new IScroll(scrollID, { 
+			
+			$sectionID.find('.form-control').on('keydown', function(e){
+				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				
+				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				if (e.keyCode === 38) { // up			
+					if(liActive.prev().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+					}
+				}
+				
+				if (e.keyCode === 40) { // down	
+					if(liActive.next().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+					}
+				}
+			});
+			
+			if($(scrollID).data('IScroll')){
+				return;
+			}
+		
+			var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
-				click: true,
 				scrollbars: true,
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
-			});*/
+			});
+			
+			$(scrollID).data('IScroll', selectScroll);
+		}
 	}
 }	
 
@@ -85,6 +119,10 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 		$sectionID.find('select').selectpicker({liveSearch: true});	
 		$sectionID.find('select').on('loaded.bs.select', function (e) {
 			listFilter('#' + sectionID + ' .bs-searchbox input', $('#' + sectionID + ' ul.dropdown-menu'));
+		});		
+		
+		$sectionID.find('select').on('hide.bs.select', function(){
+			$sectionID.find('.form-control').trigger('blur');
 		});
 		
 		$sectionID.find('.popover-title').click(function(){
@@ -109,17 +147,47 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 				$sectionAppend = $(positionInsert);			
 			
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
-			$sectionAppend.appendTo(scrollID);
-		}
+			$sectionAppend.appendTo(scrollID);	
+
+			$sectionID.find('.form-control').on('keydown', function(e){
+				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				
+				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				if (e.keyCode === 38) { // up			
+					if(liActive.prev().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+					}
+				}
+				
+				if (e.keyCode === 40) { // down	
+					if(liActive.next().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+					}
+				}
+			});
 		
-		/*var selectScroll = new IScroll(scrollID, { 
+			if($(scrollID).data('IScroll')){
+				return;
+			}
+		
+			var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
 				scrollbars: true,
 				interactiveScrollbars: true,
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
-			});*/
+			});
+			
+			$(scrollID).data('IScroll', selectScroll);
+		}
 	}
 }
 
@@ -127,7 +195,12 @@ function iscrollSelect(sectionID, scrollName){
 	var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
 	if($sectionID.find('.bootstrap-select').length === 0){
-		$sectionID.find('select').selectpicker();
+		$sectionID.find('select').selectpicker({liveSearch: true});
+		$sectionID.find('.form-control').attr('readonly', 'true');				
+		
+		$sectionID.find('select').on('hide.bs.select', function(){
+			$sectionID.find('.form-control').trigger('blur');
+		});
 		
 		if(!isMobile.any()){
 			var positionInsert = '#' +  sectionID + ' .dropdown-menu.inner',
@@ -135,24 +208,36 @@ function iscrollSelect(sectionID, scrollName){
 			
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 			$sectionAppend.appendTo(scrollID);
-		}
-		
-		/*var selectScroll = new IScroll(scrollID, { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});*/
-	}
-}
-
-function iscrollContent(sectionID){
-	var $sectionID = $(sectionID);
-	if(!isMobile.any() && $sectionID.length !== 0){
-		var contentScroll = new IScroll(sectionID, { 
+			
+			$sectionID.find('.form-control').on('keydown', function(e){
+				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				
+				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				if (e.keyCode === 38) { // up			
+					if(liActive.prev().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+					}
+				}
+				
+				if (e.keyCode === 40) { // down	
+					if(liActive.next().length === 0) {
+						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+					}else{
+						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+					}
+				}
+			});
+			
+			if($(scrollID).data('IScroll')){
+				return;
+			}
+			
+			var selectScroll = new IScroll(scrollID, { 
 				keyBindings: true, 
 				mouseWheel: true, 
 				click: true,
@@ -161,6 +246,31 @@ function iscrollContent(sectionID){
 				shrinkScrollbars: 'clip',
 				fadeScrollbars: true
 			});
+			
+			$(scrollID).data('IScroll', selectScroll);
+		}
+	}
+}
+
+function iscrollContent(sectionID){
+	if(!isMobile.any()){		
+		var $sectionID = $(sectionID);
+		
+		if($(sectionID).data('IScroll')){
+			return;
+		}
+		
+		var contentScroll = new IScroll(sectionID, { 
+			keyBindings: true, 
+			mouseWheel: true, 
+			click: true,
+			scrollbars: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'clip',
+			fadeScrollbars: true
+		});
+		
+		$(sectionID).data('IScroll', contentScroll);
 	}
 }
 

@@ -249,14 +249,20 @@ div[class*="col-"] {
 .dropdown-menu {
     font-size: 16px;
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
 .dropdown-menu > .selected > a,
 .dropdown-menu > .selected > a:hover,
-.dropdown-menu > .selected > a:focus{
+.dropdown-menu > .selected > a:focus,
+.dropdown-menu > .active.selected > a,
+.dropdown-menu > .active.selected > a:hover,
+.dropdown-menu > .active.selected > a:focus{
     background-color: #95be31;
     color: #fff;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus{
+    background-color: #f5f5f5;
+    color: #262626;
 }
 
 /* =============================================================================
@@ -840,6 +846,10 @@ textarea.form-control:focus {
     display: none;
 }
 
+.form-select-readonly .bootstrap-select .bs-searchbox {
+	height: 0;
+}
+
 .form-select {
     height: 40px;
 }
@@ -928,8 +938,7 @@ textarea.form-control:focus {
     top: 0;
 }
 
-.form-select-search .selected .btn-personal .icon-details,
-.form-select-search .active .btn-personal .icon-details{
+.form-select-search .selected .btn-personal .icon-details{
 	color: #fff;
 	border-color:#fff;
 }
