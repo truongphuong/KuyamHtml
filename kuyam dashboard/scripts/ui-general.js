@@ -51,12 +51,12 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 		scrollID = '#' + scrollName;
 		
 	if($sectionID.find('.bootstrap-select').length === 0){
-		$sectionID.find('select').selectpicker({liveSearch: true});
-		$sectionID.find('.form-control').attr('readonly', 'true');	
-		
-		$sectionID.find('select').on('hide.bs.select', function(){
-			$sectionID.find('.form-control').trigger('blur');
-		});
+		if(!isMobile.any()){
+			$sectionID.find('select').selectpicker({liveSearch: true});
+			$sectionID.find('.form-control').attr('readonly', 'true');
+		}else{
+			$sectionID.find('select').selectpicker();
+		}
 		
 		$sectionID.find('.popover-title').click(function(){
 			$modalID.modal('show');
@@ -69,26 +69,47 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 			$sectionAppend.appendTo(scrollID);
 			
+			$sectionID.find('select').on('shown.bs.select', function (e) {	
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				if(indexActive > 0){
+					$(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
+				}else{
+					$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				}
+			});
 			$sectionID.find('.form-control').on('keydown', function(e){
 				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
 				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
 				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
 				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
 				
-				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
-				if (e.keyCode === 38) { // up			
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				
+				if (e.keyCode === 38) { // up	
+					e.stopPropagation();
 					if(liActive.prev().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+						liActive.removeClass('active');
+						liActive.prev().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
 					}
 				}
 				
 				if (e.keyCode === 40) { // down	
+					e.stopPropagation();
 					if(liActive.next().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, 0, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+						liActive.removeClass('active');
+						liActive.next().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
 					}
 				}
 			});
@@ -98,7 +119,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 			}
 		
 			var selectScroll = new IScroll(scrollID, { 
-				keyBindings: true, 
+				//keyBindings: true, 
 				mouseWheel: true, 
 				scrollbars: true,
 				interactiveScrollbars: true,
@@ -149,26 +170,47 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 			$sectionAppend.appendTo(scrollID);	
 
+			$sectionID.find('select').on('shown.bs.select', function (e) {	
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				if(indexActive > 0){
+					$(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
+				}else{
+					$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				}
+			});
 			$sectionID.find('.form-control').on('keydown', function(e){
 				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
 				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
 				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
 				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
 				
-				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
-				if (e.keyCode === 38) { // up			
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				
+				if (e.keyCode === 38) { // up	
+					e.stopPropagation();
 					if(liActive.prev().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+						liActive.removeClass('active');
+						liActive.prev().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
 					}
 				}
 				
 				if (e.keyCode === 40) { // down	
+					e.stopPropagation();
 					if(liActive.next().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, 0, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+						liActive.removeClass('active');
+						liActive.next().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
 					}
 				}
 			});
@@ -195,8 +237,12 @@ function iscrollSelect(sectionID, scrollName){
 	var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
 	if($sectionID.find('.bootstrap-select').length === 0){
-		$sectionID.find('select').selectpicker({liveSearch: true});
-		$sectionID.find('.form-control').attr('readonly', 'true');				
+		if(!isMobile.any()){
+			$sectionID.find('select').selectpicker({liveSearch: true});
+			$sectionID.find('.form-control').attr('readonly', 'true');
+		}else{
+			$sectionID.find('select').selectpicker();
+		}				
 		
 		$sectionID.find('select').on('hide.bs.select', function(){
 			$sectionID.find('.form-control').trigger('blur');
@@ -209,26 +255,47 @@ function iscrollSelect(sectionID, scrollName){
 			$('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);						
 			$sectionAppend.appendTo(scrollID);
 			
+			$sectionID.find('select').on('shown.bs.select', function (e) {	
+				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
+				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				if(indexActive > 0){
+					$(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
+				}else{
+					$(scrollID).data('IScroll').scrollTo(0, 0, 0);
+				}
+			});
 			$sectionID.find('.form-control').on('keydown', function(e){
 				var liActive = $sectionID.find('.dropdown-menu.inner li.active');
 				var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
 				var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');				
 				var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
 				
-				$(scrollID).data('IScroll').scrollTo(0, 0, 0);
-				if (e.keyCode === 38) { // up			
+				var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
+				
+				if (e.keyCode === 38) { // up	
+					e.stopPropagation();
 					if(liActive.prev().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY - 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - (indexActive - 1) * 5, 0);
+						liActive.removeClass('active');
+						liActive.prev().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
 					}
 				}
 				
 				if (e.keyCode === 40) { // down	
+					e.stopPropagation();
 					if(liActive.next().length === 0) {
-						$(scrollID).data('IScroll').scrollTo(0, 5, 0);
+						liActive.removeClass('active');
+						$sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, 0, 0);
 					}else{
-						$(scrollID).data('IScroll').scrollTo(0, - indexActive * 5, 0);
+						liActive.removeClass('active');
+						liActive.next().addClass('active');
+						$(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
 					}
 				}
 			});
