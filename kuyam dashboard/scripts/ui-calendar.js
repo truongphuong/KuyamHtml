@@ -1,124 +1,22 @@
-var iscrollStaffCalendar,
-
-	iscrollClientAppointment,
-	iscrollStaffAppointment,
-	iscrollCategoryAppointment,
-	iscrollServiceAppointment,
-	
-	iscrollClientClass,
-	iscrollStaffClass,
-	iscrollCategoryClass,
-	iscrollClass,
-	
-	iscrollStaffBlocker;
-
 function iscrollSelectTabs(tabContentID){
 	$('.txt-date').val('03/10/2016').change();
 
 	if(tabContentID === "formAppointment"){
-		iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');
-		if(!isMobile.any()){
-			iscrollClientAppointment = new IScroll('#iscrollClientAppointment', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
+		iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');		
 		
-		iscrollSelectSearchModal('divStaffAppointment', 'iscrollStaffAppointment', 'addStaffModal');
-		if(!isMobile.any()){
-			iscrollStaffAppointment = new IScroll('#iscrollStaffAppointment', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
+		iscrollSelectSearchModal('divStaffAppointment', 'iscrollStaffAppointment', 'addStaffModal');		
 		
 		iscrollSelect('divCategoryAppointment', 'iscrollCategoryAppointment');
-		if(!isMobile.any()){
-			iscrollCategoryAppointment = new IScroll('#iscrollCategoryAppointment', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 		
 		iscrollSelect('divServiceAppointment', 'iscrollServiceAppointment');
-		if(!isMobile.any()){
-			iscrollServiceAppointment = new IScroll('#iscrollServiceAppointment', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 	}else if(tabContentID === "formClass"){			
 		iscrollSelectSearchModal('divStaffClass', 'iscrollStaffClass', 'addStaffModal');
-		if(!isMobile.any()){
-			iscrollStaffClass = new IScroll('#iscrollStaffClass', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 		
 		iscrollSelect('divCategoryClass', 'iscrollCategoryClass');
-		if(!isMobile.any()){
-			iscrollCategoryClass = new IScroll('#iscrollCategoryClass', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 		
 		iscrollSelect('divClass', 'iscrollClass');
-		if(!isMobile.any()){
-			iscrollClass = new IScroll('#iscrollClass', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 	}else{		
 		iscrollSelectSearchModal('divStaffBlocker', 'iscrollStaffBlocker', 'addStaffModal');
-		if(!isMobile.any()){
-			iscrollStaffBlocker = new IScroll('#iscrollStaffBlocker', { 
-				keyBindings: true, 
-				mouseWheel: true, 
-				click: true,
-				scrollbars: true,
-				interactiveScrollbars: true,
-				shrinkScrollbars: 'clip',
-				fadeScrollbars: true
-			});
-		}
 	}
 }
 
@@ -345,18 +243,7 @@ function less1024(){
 
 $(document).ready(function(){
 	
-	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');	
-	if(!isMobile.any()){
-		iscrollStaffCalendar = new IScroll('#iscrollStaffCalendar', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-	}
+	iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');		
 	
 	existSelect('calendar-select-status');
 	
