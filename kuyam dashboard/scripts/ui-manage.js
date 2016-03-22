@@ -6,20 +6,29 @@ $(document).ready(function(){
 		$('.kuyam-sidebar').css({'max-width': wScreen});
 		$('.kuyam-subnav').css({'max-width': wScreen});
 	}
-		
-	iscrollContent('#subnavList');
+	
+	if($('#subnavList').length !== 0){
+		iscrollContent('#subnavList');
+	}
+	
 	if($('#divCategoryClass').length !== 0){
-		iscrollSelect('divCategoryClass', 'iscrollCategoryClass');
+		iscrollSelectModal('divCategoryClass', 'iscrollCategoryClass', 'editCategoryModal');		
 	}
 	if($('#divClassClass').length !== 0){
 		iscrollSelect('divClassClass', 'iscrollClassClass');
 	}
 	if($('#divCategoryService').length !== 0){
-		iscrollSelect('divCategoryService', 'iscrollCategoryService');
+		iscrollSelectModal('divCategoryService', 'iscrollCategoryService', 'editCategoryModal');		
 	}
 	if($('#divServiceService').length !== 0){
 		iscrollSelect('divServiceService', 'iscrollServiceService');
 	}
+	
+	$('#editCategoryModal').on('shown.bs.modal', function(){		
+		if($('#selectionCaterogy').length !== 0){
+			iscrollContent('#selectionCaterogy');
+		}
+	});
 });
 
 $(window).on('resize', function(){

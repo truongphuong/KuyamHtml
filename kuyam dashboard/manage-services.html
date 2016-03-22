@@ -26,7 +26,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Manage</title>
+<title>Kuyam Admin - Manage Services</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -376,8 +376,8 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
 									<label class="form-label" for="selectCategoryService">Category</label>
-									<div id="divCategoryService" class="form-select form-select-readonly">
-										<select id="selectCategoryService" title="Select Category">
+									<div id="divCategoryService" class="form-select form-select-modal form-select-readonly">
+										<select data-header="Edit Categories" id="selectCategoryService" title="Select Category">
 											<option value="0">Yoga</option>
 											<option value="1">Make up</option>
 											<option value="2">Massage</option>
@@ -1479,6 +1479,835 @@
 	</div><!-- /#signOutModal -->
      
     <!-- InstanceBeginEditable name="modal" -->
+	<!-- #editCategoryModal -->
+	<div id="editCategoryModal" class="modal fade modal-m" role="dialog" aria-labelledby="editCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-edit-category">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="editCategoryModalLabel" class="modal-title">Edit Categories</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<fieldset>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-placeholder">
+										<input id="txtSearch" type="text" class="form-control" value="" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+										<label class="form-label" for="txtSearch">Search Categories</label>
+									</div>
+								</div>
+							</div>
+							<section id="selectionCaterogy" class="selection-section">
+								<ul>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">cut</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Yoga training</span>
+									</li>
+									<li class="selection-choice">
+										<span class="selection-choice-remove">X</span>
+										<span class="selection-choice-text">Gentle yoga</span>
+									</li>									
+								</ul>
+							</section>
+							<div class="row">
+								<div class="col-xs-6">
+									<input class="btn btn-form btn-disagree" type="button" value="cancel" data-dismiss="modal" />
+								</div>						
+								<div class="col-xs-6">
+									<button class="btn btn-form btn-agree">save</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#editCategoryModal -->	
     <!-- InstanceEndEditable --> 
     
     <!-- === SCRIPTS === -->  
