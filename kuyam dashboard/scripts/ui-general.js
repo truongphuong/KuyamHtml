@@ -370,6 +370,16 @@ function minHeightBody(){
 		hHeader = $('.kuyam-header').height(),
 		hFooter = $('.kuyam-footer').height();
 	$('.kuyam-section').css({'min-height': hScreen - hHeader - hFooter});
+	if($('.kuyam-page').length !== 0){
+		$('.kuyam-page').css({'min-height': hScreen - hHeader - hFooter});
+	}
+	if($('#subnavList').length !== 0){
+		if((hScreen - hHeader - hFooter) > $('.kuyam-content form').height()){
+			$('#subnavList').css({'max-height': hScreen - hHeader - hFooter - 65});
+		}else{
+			$('#subnavList').css({'max-height': $('.kuyam-content form').innerHeight()});
+		}
+	}
 	if($('.calendar-page').length !== 0){
 		$('.calendar-page').css({'width': $(window).width()});
 	}
@@ -496,41 +506,9 @@ $(document).ready(function(){
 		centerModals($(this));
 	});
 	
-	if($('#tabTerms').length !== 0){
-		var iscrollTabTerms = new IScroll('#tabTerms', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-	}
-	
-	if($('#tabPrivacy').length !== 0){	
-		var iscrollTabPrivacy = new IScroll('#tabPrivacy', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-	}
-	
-	if($('#tabServices').length !== 0){		
-		var iscrollTabServices = new IScroll('#tabServices', { 
-			keyBindings: true, 
-			mouseWheel: true, 
-			click: true,
-			scrollbars: true,
-			interactiveScrollbars: true,
-			shrinkScrollbars: 'clip',
-			fadeScrollbars: true
-		});
-	}
+	iscrollContent('#tabTerms');
+	iscrollContent('#tabPrivacy');
+	iscrollContent('#tabServices');
 	
 	var termActive;
 	$('.link-terms').click(function(e){
@@ -545,15 +523,49 @@ $(document).ready(function(){
 	});
 	
 	$('#termsModal').on('shown.bs.modal', function (e) {
-		iscrollTabTerms.refresh();
-		iscrollTabPrivacy.refresh();
-		iscrollTabServices.refresh();
+		$('#tabTerms').data('IScroll').refresh();
+		$('#tabPrivacy').data('IScroll').refresh();
+		$('#tabServices').data('IScroll').refresh();
 	});
 	
 	$('.terms-tabs').on('shown.bs.tab', function (e) {
-		iscrollTabTerms.refresh();
-		iscrollTabPrivacy.refresh();
-		iscrollTabServices.refresh();
+		$('#tabTerms').data('IScroll').refresh();
+		$('#tabPrivacy').data('IScroll').refresh();
+		$('#tabServices').data('IScroll').refresh();
+	});
+	
+	$('.subnav-ul a').on('click', function(e){
+		e.preventDefault();
+		var dataDropdown = $(this).closest('ul').data('dropdown');
+		var ulClass = $(this).closest('ul').attr('class');
+		if(ulClass === 'subnav-ul' && dataDropdown === true){
+			thisOpen = $(this).closest('li').hasClass('open');
+			hasOpen = $(this).parents('.subnav-ul').find('.open');
+			
+			if(hasOpen.length !== 0){
+				if(thisOpen === true){
+					$(this).siblings('ul').slideToggle(300);
+					$(this).closest('li').removeClass('open');
+				}else{
+					$(this).closest('ul').find('.open ul').slideToggle(300);
+					$(this).closest('ul').find('li').removeClass('open');
+					
+					$(this).closest('li').addClass('open');
+					$(this).siblings('ul').slideToggle(300);
+				}
+			}else{
+				$(this).closest('li').addClass('open');
+				$(this).siblings('ul').slideToggle(300);
+			}
+			
+			setTimeout(function(){
+				$('#subnavList').data('IScroll').refresh();
+			}, 300);
+			
+		}else{				
+			$(this).closest('ul').find('li').removeClass('active');
+			$(this).closest('li').addClass('active');
+		}
 	});
 });
 
