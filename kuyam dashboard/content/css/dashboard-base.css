@@ -97,10 +97,6 @@ audio[controls], canvas, video {
 /* =============================================================================
    Base
    ========================================================================== */
-* {
-    -webkit-overflow-scrolling: touch;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -268,6 +264,19 @@ div[class*="col-"] {
 /* =============================================================================
    form
    ========================================================================== */
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #292929;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #292929;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: #292929;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+  color: #292929;
+}
+
 form div[class*="col-"] {
     margin-bottom: 25px;
 }
@@ -293,6 +302,22 @@ form div[class*="col-"] {
         cursor: text;
         background-color: #fff;
     }
+
+.input-currency{
+	position:relative;
+}
+.input-currency span{
+	display:block;
+	top:0;
+	bottom:0;
+	padding:0 13px;
+	line-height:40px;
+	position: absolute;
+}
+.input-currency .form-control{
+	background:transparent;
+	padding-left:23px;
+}
 
 textarea.form-control,
 textarea.form-control:focus {
@@ -430,25 +455,18 @@ textarea.form-control:focus {
     text-transform: uppercase;
 }
 
-.btn-black,
-.btn-black:hover,
-.btn-black:focus {
+.btn-agree,
+.btn-agree:hover,
+.btn-agree:focus {
     background: #292929;
 }
 
-.btn-white,
-.btn-white:hover,
-.btn-white:focus {
-    background: #fff;
+.btn-disagree,
+.btn-disagree:hover,
+.btn-disagree:focus {
+    border-color: #000000;
+    background: #f0f0f0;
     color: #292929;
-}
-
-.btn-brown,
-.btn-brown:hover,
-.btn-brown:focus {
-    border-color: #8a8a8a;
-    background: #8a8a8a;
-    color: #fff;
 }
 
 .close {
@@ -660,6 +678,7 @@ textarea.form-control:focus {
 
 .on-device .bootstrap-select .dropdown-menu.inner {
     max-height: 180px !important;
+	-webkit-overflow-scrolling: touch;
 }
 
 .bootstrap-select.dropup .dropdown-menu {
@@ -668,9 +687,9 @@ textarea.form-control:focus {
 }
 
 .bootstrap-select .dropdown-menu > li > a {
-    padding: 10px;
+    padding: 8px 10px;
     font-size: 1em;
-    line-height: 1;
+    line-height: 120%;
 }
 
 .bootstrap-select.btn-group .dropdown-menu li a span.text {
@@ -1237,6 +1256,18 @@ textarea.form-control:focus {
     transform: rotate(270deg);
 }
 
+.icon-collapse {
+    width: 8px;
+    height: 12px;
+    background-image: url(../images/icon_next_black.png);
+    background-size: 7px auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 .icon-mark {
     width: 14px;
     height: 11px;
@@ -1411,6 +1442,216 @@ textarea.form-control:focus {
     position: relative;
 }
 
+.kuyam-page{
+	display: -webkit-flex;
+    display: flex;
+}
+.kuyam-page > div{
+	-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.kuyam-page .kuyam-sidebar{
+	background: #dcdcdc;
+}
+.kuyam-page .kuyam-content{
+	padding:34px 60px;
+}
+
+.no-data{
+	text-align:center;
+}
+.no-data p{
+	margin-bottom:25px;
+	font-size: 1.125em;
+	line-height:120%;
+}
+.no-data .btn{
+	width:255px;
+}
+
+.kuyam-sidebar ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.kuyam-sidebar ul li a{
+	font-family: ralewaysemibold, sans-serif;
+	font-size:.8125em;
+	text-transform:uppercase;
+	display:block;
+	padding:16px 24px;
+	color:#292929;
+	text-decoration: none;
+}
+.kuyam-sidebar ul li.active a,
+.kuyam-sidebar ul li a:hover{
+	text-transform:uppercase;
+	background:#f0f0f0;
+}
+
+.kuyam-subnav{
+	background: #f0f0f0;
+	overflow:hidden;
+}
+
+.subnav-content{
+	position:relative;
+	height:100%;
+	padding-top:55px;
+	padding-bottom:10px;
+}
+.subnav-content .add-link{
+	position:absolute;
+	top:0;
+	width:100%;
+	left:0;
+	font-family: ralewaybold, sans-serif;
+	display:block;
+	padding:16px 24px;
+	color:#292929;
+	text-decoration: underline;
+}
+.subnav-content .add-link .prefix{
+	font-size:1.2em;
+	position: relative;
+}
+.subnav-content .add-link .text{
+	font-size:.875em;
+}
+.subnav-list{
+	position: relative;
+	height: 100%;
+	overflow:hidden;
+}
+.on-device .subnav-list{
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.subnav-list ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	word-wrap: break-word;
+}
+.subnav-ul > li {
+	clear: both;
+}
+.subnav-ul > li > a{
+	display:block;
+	padding:5px 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: ralewaysemibold, sans-serif;
+	color:#292929;
+}
+.subnav-ul > li > a .text{
+	font-size:.8125em;
+	float:left;
+	display:inline-block;
+	max-width:50%;
+	margin-right:5px;
+}
+.subnav-ul > li > a .total{
+	color:#fff;
+	font-size:.75em;
+	line-height:10px;
+	display: inline-block;
+	min-width:13px;
+	height:13px;
+	padding:0 3px;
+	text-align:center;
+	border-radius: 6px !important;
+	background:#292929;
+	position:relative;
+	top:-5px;
+}
+.subnav-ul > li > a .icon{
+	float:right;
+	height:22px;
+}
+.subnav-ul > li.open > a .icon-collapse{
+	-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.subnav-ul > li ul{
+	display: none;
+	clear: both;
+}
+.subnav-ul > li li a{
+	font-family: ralewaysemibold, sans-serif;
+	font-size:.8125em;
+	text-transform:capitalize;
+	display:block;
+	padding:0 24px 0 35px;
+	color:#646464;
+	text-decoration: none;
+}
+.subnav-ul > li li.active a,
+.subnav-ul > li li a:hover{
+	color:#292929;
+}
+.subnav-ul[data-dropdown="false"] > li > a{	
+	text-transform: capitalize;
+}
+.subnav-ul[data-dropdown="false"] > li > a:hover,
+.subnav-ul[data-dropdown="false"] > li.active > a{
+	font-family:ralewaybold, sans-serif;
+}
+.subnav-ul[data-dropdown="false"] > li > a .text{
+	float:none;
+	max-width:100%;
+	margin-right:0;
+	font-size:.875em;
+}
+
+.kuyam-content{
+}
+.kuyam-content form{
+	padding:5px 0;
+}
+.kuyam-content form .form-label{
+	margin-bottom:10px;
+}
+.kuyam-content form .row{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.kuyam-content form div[class*="col-"]{
+	margin-bottom: 38px;
+	padding-left:15px;
+	padding-right: 15px;
+}
+.kuyam-content form legend{
+	text-transform:uppercase;
+	font-size:1.125em;
+	font-family: ralewaysemibold, sans-serif;
+	margin-bottom:18px;
+}
+.kuyam-content form .form-control{
+	font-family: ralewaymedium, sans-serif;
+}
+.kuyam-content form footer{
+	text-align:right;
+	padding:22px 0;
+}
+.kuyam-content form footer .link-delete{
+	text-decoration:underline;
+	font-size: .875em;
+	color:#292929;
+	margin-right:60px;
+}
+.kuyam-content form footer .btn-agree{
+	width: 254px;
+	margin-left: 20px;
+}
+.kuyam-content form footer .btn-disagree{
+	width: 127px;
+}
+
 /* =============================================================================
  .modal-terms
  ========================================================================== */
@@ -1514,7 +1755,7 @@ textarea.form-control:focus {
         .modal-terms .ui-tabs-panel p a {
             color: Blue;
         }
-
+		
 @media (min-width:1024px) {
     /* =============================================================================
 	Bootstrap modal
