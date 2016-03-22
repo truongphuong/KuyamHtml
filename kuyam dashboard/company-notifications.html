@@ -26,7 +26,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Manage</title>
+<title>Kuyam Admin - Company</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -80,19 +80,45 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="kuyam-page manage-page">
+        	<div class="kuyam-page company-page">
 				<div class="kuyam-sidebar">
 					<ul>
-						<li><a title="" href="manage-staff.html">staff members</a></li>
-						<li><a title="" href="manage-services.html">services</a></li>
-						<li><a title="" href="manage-classes.html">classes</a></li>
-						<li><a title="" href="manage-packages.html">packages</a></li>
-						<li><a title="" href="manage-clients.html">clients</a></li>
-						<li class="active"><a title="" href="manage-invoices.html">invoices</a></li>
-						<li><a title="" href="manage-promo.html">promo codes</a></li>
+						<li><a title="" href="company-profile.html">profile</a></li>
+						<li><a title="" href="company-gallery.html">image gallery</a></li>
+						<li><a title="" href="company-payments.html">payments &amp; booking</a></li>
+						<li class="active"><a title="" href="company-notifications.html">notifications</a></li>
+						<li><a title="" href="company-calendars.html">calendars</a></li>
 					</ul>
 				</div>
 				<div class="kuyam-content">
+					<form class="contact-company-form">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6">
+								<label class="form-label">How should kuyam contact you?</label>
+								<section class="table-css">
+									<div class="tr">
+										<div class="td contact-check">
+											<span class="check-section"><span class="icon icon-check"></span> Email</span>
+										</div>
+										<div class="td contact-input">
+											<input type="text" class="form-control" id="txtEmail" />
+										</div>
+									</div>
+									<div class="tr">
+										<div class="td contact-check">
+											<span class="check-section"><span class="icon icon-check"></span> SMS</span>
+										</div>
+										<div class="td contact-input">
+											<input type="text" class="form-control" id="txtSMS" />
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<footer>
+							<input type="button" value="save changes" class="btn btn-form btn-agree" />
+						</footer>
+					</form>
 				</div>
             </div>
         <!-- InstanceEndEditable -->
@@ -1127,9 +1153,9 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript" src="scripts/ui-manage.js"></script> 
+	<script type="text/javascript" src="scripts/ui-company.js"></script> 
 	<script type="text/javascript">
-		document.getElementById('navManage').className = "active";
+		document.getElementById('navCompany').className = "active";
 	</script>
     <!-- InstanceEndEditable -->
         

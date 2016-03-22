@@ -42,8 +42,7 @@ $(document).ready(function(){
 		format: 'LT'
 	});
 	
-	$('.working-section .working-day').on('click', function(e){
-		console.log('hello');
+	$('.working-section .check-section').on('click', function(e){
 		var isActive = $(this).closest('.tr').hasClass('active');
 		if(isActive === true){
 			$(this).closest('.tr').removeClass('active');
