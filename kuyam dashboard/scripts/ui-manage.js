@@ -29,6 +29,28 @@ $(document).ready(function(){
 			iscrollContent('#selectionCaterogy');
 		}
 	});
+	
+	$('.timepicker-from').datetimepicker({
+		inline: true,
+		sideBySide: true,
+		format: 'LT'
+	});
+	
+	$('.timepicker-to').datetimepicker({
+		inline: true,
+		sideBySide: true,
+		format: 'LT'
+	});
+	
+	$('.working-section .working-day').on('click', function(e){
+		console.log('hello');
+		var isActive = $(this).closest('.tr').hasClass('active');
+		if(isActive === true){
+			$(this).closest('.tr').removeClass('active');
+		}else{
+			$(this).closest('.tr').addClass('active');
+		}
+	});
 });
 
 $(window).on('resize', function(){
