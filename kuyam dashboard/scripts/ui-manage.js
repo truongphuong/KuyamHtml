@@ -42,12 +42,19 @@ $(document).ready(function(){
 		format: 'LT'
 	});
 	
-	$('.working-section .check-section').on('click', function(e){
-		var isActive = $(this).closest('.tr').hasClass('active');
-		if(isActive === true){
-			$(this).closest('.tr').removeClass('active');
-		}else{
+	$('.working-section .cb-mark').each(function(){
+		var isChecked = $(this).is(':checked');
+		if(isChecked === true){
 			$(this).closest('.tr').addClass('active');
+		}else{
+			$(this).closest('.tr').removeClass('active');
+		}
+	}).on('click', function(e){
+		var isChecked = $(this).is(':checked');
+		if(isChecked === true){
+			$(this).closest('.tr').addClass('active');
+		}else{
+			$(this).closest('.tr').removeClass('active');
 		}
 	});
 });
