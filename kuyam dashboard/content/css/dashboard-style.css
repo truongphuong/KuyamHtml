@@ -877,27 +877,79 @@
 	font-family:ralewaysemibold, sans-serif;
 	padding-right: 10px;
 }
-.contact-company-form .check-section{
-	cursor: pointer;
-}
-.contact-company-form .icon-check{
-	width: 22px;
-	height:22px;
-	border: 2px solid #292929;
-	background-image: url(../images/icon_check.png);
-	background-size: 15px auto;
-	position:relative;
-	margin-right: 5px;
-	bottom: -5px;
-}
-.contact-company-form .active .icon-check{
-	background-color: #292929;
+.contact-company-form .cb-mark ~ .cb-label {
+	padding-left: 32px;
 }
 .contact-company-form footer{
 	text-align: left !important;
 }
 .contact-company-form footer .btn-agree{
 	margin-left:0 !important;
+}
+
+.company-payment-form{
+	
+}
+.company-payment-form .radio-list{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+.company-payment-form .radio-list li{
+	display: block;
+	float: left;
+	width:45%;
+}
+.company-payment-form .radio-list li:first-child{
+	width:40%;
+}
+.company-payment-form .radio-list smal{
+	font-size:.75em;
+	font-family:ralewayregular, sans-serif;
+}
+.policy-section{}
+.policy-section p{
+	font-size:.875em;
+	font-family:ralewayregular, sans-serif;
+}
+.policy-section .dl-list{
+    display: -webkit-flex;
+    display: flex;
+}
+.policy-section .dl-list > div{
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+	max-width: 16.6667%;
+	text-align: center;
+	position:relative;
+}
+.policy-section .dl-list > div:first-child{
+	max-width: 33.3333%;
+	text-align:left;
+}
+.policy-section .dl-list > div > span{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height: 40px;
+	z-index:1;
+	background: #f0f0f0;
+}
+.policy-section .dl-list dl{
+	position:relative;
+	z-index: 2;
+}
+.policy-section .dl-list dt{
+	padding: 10px 15px;
+	font-size:.875em;
+	font-family:ralewaysemibold, sans-serif;
+}
+.policy-section .dl-list dd{
+	padding: 10px 15px;
+	font-size:.875em;
+	font-family:ralewayregular, sans-serif;
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {

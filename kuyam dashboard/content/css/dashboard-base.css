@@ -350,6 +350,9 @@ textarea.form-control:focus {
         font-family: ralewaylight, sans-serif;
     }
 
+.cb-custom{
+	position: relative;
+}
 .cb-mark {
     position: absolute;
     opacity: 0;
@@ -359,32 +362,33 @@ textarea.form-control:focus {
 
     .cb-mark ~ .cb-label {
         position: relative;
-        padding-left: 25px;
+        padding-left: 32px;
         cursor: pointer;
         display: inline-block !important;
         font-size: 1.25em;
     }
 
     .cb-mark:checked ~ .cb-label:before {
-        background: #CED8E2;
+        background:#292929 url(../images/icon_check.png) center center no-repeat;
+		background-size: 15px auto;
     }
 
     .cb-mark ~ .cb-label:before {
         content: '';
         display: block;
-        width: 15px;
-        height: 15px;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
         vertical-align: middle;
         position: absolute;
-        background: #CED8E2;
-        top: 2px;
+        width: 22px;
+		height:22px;
+		border: 2px solid #292929;
+        top: 0;
         left: 0;
         cursor: pointer;
     }
-
+	
+.radio-custom{
+	position: relative;
+}
 .radio-mark {
     position: absolute;
     opacity: 0;
