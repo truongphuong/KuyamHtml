@@ -26,7 +26,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Company</title>
+<title>Kuyam Admin - Manage Staff Members</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -80,17 +80,367 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="kuyam-page company-page">
+        	<div class="kuyam-page manage-page">
 				<div class="kuyam-sidebar">
 					<ul>
-						<li class="active"><a title="" href="company-profile.html">profile</a></li>
-						<li><a title="" href="company-gallery.html">image gallery</a></li>
-						<li><a title="" href="company-payments.html">payments &amp; booking</a></li>
-						<li><a title="" href="company-notifications.html">notifications</a></li>
-						<li><a title="" href="company-calendars.html">calendars</a></li>
+						<li class="active"><a title="" href="manage-staff.html">staff members</a></li>
+						<li><a title="" href="manage-services.html">services</a></li>
+						<li><a title="" href="manage-classes.html">classes</a></li>
+						<li><a title="" href="manage-packages.html">packages</a></li>
+						<li><a title="" href="manage-clients.html">clients</a></li>
+						<li><a title="" href="manage-invoices.html">invoices</a></li>
+						<li><a title="" href="manage-promo.html">promo codes</a></li>
 					</ul>
 				</div>
+				<div class="kuyam-subnav">
+					<div class="subnav-content">
+						<a class="add-link" title="" href=""><span class="prefix">+</span> <span class="text">Add new service</span></a>
+						<div id="subnavList" class="subnav-list">
+							<ul class="subnav-ul" data-dropdown="false">
+								<li><a title="" href=""><span class="text">massage</span></a></li>
+								<li><a title="" href=""><span class="text">hair</span></a></li>
+								<li><a title="" href=""><span class="text">yoga</span></a></li>
+								<li><a title="" href=""><span class="text">pilates</span></a></li>
+								<li><a title="" href=""><span class="text">personal trainer</span></a></li>
+								<li><a title="" href=""><span class="text">fitness</span></a></li>
+								<li><a title="" href=""><span class="text">massage</span></a></li>
+								<li><a title="" href=""><span class="text">hair</span></a></li>
+								<li><a title="" href=""><span class="text">yoga</span></a></li>
+								<li><a title="" href=""><span class="text">pilates</span></a></li>
+								<li><a title="" href=""><span class="text">personal trainer</span></a></li>
+								<li><a title="" href=""><span class="text">fitness</span></a></li>
+								<li><a title="" href=""><span class="text">massage</span></a></li>
+								<li><a title="" href=""><span class="text">hair</span></a></li>
+								<li><a title="" href=""><span class="text">yoga</span></a></li>
+								<li><a title="" href=""><span class="text">pilates</span></a></li>
+								<li><a title="" href=""><span class="text">personal trainer</span></a></li>
+								<li><a title="" href=""><span class="text">fitness</span></a></li>
+								<li><a title="" href=""><span class="text">massage</span></a></li>
+								<li><a title="" href=""><span class="text">hair</span></a></li>
+								<li><a title="" href=""><span class="text">yoga</span></a></li>
+								<li><a title="" href=""><span class="text">pilates</span></a></li>
+								<li><a title="" href=""><span class="text">personal trainer</span></a></li>
+								<li><a title="" href=""><span class="text">fitness</span></a></li>
+								<li><a title="" href=""><span class="text">massage</span></a></li>
+								<li><a title="" href=""><span class="text">hair</span></a></li>
+								<li><a title="" href=""><span class="text">yoga</span></a></li>
+								<li><a title="" href=""><span class="text">pilates</span></a></li>
+								<li><a title="" href=""><span class="text">personal trainer</span></a></li>
+								<li><a title="" href=""><span class="text">fitness</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="kuyam-content">
+					<section class="no-data">
+						<p>You currently don't have any staff member,<br /> please start by adding one.</p>
+						<input type="button" value="add staff member" class="btn btn-form btn-agree" />
+					</section>
+					<form>
+						<fieldset>
+							<legend>add new class</legend>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
+									<input type="text" class="form-control" id="txtFirstName" />
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
+									<input type="text" class="form-control" id="txtLastName" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtCell">Cell number <span class="txt-required">*</span></label>
+									<input type="text" class="form-control" id="txtCell" />
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="txtEmail">Email <span class="txt-required">*</span></label>
+									<input type="text" class="form-control" id="txtEmail" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="selectProvideStaff">Which services this person provides</label>
+									
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label" for="selectTeachStaff">Which classes this person teaches</label>
+									
+								</div>
+							</div>
+							<div class="row working-section">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label">Working hours</label>
+									<section class="table-css">
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> monday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> tuesday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> wednesday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> thursday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> friday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> saturday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="td working-day">
+												<span class="check-section"><span class="icon icon-check"></span> sunday</span>
+											</div>
+											<div class="td working-time">
+												<div class="dropdown form-timepicker form-timepicker-range">
+													<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+													<section class="dropdown-menu" aria-labelledby="txtTime">
+														<div class="dropdown-section">
+															<footer></footer>
+															<table>
+																<tbody>
+																	<tr>
+																		<td class="td-timepicker td-field">
+																			From
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-from"></div>
+																		</td>	
+																	</tr>
+																</tbody>
+																<tfoot>
+																	<tr>
+																		<td class="td-timepicker td-field text-right">
+																			To
+																		</td>	
+																		<td class="td-timepicker">
+																			<div class="timepicker-to"></div>
+																		</td>	
+																	</tr>
+																</tfoot>
+															</table>											
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+							<footer>
+								<input type="button" value="cancel" class="btn btn-form btn-disagree" />
+								<input type="button" value="add staff member" class="btn btn-form btn-agree" />
+							</footer>
+						</fieldset>
+					</form>
 				</div>
             </div>
         <!-- InstanceEndEditable -->
@@ -1125,9 +1475,9 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript" src="scripts/ui-company.js"></script> 
+	<script type="text/javascript" src="scripts/ui-manage.js"></script> 
 	<script type="text/javascript">
-		document.getElementById('navCompany').className = "active";
+		document.getElementById('navManage').className = "active";
 	</script>
     <!-- InstanceEndEditable -->
         
