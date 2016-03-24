@@ -55,7 +55,7 @@
 				else
 					totalItem = selectKustom.find(".item-holder li").size() - 1;
 
-				if (totalItem > 1)
+				if (totalItem >= 1)
 					selectKustom.find(".item-holder label").hide();
 				else
 					selectKustom.find(".item-holder label").show();
@@ -72,9 +72,7 @@
 
 					if (holderPositionTop < currentElementTop) {
 
-
 						totalRestItem = totalItem - i;
-
 
 						selectKustom.find(".item-counter ").text("+" + totalRestItem); //show total hidden items
 						selectKustom.find(".item-counter").show();
@@ -181,12 +179,29 @@
 
 					} else {
 						selectKustom.find(".item-list ").hide();
+
 					}
 
 					toggled = !toggled;
 				}
+				e.stopPropagation();
+
 
 			});
+
+
+			$(document).click(function (event) {
+				if (!$(event.target).closest('.item-list').length && !$(event.target).is('.item-list')) {
+					if ($('.item-list').is(":visible")) {
+						toggled = !toggled;
+						$(".item-list ").hide();
+					}
+				}
+			})
+
+
+
+
 
 
 			//list item will be closed as click on each item and then it will bee added to holder
@@ -198,6 +213,22 @@
 					toggled = !toggled;
 					addItemToHolder(this);
 					$(this).addClass("active-item");
+					countHiddenItems();
+				} else {
+
+
+					var _currentItem = $(this);
+
+					_currentItem.removeClass('active-item');
+					for (j = 0; j < selectKustom.find(".item-holder li").size(); j++) {
+
+						var compareText = _currentItem.text() + "x";
+						if (selectKustom.find(".item-holder li").eq(j).text() == compareText) {
+							selectKustom.find(".item-holder li").eq(j).remove();
+						}
+
+					}
+
 					countHiddenItems();
 				}
 
