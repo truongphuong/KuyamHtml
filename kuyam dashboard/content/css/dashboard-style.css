@@ -884,14 +884,44 @@
 .company-payment-form .radio-list li:first-child{
 	width:40%;
 }
-.company-payment-form .radio-list smal{
+.company-payment-form .radio-list small{
+	display:block;
+	padding-left:25px;
 	font-size:.75em;
 	font-family:ralewayregular, sans-serif;
+	line-height:110%;
+	position:relative;
+	top:-7px;
 }
-.policy-section{}
+.company-payment-form footer{
+	text-align: left !important;
+}
+.company-payment-form footer .btn{
+	margin-left:0 !important;
+}
+.payment-section div[class*="col-"]{ 
+	margin-bottom: 27px !important;
+}
+.payment-section .form-label{ 
+	margin-bottom: 8px !important;
+}
+.method-section div[class*="col-"]{ 
+	margin-bottom: 77px !important;
+}
+.method-section .form-label{ 
+	margin-bottom: 8px !important;
+}
+.policy-section{
+	margin-bottom:65px;
+}
+.policy-section .form-label{
+	margin-bottom: 6px !important;
+}
 .policy-section p{
 	font-size:.875em;
 	font-family:ralewayregular, sans-serif;
+	line-height: 130%;
+	margin-bottom: 12px;
 }
 .policy-section .dl-list{
     display: -webkit-flex;
@@ -911,26 +941,108 @@
 }
 .policy-section .dl-list > div > span{
 	position:absolute;
-	top:0;
+	top:3px;
 	left:0;
 	right:0;
-	height: 40px;
+	height: 41px;
 	z-index:1;
 	background: #f0f0f0;
 }
-.policy-section .dl-list dl{
+.policy-section .dl-list .dl{
 	position:relative;
 	z-index: 2;
+	padding-top:3px;
+	border: 1px solid transparent;
 }
-.policy-section .dl-list dt{
-	padding: 10px 15px;
-	font-size:.875em;
+.policy-section .dl-list .dt{
+	padding: 13px 10px;
+	font-size:.875em;	
+	line-height:100%; 
+	height:40px;
 	font-family:ralewaysemibold, sans-serif;
 }
-.policy-section .dl-list dd{
-	padding: 10px 15px;
+.policy-section .dl-list .dd{
+	padding: 14px 10px 10px;
 	font-size:.875em;
 	font-family:ralewayregular, sans-serif;
+	line-height: 130%;
+}
+.policy-section .dl-list .dd.time-policy{
+	border-bottom: 2px solid #f0f0f0;
+	position: relative;
+	z-index: 2px;
+}
+.policy-section .dl-list .dd.refund-policy{
+	padding-top: 18px;
+	padding-bottom:19px;
+}
+.policy-section .dl-list .dl .dd span[class*="divider-"]{
+	border: 1px solid #f0f0f0;
+	display:block;
+	width: 15px;
+	position:absolute;
+	bottom:-2px;
+}
+.policy-section .dl-list .dl .dd .divider-left{
+	left:-15px;
+}
+.policy-section .dl-list .dl .dd .divider-right{
+	right:-15px;
+}
+.policy-section .dl-list .dl:last-child .dd .divider-right{
+	display: none;
+}
+.policy-section .dl-list .dl.active{
+	background: #fafafa;
+	border: 1px solid #000;
+	margin:0 15px;
+}
+.policy-section .dl-list .dl.active .dt,
+.policy-section .dl-list .dl.active .dd.time-policy{
+	border-bottom: 2px solid #292929;
+	margin-left:5px;
+	margin-right:5px;
+}
+.policy-section .dl-list .dl.active .dd .divider-left{
+	left:-22px;
+}
+.policy-section .dl-list .dl.active .dd .divider-right{
+	right:-22px;
+	display:block;
+}
+.policy-section .radio-mark ~ .radio-label:before {
+	top: -1px;
+}
+.policy-section .form-select{
+	width:108px;
+	margin:-5px auto 0;
+}
+.policy-section .form-select .bootstrap-select > .btn, 
+.policy-section .form-select .bootstrap-select > .btn:focus, 
+.policy-section .form-select .bootstrap-select > .btn:active, 
+.policy-section .form-select .bootstrap-select > .btn-default.disabled, 
+.policy-section .form-select .bootstrap-select > .btn-default.disabled:focus, 
+.policy-section .form-select .bootstrap-select > .btn-default.disabled:active, 
+.policy-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+.policy-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
+.policy-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	height:31px;
+}
+.policy-section .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	text-align:center;
+	font-size:0.875em;
+	line-height: 120%;
+}
+.on-device .policy-section .bootstrap-select .dropdown-menu.inner{
+	max-height:150px !important;
+}
+.on-desktop .policy-section .bootstrap-select .bootstrap-scroll{
+	max-height:153px;
+}
+.policy-section .bootstrap-select .dropdown-menu > li > a{
+	font-size:0.875em;
+	padding-top:7px;
+	padding-bottom:7px;
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {

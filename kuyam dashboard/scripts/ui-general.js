@@ -425,6 +425,21 @@ function maxCol(section){
 	$(section).find('.col-info').css({ 'width': $(section).find('.table-css').width() - maxColW });
 }
 
+function fixHeight(section, item){
+    if ($(section).length === 0) {
+        return;
+    }
+    var maxItemH = 0;
+    $(section).find(item).css({ 'height': '' });
+    $(section).find(item).each(function ()
+    {
+        if ($(this).innerHeight() > maxItemH) {
+            maxItemH = $(this).innerHeight();
+        }
+    });
+    $(section).find(item).css({ 'height': maxItemH });
+}
+
 function showPesonalInfo($this){
 	var liTag = $this.parentElement.parentElement;
 	var liData = liTag.attributes.getNamedItem('data-original-index').value;
