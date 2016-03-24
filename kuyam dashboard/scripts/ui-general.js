@@ -502,6 +502,27 @@ function siteHeader(){
 	}
 }
 
+function iscrollSelectK(sectionID, scrollName){
+	if($(sectionID).length !== 0){		
+		if(!isMobile.any()){
+			if($(scrollName).data('IScroll')){
+				return;
+			}
+		
+			var selectScroll = new IScroll(scrollName, { 
+				//keyBindings: true, 
+				mouseWheel: true, 
+				scrollbars: true,
+				interactiveScrollbars: true,
+				shrinkScrollbars: 'clip',
+				fadeScrollbars: true
+			});
+			
+			$(scrollName).data('IScroll', selectScroll);
+		}
+	}
+}
+
 $(document).ready(function(){
 	$(document).on('hidden.bs.modal', '.modal', function () {
 		$('.modal:visible').length && $(document.body).addClass('modal-open');
