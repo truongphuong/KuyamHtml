@@ -42,7 +42,21 @@ $(document).ready(function(){
 		format: 'LT'
 	});	
 	
-	$('.select-kustom').selectKustom();
+	$('.working-section .cb-mark').each(function(){
+		var isChecked = $(this).is(':checked');
+		if(isChecked === true){
+			$(this).closest('.tr').addClass('active');
+		}else{
+			$(this).closest('.tr').removeClass('active');
+		}
+	}).on('click', function(e){
+		var isChecked = $(this).is(':checked');
+		if(isChecked === true){
+			$(this).closest('.tr').addClass('active');
+		}else{
+			$(this).closest('.tr').removeClass('active');
+		}
+	});
 	
 	iscrollSelectK('#selectWhoTeach', '#iscrollWhoTeach');
 	iscrollSelectK('#selectWhoProvide', '#iscrollWhoProvide');

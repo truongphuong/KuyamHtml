@@ -17,7 +17,7 @@
 			var selectKustom = $(this);
 
 			//add more UI to HTML code
-			selectKustom.append("<span class='item-counter'>0</span>");
+			selectKustom.find(".item-holder").append("<span class='item-counter'>0</span>");
 			selectKustom.find(".item-holder").append("<ul></ul>");
 			selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
 			selectKustom.find(".show-less ").hide();
@@ -209,8 +209,8 @@
 
 				if (!$(this).hasClass("active-item")) {
 
-					selectKustom.find(".item-list ").hide();
-					toggled = !toggled;
+					//selectKustom.find(".item-list ").hide();
+					//toggled = !toggled;
 					addItemToHolder(this);
 					$(this).addClass("active-item");
 					countHiddenItems();

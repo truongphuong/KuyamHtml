@@ -503,7 +503,9 @@ function siteHeader(){
 }
 
 function iscrollSelectK(sectionID, scrollName){
-	if($(sectionID).length !== 0){		
+	if($(sectionID).length !== 0){	
+		$(sectionID).selectKustom();
+		
 		if(!isMobile.any()){
 			if($(scrollName).data('IScroll')){
 				return;
