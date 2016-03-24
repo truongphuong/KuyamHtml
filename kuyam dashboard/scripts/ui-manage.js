@@ -40,7 +40,7 @@ $(document).ready(function(){
 		inline: true,
 		sideBySide: true,
 		format: 'LT'
-	});
+	});	
 	
 	$('.working-section .cb-mark').each(function(){
 		var isChecked = $(this).is(':checked');
@@ -57,6 +57,11 @@ $(document).ready(function(){
 			$(this).closest('.tr').removeClass('active');
 		}
 	});
+	
+	iscrollSelectK('#selectWhoTeach', '#iscrollWhoTeach');
+	iscrollSelectK('#selectWhoProvide', '#iscrollWhoProvide');
+	iscrollSelectK('#selectServiceProvide', '#iscrollServiceProvide');
+	iscrollSelectK('#selectClassTeach', '#iscrollClassTeach');
 });
 
 $(window).on('resize', function(){

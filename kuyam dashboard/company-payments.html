@@ -26,7 +26,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - </title>
+<title>Kuyam Admin - Company</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -83,203 +83,168 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="staffs-page">
-			
-				<!-- #appointmentDetails -->
-				<div id="appointmentDetails" class="block-details">
-					<div class="modal-header">
-						<h4>Wedmesday, Nov 18th</h4>
-						<p>11:00 AM - 12:30 PM</p>
-					</div>
-					<div class="modal-body">
-					
-						<!-- .table-css -->
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title">Client:</div>
-								<div class="td col-info">Jane Rodriguez</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Staff:</div>
-								<div class="td col-info">Candlelight vinyasa</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Repeat:</div>
-								<div class="td col-info">Custom (M, W, F)</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Caterory:</div>
-								<div class="td col-info">Yoga</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Service:</div>
-								<div class="td col-info">Restoration yoga</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Internal notes:</div>
-								<div class="td col-info"></div>
+        	<div class="kuyam-page company-page">
+				<div class="kuyam-sidebar">
+					<ul>
+						<li><a title="" href="company-profile.html">profile</a></li>
+						<li><a title="" href="company-gallery.html">image gallery</a></li>
+						<li class="active"><a title="" href="company-payments.html">payments &amp; booking</a></li>
+						<li><a title="" href="company-notifications.html">notifications</a></li>
+						<li><a title="" href="company-calendars.html">calendars</a></li>
+					</ul>
+				</div>
+				<div class="kuyam-content">
+					<form class="company-payment-form">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6">
+								<label class="form-label" for="txtEmail">How should kuyam contact you?</label>
+								<input type="text" class="form-control" id="txtEmail" />
 							</div>
 						</div>
-						<!-- /.table-css -->
-						
-						<div class="notes-section">
-							<div id="iscrollAppointmentNotes">
+						<section class="payment-section">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label">How do you accept payment?</label>
+									<ul class="radio-list clearfix">
+										<li class="radio-custom">
+											<input class="radio-mark" type="radio" id="radioPayment1" name="radioPayment" />
+											<label class="radio-label" for="radioPayment1">PayPal only</label>
+										</li>
+										<li class="radio-custom">
+											<input class="radio-mark" type="radio" id="radioPayment2" name="radioPayment" />
+											<label class="radio-label" for="radioPayment2">PayPal and pay in person</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class="method-section">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label class="form-label">Booking method</label>
+									<ul class="radio-list clearfix">
+										<li class="radio-custom">
+											<input class="radio-mark" type="radio" id="radioMethod1" name="radioMethod" />
+											<label class="radio-label" for="radioMethod1">Instant book</label>
+											<small>No confirmation needed</small>
+										</li>
+										<li class="radio-custom">
+											<input class="radio-mark" type="radio" id="radioMethod2" name="radioMethod" />
+											<label class="radio-label" for="radioMethod2">Book it</label>
+											<small>You will need to confirm each appointment by hand</small>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class="policy-section">
+							<label class="form-label">Cancellation policy</label>
+							<p>This is displayed on your profile.<br />User receives a full refund if they cancel before the specified time period.</p>
+							<div class="dl-list">
 								<div>
-									With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
+									<span></span>
+									<div class="dl">
+										<div class="dt">Type of policy</div>
+										<div class="dd time-policy">Users must cancel how many hours 2 prior to the appointment?</div>
+										<div class="dd refund-policy">Refund for late cancellations</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title"></div>
-								<div class="td col-info">
-									<a title="" href="">Modify appointment</a><br />
-									<a title="" href="">Cancel appointment</a>
-								</div>
-							</div>
-						</div>
-					</div>			
-				</div>
-				<!-- /#appointmentDetails -->				
-				
-				<!-- #classDetails -->
-				<div id="classDetails" class="block-details">
-					<div class="modal-header">
-						<h4>Wedmesday, Nov 18th</h4>
-						<p>11:00 AM - 12:30 PM</p>
-					</div>
-					<div class="modal-body">
-					
-						<!-- .table-css -->
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title">Staff:</div>
-								<div class="td col-info">Jane Rodriguez</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">starting date:</div>
-								<div class="td col-info">Wed, Nov 18th</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Time:</div>
-								<div class="td col-info">11:00 AM</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Caterory:</div>
-								<div class="td col-info">Yoga</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Class:</div>
-								<div class="td col-info">Restoration yoga</div>
-							</div>
-							<div class="tr">
-								<div class="td col-title">Description:</div>
-								<div class="td col-info"></div>
-							</div>
-						</div>
-						<!-- /.table-css -->
-						
-						<div class="notes-section">
-							<div id="iscrollClassNotes">
 								<div>
-									With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
+									<span></span>
+									<div class="dl">
+										<div class="dt">
+											<span class="radio-custom">
+												<input checked class="radio-mark" type="radio" id="radioCancellation1" name="radioCancellation" />
+												<label class="radio-label" for="radioCancellation1">None</label>
+											</span>										
+										</div>
+										<div class="dd time-policy">
+											Anytime
+											<span class="divider-left"></span>
+											<span class="divider-right"></span>
+										</div>
+										<div class="dd refund-policy">Full refund</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title"></div>
-								<div class="td col-info">
-									<a title="" href="">Modify class</a><br />
-									<a title="" href="">Cancel class</a>
-								</div>
-							</div>
-						</div>
-					</div>			
-				</div>
-				<!-- /#classDetails -->
-				
-				<!-- #blockerDetails -->
-				<div id="blockerDetails" class="block-details">
-					<div class="modal-header">
-						<h4>Wedmesday, Nov 18th</h4>
-						<p>11:00 AM - 12:30 PM</p>
-					</div>
-					<div class="modal-body">
-					
-						<!-- .table-css -->
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title">Internal notes:</div>
-								<div class="td col-info"></div>
-							</div>
-						</div>
-						<!-- /.table-css -->
-						
-						<div class="notes-section">
-							<div id="iscrollBlockerNotes">
 								<div>
-									With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
+									<span></span>
+									<div class="dl">
+										<div class="dt">
+											<span class="radio-custom">
+												<input class="radio-mark" type="radio" id="radioCancellation2" name="radioCancellation" />
+												<label class="radio-label" for="radioCancellation2">Standard</label>
+											</span>
+										</div>
+										<div class="dd time-policy">
+											24hrs											
+											<span class="divider-left"></span>
+											<span class="divider-right"></span>
+										</div>
+										<div class="dd refund-policy">50%</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<div class="table-css">
-							<div class="tr">
-								<div class="td col-title"></div>
-								<div class="td col-info">
-									<a title="" href="">Modify blocker</a><br />
-									<a title="" href="">Cancel blocker</a>
+								<div>
+									<span></span>
+									<div class="dl">
+										<div class="dt">
+											<span class="radio-custom">
+												<input class="radio-mark" type="radio" id="radioCancellation3" name="radioCancellation" />
+												<label class="radio-label" for="radioCancellation3">Strict</label>
+											</span>
+										</div>
+										<div class="dd time-policy">
+											72hrs
+											<span class="divider-left"></span>
+											<span class="divider-right"></span>
+										</div>
+										<div class="dd refund-policy">50%</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
+								<div>
+									<span></span>
+									<div class="dl">
+										<div class="dt">
+											<span class="radio-custom">
+												<input class="radio-mark" type="radio" id="radioCancellation4" name="radioCancellation" />
+												<label class="radio-label" for="radioCancellation4">Custom</label>
+											</span>
+										</div>
+										<div class="dd time-policy">
+											<div id="divTimePolicy" class="form-select form-select-readonly">
+												<select id="selectTimePolicy">
+													<option value="1">1 hr</option>
+													<option value="2">2 hrs</option>
+													<option value="3">3 hrs</option>
+													<option value="6">6 hrs</option>
+													<option value="12">12 hrs</option>
+													<option value="24" selected="selected">24 hrs</option>
+													<option value="36">36 hrs</option>
+													<option value="48">48 hrs</option>
+													<option value="72">72 hrs</option>
+												</select>
+											</div>
+											<span class="divider-left"></span>
+											<span class="divider-right"></span>
+										</div>
+										<div class="dd refund-policy">
+											<div id="divRefundPolicy" class="form-select form-select-readonly">
+												<select id="selectRefundPolicy">
+													<option value="0">none</option>
+													<option value="25">25%</option>
+													<option value="50" selected="selected">50%</option>
+													<option value="75">75%</option>
+												</select>
+											</div>
+										</div>
+									</dl>
+								<div>
+							</div>	
+						</section>
+						<footer>
+							<input type="button" value="save changes" class="btn btn-form btn-agree" />
+						</footer>						
+					</form>
 				</div>
-				<!-- /#blockerDetails -->
-				
-				<!-- #classAttendee -->
-				<div id="classAttendee" class="block-attendee">
-					<div class="modal-header">
-						<h4>Attendee</h4>
-					</div>
-					<div class="modal-body">
-					
-						<!-- .attendee-list -->
-						<div id="iscrollAttendeeList" class="attendee-list">
-							<ul>
-								<li>Jane Lois</li>
-								<li>Valentina Lucas</li>
-								<li>Kourosh Gohar</li>
-								<li>Sven Larson</li>
-								<li>John Smith</li>
-								<li>Nick Brown</li>					
-								<li>Jane Lois</li>
-								<li>Valentina Lucas</li>
-								<li>Kourosh Gohar</li>
-								<li>Sven Larson</li>
-								<li>Jane Lois</li>
-								<li>Valentina Lucas</li>
-								<li>Kourosh Gohar</li>
-								<li>Sven Larson</li>
-								<li>John Smith</li>
-								<li>Nick Brown</li>						
-								<li>Jane Lois</li>
-								<li>Valentina Lucas</li>
-								<li>Kourosh Gohar</li>
-								<li>Sven Larson</li>							
-							</ul>
-						</div>
-						<!-- /.attendee-list -->
-						
-					</div>			
-				</div>
-				<!-- /#classAttendee -->
-				
             </div>
         <!-- InstanceEndEditable -->
         </section>
@@ -1316,7 +1281,10 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-    <script type="text/javascript" src="scripts/ui-staffs.js"></script> 
+	<script type="text/javascript" src="scripts/ui-company.js"></script> 
+	<script type="text/javascript">
+		document.getElementById('navCompany').className = "active";
+	</script>
     <!-- InstanceEndEditable -->
         
 </body>
