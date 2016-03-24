@@ -11,17 +11,20 @@
 
 	$.fn.selectKustom = function () {
 
-		this.filter(".select-kustom").each(function () {
+		this.each(function () {
 
 			//init Object values
 			var selectKustom = $(this);
 
 			//add more UI to HTML code
-			selectKustom.append("<span class='item-counter'>0</span>");
+			selectKustom.find(".item-holder").append("<span class='item-counter'>0</span>");
 			selectKustom.find(".item-holder").append("<ul></ul>");
 			selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
 			selectKustom.find(".show-less ").hide();
 			selectKustom.find(".item-counter ").hide();
+			selectKustom.find(".item-holder").append("<label></label>");
+			selectKustom.find(".item-holder label").text(selectKustom.attr("data-title"));
+
 
 			var currentElementTop = 0;
 
@@ -52,7 +55,11 @@
 				else
 					totalItem = selectKustom.find(".item-holder li").size() - 1;
 
-				//console.log(totalItem + "-" + totalRestItem);
+				if (totalItem > 1)
+					selectKustom.find(".item-holder label").hide();
+				else
+					selectKustom.find(".item-holder label").show();
+				console.log(totalItem);
 
 				//get holder position top to compare to each other items		
 				var holderPositionTop = selectKustom.find(".item-holder ul").offset().top;
@@ -83,6 +90,7 @@
 					} // end else
 				} // end for
 
+				selectKustom.find(".item-holder ul li").removeClass("active-item");
 
 			} // end countHiddenItems func
 
@@ -102,11 +110,13 @@
 					selectKustom.find(".item-counter").css({
 						"visibility": "hidden"
 					});
+
+
 					selectKustom.find(".show-less ").remove();
+					//append and show this tag to last 
 					selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
 					selectKustom.find(".show-less ").show();
 					selectKustom.find(".item-list ").hide();
-
 
 
 					//show less all hidden items as click on last item with text "show less"
@@ -140,8 +150,21 @@
 
 
 			//count init items list
-			//countHiddenItems();
+			initSelectedItemsFromList();
 
+			function initSelectedItemsFromList() {
+
+				selectKustom.find(".item-list ul li").each(function () {
+					if ($(this).hasClass("active-item")) {
+						selectKustom.find(".item-holder label").hide();
+						addItemToHolder(this);
+						countHiddenItems();
+					}
+
+				});
+
+
+			}
 
 
 			var toggled; //toggle dropdown list state
@@ -171,8 +194,8 @@
 
 				if (!$(this).hasClass("active-item")) {
 
-					selectKustom.find(".item-list ").hide();
-					toggled = !toggled;
+					//selectKustom.find(".item-list ").hide();
+					//toggled = !toggled;
 					addItemToHolder(this);
 					$(this).addClass("active-item");
 					countHiddenItems();
