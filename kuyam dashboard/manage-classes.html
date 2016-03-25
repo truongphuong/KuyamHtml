@@ -84,6 +84,8 @@
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
         	<div class="kuyam-page manage-page">
+			
+				<!-- .kuyam-sidebar -->
 				<div class="kuyam-sidebar">
 					<ul>
 						<li><a title="" href="manage-staff.html">staff members</a></li>
@@ -95,6 +97,9 @@
 						<li><a title="" href="manage-promo.html">promo codes</a></li>
 					</ul>
 				</div>
+				<!-- /.kuyam-sidebar -->
+				
+				<!-- .kuyam-subnav -->
 				<div class="kuyam-subnav">
 					<div class="subnav-content">
 						<a class="add-link" title="" href=""><span class="prefix">+</span> <span class="text">Add new class</span></a>
@@ -368,11 +373,18 @@
 						</div>
 					</div>
 				</div>
+				<!-- /.kuyam-subnav -->
+				
+				<!-- .kuyam-content -->
 				<div class="kuyam-content">
+				
+					<!-- .no-data -->
 					<section class="no-data">
 						<p>You currently don't have any classes,<br /> please start by adding one.</p>
 						<input type="button" value="add new class" class="btn btn-form btn-agree" />
 					</section>
+					<!-- /.no-data -->
+					
 					<form>
 						<fieldset>
 							<legend>add new class</legend>
@@ -407,6 +419,8 @@
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<label class="form-label" for="selectClassClass">Class</label>
+									
+									<!-- #divClassClass -->
 									<div id="divClassClass" class="form-select form-select-readonly">
 										<select id="selectClassClass" title="Select Class">
 											<option value="0">Yoga</option>
@@ -432,6 +446,8 @@
 											<option value="20">Massage</option>
 										</select>
 									</div>
+									<!-- /#divClassClass -->
+									
 								</div>
 							</div>
 							<div class="row">
@@ -460,6 +476,7 @@
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<label class="form-label">Who can teach this class</label>
+									
 									<!-- #selectWhoTeach -->
 									<div id="selectWhoTeach" class="select-kustom" data-title="Select who can teach this class">
 										<div class="item-holder"></div>
@@ -734,7 +751,9 @@
 						</fieldset>
 					</form>
 				</div>
-            </div>
+				<!-- /.kuyam-content -->
+				
+			</div>
         <!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer"> 
