@@ -46,6 +46,9 @@ function listFilter(inputSearch, list) {
 }
 
 function iscrollSelectModal(sectionID, scrollName, modalName){
+	if($sectionID.length === 0){
+		return;
+	}
 	var $sectionID = $('#' + sectionID),
 		$modalID = $('#' + modalName),
 		scrollID = '#' + scrollName;
@@ -133,6 +136,9 @@ function iscrollSelectModal(sectionID, scrollName, modalName){
 }	
 
 function iscrollSelectSearchModal(sectionID, scrollName, modalName){
+	if($sectionID.length === 0){
+		return;
+	}
 	var $sectionID = $('#' + sectionID),
 		$modalID = $('#' + modalName),
 		scrollID = '#' + scrollName;	
@@ -234,6 +240,9 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 }
 
 function iscrollSelect(sectionID, scrollName){
+	if($sectionID.length === 0){
+		return;
+	}
 	var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
 	if($sectionID.find('.bootstrap-select').length === 0){
