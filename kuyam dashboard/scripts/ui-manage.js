@@ -42,6 +42,22 @@ $(document).ready(function(){
 		format: 'LT'
 	});	
 	
+	$('#txtFrom').datetimepicker({
+		sideBySide: true,
+		format: 'ddd, MMM Do',
+		defaultDate: moment(),
+		minDate: '03/10/2016'
+	});
+	
+	$('#txtTo').datetimepicker({
+		sideBySide: true,
+		format: 'ddd, MMM Do',
+		defaultDate: moment(),
+		minDate: '03/10/2016'
+	});
+	
+	iscrollSelect('divPayment', 'iscrollPayment');
+	
 	$('.working-section .cb-mark').each(function(){
 		var isChecked = $(this).is(':checked');
 		if(isChecked === true){

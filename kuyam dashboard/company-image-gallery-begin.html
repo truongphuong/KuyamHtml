@@ -26,11 +26,11 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Manage</title>
-<meta name="author" content="" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<!-- InstanceEndEditable -->
+	<title>Kuyam Admin - Company</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!-- InstanceEndEditable -->
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />  
@@ -90,353 +90,114 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="kuyam-page manage-page">
+			<div class="kuyam-page company-page">
 				<div class="kuyam-sidebar">
 					<ul>
-						<li><a title="" href="manage-staff.html">staff members</a></li>
-						<li><a title="" href="manage-services.html">services</a></li>
-						<li><a title="" href="manage-classes.html">classes</a></li>
-						<li><a title="" href="manage-packages.html">packages</a></li>
-						<li><a title="" href="manage-clients.html">clients</a></li>
-						<li class="active"><a title="" href="manage-invoices.html">invoices</a></li>
-						<li><a title="" href="manage-promo.html">promo codes</a></li>
+						<li><a title="" href="company-profile.html">profile</a></li>
+						<li class="active"><a title="" href="company-gallery.html">image gallery</a></li>
+						<li><a title="" href="company-payments.html">payments &amp; booking</a></li>
+						<li><a title="" href="company-notifications.html">notifications</a></li>
+						<li><a title="" href="company-calendars.html">calendars</a></li>
 					</ul>
 				</div>
 				<div class="kuyam-content">
-					<div class="invoices-table">						
-						<form>
-							<fieldset>
-								<legend class="clearfix">APPOINTMENT AND RECEIPT HISTORY <input type="button" class="btn btn-download" value="Download All" /></legend>
-								
-								<ul class="filter-list">
-									<li class="clearfix">
-										<label class="form-label" for="txtFrom">From:</label>
-										<span class="form-timepicker">
-											<input id="txtFrom" type="text" class="form-control txt-date" />												
-										</span>
-									</li>
-									<li class="clearfix">
-										<label class="form-label" for="txtTo">To:</label>
-										<span class="form-timepicker">
-											<input id="txtTo" type="text" class="form-control txt-date" />												
-										</span>
-									</li>
-									<li>
-										<span id="divPayment" class="form-select form-select-readonly">
-											<select id="selectPayment">
-												<option value="2" selected>Any Payment</option>
-												<option value="1">Make up</option>
-												<option value="0">Massage</option>
-											</select>
-										</span>
-									</li>
-								</ul>
-							</fieldset>
+					<div class="company-image-gallery">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+								<p>Upload or purchase up to 10 images to create your photo gallery. Scroll down to purchase stock photos for $0.99 each</p>
+
+								<div class="clearfix"></div>
+								<br/>
+
+								<div class="row">
+
+						
+									<div class=" photo-box btn-upload-image">
+										UPLOAD IMAGE
+
+									</div>
+									<!-- /  btn-upload-image -->
+
+
+								</div>
+
+
+							</div>
+						</div>
+
+
+
+
+						<form class="company-payment-form">
+
+
+							<!-- .payment-section -->
+							<section class="purchase-stock-photos-section">
+
+
+
+								<div class="col-xs-12 col-sm-5">
+									<label class="form-label" for="txtEmail">Purchasse stock photos</label>
+									<input type="text" class="form-control txt-search" id="txtEmail" placeholder="Search stock photos">
+								</div>
+
+
+			
+
+							</section>
+							<!-- /.payment-section -->
+
 						</form>
-						<table id="invoicesTable">
-							<thead>
-								<tr>
-									<th data-field="datetime" data-sortable="true" class="cols-datetime">date & time</th>
-									<th data-field="service" data-sortable="true" class="cols-service">service</th>
-									<th data-field="client" data-sortable="true" class="cols-client">client</th>
-									<th data-field="staff" data-sortable="true" class="cols-staff">staff</th>
-									<th data-field="amount" data-sortable="true" class="cols-amount">amount</th>
-									<th data-field="status" data-sortable="true" class="cols-status">status</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>10:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>John Smith</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>Carl Percival</span></td>
-									<td class="cols-staff"><span>Fred Astaire</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>	
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>10:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>John Smith</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>Carl Percival</span></td>
-									<td class="cols-staff"><span>Fred Astaire</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>10:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>John Smith</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>Carl Percival</span></td>
-									<td class="cols-staff"><span>Fred Astaire</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>10:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>John Smith</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="odd">
-									<td class="cols-datetime"><span>Now 16, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Yoga</span> <small>Candlelight vinyasa</small></td>
-									<td class="cols-client"><span>Carl Percival</span></td>
-									<td class="cols-staff"><span>Fred Astaire</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>
-								<tr class="even">
-									<td class="cols-datetime"><span>Now 18, 2015</span> <small>12:00AM</small></td>
-									<td class="cols-service"><span>Hair</span> <small>Cut</small></td>
-									<td class="cols-client"><span>Victoria Rodriguez</span></td>
-									<td class="cols-staff"><span>Robert Slim</span></td>
-									<td class="cols-amount"><span>$12.00</span></td>
-									<td class="cols-status">
-										<span>Confirmed</span>
-										<a class="detail-icon" href="javascript:">
-											<i class="glyphicon glyphicon-plus icon-plus"></i>
-										</a>
-									</td>
-								</tr>							
-							</tbody>
-						</table>
-					<div>
+
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 show-result">
+								<label class="form-label" >Popular stock photos recommended for you</label>
+							</div>
+
+							<div class="col-xs-12 col-sm-12">
+
+								<div class="row">
+
+									<div class=" photo-box">
+
+										<img src="content/photos/photo1.jpg" alt="" />
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
+
+									<div class=" photo-box">
+
+										<img src="content/photos/photo1.jpg" alt="" />
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
+									<div class=" photo-box">
+
+										<img src="content/photos/photo1.jpg" alt="" />
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
+									<div class=" photo-box">
+
+										<img src="content/photos/photo1.jpg" alt="" />
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
+									<div class=" photo-box">
+
+										<img src="content/photos/photo1.jpg" alt="" />
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
+
+
+								</div>
+
+
+							</div>
+						</div>
+
+
+					</div>
 				</div>
-            </div>
-        <!-- InstanceEndEditable -->
+			</div>
+			<!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer"> 
         	<div class="container">     	 
@@ -1441,7 +1202,7 @@
 	</div><!-- /#signOutModal -->
      
     <!-- InstanceBeginEditable name="modal" -->
-    <!-- InstanceEndEditable --> 
+	<!-- InstanceEndEditable --> 
     
     <!-- === SCRIPTS === -->  
 	<script type="text/javascript" src="scripts/libs/modernizr.custom.js"></script>
@@ -1478,52 +1239,11 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript" src="scripts/ui-manage.js"></script> 
+	<script type="text/javascript" src="scripts/ui-company.js"></script>
 	<script type="text/javascript">
-		document.getElementById('navManage').className = "active";
-		$('#invoicesTable').bootstrapTable({	
-			search: true,			
-			searchAlign: 'left',
-			pagination: true,
-			paginationPreText: "Previous",
-			paginationNextText: "Next",
-			formatShowingRows: function(pageFrom, pageTo, totalRows){
-				return 'Showing ' + pageFrom + ' to ' + pageTo + ' of ' + totalRows + ' entries'
-			},
-			detailFormatter: function(index, row, element){
-				var htmlVal = '';
-					htmlVal += '<table>';
-					htmlVal += '<tr>';
-					htmlVal += '<th valign="top">receipt #:</th>';
-					htmlVal += '<td valign="top"><span>09976457</span></td>';
-					htmlVal += '<td></td>';
-					htmlVal += '</tr>';
-					htmlVal += '<tr>';
-					htmlVal += '<th valign="top">purchased on:</th>';
-					htmlVal += '<td valign="top"><span>11/19/2015</span></td>';
-					htmlVal += '<td></td>';
-					htmlVal += '<tr>';
-					htmlVal += '<th valign="top">status:</th>';
-					htmlVal += '<td valign="top"><span>confirmed</span></td>';
-					htmlVal += '<td></td>';
-					htmlVal += '</tr>';
-					htmlVal += '<tr>';
-					htmlVal += '<th valign="top">payment:</th>';
-					htmlVal += '<td valign="top"><span>paypal, gift card<br />Victoria Rodriguez</span></td>';
-					htmlVal += '<td valign="bottom" align="right"><button class="btn btn-print"><span class="icon icon-print-white"></span> Print Invoice</button></td>';
-					htmlVal += '</tr>';
-					htmlVal += '</table>';
-				return htmlVal;
-			},
-			onExpandRow: function (index, row, $detail) {
-				console.log('open');
-			},
-			onCollapseRow: function (index, row) {
-				console.log('close');
-			}
-		});
+		document.getElementById('navCompany').className = "active";
 	</script>
-    <!-- InstanceEndEditable -->
+	<!-- InstanceEndEditable -->
         
 </body>
 <!-- InstanceEnd --></html>
