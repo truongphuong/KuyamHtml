@@ -1,5 +1,5 @@
 $(document).ready(function(){	
-	if(wScreen > 1023){	
+	if(wScreen > 767){	
 		$('.kuyam-sidebar').css({'max-width': wScreen / 7});
 		$('.kuyam-subnav').css({'max-width': wScreen / 7});
 	}else{
@@ -49,6 +49,13 @@ $(document).ready(function(){
 		minDate: '03/10/2016'
 	});
 	
+	if($('.invoices-table').length !== 0){
+		$('.invoices-table').css({
+			'width': $('.kuyam-content').width()
+		});
+		$('.invoices-table').show();
+	}
+	
 	$('#txtTo').datetimepicker({
 		sideBySide: true,
 		format: 'ddd, MMM Do',
@@ -81,7 +88,7 @@ $(document).ready(function(){
 });
 
 $(window).on('resize', function(){
-	if(wScreen > 1023){	
+	if(wScreen > 767){	
 		$('.kuyam-sidebar').css({'max-width': wScreen / 7});
 		$('.kuyam-subnav').css({'max-width': wScreen / 7});
 	}else{
