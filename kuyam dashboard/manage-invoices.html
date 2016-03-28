@@ -34,8 +34,15 @@
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />  
+
+<!-- Bootstrap datetimepicker CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap-datetimepicker.css"/>
+
+<!-- Bootstrap select CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap-select.css"/>
+
+<!-- Bootstrap table CSS -->
+<link rel="stylesheet" type="text/css" href="content/css/bootstrap-table.css"/>
 
 <!-- Tooltipster core CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/tooltipster.css"/>
@@ -96,7 +103,476 @@
 					</ul>
 				</div>
 				<div class="kuyam-content">
-					
+					<table id="invoicesTable">
+						<thead>
+							<tr>
+								<th data-field="datetime" data-sortable="true">date & time</th>
+								<th data-field="service" data-sortable="true">service</th>
+								<th data-field="client" data-sortable="true">client</th>
+								<th data-field="staff" data-sortable="true">staff</th>
+								<th data-field="amount" data-sortable="true">amount</th>
+								<th data-field="status" data-sortable="true">status</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>12:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>Carl Percival</span></td>
+								<td><span>Fred Astaire</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 18, 2015</span> <small>12:00AM</small></td>
+								<td><span>Hair</span> <small>Cut</small></td>
+								<td><span>Victoria Rodriguez</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>12:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>Carl Percival</span></td>
+								<td><span>Fred Astaire</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 18, 2015</span> <small>12:00AM</small></td>
+								<td><span>Hair</span> <small>Cut</small></td>
+								<td><span>Victoria Rodriguez</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>12:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>Carl Percival</span></td>
+								<td><span>Fred Astaire</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 18, 2015</span> <small>12:00AM</small></td>
+								<td><span>Hair</span> <small>Cut</small></td>
+								<td><span>Victoria Rodriguez</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>12:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>Carl Percival</span></td>
+								<td><span>Fred Astaire</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 18, 2015</span> <small>12:00AM</small></td>
+								<td><span>Hair</span> <small>Cut</small></td>
+								<td><span>Victoria Rodriguez</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>12:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>Carl Percival</span></td>
+								<td><span>Fred Astaire</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 18, 2015</span> <small>12:00AM</small></td>
+								<td><span>Hair</span> <small>Cut</small></td>
+								<td><span>Victoria Rodriguez</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td><span>Now 16, 2015</span> <small>10:00AM</small></td>
+								<td><span>Yoga</span> <small>Candlelight vinyasa</small></td>
+								<td><span>John Smith</span></td>
+								<td><span>Robert Slim</span></td>
+								<td><span>$12.00</span></td>
+								<td><span>Confirmed</span></td>
+								<td>
+									<a class="detail-icon" href="javascript:">
+									<i class="glyphicon glyphicon-plus icon-plus"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
             </div>
         <!-- InstanceEndEditable -->
@@ -1113,8 +1589,15 @@
     
     <!-- Bootstrap js -->
     <script type="text/javascript" src="scripts/libs/bootstrap.min.js"></script>
+    
+    <!-- Bootstrap-datetimepicker js -->
     <script type="text/javascript" src="scripts/libs/bootstrap-datetimepicker.min.js"></script>
+    
+    <!-- Bootstrap select js -->
 	<script type="text/javascript" src="scripts/libs/bootstrap-select.js"></script>
+    
+    <!-- Bootstrap table js -->
+	<script type="text/javascript" src="scripts/libs/bootstrap-table.js"></script>
     
     <!-- iscroll js -->
 	<script type="text/javascript" src="scripts/libs/iscroll.js"></script> 
@@ -1137,6 +1620,18 @@
 	<script type="text/javascript" src="scripts/ui-manage.js"></script> 
 	<script type="text/javascript">
 		document.getElementById('navManage').className = "active";
+		$('#invoicesTable').bootstrapTable({	
+			search: true,			
+			searchAlign: 'left',
+			sortable: true,
+			pagination: true,
+			onlyInfoPagination: true,
+			paginationPreText: "Previous",
+			paginationNextText: "Next",
+			formatShowingRows: function(pageFrom, pageTo, totalRows){
+				return 'Showing ' + pageFrom + ' to ' + pageTo + ' of ' + totalRows + ' entries'
+			}
+		});
 	</script>
     <!-- InstanceEndEditable -->
         
