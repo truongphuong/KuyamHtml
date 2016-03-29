@@ -11,6 +11,10 @@ $(document).ready(function(){
 		format: 'LT'
 	});
 	
+	if($('#divState').length !== 0){
+		iscrollSelect('divState', 'iscrollState');
+	}
+	
 	$('.working-section .cb-mark').each(function(){
 		var isChecked = $(this).is(':checked');
 		if(isChecked === true){
