@@ -31,5 +31,5 @@ $(document).ready(function(){
 		}
 	});
 	
-	iscrollSelectK('#selectSearchTags', '#iscrollSearchTags');
+	//iscrollSelectK('#selectSearchTags', '#iscrollSearchTags');
 });
