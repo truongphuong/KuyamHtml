@@ -48,8 +48,10 @@ function listFilter(inputSearch, list) {
 function iscrollSelectModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
 		$modalID = $('#' + modalName),
-		scrollID = '#' + scrollName;
-		
+		scrollID = '#' + scrollName;	
+	if($sectionID.length === 0){
+		return;
+	}
 	if($sectionID.find('.bootstrap-select').length === 0){
 		if(!isMobile.any()){
 			$sectionID.find('select').selectpicker({liveSearch: true});
@@ -136,6 +138,9 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 	var $sectionID = $('#' + sectionID),
 		$modalID = $('#' + modalName),
 		scrollID = '#' + scrollName;	
+	if($sectionID.length === 0){
+		return;
+	}
 	if($sectionID.find('.bootstrap-select').length === 0){
 		$sectionID.find('select').selectpicker({liveSearch: true});	
 		$sectionID.find('select').on('loaded.bs.select', function (e) {
@@ -236,6 +241,9 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName){
 function iscrollSelect(sectionID, scrollName){
 	var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
+	if($sectionID.length === 0){
+		return;
+	}
 	if($sectionID.find('.bootstrap-select').length === 0){
 		if(!isMobile.any()){
 			$sectionID.find('select').selectpicker({liveSearch: true});

@@ -1045,6 +1045,10 @@
 	padding-bottom:7px;
 }
 
+.invoices-table{
+	display:none;
+	overflow-x: auto;
+}
 .invoices-table .btn-download{
 	float:right;
 	background:#b4b4b4;
@@ -1075,6 +1079,10 @@
 	float:left;
 	margin:0 0 10px 20px;
 }
+.invoices-table form .filter-list > li:first-child{
+	margin-left:0;
+}
+
 .invoices-table .form-label{
 	margin:9px 10px 9px 0 !important;
 	float:left;
@@ -1240,6 +1248,51 @@
 	background:#dcdcdc;
 }
 
+.profile-form{
+	width:50%;
+	padding-bottom:20px !important;
+}
+.profile-form .company-logo{	
+	background:#fafafa url(../images/icon_upload_gray.png) center center no-repeat;
+	background-size: 48px auto;
+	font-family: ralewaysemibold, sans-serif;
+	padding-top:135px;
+	text-align:center;
+	font-size:.875em;
+	text-transform: uppercase;
+	width:200px;
+	height:200px;
+	position:relative;
+	cursor: pointer;
+}
+.profile-form .default-logo{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:center center no-repeat;
+	background-size: cover;
+}
+.profile-form .row{
+	margin-left:-5px !important;
+	margin-right:-5px !important;
+}
+.profile-form div[class*="col-"]{
+	padding-left:5px !important;
+	padding-right:5px !important;
+}
+.profile-form .address-row div[class*="col-"]:first-child{
+	margin-bottom:10px;
+}
+.profile-form footer{
+	text-align: left !important;
+}
+.profile-form footer .btn{
+	margin-left:0 !important;
+}
+
+
 /* start vuho edit*/
 .company-image-gallery .photo-box {
 	background-color: #fafafa;
@@ -1282,10 +1335,14 @@
 }
 
 .company-image-gallery div[class*="col-"],
-form div[class*="col-"] {
+.company-image-gallery form div[class*="col-"] {
 	padding: 0 !important;
 }
-
+.company-image-gallery .photo-box img{
+	max-width:100%;
+	max-height:128px;
+	margin:0 auto;
+}
 .company-image-gallery .photo-box .checkbox-group {
 	padding: 10px;
 }
@@ -1548,6 +1605,13 @@ form div[class*="col-"] {
             margin: 0 !important;
             width: auto;
         }
+		
+	.invoices-table form{
+		height: auto;
+	}
+	.invoices-table form .filter-list{
+		float:none;
+	}
 		
 	/* start vuho edit*/	
 	.company-image-gallery .photo-box {
