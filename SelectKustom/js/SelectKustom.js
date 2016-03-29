@@ -55,10 +55,10 @@
 				}
 
 				if (totalItem > 1) {
-					selectKustom.find(".item-holder label").hide();					
+					selectKustom.find(".item-holder label").hide();
 				} else {
 					selectKustom.find(".item-holder label").show();
-					toggled = !toggled;
+
 				}
 
 				//get holder position top to compare to each other items		
@@ -120,7 +120,7 @@
 
 					//show less all hidden items as click on last item with text "show less"
 					selectKustom.find(".show-less").on("click", function (e) {
-					
+
 						e.stopPropagation();
 						selectKustom.find(".item-holder").css({
 							"height": heightItemHolder
@@ -132,7 +132,7 @@
 						selectKustom.find(".item-counter").css({
 							"visibility": "visible"
 						});
-						
+
 					});
 
 					countHiddenItems();
@@ -141,8 +141,9 @@
 			}
 
 			//responsive event
-			$(window).resize(function () {
+			window.addEventListener('resize', function (e) {
 				countHiddenItems();
+
 			});
 
 			//count init items list
@@ -161,38 +162,53 @@
 
 			}
 
-			var toggled; //toggle dropdown list state
+			var firstToggle = 0;
+
 			selectKustom.find(".item-holder").on("click", function (e) {
+
 
 				if (heightItemHolder == selectKustom.find(".item-holder").outerHeight()) {
 
-					if (!toggled) {
-						$(".item-list").hide();
-						selectKustom.find(".item-list").show();
-						$(".item-list").css({
-							"visibility": "visible"
-						});
+					if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
 
-					} else {
-						selectKustom.find(".item-list").hide();
+						if ($('.item-list').is(":visible") && firstToggle == 0) {
+							$(".item-list").hide();
+							selectKustom.find(".item-list").show();
+							$(".item-list").css({
+								"visibility": "visible"
+							});
+						} else {
+							if ($('.item-list').is(":visible")) {
+								$(".item-list ").hide();
+
+							} else {
+								$(".item-list").hide();
+								selectKustom.find(".item-list").show();
+								$(".item-list").css({
+									"visibility": "visible"
+								});
+
+							}
+						}
+						firstToggle = 1;
+
 					}
 
-					toggled = !toggled;
 				}
-				
+
 				e.stopPropagation();
 
-			});	
-			
-			$(document).click(function (event) {
-				if (!$(event.target).closest('.item-list').length && !$(event.target).is('.item-list')) {
+
+			});
+
+			$(document).click(function (e) {
+				if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
 					if ($('.item-list').is(":visible")) {
-						toggled = !toggled;
 						$(".item-list ").hide();
 					}
 				}
-				
-				console.log(toggled);
+
+
 			});
 
 			//list item will be closed as click on each item and then it will bee added to holder
@@ -200,12 +216,10 @@
 
 				if (!$(this).hasClass("active-item")) {
 
-					//selectKustom.find(".item-list").hide();
-					//toggled = !toggled;
 					addItemToHolder(this);
 					$(this).addClass("active-item");
 					countHiddenItems();
-				}else{
+				} else {
 					removeItemFromHolder($(this));
 					$(this).removeClass("active-item");
 					countHiddenItems();
@@ -241,10 +255,10 @@
 					});
 
 					$(_currentItem).remove();
-					
+
 					countHiddenItems();
-					
-					if(selectKustom.find(".item-counter").text() === ''){
+					firstClick = 0;
+					if (selectKustom.find(".item-counter").text() === '') {
 						selectKustom.find(".show-less").trigger('click');
 					}
 				});
