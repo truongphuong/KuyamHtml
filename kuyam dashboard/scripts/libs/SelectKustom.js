@@ -92,7 +92,7 @@
 					} // end else
 				} // end for
 
-				selectKustom.find(".item-holder ul li").removeClass("active-item");
+				selectKustom.find(".item-holder ul li").removeClass("active");
 
 			} // end countHiddenItems func
 
@@ -152,7 +152,7 @@
 			function initSelectedItemsFromList() {
 
 				selectKustom.find(".item-list ul li").each(function () {
-					if ($(this).hasClass("active-item")) {
+					if ($(this).hasClass("active")) {
 						selectKustom.find(".item-holder label").hide();
 						addItemToHolder(this);
 						countHiddenItems();
@@ -214,14 +214,14 @@
 			//list item will be closed as click on each item and then it will bee added to holder
 			selectKustom.find(".item-list li").on("click", function () {
 
-				if (!$(this).hasClass("active-item")) {
+				if (!$(this).hasClass("active")) {
 
 					addItemToHolder(this);
-					$(this).addClass("active-item");
+					$(this).addClass("active");
 					countHiddenItems();
 				} else {
 					removeItemFromHolder($(this));
-					$(this).removeClass("active-item");
+					$(this).removeClass("active");
 					countHiddenItems();
 				}
 
@@ -249,7 +249,7 @@
 
 					selectKustom.find(".item-list ul li").each(function () {
 						if ($(this).data('value') == _currentItem.data('value')) {
-							$(this).removeClass('active-item');
+							$(this).removeClass('active');
 							return;
 						}
 					});
