@@ -47,7 +47,7 @@
 	top: 0;
 	width: 6px;
 	height: 40px;
-	background:url(../images/icon_next_black.png) center center no-repeat;
+	background:url(./images/icon_next_black.png) center center no-repeat;
 	background-size: 6px auto;
 	-webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -99,9 +99,7 @@
 
 
 /* item list */
-.on-device .select-kustom .item-list{
-	overflow-y:auto;
-}
+
 .select-kustom .item-list {
 	border: 1px solid #000;
 	border-top-color:#acacac;
@@ -113,7 +111,7 @@
 	width: 100%;
 	background: #ffffff;
 	overflow: hidden;
-	max-height: 175px;
+	height: 360px;
 }
 
 .select-kustom .item-list li {
@@ -127,13 +125,13 @@
 	background-color: #f5f5f5;
 }
 
-.select-kustom li.active-item,
-.select-kustom li.active-item:hover {
+.select-kustom li.active,
+.select-kustom li.active:hover {
 	background-color: #95be31;
 	position: relative;
 	color: #fff;
 }
-.select-kustom li.active-item:after {
+.select-kustom li.active:after {
 	content: "";
 	position: absolute;
 	color: #292929;
@@ -141,6 +139,6 @@
 	top: 0;
 	width: 14px;
 	height: 100%;
-	background:url(../images/icon_mark.png) center center no-repeat;
+	background:url(./images/icon_mark.png) center center no-repeat;
 	background-size: 14px auto;
 }
