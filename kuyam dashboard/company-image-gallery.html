@@ -67,34 +67,35 @@
 
 	<style>
 		.list-photo-thumbnails {
-			width: 700px !important;
+			max-width: 580px !important;
 			overflow: hidden;
+			height: auto;
+			position: relative;
 		}
 		
 		#lightSlider li {
-			width: 85px !important;
+			text-align: left;
+			height: 210px;
 		}
 		
-		.lSPager {
-			display: none;
+		#lightSlider img {
+			max-height: 210px;
+			width: auto;
+			height: 195px;
 		}
 		
-		.lSPrev {
-			width: 0 !important;
-			height: 0 !important;
-			border-style: solid;
-			border-width: 10px 10px 10px 0;
-			border-color: transparent #000000 transparent transparent;
-			top: 65%;
+		#lightSlider .active img{
+			border: none;
 		}
 		
-		.lSNext {
-			width: 0 !important;
-			height: 0 !important;
-			border-style: solid;
-			border-width: 10px 0 10px 10px;
-			border-color: transparent transparent transparent #000000;
-			top: 65%;
+		.photo-detail {
+			position: absolute;
+			left: 250px;
+			top: 0px;
+			background-color: #ffffff;
+			height: 200px;
+			width: 360px;
+			padding: 10px 10px;
 		}
 	</style>
 
@@ -297,49 +298,47 @@
 									<p>Showing search results for: <b>Yoga</b></p>
 								</div>
 
-								<div class="col-xs-12 col-sm-4 photo-sceenshot">
-									<img src="content/photos/photo1.jpg" alt="" />
-								</div>
 
-								<div class="col-xs-12 col-sm-8 photo-detail">
-									<label class="form-label">Girl meditating in pose of lotus on beach</label>
-									<ul>
-										<li>Size: 1256px x838</li>
-										<li>Price: $0.99</li>
-										<li>Tags: People, Activity, Lifestyle, Nature</li>
-									</ul>
-									<input type="button" value="Add to cart" class="btn btn-add-cart">
-								</div>
+
 
 
 								<div class="col-xs-12 col-sm-12">
 									<div class="list-photo-thumbnails">
-										<ul id="lightSlider">
-											<li class="active"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+										<ul id="lightSlider" class="gallery list-unstyled cS-hidden">
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
 										</ul>
 
 									</div>
 
+									<div class=" photo-detail">
+										<label class="form-label">Girl meditating in pose of lotus on beach</label>
+										<ul>
+											<li>Size: 1256px x838</li>
+											<li>Price: $0.99</li>
+											<li>Tags: People, Activity, Lifestyle, Nature</li>
+										</ul>
+										<input type="button" value="Add to cart" class="btn btn-add-cart">
+									</div>
 
 								</div>
 
@@ -983,17 +982,17 @@
 	<script>
 		$(document).ready(function () {
 			$("#lightSlider").lightSlider({
+				gallery: true,
 				item: 1,
-				autoWidth: false,
-				slideMove: 1, // slidemove will be 1 if loop is true
+				thumbItem: 6,
+				thumbMargin: 9,
 				slideMargin: 10,
-
-
-				controls: true,
-				prevHtml: '',
-				nextHtml: '',
-
-
+				speed: 500,
+				auto: false,
+				loop: false,
+				onSliderLoad: function () {
+					$('#lightSlider').removeClass('cS-hidden');
+				}
 			});
 		});
 	</script>
