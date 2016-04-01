@@ -52,7 +52,9 @@
 	<!-- owl carousel CSS -->
 	<link rel="stylesheet" type="text/css" href="content/css/owl.carousel.css" />
 	<link rel="stylesheet" type="text/css" href="content/css/owl.theme.css" />
-	<link rel="stylesheet" type="text/css" href="content/css/lightslider.css" />
+
+
+	<link href="content/css/jquery.bxslider.css" rel="stylesheet" />
 
 
 	<!-- SelectKustom CSS -->
@@ -67,89 +69,28 @@
 
 	<style>
 		.list-photo-thumbnails {
-			max-width: 580px !important;
 			overflow: hidden;
-			height: auto;
-			position: relative;
+			float: left;
+			max-width: 100% !important;
+			height: 60px;
 		}
 		
-		.list-photo-thumbnails .lSGallery img {
-			height: 60px !important;
-			width: 88px !important;
-			max-height: 60px;
+		.list-photo-thumbnails li {
+			width: auto !important;
 		}
 		
-		#lightSlider li {
-			text-align: left;
-			height: 220px;
-			overflow: hidden;
-			text-align: center;
-		}
-		
-		#lightSlider img {
-			max-height: 210px;
+		.list-photo-thumbnails img {
 			width: auto;
 		}
-		
-		#lightSlider .active img {
-			border: none;
-		}
-		/* list-photo-thumbnails-cart */
 		
 		.list-photo-thumbnails-cart {
 			float: none;
 			width: 100%;
-			max-width: 100% !important;
 		}
 		
 		.list-photo-thumbnails-cart li {
 			margin-bottom: 10px;
 			width: auto !important;
-			margin-right: 10px;
-			float: left;
-			position: relative;
-		}
-		
-		.list-photo-thumbnails-cart img {
-			height: 58px;
-			width: auto;
-		}
-		
-		.list-photo-thumbnails-cart li:hover > .btn-close{
-			display: block;
-		}
-		
-		.list-photo-thumbnails-cart  .btn-close{
-		
-			width: 20px;
-			height: 20px;
-			line-height: 20px;
-			text-align: center;
-			background-color: #999999;
-			color: #ffffff;
-			position: absolute;
-			top: -10px;
-			right: -10px;			
-			cursor: pointer;
-			display: none;
-			border-radius: 3px !important;
-			
-		}
-		/* main photo information */
-		
-		.photo-bg-responsive {
-			background-repeat: no-repeat;
-			background-size: contain;
-			height: 200px;
-			background-position: center;
-			border: 1px solid #eee;
-			overflow: hidden;
-		}
-		
-		.photo-main {
-			width: 26%;
-			float: left;
-			margin-bottom: 20px;
 		}
 		
 		.photo-detail {
@@ -159,6 +100,21 @@
 			padding: 10px 10px;
 			float: left;
 			text-align: left;
+		}
+		
+		.photo-main {
+			width: 26%;
+			float: left;
+			margin-bottom: 20px;
+		}
+		
+		.photo-main li {
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 200px;
+			background-position: center;
+			overflow: hidden;
+			width: 100%;
 		}
 	</style>
 
@@ -349,28 +305,44 @@
 							<!-- .payment-section -->
 							<section class="purchase-stock-photos-section">
 
-
-
 								<div class="col-xs-12 col-sm-5">
 									<label class="form-label" for="txtEmail">Purchasse stock photos</label>
 									<input type="text" class="form-control txt-search" id="txtEmail" placeholder="Search stock photos">
 								</div>
-
 
 								<div class="col-xs-12 col-sm-12 show-result">
 									<p>Showing search results for: <b>Yoga</b></p>
 								</div>
 
 
-
-
-
 								<div class="col-xs-12 col-sm-12">
-
 
 									<div class="photo-main">
 
-										<div class="photo-bg-responsive" style="background-image:url(content/photos/photo1.jpg);"></div>
+										<ul class="bxslider">
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+											<li style="background-image:url(content/photos/photo1.jpg);"></li>
+											<li style="background-image:url(content/photos/photo2.jpg);"></li>
+											<li style="background-image:url(content/photos/photo3.jpg);"></li>
+										</ul>
+
 
 									</div>
 									<div class=" photo-detail">
@@ -379,6 +351,7 @@
 											<li>Size: 1256px x838</li>
 											<li>Price: $0.99</li>
 											<li>Tags: People, Activity, Lifestyle, Nature</li>
+
 										</ul>
 										<input type="button" value="Add to cart" class="btn btn-add-cart">
 									</div>
@@ -386,57 +359,70 @@
 									<div class=clearfix></div>
 
 									<div class="list-photo-thumbnails">
-										<ul id="lightSlider" class="gallery list-unstyled cS-hidden">
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo3.jpg"><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo3.jpg"><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-										</ul>
+
+
+										<div id="bx-pager" class="slider">
+											<a data-slide-index="0" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="1" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="2" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="3" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="4" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="5" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="6" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="7" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="8" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="9" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="10" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="11" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="12" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="13" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="14" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="15" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="16" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="17" href=""><img src="content/photos/photo3.jpg" /></a>
+											<a data-slide-index="18" href=""><img src="content/photos/photo1.jpg" /></a>
+											<a data-slide-index="19" href=""><img src="content/photos/photo2.jpg" /></a>
+											<a data-slide-index="20" href=""><img src="content/photos/photo3.jpg" /></a>
+										</div>
 
 									</div>
 
 
 								</div>
 
+
 								<div class="col-xs-12 col-sm-12">
 									<div class="your-cart">
 										<label class="form-label txt-cart" for="txtEmail">Your cart</label>
-										<ul class="list-photo-thumbnails-cart">
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
+										<ul class="list-photo-thumbnails list-photo-thumbnails-cart">
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+
 
 										</ul>
 										<div class="clearfix"></div>
@@ -1065,25 +1051,15 @@
 	</script>
 	<!-- InstanceEndEditable -->
 
+	<script src="scripts/libs/jquery.bxslider.min.js"></script>
 
-	<script src="scripts/libs/lightslider.min.js"></script>
 	<script>
-		$(document).ready(function () {
-			$("#lightSlider").lightSlider({
-				gallery: true,
-				item: 1,
-				thumbItem: 6,
-				thumbMargin: 8,
-				slideMargin: 10,
-				speed: 500,
-				auto: false,
-				loop: false,
-				onSliderLoad: function () {
-					$('#lightSlider').removeClass('cS-hidden');
-				}
-			});
-
-
+		$('.bxslider').bxSlider({
+			pagerCustom: '#bx-pager',
+			hideControlOnEnd: 'false',
+			swipeThreshold: 'true',
+			oneToOneTouch: 'true',
+			pagerSelector: 'true'
 		});
 	</script>
 
