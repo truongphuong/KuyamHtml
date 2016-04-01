@@ -67,89 +67,55 @@
 
 	<style>
 		.list-photo-thumbnails {
-			max-width: 580px !important;
+			width: 580px;
 			overflow: hidden;
 			height: auto;
-			position: relative;
+			float: left;
+			max-width: 100% !important;
 		}
-		
-		.list-photo-thumbnails .lSGallery img {
-			height: 60px !important;
-			width: 88px !important;
-			max-height: 60px;
-		}
-		
-		#lightSlider li {
-			text-align: left;
-			height: 220px;
-			overflow: hidden;
-			text-align: center;
-		}
-		
-		#lightSlider img {
-			max-height: 210px;
-			width: auto;
-		}
-		
-		#lightSlider .active img {
-			border: none;
-		}
-		/* list-photo-thumbnails-cart */
 		
 		.list-photo-thumbnails-cart {
 			float: none;
 			width: 100%;
-			max-width: 100% !important;
 		}
 		
 		.list-photo-thumbnails-cart li {
 			margin-bottom: 10px;
 			width: auto !important;
-			margin-right: 10px;
-			float: left;
-			position: relative;
 		}
 		
-		.list-photo-thumbnails-cart img {
-			height: 58px;
+		.list-photo-thumbnails li {
+			width: auto !important;
+		}
+			
+		
+		#lightSlider li {
+			text-align: left;
+			height: 59px;
+			overflow: hidden;
+			width: 85px !important;
+		}
+		
+		#lightSlider img {
+			width: 100%;
+			height: 85px;
+		}
+		
+		.list-photo-thumbnails .lSGallery img {
+			height: 59px !important;
+			width: 85px;
+		}
+		
+		#lightSlider .active img {
+			border: none;
+		}
+		
+		.list-photo-thumbnails img {
 			width: auto;
 		}
 		
-		.list-photo-thumbnails-cart li:hover > .btn-close{
-			display: block;
-		}
-		
-		.list-photo-thumbnails-cart  .btn-close{
-		
-			width: 20px;
-			height: 20px;
-			line-height: 20px;
-			text-align: center;
-			background-color: #999999;
-			color: #ffffff;
-			position: absolute;
-			top: -10px;
-			right: -10px;			
-			cursor: pointer;
-			display: none;
-			border-radius: 3px !important;
-			
-		}
-		/* main photo information */
-		
-		.photo-bg-responsive {
-			background-repeat: no-repeat;
-			background-size: contain;
-			height: 200px;
-			background-position: center;
-			border: 1px solid #eee;
-			overflow: hidden;
-		}
-		
-		.photo-main {
-			width: 26%;
-			float: left;
-			margin-bottom: 20px;
+		#lightSlider .gallery {
+			display: none !important;
 		}
 		
 		.photo-detail {
@@ -160,6 +126,35 @@
 			float: left;
 			text-align: left;
 		}
+		
+		.photo-main {
+			width: 26%;
+			float: left;
+			margin-bottom: 20px;
+		}
+		
+		.lSSlideOuter .lSPager.lSpg {
+			display: none !important;
+		}
+		
+		.lightSlider.lsGrab > * {
+			cursor: pointer;
+		}
+		.photo-bg-responsive{
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 200px;
+			background-position: center;
+			border: 1px solid #eee;
+			overflow: hidden;
+			
+		}
+		.lSAction > a{
+			background-image: url('content/images/controls.png');
+		
+		}
+		
+		
 	</style>
 
 </head>
@@ -349,24 +344,17 @@
 							<!-- .payment-section -->
 							<section class="purchase-stock-photos-section">
 
-
-
 								<div class="col-xs-12 col-sm-5">
 									<label class="form-label" for="txtEmail">Purchasse stock photos</label>
 									<input type="text" class="form-control txt-search" id="txtEmail" placeholder="Search stock photos">
 								</div>
-
 
 								<div class="col-xs-12 col-sm-12 show-result">
 									<p>Showing search results for: <b>Yoga</b></p>
 								</div>
 
 
-
-
-
 								<div class="col-xs-12 col-sm-12">
-
 
 									<div class="photo-main">
 
@@ -386,28 +374,28 @@
 									<div class=clearfix></div>
 
 									<div class="list-photo-thumbnails">
-										<ul id="lightSlider" class="gallery list-unstyled cS-hidden">
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo3.jpg"><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo3.jpg"><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo2.jpg"><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li data-thumb="content/photos/photo1.jpg"><img src="content/photos/photo1.jpg" alt="" /></li>
+										<ul id="lightSlider" class="">
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
 										</ul>
 
 									</div>
@@ -415,28 +403,39 @@
 
 								</div>
 
+
 								<div class="col-xs-12 col-sm-12">
 									<div class="your-cart">
 										<label class="form-label txt-cart" for="txtEmail">Your cart</label>
-										<ul class="list-photo-thumbnails-cart">
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /><div class='btn-close'>x</div></li>
+										<ul class="list-photo-thumbnails list-photo-thumbnails-cart">
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo2.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo3.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+											<li><img src="content/photos/photo1.jpg" alt="" /></li>
+
 
 										</ul>
 										<div class="clearfix"></div>
@@ -1070,20 +1069,28 @@
 	<script>
 		$(document).ready(function () {
 			$("#lightSlider").lightSlider({
-				gallery: true,
 				item: 1,
-				thumbItem: 6,
-				thumbMargin: 8,
-				slideMargin: 10,
+				thumbItem: 1,
+				thumbMargin: 1,
+				slideMargin: 11,
 				speed: 500,
 				auto: false,
 				loop: false,
-				onSliderLoad: function () {
-					$('#lightSlider').removeClass('cS-hidden');
-				}
+				keyPress: false,
+				controls: true,
+				prevHtml: '',
+				nextHtml: ''
+
 			});
 
 
+			$('.lslide').click(function () {
+
+				var _link = "background-image:url(" + $(this).find("img").attr("src") + ");"				
+				$('.photo-main .photo-bg-responsive').attr("style", _link);
+				
+				
+			});
 		});
 	</script>
 

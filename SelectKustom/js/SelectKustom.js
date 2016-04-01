@@ -19,7 +19,7 @@
 			//add more UI to HTML code
 			selectKustom.find(".item-holder").append("<span class='item-counter'>0</span>");
 			selectKustom.find(".item-holder").append("<ul></ul>");
-			selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
+			//selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
 			selectKustom.find(".show-less").hide();
 			selectKustom.find(".item-counter").hide();
 			selectKustom.find(".item-holder").append("<label></label>");
@@ -27,8 +27,6 @@
 
 			var currentElementTop = 0;
 
-			//detect first click on holder
-			var firstClick = 0;
 
 			//get actual height of item holder
 			var heightItemHolder = selectKustom.find(".item-holder").outerHeight();
@@ -48,13 +46,11 @@
 				totalRestItem = 0;
 				currentElementTop = 0;
 
-				if (firstClick === 0) {
-					totalItem = selectKustom.find(".item-holder li").size();
-				} else {
-					totalItem = selectKustom.find(".item-holder li").size() - 1;
-				}
 
-				if (totalItem > 1) {
+				totalItem = selectKustom.find(".item-holder li").size();
+
+
+				if (totalItem > 0) {
 					selectKustom.find(".item-holder label").hide();
 				} else {
 					selectKustom.find(".item-holder label").show();
@@ -70,7 +66,7 @@
 
 					currentElementTop = $(_element).offset().top;
 
-					if (holderPositionTop < currentElementTop) {
+					if (holderPositionTop < currentElementTop && $(_element).attr('class') != "show-less") {
 
 						totalRestItem = totalItem - i;
 
@@ -92,7 +88,7 @@
 					} // end else
 				} // end for
 
-				selectKustom.find(".item-holder ul li").removeClass("active-item");
+				selectKustom.find(".item-holder ul li").removeClass("active");
 
 			} // end countHiddenItems func
 
@@ -107,15 +103,14 @@
 					selectKustom.find(".item-holder").css({
 						"height": "auto"
 					});
-					firstClick = 1;
+
 					selectKustom.find(".item-counter").css({
 						"visibility": "hidden"
 					});
 
-					selectKustom.find(".show-less").remove();
+
 					//append and show this tag to last 
 					selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
-					selectKustom.find(".show-less").show();
 					selectKustom.find(".item-list").hide();
 
 					//show less all hidden items as click on last item with text "show less"
@@ -125,13 +120,14 @@
 						selectKustom.find(".item-holder").css({
 							"height": heightItemHolder
 						});
-						firstClick = 0;
 
-						selectKustom.find(".show-less").hide();
+
+						selectKustom.find(".show-less").remove();
 						selectKustom.find(".item-list").hide();
 						selectKustom.find(".item-counter").css({
 							"visibility": "visible"
 						});
+						countHiddenItems();
 
 					});
 
@@ -152,7 +148,7 @@
 			function initSelectedItemsFromList() {
 
 				selectKustom.find(".item-list ul li").each(function () {
-					if ($(this).hasClass("active-item")) {
+					if ($(this).hasClass("active")) {
 						selectKustom.find(".item-holder label").hide();
 						addItemToHolder(this);
 						countHiddenItems();
@@ -214,14 +210,14 @@
 			//list item will be closed as click on each item and then it will bee added to holder
 			selectKustom.find(".item-list li").on("click", function () {
 
-				if (!$(this).hasClass("active-item")) {
+				if (!$(this).hasClass("active")) {
 
 					addItemToHolder(this);
-					$(this).addClass("active-item");
+					$(this).addClass("active");
 					countHiddenItems();
 				} else {
 					removeItemFromHolder($(this));
-					$(this).removeClass("active-item");
+					$(this).removeClass("active");
 					countHiddenItems();
 				}
 
@@ -249,7 +245,7 @@
 
 					selectKustom.find(".item-list ul li").each(function () {
 						if ($(this).data('value') == _currentItem.data('value')) {
-							$(this).removeClass('active-item');
+							$(this).removeClass('active');
 							return;
 						}
 					});
@@ -257,7 +253,7 @@
 					$(_currentItem).remove();
 
 					countHiddenItems();
-					firstClick = 0;
+
 					if (selectKustom.find(".item-counter").text() === '') {
 						selectKustom.find(".show-less").trigger('click');
 					}
