@@ -51,6 +51,9 @@
 <link rel="stylesheet" type="text/css" href="content/css/owl.carousel.css"/>
 <link rel="stylesheet" type="text/css" href="content/css/owl.theme.css"/>
 
+<!-- croppie CSS -->
+<link rel="stylesheet" type="text/css" href="content/css/croppie.css"/>
+
 <!-- SelectKustom CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/SelectKustom.css"/>
 
@@ -106,7 +109,7 @@
 							<div class="row logo-row">
 								<div class="col-xs-12">
 									<label class="form-label">Company logo</label>
-									<a title="" href="" class="company-logo">
+									<a title="" href="javascript:void(0);" class="company-logo" data-target="#cropPhotoModal" data-toggle="modal">
 										upload image
 										<span class="default-logo" style="background-image:url(content/photos/photo1.jpg);"></span>
 									</a>
@@ -1758,7 +1761,34 @@
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#signOutModal -->
      
-    <!-- InstanceBeginEditable name="modal" -->
+    <!-- InstanceBeginEditable name="modal" -->		
+	<!-- .modal -->
+	<div id="cropPhotoModal" class="modal fade" role="dialog" aria-labelledby="cropPhotoModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-croppie modal-dialog-crop-photo">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="cropPhotoModalLabel" class="modal-title">Profile photo</h4>
+					<p><a id="uploadPhoto" class="link-upload" title="" href=""><span>Upload</span></a><input type="file" id="filePhoto" class="hide" /></p>
+				</div>
+				<div class="modal-body">				
+					<div id="croppiePhoto">
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<div class="row">
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-disagree" data-dismiss="modal" type="button">Cancel</button>
+						</div>
+						<div class="col-xs-6">
+							<button id="cropPhoto" class="btn btn-form btn-agree" data-dismiss="modal" type="button">Crop and Save</button>
+						</div>
+					</div>                    
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
     <!-- InstanceEndEditable --> 
     
     <!-- === SCRIPTS === -->  
@@ -1790,6 +1820,9 @@
     <!-- maskedinput js -->
 	<script type="text/javascript" src="scripts/libs/jquery.maskedinput.js"></script>
     
+    <!-- croppie js -->
+	<script type="text/javascript" src="scripts/libs/croppie.js"></script>
+    
     <!-- SelectKustom js -->
 	<script type="text/javascript" src="scripts/libs/SelectKustom.js"></script>
     
@@ -1800,6 +1833,111 @@
 	<script type="text/javascript" src="scripts/ui-profile.js"></script> 
 	<script type="text/javascript">
 		document.getElementById('navCompany').className = "active";
+		$(document).ready(function(){
+			var $croppieCaption = $('<div class="croppie-caption"><div class="icon icon-move"></div>Drag to crop</div>');
+			var $croppieSlider = $('<a class="croppie-zoom croppie-zoom-in">-</a><a class="croppie-zoom croppie-zoom-out">+</a>');
+			
+			function readFile(input, $croppieID) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();          
+					reader.onload = function (e) {
+						result = e.target.result;
+						arrTarget = result.split(';');
+						tipo = arrTarget[0];
+						if (tipo == 'data:image/jpeg' || tipo == 'data:image/png') {
+							$croppieID.croppie('bind', {
+								url: e.target.result
+							});
+							$('.upload-demo').addClass('ready');
+						} else {
+							alert('Accept only .jpg o .png image types');
+						}
+					}           
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+			
+			// Begin Photo
+			var $croppiePhoto = $('#croppiePhoto');	
+			
+			$croppiePhoto.croppie({
+				viewport: {
+					width: 228,
+					height: 228,
+					type: 'circle' //default 'square'
+				},
+				boundary: {
+					width: '100%',
+					height: 297
+				},
+				customClass: '',
+				update: function (cropper) {
+					
+				}
+			});
+			
+			$('#cropPhoto').on('click',function(e){
+				$croppiePhoto.croppie('result', 'canvas').then(function (result) {
+				   //$('#resultPhoto').attr('src', result);
+				});
+			})
+			$('#uploadPhoto').on('click',function(e){
+				e.preventDefault();
+				$('#filePhoto').click();
+			})
+			$('#filePhoto').on('change',function(e){
+				$croppiePhoto.find('.croppie-caption').remove();
+				var size = $('#filePhoto')[0].files[0].size;
+				var type = $('#filePhoto')[0].files[0].type;
+				if(type=='image/jpeg' || type=='image/png'){
+					if(size <= 1048576*3){
+						readFile(this, $croppiePhoto);
+					}else{
+						$('#error_message').html('File size is larger than 3Mb.');
+							
+					$('#ErrorModal').modal('show');
+					}
+				}else{
+					$('#error_message').html('Accept only .jpg o .png image types');
+							
+					$('#ErrorModal').modal('show');
+				}
+			});
+			
+			$('#cropPhotoModal').on('shown.bs.modal', function (){
+				$croppiePhoto.find('.cr-slider-wrap').append($croppieSlider);
+				//var srcImg = 'content/images/ui/Dollarphotoclub_73717743.jpg';
+				var srcImg = '';
+				$croppiePhoto.croppie('bind', srcImg);
+				if(srcImg === ''){
+					$croppiePhoto.find('.cr-viewport').append($croppieCaption);
+				}
+				$('#croppiePhoto').find('.croppie-zoom-in').on('click',function(e){
+					var objCurrent = $('#croppiePhoto').croppie('get');
+					var step = $('#croppiePhoto').find('.cr-slider').attr('step');
+					step = step * 10;
+					var zoom_in = 0;
+					if(objCurrent.zoom - step > 0){
+						zoom_in = objCurrent.zoom-step;
+					}
+					$('#croppiePhoto').croppie('setZoom',zoom_in);
+					$('#croppiePhoto').croppie('refresh');
+				});
+				$('#croppiePhoto').find('.croppie-zoom-out').on('click',function(e){
+					var objCurrent = $('#croppiePhoto').croppie('get');
+					var step = $('#croppiePhoto').find('.cr-slider').attr('step');
+					step = step * 10;
+					var max = $('#croppiePhoto').find('.cr-slider').attr('max');
+					var zoom_out = max;
+					if(objCurrent.zoom + step < max){
+						zoom_out = objCurrent.zoom + step;
+					}
+					$('#croppiePhoto').croppie('setZoom',zoom_out);
+					$('#croppiePhoto').croppie('refresh');
+				});
+			});
+			//End Photo
+		});
 	</script>
     <!-- InstanceEndEditable -->
         
