@@ -1199,21 +1199,33 @@
 
     .invoices-table .table > tbody > tr.odd {
         border-top: 1px solid #f0f0f0;
+        background:#fff;
     }
 
     .invoices-table .table > tbody > tr.even {
         background: #fafafa;
         border-top: 1px solid #f0f0f0;
     }
+    .invoices-table .table > tbody > tr.odd td,
+    .invoices-table .table > tbody > tr.even td{
+        line-height:100%;
+        padding-top:2px !important;
+        padding-bottom:2px !important;
+    }
 
-	.invoices-table .table > tbody > tr.detail-view  td{
-		padding:0 0 8px;
+	.invoices-table .table > tbody > tr.detail-view td{
+		padding:0 0 4px;
 		border:0 none;
+        line-height:100%;
 	}
-	.invoices-table .table > tbody > tr.detail-view  table{
+    .invoices-table .table > tbody > tr.detail-view td.cols-print{
+		vertical-align:bottom;
+        padding-bottom:4px;
+	}
+	.invoices-table .table > tbody > tr.detail-view table{
 		width:100%;
 	}
-	.invoices-table .table > tbody > tr.detail-view table  th{
+	.invoices-table .table > tbody > tr.detail-view table th{
 		width:12%;
 		padding:0 8px;
 	}
