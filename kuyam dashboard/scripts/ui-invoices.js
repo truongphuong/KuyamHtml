@@ -30,21 +30,18 @@ $(document).ready(function () {
             htmlVal += '<tr>';
             htmlVal += '<th valign="top">receipt #:</th>';
             htmlVal += '<td valign="top"><span>09976457</span></td>';
-            htmlVal += '<td></td>';
+            htmlVal += '<td rowspan="4" class="cols-print" valign="bottom" align="right"><button onClick="invoicesPrint()" class="btn btn-print"><span class="icon icon-print-white"></span> Print Invoice</button></td>';
             htmlVal += '</tr>';
             htmlVal += '<tr>';
             htmlVal += '<th valign="top">purchased on:</th>';
             htmlVal += '<td valign="top"><span>11/19/2015</span></td>';
-            htmlVal += '<td></td>';
             htmlVal += '<tr>';
             htmlVal += '<th valign="top">status:</th>';
             htmlVal += '<td valign="top"><span>confirmed</span></td>';
-            htmlVal += '<td></td>';
             htmlVal += '</tr>';
             htmlVal += '<tr>';
             htmlVal += '<th valign="top">payment:</th>';
             htmlVal += '<td valign="top"><span>paypal, gift card<br />Victoria Rodriguez</span></td>';
-            htmlVal += '<td valign="bottom" align="right"><button class="btn btn-print"><span class="icon icon-print-white"></span> Print Invoice</button></td>';
             htmlVal += '</tr>';
             htmlVal += '</table>';
             return htmlVal;
@@ -64,3 +61,7 @@ $(document).ready(function () {
         $('.invoices-table').show();
     }
 });
+
+function invoicesPrint(){
+	window.print();
+}
