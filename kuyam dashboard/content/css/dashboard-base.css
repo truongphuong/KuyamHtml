@@ -151,10 +151,6 @@ body.pr0 {
     padding-right: 0 !important;
 }
 
-.print{
-	display:none !important;
-}
-
 /* =============================================================================
    Loading by css
    ========================================================================== */
@@ -1405,9 +1401,6 @@ textarea.form-control:focus {
     margin-bottom: 0;
     height: 59px;
 }
-.kuyam-header .bg{
-	width: 100%;
-}
 
     .kuyam-header .navbar-header {
         margin-left: 0;
@@ -1546,17 +1539,18 @@ textarea.form-control:focus {
 .subnav-content{
 	position:relative;
 	height:100%;
-	padding-top:55px;
+	padding-top:54px;
 	padding-bottom:10px;
 }
-.subnav-content .add-link{
+.subnav-content .add-link-section{
 	position:absolute;
 	top:0;
 	width:100%;
 	left:0;
-	font-family: ralewaybold, sans-serif;
-	display:block;
 	padding:16px 24px;
+}
+.subnav-content .add-link{
+	font-family: ralewaybold, sans-serif;
 	color:#292929;
 	text-decoration: underline;
 }
@@ -1585,6 +1579,14 @@ textarea.form-control:focus {
 .subnav-ul > li {
 	clear: both;
 }
+.subnav-ul > li > a:before, .subnav-ul > li > a:after {
+    content: "";
+    display: table;
+}
+
+.subnav-ul > li > a:after {
+    clear: both;
+}
 .subnav-ul > li > a{
 	display:block;
 	padding:5px 24px;
@@ -1592,7 +1594,11 @@ textarea.form-control:focus {
 	text-transform: uppercase;
 	font-family: ralewaysemibold, sans-serif;
 	color:#292929;
+    zoom: 1;
 }
+    .subnav-ul > li > a:hover {
+        background:#dcdcdc;
+    }
 .subnav-ul > li > a .text{
 	font-size:.8125em;
 	float:left;
@@ -1602,8 +1608,9 @@ textarea.form-control:focus {
 }
 .subnav-ul > li > a .total{
 	color:#fff;
-	font-size:.75em;
-	line-height:10px;
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:.6em;
+	line-height:13px;
 	display: inline-block;
 	min-width:13px;
 	height:13px;
@@ -1638,13 +1645,15 @@ textarea.form-control:focus {
 	color:#999;
 	text-decoration: none;
 }
+    .subnav-ul > li li a:hover {
+        background:#dcdcdc;
+    }
 .subnav-ul > li li.active a{
 	color:#292929;
 }
 .subnav-ul[data-dropdown="false"] > li > a{	
 	text-transform: capitalize;
 }
-.subnav-ul[data-dropdown="false"] > li > a:hover,
 .subnav-ul[data-dropdown="false"] > li.active > a{
 	font-family:ralewaybold, sans-serif;
 }
