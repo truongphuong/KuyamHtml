@@ -501,8 +501,11 @@ function showPesonalInfo($this) {
 }
 
 function siteHeader() {
+	var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
     if (wScreen > 1023) {
-        $('.kuyam-header .navbar-header, .kuyam-header .navbar-nav > li').css({ 'width': wScreen / 7 });
+        $('.kuyam-header .navbar-header, .kuyam-header .navbar-nav > li').css({ 'width': w / 7 });
     } else {
         $('.kuyam-header .navbar-header, .kuyam-header .navbar-nav > li').css({ 'width': '' });
     }
