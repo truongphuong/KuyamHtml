@@ -56,7 +56,7 @@
     }
 
     .calendar-select-staff .bootstrap-select .bootstrap-scroll {
-        max-height: 170px;
+        max-height: 160px;
     }
 
 .calendar-select-status {
@@ -773,6 +773,29 @@
 .modal-edit-category .form-placeholder label {
     color: #989898;
 }
+.modal-edit-category .twitter-typeahead {
+    width: 100%;
+}
+.modal-edit-category .tt-menu{
+    border:1px solid #000;
+    border-top-color: #ddd;
+    width:100%;
+    top:39px !important;
+    background:#fff;
+    max-height:136px;
+    overflow: hidden;
+}
+.on-device .modal-edit-category .tt-menu{
+    overflow-y: auto;
+}
+.modal-edit-category .tt-suggestion {
+    padding:6px 12px;
+}
+.modal-edit-category .tt-suggestion:hover{
+   color:#fff;
+   background:#95be31;
+   cursor:pointer;
+}
 
 .modal-edit-category .selection-section {
     height: 335px;
@@ -796,6 +819,7 @@
         background: #f0f0f0;
         padding: 3px 7px;
         margin-bottom: 5px;
+        margin-right:5px;
     }
 
         .modal-edit-category .selection-section ul li .selection-choice-text {
@@ -859,6 +883,9 @@
 
 .working-section .active .working-time .form-timepicker {
     display: block;
+}
+.working-section .form-timepicker.dropdown .dropdown-section > footer{
+    background:#fff;
 }
 
 .contact-company-form .form-label {
@@ -1094,7 +1121,7 @@
 }
 
 .on-desktop .policy-section .bootstrap-select .bootstrap-scroll {
-    max-height: 153px;
+    max-height: 150px;
 }
 
 .policy-section .bootstrap-select .dropdown-menu > li > a {
@@ -1105,7 +1132,6 @@
 
 .invoices-table {
     display: none;
-    overflow-x: auto;
 }
 
     .invoices-table .btn-download {
@@ -1166,11 +1192,18 @@
 
     .invoices-table .fixed-table-toolbar .search {
         margin-bottom: 30px;
+		width:220px;
     }
 
     .invoices-table .bootstrap-table {
         min-width: 1034px;
     }
+	
+	.invoices-table .bootstrap-table .form-control{
+		background:url(../images/icon_search_black.png) 8px center no-repeat;
+		background-size:19px auto;
+		padding-left: 31px;
+	}
 
     .invoices-table .table {
         border-color: #f0f0f0;
@@ -1199,13 +1232,39 @@
 
     .invoices-table .table > tbody > tr.odd {
         border-top: 1px solid #f0f0f0;
+        background:#fff;
     }
 
     .invoices-table .table > tbody > tr.even {
         background: #fafafa;
         border-top: 1px solid #f0f0f0;
     }
+    .invoices-table .table > tbody > tr.odd td,
+    .invoices-table .table > tbody > tr.even td{
+        line-height:100%;
+        padding-top:2px !important;
+        padding-bottom:2px !important;
+    }
 
+	.invoices-table .table > tbody > tr.detail-view td{
+		padding:0 0 4px;
+		border:0 none;
+        line-height:100%;
+	}
+    .invoices-table .table > tbody > tr.detail-view td.cols-print{
+		vertical-align:bottom;
+        padding-bottom:4px;
+	}
+	.invoices-table .table > tbody > tr.detail-view table{
+		width:100%;
+	}
+	.invoices-table .table > tbody > tr.detail-view table th{
+		width:12%;
+		padding:0 8px;
+	}
+	.invoices-table .table > tbody > tr.detail-view table  td{
+		padding:0 8px;
+	}
         .invoices-table .table > tbody > tr.even + .detail-view {
             background: #fafafa;
         }
@@ -1332,8 +1391,10 @@
         color: #292929;
     }
 
-        .invoices-table .fixed-table-pagination .pagination a.disabled {
-            opacity: .75;
+        .invoices-table .fixed-table-pagination .pagination .disabled a,
+		.invoices-table .fixed-table-pagination .pagination .disabled a:hover{
+            opacity: .5;
+			background:transparent;
         }
 
     .invoices-table .pagination > li > a {
@@ -1379,12 +1440,12 @@
         background: #fafafa url(../images/icon_upload_gray.png) center center no-repeat;
         background-size: 48px auto;
         font-family: ralewaysemibold, sans-serif;
-        padding-top: 135px;
+        padding-top: 150px;
         text-align: center;
         font-size: .875em;
         text-transform: uppercase;
-        width: 200px;
-        height: 200px;
+        width: 246px;
+        height: 246px;
         position: relative;
         cursor: pointer;
         margin-bottom: 10px;
@@ -1401,6 +1462,8 @@
         left: 0;
         background: center center no-repeat;
         background-size: cover;
+        width: inherit;
+        height: inherit;
     }
 
     .profile-form .row {
@@ -1456,6 +1519,19 @@
     .company-image-gallery .lSSlide .photo-frame {
         height: 210px;
         background-size: contain;
+    }
+    .company-image-gallery .photo-box .progress-section {
+        position: relative;
+    }
+    .company-image-gallery .photo-box .progress {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        opacity: .8;
+    }
+    .company-image-gallery .photo-box .progress-bar {
+        background-color: #95be31;
     }
 
     .company-image-gallery .photo-box .btn-add-cart {
@@ -1598,11 +1674,6 @@
 /* end vuho edit*/
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-    .kuyam-header .navbar-brand {
-        width: 90%;
-        background-size: contain;
-    }
-
     .calendar-block {
         padding: 5px;
     }
@@ -1996,3 +2067,11 @@
     float: left;
     text-align: left;
 }
+
+/*.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #ffffff;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) {
+    background-color: #f9f9f9;
+}*/
