@@ -498,6 +498,11 @@ textarea.form-control:focus {
 
 .modal {
     background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+.modal-open .modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
 }
 
 .modal-backdrop {
@@ -1487,6 +1492,7 @@ textarea.form-control:focus {
 }
 .kuyam-page .kuyam-sidebar{
 	background: #dcdcdc;
+    min-width: 194px;
 }
 .kuyam-page .kuyam-content{
 	padding:34px 60px;
@@ -1539,6 +1545,7 @@ textarea.form-control:focus {
 	background: #f0f0f0;
 	overflow:hidden;
     float:left;
+    min-width: 194px;
 }
 
 .subnav-content{
@@ -2068,8 +2075,11 @@ textarea.form-control:focus {
             display: block;
             padding-left: 15px;
             padding-right: 15px;
-            border-left: 1px solid #fff;
         }
+		
+		.kuyam-header .navbar-right > li > a span{
+            border-left: 1px solid #fff;
+		}
 
         .kuyam-header .navbar-nav > li:first-child > a span,
         .kuyam-header .navbar-nav > li.active > a span {
