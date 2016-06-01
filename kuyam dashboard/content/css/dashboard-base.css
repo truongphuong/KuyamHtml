@@ -444,9 +444,13 @@ textarea.form-control:focus {
 }
 
 
-.ng-dirty.ng-invalid,.input-error {
+.invalid-forced.ng-invalid,.input-error {
     border-color: #ae422c;
 }
+
+/*.ng-dirty.ng-invalid, .input-error {
+    border-color: #ae422c;
+}*/
 
 /* =============================================================================
    Button
@@ -914,6 +918,12 @@ textarea.form-control:focus {
  .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn, 
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:focus, 
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:active {
+    border-color: #ae422c;
+}
+
+  .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn, 
+.form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:focus, 
+.form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:active {
     border-color: #ae422c;
 }
     .form-select .bootstrap-select .dropdown-menu {
@@ -1496,6 +1506,9 @@ textarea.form-control:focus {
 }
 .kuyam-page .kuyam-content{
 	padding:34px 60px;
+}
+.kuyam-page .kuyam-content-animate{
+    overflow:hidden;
 }
 
 .no-data{
