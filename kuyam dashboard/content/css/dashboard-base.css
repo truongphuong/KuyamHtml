@@ -2027,7 +2027,10 @@ textarea.form-control:focus {
         padding-left: 25px;
         padding-right: 25px;
     }
-
+    .modal-paypal .modal-body {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
     .modal-s .modal-dialog {
         width: 450px;
     }
@@ -2038,6 +2041,15 @@ textarea.form-control:focus {
 
     .modal-l .modal-dialog {
         width: 650px;
+    }
+    .modal-l .modal-dialog.modal-paypal {
+        width: 590px;
+    }
+    .modal-paypal .col-xs-6:last-child {
+        padding-left: 5rem;
+    }
+    .modal-paypal .lines {
+        padding-right: 4rem;
     }
 }
 
@@ -2389,4 +2401,48 @@ textarea.form-control:focus {
 .bootstrap-datetimepicker-widget table td span.active {
     background-color: #95be31;
     color: #fff;
+}
+.modal-paypal .col-xs-6 {
+    text-align: center;
+    padding-bottom: 3.5rem;
+    padding-top: 2.5rem;
+}
+.modal-paypal .lines {
+    border-right: 1px solid #ddd;
+}
+.modal-paypal .modal-header {
+    margin-bottom: 4rem;
+    margin-top: 0rem;
+}
+.modal-paypal .modal-header h4 {
+    font-weight: 400;
+    padding-bottom: 0;
+    margin-top: 0.51rem;
+    font-size:19px;
+    color:#4a4a4a;
+}
+.modal-paypal .modal-body {
+    padding-bottom: 2rem;
+}
+.modal-paypal .modal-content {
+    border-radius: 12px !important;
+}
+a[name="paymentmethod"] {
+    background: url(../images/paypal.png);
+    height: 111px;
+    width: 111px;
+    border: none;
+    text-indent: -9999px;
+    cursor: pointer;
+    display: inline-block;
+}
+a[name="creditcardtmethod"] {
+    background: url(../images/cards.png);
+    height: 93px;
+    width: 147px;
+    border: none;
+    text-indent: -9999px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
 }
