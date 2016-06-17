@@ -1,0 +1,110 @@
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print{
+    *{ 
+        background: transparent !important; 
+        color: black !important; 
+        text-shadow: none !important; 
+        filter:none !important; 
+        -ms-filter: none !important; 
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+    } /* Black prints faster: sanbeiji.com/archives/953 */
+
+    a, a:visited{
+        color: #444 !important;
+        text-decoration: underline;
+    }
+
+    a[href]:after{
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after{
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after{
+        content: "";
+    }
+
+    /* Don't show links for images, or javascript/internal links */
+    pre, blockquote{
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead{
+        display: table-header-group;
+    }
+
+    /* css-discuss.incutio.com/wiki/Printing_Tables */
+    tr, img{
+        page-break-inside: avoid;
+    }
+
+    img{
+        max-width: 100% !important;
+    }
+
+    @page{ 
+        margin: 0; 
+		padding:0;
+    }
+
+    p, h2, h3{
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3{
+        page-break-after: avoid;
+    }
+	
+	.print{
+		display:block !important;	
+	}
+	
+	/* Begin invoices page*/
+	.kuyam-header .navbar-collapse,
+	.kuyam-footer,
+	.kuyam-sidebar,
+	.invoices-table form,
+	.invoices-table .bootstrap-table,
+	.invoices-table .detail-view .btn-print{
+		display:none;
+	}
+	
+	.kuyam-header{
+		position:relative;
+		overflow: hidden;
+		display:block;
+	}
+	.kuyam-header .navbar-brand:after{
+		content:"" !important;
+	}
+	.kuyam-header .navbar-brand{
+		display:block;
+		position:absolute;
+		left: 0.5cm;
+		bottom:0;
+		width: 145px;
+		background: none;
+	}
+	.kuyam-header .navbar-brand .logo{
+		width:114px;
+	}
+	.kuyam-page .kuyam-content{
+		padding:15px 0.5cm;
+	}
+	.invoices-table{
+		width:100% !important;
+	}
+	.invoices-table .cols-datetime,
+	.invoices-table .table > tbody > tr.detail-view table th{
+		width:15%;
+	}
+	/* End invoices page*/
+}
