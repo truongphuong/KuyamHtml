@@ -2521,29 +2521,49 @@ a[name="creditcardtmethod"] {
     min-width: 190px;
 }
 
+.kuyam-subnav{
+    background: #f5f5f5;
+    min-width: 190px;
+}
 
-.kuyam-sidebar ul li a {
+
+.subnav-ul[data-dropdown="false"] > li > a .text {
+    float: none;
+    max-width: 100%;
+    margin-right: 0;
+     font: 13px Lato, sans-serif !important;
+}
+
+.kuyam-sidebar ul li a{
 	
-    font: 12px/140% Lato, sans-serif;
+    font: 13px Lato, sans-serif !important;
     text-transform: capitalize ;
-	font-weight:300;
+	font-weight:300 !important;
 	color: #242424 !important;
 	 padding-left: 45px;
 	 position: relative;	
  
 }
-.kuyam-sidebar ul li.active a, .kuyam-sidebar ul li a:hover {
+.kuyam-sidebar ul li.active a, .kuyam-sidebar ul li a:hover  {
     
 	 text-transform: capitalize ;
-	 font-weight:bold;
+	 font-weight:700 !important;
 
 }
+
+.subnav-ul[data-dropdown="false"] > li > a:hover {
+    
+	 text-transform: capitalize ;
+	 font-weight:700 !important;
+     background: #f0f0f0;
+}
+
 
 .dashboard_icon_profile{
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_profile.png) center center no-repeat;
 }
@@ -2551,7 +2571,7 @@ a[name="creditcardtmethod"] {
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_image_gallery.png) center center no-repeat;	
 
@@ -2560,7 +2580,7 @@ a[name="creditcardtmethod"] {
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_payment_booking.png) center center no-repeat;
 }
@@ -2568,7 +2588,7 @@ a[name="creditcardtmethod"] {
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_notifications.png) center center no-repeat;
 	
@@ -2577,7 +2597,7 @@ a[name="creditcardtmethod"] {
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_calendars.png) center center no-repeat;
 	
@@ -2586,7 +2606,7 @@ a[name="creditcardtmethod"] {
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	top: 18px;
+	top: 19px;
 	left: 24px;
 	background: url(../images/dashboard_icon_settings.png) center center no-repeat;
 }
@@ -2606,4 +2626,8 @@ a[name="creditcardtmethod"] {
 	top: 17px;
 	left: 17px;
 	
+}
+
+.link-terms{
+	color: #ffffff !important;	
 }
