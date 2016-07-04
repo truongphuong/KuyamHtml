@@ -28,6 +28,11 @@
     .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
         width: 180px;
     }
+	
+	.on-nicescroll .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
+		overflow-y: hidden !important;
+		max-height: 175px !important;
+    }
 
     .calendar-select-staff .bootstrap-select .dropdown-menu > li > a {
         font-family: Lato, sans-serif;
@@ -56,10 +61,10 @@
         background-color: #f5f5f5;
         color: #262626;
     }
-
-    .calendar-select-staff .bootstrap-select .bootstrap-scroll {
-        max-height: 160px;
-    }
+	
+	.on-nicescroll .calendar-select-staff ..wrap-dropdown-menu-inner{
+		max-height: 160px;
+	}
 
 .calendar-select-status {
     margin-left: -12px;
@@ -659,16 +664,18 @@
         clear: both;
     }
 
-.on-desktop .block-details .notes-section > div {
+.block-details .notes-section .notes-text {
     height: 88px;
     overflow: hidden;
     position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+.on-nicescroll .block-details .notes-section .wrap-dropdown-menu-inner{
+    height: 88px;
 }
 
-.on-device .block-details .notes-section > div {
-    height: 88px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+.on-nicescroll .block-details .notes-section .notes-text {
+    height: inherit;
 }
 
 .block-details .modal-footer {
@@ -1154,11 +1161,11 @@
         line-height: 120%;
     }
 
-.on-device .policy-section .bootstrap-select .dropdown-menu.inner {
+.policy-section .bootstrap-select .dropdown-menu.inner {
     max-height: 150px !important;
 }
 
-.on-desktop .policy-section .bootstrap-select .bootstrap-scroll {
+.on-nicescroll  .policy-section .wrap-dropdown-menu-inner {
     max-height: 150px;
 }
 

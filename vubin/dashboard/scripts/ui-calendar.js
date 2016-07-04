@@ -165,7 +165,7 @@ function more1023() {
             }
         });
 
-        if ($('#addCalendarModal').hasClass('in')) {
+        /*if ($('#addCalendarModal').hasClass('in')) {
             if ($('.kuyam-section').find('#addCalendarModal').length === 1) {
                 $('#addCalendarModal').appendTo('body');
 
@@ -176,7 +176,7 @@ function more1023() {
                 $('#addCalendarModal').css({ 'z-index': '' });
                 $('<div class="modal-backdrop fade in"></div>').appendTo('body');
             }
-        }
+        }*/
     }
 }
 
@@ -206,7 +206,7 @@ function less1024() {
             $('#attendeeModal').modal('show');
         });
 
-        if ($('#addCalendarModal').hasClass('in')) {
+        /*if ($('#addCalendarModal').hasClass('in')) {
             if ($('.kuyam-section').find('#addCalendarModal').length === 0) {
                 $('#addCalendarModal').appendTo('.kuyam-section');
 
@@ -237,11 +237,14 @@ function less1024() {
 
         $('#addCalendarModal .close').click(function () {
             $('.calendar-page').removeClass('hide');
-        });
+        });*/
     }
 }
 
 $(document).ready(function () {
+	/*$('#divStaffCalendar select').on('shown.bs.select', function (e) {
+		$('#iscrollStaffCalendar').niceScroll({touchbehavior:true});
+	});*/
 
     iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');
 
@@ -322,8 +325,9 @@ $(document).ready(function () {
         }
 
         $('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-iscroll', 'true');
-
+		
         iscrollSelectTabs(tabContentID);
+		
     });
 
     $('#tabsCalendar a[data-toggle="tab"]').on('shown.bs.tab', function (e) {

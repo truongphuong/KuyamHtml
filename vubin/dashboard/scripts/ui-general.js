@@ -63,74 +63,18 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
         $sectionID.find('.popover-title').click(function () {
             $modalID.modal('show');
         });
-
-        if (!isMobile.any()) {
-            var positionInsert = '#' + sectionID + ' .dropdown-menu.inner',
-				$sectionAppend = $(positionInsert);
-
-            $('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);
-            $sectionAppend.appendTo(scrollID);
-
-            $sectionID.find('select').on('shown.bs.select', function () {
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-                if (indexActive > 0) {
-                    $(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
-                } else {
-                    $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                }
-            });
-            $sectionID.find('.form-control').on('keydown', function (e) {
-                var liActive = $sectionID.find('.dropdown-menu.inner li.active');
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-
-                if (e.keyCode === 38) { // up	
-                    e.stopPropagation();
-                    if (liActive.prev().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.prev().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
-                    }
-                }
-
-                if (e.keyCode === 40) { // down	
-                    e.stopPropagation();
-                    if (liActive.next().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.next().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
-                    }
-                }
-            });
-
-            if ($(scrollID).data('IScroll')) {
-                return;
-            }
-
-            var selectScroll = new IScroll(scrollID, {
-                //keyBindings: true, 
-                mouseWheel: true,
-                scrollbars: true,
-                interactiveScrollbars: true,
-                shrinkScrollbars: 'clip',
-                fadeScrollbars: true
-            });
-
-            $(scrollID).data('IScroll', selectScroll);
-        }
+        
+		if (!isMobile.Windows()) {
+			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
+					{
+						bouncescroll: false
+					});
+			});
+		}
     }
 }
 
@@ -166,75 +110,19 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
             });
         });
 
-        $sectionID.find('.btn-personal').attr('onClick', 'showPesonalInfo(this)');
+        $sectionID.find('.btn-personal').attr('onClick', 'showPesonalInfo(this)');        
 
-        if (!isMobile.any()) {
-            var positionInsert = '#' + sectionID + ' .dropdown-menu.inner',
-				$sectionAppend = $(positionInsert);
-
-            $('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);
-            $sectionAppend.appendTo(scrollID);
-
-            $sectionID.find('select').on('shown.bs.select', function () {
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-                if (indexActive > 0) {
-                    $(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
-                } else {
-                    $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                }
-            });
-            $sectionID.find('.form-control').on('keydown', function (e) {
-                var liActive = $sectionID.find('.dropdown-menu.inner li.active');
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-
-                if (e.keyCode === 38) { // up	
-                    e.stopPropagation();
-                    if (liActive.prev().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.prev().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
-                    }
-                }
-
-                if (e.keyCode === 40) { // down	
-                    e.stopPropagation();
-                    if (liActive.next().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.next().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
-                    }
-                }
-            });
-
-            if ($(scrollID).data('IScroll')) {
-                return;
-            }
-
-            var selectScroll = new IScroll(scrollID, {
-                keyBindings: true,
-                mouseWheel: true,
-                scrollbars: true,
-                interactiveScrollbars: true,
-                shrinkScrollbars: 'clip',
-                fadeScrollbars: true
-            });
-
-            $(scrollID).data('IScroll', selectScroll);
-        }
+		if (!isMobile.Windows()) {
+			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
+					{
+						bouncescroll: false
+					});
+			});	
+		}
     }
 }
 
@@ -255,98 +143,31 @@ function iscrollSelect(sectionID, scrollName) {
         $sectionID.find('select').on('hide.bs.select', function () {
             $sectionID.find('.form-control').trigger('blur');
         });
-
-        if (!isMobile.any()) {
-            var positionInsert = '#' + sectionID + ' .dropdown-menu.inner',
-				$sectionAppend = $(positionInsert);
-
-            $('<div id="' + scrollName + '" class="bootstrap-scroll"></div>').insertBefore(positionInsert);
-            $sectionAppend.appendTo(scrollID);
-
-            $sectionID.find('select').on('shown.bs.select', function () {
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-                if (indexActive > 0) {
-                    $(scrollID).data('IScroll').scrollTo(0, (indexActive + 1) * distanceScroll, 0);
-                } else {
-                    $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                }
-            });
-            $sectionID.find('.form-control').on('keydown', function (e) {
-                var liActive = $sectionID.find('.dropdown-menu.inner li.active');
-                var indexActive = $sectionID.find('.dropdown-menu.inner li').filter('.active').index();
-                var indexFirstActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().data('original-index');
-                var indexLastActive = $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().data('original-index');
-
-                var distanceScroll = $(scrollID).data('IScroll').maxScrollY / (indexLastActive + 1);
-
-                if (e.keyCode === 38) { // up	
-                    e.stopPropagation();
-                    if (liActive.prev().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').last().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, $(scrollID).data('IScroll').maxScrollY, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.prev().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive - 1) * distanceScroll, 0);
-                    }
-                }
-
-                if (e.keyCode === 40) { // down	
-                    e.stopPropagation();
-                    if (liActive.next().length === 0) {
-                        liActive.removeClass('active');
-                        $sectionID.find('.dropdown-menu.inner li').filter(':not(.disabled):visible').first().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, 0, 0);
-                    } else {
-                        liActive.removeClass('active');
-                        liActive.next().addClass('active');
-                        $(scrollID).data('IScroll').scrollTo(0, (indexActive + 2) * distanceScroll, 0);
-                    }
-                }
-            });
-
-            if ($(scrollID).data('IScroll')) {
-                return;
-            }
-
-            var selectScroll = new IScroll(scrollID, {
-                keyBindings: true,
-                mouseWheel: true,
-                click: true,
-                scrollbars: true,
-                interactiveScrollbars: true,
-                shrinkScrollbars: 'clip',
-                fadeScrollbars: true
-            });
-
-            $(scrollID).data('IScroll', selectScroll);
-        }
+		
+		if (!isMobile.Windows()) {
+			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
+					{
+						bouncescroll: false
+					});
+			});
+		}
     }
 }
 
-function iscrollContent(sectionID) {
-    if (!isMobile.any()) {
-        var $sectionID = $(sectionID);
-
-        if ($sectionID.data('IScroll')) {
-            return;
-        }
-
-        var contentScroll = new IScroll(sectionID, {
-            keyBindings: true,
-            mouseWheel: true,
-            click: true,
-            scrollbars: true,
-            interactiveScrollbars: true,
-            shrinkScrollbars: 'clip',
-            fadeScrollbars: true
-        });
-
-        $sectionID.data('IScroll', contentScroll);
-    }
+function iscrollContent(sectionID) {    
+	if (!isMobile.Windows()) {
+		$(sectionID).find('.notes-text').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+		var heightOfDiv = $(sectionID + ' .notes-text').height();
+		$(sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfDiv);
+		$(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content', 
+		{
+			bouncescroll: false
+		}); 
+	}
 }
 
 function existSelect(sectionClass) {
@@ -515,8 +336,8 @@ function iscrollSelectK(sectionID, scrollName) {
     if ($(sectionID).length !== 0) {
         $(sectionID).selectKustom();
 
-        if (!isMobile.any()) {
-            if ($(scrollName).data('IScroll')) {
+        //if (!isMobile.any()) {
+            /*if ($(scrollName).data('IScroll')) {
                 return;
             }
 
@@ -526,11 +347,14 @@ function iscrollSelectK(sectionID, scrollName) {
                 scrollbars: true,
                 interactiveScrollbars: true,
                 shrinkScrollbars: 'clip',
-                fadeScrollbars: true
+                fadeScrollbars: true,
+				deceleration: 0,
+				bounceTime: 0
             });
 
-            $(scrollName).data('IScroll', selectScroll);
-        }
+            $(scrollName).data('IScroll', selectScroll);*/
+			$(scrollName).niceScroll({touchbehavior:true});
+        //}
     }
 }
 
@@ -543,6 +367,10 @@ $(document).ready(function () {
         $('html').addClass('on-device');
     } else {
         $('html').addClass('on-desktop');
+    }
+	
+	if (!isMobile.Windows()) {
+        $('html').addClass('on-nicescroll');
     }
 
     minHeightBody();

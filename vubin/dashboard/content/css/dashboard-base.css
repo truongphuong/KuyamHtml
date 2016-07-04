@@ -704,9 +704,15 @@ textarea.form-control:focus {
     min-height: inherit !important;
 }
 
-.on-device .bootstrap-select .dropdown-menu.inner {
+.bootstrap-select .dropdown-menu.inner {
     max-height: 175px !important;
 	-webkit-overflow-scrolling: touch;
+}
+
+.on-nicescroll .bootstrap-select .dropdown-menu.inner {
+    max-height: inherit !important;
+	overflow-y: hidden !important;
+	max-height: 100% !important;
 }
 
 .bootstrap-select.dropup .dropdown-menu {
@@ -757,7 +763,7 @@ textarea.form-control:focus {
     background-image: url(../images/icon_next_grey.png);
 }
 
-.on-desktop .bootstrap-select .dropdown-menu {
+.on-nicescroll .bootstrap-select .dropdown-menu {
     display: block;
     background-clip: padding-box;
     opacity: .3;
@@ -782,7 +788,7 @@ textarea.form-control:focus {
 	overflow: hidden !important;
 }
 
-.on-desktop .bootstrap-select.open .dropdown-menu {
+.on-nicescroll .bootstrap-select.open .dropdown-menu {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
@@ -792,10 +798,12 @@ textarea.form-control:focus {
     filter: alpha(opacity=100);
 }
 
-.on-desktop .bootstrap-select .bootstrap-scroll {
-    overflow: hidden;
-    max-height: 175px;
-    position: relative;
+.on-nicescroll .wrap-dropdown-menu-inner{
+	height: 175px;
+}
+
+.on-nicescroll .wrap-dropdown-menu-inner-content{
+	overflow-y: auto;
 }
 
 .bootstrap-select .popover-title {
