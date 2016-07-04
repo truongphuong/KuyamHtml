@@ -9,262 +9,399 @@
 
 (function ($) {
 
-	$.fn.selectKustom = function () {
+    function SelectKustom(item, options) {
+        this.options = $.extend({}, options);
+        this.item = $(item);
+        this.init();
+    };
 
-		this.each(function () {
+    SelectKustom.prototype = {
 
-			//init Object values
-			var selectKustom = $(this);
+        init: function () {
 
-			//add more UI to HTML code
-			selectKustom.find(".item-holder").append("<span class='item-counter'>0</span>");
-			selectKustom.find(".item-holder").append("<ul></ul>");
-			//selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
-			selectKustom.find(".show-less").hide();
-			selectKustom.find(".item-counter").hide();
-			selectKustom.find(".item-holder").append("<label></label>");
-			selectKustom.find(".item-holder label").text(selectKustom.data("title"));
+            var selectKustom = this;
 
-			var currentElementTop = 0;
+            if (selectKustom.item.find(".item-list ul li").size() == 0)
+                selectKustom.item.addClass('disabled');
 
+            //add more UI to HTML code
+            selectKustom.item.find(".item-holder").append("<span class='item-counter'>0</span>");
+            selectKustom.item.find(".item-holder").append("<ul></ul>");
+            //selectKustom.item.find(".item-holder ul").append("<li class='show-less'>show less</li>");
+            selectKustom.item.find(".show-less").hide();
+            selectKustom.item.find(".item-counter").hide();
+            selectKustom.item.find(".item-holder").append("<label></label>");
+            selectKustom.item.find(".item-holder label").text(selectKustom.item.data("title"));
 
-			//get actual height of item holder
-			var heightItemHolder = selectKustom.find(".item-holder").outerHeight();
-			//count total hidden items
-			var totalRestItem = 0;
-			var totalItem = 0;
+            $(".item-list").css({
+                "visibility": "hidden",
+                "border-width": 0
+            });
 
+            selectKustom.showMoreLess();
 
-			//after loading data to list, scroll must be invisible to iscroll calculate the scroll height
-			$(".item-list").css({
-				"visibility": "hidden"
-			});
+            selectKustom.item.find(".item-list ul li").each(function (e) {
 
-			//detect all hidden item and count up
-			function countHiddenItems() {
+                if ($(this).hasClass("active")) {
 
-				totalRestItem = 0;
-				currentElementTop = 0;
+                    selectKustom.item.find(".item-holder label").hide();
 
+                    selectKustom.addItemToHolder(this);
 
-				totalItem = selectKustom.find(".item-holder li").size();
+                    selectKustom.countHiddenItems();
+                }
+            });
 
+            selectKustom.item.find(".item-list li").on("click", function (e) {
 
-				if (totalItem > 0) {
-					selectKustom.find(".item-holder label").hide();
-				} else {
-					selectKustom.find(".item-holder label").show();
+                selectKustom.item.trigger('sk.modified');
 
-				}
+                if (!$(e.target).hasClass("active")) {
 
-				//get holder position top to compare to each other items		
-				var holderPositionTop = selectKustom.find(".item-holder ul").offset().top;
+                    selectKustom.addItemToHolder(e.target);
+                    $(e.target).addClass("active");
+                    selectKustom.countHiddenItems();
 
-				for (var i = 0; i < totalItem; i++) {
+                } else {
 
-					var _element = selectKustom.find(".item-holder li").eq(i);
+                    selectKustom.removeItemFromHolder($(e.target));
+                    $(e.target).removeClass("active");
+                    selectKustom.countHiddenItems();
+                }
 
-					currentElementTop = $(_element).offset().top;
+                if (selectKustom.item.find('.item-list').find('li').not(".active").length === 0) {
 
-					if (holderPositionTop < currentElementTop && $(_element).attr('class') != "show-less") {
+                    selectKustom.item.find('.item-list').css({
+                        "border-width": 0
+                    });
 
-						totalRestItem = totalItem - i;
+                } else {
 
-						selectKustom.find(".item-counter").text("+" + totalRestItem); //show total hidden items
-						selectKustom.find(".item-holder ul").css({
-							'padding-right': selectKustom.find(".item-counter").innerWidth()
-						});
-						selectKustom.find(".item-counter").show();
+                    selectKustom.item.find('.item-list').css({
+                        "border-width": 1
+                    });
+                }
 
-						break;
+                setTimeout(function () {
+                    selectKustom.item.data('IScroll').refresh();
+                }, 100);
+            });
 
-					} else {
-						selectKustom.find(".item-counter").text('');
-						selectKustom.find(".item-counter").hide();
-						selectKustom.find(".item-holder").css({
-							'padding-right': ''
-						});
+            var heightItemHolder = selectKustom.item.find(".item-holder").outerHeight();
+            var firstToggle = 0;
 
-					} // end else
-				} // end for
+            selectKustom.item.find(".item-holder").on("click", function (e) {
 
-				selectKustom.find(".item-holder ul li").removeClass("active");
+                e.stopPropagation();
 
-			} // end countHiddenItems func
+                if (heightItemHolder == selectKustom.item.find(".item-holder").outerHeight()) {
 
-			//event click to show more or less items in holder
-			showMoreLess();
+                    if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
 
-			function showMoreLess() {
 
-				//show more all hidden items when click on total hidden label
+                        if (selectKustom.item.find('.item-list').is(":visible") && firstToggle == 0) {
 
-				selectKustom.find(".item-counter").on("click", function () {
-					selectKustom.find(".item-holder").css({
-						"height": "auto"
-					});
+                            selectKustom.item.find(".item-list").hide();
+                            selectKustom.item.find(".item-list").show();
+                            selectKustom.item.find(".item-list").css({
+                                "visibility": "visible"
+                            });
 
-					selectKustom.find(".item-counter").css({
-						"visibility": "hidden"
-					});
+                        } else {
 
+                            if (selectKustom.item.find('.item-list').is(":visible")) {
 
-					//append and show this tag to last 
-					selectKustom.find(".item-holder ul").append("<li class='show-less'>show less</li>");
-					selectKustom.find(".item-list").hide();
+                                selectKustom.item.find(".item-list").hide();
 
-					//show less all hidden items as click on last item with text "show less"
-					selectKustom.find(".show-less").on("click", function (e) {
+                            } else {
 
-						e.stopPropagation();
-						selectKustom.find(".item-holder").css({
-							"height": heightItemHolder
-						});
+                                //selectKustom.item.find(".item-list").hide();
+                                selectKustom.item.find(".item-list").show();
+                                selectKustom.item.find(".item-list").css({
+                                    "visibility": "visible"
+                                });
 
+                            }
+                        }
 
-						selectKustom.find(".show-less").remove();
-						selectKustom.find(".item-list").hide();
-						selectKustom.find(".item-counter").css({
-							"visibility": "visible"
-						});
-						countHiddenItems();
+                        if (selectKustom.item.find('.item-list').find('li').not(".active").length === 0) {
+                            selectKustom.item.find('.item-list').css({
+                                "border-width": 0
+                            });
+                        } else {
+                            selectKustom.item.find('.item-list').css({
+                                "border-width": 1
+                            });
+                        }
 
-					});
+                        firstToggle = 1;
+                    }
 
-					countHiddenItems();
+                    if (selectKustom.item.data('IScroll')) {
+                        setTimeout(function () {
+                            selectKustom.item.data('IScroll').refresh();
+                        }, 200);
+                    }
+                }
 
-				});
-			}
 
-			//responsive event
-			window.addEventListener('resize', function (e) {
-				countHiddenItems();
+            });
 
-			});
+            $(document).click(function (e) {
+                if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
+                    if ($('.item-list').is(":visible")) {
+                        $(".item-list ").hide();
+                    }
+                }
 
-			//count init items list
-			initSelectedItemsFromList();
+            });
+        },
+        addItemToHolder: function (item) {
 
-			function initSelectedItemsFromList() {
+            var selectKustom = this;
 
-				selectKustom.find(".item-list ul li").each(function () {
-					if ($(this).hasClass("active")) {
-						selectKustom.find(".item-holder label").hide();
-						addItemToHolder(this);
-						countHiddenItems();
-					}
+            selectKustom.item.find(".item-holder ul").append(item.outerHTML);
 
-				});
+            //selectKustom.item.find(".item-holder ul li:last-child").append("<span class='btn-close'>x</span>");
 
-			}
+            selectKustom.item.find(".item-holder ul li:last-child").append(function () {
 
-			var firstToggle = 0;
+                return $("<span class='btn-close'>x</span>").click(function (e) {
 
-			selectKustom.find(".item-holder").on("click", function (e) {
+                    selectKustom.item.trigger('sk.modified');
 
+                    e.stopPropagation();
 
-				if (heightItemHolder == selectKustom.find(".item-holder").outerHeight()) {
+                    var _currentItem = $(this).parents("li");
 
-					if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
+                    $(this).remove();
 
-						if ($('.item-list').is(":visible") && firstToggle == 0) {
-							$(".item-list").hide();
-							selectKustom.find(".item-list").show();
-							$(".item-list").css({
-								"visibility": "visible"
-							});
-						} else {
-							if ($('.item-list').is(":visible")) {
-								$(".item-list ").hide();
+                    selectKustom.item.find(".item-list ul li").each(function () {
 
-							} else {
-								$(".item-list").hide();
-								selectKustom.find(".item-list").show();
-								$(".item-list").css({
-									"visibility": "visible"
-								});
+                        if ($(this).data('value') == _currentItem.data('value')) {
 
-							}
-						}
-						firstToggle = 1;
+                            $(this).removeClass('active');
 
-					}
+                            return;
+                        }
+                    });
 
-				}
+                    $(_currentItem).remove();
 
-				e.stopPropagation();
+                    //selectKustom.countHiddenItems();
 
+                    if (selectKustom.item.find(".item-counter").text() === '') {
 
-			});
+                        selectKustom.item.find(".show-less").trigger('click');
+                    }
 
-			$(document).click(function (e) {
-				if (!$(e.target).closest('.item-list').length && !$(e.target).is('.item-list')) {
-					if ($('.item-list').is(":visible")) {
-						$(".item-list ").hide();
-					}
-				}
+                    if (selectKustom.item.find('.item-list').find('li').not(".active").length === 0) {
 
+                        selectKustom.item.find('.item-list').css({
+                            "border-width": 0
+                        });
+                        selectKustom.item.find(".item-list").hide();
 
-			});
+                    } else {
 
-			//list item will be closed as click on each item and then it will bee added to holder
-			selectKustom.find(".item-list li").on("click", function () {
+                        selectKustom.item.find('.item-list').css({
+                            "border-width": 1,
+                            "visibility": "visible"
+                        });
 
-				if (!$(this).hasClass("active")) {
+                    }
 
-					addItemToHolder(this);
-					$(this).addClass("active");
-					countHiddenItems();
-				} else {
-					removeItemFromHolder($(this));
-					$(this).removeClass("active");
-					countHiddenItems();
-				}
+                    selectKustom.countHiddenItems();
 
-			});
+                    setTimeout(function () {
+                        selectKustom.item.data('IScroll').refresh();
+                    }, 200);
+                });
 
-			function removeItemFromHolder($selectedItem) {
-				selectKustom.find(".item-holder ul li").each(function () {
-					if ($(this).data('value') == $selectedItem.data('value')) {
-						$(this).remove();
-						return;
-					}
-				});
-			}
+            });
+            
+        },
+        countHiddenItems: function () {
 
-			//add and remove a item
-			function addItemToHolder(selectedItem) {
-				selectKustom.find(".item-holder ul").append(selectedItem.outerHTML);
-				selectKustom.find(".item-holder ul li:last-child").append("<span class='btn-close'>x</span>");
+            var selectKustom = this;
 
-				selectKustom.find(".item-holder li .btn-close").on("click", function (e) {
+            var totalRestItem = 0;
+            var currentElementTop = 0;
+            var totalItem = selectKustom.item.find(".item-holder li").size();
+           
+            if (totalItem > 0) {
+                selectKustom.item.find(".item-holder label").hide();
+            } else {
+                selectKustom.item.find(".item-holder label").show();
+            }
 
-					e.stopPropagation();
-					var _currentItem = $(this).parents("li");
-					$(this).remove();
+            selectKustom.item.find(".item-holder ul li").removeClass("active");
 
-					selectKustom.find(".item-list ul li").each(function () {
-						if ($(this).data('value') == _currentItem.data('value')) {
-							$(this).removeClass('active');
-							return;
-						}
-					});
+            //get holder position top to compare to each other items		
+            var holderPositionTop = selectKustom.item.find(".item-holder ul").offset().top;            
 
-					$(_currentItem).remove();
+            for (var i = 0; i < totalItem; i++) {
 
-					countHiddenItems();
+                var _element = selectKustom.item.find(".item-holder li").eq(i);
 
-					if (selectKustom.find(".item-counter").text() === '') {
-						selectKustom.find(".show-less").trigger('click');
-					}
-				});
+                currentElementTop = $(_element).offset().top;                
 
-			} // end addItemToHolder
+                if (holderPositionTop < currentElementTop && $(_element).attr('class') != "show-less") {
 
-		});
+                    totalRestItem = totalItem - i;
 
-		return this;
+                    selectKustom.item.find(".item-counter").text("+" + totalRestItem); //show total hidden items
 
-	};
+                    //selectKustom.item.find(".item-holder ul").css({
+                    //    'padding-right': selectKustom.item.find(".item-counter").innerWidth()
+                    //});
+
+                    selectKustom.item.find(".item-counter").show();
+
+                    break;
+
+                } else {
+
+                    selectKustom.item.find(".item-counter").text('');
+                    selectKustom.item.find(".item-counter").hide();
+                    //selectKustom.item.find(".item-holder").css({ 'padding-right': '' });
+
+                } // end else
+            } // end for
+
+            //selectKustom.item.find(".item-holder ul li").removeClass("active");
+        },
+        showMoreLess: function () {
+            var selectKustom = this;
+            //show more all hidden items when click on total hidden label
+
+            var heightItemHolder = selectKustom.item.find(".item-holder").outerHeight();
+
+            selectKustom.item.find(".item-counter").on("click", function () {
+                selectKustom.item.find(".item-holder").addClass('open');
+                //selectKustom.item.find(".item-holder").css({
+                //    "height": "auto"
+                //});
+
+                //selectKustom.item.find(".item-counter").css({
+                //    "visibility": "hidden"
+                //});
+
+                //append and show this tag to last 
+                selectKustom.item.find(".item-list").hide();
+                selectKustom.countHiddenItems();
+
+                selectKustom.item.find(".item-holder ul").append(function () {
+
+                    return $("<li class='show-less'>show less</li>").click(function (e) {
+
+                        e.stopPropagation();
+
+                        //selectKustom.item.find(".item-holder").css({
+                        //    "height": heightItemHolder
+                        //});
+
+                        $(e.target).remove();
+
+                        selectKustom.item.find(".item-list").hide();
+                        //selectKustom.item.find(".item-counter").css({
+                        //    "visibility": "visible"
+                        //});
+
+                        selectKustom.countHiddenItems();
+
+                        selectKustom.item.find(".item-holder").removeClass('open');
+
+                    });
+                });
+
+            });
+        },
+        removeItemFromHolder: function ($selectedItem) {
+            var selectKustom = this;
+            selectKustom.item.find(".item-holder ul li").each(function () {
+                $(this).remove();
+                //if ($(this).data('value') == $selectedItem.data('value')) {
+                //    $(this).remove();
+                //    return;
+                //}
+            });
+
+        },
+        setValue: function (items) {
+
+            var selectKustom = this;
+            selectKustom.item.find(".item-holder").removeClass('open');
+
+            selectKustom.item.find(".item-list ul li").each(function () {
+                $(this).removeClass("active");
+                selectKustom.removeItemFromHolder($(this));
+            });
+
+
+            if (items == undefined || items.length == 0) {
+
+                //var heightItemHolder = selectKustom.item.find(".item-holder").outerHeight();
+                //selectKustom.item.find(".item-holder").css({
+                //    "height": heightItemHolder
+                //});
+
+                selectKustom.item.find(".item-holder label").show();
+                selectKustom.item.find(".item-counter").hide();
+                selectKustom.item.find(".show-less").remove();
+                selectKustom.item.find(".item-list").hide();
+
+                //selectKustom.item.find(".item-counter").css({
+                //    "visibility": "visible"
+                //});
+                return;
+            }
+
+            selectKustom.item.find(".item-list ul li").each(function (e) {
+                var liItem = this;
+                items.forEach(function (value) {
+                    if ($(liItem).data("value") == value) {
+                        $(liItem).addClass("active");
+                        selectKustom.item.find(".item-holder label").hide();
+                        selectKustom.addItemToHolder(liItem);
+                        selectKustom.countHiddenItems();
+                    }
+                })
+            });
+
+           
+
+        },
+        getValue: function () {
+            var selectKustom = this;
+            var selecteds = [];
+            selectKustom.item.find(".item-list ul li").each(function (e) {
+                if ($(this).hasClass("active")) {
+                    selecteds.push($(this).data("value"));
+                }
+            });
+
+            return selecteds;
+        }
+    }
+
+    $.fn.selectKustom = function (opt) {
+
+        var args = Array.prototype.slice.call(arguments, 1);
+
+        var item = $(this);
+        var instance = item.data('SelectKustom');
+
+        if (!instance) {
+            item.data('SelectKustom', new SelectKustom(this, opt));
+        } else {
+            if (typeof opt === 'string') {
+                return instance[opt].apply(instance, args);
+            }
+        }
+
+        return this;
+
+    };
 
 }(jQuery));

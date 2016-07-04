@@ -1,11 +1,12 @@
 .select-kustom {
 	position: relative;
+    cursor: pointer;
 }
 
 .select-kustom * {
 	box-sizing: border-box;
 	outline: none;
-	font-family: Lato, sans-serif;
+	font-family: sans-serif;
 }
 
 .select-kustom ul {
@@ -30,6 +31,11 @@
 	position: relative;
 	background-color: #ffffff;
 }
+.select-kustom .item-holder ul{
+    width:inherit;
+    height:28px;
+    overflow:hidden;
+}
 
 .select-kustom label {
 	position: absolute;
@@ -37,6 +43,7 @@
 	left: 10px;
 	font-size: 1em;
 	color: #292929;
+    font-family:ralewaylight, sans-serif;
 }
 
 .select-kustom .item-holder:after {
@@ -47,7 +54,7 @@
 	top: 0;
 	width: 6px;
 	height: 40px;
-	background:url(./images/icon_next_black.png) center center no-repeat;
+	background:url(../images/icon_next_black.png) center center no-repeat;
 	background-size: 6px auto;
 	-webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -61,8 +68,7 @@
 	padding: 3px 24px 3px 8px;
 	background-color: #f0f0f0;
 	font-size: .875em;
-	font-family: Lato, sans-serif;
-	font-weight: 400;
+	font-family:ralewayregular, sans-serif;
 	margin-bottom: 5px;	
 	margin-right: 5px;
 	display: block;
@@ -83,8 +89,7 @@
 	width:24px;
 	height:29px;
 	line-height:29px;
-	font-family:Lato, sans-serif;
-	font-weight: 500;
+	font-family:ralewaymedium, sans-serif;
 	text-align: center;
 	cursor: pointer;
 }
@@ -93,11 +98,11 @@
 	float:right;
 	padding: 3px 8px;
 	background-color: #f0f0f0;
-	font-family:Lato, sans-serif;
-	font-weight: 500;
+	font-family:ralewaymedium, sans-serif;
 	font-size: .875em;
 	text-decoration:underline;
 	cursor: pointer;
+    visibility: visible;
 }
 
 .select-kustom li.show-less {
@@ -156,6 +161,27 @@
 	top: 0;
 	width: 14px;
 	height: 100%;
-	background:url(./images/icon_mark.png) center center no-repeat;
+	background:url(../images/icon_mark.png) center center no-repeat;
 	background-size: 14px auto;
+}
+
+.select-kustom .item-holder.open ,
+.select-kustom .item-holder.open ul{
+    height: auto;
+}
+.select-kustom .item-holder.open .item-counter {
+    visibility: hidden;
+}
+
+.select-kustom.disabled{
+    cursor: default;
+}
+.select-kustom.disabled .item-holder{
+    border-color:#999;
+}
+.select-kustom.disabled label{
+   color:#999;
+}
+.select-kustom.disabled .item-holder:after{
+   background-image: url(../images/icon_next_grey.png);
 }
