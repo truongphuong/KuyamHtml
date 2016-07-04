@@ -1227,7 +1227,7 @@ form, fieldset, legend {
         .tab-list li a {
             display: block;
             color: #474747;
-            padding: 0 21px;
+            padding: 0 18px;
             font: 16px/28px 'Lato', sans-serif;
 			font-weight: 500;
             text-decoration: none;
@@ -5327,7 +5327,8 @@ form, fieldset, legend {
 
     .dashboardmailright .btnpurchase {
         float: right;
-        background: url(images/btnpurchase.png) no-repeat;
+        background: #27AAE1; /*url(images/btnpurchase.png) no-repeat;*/
+        color:#ffffff;
         width: 188px;
         height: 32px;
         padding: 0;
@@ -8790,3 +8791,81 @@ td ul {
 .ads-logo .section-header{
 	padding: 60px 0 25px;
 }
+
+/* Begin .modal-paypal */
+.modal-paypal .modal-header {
+    margin-bottom: 4rem;
+    margin-top: 0rem;
+    border-bottom: 0 none;
+    text-align: center;
+}
+.modal-paypal .modal-header .close{
+    color: #292929;
+    font-family: Lato,sans-serif;
+    font-size: .85em;
+    font-weight: 600;
+    height: 40px;
+    opacity: 1;
+    text-transform: uppercase;
+    width: 40px;
+    top:0;
+    right: 0;
+}
+.modal-paypal .modal-header h4 {
+    font-weight: 400;
+    padding-bottom: 0;
+    margin-top: 0.51rem;
+    font-size:19px;
+    color:#4a4a4a;
+}
+.modal-paypal .modal-body {
+    padding-bottom: 2rem;
+}
+.modal-paypal .modal-footer {
+    border-top: 0 none;
+}
+.modal-paypal .modal-content {
+    border-radius: 12px !important;
+}
+.modal-paypal a {
+    display:inline-block;
+    cursor: pointer;
+}
+.modal-paypal a[name="paymentmethod"] {
+    width: 111px;   
+}
+.modal-paypal a[name="creditcardtmethod"] {
+    width: 147px;
+    display:inline-block;
+}
+.modal-paypal .table-css {
+    width: 100%;
+    display:table;
+}   
+.modal-paypal .table-css .tr{
+    display: table-row;
+} 
+.modal-paypal .table-css .td{
+    width: 50%;
+    display:table-cell;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+.modal-paypal .table-css .td:first-child{
+    border-right: 1px solid #ddd;
+}
+
+@media (min-width:1024px) {    
+    .modal-paypal{
+        width: 590px;
+    }
+}
+
+@media (max-width:374px) {   
+    .modal-paypal a {
+        width: inherit !important;
+    }
+}
+/* End .modal-paypal */
