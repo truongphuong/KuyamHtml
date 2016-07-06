@@ -102,7 +102,7 @@ body {
     padding: 0;
     font: 16px/140% Lato, sans-serif;
 	font-weight: 500;
-    color: #292929;
+    color: #242424;
     overflow-y: scroll;
 }
 
@@ -270,16 +270,16 @@ div[class*="col-"] {
    form
    ========================================================================== */
 .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #292929;
+  color: #242424;
 }
 .form-control::-moz-placeholder { /* Firefox 19+ */
-  color: #292929;
+  color: #242424;
 }
 .form-control:-ms-input-placeholder { /* IE 10+ */
-  color: #292929;
+  color: #242424;
 }
 .form-control:-moz-placeholder { /* Firefox 18- */
-  color: #292929;
+  color: #242424;
 }
 
 form div[class*="col-"] {
@@ -299,7 +299,7 @@ form div[class*="col-"] {
 	font-weight: 300;
     border-color: #000;
     height: 40px;
-    color: #292929;
+    color: #242424;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -377,7 +377,7 @@ textarea.form-control:focus {
     }
 
     .cb-mark:checked ~ .cb-label:before {
-        background:#292929 url(../images/icon_check.png) center center no-repeat;
+        background:#242424 url(../images/icon_check.png) center center no-repeat;
 		background-size: 15px auto;
     }
 
@@ -388,7 +388,7 @@ textarea.form-control:focus {
         position: absolute;
         width: 22px;
 		height:22px;
-		border: 2px solid #292929;
+		border: 2px solid #242424;
         top: 0;
         left: 0;
         cursor: pointer;
@@ -460,32 +460,81 @@ textarea.form-control:focus {
 /* =============================================================================
    Button
    ========================================================================== */
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:visited,
+.btn:active{
+	border-radius: 3px !important;
+}
+
 .btn-form,
-.btn-form:hover,
-.btn-form:focus {
-    border: 1px solid #292929;
-    color: #fff;
-    font-size: .9375em;
+.btn-form:focus {	
+    font-size: 1em;
+    background: #fff;
     font-family: Lato, sans-serif;
-	font-weight: 600;
+	font-weight: 400;
     width: 100%;
     height: 40px;
-    color: #fff;
-    text-transform: uppercase;
+    border: 1px solid #242424;
+    color: #242424;
+}
+.btn-form:hover{
+    color: #242424;
+    background: #fff;
+	border-width:2px;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 
 .btn-agree,
-.btn-agree:hover,
-.btn-agree:focus {
-    background: #292929;
+.btn-agree:focus {	
+    border: 1px solid #3891ff;
+    background: #fff;
+    color: #3891ff;
+}
+.btn-agree:hover{	
+    color: #3891ff;
+    background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-neutral,
+.btn-neutral:focus {
+	border: 1px solid #878787;
+    background: #fff;
+	color:#878787;
+}
+.btn-neutral:hover{
+	color:#878787;
+    background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 
 .btn-disagree,
-.btn-disagree:hover,
 .btn-disagree:focus {
-    border-color: #000000;
-    background: #f0f0f0;
-    color: #292929;
+    border: 1px solid #ff5050;
+    background: #fff;
+    background: #fff;
+    color: #ff5050;
+}
+.btn-disagree:hover{
+	background:#ff5050;
+    color: #fff;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus{
+	background:#dadada;
+    color: #fff;
+	font-weight:700;
 }
 
 .close {
@@ -493,7 +542,7 @@ textarea.form-control:focus {
     font-family: Lato, sans-serif;
 	font-weight: 600;
     text-transform: uppercase;
-    color: #292929;
+    color: #242424;
     opacity: 1;
     height: 40px;
     width: 40px;
@@ -657,6 +706,7 @@ textarea.form-control:focus {
 
 .bootstrap-select > .btn {
     font-size: 16px;
+	border-radius: 0 !important;
 }
 
     .bootstrap-select > .btn,
@@ -671,7 +721,7 @@ textarea.form-control:focus {
     }
 
 .bootstrap-select.btn-group .btn .filter-option {
-    color: #292929;
+    color: #242424;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -799,7 +849,8 @@ textarea.form-control:focus {
 }
 
 .on-nicescroll .wrap-dropdown-menu-inner{
-	height: 175px;
+	max-height: 175px;
+	overflow: hidden;
 }
 
 .on-nicescroll .wrap-dropdown-menu-inner-content{
@@ -813,7 +864,7 @@ textarea.form-control:focus {
     font-family: Lato, sans-serif;
 	font-weight: 500;
     font-size: .875em;
-    color: #292929;
+    color: #242424;
     background: transparent;
     border: 0 none;
     line-height: 1;
@@ -1183,7 +1234,7 @@ textarea.form-control:focus {
 .form-timepicker.dropdown .bootstrap-datetimepicker-widget button[data-action] {
     background: transparent;
     border: 0 none;
-    color: #292929;
+    color: #242424;
     margin-left: 15px;
 }
 
@@ -1371,6 +1422,39 @@ textarea.form-control:focus {
     text-align: center;
 }
 
+.dashboard_icon_profile{
+	background: url(../images/dashboard_icon_profile.png) center center no-repeat;
+	background-size: 10px auto;
+}
+.dashboard_icon_image_gallery{
+	background: url(../images/dashboard_icon_image_gallery.png) center center no-repeat;
+	background-size: 10px auto;	
+
+}
+.dashboard_icon_payment_booking{
+	background: url(../images/dashboard_icon_payment_booking.png) center center no-repeat;
+	background-size: 10px auto;
+}
+.dashboard_icon_notifications{
+	background: url(../images/dashboard_icon_notifications.png) center center no-repeat;
+	background-size: 9px auto;
+	
+}
+.dashboard_icon_calendars{
+	background: url(../images/dashboard_icon_calendars.png) center center no-repeat;
+	background-size: 8px auto;
+	
+}
+.dashboard_icon_settings{
+	background: url(../images/dashboard_icon_settings.png) center center no-repeat;
+	background-size: 10px auto;
+}
+
+.header_icon_sign_out{
+	background: url(../images/header_icon_sign_out.png) center center no-repeat;
+	background-size: 10px auto;
+}
+
 /* =============================================================================
    tooltipser
    ========================================================================== */
@@ -1434,8 +1518,9 @@ textarea.form-control:focus {
    Primaty styles
    ========================================================================== */
 .kuyam-header {
-    background: #292929;
+    background: #fff;
     border: 0 none;
+	border-bottom: 1px solid #bebebe;
     margin-bottom: 0;
     height: 59px;
 }
@@ -1450,38 +1535,65 @@ textarea.form-control:focus {
     }
 
         .kuyam-header .navbar-toggle.collapsed .icon-bar {
-            background: #fff;
+            background: #3891ff;
         }
 
         .kuyam-header .navbar-toggle .icon-bar {
-            background: #9eca35;
+            background: #3891ff;
         }
 
     .kuyam-header .navbar-brand {
         width: 115px;
-        background: url(../images/logo.png) center center no-repeat;
+		background: url(../images/header_logo_kuyam.png) center center no-repeat;
         background-size: 115px auto;
+		margin-left: 10px  !important;
     }
 
     .kuyam-header .navbar-nav > li > a,
     .kuyam-header .navbar-nav > li > a:focus,
     .kuyam-header .navbar-nav > li > a:hover {
-        color: #fff;
-        background: transparent;
+        color: #242424;
+		background: transparent;
+		padding: 18px 0 16px;
+		text-align: center;
     }
-
-    .kuyam-header .navbar-nav > li.active > a,
-    .kuyam-header .navbar-nav > li.active > a:focus,
-    .kuyam-header .navbar-nav > li.active > a:hover {
-        background: #95be31;
-    }
+	
+	.kuyam-header .navbar-nav > li.active{
+		border-bottom: 4px solid #3891ff;
+	}
+	
+	.kuyam-header .user-info{
+		border-left: 1px solid #bebebe;
+		position: relative;
+	}		
+	.kuyam-header .user-info a {	   
+		text-align: left !important;
+		padding: 12px 20px 26px !important;
+		font-size: 13px;
+		font-weight: bold  !important;		
+	}
+	
+	.kuyam-header .user-sign-out-icon{
+		font-size: 10px  !important;
+		position: absolute  !important;
+		top: 17px;
+		left: 17px;		
+	}
+	.kuyam-header .header_icon_sign_out{
+		position: absolute  !important;
+		top: 18px;
+		left: -6px;
+		width: 10px;
+		height: 10px;	
+	}
 
 .kuyam-footer {
     min-height: 65px;
     line-height: 65px;
-    background: #292929;
+    background: #242424;
+    padding: 0 20px;
     color: #fff;
-    font-size: .93em;
+    font-size: .75em;
 }
 
     .kuyam-footer ul {
@@ -1497,13 +1609,17 @@ textarea.form-control:focus {
         }
 
             .kuyam-footer ul li .icon {
-                margin-bottom: -10px;
+                margin-bottom: -3px;
             }
 
     .kuyam-footer a {
         color: #95be31;
         text-decoration: none;
     }
+	
+	.kuyam-footer a.link-terms{
+		color: #fff;	
+	}
 
 .kuyam-section {
     overflow: hidden;
@@ -1520,7 +1636,7 @@ textarea.form-control:focus {
     flex: 1;
 }
 .kuyam-page .kuyam-sidebar{
-	background: #dcdcdc;
+	background: #f5f5f5;
     min-width: 194px;
 }
 .kuyam-page .kuyam-content{
@@ -1549,19 +1665,28 @@ textarea.form-control:focus {
 }
 .kuyam-sidebar ul li a{
 	font-family: Lato, sans-serif;
-	font-weight: 600;
+	font-weight: 300;
+    text-transform: capitalize ;
 	font-size:.8125em;
-	text-transform:uppercase;
 	display:block;
-	padding:16px 24px;
-	color:#292929;
+	padding:16px 24px 16px 45px;
+	color:#242424;
 	text-decoration: none;
-	text-shadow:0.5px 0 0 #292929;
+	text-shadow:0.5px 0 0 #242424;
+	 position: relative;
+}
+.kuyam-sidebar ul li a .icon{
+	display: block;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left: 24px;
+	width: 10px;
 }
 .kuyam-sidebar ul li.active a,
 .kuyam-sidebar ul li a:hover{
-	text-transform:uppercase;
 	background:#f0f0f0;
+	font-weight:700 !important;
 }
 
 .kuyam-main-content{
@@ -1575,7 +1700,7 @@ textarea.form-control:focus {
 }
 
 .kuyam-subnav{
-	background: #f0f0f0;
+	background: #f5f5f5;
 	overflow:hidden;
     float:left;
     min-width: 194px;
@@ -1584,20 +1709,21 @@ textarea.form-control:focus {
 .subnav-content{
 	position:relative;
 	height:100%;
-	padding-top:54px;
+	padding-top:10px;
 	padding-bottom:10px;
 }
-.subnav-content .add-link-section{
-	position:absolute;
-	top:0;
+.subnav-content .search-section{
 	width:100%;
-	left:0;
+	padding:16px 15px;
+}
+.subnav-content .add-link-section{
+	width:100%;
 	padding:16px 24px;
 }
 .subnav-content .add-link{
 	font-family: Lato, sans-serif;
 	font-weight: 700;
-	color:#292929;
+	color:#242424;
 	text-decoration: underline;
 }
 .subnav-content .add-link .prefix{
@@ -1611,6 +1737,9 @@ textarea.form-control:focus {
 	position: relative;
 	height: 100%;
 	overflow:hidden;
+}
+.on-nicescroll .subnav-list .wrap-dropdown-menu-inner{
+	max-height: 100%;
 }
 .on-device .subnav-list{
 	overflow-y: auto;
@@ -1640,18 +1769,29 @@ textarea.form-control:focus {
 	text-transform: uppercase;
 	font-family: Lato, sans-serif;
 	font-weight: 600;
-	color:#292929;
+	color:#242424;
     zoom: 1;
 }
     .subnav-ul > li > a:hover {
         background:#dcdcdc;
-    }
+    }		
+	.subnav-ul[data-dropdown="false"] > li > a:hover {
+		
+		 text-transform: capitalize ;
+		 font-weight:700 !important;
+		 background: #f0f0f0;
+	}
 .subnav-ul > li > a .text{
 	font-size:.8125em;
 	float:left;
 	display:inline-block;
 	max-width:50%;
 	margin-right:5px;
+}
+.subnav-ul[data-dropdown="false"] > li > a .text {
+    float: none;
+    max-width: 100%;
+    margin-right: 0;
 }
 .subnav-ul > li > a .total{
 	float:left;
@@ -1665,7 +1805,7 @@ textarea.form-control:focus {
 	padding:0 3px;
 	text-align:center;
 	border-radius: 6px !important;
-	background:#292929;
+	background:#242424;
 }
 .subnav-ul > li > a .icon{
 	float:right;
@@ -1696,7 +1836,7 @@ textarea.form-control:focus {
         background:#dcdcdc;
     }
 .subnav-ul > li li.active a{
-	color:#292929;
+	color:#242424;
 }
 .subnav-ul[data-dropdown="false"] > li > a{	
 	text-transform: capitalize;
@@ -1748,7 +1888,7 @@ textarea.form-control:focus {
 .kuyam-content form footer .link-delete{
 	text-decoration:underline;
 	font-size: .875em;
-	color:#292929;
+	color:#242424;
 	margin-right:60px;
 }
 .kuyam-content form footer .btn-agree{
@@ -1898,7 +2038,7 @@ textarea.form-control:focus {
     -o-transform: translate(0px,-50%);
     -ms-transform: translate(0px,-50%);
     transform: translate(0px,-50%);
-	color:#292929;
+	color:#242424;
 	font-size:1.125em;
 	text-align:center;
 }
@@ -1975,7 +2115,7 @@ textarea.form-control:focus {
 	font-size:1.6em;
 	font-family:'liberation_sansbold', 'Open Sans', sans-serif;
 	text-decoration:none;
-	color:#292929;
+	color:#242424;
 	cursor:pointer;
 }
 .croppie-container .cr-slider-wrap .croppie-zoom-in{
@@ -2090,11 +2230,6 @@ textarea.form-control:focus {
             height: 60px;
         }
 
-        .kuyam-header .navbar-nav > li > a {
-            padding: 20px 0;
-            text-align: center;
-        }
-
         .kuyam-header .navbar-nav > li.active > a {
             margin-left: -1px;
             margin-right: -1px;
@@ -2199,7 +2334,9 @@ textarea.form-control:focus {
     }
 
         .kuyam-header .navbar-collapse {
-            background: #292929;
+            background: #fff;
+			position: relative;
+			top: -50px;
         }
 
         .kuyam-header .navbar-brand {
@@ -2215,20 +2352,19 @@ textarea.form-control:focus {
         }
 
 		.kuyam-header .navbar-nav li{
-			float:left;
-			width:50%;
 			padding-left:8px;
 			padding-right:8px;
-			text-align:center;
 			font-size:.75em;
 			margin-bottom:15px;
 		}
-		
-		.kuyam-header .navbar-nav li a{
-			border:1px solid #fff;
+		.kuyam-header .navbar-nav li a,
+		.kuyam-header .navbar-nav li a:hover,
+		.kuyam-header .navbar-nav li a:focus{
+			text-align:left;
 		}
-		.kuyam-header .navbar-nav li.active a{
-			border:1px solid #95be31;
+		.kuyam-header .navbar-nav > li.active{
+			font-weight: 700;
+			border: 0 none;
 		}
 
     .modal-terms {
@@ -2249,7 +2385,7 @@ textarea.form-control:focus {
                 }
 
             .modal-terms .nav-tabs > li.active > a {
-                color: #292929;
+                color: #242424;
             }
 
                 .modal-terms .nav-tabs > li.active > a span {
@@ -2387,186 +2523,3 @@ textarea.form-control:focus {
     background-color: #95be31;
     color: #fff;
 }
-
-/* Begin vuho customization */
-.kuyam-header{
-	background-color: #ffffff;
-	border: none;
-	border-bottom: 1px solid #bebebe;
-
-}
-
-.kuyam-footer{
-	font-size: 12px;
-    padding: 0 20px;
-}
-
-.user-info{
-	border-left: 1px solid #bebebe;
-	position: relative;
-}
-
-.kuyam-header .navbar-nav > li > a, .kuyam-header .navbar-nav > li > a:focus, .kuyam-header .navbar-nav > li > a:hover {
-    color: #242424;
-    background: transparent;
-}
-
-
-
-.kuyam-header .navbar-brand{
-	 background: url(../images/header_logo_kuyam.png) center center no-repeat;
-	 margin-left: 10px  !important;
-}
-
-.kuyam-header .navbar-nav > li.active > a, .kuyam-header .navbar-nav > li.active > a:focus, .kuyam-header .navbar-nav > li.active > a:hover {
-    background-color: transparent;	
-    
-}
-
-.kuyam-header .navbar-nav .active{
-	border-bottom: 4px solid #3891ff;
-}
-
-.kuyam-header .navbar-nav > li > a {
-    padding: 18px 0 16px;
-    text-align: center;
-}
-
-.navSettings{
-	font-size: 13px;
-	width: 200px !important;
-	text-align:left !important;
-	
-}
-
-
-.user-info a {
-   
-    text-align: left !important;
-	padding: 12px 20px 26px !important;
-	font-size: 13px;
-	font-weight: bold  !important;
-	
-}
-
-
-.kuyam-footer ul li .icon {
-    margin-bottom: -3px;
-}
-
-.kuyam-page .kuyam-sidebar {
-    background: #f5f5f5;
-    min-width: 190px;
-}
-
-.kuyam-subnav{
-    background: #f5f5f5;
-    min-width: 190px;
-}
-
-
-.subnav-ul[data-dropdown="false"] > li > a .text {
-    float: none;
-    max-width: 100%;
-    margin-right: 0;
-     font: 13px Lato, sans-serif !important;
-}
-
-.kuyam-sidebar ul li a{
-	
-    font: 13px Lato, sans-serif !important;
-    text-transform: capitalize ;
-	font-weight:300 !important;
-	color: #242424 !important;
-	 padding-left: 45px;
-	 position: relative;	
- 
-}
-.kuyam-sidebar ul li.active a, .kuyam-sidebar ul li a:hover  {
-    
-	 text-transform: capitalize ;
-	 font-weight:700 !important;
-
-}
-
-.subnav-ul[data-dropdown="false"] > li > a:hover {
-    
-	 text-transform: capitalize ;
-	 font-weight:700 !important;
-     background: #f0f0f0;
-}
-
-
-.dashboard_icon_profile{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_profile.png) center center no-repeat;
-}
-.dashboard_icon_image_gallery{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_image_gallery.png) center center no-repeat;	
-
-}
-.dashboard_icon_payment_booking{	
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_payment_booking.png) center center no-repeat;
-}
-.dashboard_icon_notifications{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_notifications.png) center center no-repeat;
-	
-}
-.dashboard_icon_calendars{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_calendars.png) center center no-repeat;
-	
-}
-.dashboard_icon_settings{
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	top: 19px;
-	left: 24px;
-	background: url(../images/dashboard_icon_settings.png) center center no-repeat;
-}
-
-.header_icon_sign_out{
-	width: 10px;
-	height: 10px;	
-	background: url(../images/header_icon_sign_out.png) center center no-repeat;
-	position: absolute  !important;
-	top: 18px;
-	left: -6px;
-}
-
-.user-sign-out-icon{
-	font-size: 10px  !important;
-	position: absolute  !important;
-	top: 17px;
-	left: 17px;
-	
-}
-
-.link-terms{
-	color: #ffffff !important;	
-}
-/* End vuho customization */

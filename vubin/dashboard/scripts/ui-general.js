@@ -160,8 +160,8 @@ function iscrollSelect(sectionID, scrollName) {
 
 function iscrollContent(sectionID) {    
 	if (!isMobile.Windows()) {
-		$(sectionID).find('.notes-text').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
-		var heightOfDiv = $(sectionID + ' .notes-text').height();
+		$(sectionID).find('.scroll-content').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+		var heightOfDiv = $(sectionID + ' .scroll-content').height();
 		$(sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfDiv);
 		$(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content', 
 		{
@@ -204,9 +204,9 @@ function minHeightBody() {
     }
     if ($('#subnavList').length !== 0) {
         if ((hScreen - hHeader - hFooter) > $('.kuyam-content form').height()) {
-            $('#subnavList').css({ 'max-height': hScreen - hHeader - hFooter - 65 });
+            $('#subnavList').css({ 'height': hScreen - hHeader - hFooter - 65 });
         } else {
-            $('#subnavList').css({ 'max-height': $('.kuyam-content form').innerHeight() });
+            $('#subnavList').css({ 'height': $('.kuyam-content form').innerHeight() });
         }
     }
     if ($('.calendar-page').length !== 0) {

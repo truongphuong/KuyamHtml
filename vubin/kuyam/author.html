@@ -14,6 +14,7 @@
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/bootstrap.css" />  
+<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />  
 
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
@@ -24,21 +25,27 @@
 <link type="text/css" rel="stylesheet" href="content/jquery.carouFredSel.css" />
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
+<!-- InstanceBeginEditable name="css" -->
+<!-- InstanceEndEditable -->
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 <!-- === SCRIPTS === -->  
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>	    	
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script>
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
 
 <script type="text/javascript" src="scripts/jquery.carouFredSel.js"></script>
+<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>
 <!-- InstanceBeginEditable name="script" -->
 <link type="text/css" rel="stylesheet" href="content/bootstrap-select.css" /> 
 <script type="text/javascript" src="scripts/bootstrap-select.js"></script>
 <!-- InstanceEndEditable --> 
 <script type="text/javascript" src="scripts/general-ui.js"></script>  
+<!-- InstanceBeginEditable name="script1" -->
+<!-- InstanceEndEditable -->
 <!-- === END SCRIPTS === -->
 </head>
 <body>
@@ -321,7 +328,7 @@
         <!-- InstanceEndEditable -->
         
         <!-- .site-contact -->
-        <section id="contact" class="site-contact"> 
+        <section id="contact" class="site-contact hidden-xs"> 
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 "> 
@@ -361,21 +368,28 @@
         <footer class="site-footer">  
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-8">  	
-                        <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
+                    <div class="col-xs-7 col-sm-8">  	
+                        <p>Copyright © 2014 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
                     </div>
-                    <div class="on-desktop hidden-xs col-md-4">
-                        <ul class="link-socials clearfix">
-                        
-                        	<li><a target="_blank" href="#" title="Comment"><span class="footer_icon_comment off "></span></a></li>
-                        
-                            <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="" src="content/images/icons_2016/footer_icon_facebook.png" /></a></li>
-                            <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="" src="content/images/icons_2016/footer_icon_twitter.png" /></a></li>
-                            
-                            <li><a target="_blank" href="#" title="Terms of use and privacy"><p>Terms of use and privacy</p></a></li>
-                          
-                          
-                            
+                    <div class="col-xs-5 col-sm-4">
+                        <ul class="link-socials clearfix">                        
+                            <li><a title="Comment" href="#" target="_blank"><span class="footer_icon_comment off "></span></a></li>                        
+                            <li class="hidden-xs">
+                                <a  class="icon icon-facebook"title="Facebook" href="https://www.facebook.com/mykuyam" target="_blank">
+                                    <img src="content/images/icons_2016/footer_icon_facebook.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Twitter" class="icon icon-twitter" href="https://twitter.com/mykuyam" target="_blank">
+                                    <img src="content/images/icons_2016/footer_icon_twitter.png" alt="">
+                                </a>
+                            </li>             
+                            <li class="visible-xs">
+                                <a class="icon icon-facebook" title="Facebook" href="https://www.facebook.com/mykuyam" target="_blank">
+                                    <img src="content/images/icons_2016/footer_icon_facebook.png" alt="">
+                                </a>
+                            </li>							
+                            <li class="hidden-xs"><a title="Terms of use and privacy" href="#" target="_blank"><p>Terms of use and privacy</p></a></li>                            
                         </ul>
                     </div>
                 </div>
@@ -1363,5 +1377,8 @@
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
     <!-- /.modal-term -->  
+    
+    <!-- InstanceBeginEditable name="modal" -->
+	<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

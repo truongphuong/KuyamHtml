@@ -186,6 +186,10 @@ form, fieldset, legend {
     float: left;
 }
 
+.relative{
+	position: relative;
+}
+
 /*.loading {
     background: url(images/loader.gif) center center no-repeat rgba(0, 0, 0, 0.5);
     display: none;
@@ -1951,11 +1955,12 @@ form, fieldset, legend {
 .table-css {
     display: table;
 }
-
+.tr,
 .table-row {
     display: table-row;
 }
-
+.th,
+.td,
 .table-cell {
     display: table-cell;
 }
@@ -6589,10 +6594,6 @@ form, fieldset, legend {
         line-height: 16px;
     }
 
-    .site-footer p {
-        text-align: center;
-    }
-
     .section-header h2 .arrow_down {
         display: none;
     }
@@ -8374,8 +8375,6 @@ td ul {
 
 }
 
-
-
 .site-header{
 	background: #ffffff;
 	height: 58px;
@@ -8388,7 +8387,7 @@ td ul {
     top: 122px;
     right: 0;
     left: 0;
-	background-color: rgba(255,255,255,.5);
+	background-color: rgba(255,255,255,.95);
 	height: 78px;
 	box-shadow: 0px 3px 16px rgba(0,0,0,.15);
 	border: none;
@@ -8430,15 +8429,12 @@ td ul {
     display: inline-block;
 }
 
-.site-header .navbar-nav li {
-   
+.site-header .navbar-nav li {   
     padding: 0 10px 0 20px;
 }
 
-.site-header .navbar-nav > li > a, .site-header .navbar-nav > li > a:focus, .site-header .navbar-nav > li > a:visited{
-	
+.site-header .navbar-nav > li > a, .site-header .navbar-nav > li > a:focus, .site-header .navbar-nav > li > a:visited{	
 	color: #5f5f5f;
-
 }
 
 .site-header .nav-account{
@@ -8456,8 +8452,7 @@ td ul {
 	height: 10px;
 	display: inline-block;
     background-position: center 2px;
-    background-repeat: no-repeat;
-	
+    background-repeat: no-repeat;	
 }
 
 .site-header  .have-icon {
@@ -8486,13 +8481,11 @@ td ul {
     background-color: #ffffff;
     color: #ff6060;
     display: block;
-    padding: 0
-
+    padding: 0;
 }
 
 .site-banner{
-	margin-top: 58px;
-	
+	margin-top: 58px;	
 }
 
 .site-banner .lineBottom .descriptionTitle{
@@ -8593,7 +8586,6 @@ td ul {
 		
 }
 
-
 .header_icon_favourites{
 	width: 40px;
 	height: 30px;
@@ -8660,8 +8652,6 @@ td ul {
 	height: 28px;			
 }
 
-
-
 .site-address ul li{
 	padding: 0;	
 	float: left;
@@ -8692,8 +8682,6 @@ td ul {
 	padding-left: 37px;
 }
 
-
-
 .link-socials li img, .link-socials li a{
 	width: auto !important;
 	
@@ -8714,22 +8702,22 @@ td ul {
 	margin-top: 7px;
 }
 
-.link-socials li:nth-child(4){
+.link-socials li:last-child{
 	width: 60% !important;
 	text-align:right;
 	margin-top: 7px;
 }
 
-.link-socials li:nth-child(4) p{
+.link-socials li:last-child p{
 	margin-top: 0px;
 }
 
-.link-socials li:nth-child(4) a{
+.link-socials li:last-child a{
 	margin: 0;
 	text-decoration: none;
 }
 
-.link-socials li:nth-child(4) a:hover{
+.link-socials li:last-child a:hover{
 	color: #96BE3D;
 	
 }
@@ -8740,10 +8728,15 @@ td ul {
 	border-top: 1px solid #424242;
 	padding: 7px 0;
 }
-
-.site-footer .footer_icon_comment {
-	
+.site-footer .icon-facebook img{
+	width: 18px !important;
+}
+.site-footer .icon-twitter img{
+	width: 20px !important;
+}
+.site-footer .footer_icon_comment {	
 	background-position: center 0px;
+	background-size: 16px auto;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -8756,8 +8749,7 @@ td ul {
 }
 
 .site-footer .off {
-	background-image: url(images/icons_2016/footer_icon_comment_off.png);
-	
+	background-image: url(images/icons_2016/footer_icon_comment_off.png);	
 }
 
 .menu-footer {
@@ -8767,8 +8759,7 @@ td ul {
 .menu-footer li{
 	float: right;
 	margin: 20px 0px 20px 50px;
-	list-style: none;
-		
+	list-style: none;	
 }
 
 .menu-footer li a{
@@ -8791,6 +8782,81 @@ td ul {
 .ads-logo .section-header{
 	padding: 60px 0 25px;
 }
+
+@media (max-width: 767px){
+	.site-footer{
+		font-size: 16px;
+		height: 46px;
+		padding: 0;
+	}
+	.site-footer p{
+		font-size: 0.5625em;
+		margin:0;
+		padding-top: 13px;
+		line-height: 9px;
+		text-align: left;
+	}
+	.site-footer .link-socials{
+		float:right;
+	}
+	.site-footer .link-socials li{
+		width: inherit !important;
+		margin-top: 6px;
+	}
+	.site-footer .link-socials li a{
+		margin-left: 30px;
+		margin-right: 26px;
+	}
+	.site-footer .link-socials li:first-child a,
+	.site-footer .link-socials li:nth-child(4) a{
+		margin: 0;
+	}
+}
+
+
+@media (max-width: 374px){
+	.site-footer{
+		font-size: 16px;
+		height: 40px;
+		padding: 0;
+	}
+	.site-footer .container{
+		padding-left:10px;
+		padding-right: 10px;
+	}
+	.site-footer .icon-facebook img{
+		width: 14px !important;
+	}
+	.site-footer .icon-twitter img{
+		width: 17px !important;
+	}
+	.site-footer .footer_icon_comment{
+		background-size: 15px auto;
+	}
+	.site-footer p{
+		font-size: 0.5em;
+		margin:0;
+		padding-top: 11px;
+		line-height: 8px;
+	}
+	.site-footer .link-socials{
+		float:right;
+	}
+	.site-footer .link-socials li{
+		width: inherit !important;
+		margin-top: 6px;
+	}
+	.site-footer .link-socials li a{
+		margin-left: 23px;
+		margin-right: 23px;
+	}
+	.site-footer .link-socials li:first-child a,
+	.site-footer .link-socials li:nth-child(4) a{
+		margin: 0;
+	}
+}
+
+/* Vuho customize */
 
 /* Begin .modal-paypal */
 .modal-paypal .modal-header {
@@ -8840,14 +8906,9 @@ td ul {
 }
 .modal-paypal .table-css {
     width: 100%;
-    display:table;
-}   
-.modal-paypal .table-css .tr{
-    display: table-row;
 } 
 .modal-paypal .table-css .td{
     width: 50%;
-    display:table-cell;
     padding-top: 25px;
     padding-bottom: 35px;
     text-align: center;
