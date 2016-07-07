@@ -755,7 +755,7 @@
 	height: 100%;
 	background: rgba(0, 0, 0, .79);
 }
-.modal-boarding-profile  .has-image .caption{
+.modal-boarding-profile  .has-image:hover .caption{
 	display: block;
 }
 .modal-boarding-profile .caption ul{
@@ -1418,6 +1418,13 @@
 	.modal-boarding-complete .modal-footer{
 		padding-bottom: 10px;
 		height: 58px;
+	}
+}
+
+@media (min-device-width: 320px){
+	.modal-boarding-profile  .has-image:focus .caption,
+	.modal-boarding-profile  .has-image:active .caption{
+		display: block;
 	}
 }
 
