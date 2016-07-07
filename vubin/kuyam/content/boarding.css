@@ -68,6 +68,146 @@
 	font-weight:700;
 }
 
+/* =============================================================================
+	Croppie
+	========================================================================== */		
+.croppie-container{
+	width:321px;
+	margin:0 auto;
+	padding:0;
+}
+.croppie-container .cr-viewport{
+	border-color:#bfbfbf;
+	box-shadow:0 0 0 899px rgba(191, 191, 191, 0.5) !important;
+	/*width:228px !important;
+	height:228px !important;*/
+}
+.croppie-container  .cr-boundary{
+	/*width:100% !important;
+	height:297px !important;*/
+	background: #fff;
+}
+.croppie-container .cr-boundary img.cr-image {
+    width: auto !important;
+}
+.croppie-container  .croppie-caption{
+    position: absolute;
+    width:100%;
+	text-align:center;
+	bottom: 11px;
+    /*top: 50%;
+    -webkit-transform: translate(0px,-50%);
+    -moz-transform: translate(0px,-50%);
+    -o-transform: translate(0px,-50%);
+    -ms-transform: translate(0px,-50%);
+    transform: translate(0px,-50%);
+	color:#242424;
+	font-size:1.125em;*/
+}
+.croppie-container  .croppie-caption .drag-section{
+	/*background: rgba(0, 0, 0, .5);
+	border-radius: 3px;*/
+	width:75px;
+	height:44px;
+	margin:0 auto;
+	color: #fff;
+	font-size: 0; /*0.6875em;*/
+	background:url(images/boarding/img-drag-drop.png) no-repeat center center;
+}
+.croppie-container  .croppie-caption .icon{
+	position:relative;
+	bottom:-3px;
+	margin-right:5px;
+	width:14px;
+	height:14px;
+	display:inline-block;
+	background:url(images/boarding/icon-move.png) no-repeat center center;
+	background-size:contain;
+	display: none;
+}
+.croppie-container .spinner {
+	opacity: 0;
+}
+.croppie-container .croppie-image-loading .spinner {
+	opacity: 1;
+}
+.croppie-container .cr-slider {
+	-webkit-appearance: none;
+	height:21px;
+}
+.croppie-container .cr-slider:focus {
+	outline: none;
+}
+.croppie-container .cr-slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-webkit-slider-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -6px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+  background: #d7d7d7;
+}
+.croppie-container .cr-slider::-moz-range-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-moz-range-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	border-color:transparent;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider-wrap{
+	padding:9px 12px 0;
+	position:relative;
+	border-radius:5px;
+	margin-top:0;
+	width:183px;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom{
+	position:absolute;
+	display:block;
+	width:12px;
+	height: 38px;
+	top:0;
+	bottom:0;
+	cursor:pointer;
+	background: center center no-repeat;
+	background-size: 9px auto;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-in{
+	left:0;
+	top:1px;
+	background-image: url(images/boarding/icon-subtract.png);
+	background-position: right center;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-out{
+	right:0;
+	background-image: url(images/boarding/icon-plus.png);
+	background-position: left center;
+}
+
 /* .modal-intro */
 .modal-intro{
 	position: absolute;
@@ -640,16 +780,19 @@
 .modal-boarding-profile .caption .link-remove{
 	color:#ff6666;
 }
-.modal-boarding-profile  .boarding-avartar{
+.modal-boarding-profile  .boarding-avatar{
 	padding-bottom: 41px;
 }
-.modal-boarding-profile  .boarding-avartar h2{
+.modal-boarding-profile .boarding-avatar.crop-show{
+	padding-bottom: 22px;
+}
+.modal-boarding-profile  .boarding-avatar h2{
 	color:#3d3d3d;
 	font-size: 1.1875em;
 	font-weight: 300;
 	margin-bottom: 21px;
 }
-.modal-boarding-profile  .boarding-avartar .frame{	
+.modal-boarding-profile  .boarding-avatar .frame{	
 	width: 183px;
 	height: 183px;
 	background: center center no-repeat;	
@@ -658,7 +801,10 @@
 	margin:0 auto;
 	position: relative;
 }
-.modal-boarding-profile  .boarding-avartar .default{	
+.modal-boarding-profile  .boarding-avatar .avatar.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .default{	
 	width: 100%;
 	height: 100%;
 	background: url(images/boarding/img-upload-avatar.png) center center no-repeat;	
@@ -666,8 +812,22 @@
 	position: relative;
 	cursor: pointer;
 }
-.modal-boarding-profile  .boarding-avartar .has-image .default{		
+.modal-boarding-profile  .boarding-avatar .has-image .default{		
 	display: none;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link{
+	font-size: .75em;
+	text-decoration: none;
+	margin: 0 15px 0 10px;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-cancel{
+	color: #7a7a7a;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-crop{
+	color: #21a3ea;
 }
 .modal-boarding-profile  .boarding-banner h2{
 	color:#3d3d3d;
@@ -930,22 +1090,22 @@
 	.modal-boarding-profile .modal-body{
 		padding-top: 18px;
 	}
-	.modal-boarding-profile .boarding-avartar{
+	.modal-boarding-profile .boarding-avatar{
 		border-bottom: 1px solid #dfdfdf;
 		padding-bottom: 29px;
 		margin-bottom: 21px;
 	}
-	.modal-boarding-profile .boarding-avartar h2{
+	.modal-boarding-profile .boarding-avatar h2{
 		font-size: 1em;
 		margin-bottom: 18px;
 	}
-	.modal-boarding-profile .boarding-avartar .frame{
+	.modal-boarding-profile .boarding-avatar .frame{
 		border-radius: 5px;
 		width: 144px;
 		height: 144px;
 		border-color: #b3b3b3;
 	}
-	.modal-boarding-profile .boarding-avartar .default{
+	.modal-boarding-profile .boarding-avatar .default{
 		background-size: 111px auto;
 	}
 	.modal-boarding-profile .boarding-banner h2{
@@ -1199,22 +1359,22 @@
 	.modal-boarding-profile .modal-body{
 		padding-top: 15px;
 	}
-	.modal-boarding-profile .boarding-avartar{
+	.modal-boarding-profile .boarding-avatar{
 		border-bottom: 1px solid #dfdfdf;
 		padding-bottom: 24px;
 		margin-bottom: 16px;
 	}
-	.modal-boarding-profile .boarding-avartar h2{
+	.modal-boarding-profile .boarding-avatar h2{
 		font-size: .875em;
 		margin-bottom: 16px;
 	}
-	.modal-boarding-profile .boarding-avartar .frame{
+	.modal-boarding-profile .boarding-avatar .frame{
 		border-radius: 5px;
 		width: 123px;
 		height: 123px;
 		border-color: #b3b3b3;
 	}
-	.modal-boarding-profile .boarding-avartar .default{
+	.modal-boarding-profile .boarding-avatar .default{
 		background-size: 111px auto;
 	}
 	.modal-boarding-profile .boarding-banner h2{

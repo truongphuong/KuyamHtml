@@ -23,6 +23,7 @@
 <link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
 <link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" /> 
 <link type="text/css" rel="stylesheet" href="content/jquery.carouFredSel.css" />
+<link type="text/css" rel="stylesheet" href="content/croppie.css" />
 
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
 <!-- InstanceBeginEditable name="css" -->
@@ -40,6 +41,7 @@
 
 <script type="text/javascript" src="scripts/jquery.carouFredSel.js"></script>
 <script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="scripts/croppie.js"></script>
 <!-- InstanceBeginEditable name="script" -->
 <!-- InstanceEndEditable --> 
 <script type="text/javascript" src="scripts/general-ui.js"></script>  
@@ -1787,20 +1789,28 @@
                     <p>Now, let's customize your profile</p>
 				</div>
 				<div class="modal-body">
-                    <section class="boarding-avartar">
+                    <section class="boarding-avatar">
                     	<h2>Compnay logo</h2>
-                        <div class="avartar">
+                        <div class="avatar">
 							<!-- <div class="frame" style="background-image: url();"> -->
                         	<div class="frame">	
-								<div class="default"></div>
+								<input type="file" id="filePhoto" class="hide" />
+								<div class="default upload-photo"></div>
 								<div class="caption">
 									<ul>
-										<li><a class="link link-change" title="" href="">Change image</a></li>
+										<li><a class="link link-change upload-photo" title="" href="">Change image</a></li>
 										<li><a class="link link-remove" title="" href="">Remove image</a></li>
 									</ul>
 								</div>
                             </div>
-                        </div>
+                        </div>		
+						<div class="croppie-section invisible">						
+							<div id="croppiePhoto"></div> 
+							<footer>
+								<a class="link link-cancel" title="" href="">Cancel</a>
+								<a class="link link-drop" title="" href="">Crop</a>
+							</footer>
+						</div>
                     </section>
                     <section class="boarding-banner">
                     	<h2>Company main banner</h2>
