@@ -755,7 +755,7 @@
 	height: 100%;
 	background: rgba(0, 0, 0, .79);
 }
-.modal-boarding-profile  .has-image .caption{
+.modal-boarding-profile  .has-image:hover .caption{
 	display: block;
 }
 .modal-boarding-profile .caption ul{
@@ -937,6 +937,14 @@
 		font-size: .875em;
 		height: 39px;
 	}
+	.chosen-container-single .chosen-single,
+	.chosen-container-multi .chosen-multiple,
+	.inner_input{
+		font-size: 14px;
+		height: 39px;
+		line-height: 35px;;
+	}
+
 	.modal-boarding textarea.form-control{
 		height: 101px !important;
 	}
@@ -951,6 +959,16 @@
 		right: 10px;
 		background-image:url(images/boarding/icon-down-blue.png);		
 		background-size: 16px auto;
+	}
+	.chosen-container-single .chosen-single div b,
+	.chosen-container-multi .chosen-multiple div b {
+		right: 10px;
+		background: url(images/boarding/icon-down-blue.png) no-repeat 8px center;
+		background-size: 16px auto;
+	}
+	.chosen-container-active.chosen-with-drop .chosen-single div b,
+	.chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 10px center;
 	}
 	.modal-boarding .form-select .bootstrap-select > .btn, 
 	.modal-boarding .form-select .bootstrap-select > .btn:focus, 
@@ -1202,6 +1220,13 @@
 		font-size: .875em;
 		height: 33px;
 	}
+	.chosen-container-single .chosen-single,
+	.chosen-container-multi .chosen-multiple,
+	.inner_input{
+		font-size: 12px;
+		height: 33px;
+		line-height: 30px;;
+	}
 	.modal-boarding textarea.form-control{
 		height: 85px !important;
 	}
@@ -1223,6 +1248,18 @@
 	.modal-boarding .bootstrap-select.btn-group .btn .caret{
 		right: 8px;	
 		background-size: 12px auto;
+	}
+	.chosen-container-single .chosen-single div b, .chosen-container-multi .chosen-multiple div b {
+		background-size: 12px auto;
+		background-position: 12px center;
+	}
+	.chosen-container-active.chosen-with-drop .chosen-single div b,
+	.chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 11px center;
+	}
+	.chosen-container .chosen-results li,
+	.chosen-container-multi .chosen-choices li.search-choice{
+		font-size: 12px;
 	}
 	.modal-boarding .form-select .bootstrap-select > .btn, 
 	.modal-boarding .form-select .bootstrap-select > .btn:focus, 
@@ -1418,6 +1455,13 @@
 	.modal-boarding-complete .modal-footer{
 		padding-bottom: 10px;
 		height: 58px;
+	}
+}
+
+@media (min-device-width: 320px){
+	.modal-boarding-profile  .has-image:focus .caption,
+	.modal-boarding-profile  .has-image:active .caption{
+		display: block;
 	}
 }
 
