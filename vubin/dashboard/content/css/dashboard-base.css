@@ -1,7 +1,7 @@
 /* =============================================================================
    Fonts
    ========================================================================== */
-@font-face {
+/*@font-face {
     font-family: 'bebas_neueregular';
     src: url('../fonts/bebasneue-webfont.eot');
     src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue-webfont.woff2') format('woff2'), url('../fonts/bebasneue-webfont.woff') format('woff'), url('../fonts/bebasneue-webfont.ttf') format('truetype'), url('../fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
@@ -79,7 +79,7 @@
     src: url('../fonts/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'), url('../fonts/raleway-extrabold-webfont.woff') format('woff'), url('../fonts/raleway-extrabold-webfont.ttf') format('truetype'), url('../fonts/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 /* =============================================================================
    HTML5 element display
@@ -256,8 +256,8 @@ div[class*="col-"] {
 .dropdown-menu > .active.selected > a,
 .dropdown-menu > .active.selected > a:hover,
 .dropdown-menu > .active.selected > a:focus{
-    background-color: #95be31;
-    color: #fff;
+    background-color: transparent;
+    color: #4799ff;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -287,9 +287,9 @@ form div[class*="col-"] {
 }
 
 .form-label {
-    font-size: 1em;
+    font-size: 1.25em;
     font-family: Lato, sans-serif;
-	font-weight: 600;
+	font-weight: 300;
 }
 
 .form-control,
@@ -537,15 +537,18 @@ textarea.form-control:focus {
 	font-weight:700;
 }
 
-.close {
+button.close {
     font-size: 1.0625em;
     font-family: Lato, sans-serif;
 	font-weight: 600;
     text-transform: uppercase;
-    color: #242424;
+    color: transparent !important;
+	text-shadow: none !important;
     opacity: 1;
     height: 40px;
     width: 40px;
+	background: url(../images/icon-close.png) center center no-repeat;
+	background-size: 13px auto;
 }
 
 /* =============================================================================
@@ -569,9 +572,13 @@ textarea.form-control:focus {
 .modal-backdrop {
     display: none;
 }
-
+.modal-dialog{
+	margin-top:0;
+	margin-bottom: 0;
+}
 .modal-content {
     border: 1px solid #888;
+	border-radius: 4px !important;
 }
 
 .modal-header {
@@ -789,24 +796,19 @@ textarea.form-control:focus {
 
 .bootstrap-select.btn-group .btn .caret {
     border: 0 none;
-    margin-top: -6px;
-    width: 6px;
-    height: 10px;
-    background-image: url(../images/icon_next_black.png);
-    background-size: 6px auto;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+    margin-top: -3px;
+    width: 13px;
+    height: 6px;
+    background: url(../images/icon-select-blue.png) center center no-repeat;
+    background-size: 13px auto;
 }
 
 .bootstrap-select.btn-group.dropup .btn .caret {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .bootstrap-select.btn-group .btn.disabled .caret {
@@ -863,7 +865,7 @@ textarea.form-control:focus {
     text-decoration: underline;
     font-family: Lato, sans-serif;
 	font-weight: 500;
-    font-size: .875em;
+    font-size: .8125em;
     color: #242424;
     background: transparent;
     border: 0 none;
@@ -891,7 +893,7 @@ textarea.form-control:focus {
 .calendar-select .bootstrap-select > .btn-default.disabled:focus,
 .calendar-select .bootstrap-select > .btn-default.disabled:active {
     border-color: transparent;
-    border-width: 2px;
+    border-width: 1px;
     background: transparent;
 }
 
@@ -929,7 +931,7 @@ textarea.form-control:focus {
 }
 
     .calendar-select .bootstrap-select .dropdown-menu.open {
-        border-width: 2px;
+        border-width: 1px;
         border-color: #737373;
         border-top-color: transparent;
     }
@@ -1058,8 +1060,8 @@ textarea.form-control:focus {
 }
 
 .form-select-search .selected .btn-personal .icon-details{
-	color: #fff;
-	border-color:#fff;
+	color: #4799ff;
+	border-color:#4799ff;
 }
 
 .form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
@@ -1277,10 +1279,10 @@ textarea.form-control:focus {
 }
 
 .icon-user {
-    width: 15px;
+    width: 16px;
     height: 17px;
-    background-image: url(../images/icon_user.png);
-    background-size: 15px auto;
+    background-image: url(../images/icon_user_2.png);
+    background-size: 16px auto;
 }
 
 .icon-facebook {
@@ -1298,9 +1300,9 @@ textarea.form-control:focus {
 }
 
 .icon-next {
-    width: 8px;
+    width: 7px;
     height: 12px;
-    background-image: url(../images/icon_next_black.png);
+    background-image: url(../images/icon_next_blue.png);
     background-size: 7px auto;
 }
 
@@ -1320,9 +1322,9 @@ textarea.form-control:focus {
 }
 
 .icon-pre {
-    width: 8px;
+    width: 7px;
     height: 12px;
-    background-image: url(../images/icon_next_black.png);
+    background-image: url(../images/icon_next_blue.png);
     background-size: 7px auto;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -2310,13 +2312,13 @@ textarea.form-control:focus {
         height: 43px;
     }
 
-    .bootstrap-select.btn-group .btn .caret {
+    /*.bootstrap-select.btn-group .btn .caret {
         margin-top: -5px;
         width: 8px;
         height: 14px;
-        background-image: url(../images/mobile/icon_next_black.png);
+        background-image: url(../images/mobile/icon-select-blue.png);
         background-size: 8px auto;
-    }
+    }*/
 
     .form-select-search.single-left .btn-personal {
         left: inherit;
@@ -2522,4 +2524,10 @@ textarea.form-control:focus {
 .bootstrap-datetimepicker-widget table td span.active {
     background-color: #95be31;
     color: #fff;
+}
+
+/* Begin .modal-add-calendar*/
+.modal-add-calendar .modal-title{
+	font-size: 1em;
+	font-weight: 400;
 }
