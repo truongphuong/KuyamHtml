@@ -57,6 +57,12 @@ function adjustboardingHeight(modalID){
 }
 
 $(document).ready(function () {
+
+	/*apply select*/
+	existSelect('form-select-time');
+
+	$('.form-select-time').selectpicker();
+
 	if (!isMobile.Windows()) {
         $('html').addClass('on-nicescroll');
     }
