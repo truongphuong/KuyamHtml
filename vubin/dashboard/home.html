@@ -21,8 +21,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png?v2" />
 <link rel="manifest" href="favicon/manifest.json?v2" />
 
-
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css' />
 
 <meta name="msapplication-TileColor" content="transparent" />
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png?v2" />
@@ -58,6 +58,9 @@
 <!-- croppie CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/croppie.css"/>
 
+<!-- chosen CSS -->
+<link rel="stylesheet" type="text/css" href="content/css/chosen.css"/>
+
 <!-- SelectKustom CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/SelectKustom.css"/>
 
@@ -66,6 +69,7 @@
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-style.css" /> 
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-retina.css" /> 
 <link type="text/css" rel="stylesheet" href="content/css/dashboard-print.css" /> 
+<link rel="stylesheet" type="text/css" href="content/css/boarding.css"/>
 </head>
 <body>
 	<div id="kuyamSite" class="kuyam-wrapper">     	
@@ -1570,7 +1574,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="addCalendarModalLabel" class="modal-title">Add appointment</h4>
+					<h4 id="addCalendarModalLabel" class="modal-title">Add:</h4>
 				</div>
 				<div class="modal-body">
 				
@@ -1645,7 +1649,18 @@
 										<div class="col-xs-12 col-sm-6">									
 											<label class="form-label" for="txtTimeAppointment">Time</label>
 											<div id="timepickerAppointment" class="dropdown form-timepicker">
-												<input id="txtTimeAppointment" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+												<ul class="clearfix">
+													<li>
+														<input type="text" value="10 : 00" />
+													</li>
+													<li class="form-select form-select-time">
+														<select>
+															<option>AM</option>
+															<option>PM</option>
+														</select>
+													</li>														
+												</ul>
+												<!--<input id="txtTimeAppointment" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 												<section class="dropdown-menu" aria-labelledby="txtTime">
 													<div class="dropdown-section">
 														<footer></footer>
@@ -1685,7 +1700,7 @@
 															</tfoot>
 														</table>											
 													</div>
-												</section>
+												</section>-->
 											</div>
 										</div>
 									</div>
@@ -1795,7 +1810,7 @@
 										<div class="col-xs-12 col-sm-6">									
 											<label class="form-label" for="txtTimeClass">Time</label>
 											<div id="timepickerClass" class="dropdown form-timepicker">
-												<input id="txtTimeClass" type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+												<!--<input id="txtTimeClass" type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 												<section class="dropdown-menu" aria-labelledby="txtTime">
 													<div class="dropdown-section">
 														<footer></footer>
@@ -1835,7 +1850,7 @@
 															</tfoot>
 														</table>											
 													</div>
-												</section>
+												</section>-->
 											</div>
 										</div>
 									</div>
@@ -1947,7 +1962,7 @@
 										<div class="col-xs-12 col-sm-6">									
 											<label class="form-label" for="txtTimeBlocker">Time</label>
 											<div id="timepickerBlocker" class="dropdown form-timepicker form-timepicker-range">
-												<input id="txtTimeBlocker" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+												<!--<input id="txtTimeBlocker" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 												<section class="dropdown-menu" aria-labelledby="txtTime">
 													<div class="dropdown-section">
 														<footer></footer>
@@ -1974,7 +1989,7 @@
 															</tfoot>
 														</table>											
 													</div>
-												</section>
+												</section>-->
 											</div>
 										</div>
 									</div>
@@ -2500,6 +2515,9 @@
     
     <!-- SelectKustom js -->
 	<script type="text/javascript" src="scripts/libs/SelectKustom.js"></script>
+    
+    <!-- chosen.jquery js -->
+	<script type="text/javascript" src="scripts/libs/chosen.jquery.js"></script>
     
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 

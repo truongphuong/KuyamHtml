@@ -204,9 +204,9 @@ function minHeightBody() {
     }
     if ($('#subnavList').length !== 0) {
         if ((hScreen - hHeader - hFooter) > $('.kuyam-content form').height()) {
-            $('#subnavList').css({ 'height': hScreen - hHeader - hFooter - 65 });
+            $('#subnavList').css({ 'max-height': hScreen - hHeader - hFooter - 65 });
         } else {
-            $('#subnavList').css({ 'height': $('.kuyam-content form').innerHeight() });
+            $('#subnavList').css({ 'max-height': $('.kuyam-content form').innerHeight() });
         }
     }
     if ($('.calendar-page').length !== 0) {
@@ -359,6 +359,7 @@ function iscrollSelectK(sectionID, scrollName) {
 }
 
 $(document).ready(function () {
+
     $(document).on('hidden.bs.modal', '.modal', function () {
         $('.modal:visible').length && $(document.body).addClass('modal-open');
     });
