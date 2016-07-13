@@ -1711,7 +1711,7 @@ button.close {
 .subnav-content{
 	position:relative;
 	height:100%;
-	padding-top:10px;
+	padding-top:54px;
 	padding-bottom:10px;
 }
 .subnav-content .search-section{
@@ -1721,6 +1721,9 @@ button.close {
 .subnav-content .add-link-section{
 	width:100%;
 	padding:16px 24px;
+	left: 0;
+    position: absolute;
+    top: 0;
 }
 .subnav-content .add-link{
 	font-family: Lato, sans-serif;
@@ -2289,7 +2292,7 @@ button.close {
                 }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .form-control, .form-control:focus {
         height: 43px;
         border-color: #747474;
@@ -2369,6 +2372,23 @@ button.close {
 			border: 0 none;
 		}
 
+		.kuyam-sidebar,
+		.kuyam-subnav{
+			display: none;
+		}
+		.kuyam-page .kuyam-content{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.kuyam-page{
+			display: block;
+		}
+		.kuyam-page > div{
+			-webkit-flex: inherit;
+			-ms-flex: inherit;
+			flex: inherit;
+		}
+		
     .modal-terms {
         width: auto;
     }
