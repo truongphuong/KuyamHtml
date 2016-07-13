@@ -382,10 +382,6 @@ $(document).ready(function () {
         centerModals($(this));
     });
 
-    iscrollContent('#tabTerms');
-    iscrollContent('#tabPrivacy');
-    iscrollContent('#tabServices');
-
     var termActive;
     $('.link-terms').click(function (e) {
         e.preventDefault();
@@ -399,15 +395,18 @@ $(document).ready(function () {
     });
 
     $('#termsModal').on('shown.bs.modal', function (e) {
-        $('#tabTerms').data('IScroll').refresh();
+        /*$('#tabTerms').data('IScroll').refresh();
         $('#tabPrivacy').data('IScroll').refresh();
-        $('#tabServices').data('IScroll').refresh();
+        $('#tabServices').data('IScroll').refresh();*/
+		iscrollContent('#tabTerms');
+    	iscrollContent('#tabPrivacy');
+    	iscrollContent('#tabServices');
     });
 
     $('.terms-tabs').on('shown.bs.tab', function (e) {
-        $('#tabTerms').data('IScroll').refresh();
+        /*$('#tabTerms').data('IScroll').refresh();
         $('#tabPrivacy').data('IScroll').refresh();
-        $('#tabServices').data('IScroll').refresh();
+        $('#tabServices').data('IScroll').refresh();*/
     });
 
     $('.subnav-ul a').on('click', function (e) {
@@ -434,9 +433,9 @@ $(document).ready(function () {
                 $(this).siblings('ul').slideToggle(300);
             }
 
-            setTimeout(function () {
+            /*setTimeout(function () {
                 $('#subnavList').data('IScroll').refresh();
-            }, 300);
+            }, 300);*/
 
         } else {
             $(this).closest('ul').find('li').removeClass('active');

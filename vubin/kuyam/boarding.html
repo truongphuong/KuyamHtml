@@ -1321,17 +1321,27 @@
                             <div class="col-xs-12">
                                 <label class="form-label" for="txtCellNumber">Categories</label>
                                 <div class="form-placeholder">
-                                   <select id="chosen-select" data-placeholder="Your Favorite Types of Bear" style="width: 100%" multiple class="form-control chosen-select" tabindex="8">
-                                        <option value=""></option>
-                                        <option>American Black Bear</option>
-                                        <option>Asiatic Black Bear</option>
-                                        <option>Brown Bear</option>
-                                        <option>Giant Panda</option>
-                                        <option selected>Sloth Bear</option>
-                                        <option disabled>Sun Bear</option>
-                                        <option selected>Polar Bear</option>
-                                        <option disabled>Spectacled Bear</option>
-                                    </select>
+									<div class="hidden-xs">
+									   <select id="chosen-select" data-placeholder="Your Favorite Types of Bear" style="width: 100%" multiple class="form-control chosen-select" tabindex="8">
+											<option value=""></option>
+											<option>American Black Bear</option>
+											<option>Asiatic Black Bear</option>
+											<option>Brown Bear</option>
+											<option>Giant Panda</option>
+											<option selected>Sloth Bear</option>
+											<option disabled>Sun Bear</option>
+											<option selected>Polar Bear</option>
+											<option disabled>Spectacled Bear</option>
+										</select>
+									</div>
+									<div class="visible-xs">
+										<div id="div_chosen_select" class="chosen-container chosen-container-multi chosen-with-drop"  data-toggle="modal" data-target="#categoryChosenModal">
+											<a class="chosen-multiple chosen-default">
+												<span><em>Sloth Bear</em> and <em>1</em> more selected</span>
+												<div><b></b></div>
+											</a>
+										</div>
+									</div>
                                     <!--<div>
                                         <select data-placeholder="Search and select" id="chosen-select" class="chosen-select" multiple style="width:100%;">
                                             <option value=""></option>
@@ -2200,6 +2210,25 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#boardingCompleteModal -->
+	
+	<div id="categoryChosenModal" class="modal modal-boarding modal-chosen fade" role="dialog" aria-labelledby="boardingCompleteModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-boarding-chosen">
+			<div class="modal-content">
+				<select id="chosen-select1" data-placeholder="Your Favorite Types of Bear" style="width: 100%" multiple class="form-control chosen-select" tabindex="8">
+					<option value=""></option>
+					<option>American Black Bear</option>
+					<option>Asiatic Black Bear</option>
+					<option>Brown Bear</option>
+					<option>Giant Panda</option>
+					<option selected>Sloth Bear</option>
+					<option disabled>Sun Bear</option>
+					<option selected>Polar Bear</option>
+					<option disabled>Spectacled Bear</option>
+				</select>
+			</div>
+			<button class="btn btn-form btn-agree btn-ready"><span class="icon icon-check"></span> Ready</button>			
+		</div>
+	</div>
 	<!-- InstanceEndEditable -->        
          
     <!-- InstanceBeginEditable name="script2" -->    
@@ -2207,6 +2236,7 @@
     
         (function(){
             $('#chosen-select').chosen();
+			$('#chosen-select1').chosen();
             $('#boardingInfoModal').on('shown.bs.modal', function () {
                 $('#chosen-select').on('change', function(evt, params) {
                     console.log(params);
