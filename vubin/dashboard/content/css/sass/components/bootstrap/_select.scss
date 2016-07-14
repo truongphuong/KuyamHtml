@@ -1,0 +1,467 @@
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.bootstrap-select.btn-group .no-results {
+    margin: 0;
+    padding: 10px;
+}
+
+.bootstrap-select > .btn {
+    font-size: 16px;
+    border-radius: 0;
+}
+
+    .bootstrap-select > .btn,
+    .bootstrap-select > .btn:focus,
+    .bootstrap-select > .btn:active,
+    .bootstrap-select > .btn-default.disabled,
+    .bootstrap-select > .btn-default.disabled:focus,
+    .bootstrap-select > .btn-default.disabled:active {
+        padding-left: 10px;
+        text-align: left;
+        outline: 0 none !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+.bootstrap-select.btn-group .btn .filter-option {
+    color: $base;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%;
+}
+
+.bootstrap-select > .dropdown-toggle {
+    padding-right: 30px;
+}
+.bootstrap-select.open > .dropdown-toggle{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    background: $white;
+    border-color: #737373;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.bootstrap-select .btn-default.disabled,
+.bootstrap-select .btn-default.disabled:hover,
+.bootstrap-select .btn-default.disabled:focus,
+.bootstrap-select .btn-default.disabled:active {
+    cursor: text;
+}
+
+.bootstrap-select .dropdown-menu {
+    margin-top: -1px;
+    padding: 0;
+    font-size: 16px;
+    max-width: 100%;
+    min-height: inherit !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.bootstrap-select .dropdown-menu.inner {
+    max-height: 175px !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.on-nicescroll .bootstrap-select .dropdown-menu.inner {
+    max-height: inherit !important;
+    overflow-y: hidden !important;
+    max-height: 100% !important;
+}
+
+.bootstrap-select.dropup .dropdown-menu {
+    margin-top: inherit;
+    margin-bottom: -1px;
+}
+
+.bootstrap-select .dropdown-menu > li > a {
+    padding: 8px 10px;
+    font-size: $h6;
+    line-height: 120%;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.bootstrap-select .dropdown-menu.open {
+    border-color: #737373;
+}
+
+.bootstrap-select.btn-group .btn .caret {
+    border: 0 none;
+    margin-top: -3px;
+    width: 13px;
+    height: 6px;
+    background: url(../images/icon-select-blue.png) center center no-repeat;
+    background-size: 13px auto;
+}
+
+.bootstrap-select.btn-group.dropup .btn .caret {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.bootstrap-select.btn-group .btn.disabled .caret {
+    background-image: url(../images/icon_next_grey.png);
+}
+
+.on-nicescroll .bootstrap-select .dropdown-menu {
+    display: block;
+    background-clip: padding-box;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    -ms-transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    max-height: none !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+}
+
+.on-nicescroll .bootstrap-select.open .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+.on-nicescroll .wrap-dropdown-menu-inner{
+    max-height: 175px;
+    overflow: hidden;
+}
+
+.on-nicescroll .wrap-dropdown-menu-inner-content{
+}
+
+.bootstrap-select .popover-title {
+    display: block;
+    padding: 9px 10px;
+    text-decoration: underline;
+    font-family: $primary;
+    font-weight: 500;
+    font-size: $s13;
+    color: $base;
+    background: transparent;
+    border: 0 none;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+    .bootstrap-select .popover-title .close {
+        display: none;
+    }
+
+.bootstrap-select .bs-searchbox {
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+.calendar-select select {
+    display: none;
+}
+
+.calendar-select .bootstrap-select > .btn,
+.calendar-select .bootstrap-select > .btn:focus,
+.calendar-select .bootstrap-select > .btn:active,
+.calendar-select .bootstrap-select > .btn-default.disabled,
+.calendar-select .bootstrap-select > .btn-default.disabled:focus,
+.calendar-select .bootstrap-select > .btn-default.disabled:active {
+    border-color: transparent;
+    border-width: 1px;
+    background: transparent;
+}
+
+.calendar-select .bootstrap-select.btn-group .btn .filter-option {
+    width: auto;
+    text-transform: uppercase;
+}
+
+.calendar-select .bootstrap-select > .dropdown-toggle {
+    padding-right: 25px;
+}
+
+.calendar-select .bootstrap-select.btn-group .btn .caret {
+    margin-top: -5px;
+    margin-left: 5px;
+    position: inherit;
+    right: inherit;
+    top: inherit;
+}
+
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.calendar-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    background: $white;
+    border-color: #737373;
+    border-bottom-color: transparent;
+}
+
+.calendar-select .bootstrap-select .popover-title {
+    cursor: pointer;
+}
+
+.calendar-select .bootstrap-select .dropdown-menu {
+    margin-top: -4px;
+}
+
+    .calendar-select .bootstrap-select .dropdown-menu.open {
+        border-width: 1px;
+        border-color: #737373;
+        border-top-color: transparent;
+    }
+
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default,
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:hover,
+.calendar-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:focus {
+    border-top-color: transparent;
+    border-bottom-color: inherit;
+}
+
+.calendar-select .bootstrap-select.dropup .dropdown-menu {
+    margin-top: inherit;
+    margin-bottom: -4px;
+}
+
+    .calendar-select .bootstrap-select.dropup .dropdown-menu.open {
+        border-top-color: #737373;
+        border-bottom-color: transparent;
+    }
+
+.calendar-select .bootstrap-select .dropdown-menu > li.selected {
+    display: none;
+}
+
+.form-select-readonly .bootstrap-select .bs-searchbox {
+    height: 0;
+}
+
+.form-select {
+    height: 40px;
+}
+
+    .form-select select {
+        display: none;
+    }
+
+    .form-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+        width: 100%;
+    }
+
+    .form-select .bootstrap-select > .btn,
+    .form-select .bootstrap-select > .btn:focus,
+    .form-select .bootstrap-select > .btn:active,
+    .form-select .bootstrap-select > .btn-default.disabled,
+    .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .form-select .bootstrap-select > .btn-default.disabled:active,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+        background: $white;
+        border-color: $border_input;
+        height: 40px;
+    }
+ .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn,
+.form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:focus,
+.form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:active {
+    border-color: #ae422c;
+}
+
+  .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn,
+.form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:focus,
+.form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:active {
+    border-color: #ae422c;
+}
+    .form-select .bootstrap-select .dropdown-menu {
+        margin-top: -1px;
+    }
+
+        .form-select .bootstrap-select .dropdown-menu.open {
+            border-color: #000;
+            border-top-color: #acacac;
+        }
+
+    .form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default,
+    .form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:hover,
+    .form-select .bootstrap-select.dropup.open > .dropdown-toggle.btn-default:focus {
+        border-top-color: #acacac;
+        border-bottom-color: inherit;
+    }
+
+    .form-select .bootstrap-select.dropup .dropdown-menu {
+        margin-top: inherit;
+        margin-bottom: -1px;
+    }
+
+        .form-select .bootstrap-select.dropup .dropdown-menu.open {
+            border-top-color: #000;
+            border-bottom-color: transparent;
+        }
+
+.form-select-search {
+}
+
+    .form-select-search .bootstrap-select .dropdown-menu.open {
+        border-color: #000;
+        top: 0;
+    }
+
+.on-device .form-select-search .bootstrap-select .dropdown-menu.open {
+    max-height: 256px !important;
+}
+
+.form-select-search .bootstrap-select .popover-title {
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+}
+
+.form-select-search .bootstrap-select .bs-searchbox {
+    position: relative;
+    top: -33px;
+}
+
+    .form-select-search .bootstrap-select .bs-searchbox .form-control {
+        border-color: transparent transparent #acacac;
+    }
+
+.form-select-search .btn-personal {
+    background: transparent;
+    border: 0 none;
+    height: 36px;
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+}
+
+.form-select-search .selected .btn-personal .icon-details{
+    color: #4799ff;
+    border-color:#4799ff;
+}
+
+.form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    width: 14px;
+    height: 11px;
+    background: url(../images/icon_mark.png) no-repeat center center;
+    background-size: 14px auto;
+    color: transparent;
+    margin-top: 12px;
+}
+
+.form-select-search .bootstrap-select .btn .filter-option .btn-personal {
+    display: none;
+}
+
+.form-select-search.single-left .btn-personal {
+    left: 0;
+}
+
+.form-select-search.single-left .bootstrap-select .dropdown-menu > li > a {
+    padding-left: 40px;
+}
+
+.form-select-search.single-right .btn-personal {
+    right: 0;
+}
+
+.form-select-search.single-right .bootstrap-select .dropdown-menu > li > a {
+    padding-right: 40px;
+}
+
+.form-select-search.multi-left .btn-personal {
+    left: 0;
+}
+
+.form-select-search.multi-left .bootstrap-select .dropdown-menu > li > a {
+    padding-left: 40px;
+}
+
+.form-select-search.multi-right .btn-personal {
+    right: 0;
+}
+
+.form-select-search.multi-right .bootstrap-select .dropdown-menu > li > a {
+    padding-right: 40px;
+}
+
+.form-select-search.multi-right .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+    right: 44px;
+}
+
+.form-select-modal .bootstrap-select .popover-title{
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .form-select .bootstrap-select > .btn,
+    .form-select .bootstrap-select > .btn:focus,
+    .form-select .bootstrap-select > .btn:active,
+    .form-select .bootstrap-select > .btn-default.disabled,
+    .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .form-select .bootstrap-select > .btn-default.disabled:active,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+        border-color: #747474;
+        height: 43px;
+    }
+
+    /*.bootstrap-select.btn-group .btn .caret {
+        margin-top: -5px;
+        width: 8px;
+        height: 14px;
+        background-image: url(../images/mobile/icon-select-blue.png);
+        background-size: 8px auto;
+    }*/
+
+    .form-select-search.single-left .btn-personal {
+        left: inherit;
+        right: 0;
+    }
+
+    .form-select-search.single-left .bootstrap-select .dropdown-menu > li > a {
+        padding-left: 10px;
+        padding-right: 40px;
+    }
+}

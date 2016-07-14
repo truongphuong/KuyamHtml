@@ -71,7 +71,15 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
 					{
-						bouncescroll: false
+						bouncescroll: false,
+						cursorcolor: "#278CFE",
+						preservenativescrolling: false,
+						cursorborder: "1px solid transparent",
+						cursorborderradius: "5px",
+						autohidemode: false,
+						cursorwidth: "7px",
+						enablescrollonselection: false,
+						background: "#8B8B8B"
 					});
 			});
 		}
@@ -119,7 +127,15 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
 					{
-						bouncescroll: false
+						bouncescroll: false,
+						cursorcolor: "#278CFE",
+						preservenativescrolling: false,
+						cursorborder: "1px solid transparent",
+						cursorborderradius: "5px",
+						autohidemode: false,
+						cursorwidth: "7px",
+						enablescrollonselection: false,
+						background: "#8B8B8B"
 					});
 			});	
 		}
@@ -151,7 +167,15 @@ function iscrollSelect(sectionID, scrollName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', 
 					{
-						bouncescroll: false
+						bouncescroll: false,
+						cursorcolor: "#278CFE",
+						preservenativescrolling: false,
+						cursorborder: "1px solid transparent",
+						cursorborderradius: "5px",
+						autohidemode: false,
+						cursorwidth: "7px",
+						enablescrollonselection: false,
+						background: "#8B8B8B"
 					});
 			});
 		}
@@ -165,7 +189,15 @@ function iscrollContent(sectionID) {
 		$(sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfDiv);
 		$(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content', 
 		{
-			bouncescroll: false
+			bouncescroll: false,
+			cursorcolor: "#278CFE",
+			preservenativescrolling: false,
+			cursorborder: "1px solid transparent",
+			cursorborderradius: "5px",
+			autohidemode: false,
+			cursorwidth: "7px",
+			enablescrollonselection: false,
+			background: "#8B8B8B"
 		}); 
 	}
 }

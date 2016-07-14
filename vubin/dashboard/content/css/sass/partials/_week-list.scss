@@ -1,0 +1,30 @@
+.week-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #000;
+    height: 40px;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.week-list li {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-left: 1px solid #000;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #fff;
+}
+
+.week-list li:first-child {
+    border-left: 0 none;
+}
+
+.week-list li.active {
+    background: #4799ff;
+    color: #fff;
+}

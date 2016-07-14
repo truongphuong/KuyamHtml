@@ -1,0 +1,154 @@
+.modal-terms {
+    width: 700px;
+}
+
+.modal-terms .modal-header .close,
+.modal-terms .modal-header .close:hover {
+    width: 33px;
+    height: 33px;
+    background-image: url(../images/icons/btn_close_black.png);
+    background-size: 33px auto;
+    top: -16px;
+    right: -16px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.modal-terms .modal-header {
+    padding: 0 0 15px;
+    text-align: left;
+}
+
+.modal-terms .nav-tabs {
+    padding: 0;
+    border: 0 none;
+    background: none #333333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.modal-terms .nav-tabs > li {
+    margin: 0;
+    width: 33.33%;
+}
+
+.modal-terms .nav-tabs > li > a,
+.modal-terms .nav-tabs > li > a:hover,
+.modal-terms .nav-tabs > li.active > a {
+    background: none transparent;
+    border: 0 none;
+}
+
+.modal-terms .nav-tabs > li > a {
+    float: none;
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    font-size: $h4;
+    line-height:28px;
+    font-family: $primary;
+    font-weight: 800;
+    color: #ABABAB;
+}
+
+.modal-terms .nav-tabs > li > a span {
+    display: block;
+    height: 32px;
+    background: url(../images/icons/arrow_down_2.png) center center no-repeat;
+    background-size: 34px auto;
+    margin: 10px 0 0;
+}
+
+.modal-terms .nav-tabs > li.active > a {
+    color:$white;
+}
+
+.modal-terms .nav-tabs > li.active > a span {
+    background: url(../images/icons/arrow_down_3.png) center center no-repeat;
+}
+
+.modal-terms .tab-content {
+    margin: 0 15px;
+    padding: 20px 10px;
+    border: 2px solid #ABABAB;
+}
+
+.modal-terms .tab-content {
+    font-size: $h5;
+    line-height:24px;
+    font-family: $primary;
+    font-weight: 500;
+}
+
+.modal-terms .tab-content h3 {
+    font-size: Sh5;
+    line-height:24px;
+    font-family: $primary;
+    font-weight: 800;
+    margin: 20px 0 15px;
+}
+
+.modal-terms .tab-pane {
+    position: relative;
+    height: 310px;
+    overflow: hidden;
+}
+
+.modal-terms .ui-tabs-panel h3 {
+    font-size: $h5;
+    line-height:24px;
+    font-family:$primary;
+    font-weight: 800;
+    margin: 20px 0 15px;
+}
+
+.modal-terms .ui-tabs-panel p {
+    margin: 0 0 15px;
+}
+
+.modal-terms .ui-tabs-panel p a {
+    color: Blue;
+}
+
+@media (max-width: 768px){
+    .modal-terms {
+        width: auto;
+    }
+
+    .modal-terms .nav-tabs {
+        background: $white;
+    }
+
+    .modal-terms .nav-tabs > li > a {
+        font-size: $s18;
+        color: #ababab;
+    }
+
+    .modal-terms .nav-tabs > li > a span {
+        background-image: url(../images/icons/arrow_down_2.png);
+    }
+
+    .modal-terms .nav-tabs > li.active > a {
+        color: $base;
+    }
+
+    .modal-terms .nav-tabs > li.active > a span {
+        background-image: url(../images/icons/arrow_down.png);
+    }
+
+    .modal-terms .tab-content {
+        border: 0 none;
+    }
+}
+
+@media (max-width: 479px) {
+    .modal-terms .nav-tabs > li > a {
+        font-size: $p;
+    }
+
+    .modal-terms .tab-content,
+    .modal-terms .tab-content h3 {
+        font-size: $s14;
+    }
+}

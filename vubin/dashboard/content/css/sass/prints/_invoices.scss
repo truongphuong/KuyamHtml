@@ -1,0 +1,40 @@
+@media print{
+    .kuyam-header .navbar-collapse,
+    .kuyam-footer,
+    .kuyam-sidebar,
+    .invoices-table form,
+    .invoices-table .bootstrap-table,
+    .invoices-table .detail-view .btn-print{
+        display:none;
+    }
+
+    .kuyam-header{
+        position:relative;
+        overflow: hidden;
+        display:block;
+    }
+    .kuyam-header .navbar-brand:after{
+        content:"" !important;
+    }
+    .kuyam-header .navbar-brand{
+        display:block;
+        position:absolute;
+        left: 0.5cm;
+        bottom:0;
+        width: 145px;
+        background: none;
+    }
+    .kuyam-header .navbar-brand .logo{
+        width:114px;
+    }
+    .kuyam-page .kuyam-content{
+        padding:15px 0.5cm;
+    }
+    .invoices-table{
+        width:100% !important;
+    }
+    .invoices-table .cols-datetime,
+    .invoices-table .table > tbody > tr.detail-view table th{
+        width:15%;
+    }
+}
