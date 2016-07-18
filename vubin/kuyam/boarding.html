@@ -1374,10 +1374,10 @@
                                             <option>Spectacled Bear 1</option>
                                             <option>Spectacled Bear 3</option>
                                             <option>Polar Bear 3</option>
-                                            <option selected>Spectacled Bear 2</option>
-                                            <option selected>Polar Bear 2</option>
-                                            <option selected>Spectacled Bear</option>
-                                            <option selected>Polar Bear 1</option>
+                                            <option >Spectacled Bear 2</option>
+                                            <option >Polar Bear 2</option>
+                                            <option >Spectacled Bear</option>
+                                            <option >Polar Bear 1</option>
                                             <option selected>Spectacled Bear 1</option>
                                         </select>
                                     </div>
@@ -2275,7 +2275,9 @@
 	<script type="text/javascript">
     
         (function(){
-            $('#chosen-select').chosen();
+            $('#chosen-select').chosen(/*{
+                isShowDropDown: true
+            }*/);
 			$('#chosen-select1').chosen();
             $('#boardingInfoModal').on('shown.bs.modal', function () {
                 $('#chosen-select').on('change', function(evt, params) {

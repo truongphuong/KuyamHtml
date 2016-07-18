@@ -115,16 +115,27 @@
 				</div>
 				<div class="kuyam-content">
 					<form class="profile-form company-form boarding-working-time basic-info">
+                        <h2 class="title-header-dashboard">Company basic info</h2>
 						<div class="row modal-boarding">
                             <div class="modal-boarding-time">
-                                <div class="col-xs-12">
-                                    <label class="form-label form-label-custom" for="txtCompanyName">Company name</label>
-                                    <div class="form-placeholder">
-                                        <input id="txtCompanyName" class="form-control" type="text" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" onfocus="this.style.backgroundColor='white';" />
-                                        <label class="form-label" for="txtCompanyName">Company name</label>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div>
+                                        <label class="form-label form-label-custom" for="txtCompanyName">Company name</label>
+                                        <div class="form-placeholder">
+                                            <input id="txtCompanyName" class="form-control" type="text" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" onfocus="this.style.backgroundColor='white';" />
+                                            <label class="form-label" for="txtCompanyName">Company name</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-label form-label-custom">Website</label>
+                                        <div class="form-placeholder">
+                                            <input type="text" class="form-control" id="txtStreet" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+                                            <label class="form-label" for="txtStreet">Website URL</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 input-address">
+                                <div class="col-xs-12 col-sm-6 input-address">
                                     <label class="form-label form-label-custom" for="txtAddress">Address</label>
                                     <div class="form-placeholder">
                                         <input id="txtAddress" class="form-control" type="text" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" onfocus="this.style.backgroundColor='white';" />
@@ -135,51 +146,45 @@
                                         <label class="form-label" for="txtCity">City</label>
                                     </div>
 
-                                </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <div id="divState" class="form-select form-select-readonly" title="Select state">
-                                        <select id="selectState">
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                            <option>Select state</option>
-                                        </select>
+                                    <div class="row">
+                                        <div id="divState" class="col-xs-6 form-select form-select-readonly" title="Select state">
+                                            <select id="selectState">
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                                <option>Select state</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-6 form-placeholder">
+                                            <input id="txtZipcode" class="form-control" type="text" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" onfocus="this.style.backgroundColor='white';" />
+                                            <label class="form-label" for="txtZipcode">Zipcode</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="form-placeholder">
-                                        <input id="txtZipcode" class="form-control" type="text" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" onfocus="this.style.backgroundColor='white';" />
-                                        <label class="form-label" for="txtZipcode">Zipcode</label>
+                                <div>
+                                    <div class="col-xs-12 col-xs-6">
+                                        <label class="form-label form-label-custom" for="txtWorkNumber">Work number</label>
+                                        <div class="form-placeholder">
+                                            <!--<input id="txtWorkNumber" class="form-control" type="text" />-->
+                                            <input id="txtWorkNumber" type="text" class="form-control bfh-phone" data-format=" (ddd) ddd-dddd">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-xs-6">
+                                        <label class="form-label form-label-custom" for="txtCellNumber">Cell number</label>
+                                        <div class="form-placeholder">
+                                            <!--<input id="txtCellNumber" class="form-control" type="text" />-->
+                                            <input id="txtCellNumber" type="text" class="form-control bfh-phone" data-format=" (ddd) ddd-dddd">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12">
-                                    <label class="form-label form-label-custom">Website</label>
-                                    <div class="form-placeholder">
-                                        <input type="text" class="form-control" id="txtStreet" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
-                                        <label class="form-label" for="txtStreet">Website URL</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-xs-6">
-                                    <label class="form-label form-label-custom" for="txtWorkNumber">Work number</label>
-                                    <div class="form-placeholder">
-                                        <!--<input id="txtWorkNumber" class="form-control" type="text" />-->
-                                        <input id="txtWorkNumber" type="text" class="form-control bfh-phone" data-format=" (ddd) ddd-dddd">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-xs-6">
-                                    <label class="form-label form-label-custom" for="txtCellNumber">Cell number</label>
-                                    <div class="form-placeholder">
-                                        <!--<input id="txtCellNumber" class="form-control" type="text" />-->
-                                        <input id="txtCellNumber" type="text" class="form-control bfh-phone" data-format=" (ddd) ddd-dddd">
-                                    </div>
-                                </div>
+
                                 <div class="col-xs-12">
                                     <label class="form-label form-label-custom" for="txtBriefClass">Brief description</label>
                                     <div class="form-placeholder">
