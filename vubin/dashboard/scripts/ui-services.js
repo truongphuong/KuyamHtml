@@ -13,4 +13,10 @@ $(document).ready(function () {
     });
 
     iscrollSelectK('#selectWhoProvide', '#iscrollWhoProvide');
+
+    $('#chosenServicePerson').chosen();
+
+    $('#chosenServicePerson1').chosen({
+        isShowDropDown: true
+    });
 });
