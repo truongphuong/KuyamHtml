@@ -1,0 +1,51 @@
+.chosen-select{
+}
+.chosen-select .chosen-container-single .chosen-single,
+.chosen-select .chosen-container-multi .chosen-multiple{
+    border-color: $border_input;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.chosen-select .chosen-select .chosen-container-active.chosen-with-drop .chosen-single,
+.chosen-select .chosen-select .chosen-container-active.chosen-with-drop .chosen-multiple{
+    line-height: 36px;
+}
+.chosen-select .inner_input{
+    height: 40px;
+    line-height: 40px;
+}
+.chosen-select .chosen-container-single .chosen-single div,
+.chosen-select .chosen-container-multi .chosen-multiple div{
+    width: 37px;
+}
+.chosen-select .chosen-container-single .chosen-single span,
+.chosen-select .chosen-container-multi .chosen-multiple span{
+    font-size: $s17;
+}
+.chosen-select .chosen-container-single .chosen-single div b,
+.chosen-select .chosen-container-multi .chosen-multiple div b{
+    background-image: url(../images/dashboard/icon-select-blue.png);
+    background-position: center center;
+    background-size: 13px auto;
+}
+
+@media (max-width: 767px){
+    .chosen-select .chosen-container-single .chosen-single,
+    .chosen-select .chosen-container-multi .chosen-multiple{
+        line-height: 38px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .chosen-select .chosen-container-single .chosen-single div b,
+    .chosen-select .chosen-container-multi .chosen-multiple div b{
+        background-image: url(../images/dashboard/icon-select-blue@2x.png);
+    }
+}

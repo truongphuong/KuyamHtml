@@ -1,0 +1,41 @@
+.modal-chosen{
+}
+.modal-chosen .modal-dialog{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px !important;
+}
+.modal-chosen .chosen-container.chosen-with-drop .chosen-drop{
+    position: relative;
+}
+.modal-chosen .btn-ready,
+.modal-chosen .btn-ready:focus,
+.modal-chosen .btn-ready:hover{
+    width: 80px;
+    height: 33px;
+    background: $positive;
+    color:$white;
+    display:block;
+    margin:25px auto;
+    padding:0;
+}
+.modal-chosen .icon-ready{
+    width: 10px;
+    height: 7px;
+    background:url(../images/dashboard/icon-ready.png) center center no-repeat;
+    background-size: 10px auto;
+    position: relative;
+    bottom: 2px;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .modal-chosen .icon-ready{
+        background-image:url(../images/dashboard/icon-ready@2x.png);
+    }
+}

@@ -1,0 +1,65 @@
+.manage-packages .photo-section .controls{
+    float: right;
+    font-size: $s15;
+}
+.manage-packages .photo-section .controls a{
+    color: $positive;
+    text-decoration: none;
+}
+.manage-packages .photo-section .controls span{
+    padding: 0 10px;
+}
+.manage-packages .photo-list{
+    clear: both;
+}
+.manage-packages .photo-list ul{
+    margin:0 -5px;
+    padding:0;
+    list-style: none;
+}
+.manage-packages .photo-list li{
+    float:left;
+    width: 20%;
+    height: 119px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.manage-packages .photo-list li .photo{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: center center no-repeat;
+    background-size: cover;
+    position:relative;
+}
+.manage-packages .photo-list li .border{
+    display: none;
+    border: 2px solid $positive;
+    position: relative;
+    height: 100%;
+}
+.manage-packages .photo-list li .caption{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+}
+.manage-packages .photo-list li .caption .icon-added{
+    width: 12px;
+    height: 9px;
+    background-image:url(../images/dashboard/manage/icon-added.png);
+    background-size: 12px auto;
+    margin-right: 5px;
+}
+.manage-packages .photo-list li .caption .text{
+    color: $white;
+    line-height: 26px;
+    font-size: $p;
+    padding: 0 17px;
+}
+.manage-packages .photo-list li.added .border{
+    display:block;
+}

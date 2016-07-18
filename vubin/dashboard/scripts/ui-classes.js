@@ -13,4 +13,10 @@ $(document).ready(function () {
     });
 
     iscrollSelectK('#selectWhoTeach', '#iscrollWhoTeach');
+
+    $('#chosenClassTeacher').chosen();
+
+    $('#chosenClassTeacher1').chosen({
+        isShowDropDown: true
+    });
 });

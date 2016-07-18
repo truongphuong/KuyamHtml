@@ -142,6 +142,44 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
     }
 }
 
+function iscrollSelectSearch(sectionID, scrollName) {
+    var $sectionID = $('#' + sectionID),
+        $modalID = $('#' + modalName);
+    if ($sectionID.length === 0) {
+        return;
+    }
+    if ($sectionID.find('.bootstrap-select').length === 0) {
+        $sectionID.find('select').selectpicker({ liveSearch: true });
+        $sectionID.find('select').on('loaded.bs.select', function () {
+            listFilter('#' + sectionID + ' .bs-searchbox input', $('#' + sectionID + ' ul.dropdown-menu'));
+        });
+
+        $sectionID.find('select').on('hide.bs.select', function () {
+            $sectionID.find('.form-control').trigger('blur');
+        });
+
+        if (!isMobile.Windows()) {
+            $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+            $('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+                var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
+                    {
+                        bouncescroll: false,
+                        cursorcolor: "#278CFE",
+                        preservenativescrolling: false,
+                        cursorborder: "1px solid transparent",
+                        cursorborderradius: "5px",
+                        autohidemode: false,
+                        cursorwidth: "7px",
+                        enablescrollonselection: false,
+                        background: "#8B8B8B"
+                    });
+            });
+        }
+    }
+}
+
 function iscrollSelect(sectionID, scrollName) {
     var $sectionID = $('#' + sectionID),
 		scrollID = '#' + scrollName;
