@@ -1,0 +1,104 @@
+.on-device .modal-open .kuyam-wrapper {
+    position: fixed;
+    width: 100%;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+.modal-open .modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+
+.modal-backdrop {
+    display: none;
+}
+.modal-dialog{
+    margin-top:0;
+    margin-bottom: 0;
+}
+.modal-content {
+    border: 1px solid #888;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.modal-header {
+    text-align: center;
+    border: 0 none;
+    padding-top: 25px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.modal-header h4 {
+    font-size: $s19;
+    font-family: $primary;
+    font-weight: 600;
+    padding-bottom: 0;
+}
+
+.modal-header .close {
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal-body {
+    padding-bottom: 0;
+}
+
+.modal-footer {
+    padding-top: 0;
+    padding-bottom: 25px;
+    border: 0 none;
+}
+
+.modal.fade:not(.in).left .modal-dialog {
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+}
+
+.modal.fade:not(.in).right .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+}
+
+.modal.fade:not(.in).bottom .modal-dialog {
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+}
+
+/* Alternative Angles */
+.modal.fade:not(.in).top-left .modal-dialog {
+    -webkit-transform: translate3d(-25%, -25%, 0);
+    transform: translate3d(-25%, -25%, 0);
+}
+
+.modal.fade:not(.in).top-right .modal-dialog {
+    -webkit-transform: translate3d(25%, -25%, 0);
+    transform: translate3d(25%, -25%, 0);
+}
+
+.modal.fade:not(.in).bottom-left .modal-dialog {
+    -webkit-transform: translate3d(-25%, 25%, 0);
+    transform: translate3d(-25%, 25%, 0);
+}
+
+.modal.fade:not(.in).bottom-right .modal-dialog {
+    -webkit-transform: translate3d(25%, 25%, 0);
+    transform: translate3d(25%, 25%, 0);
+}
+
+@media (min-width:1024px) {
+    .modal-body {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

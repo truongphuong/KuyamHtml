@@ -1,0 +1,207 @@
+.kuyam-header {
+    background: #fff;
+    border: 0 none;
+    border-bottom: 1px solid #bebebe;
+    margin-bottom: 0;
+    height: 59px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.kuyam-header .navbar-header {
+    margin-left: 0;
+}
+
+.kuyam-header .navbar-brand {
+    width: 115px;
+    background: url(../images/dashboard/header_logo_kuyam.png) center center no-repeat;
+    background-size: 101px auto;
+    margin-left: 10px  !important;
+}
+
+.kuyam-header .navbar-nav > li > a,
+.kuyam-header .navbar-nav > li > a:focus,
+.kuyam-header .navbar-nav > li > a:hover {
+    color: #242424;
+    background: transparent;
+    padding: 18px 0 16px;
+    text-align: center;
+}
+
+.kuyam-header .navbar-nav > li.active{
+    border-bottom: 4px solid #3891ff;
+}
+
+.kuyam-header .user-info{
+    border-left: 1px solid #bebebe;
+    position: relative;
+}
+.kuyam-header .user-info li{
+    padding: 14px 20px 26px;
+}
+.kuyam-header .user-info li span.hi {
+    font-size: $s13;
+    font-weight: 400;
+    display:block;
+}
+.kuyam-header .user-info li span strong{
+    font-weight: 700;
+}
+.kuyam-header .user-info li > span.controls {
+    position: relative;
+    top:-9px;
+}
+.kuyam-header .user-info span.controls a{
+    font-size: $s10;
+    color: $base;
+    text-decoration: none;
+    position: relative;
+    font-weight: 400;
+}
+.kuyam-header .user-info span a{
+    padding-left: 13px;
+}
+.kuyam-header .user-info span .header_icon_settings,
+.kuyam-header .user-info span .header_icon_sign_out{
+    width: 8px;
+    height: 8px;
+    position:absolute;
+    display: inline-block;
+    left:0;
+    top:2px;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .kuyam-header .navbar-brand {
+        width: 90%;
+        background-size: contain;
+    }
+}
+
+@media (min-width: 769px) {
+    .kuyam-header {
+        overflow: hidden;
+    }
+
+    .kuyam-header .navbar-header {
+        padding-left: 30px;
+        margin-left: -15px;
+        overflow: hidden;
+    }
+
+    .kuyam-header .navbar-brand {
+        margin-right: 35px;
+        height: 60px;
+    }
+
+    .kuyam-header .navbar-nav > li.active > a {
+        margin-left: -1px;
+        margin-right: -1px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .kuyam-header .navbar-nav > li > a span {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .kuyam-header .navbar-right > li > a span{
+        border-left: 1px solid #fff;
+    }
+
+    .kuyam-header .navbar-nav > li:first-child > a span,
+    .kuyam-header .navbar-nav > li.active > a span {
+        border-left-color: transparent;
+    }
+
+    .kuyam-header .navbar-nav.navbar-right > li > a span {
+        border-left-color: transparent;
+        border-right: 1px solid #fff;
+    }
+
+    .kuyam-header .navbar-nav.navbar-right > li:first-child > a span,
+    .kuyam-header .navbar-nav.navbar-right > li.active > a span {
+        border-right-color: transparent;
+    }
+
+    .kuyam-header .navbar-nav > li > a span {
+    }
+
+    .kuyam-header .navbar-right {
+        margin-right: -30px;
+    }
+
+    .kuyam-header .navbar-right > li {
+        width: auto !important;
+    }
+
+    .kuyam-header .navbar-right > li:last-child > a span {
+        border-right-color: #fff;
+    }
+
+    .kuyam-header .navbar-right > li:first-child > a span,
+    .kuyam-header .navbar-right > li.active > a span {
+        border-right-color: transparent;
+    }
+
+    .kuyam-header .navbar-right > li:first-child {
+        float: right;
+    }
+}
+
+
+@media (max-width: 768px){
+    .kuyam-header {
+        z-index: 9;
+        height: 50px;
+    }
+
+    .kuyam-header .navbar-collapse {
+        background: #fff;
+        position: relative;
+        top: -50px;
+    }
+
+    .kuyam-header .navbar-brand {
+        width: 103px;
+        background-size: 103px auto;
+    }
+
+    .kuyam-header .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right:-8px;
+        margin-left:-8px;
+    }
+
+    .kuyam-header .navbar-nav li{
+        padding-left:8px;
+        padding-right:8px;
+        font-size:.75em;
+        margin-bottom:15px;
+    }
+    .kuyam-header .navbar-nav li a,
+    .kuyam-header .navbar-nav li a:hover,
+    .kuyam-header .navbar-nav li a:focus{
+        text-align:left;
+    }
+    .kuyam-header .navbar-nav > li.active{
+        font-weight: 700;
+        border: 0 none;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .kuyam-header .navbar-brand {
+        background-image: url(../images/dashboard/header_logo_kuyam@2x.png);
+    }
+}

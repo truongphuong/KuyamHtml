@@ -1,0 +1,89 @@
+form div[class*="col-"] {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-size: $h5;
+    font-family: $primary;
+    font-weight: 300;
+}
+
+.input-currency{
+    position:relative;
+}
+.input-currency span{
+    display:block;
+    top:0;
+    bottom:0;
+    font-weight: 300;
+    padding:0 13px;
+    line-height:40px;
+    position: absolute;
+    color: $placeholder;
+}
+.input-currency .form-control{
+    background:transparent;
+    padding-left:23px;
+}
+
+textarea.form-control,
+textarea.form-control:focus {
+    height: 115px;
+    resize: none;
+}
+
+.txt-required {
+    color: $negative;
+    font-family: $primary;
+    font-weight: 700;
+}
+
+.txt-error {
+    color: $negative;
+}
+
+.alert-error {
+    color: #ff0000;
+}
+
+.invalid-forced.ng-invalid,.input-error {
+    border-color: $negative;
+}
+
+.txt-date {
+    background-image: url(../images/dashboard/calendar/icon_calendar_blue_2.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 37px auto;
+    padding-right: 37px;
+}
+
+.txt-hour {
+    background-image: url(../images/icon_time_grey_2.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 30px auto;
+    padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+    form div[class*="col-"] {
+        margin-bottom: 16px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+	.txt-date {
+		background-image: url(../images/dashboard/calendar/icon_calendar_blue_2@2x.png);
+	}
+
+	.txt-hour {
+		background-image: url(../images/icon_time_grey_2@2x.png);
+	}
+}

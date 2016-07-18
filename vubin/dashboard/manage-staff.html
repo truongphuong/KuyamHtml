@@ -65,10 +65,8 @@
 <link rel="stylesheet" type="text/css" href="content/css/SelectKustom.css"/>
 
 <!-- Site core CSS -->
-<link type="text/css" rel="stylesheet" href="content/css/dashboard-base.css" /> 
-<link type="text/css" rel="stylesheet" href="content/css/dashboard-style.css" /> 
-<link type="text/css" rel="stylesheet" href="content/css/dashboard-retina.css" /> 
-<link type="text/css" rel="stylesheet" href="content/css/dashboard-print.css" /> 
+<link type="text/css" rel="stylesheet" href="content/css/style.css" /> 
+<link rel="stylesheet" type="text/css" href="content/css/general-style.css"/>
 <link rel="stylesheet" type="text/css" href="content/css/boarding.css"/>
 </head>
 <body>
@@ -77,7 +75,7 @@
         	<img class="print bg" alt="" src="content/images/bg_header.jpg" />
         	<div class="container">
             	 <div class="navbar-header"> 
-                 	<button aria-expanded="false" aria-controls="bs-navbar" data-target="#bs-navbar" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> 
+                 	<button type="button" class="navbar-toggle collapsed"> 
                         <span class="sr-only">Toggle navigation</span> 
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
@@ -95,8 +93,8 @@
                     </ul> 
                     <ul class="nav navbar-nav navbar-right hidden-xs user-info">
                         <li id="navSettings">
-                        <a title="" href="settings.html">Hi Kourosh Vubin</a>
-                        <a title="" href="#" class="user-sign-out-icon"><span class="header_icon_sign_out"></span>Sign out</a>
+                            <span class="hi">Hi <strong>Kourosh Vubin</strong></span>
+                            <span class="controls"><a title="" href="settings.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
                         </li>
                     </ul>                     
               	</nav>
@@ -104,37 +102,37 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="kuyam-page manage-page">
-			
+        	<div class="kuyam-page manage-page manage-staff">
+
 				<!-- .kuyam-sidebar -->
 				<div class="kuyam-sidebar">
 					<ul>
-						<li class="active"><a title="" href="manage-staff.html">staff members</a></li>
-						<li><a title="" href="manage-services.html">services</a></li>
-						<li><a title="" href="manage-classes.html">classes</a></li>
-						<li><a title="" href="manage-packages.html">packages</a></li>
-						<li><a title="" href="manage-clients.html">clients</a></li>
-						<li><a title="" href="manage-invoices.html">invoices</a></li>
-						<li><a title="" href="manage-promo.html">promo codes</a></li>
+						<li class="active"><a title="" href="manage-staff.html"><span class="icon icon-staff"></span><span class="text">Staff</span></a></li>
+                        <li><a title="" href="manage-services.html"><span class="icon icon-service"></span><span class="text">Services</span></a></li>
+                        <li><a title="" href="manage-classes.html"><span class="icon icon-class"></span><span class="text">Classes</span></a></li>
+                        <li><a title="" href="manage-packages.html"><span class="icon icon-package"></span><span class="text">Packages</span></a></li>
+                        <li><a title="" href="manage-clients.html"><span class="icon icon-client"></span><span class="text">Clients</span></a></li>
+                        <li><a title="" href="manage-invoices.html"><span class="icon icon-invoice"></span><span class="text">Invoices</span></a></li>
+                        <li><a title="" href="manage-promo.html"><span class="icon icon-promo"></span><span class="text">Promo codes</span></a></li>
 					</ul>
 				</div>
 				<!-- /.kuyam-sidebar -->
-				
+
 				<!-- .kuyam-main -->
 				<div class="kuyam-main">
-				
+
 					<!-- .kuyam-main-content -->
 					<div class="kuyam-main-content">
-							
+
 						<!-- .kuyam-subnav -->
 						<div class="kuyam-subnav">
 							<div class="subnav-content">
-                            	<div class="search-section">
-									<div class="form-placeholder">
-                                        <input type="text" class="form-control" id="txtSearchStaff" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
-                                        <label class="form-label" for="txtSearchStaff">Search for staff</label>
-                                    </div>
-								</div>
+                                <div id="addSection" class="add-link-section">
+                                    <a class="add-link" title="" href=""><span class="prefix">+</span> <span class="text">Add new staff</span></a>
+                                </div>
+                                <div id="searchSection" class="search-section">
+                                    <input type="text" class="form-control" id="txtSearchStaff" placeholder="Search for staff" />
+                                </div>
 								<div id="subnavList" class="subnav-list">
                                 	<div class="scroll-content">
                                         <ul class="subnav-ul" data-dropdown="false">
@@ -170,883 +168,47 @@
                                             <li><a title="" href=""><span class="text">fitness</span></a></li>
                                         </ul>
                                     </div>
-								</div>                                    
-                                <div class="add-link-section">
-                                    <a class="add-link" title="" href=""><span class="prefix">+</span> <span class="text">Add new service</span></a>
-                                </div>
+								</div>
 							</div>
 						</div>
 						<!-- /.kuyam-subnav -->
-						
+
 						<!-- .kuyam-content -->
 						<div class="kuyam-content">
-							<section class="no-data">
-								<p>You currently don't have any staff member,<br /> please start by adding one.</p>
-								<input type="button" value="add staff member" class="btn btn-form btn-agree" />
-							</section>
-							<form>
-								<fieldset>
-									<legend>add new class</legend>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
-											<input type="text" class="form-control" id="txtFirstName" />
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
-											<input type="text" class="form-control" id="txtLastName" />
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtCell">Cell number <span class="txt-required">*</span></label>
-											<input type="text" class="form-control" id="txtCell" />
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtEmail">Email <span class="txt-required">*</span></label>
-											<input type="text" class="form-control" id="txtEmail" />
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label">Which services this person provides</label>
-											<!-- #selectServiceProvide -->
-											<div id="selectServiceProvide" class="select-kustom" data-title="Select services">
-												<div class="item-holder"></div>
-												<div id="iscrollServiceProvide" class="item-list">
-													<ul>
-														<li data-value="AF">Afghanistan</li>
-														<li data-value="AX">Åland Islands</li>
-														<li data-value="AL">Albania</li>
-														<li data-value="DZ">Algeria</li>
-														<li data-value="AS">American Samoa</li>
-														<li data-value="AD">Andorra</li>
-														<li data-value="AO">Angola</li>
-														<li data-value="AI">Anguilla</li>
-														<li data-value="AQ">Antarctica</li>
-														<li data-value="AG">Antigua and Barbuda</li>
-														<li data-value="AR">Argentina</li>
-														<li data-value="AM">Armenia</li>
-														<li data-value="AW">Aruba</li>
-														<li data-value="AU">Australia</li>
-														<li data-value="AT">Austria</li>
-														<li data-value="AZ">Azerbaijan</li>
-														<li data-value="BS">Bahamas</li>
-														<li data-value="BH">Bahrain</li>
-														<li data-value="BD">Bangladesh</li>
-														<li data-value="BB">Barbados</li>
-														<li data-value="BY">Belarus</li>
-														<li data-value="BE">Belgium</li>
-														<li data-value="BZ">Belize</li>
-														<li data-value="BJ">Benin</li>
-														<li data-value="BM">Bermuda</li>
-														<li data-value="BT">Bhutan</li>
-														<li data-value="BO">Bolivia, Plurinational State of</li>
-														<li data-value="BQ">Bonaire, Sint Eustatius and Saba</li>
-														<li data-value="BA">Bosnia and Herzegovina</li>
-														<li data-value="BW">Botswana</li>
-														<li data-value="BV">Bouvet Island</li>
-														<li data-value="BR">Brazil</li>
-														<li data-value="IO">British Indian Ocean Territory</li>
-														<li data-value="BN">Brunei Darussalam</li>
-														<li data-value="BG">Bulgaria</li>
-														<li data-value="BF">Burkina Faso</li>
-														<li data-value="BI">Burundi</li>
-														<li data-value="KH">Cambodia</li>
-														<li data-value="CM">Cameroon</li>
-														<li data-value="CA">Canada</li>
-														<li data-value="CV">Cape Verde</li>
-														<li data-value="KY">Cayman Islands</li>
-														<li data-value="CF">Central African Republic</li>
-														<li data-value="TD">Chad</li>
-														<li data-value="CL">Chile</li>
-														<li data-value="CN">China</li>
-														<li data-value="CX">Christmas Island</li>
-														<li data-value="CC">Cocos (Keeling) Islands</li>
-														<li data-value="CO">Colombia</li>
-														<li data-value="KM">Comoros</li>
-														<li data-value="CG">Congo</li>
-														<li data-value="CD">Congo, the Democratic Republic of the</li>
-														<li data-value="CK">Cook Islands</li>
-														<li data-value="CR">Costa Rica</li>
-														<li data-value="CI">Côte d'Ivoire</li>
-														<li data-value="HR">Croatia</li>
-														<li data-value="CU">Cuba</li>
-														<li data-value="CW">Curaçao</li>
-														<li data-value="CY">Cyprus</li>
-														<li data-value="CZ">Czech Republic</li>
-														<li data-value="DK">Denmark</li>
-														<li data-value="DJ">Djibouti</li>
-														<li data-value="DM">Dominica</li>
-														<li data-value="DO">Dominican Republic</li>
-														<li data-value="EC">Ecuador</li>
-														<li data-value="EG">Egypt</li>
-														<li data-value="SV">El Salvador</li>
-														<li data-value="GQ">Equatorial Guinea</li>
-														<li data-value="ER">Eritrea</li>
-														<li data-value="EE">Estonia</li>
-														<li data-value="ET">Ethiopia</li>
-														<li data-value="FK">Falkland Islands (Malvinas)</li>
-														<li data-value="FO">Faroe Islands</li>
-														<li data-value="FJ">Fiji</li>
-														<li data-value="FI">Finland</li>
-														<li data-value="FR">France</li>
-														<li data-value="GF">French Guiana</li>
-														<li data-value="PF">French Polynesia</li>
-														<li data-value="TF">French Southern Territories</li>
-														<li data-value="GA">Gabon</li>
-														<li data-value="GM">Gambia</li>
-														<li data-value="GE">Georgia</li>
-														<li data-value="DE">Germany</li>
-														<li data-value="GH">Ghana</li>
-														<li data-value="GI">Gibraltar</li>
-														<li data-value="GR">Greece</li>
-														<li data-value="GL">Greenland</li>
-														<li data-value="GD">Grenada</li>
-														<li data-value="GP">Guadeloupe</li>
-														<li data-value="GU">Guam</li>
-														<li data-value="GT">Guatemala</li>
-														<li data-value="GG">Guernsey</li>
-														<li data-value="GN">Guinea</li>
-														<li data-value="GW">Guinea-Bissau</li>
-														<li data-value="GY">Guyana</li>
-														<li data-value="HT">Haiti</li>
-														<li data-value="HM">Heard Island and McDonald Islands</li>
-														<li data-value="VA">Holy See (Vatican City State)</li>
-														<li data-value="HN">Honduras</li>
-														<li data-value="HK">Hong Kong</li>
-														<li data-value="HU">Hungary</li>
-														<li data-value="IS">Iceland</li>
-														<li data-value="IN">India</li>
-														<li data-value="ID">Indonesia</li>
-														<li data-value="IR">Iran, Islamic Republic of</li>
-														<li data-value="IQ">Iraq</li>
-														<li data-value="IE">Ireland</li>
-														<li data-value="IM">Isle of Man</li>
-														<li data-value="IL">Israel</li>
-														<li data-value="IT">Italy</li>
-														<li data-value="JM">Jamaica</li>
-														<li data-value="JP">Japan</li>
-														<li data-value="JE">Jersey</li>
-														<li data-value="JO">Jordan</li>
-														<li data-value="KZ">Kazakhstan</li>
-														<li data-value="KE">Kenya</li>
-														<li data-value="KI">Kiribati</li>
-														<li data-value="KP">Korea, Democratic People's Republic of</li>
-														<li data-value="KR">Korea, Republic of</li>
-														<li data-value="KW">Kuwait</li>
-														<li data-value="KG">Kyrgyzstan</li>
-														<li data-value="LA">Lao People's Democratic Republic</li>
-														<li data-value="LV">Latvia</li>
-														<li data-value="LB">Lebanon</li>
-														<li data-value="LS">Lesotho</li>
-														<li data-value="LR">Liberia</li>
-														<li data-value="LY">Libya</li>
-														<li data-value="LI">Liechtenstein</li>
-														<li data-value="LT">Lithuania</li>
-														<li data-value="LU">Luxembourg</li>
-														<li data-value="MO">Macao</li>
-														<li data-value="MK">Macedonia, the former Yugoslav Republic of</li>
-														<li data-value="MG">Madagascar</li>
-														<li data-value="MW">Malawi</li>
-														<li data-value="MY">Malaysia</li>
-														<li data-value="MV">Maldives</li>
-														<li data-value="ML">Mali</li>
-														<li data-value="MT">Malta</li>
-														<li data-value="MH">Marshall Islands</li>
-														<li data-value="MQ">Martinique</li>
-														<li data-value="MR">Mauritania</li>
-														<li data-value="MU">Mauritius</li>
-														<li data-value="YT">Mayotte</li>
-														<li data-value="MX">Mexico</li>
-														<li data-value="FM">Micronesia, Federated States of</li>
-														<li data-value="MD">Moldova, Republic of</li>
-														<li data-value="MC">Monaco</li>
-														<li data-value="MN">Mongolia</li>
-														<li data-value="ME">Montenegro</li>
-														<li data-value="MS">Montserrat</li>
-														<li data-value="MA">Morocco</li>
-														<li data-value="MZ">Mozambique</li>
-														<li data-value="MM">Myanmar</li>
-														<li data-value="NA">Namibia</li>
-														<li data-value="NR">Nauru</li>
-														<li data-value="NP">Nepal</li>
-														<li data-value="NL">Netherlands</li>
-														<li data-value="NC">New Caledonia</li>
-														<li data-value="NZ">New Zealand</li>
-														<li data-value="NI">Nicaragua</li>
-														<li data-value="NE">Niger</li>
-														<li data-value="NG">Nigeria</li>
-														<li data-value="NU">Niue</li>
-														<li data-value="NF">Norfolk Island</li>
-														<li data-value="MP">Northern Mariana Islands</li>
-														<li data-value="NO">Norway</li>
-														<li data-value="OM">Oman</li>
-														<li data-value="PK">Pakistan</li>
-														<li data-value="PW">Palau</li>
-														<li data-value="PS">Palestinian Territory, Occupied</li>
-														<li data-value="PA">Panama</li>
-														<li data-value="PG">Papua New Guinea</li>
-														<li data-value="PY">Paraguay</li>
-														<li data-value="PE">Peru</li>
-														<li data-value="PH">Philippines</li>
-														<li data-value="PN">Pitcairn</li>
-														<li data-value="PL">Poland</li>
-														<li data-value="PT">Portugal</li>
-														<li data-value="PR">Puerto Rico</li>
-														<li data-value="QA">Qatar</li>
-														<li data-value="RE">Réunion</li>
-														<li data-value="RO">Romania</li>
-														<li data-value="RU">Russian Federation</li>
-														<li data-value="RW">Rwanda</li>
-														<li data-value="BL">Saint Barthélemy</li>
-														<li data-value="SH">Saint Helena, Ascension and Tristan da Cunha</li>
-														<li data-value="KN">Saint Kitts and Nevis</li>
-														<li data-value="LC">Saint Lucia</li>
-														<li data-value="MF">Saint Martin (French part)</li>
-														<li data-value="PM">Saint Pierre and Miquelon</li>
-														<li data-value="VC">Saint Vincent and the Grenadines</li>
-														<li data-value="WS">Samoa</li>
-														<li data-value="SM">San Marino</li>
-														<li data-value="ST">Sao Tome and Principe</li>
-														<li data-value="SA">Saudi Arabia</li>
-														<li data-value="SN">Senegal</li>
-														<li data-value="RS">Serbia</li>
-														<li data-value="SC">Seychelles</li>
-														<li data-value="SL">Sierra Leone</li>
-														<li data-value="SG">Singapore</li>
-														<li data-value="SX">Sint Maarten (Dutch part)</li>
-														<li data-value="SK">Slovakia</li>
-														<li data-value="SI">Slovenia</li>
-														<li data-value="SB">Solomon Islands</li>
-														<li data-value="SO">Somalia</li>
-														<li data-value="ZA">South Africa</li>
-														<li data-value="GS">South Georgia and the South Sandwich Islands</li>
-														<li data-value="SS">South Sudan</li>
-														<li data-value="ES">Spain</li>
-														<li data-value="LK">Sri Lanka</li>
-														<li data-value="SD">Sudan</li>
-														<li data-value="SR">Suriname</li>
-														<li data-value="SJ">Svalbard and Jan Mayen</li>
-														<li data-value="SZ">Swaziland</li>
-														<li data-value="SE">Sweden</li>
-														<li data-value="CH">Switzerland</li>
-														<li data-value="SY">Syrian Arab Republic</li>
-														<li data-value="TW">Taiwan, Province of China</li>
-														<li data-value="TJ">Tajikistan</li>
-														<li data-value="TZ">Tanzania, United Republic of</li>
-														<li data-value="TH">Thailand</li>
-														<li data-value="TL">Timor-Leste</li>
-														<li data-value="TG">Togo</li>
-														<li data-value="TK">Tokelau</li>
-														<li data-value="TO">Tonga</li>
-														<li data-value="TT">Trinidad and Tobago</li>
-														<li data-value="TN">Tunisia</li>
-														<li data-value="TR">Turkey</li>
-														<li data-value="TM">Turkmenistan</li>
-														<li data-value="TC">Turks and Caicos Islands</li>
-														<li data-value="TV">Tuvalu</li>
-														<li data-value="UG">Uganda</li>
-														<li data-value="UA">Ukraine</li>
-														<li data-value="AE">United Arab Emirates</li>
-														<li data-value="GB">United Kingdom</li>
-														<li data-value="US">United States</li>
-														<li data-value="UM">United States Minor Outlying Islands</li>
-														<li data-value="UY">Uruguay</li>
-														<li data-value="UZ">Uzbekistan</li>
-														<li data-value="VU">Vanuatu</li>
-														<li data-value="VE">Venezuela, Bolivarian Republic of</li>
-														<li data-value="VN">Viet Nam</li>
-														<li data-value="VG">Virgin Islands, British</li>
-														<li data-value="VI">Virgin Islands, U.S.</li>
-														<li data-value="WF">Wallis and Futuna</li>
-														<li data-value="EH">Western Sahara</li>
-														<li data-value="YE">Yemen</li>
-														<li data-value="ZM">Zambia</li>
-														<li data-value="ZW">Zimbabwe</li>
-													</ul>
-												</div>
-											</div>
-											<!-- /#selectServiceProvide -->
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label">Which classes this person teaches</label>
-											<!-- #selectClassTeach -->
-											<div id="selectClassTeach" class="select-kustom" data-title="Select classes">
-												<div class="item-holder"></div>
-												<div id="iscrollClassTeach" class="item-list">
-													<ul>
-														<li data-value="AF">Afghanistan</li>
-														<li data-value="AX">Åland Islands</li>
-														<li data-value="AL">Albania</li>
-														<li data-value="DZ">Algeria</li>
-														<li data-value="AS">American Samoa</li>
-														<li data-value="AD">Andorra</li>
-														<li data-value="AO">Angola</li>
-														<li data-value="AI">Anguilla</li>
-														<li data-value="AQ">Antarctica</li>
-														<li data-value="AG">Antigua and Barbuda</li>
-														<li data-value="AR">Argentina</li>
-														<li data-value="AM">Armenia</li>
-														<li data-value="AW">Aruba</li>
-														<li data-value="AU">Australia</li>
-														<li data-value="AT">Austria</li>
-														<li data-value="AZ">Azerbaijan</li>
-														<li data-value="BS">Bahamas</li>
-														<li data-value="BH">Bahrain</li>
-														<li data-value="BD">Bangladesh</li>
-														<li data-value="BB">Barbados</li>
-														<li data-value="BY">Belarus</li>
-														<li data-value="BE">Belgium</li>
-														<li data-value="BZ">Belize</li>
-														<li data-value="BJ">Benin</li>
-														<li data-value="BM">Bermuda</li>
-														<li data-value="BT">Bhutan</li>
-														<li data-value="BO">Bolivia, Plurinational State of</li>
-														<li data-value="BQ">Bonaire, Sint Eustatius and Saba</li>
-														<li data-value="BA">Bosnia and Herzegovina</li>
-														<li data-value="BW">Botswana</li>
-														<li data-value="BV">Bouvet Island</li>
-														<li data-value="BR">Brazil</li>
-														<li data-value="IO">British Indian Ocean Territory</li>
-														<li data-value="BN">Brunei Darussalam</li>
-														<li data-value="BG">Bulgaria</li>
-														<li data-value="BF">Burkina Faso</li>
-														<li data-value="BI">Burundi</li>
-														<li data-value="KH">Cambodia</li>
-														<li data-value="CM">Cameroon</li>
-														<li data-value="CA">Canada</li>
-														<li data-value="CV">Cape Verde</li>
-														<li data-value="KY">Cayman Islands</li>
-														<li data-value="CF">Central African Republic</li>
-														<li data-value="TD">Chad</li>
-														<li data-value="CL">Chile</li>
-														<li data-value="CN">China</li>
-														<li data-value="CX">Christmas Island</li>
-														<li data-value="CC">Cocos (Keeling) Islands</li>
-														<li data-value="CO">Colombia</li>
-														<li data-value="KM">Comoros</li>
-														<li data-value="CG">Congo</li>
-														<li data-value="CD">Congo, the Democratic Republic of the</li>
-														<li data-value="CK">Cook Islands</li>
-														<li data-value="CR">Costa Rica</li>
-														<li data-value="CI">Côte d'Ivoire</li>
-														<li data-value="HR">Croatia</li>
-														<li data-value="CU">Cuba</li>
-														<li data-value="CW">Curaçao</li>
-														<li data-value="CY">Cyprus</li>
-														<li data-value="CZ">Czech Republic</li>
-														<li data-value="DK">Denmark</li>
-														<li data-value="DJ">Djibouti</li>
-														<li data-value="DM">Dominica</li>
-														<li data-value="DO">Dominican Republic</li>
-														<li data-value="EC">Ecuador</li>
-														<li data-value="EG">Egypt</li>
-														<li data-value="SV">El Salvador</li>
-														<li data-value="GQ">Equatorial Guinea</li>
-														<li data-value="ER">Eritrea</li>
-														<li data-value="EE">Estonia</li>
-														<li data-value="ET">Ethiopia</li>
-														<li data-value="FK">Falkland Islands (Malvinas)</li>
-														<li data-value="FO">Faroe Islands</li>
-														<li data-value="FJ">Fiji</li>
-														<li data-value="FI">Finland</li>
-														<li data-value="FR">France</li>
-														<li data-value="GF">French Guiana</li>
-														<li data-value="PF">French Polynesia</li>
-														<li data-value="TF">French Southern Territories</li>
-														<li data-value="GA">Gabon</li>
-														<li data-value="GM">Gambia</li>
-														<li data-value="GE">Georgia</li>
-														<li data-value="DE">Germany</li>
-														<li data-value="GH">Ghana</li>
-														<li data-value="GI">Gibraltar</li>
-														<li data-value="GR">Greece</li>
-														<li data-value="GL">Greenland</li>
-														<li data-value="GD">Grenada</li>
-														<li data-value="GP">Guadeloupe</li>
-														<li data-value="GU">Guam</li>
-														<li data-value="GT">Guatemala</li>
-														<li data-value="GG">Guernsey</li>
-														<li data-value="GN">Guinea</li>
-														<li data-value="GW">Guinea-Bissau</li>
-														<li data-value="GY">Guyana</li>
-														<li data-value="HT">Haiti</li>
-														<li data-value="HM">Heard Island and McDonald Islands</li>
-														<li data-value="VA">Holy See (Vatican City State)</li>
-														<li data-value="HN">Honduras</li>
-														<li data-value="HK">Hong Kong</li>
-														<li data-value="HU">Hungary</li>
-														<li data-value="IS">Iceland</li>
-														<li data-value="IN">India</li>
-														<li data-value="ID">Indonesia</li>
-														<li data-value="IR">Iran, Islamic Republic of</li>
-														<li data-value="IQ">Iraq</li>
-														<li data-value="IE">Ireland</li>
-														<li data-value="IM">Isle of Man</li>
-														<li data-value="IL">Israel</li>
-														<li data-value="IT">Italy</li>
-														<li data-value="JM">Jamaica</li>
-														<li data-value="JP">Japan</li>
-														<li data-value="JE">Jersey</li>
-														<li data-value="JO">Jordan</li>
-														<li data-value="KZ">Kazakhstan</li>
-														<li data-value="KE">Kenya</li>
-														<li data-value="KI">Kiribati</li>
-														<li data-value="KP">Korea, Democratic People's Republic of</li>
-														<li data-value="KR">Korea, Republic of</li>
-														<li data-value="KW">Kuwait</li>
-														<li data-value="KG">Kyrgyzstan</li>
-														<li data-value="LA">Lao People's Democratic Republic</li>
-														<li data-value="LV">Latvia</li>
-														<li data-value="LB">Lebanon</li>
-														<li data-value="LS">Lesotho</li>
-														<li data-value="LR">Liberia</li>
-														<li data-value="LY">Libya</li>
-														<li data-value="LI">Liechtenstein</li>
-														<li data-value="LT">Lithuania</li>
-														<li data-value="LU">Luxembourg</li>
-														<li data-value="MO">Macao</li>
-														<li data-value="MK">Macedonia, the former Yugoslav Republic of</li>
-														<li data-value="MG">Madagascar</li>
-														<li data-value="MW">Malawi</li>
-														<li data-value="MY">Malaysia</li>
-														<li data-value="MV">Maldives</li>
-														<li data-value="ML">Mali</li>
-														<li data-value="MT">Malta</li>
-														<li data-value="MH">Marshall Islands</li>
-														<li data-value="MQ">Martinique</li>
-														<li data-value="MR">Mauritania</li>
-														<li data-value="MU">Mauritius</li>
-														<li data-value="YT">Mayotte</li>
-														<li data-value="MX">Mexico</li>
-														<li data-value="FM">Micronesia, Federated States of</li>
-														<li data-value="MD">Moldova, Republic of</li>
-														<li data-value="MC">Monaco</li>
-														<li data-value="MN">Mongolia</li>
-														<li data-value="ME">Montenegro</li>
-														<li data-value="MS">Montserrat</li>
-														<li data-value="MA">Morocco</li>
-														<li data-value="MZ">Mozambique</li>
-														<li data-value="MM">Myanmar</li>
-														<li data-value="NA">Namibia</li>
-														<li data-value="NR">Nauru</li>
-														<li data-value="NP">Nepal</li>
-														<li data-value="NL">Netherlands</li>
-														<li data-value="NC">New Caledonia</li>
-														<li data-value="NZ">New Zealand</li>
-														<li data-value="NI">Nicaragua</li>
-														<li data-value="NE">Niger</li>
-														<li data-value="NG">Nigeria</li>
-														<li data-value="NU">Niue</li>
-														<li data-value="NF">Norfolk Island</li>
-														<li data-value="MP">Northern Mariana Islands</li>
-														<li data-value="NO">Norway</li>
-														<li data-value="OM">Oman</li>
-														<li data-value="PK">Pakistan</li>
-														<li data-value="PW">Palau</li>
-														<li data-value="PS">Palestinian Territory, Occupied</li>
-														<li data-value="PA">Panama</li>
-														<li data-value="PG">Papua New Guinea</li>
-														<li data-value="PY">Paraguay</li>
-														<li data-value="PE">Peru</li>
-														<li data-value="PH">Philippines</li>
-														<li data-value="PN">Pitcairn</li>
-														<li data-value="PL">Poland</li>
-														<li data-value="PT">Portugal</li>
-														<li data-value="PR">Puerto Rico</li>
-														<li data-value="QA">Qatar</li>
-														<li data-value="RE">Réunion</li>
-														<li data-value="RO">Romania</li>
-														<li data-value="RU">Russian Federation</li>
-														<li data-value="RW">Rwanda</li>
-														<li data-value="BL">Saint Barthélemy</li>
-														<li data-value="SH">Saint Helena, Ascension and Tristan da Cunha</li>
-														<li data-value="KN">Saint Kitts and Nevis</li>
-														<li data-value="LC">Saint Lucia</li>
-														<li data-value="MF">Saint Martin (French part)</li>
-														<li data-value="PM">Saint Pierre and Miquelon</li>
-														<li data-value="VC">Saint Vincent and the Grenadines</li>
-														<li data-value="WS">Samoa</li>
-														<li data-value="SM">San Marino</li>
-														<li data-value="ST">Sao Tome and Principe</li>
-														<li data-value="SA">Saudi Arabia</li>
-														<li data-value="SN">Senegal</li>
-														<li data-value="RS">Serbia</li>
-														<li data-value="SC">Seychelles</li>
-														<li data-value="SL">Sierra Leone</li>
-														<li data-value="SG">Singapore</li>
-														<li data-value="SX">Sint Maarten (Dutch part)</li>
-														<li data-value="SK">Slovakia</li>
-														<li data-value="SI">Slovenia</li>
-														<li data-value="SB">Solomon Islands</li>
-														<li data-value="SO">Somalia</li>
-														<li data-value="ZA">South Africa</li>
-														<li data-value="GS">South Georgia and the South Sandwich Islands</li>
-														<li data-value="SS">South Sudan</li>
-														<li data-value="ES">Spain</li>
-														<li data-value="LK">Sri Lanka</li>
-														<li data-value="SD">Sudan</li>
-														<li data-value="SR">Suriname</li>
-														<li data-value="SJ">Svalbard and Jan Mayen</li>
-														<li data-value="SZ">Swaziland</li>
-														<li data-value="SE">Sweden</li>
-														<li data-value="CH">Switzerland</li>
-														<li data-value="SY">Syrian Arab Republic</li>
-														<li data-value="TW">Taiwan, Province of China</li>
-														<li data-value="TJ">Tajikistan</li>
-														<li data-value="TZ">Tanzania, United Republic of</li>
-														<li data-value="TH">Thailand</li>
-														<li data-value="TL">Timor-Leste</li>
-														<li data-value="TG">Togo</li>
-														<li data-value="TK">Tokelau</li>
-														<li data-value="TO">Tonga</li>
-														<li data-value="TT">Trinidad and Tobago</li>
-														<li data-value="TN">Tunisia</li>
-														<li data-value="TR">Turkey</li>
-														<li data-value="TM">Turkmenistan</li>
-														<li data-value="TC">Turks and Caicos Islands</li>
-														<li data-value="TV">Tuvalu</li>
-														<li data-value="UG">Uganda</li>
-														<li data-value="UA">Ukraine</li>
-														<li data-value="AE">United Arab Emirates</li>
-														<li data-value="GB">United Kingdom</li>
-														<li data-value="US">United States</li>
-														<li data-value="UM">United States Minor Outlying Islands</li>
-														<li data-value="UY">Uruguay</li>
-														<li data-value="UZ">Uzbekistan</li>
-														<li data-value="VU">Vanuatu</li>
-														<li data-value="VE">Venezuela, Bolivarian Republic of</li>
-														<li data-value="VN">Viet Nam</li>
-														<li data-value="VG">Virgin Islands, British</li>
-														<li data-value="VI">Virgin Islands, U.S.</li>
-														<li data-value="WF">Wallis and Futuna</li>
-														<li data-value="EH">Western Sahara</li>
-														<li data-value="YE">Yemen</li>
-														<li data-value="ZM">Zambia</li>
-														<li data-value="ZW">Zimbabwe</li>
-													</ul>
-												</div>
-											</div>
-											<!-- /#selectClassTeach -->
-										</div>
-									</div>
-									<div class="row working-section">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label">Working hours</label>
-											<section class="table-css">
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" checked type="checkbox" id="cbDay1" name="cbDay" />
-															<label class="cb-label" for="cbDay1">monday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay2" name="cbDay" />
-															<label class="cb-label" for="cbDay2">tuesday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay3" name="cbDay" />
-															<label class="cb-label" for="cbDay3">wednesday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay4" name="cbDay" />
-															<label class="cb-label" for="cbDay4">thursday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay5" name="cbDay" />
-															<label class="cb-label" for="cbDay5">friday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay6" name="cbDay" />
-															<label class="cb-label" for="cbDay6">saturday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-												<div class="tr">
-													<div class="td working-day">
-														<span class="cb-custom">
-															<input class="cb-mark" type="checkbox" id="cbDay7" name="cbDay" />
-															<label class="cb-label" for="cbDay7">sunday</label>
-														</span>
-													</div>
-													<div class="td working-time">
-														<div class="dropdown form-timepicker form-timepicker-range">
-															<input readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-															<section class="dropdown-menu" aria-labelledby="txtTime">
-																<div class="dropdown-section">
-																	<footer></footer>
-																	<table>
-																		<tbody>
-																			<tr>
-																				<td class="td-timepicker td-field">
-																					From
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-from"></div>
-																				</td>	
-																			</tr>
-																		</tbody>
-																		<tfoot>
-																			<tr>
-																				<td class="td-timepicker td-field text-right">
-																					To
-																				</td>	
-																				<td class="td-timepicker">
-																					<div class="timepicker-to"></div>
-																				</td>	
-																			</tr>
-																		</tfoot>
-																	</table>											
-																</div>
-															</section>
-														</div>
-													</div>
-												</div>
-											</section>
-										</div>
-									</div>
-									<footer>
-										<input type="button" value="cancel" class="btn btn-form btn-disagree" />
-										<input type="button" value="add staff member" class="btn btn-form btn-agree" />
-									</footer>
-								</fieldset>
-							</form>
+                            <section class="staff-section">
+                                <div class="staff-list">
+
+                                </div>
+                                <footer></footer>
+                            </section>
 						</div>
 						<!-- /.kuyam-content -->
-						
+
 					</div>
 					<!-- /.kuyam-main-content -->
-					
+
 				</div>
 				<!-- /.kuyam-main -->
-			
+
 			</div>
         <!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer"> 
-        	<div class="container">     	 
-                <ul> 
-	                <li><a class="link-chat" title="" href="#"><span class="icon icon-chat"></span></a></li> 
-                    <li><a class="link-facebook" title="" href="https://www.facebook.com/mykuyam"><span class="icon icon-facebook"></span></a></li> 
-                    <li><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>                    
-                    <li><a class="link-terms" title="" href="#tabTerms">Terms of use and privacy</a></li>
-                </ul>   
-                <p>Copyright &copy; 2016 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
+        	<div class="container">   
+                <div class="col-xs-7 col-sm-8"> 
+                     <p>Copyright &copy; 2016 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
+                </div>  
+                 <div class="col-xs-5 col-sm-4">	 
+                    <ul> 
+                        <li><a class="link-chat" title="" href="#"><span class="icon icon-chat"></span></a></li> 
+                        <li class="visible-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>                    
+                        <li><a class="link-facebook" title="" href="https://www.facebook.com/mykuyam"><span class="icon icon-facebook"></span></a></li> 
+                        <li class="hidden-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>                    
+                        <li><a class="link-terms" title="" href="#tabTerms">Terms of use and privacy</a></li>
+                    </ul>   
+                </div>               
             </div>
-		</footer>
+		</footer>        
 	</div>
     <div class="loading hide">
         <div>
@@ -2044,6 +1206,8 @@
     <!-- === SCRIPTS === -->  
 	<script type="text/javascript" src="scripts/libs/modernizr.custom.js"></script>
     <script type="text/javascript" src="scripts/libs/jquery-1.9.1.js"></script>	
+    <!-- InstanceBeginEditable name="libs" -->
+    <!-- InstanceEndEditable -->
     <script type="text/javascript" src="scripts/libs/moment.js"></script>
     
     <!-- Bootstrap js -->
@@ -2057,6 +1221,9 @@
     
     <!-- Bootstrap table js -->
 	<script type="text/javascript" src="scripts/libs/bootstrap-table.js"></script>
+    
+    <!-- InstanceBeginEditable name="bootstrap" -->
+    <!-- InstanceEndEditable -->
     
     <!-- jquery.nicescroll js -->
 	<script type="text/javascript" src="scripts/libs/jquery.nicescroll.js"></script> 
@@ -2082,8 +1249,8 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script> 
     <!-- InstanceBeginEditable name="script" -->
-	<script type="text/javascript" src="scripts/ui-manage.js"></script> 
-	<script type="text/javascript" src="scripts/ui-staff.js"></script> 
+	<script type="text/javascript" src="scripts/ui-manage.js"></script>
+	<script type="text/javascript" src="scripts/ui-staff.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navManage').className = "active";
 	</script>

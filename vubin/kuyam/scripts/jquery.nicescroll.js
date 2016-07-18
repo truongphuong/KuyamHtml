@@ -1300,7 +1300,6 @@
                   }
 
                   if (/SUBMIT|CANCEL|BUTTON/i.test($(tg).attr('type'))) {
-                    var pc;
                     pc = {
                       "tg": tg,
                       "click": false
