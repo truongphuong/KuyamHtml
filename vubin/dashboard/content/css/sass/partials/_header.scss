@@ -4,6 +4,9 @@
     border-bottom: 1px solid #bebebe;
     margin-bottom: 0;
     height: 59px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 }
 
 .kuyam-header .navbar-header {
@@ -12,8 +15,8 @@
 
 .kuyam-header .navbar-brand {
     width: 115px;
-    background: url(../images/header_logo_kuyam.png) center center no-repeat;
-    background-size: 115px auto;
+    background: url(../images/dashboard/header_logo_kuyam.png) center center no-repeat;
+    background-size: 101px auto;
     margin-left: 10px  !important;
 }
 
@@ -34,25 +37,39 @@
     border-left: 1px solid #bebebe;
     position: relative;
 }
-.kuyam-header .user-info a {
-    text-align: left !important;
-    padding: 12px 20px 26px !important;
-    font-size: 13px;
-    font-weight: bold  !important;
+.kuyam-header .user-info li{
+    padding: 14px 20px 26px;
 }
-
-.kuyam-header .user-sign-out-icon{
-    font-size: 10px  !important;
-    position: absolute  !important;
-    top: 17px;
-    left: 17px;
+.kuyam-header .user-info li span.hi {
+    font-size: $s13;
+    font-weight: 400;
+    display:block;
 }
-.kuyam-header .header_icon_sign_out{
-    position: absolute  !important;
-    top: 18px;
-    left: -6px;
-    width: 10px;
-    height: 10px;
+.kuyam-header .user-info li span strong{
+    font-weight: 700;
+}
+.kuyam-header .user-info li > span.controls {
+    position: relative;
+    top:-9px;
+}
+.kuyam-header .user-info span.controls a{
+    font-size: $s10;
+    color: $base;
+    text-decoration: none;
+    position: relative;
+    font-weight: 400;
+}
+.kuyam-header .user-info span a{
+    padding-left: 13px;
+}
+.kuyam-header .user-info span .header_icon_settings,
+.kuyam-header .user-info span .header_icon_sign_out{
+    width: 8px;
+    height: 8px;
+    position:absolute;
+    display: inline-block;
+    left:0;
+    top:2px;
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -185,6 +202,6 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px)
 only screen and (              min-resolution:120dpi)      and (min-width:320px),
 only screen and (               min-resolution:2dppx)      and (min-width:320px){
     .kuyam-header .navbar-brand {
-        background-image: url(../images/header_logo_kuyam@2x.png);
+        background-image: url(../images/dashboard/header_logo_kuyam@2x.png);
     }
 }

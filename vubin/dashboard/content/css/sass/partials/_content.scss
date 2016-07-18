@@ -8,6 +8,26 @@
 .kuyam-content form{
     padding:5px 0;
 }
+.kuyam-content form .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 1.0625em;
+    color: #7c7c7c;
+    font-weight: 300;
+}
+.kuyam-content form .form-control::-moz-placeholder { /* Firefox 19+ */
+    font-size: 1.0625em;
+    color: #7c7c7c;
+    font-weight: 300;
+}
+.kuyam-content form .form-control:-ms-input-placeholder { /* IE 10+ */
+    font-size: 1.0625em;
+    color: #7c7c7c;
+    font-weight: 300;
+}
+.kuyam-content form .form-control:-moz-placeholder { /* Firefox 18- */
+    font-size: 1.0625em;
+    color: #7c7c7c;
+    font-weight: 300;
+}
 .kuyam-content form .form-label{
     margin-bottom:6px;
 }
@@ -43,6 +63,9 @@
     text-align:right;
     padding:10px 0;
 }
+.kuyam-content form footer div[class*="col-"]{
+    margin-bottom: 20px;
+}
 .kuyam-content form footer .link-delete{
     text-decoration:underline;
     font-size: .875em;
@@ -56,7 +79,12 @@
 
 @media (max-width: 768px){
     .kuyam-content{
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 0 15px;
+    }
+    .kuyam-content form{
+        padding:0;
+    }
+    .kuyam-content form fieldset{
+        border-bottom: 1px solid #bebebe;
     }
 }

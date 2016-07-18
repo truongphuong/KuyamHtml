@@ -98,6 +98,12 @@
     line-height: 120%;
 }
 
+.bootstrap-select .dropdown-menu > li > a:hover,
+.bootstrap-select .dropdown-menu > li > a:focus{
+    background: transparent;
+    color: $positive;
+}
+
 .bootstrap-select.btn-group .dropdown-menu li a span.text {
     white-space: nowrap;
     overflow: hidden;
@@ -114,7 +120,7 @@
     margin-top: -3px;
     width: 13px;
     height: 6px;
-    background: url(../images/icon-select-blue.png) center center no-repeat;
+    background: url(../images/dashboard/icon-select-blue.png) center center no-repeat;
     background-size: 13px auto;
 }
 
@@ -127,7 +133,7 @@
 }
 
 .bootstrap-select.btn-group .btn.disabled .caret {
-    background-image: url(../images/icon_next_grey.png);
+    background-image: url(../images/dashboard/icon-select-grey.png);
 }
 
 .on-nicescroll .bootstrap-select .dropdown-menu {
@@ -305,13 +311,13 @@
  .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn,
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:focus,
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:active {
-    border-color: #ae422c;
+    border-color: $negative;
 }
 
   .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn,
 .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:focus,
 .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:active {
-    border-color: #ae422c;
+    border-color: $negative;
 }
     .form-select .bootstrap-select .dropdown-menu {
         margin-top: -1px;
