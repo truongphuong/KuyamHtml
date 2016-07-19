@@ -8,9 +8,13 @@
 	display: table-cell;
 }
 
+.relative{
+	position: relative;
+}
+
 /* .btn */
-.btn-form,
-.btn-form:focus {
+.modal-boarding .btn-form,
+.modal-boarding .btn-form:focus {
     font-size: 1em;
     background: #fff;
     font-family: Lato, sans-serif;
@@ -20,7 +24,7 @@
     border: 1px solid #242424;
     color: #242424;
 }
-.btn-form:hover{
+.modal-boarding .btn-form:hover{
     color: #242424;
     background: #fff;
 	border-width:2px;
@@ -28,13 +32,13 @@
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 
-.btn-agree,
-.btn-agree:focus {
+.modal-boarding .btn-agree,
+.modal-boarding .btn-agree:focus {
     border: 1px solid #3891ff;
     background: #fff;
     color: #3891ff;
 }
-.btn-agree:hover{
+.modal-boarding .btn-agree:hover{
     color: #3891ff;
     background: #fff;
 	font-weight:700;
@@ -42,13 +46,13 @@
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 
-.btn-neutral,
-.btn-neutral:focus {
+.modal-boarding .btn-neutral,
+.modal-boarding .btn-neutral:focus {
 	border: 1px solid #878787;
     background: #fff;
 	color:#878787;
 }
-.btn-neutral:hover{
+.modal-boarding .btn-neutral:hover{
 	color:#878787;
     background: #fff;
 	font-weight:700;
@@ -56,23 +60,23 @@
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 
-.btn-disagree,
-.btn-disagree:focus {
+.modal-boarding .btn-disagree,
+.modal-boarding .btn-disagree:focus {
     border: 1px solid #ff5050;
     background: #fff;
     background: #fff;
     color: #ff5050;
 }
-.btn-disagree:hover{
+.modal-boarding .btn-disagree:hover{
 	background:#ff5050;
     color: #fff;
 	font-weight:700;
 	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
 }
 
-.btn[disabled],
-.btn[disabled]:hover,
-.btn[disabled]:focus{
+.modal-boarding .btn[disabled],
+.modal-boarding .btn[disabled]:hover,
+.modal-boarding .btn[disabled]:focus{
 	background:#dadada;
     color: #fff;
 	font-weight:700;
@@ -81,26 +85,26 @@
 /* =============================================================================
 	Croppie
 	========================================================================== */
-.croppie-container{
+.modal-boarding .croppie-container{
 	width:321px;
 	margin:0 auto;
 	padding:0;
 }
-.croppie-container .cr-viewport{
+.modal-boarding .croppie-container .cr-viewport{
 	border-color:#bfbfbf;
 	box-shadow:0 0 0 899px rgba(191, 191, 191, 0.5) !important;
 	/*width:228px !important;
 	height:228px !important;*/
 }
-.croppie-container  .cr-boundary{
+.modal-boarding .croppie-container  .cr-boundary{
 	/*width:100% !important;
 	height:297px !important;*/
 	background: #fff;
 }
-.croppie-container .cr-boundary img.cr-image {
+.modal-boarding .croppie-container .cr-boundary img.cr-image {
     width: auto !important;
 }
-.croppie-container  .croppie-caption{
+.modal-boarding .croppie-container  .croppie-caption{
     position: absolute;
     width:100%;
 	text-align:center;
@@ -114,7 +118,7 @@
 	color:#242424;
 	font-size:1.125em;*/
 }
-.croppie-container  .croppie-caption .drag-section{
+.modal-boarding .croppie-container  .croppie-caption .drag-section{
 	/*background: rgba(0, 0, 0, .5);
 	border-radius: 3px;*/
 	width:75px;
@@ -124,7 +128,7 @@
 	font-size: 0; /*0.6875em;*/
 	background:url(images/boarding/img-drag-drop.png) no-repeat center center;
 }
-.croppie-container  .croppie-caption .icon{
+.modal-boarding .croppie-container  .croppie-caption .icon{
 	position:relative;
 	bottom:-3px;
 	margin-right:5px;
@@ -135,20 +139,20 @@
 	background-size:contain;
 	display: none;
 }
-.croppie-container .spinner {
+.modal-boarding .croppie-container .spinner {
 	opacity: 0;
 }
-.croppie-container .croppie-image-loading .spinner {
+.modal-boarding .croppie-container .croppie-image-loading .spinner {
 	opacity: 1;
 }
-.croppie-container .cr-slider {
+.modal-boarding .croppie-container .cr-slider {
 	-webkit-appearance: none;
 	height:21px;
 }
-.croppie-container .cr-slider:focus {
+.modal-boarding .croppie-container .cr-slider:focus {
 	outline: none;
 }
-.croppie-container .cr-slider::-webkit-slider-runnable-track {
+.modal-boarding .croppie-container .cr-slider::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 2px;
 	cursor: pointer;
@@ -156,7 +160,7 @@
 	background: #d7d7d7;
 	border-radius: 1px;
 }
-.croppie-container .cr-slider::-webkit-slider-thumb {
+.modal-boarding .croppie-container .cr-slider::-webkit-slider-thumb {
 	height: 8px;
 	width: 8px;
 	border-radius: 100%;
@@ -167,10 +171,10 @@
 	margin-top: -3px;
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
 }
-.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+.modal-boarding .croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
   background: #d7d7d7;
 }
-.croppie-container .cr-slider::-moz-range-track {
+.modal-boarding .croppie-container .cr-slider::-moz-range-track {
 	width: 100%;
 	height: 2px;
 	cursor: pointer;
@@ -178,7 +182,7 @@
 	background: #d7d7d7;
 	border-radius: 1px;
 }
-.croppie-container .cr-slider::-moz-range-thumb {
+.modal-boarding .croppie-container .cr-slider::-moz-range-thumb {
 	height: 8px;
 	width: 8px;
 	border-radius: 100%;
@@ -188,14 +192,14 @@
 	cursor: pointer;
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
 }
-.croppie-container .cr-slider-wrap{
+.modal-boarding .croppie-container .cr-slider-wrap{
 	padding:9px 12px 0;
 	position:relative;
 	border-radius:5px;
 	margin-top:0;
 	width:183px;
 }
-.croppie-container .cr-slider-wrap .croppie-zoom{
+.modal-boarding .croppie-container .cr-slider-wrap .croppie-zoom{
 	position:absolute;
 	display:block;
 	width:12px;
@@ -206,13 +210,13 @@
 	background: center center no-repeat;
 	background-size: 9px auto;
 }
-.croppie-container .cr-slider-wrap .croppie-zoom-in{
+.modal-boarding .croppie-container .cr-slider-wrap .croppie-zoom-in{
 	left:0;
 	top:0;
 	background-image: url(images/boarding/icon-subtract.png);
 	background-position: right center;
 }
-.croppie-container .cr-slider-wrap .croppie-zoom-out{
+.modal-boarding .croppie-container .cr-slider-wrap .croppie-zoom-out{
 	right:0;
 	background-image: url(images/boarding/icon-plus.png);
 	background-position: left center;
