@@ -20,20 +20,26 @@
     }
 
     .calendar-select-staff .bootstrap-select.btn-group .btn .filter-option {
-        font: .875em/20px Lato, sans-serif;
-		font-weight: 600;
-        color: #292929;
+        font: .8125em/20px Lato, sans-serif;
+		font-weight: 700;
+        color: #242424;
+		text-transform: none;
     }
 
     .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
         width: 180px;
     }
+	
+	.on-nicescroll .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
+		overflow-y: hidden !important;
+		max-height: 175px !important;
+    }
 
     .calendar-select-staff .bootstrap-select .dropdown-menu > li > a {
         font-family: Lato, sans-serif;
 		font-weight: 500;
-        font-size: .875em;
-        color: #292929;
+        font-size: .8125em;
+        color: #242424;
     }
 
     .calendar-select-staff .bootstrap-select .dropdown-menu > li.selected {
@@ -46,8 +52,8 @@
     .calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a,
     .calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a:hover,
     .calendar-select-staff .bootstrap-select .dropdown-menu > .active.selected > a:focus {
-        background-color: #95be31;
-        color: #fff;
+        background-color: transparent;
+        color: #3891ff;
     }
 
     .calendar-select-staff .bootstrap-select .dropdown-menu > .active > a,
@@ -56,10 +62,10 @@
         background-color: #f5f5f5;
         color: #262626;
     }
-
-    .calendar-select-staff .bootstrap-select .bootstrap-scroll {
-        max-height: 160px;
-    }
+	
+	.on-nicescroll .calendar-select-staff .wrap-dropdown-menu-inner{
+		max-height: 160px;
+	}
 
 .calendar-select-status {
     margin-left: -12px;
@@ -69,38 +75,42 @@
     .calendar-select-status .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
         width: 110px;
     }
-
+	.calendar-select-status .bootstrap-select.btn-group .btn .caret{
+		background-image: url(../images/icon-select-blue-2.png);
+		background-size: 10px auto;
+	}
     .calendar-select-status .btn-default.disabled .caret {
         display: none;
     }
 
-.calendar-schedule .btn-add,
-.calendar-schedule .btn-add:active,
-.calendar-schedule .btn-add:visited {
+.calendar-schedule .btn-add{
     width: 100%;
     height: 40px;
+    border: 1px solid #3891ff;
+	font-size: .9375em;
     background: #fff;
-    border: 2px dashed #959595;
-    color: #959595;
-    text-decoration: underline;
+    color: #3891ff;
+	border-radius: 4px !important;
 }
 
-    .calendar-schedule .btn-add:hover {
-        background: #242424;
-        border-color: #242424;
-        color: #fff;
-        text-decoration: none;
-    }
+.calendar-schedule .btn-add:hover{	
+    color: #3891ff;
+    background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
 
 .calendar-schedule .short-title {
     display: none;
 }
 
 .calendar-header {
+	background: #f5f5f5;
     text-align: center;
     position: relative;
     padding-right: 215px;
-    margin-left: 215px;
+    padding-left: 215px;
 }
 
     .calendar-header > div {
@@ -131,14 +141,17 @@
 
     .calendar-header .calendar-title {
         line-height: 34px;
+		font-size: .875em;
         font-family: Lato, sans-serif;
 		font-weight: 700;
     }
 
     .calendar-header .btn-today {
         background: #fff;
+		font-size: .8125em;
+		font-weight: 700;
         padding: 5px 10px;
-        border: 2px solid #bc347c;
+        border: 1px solid #bc347c;
         color: #bc347c;
         position: absolute;
         left: -100%;
@@ -192,6 +205,7 @@
 
         .calendar-date-title div .full-title {
             font-family: Lato, sans-serif;
+			font-size: .875em;
 			font-weight: 700;
         }
 
@@ -206,9 +220,11 @@
         }
 
     .calendar-date-title.active div {
-        background: #bc347c;
-        border-color: #bc347c;
+        background: #3891ff;
+        border-color: #3891ff;
         color: #fff;
+		font-family: raleway, sans-serif; 
+		font-weight: 600;
         margin-right: -1px;
         margin-left: -1px;
     }
@@ -246,17 +262,17 @@
     .calendar-details:focus {
         font-family: Lato, sans-serif;
 		font-weight: 600;
-        color: #292929;
+        color: #242424;
         text-decoration: underline;
         font-size: .8125em;
     }
 
 .calendar-block {
     padding: 15px;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     margin-bottom: 3px;
-    color: #292929;
+    color: #242424;
     position: relative;
     line-height: 130%;
 }
@@ -296,7 +312,7 @@
         }
 
         .calendar-block p.calendar-type {
-            font-size: .75em;
+            font-size: .8125em;
             font-family: Lato, sans-serif;
 			font-weight: 600;
             word-wrap: break-word;
@@ -392,10 +408,10 @@
         padding: 5px 15px;
         margin-right: -15px;
         margin-left: -15px;
-        text-decoration: underline;
-        color: #292929;
+        text-decoration: none;
+        color: #3891ff;
         font-family: Lato, sans-serif;
-		font-weight: 600;
+		font-weight: 400;
         font-size: .9375em;
     }
 
@@ -421,15 +437,15 @@
     }
 
     .block-cancelled .bootstrap-select.btn-group .btn .caret {
-        background-image: url(../images/icon_next_red.png);
+        background-image: url(../images/icon-select-blue-2.png);
     }
 
     .block-cancelled .bootstrap-select.btn-group.open .btn .filter-option {
-        color: #292929;
+        color: #242424;
     }
 
     .block-cancelled .bootstrap-select.btn-group.open .btn .caret {
-        background-image: url(../images/icon_next_black.png);
+        /*background-image: url(../images/icon-select-blue.png);*/
     }
 
 .calendar-block.block-past {
@@ -443,7 +459,7 @@
     }
 
     .calendar-block.block-past .bootstrap-select.btn-group .btn .filter-option {
-        color: #292929;
+        color: #242424;
     }
 
 .block-cancelled.block-past .bootstrap-select.btn-group .btn .filter-option {
@@ -466,7 +482,7 @@
 
     .settings-page a {
         text-decoration: underline;
-        color: #292929;
+        color: #242424;
     }
 
 /* =============================================================================
@@ -532,7 +548,7 @@
         }
 
         .week-list li.active {
-            background: #989898;
+            background: #4799ff;
             color: #fff;
         }
 
@@ -540,11 +556,11 @@
    .txt-date
    ========================================================================== */
 .txt-date {
-    background-image: url(../images/icon_calendar_grey_2.png);
+    background-image: url(../images/icon_calendar_blue_2.png);
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: 30px auto;
-    padding-right: 30px;
+    background-size: 37px auto;
+    padding-right: 37px;
 }
 
 /* =============================================================================
@@ -578,14 +594,13 @@
 
             .calendar-tabs .nav-tabs > li .dot {
                 display: inline-block;
-                width: 15px;
-                height: 15px;
-                border: 1px solid #c6c6c6;
+                width: 27px;
+                height: 26px;
+                background: url(../images/dot.png) center top no-repeat;
+				background-size: 27px auto;
+				position: relative;
                 margin-right: 10px;
-                margin-bottom: -1px;
-                -webkit-border-radius: 100% !important;
-                -moz-border-radius: 100% !important;
-                border-radius: 100% !important;
+				bottom: -8px;
             }
 
             .calendar-tabs .nav-tabs > li a,
@@ -594,14 +609,13 @@
             .calendar-tabs .nav-tabs > li.active a:hover {
                 border: 0 none;
                 background: transparent;
-                color: #292929;
-                font-size: .9375em;
+                color: #282828;
+                font-size: 1em;
                 padding: 0;
             }
 
-            .calendar-tabs .nav-tabs > li.active .dot {
-                background: #292929;
-                border: 1px solid #292929;
+            .calendar-tabs .nav-tabs > li.active .dot {                
+                background-image: url(../images/dot-active.png);
             }
 
 .block-details {
@@ -659,16 +673,18 @@
         clear: both;
     }
 
-.on-desktop .block-details .notes-section > div {
+.block-details .notes-section .scroll-content {
     height: 88px;
     overflow: hidden;
     position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+.on-nicescroll .block-details .notes-section .wrap-dropdown-menu-inner{
+    height: 88px;
 }
 
-.on-device .block-details .notes-section > div {
-    height: 88px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+.on-nicescroll .block-details .notes-section .notes-text {
+    height: inherit;
 }
 
 .block-details .modal-footer {
@@ -863,7 +879,7 @@
         }
 
             .modal-edit-category .selection-section ul li .selection-choice-remove:hover {
-                color: #292929;
+                color: #242424;
             }
 
 .working-section .col-xs-12 {
@@ -1077,7 +1093,7 @@
             .policy-section .dl-list .dd.time-policy {
                 border-bottom: 2px solid #f0f0f0;
                 position: relative;
-                z-index: 2px;
+                z-index: 2;
             }
 
             .policy-section .dl-list .dd.refund-policy {
@@ -1113,7 +1129,7 @@
 
             .policy-section .dl-list .dl.active .dt,
             .policy-section .dl-list .dl.active .dd.time-policy {
-                border-bottom: 2px solid #292929;
+                border-bottom: 2px solid #242424;
                 margin-left: 5px;
                 margin-right: 5px;
             }
@@ -1154,11 +1170,11 @@
         line-height: 120%;
     }
 
-.on-device .policy-section .bootstrap-select .dropdown-menu.inner {
+.policy-section .bootstrap-select .dropdown-menu.inner {
     max-height: 150px !important;
 }
 
-.on-desktop .policy-section .bootstrap-select .bootstrap-scroll {
+.on-nicescroll  .policy-section .wrap-dropdown-menu-inner {
     max-height: 150px;
 }
 
@@ -1439,7 +1455,7 @@
         font-size: .875em;
         font-family: Lato, sans-serif;
 		font-weight: 500;
-        color: #292929;
+        color: #242424;
     }
 
         .invoices-table .fixed-table-pagination .pagination .disabled a,
@@ -1484,7 +1500,7 @@
         font-family: Lato, sans-serif;
 		font-weight: 400;
         text-transform: capitalize;
-        color: #292929;
+        color: #242424;
         font-size: .9375em;
         margin-left: 10px;
     }
@@ -1504,7 +1520,7 @@
         cursor: pointer;
         margin-bottom: 10px;
         display: block;
-        color: #292929;
+        color: #242424;
         text-decoration: none;
     }
 
@@ -1601,7 +1617,7 @@
 
     .company-image-gallery .photo-box a {
         font-size: .8em !important;
-        color: #292929;
+        color: #242424;
         text-decoration: underline;
         margin: 0 auto;
         text-align: center;
@@ -1612,7 +1628,7 @@
     .company-image-gallery .btn-upload-image {
         background-color: #fafafa;
         text-decoration: none;
-        color: #292929;
+        color: #242424;
         background-image: url(../images/icon_upload_gray.png);
         background-size: 48px auto;
         min-height: 235px;
@@ -1656,7 +1672,7 @@
     }
 
     .purchase-stock-photos-section .btn-confirm-purchase {
-        background-color: #292929;
+        background-color: #242424;
         color: #ffffff;
         line-height: 30px;
         margin-top: 15px;
@@ -1690,7 +1706,7 @@
     }
 
     .purchase-stock-photos-section .list-photo-thumbnails .active img {
-        border: 3px solid #292929;
+        border: 3px solid #242424;
     }
 
     .purchase-stock-photos-section .photo-detail {
@@ -1749,8 +1765,8 @@
 
 @media (min-width: 1024px) {
     .calendar-date.active .calendar-border {
-        border-left: 2px solid #bc347c;
-        border-right: 2px solid #bc347c;
+        border-left: 2px solid #3891ff;
+        border-right: 2px solid #3891ff;
         position: absolute;
         top: 0;
         right: -1px;
@@ -1788,7 +1804,7 @@
         .calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default,
         .calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
         .calendar-select-staff .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
-            border-color: #292929 #292929 transparent;
+            border-color: #242424 #242424 transparent;
         }
 
         .calendar-select-staff .bootstrap-select.btn-group.open .bs-caret {
@@ -1796,7 +1812,7 @@
         }
 
         .calendar-select-staff .bootstrap-select .dropdown-menu.open {
-            border-color: transparent #292929 #292929;
+            border-color: transparent #242424 #242424;
         }
 
     .calendar-select-status .bootstrap-select.btn-group .dropdown-menu li a {
@@ -1839,7 +1855,7 @@
     }
 
     .calendar-header {
-        margin-left: 30%;
+        padding-left: 30%;
         padding-right: 30%;
     }
 
@@ -1878,23 +1894,6 @@
         height: 45px;
     }
 
-    #addCalendarModal {
-        position: relative;
-        overflow-y: hidden;
-        z-index: inherit !important;
-        padding-right: 0 !important;
-        bottom: inherit !important;
-    }
-
-        #addCalendarModal .modal-content {
-            border: 0 none;
-        }
-
-        #addCalendarModal .modal-dialog {
-            margin: 0 !important;
-            width: auto;
-        }
-
     .invoices-table form {
         height: auto;
     }
@@ -1920,10 +1919,6 @@
         width: 33.33%;
     }
 
-        .calendar-tabs .nav-tabs > li .dot {
-            display: none;
-        }
-
         .calendar-tabs .nav-tabs > li a:hover,
         .calendar-tabs .nav-tabs > li.active a,
         .calendar-tabs .nav-tabs > li.active a:hover {
@@ -1941,7 +1936,7 @@
     }
 
     #addCalendarModal .modal-content {
-        border-color: 0 none;
+        border-color: transparent;
     }
 
     #addCalendarModal .modal-title {
@@ -2133,3 +2128,211 @@
 .table-striped > tbody > tr:nth-of-type(2n) {
     background-color: #f9f9f9;
 }*/
+
+
+/*
+    COMPANY SCRIPTS
+*/
+
+.bookButton {
+    margin-bottom: 3rem;
+}
+
+    .bookButton div[class*="col-"] {
+        padding-left: 0 !important;
+    }
+
+    .bookButton h3 {
+        font-size: 20px;
+        color: #4a4a4a;
+        line-height: 24px;
+        font-weight: 400;
+        padding-bottom: 0.5rem;
+    }
+
+    .bookButton h4 {
+        font-size: 13px;
+        color: #4a4a4a;
+        font-weight: 300;
+        padding-bottom: 2rem;
+    }
+
+    .bookButton p {
+        font-size: 14px;
+        color: #4a4a4a;
+        line-height: 16px;
+    }
+
+    .bookButton .title_button {
+        margin-bottom: 4rem;
+    }
+
+    .bookButton .button_color {
+        padding-bottom: 1rem;
+    }
+
+        .bookButton .button_color .radio-custom {
+            top: -1rem;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-1, .bookButton .button_color .radio-mark ~ .radio-label-2, .bookButton .button_color .radio-mark ~ .radio-label-3 {
+            margin-bottom: 1.2rem;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label:before {
+            border: 0;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-1:before {
+            background: #40515B;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-2:before {
+            background: #C868D3;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-3:before {
+            background: #21A3EA;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-4:before {
+            background: #BFCA03;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-5:before {
+            background: #FB7C08;
+        }
+
+        .bookButton .button_color .radio-mark ~ .radio-label-6:before {
+            background: #F2372E;
+        }
+
+        .bookButton .button_color .radio-mark:checked ~ .radio-label:before {
+            border: 0;
+            content: "\2714";
+            font-size: 9px;
+            text-align: center;
+            line-height: 15px;
+            color: #fff;
+        }
+
+    .bookButton .button_style .radio-custom {
+        margin-right: 2.5rem;
+    }
+    .content-button-color {
+        width: 10rem; 
+        display: inline-block; 
+        vertical-align: top;
+    }
+    .bookButton .button_style {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 2rem;
+    }
+    .bookButton .button_style a {
+        position: relative;
+        top: 10px;
+        left: -6px;
+
+    }
+
+    .bookButton .button_style .radio-mark ~ .radio-label:before {
+        border: 1px solid #A6A6A6;
+    }
+
+    .bookButton .button_style .radio-mark:checked ~ .radio-label:before {
+        content: '\25CF';
+        border: 1px solid #707070;
+        font-size: 11px;
+        text-align: center;
+        line-height: 1;
+        color: #707070;
+    }
+
+@media (min-width: 1120px) {
+    .button_color {
+        padding-right: 1rem;
+    }
+}
+
+.company-script pre {
+    position: relative;
+}
+
+
+.company-script .company-script-copy {
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    right: 5px;
+    top: 0;
+}
+
+pre.responsive {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+/*
+    END OF COMPANY SCRIPTS
+*/
+
+/* Begin .modal-paypal */
+.modal-paypal .modal-header {
+    margin-bottom: 4rem;
+    margin-top: 0rem;
+}
+.modal-paypal .modal-header h4 {
+    font-weight: 400;
+    padding-bottom: 0;
+    margin-top: 0.51rem;
+    font-size:19px;
+    color:#4a4a4a;
+}
+.modal-paypal .modal-body {
+    padding-bottom: 2rem;
+}
+.modal-paypal .modal-content {
+    border-radius: 12px !important;
+}
+.modal-paypal a {
+    display:inline-block;
+}
+.modal-paypal a[name="paymentmethod"] {
+    width: 111px;
+}
+.modal-paypal a[name="creditcardtmethod"] {
+    width: 147px;
+    display:inline-block;
+}
+.modal-paypal .table-css {
+    width: 100%;
+}    
+.modal-paypal .table-css .td{
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+.modal-paypal .table-css .td:first-child{
+    border-right: 1px solid #ddd;
+}
+
+@media (min-width:1024px) {    
+    .modal-paypal{
+        width: 590px;
+    }
+}
+
+@media (max-width:374px) {   
+    .modal-paypal a {
+        width: inherit !important;
+    }
+}
+/* End .modal-paypal */

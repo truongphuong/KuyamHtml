@@ -1,0 +1,89 @@
+.btn-form,
+.btn-form:focus {
+    font-size: $h6;
+    background: $white;
+    font-family: $second;
+    font-weight: 400;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $border_input;
+    color: $base;
+}
+.btn-form:hover{
+    color: $base;
+    background: $white;
+    border-width:2px;
+    font-weight:700;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btn-agree,
+.btn-agree:focus {
+    border: 1px solid $positive;
+    background: $white;
+    color: $positive;
+}
+.btn-agree:hover{
+    color: $positive;
+    background: $white;
+    font-weight:700;
+    border-width:2px;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btn-neutral,
+.btn-neutral:focus {
+    border: 1px solid $neutral;
+    background: $white;
+    color:$neutral;
+}
+.btn-neutral:hover{
+    color:$neutral;
+    background: $white;
+    font-weight:700;
+    border-width:2px;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+}
+
+.btn-disagree,
+.btn-disagree:focus {
+    border: 1px solid $negative;
+    background: $white;
+    color: $negative;
+}
+.btn-disagree:hover{
+    background:$negative;
+    color: $white;
+    font-weight:700;
+    box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11);
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus{
+    background:$disabled;
+    color: $white;
+    font-weight:700;
+}
+
+button.close {
+    color: transparent !important;
+    text-shadow: none !important;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    background: url(../images/dashboard/icon-close.png) center center no-repeat;
+    background-size: 13px auto;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    button.close {
+        background-image: url(../images/dashboard/icon-close@2x.png);
+    }
+}

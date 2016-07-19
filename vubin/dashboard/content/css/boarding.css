@@ -1,0 +1,2520 @@
+/* .btn */
+.btn-form,
+.btn-form:focus {	
+    font-size: 1em;
+    background: #fff;
+    font-family: Lato, sans-serif;
+	font-weight: 400;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #242424;
+    color: #242424;
+}
+.btn-form:hover{
+    color: #242424;
+    background: #fff;
+	border-width:2px;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-agree,
+.btn-agree:focus {	
+    border: 1px solid #3891ff;
+    background: #fff;
+    color: #3891ff;
+}
+.btn-agree:hover{	
+    color: #3891ff;
+    background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-neutral,
+.btn-neutral:focus {
+	border: 1px solid #878787;
+    background: #fff;
+	color:#878787;
+}
+.btn-neutral:hover{
+	color:#878787;
+    background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-disagree,
+.btn-disagree:focus {
+    border: 1px solid #ff5050;
+    background: #fff;
+    background: #fff;
+    color: #ff5050;
+}
+.btn-disagree:hover{
+	background:#ff5050;
+    color: #fff;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus{
+	background:#dadada;
+    color: #fff;
+	font-weight:700;
+}
+
+/* =============================================================================
+	Croppie
+	========================================================================== */		
+.croppie-container{
+	width:321px;
+	margin:0 auto;
+	padding:0;
+}
+.croppie-container .cr-viewport{
+	border-color:#bfbfbf;
+	box-shadow:0 0 0 899px rgba(191, 191, 191, 0.5) !important;
+	/*width:228px !important;
+	height:228px !important;*/
+}
+.croppie-container  .cr-boundary{
+	/*width:100% !important;
+	height:297px !important;*/
+	background: #fff;
+}
+.croppie-container .cr-boundary img.cr-image {
+    width: auto !important;
+}
+.croppie-container  .croppie-caption{
+    position: absolute;
+    width:100%;
+	text-align:center;
+	bottom: 11px;
+    /*top: 50%;
+    -webkit-transform: translate(0px,-50%);
+    -moz-transform: translate(0px,-50%);
+    -o-transform: translate(0px,-50%);
+    -ms-transform: translate(0px,-50%);
+    transform: translate(0px,-50%);
+	color:#242424;
+	font-size:1.125em;*/
+}
+.croppie-container  .croppie-caption .drag-section{
+	/*background: rgba(0, 0, 0, .5);
+	border-radius: 3px;*/
+	width:75px;
+	height:44px;
+	margin:0 auto;
+	color: #fff;
+	font-size: 0; /*0.6875em;*/
+	background:url(../images/boarding/img-drag-drop.png) no-repeat center center;
+}
+.croppie-container  .croppie-caption .icon{
+	position:relative;
+	bottom:-3px;
+	margin-right:5px;
+	width:14px;
+	height:14px;
+	display:inline-block;
+	background:url(../images/boarding/icon-move.png) no-repeat center center;
+	background-size:contain;
+	display: none;
+}
+.croppie-container .spinner {
+	opacity: 0;
+}
+.croppie-container .croppie-image-loading .spinner {
+	opacity: 1;
+}
+.croppie-container .cr-slider {
+	-webkit-appearance: none;
+	height:21px;
+}
+.croppie-container .cr-slider:focus {
+	outline: none;
+}
+.croppie-container .cr-slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-webkit-slider-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -3px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+  background: #d7d7d7;
+}
+.croppie-container .cr-slider::-moz-range-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-moz-range-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	border-color:transparent;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider-wrap{
+	padding:9px 12px 0;
+	position:relative;
+	border-radius:5px;
+	margin-top:0;
+	width:183px;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom{
+	position:absolute;
+	display:block;
+	width:12px;
+	height: 38px;
+	top:0;
+	bottom:0;
+	cursor:pointer;
+	background: center center no-repeat;
+	background-size: 9px auto;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-in{
+	left:0;
+	top:0;
+	background-image: url(../images/boarding/icon-subtract.png);
+	background-position: right center;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-out{
+	right:0;
+	background-image: url(../images/boarding/icon-plus.png);
+	background-position: left center;
+}
+
+/* .modal-intro */
+.modal-intro{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	font-family: Lato,sans-serif;
+	font-size: 2.0625em;
+	font-weight: 300;
+	height: 58px;
+	text-align: center;
+	background: #fff;
+}
+.modal-intro img{
+	width: 301px;
+	margin:0 auto;
+}
+
+/* .bootstrap-select */
+.modal-boarding .bootstrap-select{
+	font-size: 16px;
+}
+.modal-boarding .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.modal-boarding .bootstrap-select.btn-group .no-results {
+    margin: 0;
+    padding: 10px;
+}
+
+.modal-boarding .bootstrap-select > .btn,
+.modal-boarding .bootstrap-select > .btn:focus,
+.modal-boarding .bootstrap-select > .btn:active,
+.modal-boarding .bootstrap-select > .btn-default.disabled,
+.modal-boarding .bootstrap-select > .btn-default.disabled:focus,
+.modal-boarding .bootstrap-select > .btn-default.disabled:active {
+	padding-left: 10px;
+	text-align: left;
+	outline: 0 none !important;
+	font-size: 1em;
+	border-radius: 0 !important;
+	font-family: "Lato",sans-serif;
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn .filter-option {
+    color: #242424;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%;
+}
+
+.modal-boarding .bootstrap-select > .dropdown-toggle {
+    padding-right: 40px;
+}
+
+.modal-boarding .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-boarding .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    background: #fff;
+    border-color: #979797;
+}
+
+.modal-boarding .bootstrap-select .btn-default.disabled,
+.modal-boarding .bootstrap-select .btn-default.disabled:hover,
+.modal-boarding .bootstrap-select .btn-default.disabled:focus,
+.modal-boarding .bootstrap-select .btn-default.disabled:active {
+    cursor: text;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu {
+    margin-top: -1px;
+    padding: 0;
+    font-size: 16px;
+    max-width: 100%;
+    min-height: inherit !important;
+	border-radius: 0;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu.inner {
+    max-height: 175px !important;
+	-webkit-overflow-scrolling: touch;
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select .dropdown-menu.inner {
+    max-height: inherit !important;
+	overflow-y: hidden !important;
+	max-height: 100% !important;
+}
+
+.modal-boarding .bootstrap-select.dropup .dropdown-menu {
+    margin-top: inherit;
+    margin-bottom: -1px;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu > li > a {
+    padding: 8px 10px;
+    font-size: 1em;
+    line-height: 120%;
+}
+.modal-boarding .dropdown-menu > .selected > a{
+	display:none;
+}
+.modal-boarding .dropdown-menu > li > a:hover,
+.modal-boarding .dropdown-menu > .selected > a, 
+.modal-boarding .dropdown-menu > .selected > a:hover, 
+.modal-boarding .dropdown-menu > .selected > a:focus, 
+.modal-boarding .dropdown-menu > .active.selected > a, 
+.modal-boarding .dropdown-menu > .active.selected > a:hover, 
+.modal-boarding .dropdown-menu > .active.selected > a:focus {
+    background-color: transparent;
+    color: #3891ff;
+}
+
+.modal-boarding .bootstrap-select.btn-group .dropdown-menu li a span.text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu.open {
+    border-color: #979797;
+	box-shadow: none;
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn .caret {
+    border: 0 none;
+    margin-top: -5px;
+    width: 19px;
+    height: 10px;
+    background: url("../images/boarding/icon-down.png") center center no-repeat;
+    background-size: 19px auto;
+}
+
+.modal-boarding .bootstrap-select.btn-group.open .btn .caret{
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.modal-boarding .bootstrap-select.btn-group.dropup .btn .caret,
+.modal-boarding .bootstrap-select.btn-group.dropup.open .btn .caret {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn.disabled .caret {
+    background-image: url(../images/icon_next_grey.png);
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select .dropdown-menu {
+    display: block;
+    background-clip: padding-box;
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    -ms-transform-origin: top;
+    -moz-transform-origin: top;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    max-height: none !important;
+    min-height: auto !important;
+	overflow: hidden !important;
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select.open .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+.on-nicescroll .modal-boarding .wrap-dropdown-menu-inner{
+	max-height: 175px;
+	overflow: hidden;
+}
+
+.on-nicescroll .modal-boarding .wrap-dropdown-menu-inner-content{
+	overflow-y: auto;
+}
+
+.modal-boarding .form-select .bootstrap-select > .btn, 
+.modal-boarding .form-select .bootstrap-select > .btn:focus, 
+.modal-boarding .form-select .bootstrap-select > .btn:active, 
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled, 
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus, 
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active, 
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    background: #fff;
+    border-color: #979797;
+    height: 44px;
+	border-radius: 0 !important;
+	box-shadow: none;
+}
+.modal-boarding  .form-select-readonly .bootstrap-select .bs-searchbox{
+	height: 0;
+	overflow: hidden;
+	padding:0;
+}
+.modal-boarding  .form-select .bootstrap-select .dropdown-menu.open{
+	border-color: #979797;
+}
+.modal-boarding  .form-select .bootstrap-select div.dropdown-menu{
+	margin-top: -1px;
+}
+.modal-boarding .bootstrap-select .dropdown-menu.inner {
+    max-height: 175px !important;
+}
+
+/* .cb-mark */
+.modal-boarding .cb-custom{
+	position: relative;
+}
+.modal-boarding .cb-mark {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.modal-boarding .cb-mark ~ .cb-label {
+	position: relative;
+	padding-left: 29px;
+	cursor: pointer;
+	display: inline-block !important;
+	font-size: 1.25em;
+}
+.modal-boarding .cb-mark:checked ~ .cb-label:before {
+	background-image: url(../images/boarding/icon-checked.png);
+}
+.modal-boarding .cb-mark ~ .cb-label:before {
+	content: '';
+	display: block;
+	vertical-align: middle;
+	position: absolute;
+	width: 14px;
+	height:14px;
+	background: url(../images/boarding/icon-check.png) center center no-repeat;
+	background-size: 14px auto;
+	top: 4px;
+	left: 0;
+	cursor: pointer;
+}
+
+/* .modal-boarding */
+.modal-boarding{
+	color: #242424;
+	font-size: 16px;
+}
+.modal-boarding .modal-dialog{
+	margin-top: 114px !important;
+}
+.modal-boarding .btn,
+.modal-boarding .btn:hover,
+.modal-boarding .btn:focus,
+.modal-boarding .btn:visited,
+.modal-boarding .btn:active{
+	border-radius: 3px !important;
+}
+
+.modal-boarding .form-control, 
+.modal-boarding .form-control:focus{
+	border-color:#979797;
+	font-size: .9375em;
+	color:#242424;
+	height: 44px;
+	border-radius: 0 !important;
+	box-shadow: none;
+}
+.modal-boarding textarea.form-control{
+	height: 114px !important;
+}
+.modal-boarding .form-placeholder {
+    position: relative;
+	margin-bottom: 11px;
+}
+.modal-boarding .form-placeholder .form-control {
+    background: transparent none repeat scroll 0 0;
+    position: relative;
+    z-index: 2;
+}
+.modal-boarding .form-placeholder .form-control:focus {
+    background: #fff none repeat scroll 0 0;
+}
+.modal-boarding .form-label{
+	font-size: 1.0625em;
+	font-weight: 400;
+	color:#303030;
+	margin-bottom: 10px;
+	padding-top: 7px;
+}
+.modal-boarding .form-placeholder label {
+    font-family: Lato,sans-serif;
+	font-size: 0.9375em;
+    font-weight: 400;
+	color:#9b9b9b;
+    left: 0;
+    line-height: 44px;
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+	margin-bottom:0;
+}
+
+.modal-boarding .modal-content{
+	border-radius: 5px;
+	box-shadow: none;
+	border: 0 none;
+}
+
+.modal-boarding .modal-header{
+	border-bottom:0;
+	text-align: center;
+}
+
+.modal-boarding .modal-footer{
+	border-top:0;
+}
+
+.modal-boarding .modal-footer .btn{
+	height: 43px;
+}
+
+/* Begin .modal-boarding-info */
+.modal-boarding-info{
+	width: 544px;
+}
+.modal-boarding-info .modal-header{
+	padding-top: 35px;
+	padding-bottom:7px;
+}
+.modal-boarding-info .modal-title{
+	font-size: 1.75em;
+	font-weight: 300;
+}
+.modal-boarding-info .modal-body{
+	padding-bottom:30px;
+	padding-left: 34px;
+	padding-right: 32px;
+}
+.modal-boarding-info .modal-body .row{
+	margin-left: -7px;
+	margin-right: -7px;
+}
+.modal-boarding-info .modal-body div[class*="col-"]{
+	padding-left:7px;
+	padding-right: 7px;	
+}
+.modal-boarding-info .form-select {
+	margin-bottom: 11px;
+}
+.modal-boarding-info .modal-footer{
+	padding: 0 33px 30px 32px;
+}
+/* End .modal-boarding-info */
+
+/* Begin .modal-boarding-info */
+.modal-boarding-time{
+	width: 609px;
+}
+.modal-boarding-time .modal-header{
+	padding-top: 36px;
+	padding-bottom: 44px;
+}
+.modal-boarding-time .modal-title{
+	font-size: 1.6875em;
+	font-weight: 300;
+}
+.modal-boarding-time .modal-body{
+	padding-right: 35px;
+	padding-left:27px;
+	padding-bottom: 46px;
+}
+.modal-boarding-time .working-section .table-css {
+    width: 100%;
+}
+
+.modal-boarding-time .working-section .td {
+    vertical-align: middle;
+}
+
+.modal-boarding-time .working-section .working-day {
+    text-transform: capitalize;
+	font-size: .9375em;
+    padding-right: 10px;
+    padding-left: 10px;
+	padding-bottom: 17px;
+	width: 178px;
+}
+.modal-boarding-time .working-section .working-day  hr{
+    position:absolute;
+	top: 50%;
+	width:100%;
+	margin:0;
+	visibility: hidden;
+}
+.modal-boarding-time .working-section .active .working-day  hr{	
+	visibility: visible;
+}
+.modal-boarding-time .working-section .working-day label.cb-label{
+	margin-bottom:0;
+}
+.modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label{
+    font-size:1em;
+	font-weight: 400;
+	background: #fff;
+	padding-right: 10px;
+}
+.modal-boarding-time .working-section .working-time {
+	padding-bottom: 17px;
+	visibility: hidden;
+    /*width:210px;*/
+}
+.modal-boarding-time .working-section .active .working-time {	
+	visibility: visible;
+}
+.modal-boarding-time .working-section .working-time .td{
+	font-size: .75em;
+	color:#a3a2a2;
+}
+.modal-boarding-time .working-section .working-time .td-from{
+	width: 38px;
+}
+.modal-boarding-time .working-section .working-time .td-to{
+	width: 26px;
+	text-align: center;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix{
+	margin:0;
+	padding:0;
+	list-style: none;
+	width: 150px;
+	border: 1px solid #979797;
+	font-size: 16px;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix > li{
+	float: left;
+	width: 50%;
+}
+.modal-boarding-time .working-section .working-time  ul.clearfix > li > input[type="text"]{
+	width: 100%;
+	height: 37px;
+	border: 0 none;
+	font-size: .8125em;
+	text-align: center;
+}
+.modal-boarding-time .bootstrap-select > .dropdown-toggle{
+	padding-right: 35px;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
+	width: 16px;
+	background-image:url(../images/boarding/icon-down-blue.png);
+	background-size: 16px auto;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .filter-option{
+	color: #9b9b9b;
+}
+.modal-boarding-time .bootstrap-select .dropdown-menu > li > a{
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-size: .8125em;
+}
+.modal-boarding-time .form-select .bootstrap-select > .btn, 
+.modal-boarding-time .form-select .bootstrap-select > .btn:focus, 
+.modal-boarding-time .form-select .bootstrap-select > .btn:active, 
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled, 
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus, 
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active, 
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover, 
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	border: 0 none;
+	height: 37px;
+	font-size: .8125em;
+}
+.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
+	margin-top:0;
+	left: inherit;
+	right: -1px;
+}
+.modal-boarding-time .modal-footer{
+	padding: 7px 30px 32px 32px;
+}
+.modal-boarding-time .modal-footer .btn{
+	width: 223px;
+	height: 43px;
+}
+.modal-boarding-time .modal-footer .btn-neutral{
+	float: left;
+}
+.modal-boarding-time .modal-footer .btn-agree{	
+	float: right;
+}
+/* Begin .modal-boarding-time */
+
+
+/* Begin .modal-boarding-profile */
+.modal-boarding-profile{
+	width: 544px;
+	text-align: center;
+}
+.modal-boarding-profile  .modal-header{
+	padding-top: 23px;
+	padding-bottom: 20px;
+}
+.modal-boarding-profile  .modal-title{
+	font-size: 1.6875em;
+	font-weight: 300;
+	line-height: 38px;
+}
+.modal-boarding-profile  .modal-header p{
+	font-size: 1em;
+	font-weight: 400;
+}
+.modal-boarding-profile .modal-body{
+	padding-left:0;
+	padding-right:0;
+}
+.modal-boarding-profile .caption{
+	display: none;
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .79);
+}
+.modal-boarding-profile  .has-image:hover .caption{
+	display: block;
+}
+.modal-boarding-profile .caption ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	position: relative;
+	top: 50%;
+	margin-top: -36px;
+}
+.modal-boarding-profile .caption li{
+	padding: 5px 0;
+}
+.modal-boarding-profile .caption a.link{
+	font-weight: 700;
+	font-size: .75em;
+	text-decoration: none;
+}
+.modal-boarding-profile .caption .link-change{
+	color:#fff;
+}
+.modal-boarding-profile .caption .link-remove{
+	color:#ff6666;
+}
+.modal-boarding-profile  .boarding-avatar{
+	padding-bottom: 41px;
+}
+.modal-boarding-profile .boarding-avatar.crop-show{
+	padding-bottom: 22px;
+}
+.modal-boarding-profile  .boarding-avatar h2{
+	color:#3d3d3d;
+	font-size: 1.1875em;
+	font-weight: 300;
+	margin-bottom: 21px;
+}
+.modal-boarding-profile  .boarding-avatar .frame{	
+	width: 183px;
+	height: 183px;
+	background: center center no-repeat;	
+	background-size: cover;
+	border: 1px solid #f7f7f7;
+	margin:0 auto;
+	position: relative;
+}
+.modal-boarding-profile  .boarding-avatar .avatar.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .default{	
+	width: 100%;
+	height: 100%;
+	background: url(../images/boarding/img-upload-avatar.png) center center no-repeat;
+	background-size: 133px auto;
+	position: relative;
+	cursor: pointer;
+}
+.modal-boarding-profile  .boarding-avatar .has-image .default{		
+	display: none;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link{
+	font-size: .75em;
+	text-decoration: none;
+	margin: 0 15px 0 10px;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-cancel{
+	color: #7a7a7a;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-crop{
+	color: #21a3ea;
+}
+.modal-boarding-profile  .boarding-banner h2{
+	color:#3d3d3d;
+	font-size: 1.1875em;
+	font-weight: 300;
+	margin-bottom: 26px;
+}
+.modal-boarding-profile  .boarding-banner .frame{
+	height: 176px;
+	background: center center no-repeat;	
+	background-size: cover;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	position: relative;
+}
+.modal-boarding-profile  .boarding-banner .default{	
+	width: 100%;
+	height: 100%;
+	background: url(../images/boarding/img-upload-avatar.png) center center no-repeat;
+	background-size: 133px auto;
+	position: relative;
+	cursor: pointer;
+}
+.modal-boarding-profile  .boarding-banner .has-image .default{		
+	display: none;
+}
+.modal-boarding-profile .modal-footer{
+	padding-bottom: 31px;
+	padding-right: 31px;
+	padding-left: 33px;
+}
+/* Begin .modal-boarding-time */
+
+/* Begin .modal-boarding-complete */
+.modal-boarding-complete{
+	width: 544px;
+}
+/* Begin .modal-boarding-complete */
+/* .btn */
+
+.relative {
+	position: relative;
+}
+
+.btn-form,
+.btn-form:focus {
+	font-size: 1em;
+	background: #fff;
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #242424;
+	color: #242424;
+}
+.btn-form:hover{
+	color: #242424;
+	background: #fff;
+	border-width:2px;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-agree,
+.btn-agree:focus {
+	border: 1px solid #3891ff;
+	background: #fff;
+	color: #3891ff;
+}
+.btn-agree:hover{
+	color: #3891ff;
+	background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-neutral,
+.btn-neutral:focus {
+	border: 1px solid #878787;
+	background: #fff;
+	color:#878787;
+}
+.btn-neutral:hover{
+	color:#878787;
+	background: #fff;
+	font-weight:700;
+	border-width:2px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+}
+
+.btn-disagree,
+.btn-disagree:focus {
+	border: 1px solid #ff5050;
+	background: #fff;
+	background: #fff;
+	color: #ff5050;
+}
+.btn-disagree:hover{
+	background:#ff5050;
+	color: #fff;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
+}
+
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus{
+	background:#dadada;
+	color: #fff;
+	font-weight:700;
+}
+
+/* =============================================================================
+	Croppie
+	========================================================================== */
+.croppie-container{
+	width:321px;
+	margin:0 auto;
+	padding:0;
+}
+.croppie-container .cr-viewport{
+	border-color:#bfbfbf;
+	box-shadow:0 0 0 899px rgba(191, 191, 191, 0.5) !important;
+	/*width:228px !important;
+	height:228px !important;*/
+}
+.croppie-container  .cr-boundary{
+	/*width:100% !important;
+	height:297px !important;*/
+	background: #fff;
+}
+.croppie-container .cr-boundary img.cr-image {
+	width: auto !important;
+}
+.croppie-container  .croppie-caption{
+	position: absolute;
+	width:100%;
+	text-align:center;
+	bottom: 11px;
+	/*top: 50%;
+    -webkit-transform: translate(0px,-50%);
+    -moz-transform: translate(0px,-50%);
+    -o-transform: translate(0px,-50%);
+    -ms-transform: translate(0px,-50%);
+    transform: translate(0px,-50%);
+    color:#242424;
+    font-size:1.125em;*/
+}
+.croppie-container  .croppie-caption .drag-section{
+	/*background: rgba(0, 0, 0, .5);
+	border-radius: 3px;*/
+	width:75px;
+	height:44px;
+	margin:0 auto;
+	color: #fff;
+	font-size: 0; /*0.6875em;*/
+	background:url(../images/boarding/img-drag-drop.png) no-repeat center center;
+}
+.croppie-container  .croppie-caption .icon{
+	position:relative;
+	bottom:-3px;
+	margin-right:5px;
+	width:14px;
+	height:14px;
+	display:inline-block;
+	background:url(../images/boarding/icon-move.png) no-repeat center center;
+	background-size:contain;
+	display: none;
+}
+.croppie-container .spinner {
+	opacity: 0;
+}
+.croppie-container .croppie-image-loading .spinner {
+	opacity: 1;
+}
+.croppie-container .cr-slider {
+	-webkit-appearance: none;
+	height:21px;
+}
+.croppie-container .cr-slider:focus {
+	outline: none;
+}
+.croppie-container .cr-slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-webkit-slider-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -6px;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+	background: #d7d7d7;
+}
+.croppie-container .cr-slider::-moz-range-track {
+	width: 100%;
+	height: 2px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: #d7d7d7;
+	border-radius: 1px;
+}
+.croppie-container .cr-slider::-moz-range-thumb {
+	height: 8px;
+	width: 8px;
+	border-radius: 100%;
+	border-color:transparent;
+	background: #fff;
+	border: 2px solid #3b93ff;
+	cursor: pointer;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider-wrap{
+	padding:9px 12px 0;
+	position:relative;
+	border-radius:5px;
+	margin-top:0;
+	width:183px;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom{
+	position:absolute;
+	display:block;
+	width:12px;
+	height: 38px;
+	top:0;
+	bottom:0;
+	cursor:pointer;
+	background: center center no-repeat;
+	background-size: 9px auto;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-in{
+	left:0;
+	top:1px;
+	background-image: url(../images/boarding/icon-subtract.png);
+	background-position: right center;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-out{
+	right:0;
+	background-image: url(../images/boarding/icon-plus.png);
+	background-position: left center;
+}
+
+/* .modal-intro */
+.modal-intro{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	font-family: Lato,sans-serif;
+	font-size: 2.0625em;
+	font-weight: 300;
+	height: 58px;
+	text-align: center;
+	background: #fff;
+}
+.modal-intro img{
+	width: 301px;
+	margin:0 auto;
+}
+
+/* .bootstrap-select */
+.modal-boarding .bootstrap-select{
+	font-size: 16px;
+}
+.modal-boarding .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+	width: 100%;
+}
+
+.modal-boarding .bootstrap-select.btn-group .no-results {
+	margin: 0;
+	padding: 10px;
+}
+
+.modal-boarding .bootstrap-select > .btn,
+.modal-boarding .bootstrap-select > .btn:focus,
+.modal-boarding .bootstrap-select > .btn:active,
+.modal-boarding .bootstrap-select > .btn-default.disabled,
+.modal-boarding .bootstrap-select > .btn-default.disabled:focus,
+.modal-boarding .bootstrap-select > .btn-default.disabled:active {
+	padding-left: 10px;
+	text-align: left;
+	outline: 0 none !important;
+	font-size: 1em;
+	border-radius: 0 !important;
+	font-family: "Lato",sans-serif;
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn .filter-option {
+	color: #242424;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	max-width: 100%;
+}
+
+.modal-boarding .bootstrap-select > .dropdown-toggle {
+	padding-right: 40px;
+}
+
+.modal-boarding .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-boarding .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+	background: #fff;
+	border-color: #979797;
+}
+
+.modal-boarding .bootstrap-select .btn-default.disabled,
+.modal-boarding .bootstrap-select .btn-default.disabled:hover,
+.modal-boarding .bootstrap-select .btn-default.disabled:focus,
+.modal-boarding .bootstrap-select .btn-default.disabled:active {
+	cursor: text;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu {
+	margin-top: -1px;
+	padding: 0;
+	font-size: 16px;
+	max-width: 100%;
+	min-height: inherit !important;
+	border-radius: 0;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu.inner {
+	max-height: 175px !important;
+	-webkit-overflow-scrolling: touch;
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select .dropdown-menu.inner {
+	max-height: inherit !important;
+	overflow-y: hidden !important;
+	max-height: 100% !important;
+}
+
+.modal-boarding .bootstrap-select.dropup .dropdown-menu {
+	margin-top: inherit;
+	margin-bottom: -1px;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu > li > a {
+	padding: 8px 10px;
+	font-size: 1em;
+	line-height: 120%;
+}
+.modal-boarding .dropdown-menu > .selected > a{
+	display:none;
+}
+.modal-boarding .dropdown-menu > li > a:hover,
+.modal-boarding .dropdown-menu > .selected > a,
+.modal-boarding .dropdown-menu > .selected > a:hover,
+.modal-boarding .dropdown-menu > .selected > a:focus,
+.modal-boarding .dropdown-menu > .active.selected > a,
+.modal-boarding .dropdown-menu > .active.selected > a:hover,
+.modal-boarding .dropdown-menu > .active.selected > a:focus {
+	background-color: transparent;
+	color: #3891ff;
+}
+
+.modal-boarding .bootstrap-select.btn-group .dropdown-menu li a span.text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.modal-boarding .bootstrap-select .dropdown-menu.open {
+	border-color: #979797;
+	box-shadow: none;
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn .caret {
+	border: 0 none;
+	margin-top: -5px;
+	width: 19px;
+	height: 10px;
+	background: url("../images/boarding/icon-down.png") center center no-repeat;
+	background-size: 19px auto;
+}
+
+.modal-boarding .bootstrap-select.btn-group.open .btn .caret{
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.modal-boarding .bootstrap-select.btn-group.dropup .btn .caret,
+.modal-boarding .bootstrap-select.btn-group.dropup.open .btn .caret {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+.modal-boarding .bootstrap-select.btn-group .btn.disabled .caret {
+	background-image: url(../images/icon_next_grey.png);
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select .dropdown-menu {
+	display: block;
+	background-clip: padding-box;
+	opacity: .3;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	-ms-transform-origin: top;
+	-moz-transform-origin: top;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-transform: scale(1, 0);
+	-moz-transform: scale(1, 0);
+	-ms-transform: scale(1, 0);
+	transform: scale(1, 0);
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	max-height: none !important;
+	min-height: auto !important;
+	overflow: hidden !important;
+}
+
+.on-nicescroll .modal-boarding .bootstrap-select.open .dropdown-menu {
+	-webkit-transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+}
+
+.on-nicescroll .modal-boarding .wrap-dropdown-menu-inner{
+	max-height: 175px;
+	overflow: hidden;
+}
+
+.on-nicescroll .modal-boarding .wrap-dropdown-menu-inner-content{
+	overflow-y: auto;
+}
+
+.modal-boarding .form-select .bootstrap-select > .btn,
+.modal-boarding .form-select .bootstrap-select > .btn:focus,
+.modal-boarding .form-select .bootstrap-select > .btn:active,
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled,
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus,
+.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active,
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+	background: #fff;
+	border-color: #979797;
+	height: 44px;
+	border-radius: 0 !important;
+	box-shadow: none;
+}
+.modal-boarding  .form-select-readonly .bootstrap-select .bs-searchbox{
+	height: 0;
+	overflow: hidden;
+	padding:0;
+}
+.modal-boarding  .form-select .bootstrap-select .dropdown-menu.open{
+	border-color: #979797;
+}
+.modal-boarding  .form-select .bootstrap-select div.dropdown-menu{
+	margin-top: -1px;
+}
+.modal-boarding .bootstrap-select .dropdown-menu.inner {
+	max-height: 175px !important;
+}
+
+/* .cb-mark */
+.modal-boarding .cb-custom{
+	position: relative;
+}
+.modal-boarding .cb-mark {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+}
+.modal-boarding .cb-mark ~ .cb-label {
+	position: relative;
+	padding-left: 29px;
+	cursor: pointer;
+	display: inline-block !important;
+	font-size: 1.25em;
+}
+.modal-boarding .cb-mark:checked ~ .cb-label:before {
+	background-image: url(../images/boarding/icon-checked.png);
+}
+.modal-boarding .cb-mark ~ .cb-label:before {
+	content: '';
+	display: block;
+	vertical-align: middle;
+	position: absolute;
+	width: 14px;
+	height:14px;
+	background: url(../images/boarding/icon-check.png) center center no-repeat;
+	background-size: 14px auto;
+	top: 4px;
+	left: 0;
+	cursor: pointer;
+}
+
+/* .modal-boarding */
+.modal-boarding{
+	color: #242424;
+	font-size: 16px;
+}
+.modal-boarding .modal-dialog{
+	margin-top: 114px !important;
+}
+.modal-boarding .btn,
+.modal-boarding .btn:hover,
+.modal-boarding .btn:focus,
+.modal-boarding .btn:visited,
+.modal-boarding .btn:active{
+	border-radius: 3px !important;
+}
+
+.modal-boarding .form-control,
+.modal-boarding .form-control:focus{
+	border-color:#979797;
+	font-size: .9375em;
+	color:#242424;
+	height: 44px;
+	border-radius: 0 !important;
+	box-shadow: none;
+}
+.modal-boarding textarea.form-control{
+	height: 114px !important;
+}
+.modal-boarding .form-placeholder {
+	position: relative;
+	margin-bottom: 11px;
+}
+.modal-boarding .form-placeholder .form-control {
+	background: transparent none repeat scroll 0 0;
+	position: relative;
+	z-index: 2;
+}
+.modal-boarding .form-placeholder .form-control:focus {
+	background: #fff none repeat scroll 0 0;
+}
+.modal-boarding .form-label{
+	font-size: 1.0625em;
+	font-weight: 400;
+	color:#303030;
+	margin-bottom: 10px;
+	padding-top: 7px;
+}
+.modal-boarding .form-placeholder label {
+	font-family: Lato,sans-serif;
+	font-size: 0.9375em;
+	font-weight: 400;
+	color:#9b9b9b;
+	left: 0;
+	line-height: 44px;
+	padding: 0 12px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	margin-bottom:0;
+}
+
+.modal-boarding .modal-content{
+	border-radius: 5px;
+	box-shadow: none;
+	border: 0 none;
+}
+
+.modal-boarding .modal-header{
+	border-bottom:0;
+	text-align: center;
+}
+
+.modal-boarding .modal-footer{
+	border-top:0;
+}
+
+.modal-boarding .modal-footer .btn{
+	height: 43px;
+}
+
+/* Begin .modal-boarding-info */
+.modal-boarding-info{
+	width: 544px;
+}
+.modal-boarding-info .modal-header{
+	padding-top: 35px;
+	padding-bottom:7px;
+}
+.modal-boarding-info .modal-title{
+	font-size: 1.75em;
+	font-weight: 300;
+}
+.modal-boarding-info .modal-body{
+	padding-bottom:30px;
+	padding-left: 34px;
+	padding-right: 32px;
+}
+.modal-boarding-info .modal-body .row{
+	margin-left: -7px;
+	margin-right: -7px;
+}
+.modal-boarding-info .modal-body div[class*="col-"]{
+	padding-left:7px;
+	padding-right: 7px;
+}
+.modal-boarding-info .form-select {
+	margin-bottom: 11px;
+}
+.modal-boarding-info .modal-footer{
+	padding: 0 33px 30px 32px;
+}
+/* End .modal-boarding-info */
+
+/* Begin .modal-boarding-info */
+.modal-boarding-time{
+	width: 609px;
+}
+.modal-boarding-time .modal-header{
+	padding-top: 36px;
+	padding-bottom: 44px;
+}
+.modal-boarding-time .modal-title{
+	font-size: 1.6875em;
+	font-weight: 300;
+}
+.modal-boarding-time .modal-body{
+	padding-right: 35px;
+	padding-left:27px;
+	padding-bottom: 46px;
+}
+.modal-boarding-time .working-section .table-css {
+	width: 100%;
+}
+
+.modal-boarding-time .working-section .td {
+	vertical-align: middle;
+}
+
+.modal-boarding-time .working-section .working-day {
+	text-transform: capitalize;
+	font-size: .9375em;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 17px;
+	width: 178px;
+}
+.modal-boarding-time .working-section .working-day  hr{
+	position:absolute;
+	top: 50%;
+	width:100%;
+	margin:0;
+	visibility: hidden;
+}
+.modal-boarding-time .working-section .active .working-day  hr{
+	visibility: visible;
+}
+.modal-boarding-time .working-section .working-day label.cb-label{
+	margin-bottom:0;
+}
+.modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label{
+	font-size:1em;
+	font-weight: 400;
+	background: #fff;
+	padding-right: 10px;
+}
+.modal-boarding-time .working-section .working-time {
+	padding-bottom: 17px;
+	visibility: hidden;
+	/*width:210px;*/
+}
+.modal-boarding-time .working-section .active .working-time {
+	visibility: visible;
+}
+.modal-boarding-time .working-section .working-time .td{
+	font-size: .75em;
+	color:#a3a2a2;
+}
+.modal-boarding-time .working-section .working-time .td-from{
+	width: 38px;
+}
+.modal-boarding-time .working-section .working-time .td-to{
+	width: 26px;
+	text-align: center;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix{
+	margin:0;
+	padding:0;
+	list-style: none;
+	width: 150px;
+	border: 1px solid #979797;
+	font-size: 16px;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix > li{
+	float: left;
+	width: 50%;
+}
+.modal-boarding-time .working-section .working-time  ul.clearfix > li > input[type="text"]{
+	width: 100%;
+	height: 37px;
+	border: 0 none;
+	font-size: .8125em;
+	text-align: center;
+}
+.modal-boarding-time .bootstrap-select > .dropdown-toggle{
+	padding-right: 35px;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
+	width: 16px;
+	background-image:url(../images/boarding/icon-down-blue.png);
+	background-size: 16px auto;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .filter-option{
+	color: #9b9b9b;
+}
+.modal-boarding-time .bootstrap-select .dropdown-menu > li > a{
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-size: .8125em;
+}
+.modal-boarding-time .form-select .bootstrap-select > .btn,
+.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+.modal-boarding-time .form-select .bootstrap-select > .btn:active,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+	border: 0 none;
+	height: 37px;
+	font-size: .8125em;
+}
+.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
+	margin-top:0;
+	left: inherit;
+	right: -1px;
+}
+.modal-boarding-time .modal-footer{
+	padding: 7px 30px 32px 32px;
+}
+.modal-boarding-time .modal-footer .btn{
+	width: 223px;
+	height: 43px;
+}
+.modal-boarding-time .modal-footer .btn-neutral{
+	float: left;
+}
+.modal-boarding-time .modal-footer .btn-agree{
+	float: right;
+}
+/* Begin .modal-boarding-time */
+
+
+/* Begin .modal-boarding-profile */
+.modal-boarding-profile{
+	width: 544px;
+	text-align: center;
+}
+.modal-boarding-profile  .modal-header{
+	padding-top: 23px;
+	padding-bottom: 20px;
+}
+.modal-boarding-profile  .modal-title{
+	font-size: 1.6875em;
+	font-weight: 300;
+	line-height: 38px;
+}
+.modal-boarding-profile  .modal-header p{
+	font-size: 1em;
+	font-weight: 400;
+}
+.modal-boarding-profile .modal-body{
+	padding-left:0;
+	padding-right:0;
+}
+.modal-boarding-profile .caption{
+	display: none;
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .79);
+}
+.modal-boarding-profile  .has-image:hover .caption{
+	display: block;
+}
+.modal-boarding-profile .caption ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	position: relative;
+	top: 50%;
+	margin-top: -36px;
+}
+.modal-boarding-profile .caption li{
+	padding: 5px 0;
+}
+.modal-boarding-profile .caption a.link{
+	font-weight: 700;
+	font-size: .75em;
+	text-decoration: none;
+}
+.modal-boarding-profile .caption .link-change{
+	color:#fff;
+}
+.modal-boarding-profile .caption .link-remove{
+	color:#ff6666;
+}
+.modal-boarding-profile  .boarding-avatar{
+	padding-bottom: 41px;
+}
+.modal-boarding-profile .boarding-avatar.crop-show{
+	padding-bottom: 22px;
+}
+.modal-boarding-profile  .boarding-avatar h2{
+	color:#3d3d3d;
+	font-size: 1.1875em;
+	font-weight: 300;
+	margin-bottom: 21px;
+}
+.modal-boarding-profile  .boarding-avatar .frame{
+	width: 183px;
+	height: 183px;
+	background: center center no-repeat;
+	background-size: cover;
+	border: 1px solid #f7f7f7;
+	margin:0 auto;
+	position: relative;
+}
+.modal-boarding-profile  .boarding-avatar .avatar.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .default{
+	width: 100%;
+	height: 100%;
+	background: url(../images/boarding/img-upload-avatar.png) center center no-repeat;
+	background-size: 133px auto;
+	position: relative;
+	cursor: pointer;
+}
+.modal-boarding-profile  .boarding-avatar .has-image .default{
+	display: none;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section.invisible{
+	height: 0;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link{
+	font-size: .75em;
+	text-decoration: none;
+	margin: 0 15px 0 10px;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-cancel{
+	color: #7a7a7a;
+}
+.modal-boarding-profile  .boarding-avatar .croppie-section footer .link-crop{
+	color: #21a3ea;
+}
+.modal-boarding-profile  .boarding-banner h2{
+	color:#3d3d3d;
+	font-size: 1.1875em;
+	font-weight: 300;
+	margin-bottom: 26px;
+}
+.modal-boarding-profile  .boarding-banner .frame{
+	height: 176px;
+	background: center center no-repeat;
+	background-size: cover;
+	border-top: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	position: relative;
+}
+.modal-boarding-profile  .boarding-banner .default{
+	width: 100%;
+	height: 100%;
+	background: url(../images/boarding/img-upload-avatar.png) center center no-repeat;
+	background-size: 133px auto;
+	position: relative;
+	cursor: pointer;
+}
+.modal-boarding-profile  .boarding-banner .has-image .default{
+	display: none;
+}
+.modal-boarding-profile .modal-footer{
+	padding-bottom: 31px;
+	padding-right: 31px;
+	padding-left: 33px;
+}
+/* Begin .modal-boarding-time */
+
+/* Begin .modal-boarding-complete */
+.modal-boarding-complete{
+	width: 544px;
+}
+.modal-boarding-complete .modal-body{
+	text-align: center;
+	padding-top: 138px;
+	padding-bottom: 106px;
+}
+.modal-boarding-complete .modal-body img{
+	width: 79px;
+	margin:0 auto 11px;
+}
+.modal-boarding-complete .modal-body p{
+	font-size: 1.1875em;
+	font-weight: 300;
+}
+.modal-boarding-complete .modal-footer{
+	padding-bottom: 26px;
+	padding-left: 32px;
+	padding-right: 31px;
+}
+.modal-boarding-complete .modal-footer .btn{
+}
+/* Begin .modal-boarding-complete */
+.boarding-working-time h4 {
+	font-size: 1.3em;
+	color: #232323;
+	font-weight: 300;
+}
+.boarding-working-time .working-section .td {
+	padding-bottom: 0;
+}
+.boarding-working-time .working-section .tr {
+	display: inherit;
+}
+.boarding-working-time .working-section .form-select select {
+	display: block;
+}
+.boarding-working-time .modal-boarding-time .bootstrap-select.btn-group .btn .caret {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+.boarding-working-time .modal-boarding .bootstrap-select.btn-group.open .btn .caret {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.boarding-working-time .modal-boarding-time .form-select .bootstrap-select div.dropdown-menu {
+	margin-top: 3px;
+}
+.boarding-working-time .modal-boarding .cb-mark ~ .cb-label:before {
+	border: none;
+}
+.boarding-working-time .modal-boarding {
+	margin-top: 2rem !important;
+}
+.boarding-working-time .modal-boarding-time .working-section .working-day {
+	padding-left: 0;
+}
+.boarding-working-time .working-section .td {
+	border-top: 0;
+	padding-top: 0 !important;
+	height: 65px;
+}
+.basic-info .modal-boarding-time {
+	width: 100%;
+}
+.boarding-working-time.basic-info .modal-boarding {
+	margin-top: 0rem !important;
+}
+.basic-info .modal-boarding-time .form-select .bootstrap-select > .btn,
+.basic-info .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default{
+	border: 1px solid #979797;
+	height: 44px;
+	font-size: initial;
+}
+.basic-info.boarding-working-time .modal-boarding-time .form-select .bootstrap-select div.dropdown-menu {
+	margin-top: -1px;
+	right: 0;
+}
+.kuyam-content .basic-info div[class*="col-"].input-address {
+	margin-bottom: 0px;
+}
+.contact-info .radio-custom {
+	margin-bottom: 2rem;
+}
+.contact-info .modal-boarding .form-placeholder{
+	margin-top: 0.5rem;
+}
+@media (max-width: 767px){
+	.modal-intro{
+		height: 46px;
+		padding-top: 12px;
+		position: relative;
+	}
+	.modal-intro img{
+		width: 79px;
+	}
+	.modal-boarding{
+		padding:0 !important;
+		color: #303030;
+	}
+	.modal-boarding .modal-dialog{
+		width: inherit;
+		margin: 0 !important;
+	}
+	.modal-boarding .modal-content{
+		border-radius: 0;
+	}
+	.modal-boarding .modal-header{
+		height: 47px;
+		border-top: 1px solid #c7c7c7;
+		border-bottom:1px solid #c7c7c7;
+		background: #f5f5f5;
+		padding:0;
+	}
+	.modal-boarding .modal-title{
+		font-size: .9375em;
+		line-height: 44px;
+		font-weight: 400;
+	}
+	.modal-boarding .modal-footer .row{
+		margin-left:-5px;
+		margin-right: -5px;
+	}
+	.modal-boarding .modal-footer div[class*="col-"]{
+		padding-left:5px;
+		padding-right: 5px;
+	}
+	.modal-boarding .form-label{
+		font-size: 1em;
+		padding-top: 6px;
+		margin-bottom: 7px;
+	}
+	.modal-boarding .form-control,
+	.modal-boarding .form-control:focus{
+		font-size: .875em;
+		height: 39px;
+	}
+	.modal-boarding .chosen-container-single .chosen-single,
+	.modal-boarding .chosen-container-multi .chosen-multiple,
+	.modal-boarding .inner_input,
+	.chosen-container-single .chosen-single,
+	.chosen-container-multi .chosen-multiple,
+	.inner_input{
+		font-size: 14px;
+		height: 39px;
+		line-height: 35px;;
+	}
+
+	.modal-boarding textarea.form-control{
+		height: 101px !important;
+	}
+	.modal-boarding .form-placeholder{
+		margin-bottom: 9px;
+	}
+	.modal-boarding .form-placeholder label{
+		font-size: .875em;
+		line-height: 39px;
+	}	
+	.modal-boarding .bootstrap-select.btn-group .btn .caret{
+		right: 10px;
+		background-image:url(../images/boarding/icon-down-blue.png);
+		background-size: 16px auto;
+	}
+	.modal-boarding .chosen-container-single .chosen-single div b,
+	.modal-boarding .chosen-container-multi .chosen-multiple div b {
+		right: 10px;
+		background: url(../images/boarding/icon-down-blue.png) no-repeat 8px center;
+		background-size: 16px auto;
+	}
+	.modal-boarding .chosen-container-active.chosen-with-drop .chosen-single div b,
+	.modal-boarding .chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 10px center;
+	}
+	.modal-boarding .form-select .bootstrap-select > .btn, 
+	.modal-boarding .form-select .bootstrap-select > .btn:focus, 
+	.modal-boarding .form-select .bootstrap-select > .btn:active, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active, 
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover {
+
+	}
+	.modal-boarding .bootstrap-select.btn-group .btn .caret{
+		right: 10px;
+		background-image:url(../images/boarding/icon-down-blue.png);
+		background-size: 16px auto;
+	}
+	.chosen-container-single .chosen-single div b,
+	.chosen-container-multi .chosen-multiple div b {
+		right: 10px;
+		background: url(../images/boarding/icon-down-blue.png) no-repeat 8px center;
+		background-size: 16px auto;
+	}
+	.chosen-container-active.chosen-with-drop .chosen-single div b,
+	.chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 10px center;
+	}
+	.modal-boarding .form-select .bootstrap-select > .btn,
+	.modal-boarding .form-select .bootstrap-select > .btn:focus,
+	.modal-boarding .form-select .bootstrap-select > .btn:active,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		height: 39px;
+	}
+	.modal-boarding .bootstrap-select .dropdown-menu > li > a{
+		font-size: .875em;
+	}		
+	.modal-boarding .modal-footer .btn{
+		height: 39px;
+	}
+	.modal-boarding .modal-footer .btn{
+		height: 39px;
+	}
+	.modal-boarding .cb-mark ~ .cb-label:before{
+		background-size: 13px auto;
+		top: 5px;
+	}
+	.modal-boarding .cb-mark:checked ~ .cb-label:before{
+		background-size: 12px auto;
+	}
+	/* .modal-boarding-info */
+	.modal-boarding-info .modal-body{
+		padding-bottom: 16px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.modal-boarding-info .modal-body .row{
+		margin-left:-5px;
+		margin-right: -5px;
+	}
+	.modal-boarding-info .modal-body div[class*="col-"]{
+		padding-left:5px;
+		padding-right: 5px;
+	}
+	.modal-boarding-info .modal-footer{
+		padding: 9px 20px 15px;
+	}
+	/* .modal-boarding-time */
+	.modal-boarding-time .modal-body{
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	.modal-boarding-time .working-section > .table-css,
+	.modal-boarding-time .working-section > .table-css > .tr{
+		display:block;
+	}
+	.modal-boarding-time .working-section .working-day{
+		padding: 10px 0 8px;
+		display: block;
+	}
+	.modal-boarding-time .working-section .active .working-day hr{
+		display: none;
+	}
+	.modal-boarding-time .working-section .working-time{
+		margin-top: -5px;
+		padding-bottom: 3px;
+		visibility: visible;
+		display: none;
+	}
+	.modal-boarding-time .working-section .active .working-time{
+		display: block;
+	}
+	.modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label{
+		font-size: .8125em;
+		background: transparent;
+	}
+	.modal-boarding-time .working-section .working-time .table-css{
+		width: auto;
+	}
+	.modal-boarding-time .working-section .working-time .td{
+		font-size: .6875em;
+	}
+	.modal-boarding-time .working-section .working-time ul.clearfix{
+		width: 125px;
+	}
+	.modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"]{
+		height: 31px;
+		font-size: .6875em;
+	}
+	.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
+		right: 10px;
+	}
+	.modal-boarding-time .form-select .bootstrap-select > .btn, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn:focus, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn:active, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active, 
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding-time .form-select .bootstrap-select > .btn,
+	.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn:active,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		height: 31px;
+		font-size: .6875em;
+	}
+	.modal-boarding-time .bootstrap-select > .dropdown-toggle{
+		padding-right: 30px;
+	}
+	.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
+		right: 0;
+	}
+	.modal-boarding-time .bootstrap-select .dropdown-menu > li > a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: .6875em;
+	}
+	.modal-boarding-time .modal-footer{
+		padding-bottom: 12px;
+		padding-left: 18px;
+		padding-right: 18px;
+		height: 58px;
+	}
+	.modal-boarding-time .modal-footer .btn{
+		width: 100%;
+	}
+	/* .modal-boarding-profile */
+	.modal-boarding-profile .modal-header{
+		line-height: 100%;
+	}
+	.modal-boarding-profile .modal-title{
+		line-height: 100%;
+		margin-top: 6px;
+		margin-bottom: 3px;
+	}
+	.modal-boarding-profile .modal-header p{
+		font-size: .8125em;
+		font-weight: 300;
+	}
+	.modal-boarding-profile .modal-body{
+		padding-top: 18px;
+	}
+	.modal-boarding-profile .boarding-avatar{
+		border-bottom: 1px solid #dfdfdf;
+		padding-bottom: 29px;
+		margin-bottom: 21px;
+	}
+	.modal-boarding-profile .boarding-avatar h2{
+		font-size: 1em;
+		margin-bottom: 18px;
+	}
+	.modal-boarding-profile .boarding-avatar .frame{
+		border-radius: 5px;
+		width: 144px;
+		height: 144px;
+		border-color: #b3b3b3;
+	}
+	.modal-boarding-profile .boarding-avatar .default{
+		background-size: 111px auto;
+	}
+	.modal-boarding-profile .boarding-banner h2{
+		font-size: 1em;
+		margin-bottom: 21px;
+	}
+	.modal-boarding-profile .boarding-banner .frame{
+		height: 144px;
+	}
+	.modal-boarding-profile .boarding-banner .default{
+		background-size: 111px auto;
+	}
+	.modal-boarding-profile .modal-footer{
+		padding: 19px 16px 14px;
+		height: 72px;
+	}
+	/* .modal-boarding-complete */
+	.modal-boarding-complete .modal-intro{
+		border-bottom: 1px solid #c7c7c7;
+	}
+	.modal-boarding-complete .modal-body{
+		padding-bottom: 0;
+		padding-top: 0;
+		min-height: 208px;
+		position: relative;
+	}
+	.modal-boarding-complete .modal-body section{
+		position: absolute;
+		top: 50%;
+		margin-top: -48px;
+		width: 100%;
+	}
+	.modal-boarding-complete .modal-body img{
+		width: 65px;
+		margin-bottom: 6px;
+	}
+	.modal-boarding-complete .modal-body p{
+		font-size: 1em;
+	}
+	.modal-boarding-complete .modal-footer{
+		padding-bottom: 12px;
+		height: 66px;
+	}
+}
+
+@media (max-width: 374px){
+	.modal-intro{
+		height: 37px;
+		padding-top: 11px;
+		position: relative;
+	}
+	.modal-intro img{
+		width: 68px;
+	}
+	.modal-boarding{
+		padding:0 !important;
+		color: #303030;
+	}
+	.modal-boarding .modal-dialog{
+		width: inherit;
+		margin: 0 !important;
+	}
+	.modal-boarding .modal-content{
+		border-radius: 0;
+	}
+	.modal-boarding .modal-header{
+		height: 41px;
+		border-top: 1px solid #c7c7c7;
+		border-bottom:1px solid #c7c7c7;
+		background: #f5f5f5;
+		padding:0;
+	}
+	.modal-boarding .modal-title{
+		font-size: .8125em;
+		line-height: 39px;
+		font-weight: 400;
+	}
+	.modal-boarding .modal-footer .row{
+		margin-left:-5px;
+		margin-right: -5px;
+	}
+	.modal-boarding .modal-footer div[class*="col-"]{
+		padding-left:5px;
+		padding-right: 5px;
+	}
+	.modal-boarding .form-label{
+		font-size: .8125em;
+		padding-top: 4px;
+		margin-bottom: 4px;
+	}
+	.modal-boarding .form-control,
+	.modal-boarding .form-control:focus{
+		font-size: .875em;
+		height: 33px;
+	}
+	.modal-boarding .chosen-container-single .chosen-single,
+	.modal-boarding .chosen-container-multi .chosen-multiple,
+	.modal-boarding .inner_input,
+	.chosen-container-single .chosen-single,
+	.chosen-container-multi .chosen-multiple,
+	.inner_input{
+		font-size: 12px;
+		height: 33px;
+		line-height: 30px;;
+	}
+	.modal-boarding textarea.form-control{
+		height: 85px !important;
+	}
+	.modal-boarding .form-placeholder{
+		margin-bottom: 8px;
+	}
+	.modal-boarding .form-placeholder label{
+		font-size: .75em;
+		line-height: 33px;
+	}	
+	.modal-boarding .bootstrap-select > .btn, 
+	.modal-boarding .bootstrap-select > .btn:focus, 
+	.modal-boarding .bootstrap-select > .btn:active, 
+	.modal-boarding .bootstrap-select > .btn-default.disabled, 
+	.modal-boarding .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding .bootstrap-select > .btn,
+	.modal-boarding .bootstrap-select > .btn:focus,
+	.modal-boarding .bootstrap-select > .btn:active,
+	.modal-boarding .bootstrap-select > .btn-default.disabled,
+	.modal-boarding .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding .bootstrap-select > .btn-default.disabled:active{
+		font-size: .75em;
+	}
+	.modal-boarding .bootstrap-select.btn-group .btn .caret{
+		right: 8px;	
+		background-size: 12px auto;
+	}
+	.modal-boarding .chosen-container-single .chosen-single div b, .chosen-container-multi .chosen-multiple div b {
+		background-size: 12px auto;
+		background-position: 12px center;
+	}
+	.modal-boarding .chosen-container-active.chosen-with-drop .chosen-single div b,
+	.modal-boarding .chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 11px center;
+	}
+	.modal-boarding .chosen-container .chosen-results li,
+	.modal-boarding .chosen-container-multi .chosen-choices li.search-choice{
+		font-size: 12px;
+	}
+	.modal-boarding .form-select .bootstrap-select > .btn, 
+	.modal-boarding .form-select .bootstrap-select > .btn:focus, 
+	.modal-boarding .form-select .bootstrap-select > .btn:active, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus, 
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active, 
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover {
+		right: 8px;
+		background-size: 12px auto;
+	}
+	.chosen-container-single .chosen-single div b, .chosen-container-multi .chosen-multiple div b {
+		background-size: 12px auto;
+		background-position: 12px center;
+	}
+	.chosen-container-active.chosen-with-drop .chosen-single div b,
+	.chosen-container-active.chosen-with-drop .chosen-multiple div b {
+		background-position: 11px center;
+	}
+	.chosen-container .chosen-results li,
+	.chosen-container-multi .chosen-choices li.search-choice{
+		font-size: 12px;
+	}
+	.modal-boarding .form-select .bootstrap-select > .btn,
+	.modal-boarding .form-select .bootstrap-select > .btn:focus,
+	.modal-boarding .form-select .bootstrap-select > .btn:active,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding .form-select .bootstrap-select > .btn-default.disabled:active,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		height: 33px;
+	}
+	.modal-boarding .bootstrap-select .dropdown-menu > li > a{
+		font-size: .75em;
+	}		
+	.modal-boarding .modal-footer .btn{
+		height: 33px;
+	}
+	.modal-boarding .modal-footer .btn{
+		height: 33px;
+	}
+	.modal-boarding .cb-mark ~ .cb-label:before{
+		background-size: 11px auto;
+		top: 6px;
+	}
+	.modal-boarding .cb-mark:checked ~ .cb-label:before{
+		background-size: 11px auto;
+	}
+	/* .modal-boarding-info */
+	.modal-boarding-info .modal-body{
+		padding: 13px 15px 16px;
+	}
+	.modal-boarding-info .modal-body .row{
+		margin-left:-5px;
+		margin-right: -5px;
+	}
+	.modal-boarding-info .modal-body div[class*="col-"]{
+		padding-left:5px;
+		padding-right: 5px;
+	}
+	.modal-boarding-info .modal-footer{
+		padding: 6px 20px 13px;
+	}
+	/* .modal-boarding-time */
+	.modal-boarding-time .modal-body{
+		padding: 10px 10px 114px;
+	}
+	.modal-boarding-time .working-section > .table-css,
+	.modal-boarding-time .working-section > .table-css > .tr{
+		display:block;
+	}
+	.modal-boarding-time .working-section .working-day{
+		padding: 7px 0 4px;
+		display: block;
+	}
+	.modal-boarding-time .working-section .active .working-day hr{
+		display: none;
+	}
+	.modal-boarding-time .working-section .working-time{
+		margin-top: -5px;
+		padding-bottom: 3px;
+		visibility: visible;
+		display: none;
+	}
+	.modal-boarding-time .working-section .active .working-time{
+		display: block;
+	}
+	.modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label{
+		font-size: .6875em;
+	}
+	.modal-boarding-time .working-section .working-time .table-css{
+		width: auto;
+	}
+	.modal-boarding-time .working-section .working-time .td{
+		font-size: .5625em;
+	}
+	.modal-boarding-time .working-section .working-time ul.clearfix{
+		width: 108px;
+	}
+	.modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"]{
+		height: 26px;
+		font-size: .5625em;
+	}
+	.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
+		right: 10px;
+	}
+	.modal-boarding-time .form-select .bootstrap-select > .btn, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn:focus, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn:active, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled, 
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active, 
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default, 
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding-time .form-select .bootstrap-select > .btn,
+	.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn:active,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+	.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+		height: 26px;
+		font-size: .5625em;
+	}
+	.modal-boarding-time .bootstrap-select > .dropdown-toggle{
+		padding-right: 28px;
+	}
+	.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
+		right: -1px;
+		margin-top: 1px;
+	}
+	.modal-boarding-time .bootstrap-select .dropdown-menu > li > a{
+		padding-top: 9px;
+		padding-bottom: 8px;
+		font-size: .5625em;
+	}
+	.modal-boarding-time .modal-footer{
+		padding-bottom: 9px;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: 49px;
+	}
+	.modal-boarding-time .modal-footer .btn{
+		width: 100%;
+	}
+	/* .modal-boarding-profile */
+	.modal-boarding-profile .modal-header{
+		line-height: 100%;
+	}
+	.modal-boarding-profile .modal-title{
+		line-height: 100%;
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+	.modal-boarding-profile .modal-header p{
+		font-size: .6875em;
+		font-weight: 300;
+	}
+	.modal-boarding-profile .modal-body{
+		padding-top: 15px;
+	}
+	.modal-boarding-profile .boarding-avatar{
+		border-bottom: 1px solid #dfdfdf;
+		padding-bottom: 24px;
+		margin-bottom: 16px;
+	}
+	.modal-boarding-profile .boarding-avatar h2{
+		font-size: .875em;
+		margin-bottom: 16px;
+	}
+	.modal-boarding-profile .boarding-avatar .frame{
+		border-radius: 5px;
+		width: 123px;
+		height: 123px;
+		border-color: #b3b3b3;
+	}
+	.modal-boarding-profile .boarding-avatar .default{
+		background-size: 111px auto;
+	}
+	.modal-boarding-profile .boarding-banner h2{
+		font-size: .875em;
+		margin-bottom: 18px;
+	}
+	.modal-boarding-profile .boarding-banner .frame{
+		height: 122px;
+	}
+	.modal-boarding-profile .boarding-banner .default{
+		background-size: 111px auto;
+	}
+	.modal-boarding-profile .modal-footer{
+		height: 59px;
+		padding: 14px 16px 12px;
+	}
+	/* .modal-boarding-complete */
+	.modal-boarding-complete .modal-intro{
+		border-bottom: 1px solid #c7c7c7;
+	}
+	.modal-boarding-complete .modal-body{
+		padding-bottom: 0;
+		padding-top: 0;
+		min-height: 208px;
+		position: relative;
+	}
+	.modal-boarding-complete .modal-body section{
+		position: absolute;
+		top: 50%;
+		margin-top: -44px;
+		width: 100%;
+	}
+	.modal-boarding-complete .modal-body img{
+		width: 55px;
+		margin-bottom: 3px;
+	}
+	.modal-boarding-complete .modal-body p{
+		font-size: .8125em;
+	}
+	.modal-boarding-complete .modal-footer{
+		padding-bottom: 10px;
+		height: 58px;
+	}
+}
+
+@media (min-device-width: 320px){
+	.modal-boarding-profile  .has-image:focus .caption,
+	.modal-boarding-profile  .has-image:active .caption{
+		display: block;
+	}
+}
+
+/* retina */
+.img-normal{
+    display:block;
+}
+.img-retina{
+	display:none;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .img-normal{
+        display:none;
+    }
+    .img-retina{
+        display:block;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:375px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:375px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:375px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:375px),
+only screen and (              min-resolution:120dpi)      and (min-width:375px),
+only screen and (               min-resolution:2dppx)      and (min-width:375px) {
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (              min-resolution:120dpi)      and (min-width:768px),
+only screen and (               min-resolution:2dppx)      and (min-width:768px) {
+}

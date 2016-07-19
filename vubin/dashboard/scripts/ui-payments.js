@@ -1,6 +1,7 @@
 $(document).ready(function () {
     fixHeight('.dl-list', '.time-policy');
 
+    $('.dl-list.contact-info-checkbox').find('.time-policy').css('height', 'auto');
     $('.dl-list .radio-mark').each(function () {
         var isChecked = $(this).is(':checked');
         if (isChecked === true) {

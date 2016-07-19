@@ -1,0 +1,135 @@
+.kuyam-sidebar{
+    background: #f5f5f5;
+    min-width: 194px;
+}
+.kuyam-sidebar ul{
+    margin:17px 0;
+    padding:0;
+    list-style:none;
+}
+.kuyam-sidebar ul li{
+    clear: both;
+}
+.kuyam-sidebar ul li a{
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size:.8125em;
+    display:block;
+    padding:10px 24px 10px 45px;
+    color:#242424;
+    text-decoration: none;
+    text-shadow:0.5px 0 0 #242424;
+     position: relative;
+}
+.kuyam-sidebar ul li a .icon{
+    display: block;
+    position: absolute;
+    top:0;
+    height: 100%;
+    left: 24px;
+    width: 12px;
+}
+.kuyam-sidebar ul li a .icon-collapse{
+    left: inherit;
+    right: 10px;
+}
+.kuyam-sidebar ul li.active a,
+.kuyam-sidebar ul li a:hover{
+    font-weight:700;
+}
+
+.kuyam-sidebar ul li.dropdown{
+
+}
+
+.kuyam-sidebar ul li.dropdown li a{
+    font-weight:300;
+    padding-top:4px;
+    padding-bottom:0;
+}
+
+.kuyam-sidebar ul li.dropdown li.active a,
+.kuyam-sidebar ul li.dropdown li a:hover,
+.kuyam-sidebar ul li.open > a{
+    font-weight:700;
+}
+
+.kuyam-sidebar ul li.open .dropdown-menu{
+    position:relative;
+    background: transparent;
+    border: 0 none;
+    box-shadow: none;
+    position: relative;
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+.kuyam-sidebar .icon-profile{
+    background-image: url(../images/dashboard/company/icon-profile.png);
+    background-size: 10px auto;
+}
+.kuyam-sidebar .icon-gallery{
+    background-image: url(../images/dashboard/company/icon-gallery.png);
+    background-size: 10px auto;
+
+}
+.kuyam-sidebar .icon-payment{
+    background-image: url(../images/dashboard/company/icon-payment.png);
+    background-size: 10px auto;
+}
+.kuyam-sidebar .icon-notifications{
+    background-image: url(../images/dashboard/company/icon-notifications.png);
+    background-size: 9px auto;
+
+}
+.kuyam-sidebar .icon-calendars{
+    background-image: url(../images/dashboard/company/icon-calendars.png);
+    background-size: 8px auto;
+
+}
+.kuyam-sidebar .icon-settings{
+    background-image: url(../images/dashboard/company/icon-settings.png);
+    background-size: 10px auto;
+}
+
+.kuyam-sidebar .icon-client{
+    background-image: url(../images/dashboard/manage/icon-client.png);
+    background-size:8px auto;
+}
+
+.kuyam-sidebar .icon-service{
+    background-image: url(../images/dashboard/manage/icon-service.png);
+    background-size:10px auto;
+}
+
+.kuyam-sidebar .icon-class{
+    background-image: url(../images/dashboard/manage/icon-class.png);
+    background-size:12px auto;
+}
+
+.kuyam-sidebar .icon-staff{
+    background-image: url(../images/dashboard/manage/icon-staff.png);
+    background-size:12px auto;
+}
+
+.kuyam-sidebar .icon-invoice{
+    background-image: url(../images/dashboard/manage/icon-invoice.png);
+    background-size:7px auto;
+}
+
+.kuyam-sidebar .icon-package{
+    background-image: url(../images/dashboard/manage/icon-package.png);
+    background-size:10px auto;
+}
+
+.kuyam-sidebar .icon-promo{
+    background-image: url(../images/dashboard/manage/icon-promo.png);
+    background-size:8px auto;
+}
+
+@media (max-width: 768px){
+    .kuyam-sidebar{
+        position: absolute;
+        left: -100%;
+    }
+}
