@@ -97,6 +97,7 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
         $sectionID.find('select').selectpicker({ liveSearch: true });
         $sectionID.find('select').on('loaded.bs.select', function () {
             listFilter('#' + sectionID + ' .bs-searchbox input', $('#' + sectionID + ' ul.dropdown-menu'));
+            $sectionID.find('.form-control').attr('placeholder', 'Search and select');
         });
 
         $sectionID.find('select').on('hide.bs.select', function () {
@@ -143,8 +144,7 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 }
 
 function iscrollSelectSearch(sectionID, scrollName) {
-    var $sectionID = $('#' + sectionID),
-        $modalID = $('#' + modalName);
+    var $sectionID = $('#' + sectionID);
     if ($sectionID.length === 0) {
         return;
     }
@@ -152,6 +152,8 @@ function iscrollSelectSearch(sectionID, scrollName) {
         $sectionID.find('select').selectpicker({ liveSearch: true });
         $sectionID.find('select').on('loaded.bs.select', function () {
             listFilter('#' + sectionID + ' .bs-searchbox input', $('#' + sectionID + ' ul.dropdown-menu'));
+
+            $sectionID.find('.form-control').attr('placeholder', 'Search and select');
         });
 
         $sectionID.find('select').on('hide.bs.select', function () {
