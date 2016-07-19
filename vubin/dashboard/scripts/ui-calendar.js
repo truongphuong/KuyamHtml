@@ -108,6 +108,7 @@ function more1023() {
         });
 
         var attendeeContent = $('#dataAttendee').html();
+        $('#dataAttendee').remove();
         $('.calendar-attendee').tooltipster({
             contentAsHTML: true,
             content: attendeeContent,
@@ -325,9 +326,9 @@ $(document).ready(function () {
         }
 
         $('#tabsCalendar li.active a[data-toggle="tab"]').attr('aria-iscroll', 'true');
-		
+
         iscrollSelectTabs(tabContentID);
-		
+
     });
 
     $('#tabsCalendar a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
