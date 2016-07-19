@@ -22,8 +22,9 @@
 <link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
 <link type="text/css" rel="Stylesheet" href="content/responsiveslides.css" /> 
 <link type="text/css" rel="stylesheet" href="content/jquery.carouFredSel.css" />
-
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
+
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 <!-- === SCRIPTS === -->  
@@ -40,6 +41,79 @@
 <!-- === END SCRIPTS === -->
 </head>
 <body>
+
+		<div id="ml-menu">
+	        <div class="icon_mobile_close_menu"></div>		
+			<div class="menu__wrap">
+             <a class="logo" title="" href="home.html"><img alt="" src="content/images/icons_2016/header_logo_kuyam.png" /></a>
+				<ul class="menu__level1 hidden">
+					<li class="menu__item"><a href="#">Lifestyle blog</a></li>
+					<li class="menu__item"><a href="#">How it works</a></li>
+					<li class="menu__item blue-item"><a href="#">Login</a></li>
+					<li class="menu__item blue-item"><a href="#">Signup</a></li>
+				</ul>
+					
+                <ul class="menu__level2">
+					<li class="menu__item username-item"><a href="#">Hi <span>Vubin</span></a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_dashboard btn_menu_dashboard">Company dashboard</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_search">Search</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_favourites">Favourites</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_receipt">Receipt history</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_appointments">Appointments</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_gift btn_sub_item">Gift cards</a>
+					
+						<ul class="dropmenu-item-content">
+							<li class="menu__item"><a href="#">Buy gift card</a></li>
+							<li class="menu__item"><a href="#">Balance</a></li>
+						</ul>
+					
+					</li>
+					<li class="menu__item"><a href="#">Lifestyle blog</a></li>
+					<li class="menu__item"><a href="#">How it works</a></li>
+                    <li class="menu__item "><a href="#">Settings</a></li>
+                    <li class="menu__item "><a href="#" class="have-icon icon_mobile_add">Add a company</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+				</ul>
+				
+				
+				<!-- Submenu 1 -->
+				<ul class="menu__level3">
+					<li class="menu__item back-item"><a href="#" class="have-icon icon_mobile_back btn_menu_back" >Back</a>
+					<li class="menu__item"><a href="#"  class="have-icon icon_mobile_manage btn_sub_item">Manage</a>
+						
+						<ul class="dropmenu-item-content">
+							<li class="menu__item"><a href="#">Staff</a></li>
+							<li class="menu__item"><a href="#">Services</a></li>
+							<li class="menu__item"><a href="#">Classes</a></li>
+							<li class="menu__item"><a href="#">Packages</a></li>
+							<li class="menu__item"><a href="#">Clients</a></li>
+							<li class="menu__item"><a href="#">Invoices</a></li>
+							<li class="menu__item"><a href="#">Promo codes</a></li>
+						</ul>
+					
+					</li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_company  btn_sub_item">Company</a>
+					
+						<ul class="dropmenu-item-content">
+							<li class="menu__item"><a href="#">Profile</a></li>
+							<li class="menu__item"><a href="#">Image gallery</a></li>
+							<li class="menu__item"><a href="#">Payments &amp; booking</a></li>
+							<li class="menu__item"><a href="#">Notifications</a></li>
+							<li class="menu__item"><a href="#">Settings</a></li>							
+						</ul>
+						
+					</li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_calendar">Calendar</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+				</ul>
+				 
+               
+                    
+			</div>
+             <div class="bg-fading"></div>
+		</div>
+
+
 	<div id="detech-devices">
 		<!-- InstanceBeginEditable name="page" -->
     <!-- InstanceEndEditable -->
@@ -63,7 +137,7 @@
                 <!-- /.navbar-header -->
                 
                 <!-- .search-form -->
-                <div class="search-form on-desktop hidden-xs">
+                <div class="search-form ">
                    
                     <fieldset> 
                         <span class="icon-list"></span>
@@ -76,8 +150,8 @@
                 <div class="clear on-desktop"></div>
                 
                 <!-- .navbar-collapse --> 
-                <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right navMenu">                     
+                <div class="collapse navbar-collapse menuList " id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right navMenu ">                     
   
                         <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">Lifestyle blog<span class="on-device"></span></a></li>
                         <li class=""><a href="https://kuyamstagingvns.apphb.com/home/howitworks_user" title="how it works">How it works<span class="on-device"></span></a></li>  
@@ -134,7 +208,8 @@
                                 <a href="#" title="Gift cards" ><span class="header_icon_gift_cards"></span>Gift cards</a>
                             </dt>
                             <dt class="on-desktop hidden-xs text-right">                            
-                                <a href="#" title="Company dashboard" ><span class="header_icon_company_dashboard"></span>Company dashboard</a>
+                                <a href="#" title="Company dashboard" class="hidden"><span class="header_icon_company_dashboard"></span>Company dashboard</a>
+                                <a href="#" title="Company dashboard" class="green-new-company"><span class="header_icon_new_company"></span>+ Add my company</a>
                             </dt>
                         </dl>
                     </div>
@@ -1011,11 +1086,9 @@
                 <div class="row">
                     <div class="col-xs-12 "> 
                         <header class="section-header clearfix">
-                            <a class="logo" title="" href="#">
-                                <img alt="" src="content/images/icons_2016/footer_logo_kuyam.png" />
-                            </a>
                             
-                             <ul class="menu-footer">
+                            
+                             <ul class="menu-footer hidden">
                              	<li><a href="" title="">Favorites</a></li>
                                 <li><a href="" title="">Lifestyle blog</a></li>
                                 <li><a href="" title="">Company dashboard</a></li>
@@ -1028,12 +1101,14 @@
                        
                         <div class="site-address">
                             <ul>
+	                            <li><a class="logo" title="" href="#">
+                                <img alt="" src="content/images/icons_2016/footer_logo_kuyam.png" />
+                            	</a></li>
                             	<li class="contact-text">We love hearing your questions and feedback.<br/>Send us an email or give us a call!</li>
                                 <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
                                 <li class="icon-phone">(310) 461-15151</li>
                                 <li class="icon-email"><a title="info@kuyam.com" href="mailto:info@kuyam.com">info@kuyam.com</a></li>
-                                <li class="terms on-device"><a title="terms of user" href="terms.html">terms of user</a> and <a title="privacy" href="terms.html#device-terms-tabs-2">privacy</a></li>	
-                                <li class="terms on-desktop visible-xs"><a title="terms of use" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a title="privacy" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a></li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -1046,10 +1121,10 @@
         <footer class="site-footer">  
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-8">  	
+                    <div class="col-xs-8">  	
                         <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
                     </div>
-                    <div class="on-desktop hidden-xs col-md-4">
+                    <div class="col-xs-4">
                         <ul class="link-socials clearfix">
                         
                         	<li><a target="_blank" href="#" title="Comment"><span class="footer_icon_comment off "></span></a></li>
@@ -1057,8 +1132,7 @@
                             <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="" src="content/images/icons_2016/footer_icon_facebook.png" /></a></li>
                             <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="" src="content/images/icons_2016/footer_icon_twitter.png" /></a></li>
                             
-                            <li><a target="_blank" href="#" title="Terms of use and privacy"><p>Terms of use and privacy</p></a></li>
-                          
+                            <li class="hidden-xs"><a target="_blank" href="#" title="Terms of use and privacy"><p>Terms of use and privacy</p></a></li>
                           
                             
                         </ul>
@@ -1078,24 +1152,24 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"></button>
-        			<h3 class="modal-title">welcome back!</h3>
+        			<h3 class="modal-title">Welcome back!</h3>
       			</div>
                 <div class="modal-body">
-                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">login with facebook</a>
+                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook"><span class="facebook_icon_login">Login with facebook</span></a>
                 	<div class="form-or">                    	
-                    	<hr />  
+                    	
                         <span>or</span>                      
                     </div>
                 	<fieldset>
-                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
-                        <div class="text-right link-form"><a class="link-forgot" title="forgot password?" href="javascript:void(0);" data-toggle="modal" data-target="#modal-forgot">forgot password?</a></div>
-                    	<button type="button" class="btn-green btn-form btn-login">login</button>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="Email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="Password" />
+                       
+                    	<button type="button" class="btn-green btn-form btn-login">Login</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                	<hr />
-                    <div class="text-right link-form">don't have an account? <a class="link-create" title="create account now" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                	
+                    <div class="text-center link-form "><a class="link-create" title="create account now" data-target="#modal-forgot" data-toggle="modal" href="javascript:void(0);">I forgot my password</a> <span class="vertical-line"></span> I don't have an account, <a class="link-create" title="create account now" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create one</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -1108,27 +1182,28 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"></button>
-        			<h3 class="modal-title">join kuyam free!</h3>
-                    <h4>book appointments at home or<br /> on the go!</h4>
+        			<h3 class="modal-title join-title">Join Kuyam free!</h3>
+                    <h4>book appointments at home or on the go!</h4>
       			</div>
                 <div class="modal-body">
-                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook">sign up with Ffacebook</a>
+                	<a title="" data-target="#modal-facebook" data-toggle="modal" href="javascript:void(0);" class="btn-blue btn-facebook"><span class="facebook_icon_login">Sign up with Facebook</span></a>
                 	<div class="form-or">                    	
-                    	<hr />  
+                    	
                         <span>or</span>                      
                     </div>
                 	<fieldset>
-                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
-                        <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="terms of use" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a class="link-term" title="privacy" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a></div>
-                    	<button type="button" class="btn-green btn-form btn-sign-up">sign up</button>
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="First name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="Last name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="Email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="Password" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="Repeat password" />
+                       
+                    	<button type="button" class="btn-green btn-form btn-sign-up">Sign up</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                	<hr />
-                    <div class="text-right link-form">already have an account? <a class="link-login" title="login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
+                	<div class="text-center link-form">I'm agree with <a class="link-login" title="login" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms &amp; privacy policy</a></div>
+                    <div class="text-center link-form">I already have an account, <a class="link-login" title="login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -1141,18 +1216,18 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"></button>
-        			<h3 class="modal-title">forgot password?</h3>
-                    <h4>enter your email to reset <br /> password</h4>
+        			<h3 class="modal-title">Forgot password?</h3>
+                    <h4>Enter your email to reset password</h4>
       			</div>
                 <div class="modal-body">                	
                 	<fieldset>                    	
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="Email" />
                     	<button type="button" class="btn-green btn-form btn-continue" data-target="#modal-confirm" data-toggle="modal">continue</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                	<hr />
-                    <div class="text-right link-form">don't have an account? <a class="link-create" title="create account now" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create account now</a></div>
+                	
+                    <div class="text-center link-form">I don't have an account, <a class="link-create" title="create account now" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">create one</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -1165,12 +1240,12 @@
     		<div class="modal-content">
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"></button>
-        			<h3 class="modal-title">check your mail</h3>
-                    <h4>we send you an email for you to reset your password. follow the link included in the email.</h4>
+        			<h3 class="modal-title">Check your mail</h3>
+                    <h4>We send you an email for you to reset your password. follow the link included in the email.</h4>
       			</div>
                 <div class="modal-footer">
-                	<hr />
-                    <div class="text-right link-form"><a class="link-login" title="back to login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">back to login</a></div>
+                	
+                    <div class="text-right link-form"><a class="link-login" title="back to login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">Back to login</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -1184,20 +1259,21 @@
       			<div class="modal-header">
         			<button type="button" class="close" data-dismiss="modal"></button>
         			<h3 class="modal-title">Facebook sign up</h3>
-                    <h4>please double check the info<br /> provided to us by Facebook is<br /> accurate</h4>
+                    <h4>Please double check the info provided to us by Facebook is accurate</h4>
       			</div>
                 <div class="modal-body">                	
                 	<fieldset>
-                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
-                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+                    	<input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="First name" />
+                        <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="Last name" />
                         <input class="form-control form-read-only" type="text" value="thaotran@vinasource.com" readonly="readonly" />
-                        <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="terms of use" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a class="link-term" title="privacy" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a></div>
-                    	<button type="button" class="btn-green btn-form btn-sign-up">create account!</button>
+                      
+                    	<button type="button" class="btn-green btn-form btn-sign-up">Create account!</button>
                     </fieldset>                    
                 </div>
                 <div class="modal-footer">
-                	<hr />
-                    <div class="text-right link-form">already have an account? <a class="link-login" title="login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
+                                           	
+                   <div class="text-center link-form">I'm agree with <a class="link-login" title="login" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms &amp; privacy policy</a></div>
+                    <div class="text-center link-form">I already have an account, <a class="link-login" title="login" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a></div>
                  </div>
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
@@ -1217,9 +1293,9 @@
 					</script>
         			<div id="terms-tabs">
                         <ul>
-                            <li><a title="" href="#terms-tabs-1">term of use <span></span></a></li>
-                            <li><a title="" href="#terms-tabs-2">privacy policy <span></span></a></li>
-                            <li><a title="" href="#terms-tabs-3">services listings <span></span></a></li>
+                            <li><a title="" href="#terms-tabs-1"><span class="header_icon_terms"></span>Term of use</a></li>
+                            <li><a title="" href="#terms-tabs-2"><span class="header_icon_privacy"></span>Privacy policy</a></li>
+                            <li><a title="" href="#terms-tabs-3"><span class="header_icon_services"></span>Services listings</a></li>
                         </ul>
                         <div id="terms-tabs-1">
                         	<div class="scroll-bar">
@@ -2041,7 +2117,7 @@
                         </div>
                     </div>
       			</div> 
-                <div class="modal-footer">
+                <div class="modal-footer hidden">
                     <div class="text-right link-form"><a class="link-login" title="" data-target="#modal-login" data-toggle="modal" href="javascript:void(0);">login</a> <a class="link-create" title="" data-target="#modal-sign-up" data-toggle="modal" href="javascript:void(0);">sign up</a></div>
                  </div>               
     		</div><!-- /.modal-content -->
