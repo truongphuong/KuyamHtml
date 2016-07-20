@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.timepicker-from').datetimepicker({
+    /*$('.timepicker-from').datetimepicker({
         inline: true,
         sideBySide: true,
         format: 'LT'
@@ -9,7 +9,9 @@ $(document).ready(function () {
         inline: true,
         sideBySide: true,
         format: 'LT'
-    });
+    });*/
+
+    existSelect('form-select-time');
 
     $('.working-section .cb-mark').each(function () {
         var isChecked = $(this).is(':checked');
