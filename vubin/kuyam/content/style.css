@@ -8964,6 +8964,14 @@ td ul {
 }
 
 
+	.hidden-mobile{
+		display: inline-block !important;
+	}
+	
+	.visible-mobile{
+		display: none !important;
+	}
+
 /* media queries */
 
 @media (min-width: 768px) {
@@ -8976,6 +8984,36 @@ td ul {
 }
 
 @media (max-width: 767px) {
+	
+	.full-select-on-mobile .book-me-session-select{
+		border: 1px solid #aaaaaa;
+		width: 100%;
+		padding: 10px;
+		margin: 20px 0;
+		position: relative;
+		top: 0px;
+    	right: 0px;
+	}
+	
+	.full-select-on-mobile .icon-mobile-dropdown {
+		background: url(images/icons_2016/icon_mobile_dropdown.jpg) no-repeat;
+		width: 20px;
+		height: 30px;
+		position: absolute;
+		top: 43px;
+		right: 8px;
+		pointer-events: none;
+		z-index: 1;
+	}
+	
+	.hidden-mobile{
+		display: none !important;
+	}
+	
+	.visible-mobile{
+		display: inline-block !important;
+	}
+	
 	.menuList {
 		display: none !important;
 	}
@@ -9377,7 +9415,7 @@ td ul {
 }
 
 @media (max-width: 767px) {
-
+	
 	#ml-menu .show-bg-fading{
 		background-color:rgba(0, 0, 0, 0.8);
 		position: fixed;
