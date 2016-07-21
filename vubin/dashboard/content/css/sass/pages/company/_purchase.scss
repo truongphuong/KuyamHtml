@@ -1,0 +1,130 @@
+.company-purchase form{
+    padding:4px 0;
+}
+.company-purchase form p{
+    font-size: $s17;
+    color: #9b9b9b;
+}
+.company-purchase .photo-section{
+    width: 636px;
+    padding-top: 25px;
+}
+.company-purchase .photo-section .legend{
+    display: inline-block;
+    margin-bottom: 12px;
+}
+.company-purchase .photo-section .controls{
+    float: right;
+    font-size: $s15;
+}
+.company-purchase .photo-section .controls a{
+    color: $positive;
+    text-decoration: none;
+}
+.company-purchase .photo-section .controls span{
+    padding: 0 10px;
+}
+.company-purchase .photo-list{
+    clear: both;
+}
+.company-purchase .photo-list ul{
+    margin:0 -5px;
+    padding:0;
+    list-style: none;
+}
+.company-purchase .photo-list li{
+    float:left;
+    width: 20%;
+    height: 118px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.company-purchase .photo-list li .photo{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: center center no-repeat;
+    background-size: cover;
+    position:relative;
+}
+.company-purchase .photo-list li .border{
+    display: none;
+    border: 2px solid $positive;
+    position: relative;
+    height: 100%;
+}
+.company-purchase .photo-list li .caption{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+}
+.company-purchase .photo-list li .caption .icon-added{
+    width: 12px;
+    height: 9px;
+    background-image:url(../images/dashboard/manage/icon-added.png);
+    background-size: 12px auto;
+    margin-right: 5px;
+    display: none;
+}
+.company-purchase .photo-list li .caption .text{
+    color: $white;
+    line-height: 26px;
+    font-size: $p;
+    padding: 0 17px;
+}
+.company-purchase .photo-list .control{
+    text-align:center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
+    display: none;
+}
+.company-purchase .photo-list .control .table-css{
+    width: 100%;
+    height: 100%;
+}
+.company-purchase .photo-list .control .td{
+    vertical-align: middle;
+}
+.company-purchase .photo-list .control a{
+    font-size: $s13;
+    color: $white;
+    text-decoration: none;
+    line-height: 26px;
+    display:block;
+}
+.company-purchase .photo-list .control div a:hover{
+    font-weight: 700;
+}
+.company-purchase .photo-list .control a.set-default{
+}
+.company-purchase .photo-list .control a.set-hide{
+}
+.company-purchase .photo-list .control a.set-delete{
+    color: #ff4f4e;
+}
+.company-purchase .photo-list li:hover .control{
+    display: block;
+}
+.company-purchase .photo-list li.added .border{
+    display:block;
+}
+
+@media (max-width: 1023px){
+    .company-purchase .photo-section{
+        width: auto;
+    }
+}
+
+@media (min-device-width: 320px){
+    .company-purchase .photo-list li:active .controls,
+    .company-purchase .photo-list li:focus .controls{
+        display: block;
+    }
+}
