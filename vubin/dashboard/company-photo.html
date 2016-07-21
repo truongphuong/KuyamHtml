@@ -87,14 +87,14 @@
                     <ul class="nav navbar-nav">
                         <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li>
                         <li id="navManage"><a href="manage-staff.html"><span>Manage</span></a></li>
-                        <li id="navCompany"><a href="company-profile.html"><span>Company</span></a></li>
+                        <li id="navCompany"><a href="company-info.html"><span>Company</span></a></li>
                         <li id="navSettingsMobile" class="visible-xs"><a title="" href="settings.html"><span>Account settings</span></a></li>
                         <li class="visible-xs"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs user-info">
                         <li id="navSettings">
                             <span class="hi">Hi <strong>Kourosh Vubin</strong></span>
-                            <span class="controls"><a title="" href="settings.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
+                            <span class="controls"><a title="" href="home.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
                         </li>
                     </ul>
               	</nav>
@@ -105,19 +105,19 @@
 			<div class="kuyam-page company-page company-photo">
 				<div class="kuyam-sidebar">
 					<ul>
-						<li class="dropdown">
-                            <a title="" href="company-profile.html" id="companyProfile" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
-                            <ul class="dropdown-menu" aria-labelledby="companyProfile">
-                                <li class="active"><a title="" href=""><span class="text">Basic info</span></a></li>
-                                <li><a title="" href=""><span class="text">Profile photos</span></a></li>
-                                <li><a title="" href=""><span class="text">Working hours</span></a></li>
+						<li class="dropdown open">
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a title="" href="company-info.html"><span class="text">Basic info</span></a></li>
+                                <li class="active"><a title="" href="company-photo.html"><span class="text">Profile photos</span></a></li>
+                                <li><a title="" href="company-working.html"><span class="text">Working hours</span></a></li>
                             </ul>
                         </li>
-                        <li class="dropdown active">
-                            <a title="" href="company-image-gallery.html" id="companyGallery" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
-                             <ul class="dropdown-menu" aria-labelledby="companyGallery">
-                                <li><a title="" href=""><span class="text">My images</span></a></li>
-                                <li><a title="" href=""><span class="text">Purchase photos</span></a></li>
+                        <li class="dropdown">
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a title="" href="company-gallery.html"><span class="text">My images</span></a></li>
+                                <li><a title="" href="company-purchasse.html"><span class="text">Purchase photos</span></a></li>
                             </ul>
                         </li>
                         <li><a title="" href="company-payments.html"><span class="icon icon-payment"></span><span class="text">Payments &amp; booking</span></a></li>
@@ -127,62 +127,66 @@
 					</ul>
 				</div>
 				<div class="kuyam-content">
-                    <form>
-                        <div class="legend visible-1023">Profile pic and main banner</div>
-                        <div class="row">
-                            <div class="col-xs-12 col-lg-4">
-                                <section class="boarding-avatar">
-                                    <h2>Compnay logo</h2>
-                                    <div class="avatar">
-                                        <div class="frame has-image" style="background-image: url(content/photos/photo1.jpg);">
-                                        <!--<div class="frame">-->
-                                            <input type="file" id="filePhoto" class="hide" />
-                                            <div class="default upload-photo"></div>
-                                            <div class="caption">
-                                                <ul>
-                                                    <li><a class="link link-change upload-photo" title="" href="">Change image</a></li>
-                                                    <li><a class="link link-remove" title="" href="">Remove image</a></li>
-                                                </ul>
+                    <div class="kuyam-form">
+                        <form>
+                            <section class="mobile-section">
+                                <div class="legend visible-1023">Profile pic and main banner</div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-4">
+                                        <section class="boarding-avatar">
+                                            <h2>Compnay logo</h2>
+                                            <div class="avatar">
+                                                <div class="frame has-image" style="background-image: url(content/photos/photo1.jpg);">
+                                                <!--<div class="frame">-->
+                                                    <input type="file" id="filePhoto" class="hide" />
+                                                    <div class="default upload-photo"></div>
+                                                    <div class="caption">
+                                                        <ul>
+                                                            <li><a class="link link-change upload-photo" title="" href="">Change image</a></li>
+                                                            <li><a class="link link-remove" title="" href="">Remove image</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="edit"><a title="" href=""><span class="icon icon-edit"></span></a></div>
+                                                </div>
                                             </div>
-                                            <div class="edit"><a title="" href=""><span class="icon icon-edit"></span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="croppie-section invisible">
-                                        <div id="croppiePhoto"></div>
-                                        <footer>
-                                            <a class="link link-cancel" title="" href="">Cancel</a>
-                                            <a class="link link-drop" title="" href="">Crop</a>
-                                        </footer>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="col-xs-12 col-lg-6">
-                                <section class="boarding-banner">
-                                    <h2>Company main banner</h2>
-                                    <div class="banner">
-                                        <div class="frame has-image" style="background-image: url(content/photos/photo1.jpg);">
-                                            <div class="default"></div>
-                                            <div class="caption">
-                                                <ul>
-                                                    <li><a class="link link-change" title="" href="">Change image</a></li>
-                                                    <li><a class="link link-remove" title="" href="">Remove image</a></li>
-                                                </ul>
+                                            <div class="croppie-section invisible">
+                                                <div id="croppiePhoto"></div>
+                                                <footer>
+                                                    <a class="link link-cancel" title="" href="">Cancel</a>
+                                                    <a class="link link-drop" title="" href="">Crop</a>
+                                                </footer>
                                             </div>
-                                        </div>
+                                        </section>
                                     </div>
-                                </section>
-                            </div>
-                        </div>
-                        <footer>
-                            <div class="row">
-                                <div class="col-xs-6 visible-1023">
-                                    <input type="button" value="Cancel" class="btn btn-form btn-neutral" />
+                                    <div class="col-xs-12 col-lg-6">
+                                        <section class="boarding-banner">
+                                            <h2>Company main banner</h2>
+                                            <div class="banner">
+                                                <div class="frame has-image" style="background-image: url(content/photos/photo1.jpg);">
+                                                    <div class="default"></div>
+                                                    <div class="caption">
+                                                        <ul>
+                                                            <li><a class="link link-change" title="" href="">Change image</a></li>
+                                                            <li><a class="link link-remove" title="" href="">Remove image</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
                                 </div>
-                                <div class="col-xs-6 col-lg-4">
-                                    <button type="button" class="btn btn-form btn-agree">Save <span class="hidden-1023">changes</span></button>
-                                </div>
-                        </footer>
-                    </form>
+                            </section>
+                            <footer>
+                                <div class="row">
+                                    <div class="col-xs-6 visible-1023">
+                                        <input type="button" value="Cancel" class="btn btn-form btn-neutral" />
+                                    </div>
+                                    <div class="col-xs-6 col-lg-4">
+                                        <button type="button" class="btn btn-form btn-agree">Save <span class="hidden-1023">changes</span></button>
+                                    </div>
+                            </footer>
+                        </form>
+                    </div>
 				</div>
 			</div>
 			<!-- InstanceEndEditable -->

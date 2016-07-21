@@ -1,19 +1,6 @@
 $(document).ready(function () {
-    $('.timepicker-from').datetimepicker({
-        inline: true,
-        sideBySide: true,
-        format: 'LT'
-    });
 
-    $('.timepicker-to').datetimepicker({
-        inline: true,
-        sideBySide: true,
-        format: 'LT'
-    });
-
-    if ($('#divState').length !== 0) {
-        iscrollSelect('divState', 'iscrollState');
-    }
+    existSelect('form-select-time');
 
     $('.working-section .cb-mark').each(function () {
         var isChecked = $(this).is(':checked');
@@ -31,5 +18,4 @@ $(document).ready(function () {
         }
     });
 
-    //iscrollSelectK('#selectSearchTags', '#iscrollSearchTags');
 });

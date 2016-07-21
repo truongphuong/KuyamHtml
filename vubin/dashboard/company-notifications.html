@@ -87,14 +87,14 @@
                     <ul class="nav navbar-nav">
                         <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li>
                         <li id="navManage"><a href="manage-staff.html"><span>Manage</span></a></li>
-                        <li id="navCompany"><a href="company-profile.html"><span>Company</span></a></li>
+                        <li id="navCompany"><a href="company-info.html"><span>Company</span></a></li>
                         <li id="navSettingsMobile" class="visible-xs"><a title="" href="settings.html"><span>Account settings</span></a></li>
                         <li class="visible-xs"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs user-info">
                         <li id="navSettings">
                             <span class="hi">Hi <strong>Kourosh Vubin</strong></span>
-                            <span class="controls"><a title="" href="settings.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
+                            <span class="controls"><a title="" href="home.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
                         </li>
                     </ul>
               	</nav>
@@ -106,18 +106,18 @@
 				<div class="kuyam-sidebar">
 					<ul>
 						<li class="dropdown">
-                            <a title="" href="company-profile.html" id="companyProfile" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
-                            <ul class="dropdown-menu" aria-labelledby="companyProfile">
-                                <li class="active"><a title="" href=""><span class="text">Basic info</span></a></li>
-                                <li><a title="" href=""><span class="text">Profile photos</span></a></li>
-                                <li><a title="" href=""><span class="text">Working hours</span></a></li>
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a title="" href="company-info.html"><span class="text">Basic info</span></a></li>
+                                <li><a title="" href="company-photo.html"><span class="text">Profile photos</span></a></li>
+                                <li><a title="" href="company-working.html"><span class="text">Working hours</span></a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a title="" href="company-image-gallery.html" id="companyGallery" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
-                             <ul class="dropdown-menu" aria-labelledby="companyGallery">
-                                <li><a title="" href=""><span class="text">My images</span></a></li>
-                                <li><a title="" href=""><span class="text">Purchase photos</span></a></li>
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a title="" href="company-gallery.html"><span class="text">My images</span></a></li>
+                                <li><a title="" href="company-purchasse.html"><span class="text">Purchase photos</span></a></li>
                             </ul>
                         </li>
                         <li><a title="" href="company-payments.html"><span class="icon icon-payment"></span><span class="text">Payments &amp; booking</span></a></li>
@@ -127,32 +127,36 @@
 					</ul>
 				</div>
 				<div class="kuyam-content">
-					<form>
-                        <div class="legend">How should kuyam contact you?</div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-6">
-                                <span class="cb-custom">
-                                    <input class="cb-mark" type="checkbox" id="cbContact2" name="cbContact" />
-                                    <label class="cb-label" for="cbContact2">SMS</label>
-                                </span>
-                                <input type="text" class="form-control" id="txtSMS" placeholder="Mobile phone number" />
-                            </div>
-							<div class="col-xs-12 col-sm-6">
-                                <span class="cb-custom">
-                                    <input class="cb-mark" type="checkbox" id="cbContact1" name="cbContact" />
-                                    <label class="cb-label" for="cbContact1">Email</label>
-                                </span>
-                                <input type="text" class="form-control" id="txtEmail" placeholder="Enter a email address" />
-                            </div>
-						</div>
-						<footer>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <input type="button" value="save changes" class="btn btn-form btn-agree" />
+                    <div class="kuyam-form">
+					    <form>
+                            <section class="mobile-section">
+                                <div class="legend">How should kuyam contact you?</div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <span class="cb-custom">
+                                            <input class="cb-mark" type="checkbox" id="cbContact2" name="cbContact" />
+                                            <label class="cb-label" for="cbContact2">SMS</label>
+                                        </span>
+                                        <input type="text" class="form-control" id="txtSMS" placeholder="Mobile phone number" />
+                                    </div>
+        							<div class="col-xs-12 col-sm-6">
+                                        <span class="cb-custom">
+                                            <input class="cb-mark" type="checkbox" id="cbContact1" name="cbContact" />
+                                            <label class="cb-label" for="cbContact1">Email</label>
+                                        </span>
+                                        <input type="text" class="form-control" id="txtEmail" placeholder="Enter a email address" />
+                                    </div>
+        						</div>
+                            </section>
+    						<footer>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <input type="button" value="save changes" class="btn btn-form btn-agree" />
+                                    </div>
                                 </div>
-                            </div>
-						</footer>
-					</form>
+    						</footer>
+					    </form>
+                    </div>
 				</div>
             </div>
         <!-- InstanceEndEditable -->
