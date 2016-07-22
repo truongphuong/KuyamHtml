@@ -12,11 +12,6 @@
 	position: relative;
 }
 
-.modal-open{
-	position: fixed;
-	width: 100%;
-}
-
 /* .btn */
 .modal-boarding .btn-form,
 .modal-boarding .btn-form:focus {
@@ -309,10 +304,10 @@
 
 .modal-boarding .bootstrap-select .dropdown-menu.inner {
     max-height: 175px !important;
-	-webkit-overflow-scrolling: touch;
 }
 
 .on-nicescroll .modal-boarding .bootstrap-select .dropdown-menu.inner {
+    min-height: inherit !important;
 	overflow-y: hidden !important;
 	max-height: 100% !important;
 }
@@ -748,6 +743,7 @@
 }
 .modal-boarding-time .modal-footer{
 	padding: 7px 30px 32px 32px;
+    margin: 0;
 }
 .modal-boarding-time .modal-footer .btn{
 	width: 223px;
@@ -949,6 +945,11 @@
 /* Begin .modal-boarding-complete */
 
 @media (max-width: 767px){
+    .boarding-open .wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 	.modal-intro{
 		height: 46px;
 		padding-top: 12px;
@@ -960,6 +961,7 @@
 	.modal-boarding{
 		padding:0 !important;
 		color: #303030;
+	    position: relative;
 	}
 	.modal-boarding .hidden-xs{
 		display: none !important;
@@ -1225,7 +1227,8 @@
 		position: absolute;
 		top: 50%;
 		margin-top: -72px;
-		width: 100%;
+	    left: 0;
+	    right: 0;
 	}
 	.modal-boarding-complete .modal-body img{
 		width: 65px;
