@@ -429,7 +429,7 @@ function iscrollSelectK(sectionID, scrollName) {
 }
 
 function mobileSection(){
-    if($('.mobile-section').length){
+    if($('.mobile-section').length === 0){
         return;
     }
     var siteHeader = $('.kuyam-header').innerHeight();
