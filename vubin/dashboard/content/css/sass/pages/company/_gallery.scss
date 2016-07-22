@@ -1,445 +1,187 @@
-.company-image-gallery {
-    font-size: 16px;
+.company-gallery .kuyam-form{
+    padding:4px 0;
 }
-
-.company-image-gallery .form-label {
-    font-size: $s18;
+.company-gallery .kuyam-form p{
+    font-size: $s17;
+    color: #9b9b9b;
 }
-
-.company-image-gallery .cb-label {
-    font-size: $s14 !important;
-    letter-spacing:-.7px;
-    padding-left:27px;
+.company-gallery .photo-section{
+    width: 636px;
+    padding-top: 25px;
 }
-
-.company-image-gallery .photo-box {
-    background-color: #fafafa;
-    padding: 0px;
-    width: 17%;
-    float: left;
-    margin: 10px 20px 20px 10px;
+.company-gallery .photo-section .form-label{
+    margin-bottom: 12px;
+    color: $positive;
+    font-size: $h4;
+    font-weight: 400;
 }
-
-.company-image-gallery .photo-box img{
+.company-gallery .photo-section .controls{
+    float: right;
+    font-size: $s15;
+}
+.company-gallery .photo-section .controls a{
+    color: $positive;
+    text-decoration: none;
+}
+.company-gallery .photo-section .controls span{
+    padding: 0 10px;
+}
+.company-gallery .photo-list{
+    clear: both;
+}
+.company-gallery .photo-list ul{
+    margin:0 -5px;
+    padding:0;
+    list-style: none;
+}
+.company-gallery .photo-list li{
+    float:left;
+    width: 20%;
+    height: 118px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.company-gallery .photo-list li .photo{
+    display: block;
+    position: relative;
     width: 100%;
-}
-
-.company-image-gallery .photo-frame {
-    height: 128px;
+    height: 100%;
     background: center center no-repeat;
     background-size: cover;
+    position:relative;
 }
-
-
-.company-image-gallery .lSSlide .photo-frame {
-    height: 210px;
-    background-size: contain;
-}
-.company-image-gallery .photo-box .progress-section {
+.company-gallery .photo-list li .border{
+    display: none;
+    border: 2px solid $positive;
     position: relative;
+    height: 100%;
 }
-.company-image-gallery .photo-box .progress {
+.company-gallery .photo-list li .caption{
+    width: 100%;
     position: absolute;
-    top: -20px;
-    left: 0;
-    right: 0;
-    opacity: .8;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
 }
-.company-image-gallery .photo-box .progress-bar {
-    background-color: #95be31;
+.company-gallery .photo-list li .caption .icon-added{
+    width: 12px;
+    height: 9px;
+    background-image:url(../images/dashboard/manage/icon-added.png);
+    background-size: 12px auto;
+    margin-right: 5px;
 }
-
-.company-image-gallery .photo-box .btn-add-cart {
-    display: block;
+.company-gallery .photo-list li .caption .text{
+    color: $white;
+    line-height: 26px;
+    font-size: $p;
+    padding: 0 17px;
+}
+.company-gallery .photo-list .control{
+    text-align:center;
+    position: absolute;
     width: 100%;
-    color: $white;
-    background-color: #b4b4b4;
-    line-height: 30px;
-    font-size: $h6;
-}
-
-.company-image-gallery .photo-box a {
-    font-size: $s13 !important;
-    color: $base;
-    text-decoration: underline;
-    margin: 0 auto;
-    text-align: center;
-    width: auto;
-    display: block;
-}
-
-.company-image-gallery .btn-upload-image {
-    background-color: #fafafa;
-    text-decoration: none;
-    color: $base;
-    background-image: url(../images/icon_upload_gray.png);
-    background-size: 48px auto;
-    min-height: 235px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center 60px;
-    text-align: center;
-    padding-top: 120px;
-    font-family: $primary;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.company-image-gallery div[class*="col-"], .company-image-gallery form div[class*="col-"] {
-    padding: 0 !important;
-}
-
-.company-image-gallery .photo-box .check-group {
-    padding: 10px 5px;
-}
-
-.company-image-gallery .photo-box label {
-    font-size: $h6;
-}
-
-.purchase-stock-photos-section {
-    margin: 50px 0;
-}
-
-.purchase-stock-photos-section .show-result {
-    margin-bottom: 10px !important;
-}
-
-.purchase-stock-photos-section .btn-add-cart {
-    background-color: #b4b4b4;
-    color: $white;
-    line-height: 30px;
-    margin-top: 15px;
-    padding: 0 30px;
-    font-size: $s15;
-}
-
-.purchase-stock-photos-section .btn-confirm-purchase {
-    background-color: $base;
-    color: $white;
-    line-height: 30px;
-    margin-top: 15px;
-    padding: 0 30px;
-    font-size: $s15;
-}
-
-.purchase-stock-photos-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0px;
-    font-size: $s14;
-}
-
-.purchase-stock-photos-section .your-cart {
-    background-color: #fafafa;
-    padding: 15px;
-    display: inline-block;
-    width: 100%;
-}
-
-.purchase-stock-photos-section .list-photo-thumbnails li {
-    float: left;
-    text-align: center;
-    margin-right: 10px;
-    width: 85px;
-}
-
-.purchase-stock-photos-section .list-photo-thumbnails img {
-    max-height: 59px;
-}
-
-.purchase-stock-photos-section .list-photo-thumbnails .active img {
-    border: 3px solid $base;
-}
-
-.purchase-stock-photos-section .photo-detail {
-    margin-left: 15px;
-}
-
-    .purchase-stock-photos-section .photo-detail label {
-        font-size: $h6;
-    }
-
-.purchase-stock-photos-section .photo-sceenshot {
-    margin-bottom: 25px !important;
-    width: 255px;
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-    .company-image-gallery .photo-box {
-        width: 20%;
-    }
-}
-@media (max-width: 1023px) {
-    .company-image-gallery .photo-box {
-        width: 28%;
-    }
-}
-
-
-.list-photo-thumbnails {
-    max-width: 580px !important;
-    overflow: hidden;
-    height: auto;
-    position: relative;
-}
-
-    .list-photo-thumbnails .lSGallery img {
-        height: 60px !important;
-        width: 88px !important;
-        max-height: 60px;
-    }
-
-
-#lightSlider {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
     display: none;
 }
-
-    #lightSlider li {
-        text-align: left;
-        height: 220px;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    #lightSlider img {
-        max-height: 210px;
-        width: auto;
-    }
-
-    #lightSlider .active img {
-        border: none;
-    }
-/* list-photo-thumbnails-cart */
-
-.list-photo-thumbnails-cart {
-    float: none;
+.company-gallery .photo-list .control .table-css{
     width: 100%;
-    max-width: 100% !important;
+    height: 100%;
+}
+.company-gallery .photo-list .control .td{
+    vertical-align: middle;
+}
+.company-gallery .photo-list .control a{
+    font-size: $s13;
+    color: $white;
+    text-decoration: none;
+    line-height: 26px;
+    display:block;
+}
+.company-gallery .photo-list .control div a:hover{
+    font-weight: 700;
+}
+.company-gallery .photo-list .control a.set-default{
+}
+.company-gallery .photo-list .control a.set-hide{
+}
+.company-gallery .photo-list .control a.set-delete{
+    color: #ff4f4e;
+}
+.company-gallery .photo-list li:hover .control{
+    display: block;
+}
+.company-gallery .photo-list li.added .border{
+    display:block;
+}
+.company-gallery .kuyam-form footer{
+    text-align: left;
+    padding-bottom: 0;
+}
+.company-gallery .kuyam-form footer ul{
+    margin:0 -15px;
+    padding:0;
+    list-style: none;
+    border-top: 3px solid #f5f5f5;
+    border-bottom: 3px solid #f5f5f5;
+}
+.company-gallery .kuyam-form footer ul li:first-child{
+    border-bottom: 1px solid #f5f5f5;
+}
+.company-gallery .kuyam-form footer ul li .icon{
+    width: 16px;
+    height: 13px;
+    margin-right: 10px;
+}
+.company-gallery .kuyam-form footer ul li a{
+    line-height: 48px;
+    color: $base;
+    display: block;
+    text-decoration: none;
+    padding: 0 30px;
 }
 
-    .list-photo-thumbnails-cart li {
-        margin-bottom: 10px;
-        width: auto !important;
-        margin-right: 10px;
-        float: left;
-        position: relative;
+@media (max-width: 1023px){
+    .company-gallery .kuyam-form{
+        padding: 0;
     }
-
-    .list-photo-thumbnails-cart img {
-        height: 58px;
+    .company-gallery .kuyam-form p{
+        text-align: center;
+    }
+    .company-gallery .photo-section{
         width: auto;
     }
+    .company-gallery .photo-section .form-label{
+        color: $base;
+    }
+}
 
-    .list-photo-thumbnails-cart li:hover > .btn-close {
+@media (max-width: 767px){
+    .company-gallery .photo-list li{
+        width: 50%;
+    }
+}
+@media (max-width: 374px){
+    .company-gallery .kuyam-form p{
+        font-size: $s11;
+        line-height: 17px;
+    }
+    .company-gallery .photo-section .form-label{
+        font-size: $s13;
+    }
+    .company-gallery .photo-section .controls i{
+        font-size: $s10;
+    }
+    .company-gallery .photo-list li .caption .text{
+        font-size: $s10;
+    }
+}
+
+@media (min-device-width: 320px){
+    .company-gallery .photo-list li:active .controls,
+    .company-gallery .photo-list li:focus .controls{
         display: block;
     }
-
-    .list-photo-thumbnails-cart .btn-close {
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        background-color: #999999;
-        color: #ffffff;
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        cursor: pointer;
-        display: none;
-        border-radius: 3px !important;
-    }
-/* main photo information */
-
-.photo-bg-responsive {
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 200px;
-    background-position: center;
-    overflow: hidden;
-    float: left;
 }
-
-.photo-main {
-    width: 26%;
-    float: left;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    transition-duration: 500ms;
-    transition-timing-function: ease;
-}
-
-    .photo-main ul {
-        position: absolute;
-        -webkit-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-        transform: translate(0px, 0px);
-        -webkit-transition: all 1s;
-        -webkit-transition-property: -webkit-transform,height;
-        -moz-transition-property: -moz-transform,height;
-        transition-property: transform,height;
-        -webkit-transition-duration: inherit !important;
-        transition-duration: inherit !important;
-        -webkit-transition-timing-function: inherit !important;
-        transition-timing-function: inherit !important;
-    }
-
-.photo-detail {
-    background-color: #ffffff;
-    height: 200px;
-    width: 70%;
-    padding: 10px 10px;
-    float: left;
-    text-align: left;
-}
-
-.bookButton {
-    margin-bottom: 3rem;
-}
-
-    .bookButton div[class*="col-"] {
-        padding-left: 0 !important;
-    }
-
-    .bookButton h3 {
-        font-size: 20px;
-        color: #4a4a4a;
-        line-height: 24px;
-        font-weight: 400;
-        padding-bottom: 0.5rem;
-    }
-
-    .bookButton h4 {
-        font-size: 13px;
-        color: #4a4a4a;
-        font-weight: 300;
-        padding-bottom: 2rem;
-    }
-
-    .bookButton p {
-        font-size: 14px;
-        color: #4a4a4a;
-        line-height: 16px;
-    }
-
-    .bookButton .title_button {
-        margin-bottom: 4rem;
-    }
-
-    .bookButton .button_color {
-        padding-bottom: 1rem;
-    }
-
-        .bookButton .button_color .radio-custom {
-            top: -1rem;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-1, .bookButton .button_color .radio-mark ~ .radio-label-2, .bookButton .button_color .radio-mark ~ .radio-label-3 {
-            margin-bottom: 1.2rem;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label:before {
-            border: 0;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-1:before {
-            background: #40515B;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-2:before {
-            background: #C868D3;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-3:before {
-            background: #21A3EA;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-4:before {
-            background: #BFCA03;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-5:before {
-            background: #FB7C08;
-        }
-
-        .bookButton .button_color .radio-mark ~ .radio-label-6:before {
-            background: #F2372E;
-        }
-
-        .bookButton .button_color .radio-mark:checked ~ .radio-label:before {
-            border: 0;
-            content: "\2714";
-            font-size: 9px;
-            text-align: center;
-            line-height: 15px;
-            color: #fff;
-        }
-
-    .bookButton .button_style .radio-custom {
-        margin-right: 2.5rem;
-    }
-    .content-button-color {
-        width: 10rem;
-        display: inline-block;
-        vertical-align: top;
-    }
-    .bookButton .button_style {
-        display: inline-block;
-        vertical-align: top;
-        padding-left: 2rem;
-    }
-    .bookButton .button_style a {
-        position: relative;
-        top: 10px;
-        left: -6px;
-
-    }
-
-    .bookButton .button_style .radio-mark ~ .radio-label:before {
-        border: 1px solid #A6A6A6;
-    }
-
-    .bookButton .button_style .radio-mark:checked ~ .radio-label:before {
-        content: '\25CF';
-        border: 1px solid #707070;
-        font-size: 11px;
-        text-align: center;
-        line-height: 1;
-        color: #707070;
-    }
-
-@media (min-width: 1120px) {
-    .button_color {
-        padding-right: 1rem;
-    }
-}
-
-.company-script pre {
-    position: relative;
-}
-
-
-.company-script .company-script-copy {
-    text-align: center;
-    background-color: transparent;
-    position: absolute;
-    cursor: pointer;
-    display: block;
-    right: 5px;
-    top: 0;
-}
-
-pre.responsive {
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-}
-
-/*
-    END OF COMPANY SCRIPTS
-*/

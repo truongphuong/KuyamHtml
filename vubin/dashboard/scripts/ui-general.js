@@ -24,6 +24,12 @@ if (!isMobile.any()) {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
 
+function refreshNiceScroll(sectionID){
+    $(sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+    $(sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
+    $(sectionID + " .wrap-dropdown-menu-inner").getNiceScroll().resize();
+}
+
 function listFilter(inputSearch, list) {
     var $object = $(inputSearch);
     var filter = $object.val();
@@ -437,6 +443,21 @@ function iscrollSelectK(sectionID, scrollName) {
     }
 }
 
+function mobileSection(){
+    if($('.mobile-section').length){
+        return;
+    }
+    var siteHeader = $('.kuyam-header').innerHeight();
+    var siteFooter = $('.kuyam-footer').innerHeight();
+    var formFooter = $('.kuyam-form footer').innerHeight();
+    var mobileSection = $(window).height() - siteHeader - siteFooter - formFooter;
+    if (wScreen > 1023) {
+        $('.mobile-section').css({'min-height': ''});
+    }else{
+        $('.mobile-section').css({'min-height': mobileSection});
+    }
+}
+
 $(document).ready(function () {
 
     $(document).on('hidden.bs.modal', '.modal', function () {
@@ -511,14 +532,16 @@ $(document).ready(function () {
                 $(this).closest('li').addClass('open');
                 $(this).siblings('ul').slideToggle(300);
             }
-            $("#subnavList .wrap-dropdown-menu-inner").attr('style', '');
-            $("#subnavList .wrap-dropdown-menu-inner-content").attr('style', '');
-            $("#subnavList .wrap-dropdown-menu-inner").getNiceScroll().resize();
+
+            refreshNiceScroll('#subnavList');
+
         } else {
             $(this).closest('ul').find('li').removeClass('active');
             $(this).closest('li').addClass('active');
         }
     });
+
+    mobileSection();
 });
 
 $(window).on('resize', function () {
@@ -528,7 +551,9 @@ $(window).on('resize', function () {
 
     siteHeader();
 
-    centerModals($(this));
+    $(document).on('shown.bs.modal', '.modal', function () {
+        centerModals($(this));
+    });
 
     // prevent screen flashing when multiple modals shown
     $(document).on('hidden.bs.modal', '.modal', function () {
@@ -551,4 +576,6 @@ $(window).on('resize', function () {
             $(window.verifyScrollbarWidth).appendTo($('head'));
         }
     });
+
+    mobileSection();
 });

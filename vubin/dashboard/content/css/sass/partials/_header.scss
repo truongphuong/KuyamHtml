@@ -79,7 +79,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .kuyam-header {
         overflow: hidden;
     }
@@ -153,16 +153,22 @@
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 1023px){
     .kuyam-header {
         z-index: 9;
         height: 50px;
     }
+    .kuyam-header .navbar-header{
+        float: none;
+    }
 
     .kuyam-header .navbar-collapse {
-        background: #fff;
-        position: relative;
-        top: -50px;
+        display: none;
+    }
+
+    .kuyam-header .navbar-toggle{
+        display: block;
+        float: right;
     }
 
     .kuyam-header .navbar-brand {
@@ -171,26 +177,7 @@
     }
 
     .kuyam-header .navbar-nav {
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-right:-8px;
-        margin-left:-8px;
-    }
-
-    .kuyam-header .navbar-nav li{
-        padding-left:8px;
-        padding-right:8px;
-        font-size:.75em;
-        margin-bottom:15px;
-    }
-    .kuyam-header .navbar-nav li a,
-    .kuyam-header .navbar-nav li a:hover,
-    .kuyam-header .navbar-nav li a:focus{
-        text-align:left;
-    }
-    .kuyam-header .navbar-nav > li.active{
-        font-weight: 700;
-        border: 0 none;
+        display: none;
     }
 }
 

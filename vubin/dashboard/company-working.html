@@ -30,14 +30,14 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>Kuyam Admin - Company</title>
-	<meta name="author" content="" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<!-- InstanceEndEditable -->
+<title>Kuyam Admin - Company</title>
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- InstanceEndEditable -->
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />  
+<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />
 
 <!-- Bootstrap datetimepicker CSS -->
 <link rel="stylesheet" type="text/css" href="content/css/bootstrap-datetimepicker.css"/>
@@ -65,415 +65,455 @@
 <link rel="stylesheet" type="text/css" href="content/css/SelectKustom.css"/>
 
 <!-- Site core CSS -->
-<link type="text/css" rel="stylesheet" href="content/css/style.css" /> 
-<link rel="stylesheet" type="text/css" href="content/css/general-style.css"/>
-<link rel="stylesheet" type="text/css" href="content/css/boarding.css"/>
+<link type="text/css" rel="stylesheet" href="content/css/style.css" />
+<!-- InstanceBeginEditable name="css" -->
+<!-- InstanceEndEditable -->
 </head>
 <body>
-	<div id="kuyamSite" class="kuyam-wrapper">     	
+	<div id="kuyamSite" class="kuyam-wrapper">
     	<header class="navbar bs-docs-nav kuyam-header">
         	<img class="print bg" alt="" src="content/images/bg_header.jpg" />
         	<div class="container">
-            	 <div class="navbar-header"> 
-                 	<button type="button" class="navbar-toggle collapsed"> 
-                        <span class="sr-only">Toggle navigation</span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                    </button> 
-                    <a class="navbar-brand" href="home.html"><img class="print logo" alt="" src="content/images/header_logo_kuyam.png" /></a>  
-        		</div> 
-                <nav class="collapse navbar-collapse" id="bs-navbar"> 
-                    <ul class="nav navbar-nav"> 
-                        <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li> 
-                        <li id="navManage"><a href="manage-staff.html"><span>Manage</span></a></li> 
-                        <li id="navCompany"><a href="company-profile.html"><span>Company</span></a></li>  
-                        <li id="navSettingsMobile" class="visible-xs"><a title="" href="settings.html"><span>Account settings</span></a></li> 
-                        <li class="visible-xs"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li> 
-                    </ul> 
+            	 <div class="navbar-header">
+                 	<button type="button" class="navbar-toggle collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.html"><img class="print logo" alt="" src="content/images/header_logo_kuyam.png" /></a>
+        		</div>
+                <nav class="collapse navbar-collapse" id="bs-navbar">
+                    <ul class="nav navbar-nav">
+                        <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li>
+                        <li id="navManage"><a href="manage-staff.html"><span>Manage</span></a></li>
+                        <li id="navCompany"><a href="company-info.html"><span>Company</span></a></li>
+                        <li id="navSettingsMobile" class="visible-xs"><a title="" href="settings.html"><span>Account settings</span></a></li>
+                        <li class="visible-xs"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs user-info">
                         <li id="navSettings">
                             <span class="hi">Hi <strong>Kourosh Vubin</strong></span>
-                            <span class="controls"><a title="" href="settings.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
+                            <span class="controls"><a title="" href="home.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
                         </li>
-                    </ul>                     
+                    </ul>
               	</nav>
             </div>
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-			<div class="kuyam-page company-page">
+        	<div class="kuyam-page company-page company-working">
 				<div class="kuyam-sidebar">
 					<ul>
-						<li class="dropdown">
-                            <a title="" href="company-profile.html" id="companyProfile" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
-                            <ul class="dropdown-menu" aria-labelledby="companyProfile">
-                                <li class="active"><a title="" href=""><span class="text">Basic info</span></a></li>
-                                <li><a title="" href=""><span class="text">Profile photos</span></a></li>
-                                <li><a title="" href=""><span class="text">Working hours</span></a></li>
+						<li class="dropdown active open">
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a title="" href="company-info.html"><span class="text">Basic info</span></a></li>
+                                <li><a title="" href="company-photo.html"><span class="text">Profile photos</span></a></li>
+                                <li class="active"><a title="" href="company-working.html"><span class="text">Working hours</span></a></li>
                             </ul>
                         </li>
-                        <li class="dropdown active">
-                            <a title="" href="company-image-gallery.html" id="companyGallery" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
-                             <ul class="dropdown-menu" aria-labelledby="companyGallery">
-                                <li><a title="" href=""><span class="text">My images</span></a></li>
-                                <li><a title="" href=""><span class="text">Purchase photos</span></a></li>
+                        <li class="dropdown">
+                            <a title="" href="" data-dropdown="true"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a title="" href="company-gallery.html"><span class="text">My images</span></a></li>
+                                <li><a title="" href="company-purchasse.html"><span class="text">Purchase photos</span></a></li>
                             </ul>
                         </li>
                         <li><a title="" href="company-payments.html"><span class="icon icon-payment"></span><span class="text">Payments &amp; booking</span></a></li>
                         <li><a title="" href="company-notifications.html"><span class="icon icon-notifications"></span><span class="text">Notifications</span></a></li>
                         <li><a title="" href="company-calendars.html"><span class="icon icon-calendars"></span><span class="text">Calendars</span></a></li>
-                        <li><a title="" href="settings.html"><span class="icon icon-settings"></span><span class="text">Settings</span></a></li>
+                        <li><a title="" href="company-settings.html"><span class="icon icon-settings"></span><span class="text">Settings</span></a></li>
 					</ul>
 				</div>
 				<div class="kuyam-content">
-					<div class="company-image-gallery">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12">
-								<p>Upload or purchase up to 10 images to create your photo gallery. Scroll down to purchase stock photos for $0.99 each</p>
+                    <div class="kuyam-form">
+					    <form>
+                            <section class="mobile-section">
+                                <div class="legend">Your company business hours</div>
 
-								<div class="clearfix"></div>
-								<br/>
-
-								<div class="row">
-
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault1" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault1">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile1" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile1">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault2" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault2">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile2" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile2">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault3" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault3">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile3" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile3">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault4" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault4">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile4" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile4">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault5" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault5">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile5" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile5">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault6" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault6">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile6" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile6">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault7" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault7">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile7" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile7">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<div class=" photo-box">
-										<div class="photo-frame" style="background-image:url(content/photos/photo1.jpg);"></div>
-										<div class="check-group">
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbSetDefault8" name="cbSetDefault" />
-												<label class="cb-label" for="cbSetDefault8">Set as default</label>
-											</div>
-											<div class="cb-custom">
-												<input class="cb-mark" type="radio" id="cbHideProfile8" name="cbHideProfile" />
-												<label class="cb-label" for="cbHideProfile8">Hide from profile</label>
-											</div>
-											<a href="#">Delete from gallery</a>
-										</div>
-									</div>
-									<a title="" href="" class=" photo-box btn-upload-image">
-										UPLOAD IMAGE
-									</a>
-									<!-- /  btn-upload-image -->
-
-
-								</div>
-
-
-							</div>
-						</div>
-
-
-
-
-						<form class="company-payment-form">
-
-
-							<!-- .payment-section -->
-							<section class="purchase-stock-photos-section">
-
-								<div class="col-xs-12 col-sm-5">
-									<label class="form-label" for="txtEmail">Purchasse stock photos</label>
-									<input type="text" class="form-control txt-search" id="txtEmail" placeholder="Search stock photos">
-								</div>
-
-								<div class="col-xs-12 col-sm-12 show-result">
-									<p>Showing search results for: <b>Yoga</b></p>
-								</div>
-
-
-								<div class="col-xs-12 col-sm-12">
-
-									<div class="photo-main">
-
-										<ul class="bxslider">
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-											<li style="background-image:url(content/photos/photo1.jpg);"></li>
-											<li style="background-image:url(content/photos/photo2.jpg);"></li>
-											<li style="background-image:url(content/photos/photo3.jpg);"></li>
-										</ul>
-
-
-									</div>
-									<div class=" photo-detail">
-										<label class="form-label">Girl meditating in pose of lotus on beach</label>
-										<ul>
-											<li>Size: 1256px x838</li>
-											<li>Price: $0.99</li>
-											<li>Tags: People, Activity, Lifestyle, Nature</li>
-
-										</ul>
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-
-									<div class=clearfix></div>
-
-									<div class="list-photo-thumbnails">
-
-
-										<div id="bx-pager" class="slider">
-											<a data-slide-index="0" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="1" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="2" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="3" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="4" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="5" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="6" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="7" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="8" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="9" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="10" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="11" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="12" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="13" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="14" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="15" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="16" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="17" href=""><img src="content/photos/photo3.jpg" /></a>
-											<a data-slide-index="18" href=""><img src="content/photos/photo1.jpg" /></a>
-											<a data-slide-index="19" href=""><img src="content/photos/photo2.jpg" /></a>
-											<a data-slide-index="20" href=""><img src="content/photos/photo3.jpg" /></a>
-										</div>
-
-									</div>
-
-
-								</div>
-
-
-								<div class="col-xs-12 col-sm-12">
-									<div class="your-cart">
-										<label class="form-label txt-cart" for="txtEmail">Your cart</label>
-										<ul class="list-photo-thumbnails list-photo-thumbnails-cart">
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo2.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo3.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-											<li><img src="content/photos/photo1.jpg" alt="" /></li>
-
-
-										</ul>
-										<div class="clearfix"></div>
-										<input type="button" value="Confirm purchase" class="btn btn-confirm-purchase">
-									</div>
-								</div>
-
-
-							</section>
-							<!-- /.payment-section -->
-
-						</form>
-
-						<div class="row">
-
-							<div class="col-xs-12 col-sm-12 show-result">
-								<label class="form-label">Popular stock photos recommended for you</label>
-							</div>
-
-							<div class="col-xs-12 col-sm-12">
-
-								<div class="row">
-
-									<div class=" photo-box">
-
-										<img src="content/photos/photo1.jpg" alt="" />
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-
-									<div class=" photo-box">
-
-										<img src="content/photos/photo1.jpg" alt="" />
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-									<div class=" photo-box">
-
-										<img src="content/photos/photo1.jpg" alt="" />
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-									<div class=" photo-box">
-
-										<img src="content/photos/photo1.jpg" alt="" />
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-									<div class=" photo-box">
-
-										<img src="content/photos/photo1.jpg" alt="" />
-										<input type="button" value="Add to cart" class="btn btn-add-cart">
-									</div>
-
-
-								</div>
-
-
-							</div>
-						</div>
-
-
-					</div>
+                                <!-- .working-hours -->
+                                <div class="working-section">
+                                    <section class="table-css">
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay1" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay1">monday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay2" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay2">tuesday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay3" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay3">wednesday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay4" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay4">thursday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay5" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay5">friday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay6" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay6">saturday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tr">
+                                            <div class="td working-day">
+                                                <div class="relative">
+                                                    <hr />
+                                                    <span class="cb-custom">
+                                                        <input class="cb-mark" type="checkbox" id="cbDay7" name="cbDay" />
+                                                        <label class="cb-label" for="cbDay7">sunday</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00" />
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <select>
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <!-- /.working-hours -->
+                            </section>
+                            <footer>
+                                <input type="button" value="Set working hours" class="btn btn-form btn-agree" />
+                            </footer>
+                        </form>
+                    </div>
 				</div>
-			</div>
-			<!-- InstanceEndEditable -->
-        </section>
-    	<footer class="kuyam-footer"> 
-        	<div class="container">   
-                <div class="col-xs-7 col-sm-8"> 
-                     <p>Copyright &copy; 2016 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
-                </div>  
-                 <div class="col-xs-5 col-sm-4">	 
-                    <ul> 
-                        <li><a class="link-chat" title="" href="#"><span class="icon icon-chat"></span></a></li> 
-                        <li class="visible-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>                    
-                        <li><a class="link-facebook" title="" href="https://www.facebook.com/mykuyam"><span class="icon icon-facebook"></span></a></li> 
-                        <li class="hidden-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>                    
-                        <li><a class="link-terms" title="" href="#tabTerms">Terms of use and privacy</a></li>
-                    </ul>   
-                </div>               
             </div>
-		</footer>        
+        <!-- InstanceEndEditable -->
+        </section>
+    	<footer class="kuyam-footer">
+        	<div class="container">
+                <div class="col-xs-7 col-sm-8">
+                     <p>Copyright &copy; 2016 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
+                </div>
+                 <div class="col-xs-5 col-sm-4">
+                    <ul>
+                        <li><a class="link-chat" title="" href="#"><span class="icon icon-chat"></span></a></li>
+                        <li class="visible-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>
+                        <li><a class="link-facebook" title="" href="https://www.facebook.com/mykuyam"><span class="icon icon-facebook"></span></a></li>
+                        <li class="hidden-xs"><a class="link-twitter" title="" href="https://twitter.com/mykuyam"><span class="icon icon-twitter"></span></a></li>
+                        <li><a class="link-terms" title="" href="#tabTerms">Terms of use and privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+		</footer>
 	</div>
-    <div class="loading hide">
+    <div class="loading">
         <div>
             <div class="loader">Loading...</div>
         </div>
     </div>
-    
+
     <!-- #termsModal -->
     <div id="termsModal" class="modal fade" role="dialog" aria-labelledby="termsModalLabel" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-terms">
@@ -486,7 +526,7 @@
                             <li role="presentation"><a title="" href="#tabPrivacy" aria-controls="tabPrivacy" role="tab" data-toggle="tab">privacy policy <span></span></a></li>
                             <li role="presentation"><a title="" href="#tabServices" aria-controls="tabServices" role="tab" data-toggle="tab">services listings <span></span></a></li>
                         </ul>
-                        <div class="tab-content">                        
+                        <div class="tab-content">
                             <div id="tabTerms" role="tabpanel" class="tab-pane">
                             	<div>
                                     <p>
@@ -1391,7 +1431,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /#termsModal -->
-    
+
     <!-- #signOutModal -->
 	<div id="signOutModal" class="modal fade modal-s" role="dialog" aria-labelledby="signOutModalLabel" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog modal-signout">
@@ -1401,10 +1441,10 @@
 					<h4 id="signOutModalLabel" class="modal-title">Are you sure you want to log out?</h4>
 				</div>
 				<div class="modal-body">
-                    <div class="row">	
+                    <div class="row">
                         <div class="col-xs-6">
                             <button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
-                        </div>			
+                        </div>
                         <div class="col-xs-6">
                             <button class="btn btn-form btn-agree">yes</button>
                         </div>
@@ -1414,7 +1454,7 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#signOutModal -->
-    
+
     <!-- #saveModal -->
 	<div id="saveModal" class="modal fade modal-s" role="dialog" aria-labelledby="saveModalLabel" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog modal-save">
@@ -1424,10 +1464,10 @@
 					<h4 id="saveModalLabel" class="modal-title">Do you want to save the changes?</h4>
 				</div>
 				<div class="modal-body">
-                    <div class="row">	
+                    <div class="row">
                         <div class="col-xs-6">
                             <button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
-                        </div>			
+                        </div>
                         <div class="col-xs-6">
                             <button class="btn btn-form btn-agree">yes</button>
                         </div>
@@ -1437,7 +1477,7 @@
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#saveModal -->
-    
+
     <!-- #signOutModal -->
 	<div id="successModal" class="modal fade modal-s" role="dialog" aria-labelledby="successModalLabel" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog modal-success">
@@ -1447,71 +1487,102 @@
 					<h4 id="successModalLabel" class="modal-title">Your data already have saved!</h4>
 				</div>
 				<div class="modal-body">
-                    <div class="row">	
+                    <div class="row">
                         <div class="col-xs-6 col-xs-offset-3">
                             <button class="btn btn-form btn-agree" data-dismiss="modal">ok</button>
-                        </div>	
+                        </div>
                     </div>
 				</div>
                 <div class="modal-footer"></div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /#signOutModal -->
-     
+
     <!-- InstanceBeginEditable name="modal" -->
-	<!-- InstanceEndEditable --> 
-    
-    <!-- === SCRIPTS === -->  
+	<!-- .modal -->
+	<div id="cropPhotoModal" class="modal fade" role="dialog" aria-labelledby="cropPhotoModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-croppie modal-dialog-crop-photo">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="cropPhotoModalLabel" class="modal-title">Profile photo</h4>
+					<p><a id="uploadPhoto" class="link-upload" title="" href=""><span>Upload</span></a><input type="file" id="filePhoto" class="hide" /></p>
+				</div>
+				<div class="modal-body">
+					<div id="croppiePhoto">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="row">
+						<div class="col-xs-6">
+							<button class="btn btn-form btn-disagree" data-dismiss="modal" type="button">Cancel</button>
+						</div>
+						<div class="col-xs-6">
+							<button id="cropPhoto" class="btn btn-form btn-agree" data-dismiss="modal" type="button">Crop and Save</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+    <!-- InstanceEndEditable -->
+
+    <!-- === SCRIPTS === -->
 	<script type="text/javascript" src="scripts/libs/modernizr.custom.js"></script>
-    <script type="text/javascript" src="scripts/libs/jquery-1.9.1.js"></script>	
+    <script type="text/javascript" src="scripts/libs/jquery-1.9.1.js"></script>
     <!-- InstanceBeginEditable name="libs" -->
     <!-- InstanceEndEditable -->
     <script type="text/javascript" src="scripts/libs/moment.js"></script>
-    
+
     <!-- Bootstrap js -->
     <script type="text/javascript" src="scripts/libs/bootstrap.min.js"></script>
-    
+
     <!-- Bootstrap-datetimepicker js -->
     <script type="text/javascript" src="scripts/libs/bootstrap-datetimepicker.min.js"></script>
-    
+
     <!-- Bootstrap select js -->
 	<script type="text/javascript" src="scripts/libs/bootstrap-select.js"></script>
-    
+
     <!-- Bootstrap table js -->
 	<script type="text/javascript" src="scripts/libs/bootstrap-table.js"></script>
-    
+
     <!-- InstanceBeginEditable name="bootstrap" -->
     <!-- InstanceEndEditable -->
-    
+
     <!-- jquery.nicescroll js -->
-	<script type="text/javascript" src="scripts/libs/jquery.nicescroll.js"></script> 
-    
+	<script type="text/javascript" src="scripts/libs/jquery.nicescroll.js"></script>
+
     <!-- Tooltipster js -->
 	<script type="text/javascript" src="scripts/libs/jquery.tooltipster.min.js"></script>
-    
+
     <!-- owl carousel js -->
 	<script type="text/javascript" src="scripts/libs/owl.carousel.js"></script>
-    
+
     <!-- maskedinput js -->
 	<script type="text/javascript" src="scripts/libs/jquery.maskedinput.js"></script>
-    
+
     <!-- croppie js -->
 	<script type="text/javascript" src="scripts/libs/croppie.js"></script>
-    
+
     <!-- SelectKustom js -->
 	<script type="text/javascript" src="scripts/libs/SelectKustom.js"></script>
-    
+
     <!-- chosen.jquery js -->
 	<script type="text/javascript" src="scripts/libs/chosen.jquery.js"></script>
-    
+
     <!-- Site js -->
-    <script type="text/javascript" src="scripts/ui-general.js"></script> 
+    <script type="text/javascript" src="scripts/ui-general.js"></script>
     <!-- InstanceBeginEditable name="script" -->
 	<script type="text/javascript" src="scripts/ui-company.js"></script>
+	<script type="text/javascript" src="scripts/ui-working.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navCompany').className = "active";
+		$(document).ready(function(){
+
+		});
 	</script>
-	<!-- InstanceEndEditable -->
-        
+    <!-- InstanceEndEditable -->
+
 </body>
 <!-- InstanceEnd --></html>

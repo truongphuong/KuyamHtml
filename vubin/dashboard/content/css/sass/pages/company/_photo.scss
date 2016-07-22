@@ -1,0 +1,276 @@
+.company-photo .kuyam-form{
+    padding: 2px 0;
+}
+.company-photo .kuyam-form div[class*="col-"]{
+    margin-bottom:0;
+}
+.company-photo .kuyam-form footer{
+    padding: 38px 0;
+}
+.company-photo .caption{
+    display: none;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .79);
+}
+.company-photo  .has-image:hover .caption{
+    display: block;
+}
+.company-photo  .has-image:hover .edit{
+    background: none;
+}
+.company-photo .caption ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    position: relative;
+    top: 50%;
+    margin-top: -36px;
+}
+.company-photo .caption li{
+    padding: 5px 0;
+    text-align: center;
+}
+.company-photo .caption a.link{
+    font-weight: 700;
+    font-size: .75em;
+    text-decoration: none;
+}
+.company-photo .caption .link-change{
+    color:#fff;
+}
+.company-photo .caption .link-remove{
+    color:#ff6666;
+}
+.company-photo .boarding-avatar{
+    padding-bottom: 41px;
+}
+.company-photo .boarding-avatar.crop-show{
+    padding-bottom: 22px;
+}
+.company-photo .boarding-avatar h2{
+    color:#3d3d3d;
+    font-size: 1.1875em;
+    font-weight: 300;
+    margin-bottom: 21px;
+    text-align: center;
+}
+.company-photo .boarding-avatar .frame{
+    width: 183px;
+    height: 183px;
+    background: center center no-repeat;
+    background-size: cover;
+    border: 1px solid #f7f7f7;
+    position: relative;
+    margin: 0 auto;
+}
+.company-photo .boarding-avatar .avatar.invisible{
+    height: 0;
+}
+.company-photo .boarding-avatar .default{
+    width: 100%;
+    height: 100%;
+    background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
+    background-size: 133px auto;
+    position: relative;
+    cursor: pointer;
+}
+.company-photo .boarding-avatar .edit{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    background: url(../images/dashboard/bg-edit.png) center center no-repeat;
+    background-size: 65px auto;
+}
+.company-photo .boarding-avatar .icon-edit{
+    display: inline-block;
+    margin-top: 38px;
+    margin-left: 38px;
+    width: 17px;
+    height: 17px;
+    background: url(../images/dashboard/icon-edit.png) center center no-repeat;
+    background-size: 17px auto;
+}
+.company-photo .boarding-avatar .has-image .default{
+    display: none;
+}
+.company-photo .boarding-avatar .croppie-section.invisible{
+    height: 0;
+}
+.company-photo .boarding-avatar .croppie-section footer{
+    text-align: center;
+}
+.company-photo .boarding-avatar .croppie-section footer .link{
+    font-size: .75em;
+    text-decoration: none;
+    margin: 0 15px 0 10px;
+}
+.company-photo .boarding-avatar .croppie-section footer .link-cancel{
+    color: #7a7a7a;
+}
+.company-photo  .boarding-avatar .croppie-section footer .link-crop{
+    color: #21a3ea;
+}
+.company-photo .boarding-banner h2{
+    color:#3d3d3d;
+    font-size: 1.1875em;
+    font-weight: 300;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.company-photo .boarding-banner .frame{
+    height: 176px;
+    background: center center no-repeat;
+    background-size: cover;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    position: relative;
+}
+.company-photo .boarding-banner .default{
+    width: 100%;
+    height: 100%;
+    background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
+    background-size: 133px auto;
+    position: relative;
+    cursor: pointer;
+}
+.company-photo .boarding-banner .has-image .default{
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .company-photo .croppie-container,
+    .company-photo .boarding-avatar .frame{
+        margin: 0;
+    }
+    .company-photo .boarding-avatar h2,
+    .company-photo .boarding-banner h2{
+        color: $positive;
+        font-size: $h4;
+        font-weight: 400;
+        margin-bottom: 28px;
+        text-align: left;
+    }
+    .company-photo .boarding-avatar{
+        padding-bottom: 13px;
+    }
+    .company-photo .boarding-avatar .frame{
+        box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.19);
+        border: 0 none;
+        border-radius: 10px;
+        width: 178px;
+        height: 178px;
+    }
+    .company-photo .boarding-avatar .caption{
+        border-radius: 10px;
+    }
+    .company-photo .boarding-avatar .edit{
+        border-radius: 0 0 10px 0;
+    }
+    .company-photo .boarding-banner .frame{
+        box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.19);
+        border: 0 none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .company-photo .kuyam-form{
+        padding: 0;
+    }
+    .company-photo .kuyam-form > .row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .company-photo .kuyam-form > .row > div[class*="col-"] {
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .company-photo .boarding-avatar{
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 29px;
+        margin-bottom: 21px;
+    }
+    .company-photo .boarding-avatar h2{
+        font-size: 1em;
+        margin-bottom: 18px;
+    }
+    .company-photo .boarding-avatar .frame{
+        border-radius: 5px;
+        width: 144px;
+        height: 144px;
+        border-color: #b3b3b3;
+    }
+    .company-photo .boarding-avatar .default{
+        background-size: 111px auto;
+    }
+    .company-photo .boarding-banner h2{
+        font-size: 1em;
+        margin-bottom: 21px;
+    }
+    .company-photo .boarding-banner .frame{
+        height: 144px;
+    }
+    .company-photo .boarding-banner .default{
+        background-size: 111px auto;
+    }
+}
+
+@media (max-width: 374px){
+    .company-photo .boarding-avatar{
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 24px;
+        margin-bottom: 16px;
+    }
+    .company-photo .boarding-avatar h2{
+        font-size: .875em;
+        margin-bottom: 16px;
+    }
+    .company-photo .boarding-avatar .frame{
+        border-radius: 5px;
+        width: 123px;
+        height: 123px;
+        border-color: #b3b3b3;
+    }
+    .company-photo .boarding-avatar .default{
+        background-size: 111px auto;
+    }
+    .company-photo .boarding-banner h2{
+        font-size: .875em;
+        margin-bottom: 18px;
+    }
+    .company-photo .boarding-banner .frame{
+        height: 122px;
+    }
+    .company-photo .boarding-banner .default{
+        background-size: 111px auto;
+    }
+    .company-photo .modal-footer{
+        height: 59px;
+        padding: 14px 16px 12px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .company-photo .boarding-avatar .default{
+        background-image: url(../images/dashboard/img-upload-avatar@2x.png);
+    }
+    .company-photo .boarding-avatar .edit{
+        background-image: url(../images/dashboard/bg-edit@2x.png) ;
+    }
+    .company-photo .boarding-avatar .icon-edit{
+        background-image: url(../images/dashboard/icon-edit@2x.png) ;
+    }
+    .company-photo .boarding-banner .default{
+        background-image: url(../images/dashboard/img-upload-avatar@2x.png);
+    }
+}

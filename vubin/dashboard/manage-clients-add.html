@@ -66,8 +66,8 @@
 
 <!-- Site core CSS -->
 <link type="text/css" rel="stylesheet" href="content/css/style.css" />
-<link rel="stylesheet" type="text/css" href="content/css/general-style.css"/>
-<link rel="stylesheet" type="text/css" href="content/css/boarding.css"/>
+<!-- InstanceBeginEditable name="css" -->
+<!-- InstanceEndEditable -->
 </head>
 <body>
 	<div id="kuyamSite" class="kuyam-wrapper">
@@ -87,14 +87,14 @@
                     <ul class="nav navbar-nav">
                         <li id="navDashboard"><a href="home.html"><span>Calendar</span></a></li>
                         <li id="navManage"><a href="manage-staff.html"><span>Manage</span></a></li>
-                        <li id="navCompany"><a href="company-profile.html"><span>Company</span></a></li>
+                        <li id="navCompany"><a href="company-info.html"><span>Company</span></a></li>
                         <li id="navSettingsMobile" class="visible-xs"><a title="" href="settings.html"><span>Account settings</span></a></li>
                         <li class="visible-xs"><a title="" href="javascript:void(0);" data-toggle="modal" data-target="#signOutModal"><span>Sign out</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs user-info">
                         <li id="navSettings">
                             <span class="hi">Hi <strong>Kourosh Vubin</strong></span>
-                            <span class="controls"><a title="" href="settings.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
+                            <span class="controls"><a title="" href="home.html"><span class="header_icon_settings"></span>Settings</a> | <a title="" href="#"><span class="header_icon_sign_out"></span>Log out</a></span>
                         </li>
                     </ul>
               	</nav>
@@ -175,39 +175,46 @@
 
 						<!-- .kuyam-content -->
 						<div class="kuyam-content">
-							<form>
-								<div class="legend">adding class</div>
-								<div class="row">
-									<div class="col-xs-12 col-sm-6">
-										<label class="form-label" for="txtFirstNameClient">First name <span class="txt-required">*</span></label>
-										<input placeholder="First name" type="text" class="form-control" id="txtFirstNameClient" />
-									</div>
-									<div class="col-xs-12 col-sm-6">
-										<label class="form-label" for="txtLastNameClient">Last name <span class="txt-required">*</span></label>
-										<input placeholder="Last name" type="text" class="form-control" id="txtLastNameClient" />
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-12 col-sm-6">
-										<label class="form-label" for="txtCellClient">Cell number <span class="txt-required">*</span></label>
-										<input type="text" class="form-control" id="txtCellClient" />
-									</div>
-									<div class="col-xs-12 col-sm-6">
-										<label class="form-label" for="txtEmailClient">Email <span class="txt-required">*</span></label>
-										<input placeholder="EmailClient" type="text" class="form-control" id="txtEmail" />
-									</div>
-								</div>
-								<footer>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                           <input type="button" value="Delete Roger sterling" class="btn btn-form btn-disagree hide" data-target="#deleteModal" data-toggle="modal" />
+                            <div class="kuyam-form">
+    							<form>
+                                    <section class="mobile-section">
+        								<div class="legend">adding class</div>
+        								<div class="row">
+        									<div class="col-xs-12 col-sm-6">
+        										<label class="form-label" for="txtFirstNameClient">First name <span class="txt-required">*</span></label>
+        										<input placeholder="First name" type="text" class="form-control" id="txtFirstNameClient" />
+        									</div>
+        									<div class="col-xs-12 col-sm-6">
+        										<label class="form-label" for="txtLastNameClient">Last name <span class="txt-required">*</span></label>
+        										<input placeholder="Last name" type="text" class="form-control" id="txtLastNameClient" />
+        									</div>
+        								</div>
+        								<div class="row">
+        									<div class="col-xs-12 col-sm-6">
+        										<label class="form-label" for="txtCellClient">Cell number <span class="txt-required">*</span></label>
+        										<input type="text" class="form-control" id="txtCellClient" />
+        									</div>
+        									<div class="col-xs-12 col-sm-6">
+        										<label class="form-label" for="txtEmailClient">Email <span class="txt-required">*</span></label>
+        										<input placeholder="EmailClient" type="text" class="form-control" id="txtEmail" />
+        									</div>
+        								</div>
+                                    </section>
+    								<footer>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-lg-6 hide">
+                                               <input type="button" value="Delete Roger sterling" class="btn btn-form btn-disagree hide" data-target="#deleteModal" data-toggle="modal" />
+                                            </div>
+                                            <div class="col-xs-6 visible-1023">
+                                               <input type="button" value="Back" class="btn btn-form btn-neutral" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="button" value="Add client" class="btn btn-form btn-agree" />
+                                            </div>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <input type="button" value="Add client" class="btn btn-form btn-agree" />
-                                        </div>
-                                    </div>
-                                </footer>
-							</form>
+                                    </footer>
+    							</form>
+                            </div>
 						</div>
 						<!-- /.kuyam-content -->
 
@@ -237,7 +244,7 @@
             </div>
 		</footer>
 	</div>
-    <div class="loading hide">
+    <div class="loading">
         <div>
             <div class="loader">Loading...</div>
         </div>
