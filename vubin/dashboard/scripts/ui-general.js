@@ -79,12 +79,9 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
 					{
 						bouncescroll: false,
 						cursorcolor: "#278CFE",
-						preservenativescrolling: false,
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
-						autohidemode: false,
 						cursorwidth: "7px",
-						enablescrollonselection: false,
 						background: "#8B8B8B"
 					});
 			});
@@ -136,12 +133,9 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 					{
 						bouncescroll: false,
 						cursorcolor: "#278CFE",
-						preservenativescrolling: false,
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
-						autohidemode: false,
 						cursorwidth: "7px",
-						enablescrollonselection: false,
 						background: "#8B8B8B"
 					});
 			});
@@ -175,12 +169,9 @@ function iscrollSelectSearch(sectionID, scrollName) {
                     {
                         bouncescroll: false,
                         cursorcolor: "#278CFE",
-                        preservenativescrolling: false,
                         cursorborder: "1px solid transparent",
                         cursorborderradius: "5px",
-                        autohidemode: false,
                         cursorwidth: "7px",
-                        enablescrollonselection: false,
                         background: "#8B8B8B"
                     });
             });
@@ -215,12 +206,9 @@ function iscrollSelect(sectionID, scrollName) {
 					{
 						bouncescroll: false,
 						cursorcolor: "#278CFE",
-						preservenativescrolling: false,
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
-						autohidemode: false,
 						cursorwidth: "7px",
-						enablescrollonselection: false,
 						background: "#8B8B8B"
 					});
 			});
@@ -237,12 +225,9 @@ function iscrollContent(sectionID) {
 		{
 			bouncescroll: false,
 			cursorcolor: "#278CFE",
-			preservenativescrolling: false,
 			cursorborder: "1px solid transparent",
 			cursorborderradius: "5px",
-			autohidemode: false,
 			cursorwidth: "7px",
-			enablescrollonselection: false,
 			background: "#8B8B8B"
 		});
 	}
