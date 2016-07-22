@@ -786,11 +786,10 @@ div[class*="col-"] {
   box-shadow: none; }
 
 .bootstrap-select .dropdown-menu.inner {
-  max-height: 175px !important;
-  -webkit-overflow-scrolling: touch; }
+  max-height: 175px !important; }
 
 .on-nicescroll .bootstrap-select .dropdown-menu.inner {
-  max-height: inherit !important;
+  min-height: inherit !important;
   overflow-y: hidden !important;
   max-height: 100% !important; }
 
@@ -873,6 +872,9 @@ div[class*="col-"] {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 15px; }
+
+.on-nicescroll .bootstrap-select .wrap-dropdown-menu-inner-content {
+  overflow-y: auto; }
 
 .bootstrap-select .popover-title {
   display: block;
@@ -1321,7 +1323,11 @@ div[class*="col-"] {
   right: -3px !important; }
 
 .on-nicescroll .wrap-dropdown-menu-inner {
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.on-nicescroll .wrap-dropdown-menu-inner-content {
+  overflow-y: auto; }
 
 .tooltipster-default {
   border-width: 2px;
@@ -2793,8 +2799,7 @@ textarea.form-control:focus {
   max-height: 100%; }
 
 .on-device .subnav-list {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
+  overflow-y: auto; }
 
 .subnav-list ul {
   margin: 0;
@@ -3784,9 +3789,6 @@ textarea.form-control:focus {
 .on-nicescroll .block-attendee .wrap-dropdown-menu-inner {
   height: 224px; }
 
-.on-nicescroll .block-attendee .scroll-content {
-  height: inherit; }
-
 .block-attendee .attendee-list ul {
   margin: 0;
   padding: 0;
@@ -3849,17 +3851,13 @@ textarea.form-control:focus {
   text-align: left;
   clear: both; }
 
-.block-details .notes-section .scroll-content {
+.block-details .notes-section > div {
   height: 88px;
   overflow: hidden;
-  position: relative;
-  -webkit-overflow-scrolling: touch; }
+  position: relative; }
 
 .on-nicescroll .block-details .notes-section .wrap-dropdown-menu-inner {
   height: 88px; }
-
-.on-nicescroll .block-details .notes-section .scroll-content {
-  height: inherit; }
 
 .block-details .modal-footer {
   padding-bottom: 12px;
@@ -5493,8 +5491,7 @@ textarea.form-control:focus {
   margin-bottom: 25px; }
 
 .on-device .modal-edit-category .selection-section {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
+  overflow-y: auto; }
 
 .modal-edit-category .selection-section ul {
   margin: 0;

@@ -78,11 +78,10 @@
 
 .bootstrap-select .dropdown-menu.inner {
     max-height: 175px !important;
-    -webkit-overflow-scrolling: touch;
 }
 
 .on-nicescroll .bootstrap-select .dropdown-menu.inner {
-    max-height: inherit !important;
+    min-height: inherit !important;
     overflow-y: hidden !important;
     max-height: 100% !important;
 }
@@ -176,6 +175,9 @@
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 15px;
+}
+.on-nicescroll .bootstrap-select .wrap-dropdown-menu-inner-content{
+    overflow-y: auto;
 }
 
 .bootstrap-select .popover-title {
