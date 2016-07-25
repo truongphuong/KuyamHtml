@@ -13,6 +13,11 @@
 }
 
 /* .btn */
+.modal-boarding .txt-required{
+    color: #ff5050;
+    font-family: "Lato",sans-serif;
+    font-weight: 700;
+}
 .modal-boarding .btn-form,
 .modal-boarding .btn-form:focus {
     font-size: 1em;
@@ -348,10 +353,10 @@
 .modal-boarding .bootstrap-select.btn-group .btn .caret {
     border: 0 none;
     margin-top: -5px;
-    width: 19px;
+    width: 16px;
     height: 10px;
-    background: url(images/boarding/icon-down.png) center center no-repeat;
-    background-size: 19px auto;
+    background: url(images/boarding/icon-down-blue.png) center center no-repeat;
+    background-size: 16px auto;
 }
 
 .modal-boarding .bootstrap-select.btn-group.open .btn .caret{
@@ -667,6 +672,9 @@
 	visibility: hidden;
     /*width:210px;*/
 }
+.modal-boarding-time .working-section .working-time .table-css{
+    width: auto;
+}
 .modal-boarding-time .working-section .active .working-time {
 	visibility: visible;
 }
@@ -675,17 +683,17 @@
 	color:#a3a2a2;
 }
 .modal-boarding-time .working-section .working-time .td-from{
-	width: 38px;
+	width: 45px;
 }
 .modal-boarding-time .working-section .working-time .td-to{
-	width: 26px;
+	width: 50px;
 	text-align: center;
 }
 .modal-boarding-time .working-section .working-time ul.clearfix{
 	margin:0;
 	padding:0;
 	list-style: none;
-	width: 150px;
+	width: 130px;
     border: 1px solid #fff;
 	border-bottom: 1px solid #979797;
 	font-size: 16px;
@@ -696,7 +704,7 @@
 }
 .modal-boarding-time .working-section .working-time  ul.clearfix > li > input[type="text"]{
 	width: 100%;
-	height: 37px;
+	height: 24px;
 	border: 0 none;
 	font-size: .8125em;
 	text-align: center;
@@ -708,9 +716,11 @@
 	width: 16px;
 	background-image:url(images/boarding/icon-down-blue.png);
 	background-size: 16px auto;
+    right:0;
 }
 .modal-boarding-time .bootstrap-select.btn-group .btn .filter-option{
 	color: #9b9b9b;
+    text-align: center;
 }
 .modal-boarding-time .bootstrap-select .dropdown-menu.open{
     border-right-color: #fff;
@@ -719,6 +729,8 @@
 	padding-top: 11px;
 	padding-bottom: 11px;
 	font-size: .8125em;
+    padding-right: 26px;
+    text-align: center;
 }
 .modal-boarding-time .bootstrap-select .dropdown-menu > li.selected{
     display: none;
@@ -734,11 +746,16 @@
 .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
 	border: 0 none;
     border-left: 1px solid #979797;
-	height: 37px;
+	height: 24px;
 	font-size: .8125em;
+    padding-right: 26px;
+    padding-top:0;
+    padding-bottom: 0;
 }
 .modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
 	margin-top:0;
+    border-top:0 none;
+    border-right: 0 none;
 }
 .modal-boarding-time .modal-footer{
 	padding: 7px 30px 32px 32px;
@@ -1015,7 +1032,7 @@
 	.modal-boarding .inner_input{
 		font-size: 14px;
 		height: 39px;
-		line-height: 35px;;
+		line-height: 37px;
 	}
 
 	.modal-boarding textarea.form-control{
@@ -1126,11 +1143,11 @@
 		width: 125px;
 	}
 	.modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"]{
-		height: 31px;
+		height: 26px;
 		font-size: .6875em;
 	}
 	.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
-		right: 10px;
+		right: 0;
 	}
 	.modal-boarding-time .form-select .bootstrap-select > .btn,
 	.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
@@ -1141,11 +1158,11 @@
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
-		height: 31px;
+		height: 27px;
 		font-size: .6875em;
 	}
 	.modal-boarding-time .bootstrap-select > .dropdown-toggle{
-		padding-right: 30px;
+		padding-right: 26px;
 	}
 	.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu{
 		right: 0;
@@ -1326,7 +1343,7 @@
 	.modal-boarding .inner_input{
 		font-size: 12px;
 		height: 33px;
-		line-height: 30px;;
+		line-height: 31px;
 	}
 	.modal-boarding textarea.form-control{
 		height: 85px !important;
@@ -1441,11 +1458,11 @@
 		width: 108px;
 	}
 	.modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"]{
-		height: 26px;
+		height: 20px;
 		font-size: .5625em;
 	}
 	.modal-boarding-time .bootstrap-select.btn-group .btn .caret{
-		right: 10px;
+		right: 0;
 	}
 	.modal-boarding-time .form-select .bootstrap-select > .btn,
 	.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
@@ -1456,7 +1473,7 @@
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 	.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
-		height: 26px;
+		height: 21px;
 		font-size: .5625em;
 	}
 	.modal-boarding-time .bootstrap-select > .dropdown-toggle{
@@ -1663,11 +1680,11 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px)
 only screen and (              min-resolution:120dpi)      and (min-width:768px),
 only screen and (               min-resolution:2dppx)      and (min-width:768px) {
     .modal-boarding .bootstrap-select.btn-group .btn .caret {
-        background-image: url(images/boarding/icon-down@2x.png);
+        background-image: url(images/boarding/icon-down-blue@2x.png);
     }
 
     .modal-boarding .chosen-container-single .chosen-single div b,
     .modal-boarding .chosen-container-multi .chosen-multiple div b {
-        background-image: url(images/boarding/icon-down@2x.png);
+        background-image: url(images/boarding/icon-down-blue@2x.png);
     }
 }
