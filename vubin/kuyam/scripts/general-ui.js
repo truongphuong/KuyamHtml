@@ -43,7 +43,7 @@ $(function() {
 	});
 	
 	$('.btn_sub_item').click(function() {
-		$('.dropmenu-item-content').slideUp();
+		//$('.dropmenu-item-content').slideUp();
 		$(this).parent().find('.dropmenu-item-content').slideToggle();
 	});
 	 
