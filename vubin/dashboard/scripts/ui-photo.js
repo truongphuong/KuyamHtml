@@ -27,13 +27,13 @@ $(document).ready(function () {
 
     $croppiePhoto.croppie({
         viewport: {
-            width: 183,
-            height: 183
+            width: 176,
+            height: 176
             //type: 'circle' //default 'square'
         },
         boundary: {
             width: '100%',
-            height: 183
+            height: 176
         },
         customClass: '',
         update: function (cropper) {

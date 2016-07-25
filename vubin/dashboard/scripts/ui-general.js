@@ -78,6 +78,7 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
 					{
 						bouncescroll: false,
+                        autohidemode: false,
 						cursorcolor: "#278CFE",
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
@@ -132,6 +133,7 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
 					{
 						bouncescroll: false,
+                        autohidemode: false,
 						cursorcolor: "#278CFE",
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
@@ -168,6 +170,7 @@ function iscrollSelectSearch(sectionID, scrollName) {
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
                     {
                         bouncescroll: false,
+                        autohidemode: false,
                         cursorcolor: "#278CFE",
                         cursorborder: "1px solid transparent",
                         cursorborderradius: "5px",
@@ -205,6 +208,7 @@ function iscrollSelect(sectionID, scrollName) {
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
 					{
 						bouncescroll: false,
+                        autohidemode: false,
 						cursorcolor: "#278CFE",
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
@@ -224,6 +228,7 @@ function iscrollContent(sectionID) {
 		$(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content',
 		{
 			bouncescroll: false,
+            autohidemode: false,
 			cursorcolor: "#278CFE",
 			cursorborder: "1px solid transparent",
 			cursorborderradius: "5px",
