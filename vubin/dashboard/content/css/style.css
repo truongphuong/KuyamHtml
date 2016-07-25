@@ -3092,13 +3092,10 @@ textarea.form-control:focus {
 .form-time .form-select .bootstrap-select .dropdown-menu > li.selected {
   display: none; }
 
-.working-section .table-css {
-  width: 100%; }
-
 .working-section .td {
   vertical-align: middle; }
 
-.modal-boarding-time .working-section .working-day {
+.working-section .working-day {
   text-transform: capitalize;
   font-size: .9375em;
   padding-right: 10px;
@@ -3151,6 +3148,7 @@ textarea.form-control:focus {
 
 .working-section .working-time .td-to {
   text-align: center;
+  width: 54px;
   padding-left: 5px;
   padding-right: 5px; }
 
@@ -3190,7 +3188,7 @@ textarea.form-control:focus {
   width: 16px;
   height: 8px;
   margin-top: -4px;
-  right: 8px; }
+  right: 0; }
 
 .working-section .bootstrap-select.btn-group.open .btn .caret {
   -webkit-transform: rotate(-180deg);
@@ -3198,14 +3196,6 @@ textarea.form-control:focus {
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg); }
-
-.working-section .bootstrap-select.btn-group .btn .caret {
-  background-image: url(../images/dashboard/icon-down-blue.png);
-  background-size: 16px auto;
-  width: 16px;
-  height: 8px;
-  margin-top: -4px;
-  right: 8px; }
 
 .working-section .bootstrap-select .dropdown-menu.open {
   border-right-color: #fff; }
@@ -3238,6 +3228,136 @@ textarea.form-control:focus {
   height: 37px;
   font-size: .8125em; }
 
+@media (max-width: 767px) {
+  .working-section > .table-css,
+  .working-section > .table-css > .tr {
+    display: block; }
+
+  .working-section .working-day {
+    padding: 10px 0 8px;
+    display: block; }
+
+  .working-section .active .working-day hr {
+    display: none; }
+
+  .working-section .working-time {
+    margin-top: -5px;
+    padding-bottom: 3px;
+    visibility: visible;
+    display: none; }
+
+  .working-section .active .working-time {
+    display: block; }
+
+  .working-section .working-day .cb-mark ~ .cb-label {
+    font-size: .8125em;
+    background: transparent; }
+
+  .working-section .working-time .table-css {
+    width: auto; }
+
+  .working-section .working-time .td {
+    font-size: .6875em; }
+
+  .working-section .working-time .td-from {
+    padding-left: 0; }
+
+  .working-section .working-time .td-to {
+    width: 54px; }
+
+  .working-section .working-time .td-from + .td,
+  .working-section .working-time .td-to + .td {
+    width: 108px; }
+
+  .working-section .working-time ul.clearfix {
+    width: 125px; }
+
+  .working-section .working-time ul.clearfix > li > input[type="text"] {
+    height: 31px;
+    font-size: .6875em; }
+
+  .working-section .form-select .bootstrap-select > .btn,
+  .working-section .form-select .bootstrap-select > .btn:focus,
+  .working-section .form-select .bootstrap-select > .btn:active,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled:focus,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled:active,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    height: 31px;
+    font-size: .6875em; }
+
+  .working-section .bootstrap-select > .dropdown-toggle {
+    padding-right: 20px; }
+
+  .working-section .form-select .bootstrap-select div.dropdown-menu {
+    right: 0; }
+
+  .working-section .bootstrap-select .dropdown-menu > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: .6875em; } }
+@media (max-width: 374px) {
+  .working-section > .table-css,
+  .working-section > .table-css > .tr {
+    display: block; }
+
+  .working-section .working-day {
+    padding: 7px 0 4px;
+    display: block; }
+
+  .working-section .active .working-day hr {
+    display: none; }
+
+  .working-section .working-time {
+    margin-top: -5px;
+    padding-bottom: 3px;
+    visibility: visible;
+    display: none; }
+
+  .working-section .active .working-time {
+    display: block; }
+
+  .working-section .working-day .cb-mark ~ .cb-label {
+    font-size: .6875em; }
+
+  .working-section .working-time .table-css {
+    width: auto; }
+
+  .working-section .working-time .td {
+    font-size: .5625em; }
+
+  .working-section .working-time ul.clearfix {
+    width: 108px; }
+
+  .working-section .working-time ul.clearfix > li > input[type="text"] {
+    height: 26px;
+    font-size: .5625em; }
+
+  .working-section .form-select .bootstrap-select > .btn,
+  .working-section .form-select .bootstrap-select > .btn:focus,
+  .working-section .form-select .bootstrap-select > .btn:active,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled:focus,
+  .working-section .form-select .bootstrap-select > .btn-default.disabled:active,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+  .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    height: 26px;
+    font-size: .5625em; }
+
+  .working-section .bootstrap-select > .dropdown-toggle {
+    padding-right: 20px; }
+
+  .working-section .form-select .bootstrap-select div.dropdown-menu {
+    right: -1px;
+    margin-top: 1px; }
+
+  .working-section .bootstrap-select .dropdown-menu > li > a {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    font-size: .5625em; } }
 .week-list {
   margin: 0;
   padding: 0;
@@ -4124,7 +4244,10 @@ textarea.form-control:focus {
 
   .company-photo .boarding-banner .frame {
     box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.19);
-    border: 0 none; } }
+    border: 0 none; }
+
+  .company-photo .kuyam-form div.col-lg-4 {
+    width: 341px; } }
 @media (max-width: 1023px) {
   .company-photo .kuyam-form {
     padding: 0; }
@@ -4766,7 +4889,8 @@ textarea.form-control:focus {
   padding: 20px 0; }
 
 @media (max-width: 1023px) {
-  .company-settings .kuyam-form {
+  .company-working .kuyam-form {
+    padding: 0;
     width: auto; } }
 .manage-staff .subnav-content {
   padding-top: 55px; }
