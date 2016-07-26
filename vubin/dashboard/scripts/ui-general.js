@@ -450,12 +450,13 @@ function mobileSection(){
     if($('.mobile-section .no-data').length === 0){
         return;
     }
-    var noData = $('.mobile-section .no-data div').innerHeight();
+    var noData = $('.mobile-section .no-data div').innerHeight(),
+        legend =  $('.mobile-section .legend').outerHeight();
     if (wScreen > 1023) {
         $('.mobile-section .no-data').css({'padding-top': ''});
     }else{
         if(mobileSection > noData){
-            $('.mobile-section .no-data').css({'padding-top': (mobileSection - noData) / 2});
+            $('.mobile-section .no-data').css({'padding-top': (mobileSection - noData - legend) / 2});
         }else{
             $('.mobile-section .no-data').css({'padding-top': ''});
         }

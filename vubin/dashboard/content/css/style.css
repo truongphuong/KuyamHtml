@@ -3231,6 +3231,9 @@ textarea.form-control:focus {
 .no-data .btn {
   width: 388px; }
 
+@media (max-width: 1023px) {
+  .kuyam-content .no-data-section .legend {
+    margin-bottom: 0; } }
 .form-timepicker {
   position: relative; }
 
@@ -4666,11 +4669,13 @@ textarea.form-control:focus {
 .company-gallery .photo-list li {
   float: left;
   width: 20%;
-  height: 118px;
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
   cursor: pointer; }
+
+.company-gallery .photo-list li .img-transparent {
+  width: 100%; }
 
 .company-gallery .photo-list li .photo {
   display: block;
@@ -4684,7 +4689,9 @@ textarea.form-control:focus {
 .company-gallery .photo-list li .border {
   display: none;
   border: 2px solid #3891ff;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
   height: 100%; }
 
 .company-gallery .photo-list li .caption {
@@ -4834,11 +4841,13 @@ textarea.form-control:focus {
 .company-purchase .photo-list li {
   float: left;
   width: 16.6667%;
-  height: 126px;
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
   cursor: pointer; }
+
+.company-purchase .photo-list li .img-transparent {
+  width: 100%; }
 
 .company-purchase .photo-list li .photo {
   display: block;
@@ -4937,13 +4946,19 @@ textarea.form-control:focus {
     width: auto; }
 
   .company-purchase .kuyam-form .search-form .form-control {
-    width: 100%; } }
-@media (max-width: 1023px) {
+    width: 100%; }
+
   .company-purchase .kuyam-form {
     width: inherit; }
 
+  .company-purchase .photo-list li {
+    width: 25%; }
+
   .company-purchase .kuyam-form footer li,
   .company-purchase .kuyam-form footer li:last-child {
+    width: 50%; } }
+@media (max-width: 767px) {
+  .company-purchase .photo-list li {
     width: 50%; } }
 @media (min-device-width: 320px) {
   .company-purchase .photo-list li:focus a,
@@ -5144,7 +5159,8 @@ textarea.form-control:focus {
 
 @media (max-width: 1023px) {
   .company-notifications .kuyam-form {
-    width: auto; } }
+    width: auto;
+    padding: 0; } }
 .company-settings .kuyam-form {
   width: 680px;
   padding: 2px 0; }
@@ -5157,7 +5173,8 @@ textarea.form-control:focus {
 
 @media (max-width: 1023px) {
   .company-settings .kuyam-form {
-    width: auto; } }
+    width: auto;
+    padding: 0; } }
 .company-password .kuyam-form {
   width: 680px;
   padding: 0; }
