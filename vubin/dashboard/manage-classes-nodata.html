@@ -70,17 +70,85 @@
 <!-- InstanceEndEditable -->
 </head>
 <body>
+    <div id="ml-menu">
+        <div class="icon_mobile_close_menu"></div>		
+        <div class="menu__wrap">
+            <a class="logo" title="" href="home.html"><img alt="" src="content/images/icons_2016/header_logo_kuyam.png" /></a>
+            <ul class="menu__level1 hidden">
+                <li class="menu__item"><a href="#">Lifestyle blog</a></li>
+                <li class="menu__item"><a href="#">How it works</a></li>
+                <li class="menu__item blue-item"><a href="#">Login</a></li>
+                <li class="menu__item blue-item"><a href="#">Signup</a></li>
+            </ul>
+                        
+            <ul class="menu__level2">
+                <li class="menu__item username-item"><a href="#">Hi <span>Vubin</span></a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_dashboard btn_menu_dashboard">Company dashboard</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_search">Search</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_favourites">Favourites</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_receipt">Receipt history</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_appointments">Appointments<div class="badge">13</div></a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_gift btn_sub_item">Gift cards</a>
+                
+                    <ul class="dropmenu-item-content">
+                        <li class="menu__item"><a href="#">Buy gift card</a></li>
+                        <li class="menu__item"><a href="#">Balance</a></li>
+                    </ul>
+                
+                </li>
+                <li class="menu__item"><a href="#">Lifestyle blog</a></li>
+                <li class="menu__item"><a href="#">How it works</a></li>
+                <li class="menu__item "><a href="#">Settings</a></li>
+                <li class="menu__item "><a href="#" class="have-icon icon_mobile_add">Add a company</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+            </ul>				
+				
+            <!-- Submenu 1 -->
+            <ul class="menu__level3">
+                <li class="menu__item back-item"><a href="#" class="have-icon icon_mobile_back btn_menu_back" >Back</a>
+                <li class="menu__item"><a href="#"  class="have-icon icon_mobile_manage btn_sub_item">Manage</a>
+                    
+                    <ul class="dropmenu-item-content">
+                        <li class="menu__item"><a href="#">Staff</a></li>
+                        <li class="menu__item"><a href="#">Services</a></li>
+                        <li class="menu__item"><a href="#">Classes</a></li>
+                        <li class="menu__item"><a href="#">Packages</a></li>
+                        <li class="menu__item"><a href="#">Clients</a></li>
+                        <li class="menu__item"><a href="#">Invoices</a></li>
+                        <li class="menu__item"><a href="#">Promo codes</a></li>
+                    </ul>
+            
+                </li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_company  btn_sub_item">Company</a>
+                
+                    <ul class="dropmenu-item-content">
+                        <li class="menu__item"><a href="#">Profile</a></li>
+                        <li class="menu__item"><a href="#">Image gallery</a></li>
+                        <li class="menu__item"><a href="#">Payments &amp; booking</a></li>
+                        <li class="menu__item"><a href="#">Notifications</a></li>
+                        <li class="menu__item"><a href="#">Settings</a></li>							
+                    </ul>
+                    
+                </li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_calendar">Calendar</a></li>
+                <li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+            </ul>
+			
+		</div>
+		<div class="bg-fading"></div>
+	</div>
+    
 	<div id="kuyamSite" class="kuyam-wrapper">     	
     	<header class="navbar bs-docs-nav kuyam-header">
         	<img class="print bg" alt="" src="content/images/bg_header.jpg" />
         	<div class="container">
             	 <div class="navbar-header"> 
-                 	<button type="button" class="navbar-toggle collapsed"> 
+                 	<div type="button" class="navbar-toggle collapsed"> 
                         <span class="sr-only">Toggle navigation</span> 
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
-                    </button> 
+                    </div> 
                     <a class="navbar-brand" href="home.html"><img class="print logo" alt="" src="content/images/header_logo_kuyam.png" /></a>  
         		</div> 
                 <nav class="collapse navbar-collapse" id="bs-navbar"> 
@@ -410,13 +478,19 @@
                                 <section class="mobile-section">
         							<!-- .no-data -->
         							<section class="no-data">
-        								<img width="53" class="img-normal" alt="" src="content/images/dashboard/manage/img-class.png" />
-        								<img width="53" class="img-retina" alt="" src="content/images/dashboard/manage/img-class@2x.png" />
-        								<p>You currently don't have any class.<br /> Please start by adding one.</p>
-        								<input type="button" value="Add new class" class="btn btn-form btn-agree" />
+                                        <div>
+            								<img width="53" class="img-normal" alt="" src="content/images/dashboard/manage/img-class.png" />
+            								<img width="53" class="img-retina" alt="" src="content/images/dashboard/manage/img-class@2x.png" />
+            								<p>You currently don't have any class.<br /> Please start by adding one.</p>
+                                        </div>
         							</section>
         							<!-- /.no-data -->
                                 </section>
+                                <footer>
+                                    <section class="no-data">
+                                        <input type="button" value="Add new class" class="btn btn-form btn-agree" />
+                                    </section>
+                                </footer>
                             </div>
 						</div>
 						<!-- /.kuyam-content -->
