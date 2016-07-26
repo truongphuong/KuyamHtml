@@ -27,7 +27,7 @@ $(function() {
 	
 
 	
-	$('.navbar-toggle').click(function() {
+	$('div.navbar-toggle').click(function() {
 	  $('.menu__wrap').addClass('menu-slide-right');
 	  $('.bg-fading').addClass('show-bg-fading');
 	  $('.icon_mobile_close_menu').show();
