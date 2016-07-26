@@ -31,25 +31,30 @@
 .kuyam-footer a.link-terms{
     color: #fff;
 }
-@media (max-width:991px) {
+@media (max-width:1023px) {
     .kuyam-footer {
-        text-align: center;
-        font-size: .85em;
+        padding:0;
+        min-height: 58px;
     }
 
     .kuyam-footer .container {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .kuyam-footer p{
+        font-size: .85em;
+        margin: 0;
+        text-align: left;
+    }
 
     .kuyam-footer ul {
-        float: none;
+        float: right;
     }
 
     .kuyam-footer ul li {
-        float: none;
+        float: left;
         display: inline-block;
-        margin: 0 15px 20px;
+        margin: 0 0 0 20px;
     }
 
     .kuyam-footer ul li:last-child {
@@ -61,10 +66,9 @@
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
     .kuyam-footer{
         min-height:46px;
-        padding:0;
     }
     .kuyam-footer .container{
         padding-top: 13px;
@@ -73,15 +77,5 @@
     .kuyam-footer p{
         font-size: 0.5625em;
         line-height: 9px;
-        margin: 0;
-        text-align: left;
-    }
-    .kuyam-footer ul{
-        float: right;
-    }
-    .kuyam-footer ul li{
-        margin-bottom:0;
-        margin-right: 0;
-        float:left;
     }
 }
