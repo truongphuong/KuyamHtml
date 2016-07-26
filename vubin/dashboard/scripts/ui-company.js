@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    if (wScreen > 1023) {
-        $('.kuyam-sidebar').css({ 'max-width': wScreen / 7 });
-    } else {
-        $('.kuyam-sidebar').css({ 'max-width': wScreen });
-    }
+    maxWidthSideSub();
 
     $('.kuyam-sidebar li  a[data-dropdown="true"]').click(function(e){
         e.preventDefault();
@@ -18,9 +14,5 @@ $(document).ready(function () {
 });
 
 $(window).on('resize', function () {
-    if (wScreen > 1023) {
-        $('.kuyam-sidebar').css({ 'max-width': wScreen / 7 });
-    } else {
-        $('.kuyam-sidebar').css({ 'max-width': wScreen });
-    }
+    maxWidthSideSub();
 });

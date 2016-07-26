@@ -1,3 +1,15 @@
+function minHeightCalendar() {
+    var hScreen = $(window).height(),
+        hHeader = $('.kuyam-header').outerHeight(),
+        hFooter = $('.kuyam-footer').height();
+    if ($('.calendar-page').length !== 0) {
+        $('.calendar-page').css({ 'width': $(window).width() });
+    }
+    if ($('#calendarDaysWrap').length !== 0 && $(window).width() > 1023) {
+        $('#calendarDaysWrap').css({ 'min-height': hScreen - hHeader - hFooter - 110 });
+    }
+}
+
 function iscrollSelectTabs(tabContentID) {
     $('.txt-date').val('03/10/2016').change();
 
@@ -243,9 +255,7 @@ function less1024() {
 }
 
 $(document).ready(function () {
-	/*$('#divStaffCalendar select').on('shown.bs.select', function (e) {
-		$('#iscrollStaffCalendar').niceScroll({touchbehavior:true});
-	});*/
+	minHeightCalendar();
 
     iscrollSelectModal('divStaffCalendar', 'iscrollStaffCalendar', 'addStaffModal');
 
@@ -353,6 +363,8 @@ $(document).ready(function () {
 });
 
 $(window).on('resize', function () {
+    minHeightCalendar();
+
     more1023();
     less1024();
 });
