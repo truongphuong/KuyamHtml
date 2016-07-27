@@ -11,9 +11,51 @@
 .company-notifications .kuyam-form footer{
     padding: 21px 0;
 }
+.company-notifications .cols-email{
+    float: right;
+}
 
 @media (max-width: 1023px) {
     .company-notifications .kuyam-form{
         width: auto;
+        padding:0;
+    }
+    .company-notifications .mobile-section p{
+        text-align:center;
+    }
+    .company-notifications .form-control{
+        float:left;
+        width: calc(100% - 35px);
+    }
+    .company-notifications .cb-custom{
+        float:right;
+        width: 35px;
+        height: 43px;
+        padding-top: 5px;
+        padding-left: 15px;
+        line-height: 0;
+    }
+    .company-notifications .cb-mark ~ .cb-label{
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 0;
+        padding:0;
+    }
+    .company-notifications .cb-mark ~ .cb-label:before{
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/dashboard/company/mobile/icon-check.png);
+        background-size: 20px auto;
+        top:0;
+    }
+    .company-notifications .cb-mark:checked ~ .cb-label:before{
+        background-image: url(../images/dashboard/company/mobile/icon-checked.png);
+    }
+    .company-notifications .kuyam-form footer{
+        padding: 10px 0;
+    }
+    .company-notifications footer div[class*="col-"]{
+        margin-bottom:0;
     }
 }

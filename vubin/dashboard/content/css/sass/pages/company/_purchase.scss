@@ -33,11 +33,13 @@
 .company-purchase .photo-list li{
     float:left;
     width: 16.6667%;
-    height: 126px;
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+.company-purchase .photo-list li .img-transparent{
+    width: 100%;
 }
 .company-purchase .photo-list li .photo{
     display: block;
@@ -141,15 +143,22 @@
     .company-purchase .kuyam-form .search-form .form-control{
         width: 100%;
     }
-}
 
-@media (max-width: 1023px){
     .company-purchase .kuyam-form{
         width: inherit;
     }
 
+    .company-purchase .photo-list li{
+        width: 20%;
+    }
     .company-purchase .kuyam-form footer li,
     .company-purchase .kuyam-form footer li:last-child{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .company-purchase .photo-list li{
         width: 50%;
     }
 }

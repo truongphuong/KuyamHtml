@@ -37,11 +37,13 @@
 .company-gallery .photo-list li{
     float:left;
     width: 20%;
-    height: 118px;
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+.company-gallery .photo-list li .img-transparent{
+    width: 100%;
 }
 .company-gallery .photo-list li .photo{
     display: block;
@@ -55,7 +57,9 @@
 .company-gallery .photo-list li .border{
     display: none;
     border: 2px solid $positive;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top:0;
     height: 100%;
 }
 .company-gallery .photo-list li .caption{

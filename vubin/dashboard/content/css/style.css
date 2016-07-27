@@ -2424,40 +2424,17 @@ textarea.form-control:focus {
 .kuyam-footer a.link-terms {
   color: #fff; }
 
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .kuyam-footer {
-    text-align: center;
-    font-size: .85em; }
+    padding: 0;
+    min-height: 58px; }
 
   .kuyam-footer .container {
     padding-top: 20px;
     padding-bottom: 20px; }
 
-  .kuyam-footer ul {
-    float: none; }
-
-  .kuyam-footer ul li {
-    float: none;
-    display: inline-block;
-    margin: 0 15px 20px; }
-
-  .kuyam-footer ul li:last-child {
-    display: none; }
-
-  .kuyam-footer {
-    line-height: 140%; } }
-@media (max-width: 768px) {
-  .kuyam-footer {
-    min-height: 46px;
-    padding: 0; }
-
-  .kuyam-footer .container {
-    padding-top: 13px;
-    padding-bottom: 0; }
-
   .kuyam-footer p {
-    font-size: 0.5625em;
-    line-height: 9px;
+    font-size: .85em;
     margin: 0;
     text-align: left; }
 
@@ -2465,9 +2442,26 @@ textarea.form-control:focus {
     float: right; }
 
   .kuyam-footer ul li {
-    margin-bottom: 0;
-    margin-right: 0;
-    float: left; } }
+    float: left;
+    display: inline-block;
+    margin: 0 0 0 20px; }
+
+  .kuyam-footer ul li:last-child {
+    display: none; }
+
+  .kuyam-footer {
+    line-height: 140%; } }
+@media (max-width: 767px) {
+  .kuyam-footer {
+    min-height: 46px; }
+
+  .kuyam-footer .container {
+    padding-top: 13px;
+    padding-bottom: 0; }
+
+  .kuyam-footer p {
+    font-size: 0.5625em;
+    line-height: 9px; } }
 .kuyam-section {
   overflow: hidden;
   position: relative; }
@@ -2732,10 +2726,7 @@ textarea.form-control:focus {
   min-width: 194px; }
 
 .subnav-content {
-  position: relative;
-  height: 100%;
-  padding-top: 71px;
-  padding-bottom: 10px; }
+  position: relative; }
 
 .subnav-content .search-section {
   width: 100%;
@@ -2779,10 +2770,7 @@ textarea.form-control:focus {
 
 .subnav-content .add-link-section {
   width: 100%;
-  padding: 28px 24px 0;
-  left: 0;
-  position: absolute;
-  top: 0;
+  padding: 28px 24px 21px;
   text-align: center; }
 
 .subnav-content .add-link {
@@ -2800,7 +2788,8 @@ textarea.form-control:focus {
 
 .subnav-list {
   position: relative;
-  height: 100%;
+  height: 0;
+  padding-bottom: 5px;
   overflow: hidden; }
 
 .on-nicescroll .subnav-list .wrap-dropdown-menu-inner {
@@ -3231,6 +3220,9 @@ textarea.form-control:focus {
 .no-data .btn {
   width: 388px; }
 
+@media (max-width: 1023px) {
+  .kuyam-content .no-data-section .legend {
+    margin-bottom: 0; } }
 .form-timepicker {
   position: relative; }
 
@@ -4666,11 +4658,13 @@ textarea.form-control:focus {
 .company-gallery .photo-list li {
   float: left;
   width: 20%;
-  height: 118px;
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
   cursor: pointer; }
+
+.company-gallery .photo-list li .img-transparent {
+  width: 100%; }
 
 .company-gallery .photo-list li .photo {
   display: block;
@@ -4684,7 +4678,9 @@ textarea.form-control:focus {
 .company-gallery .photo-list li .border {
   display: none;
   border: 2px solid #3891ff;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
   height: 100%; }
 
 .company-gallery .photo-list li .caption {
@@ -4834,11 +4830,13 @@ textarea.form-control:focus {
 .company-purchase .photo-list li {
   float: left;
   width: 16.6667%;
-  height: 126px;
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
   cursor: pointer; }
+
+.company-purchase .photo-list li .img-transparent {
+  width: 100%; }
 
 .company-purchase .photo-list li .photo {
   display: block;
@@ -4937,13 +4935,19 @@ textarea.form-control:focus {
     width: auto; }
 
   .company-purchase .kuyam-form .search-form .form-control {
-    width: 100%; } }
-@media (max-width: 1023px) {
+    width: 100%; }
+
   .company-purchase .kuyam-form {
     width: inherit; }
 
+  .company-purchase .photo-list li {
+    width: 20%; }
+
   .company-purchase .kuyam-form footer li,
   .company-purchase .kuyam-form footer li:last-child {
+    width: 50%; } }
+@media (max-width: 767px) {
+  .company-purchase .photo-list li {
     width: 50%; } }
 @media (min-device-width: 320px) {
   .company-purchase .photo-list li:focus a,
@@ -5142,9 +5146,51 @@ textarea.form-control:focus {
 .company-notifications .kuyam-form footer {
   padding: 21px 0; }
 
+.company-notifications .cols-email {
+  float: right; }
+
 @media (max-width: 1023px) {
   .company-notifications .kuyam-form {
-    width: auto; } }
+    width: auto;
+    padding: 0; }
+
+  .company-notifications .mobile-section p {
+    text-align: center; }
+
+  .company-notifications .form-control {
+    float: left;
+    width: calc(100% - 35px); }
+
+  .company-notifications .cb-custom {
+    float: right;
+    width: 35px;
+    height: 43px;
+    padding-top: 5px;
+    padding-left: 15px;
+    line-height: 0; }
+
+  .company-notifications .cb-mark ~ .cb-label {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0;
+    padding: 0; }
+
+  .company-notifications .cb-mark ~ .cb-label:before {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/dashboard/company/mobile/icon-check.png);
+    background-size: 20px auto;
+    top: 0; }
+
+  .company-notifications .cb-mark:checked ~ .cb-label:before {
+    background-image: url(../images/dashboard/company/mobile/icon-checked.png); }
+
+  .company-notifications .kuyam-form footer {
+    padding: 10px 0; }
+
+  .company-notifications footer div[class*="col-"] {
+    margin-bottom: 0; } }
 .company-settings .kuyam-form {
   width: 680px;
   padding: 2px 0; }
@@ -5157,7 +5203,8 @@ textarea.form-control:focus {
 
 @media (max-width: 1023px) {
   .company-settings .kuyam-form {
-    width: auto; } }
+    width: auto;
+    padding: 0; } }
 .company-password .kuyam-form {
   width: 680px;
   padding: 0; }
@@ -5187,8 +5234,8 @@ textarea.form-control:focus {
   .company-working .kuyam-form {
     padding: 0;
     width: auto; } }
-.manage-staff .subnav-content {
-  padding-top: 55px; }
+.manage-staff .subnav-content .add-link-section {
+  padding-bottom: 4px; }
 
 .manage-staff .subnav-content .search-section {
   padding-bottom: 15px; }
@@ -5467,8 +5514,8 @@ textarea.form-control:focus {
 
   .manage-packages .no-data .btn {
     width: 100%; } }
-.manage-client .subnav-content {
-  padding-top: 55px; }
+.manage-client .subnav-content .add-link-section {
+  padding-bottom: 4px; }
 
 .manage-client .subnav-content .search-section {
   padding-bottom: 15px; }
