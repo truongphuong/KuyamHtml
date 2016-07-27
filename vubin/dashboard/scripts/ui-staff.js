@@ -18,9 +18,6 @@ $(document).ready(function () {
         }
     });
 
-    iscrollSelectK('#selectServiceProvide', '#iscrollServiceProvide');
-    iscrollSelectK('#selectClassTeach', '#iscrollClassTeach');
-
     $('#chosenServicePerson').chosen();
 
     $('#chosenServicePerson1').chosen({

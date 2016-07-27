@@ -3356,8 +3356,8 @@ textarea.form-control:focus {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 150px;
-  border: 1px solid #979797;
+  width: 100%;
+  border-bottom: 1px solid #979797;
   font-size: 16px; }
 
 .form-time ul.clearfix > li {
@@ -3384,15 +3384,33 @@ textarea.form-control:focus {
 .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
   border: 0 none;
+  border-left: 1px solid #979797;
   height: 38px; }
+
+.form-time .form-select .bootstrap-select .filter-option {
+  text-align: center; }
 
 .form-time .form-select .bootstrap-select div.dropdown-menu {
   margin-top: 0;
-  left: 1px; }
+  border-right: 0 none; }
 
 .form-time .form-select .bootstrap-select .dropdown-menu > li.selected {
   display: none; }
 
+@media (max-width: 767px) {
+  .form-time ul.clearfix > li > input[type="text"] {
+    height: 42px; }
+
+  .form-time .form-select .bootstrap-select > .btn,
+  .form-time .form-select .bootstrap-select > .btn:focus,
+  .form-time .form-select .bootstrap-select > .btn:active,
+  .form-time .form-select .bootstrap-select > .btn-default.disabled,
+  .form-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+  .form-time .form-select .bootstrap-select > .btn-default.disabled:active,
+  .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+  .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+  .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    height: 40px; } }
 .working-section .td {
   vertical-align: middle; }
 
@@ -4857,10 +4875,12 @@ textarea.form-control:focus {
   margin-bottom: 10px;
   cursor: pointer; }
 
-.company-purchase .photo-list li .img-transparent {
+.company-purchase .photo-list li .img-transparent,
+.company-purchase .photo-list .photo-item .img-transparent {
   width: 100%; }
 
-.company-purchase .photo-list li .photo {
+.company-purchase .photo-list li .photo,
+.company-purchase .photo-list .photo-item .photo {
   display: block;
   position: relative;
   width: 100%;
@@ -4869,7 +4889,8 @@ textarea.form-control:focus {
   background-size: cover;
   position: relative; }
 
-.company-purchase .photo-list a {
+.company-purchase .photo-list li a,
+.company-purchase .photo-list .photo-item a {
   text-align: center;
   position: absolute;
   width: 100%;
@@ -4886,21 +4907,27 @@ textarea.form-control:focus {
 .company-purchase .photo-list strong {
   font-weight: 700; }
 
-.company-purchase .photo-list a .table-css {
+.company-purchase .photo-list li a .table-css,
+.company-purchase .photo-list .photo-item a .table-css {
   width: 100%;
   height: 100%; }
 
-.company-purchase .photo-list a .td {
+.company-purchase .photo-list a .td,
+.company-purchase .photo-list .photo-item .td {
   vertical-align: middle; }
 
-.company-purchase .photo-list li:hover a {
+.company-purchase .photo-list li:hover a,
+.company-purchase .photo-list .photo-item:hover a {
   display: block; }
 
-.company-purchase .search-section {
+.company-purchase .search-section,
+.company-purchase .popular-section {
   padding-top: 8px;
-  padding-bottom: 22px; }
+  padding-bottom: 22px;
+  width: 670px; }
 
-.company-purchase .search-section .form-label {
+.company-purchase .search-section .form-label,
+.company-purchase .popular-section .form-label {
   margin-bottom: 8px; }
 
 .company-purchase .search-section .controls {
@@ -4951,6 +4978,51 @@ textarea.form-control:focus {
 
 .company-purchase .kuyam-form footer li:last-child {
   width: 217px; }
+
+.company-purchase .search-section .photo-list {
+  position: relative;
+  overflow: hidden; }
+
+.company-purchase .search-section .photo-ul {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.company-purchase .search-section .owl-item {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.company-purchase .search-section .photo-list .list-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35px;
+  cursor: pointer; }
+
+.company-purchase .search-section .photo-list .list-control .icon {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  height: 30px;
+  margin-top: -15px;
+  background: url(../images/dashboard/company/icon-owl.png) center center no-repeat;
+  background-size: 15px auto; }
+
+.company-purchase .search-section .photo-list .list-control.next {
+  right: 0;
+  background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x; }
+
+.company-purchase .search-section .photo-list .list-control.next .icon {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.company-purchase .search-section .photo-list .list-control.prev {
+  left: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 100%);
+  background-repeat: repeat-x; }
 
 @media (max-width: 1023px) {
   .company-purchase .photo-section {
