@@ -1,7 +1,7 @@
 $(document).ready(function () {
     maxWidthSideSub();
 
-    $('.kuyam-sidebar li  a[data-dropdown="true"]').click(function(e){
+    /*$('.kuyam-sidebar li  a[data-dropdown="true"]').click(function(e){
         e.preventDefault();
         var thisOpen = $(this).closest('li').hasClass('open');
         $('.kuyam-sidebar li  a[data-dropdown="true"]').closest('li').removeClass('open');
@@ -10,7 +10,7 @@ $(document).ready(function () {
         }else{
             $(this).closest('li').addClass('open');
         }
-    });
+    });*/
 });
 
 $(window).on('resize', function () {
