@@ -5,8 +5,8 @@
     margin:0;
     padding:0;
     list-style: none;
-    width: 150px;
-    border: 1px solid #979797;
+    width: 100%;
+    border-bottom: 1px solid #979797;
     font-size: 16px;
 }
 .form-time ul.clearfix > li{
@@ -33,12 +33,33 @@
 .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
     border: 0 none;
+    border-left: 1px solid #979797;
     height: 38px;
+}
+.form-time .form-select .bootstrap-select .filter-option{
+    text-align:center;
 }
 .form-time .form-select .bootstrap-select div.dropdown-menu{
     margin-top:0;
-    left:1px;
+    border-right: 0 none;
 }
 .form-time .form-select .bootstrap-select .dropdown-menu > li.selected{
     display: none;
+}
+
+@media (max-width: 767px){
+    .form-time ul.clearfix > li > input[type="text"]{
+        height: 42px;
+    }
+    .form-time .form-select .bootstrap-select > .btn,
+    .form-time .form-select .bootstrap-select > .btn:focus,
+    .form-time .form-select .bootstrap-select > .btn:active,
+    .form-time .form-select .bootstrap-select > .btn-default.disabled,
+    .form-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .form-time .form-select .bootstrap-select > .btn-default.disabled:active,
+    .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+        height: 40px;
+    }
 }

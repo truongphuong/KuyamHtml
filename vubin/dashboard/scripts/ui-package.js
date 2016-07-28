@@ -11,6 +11,12 @@ $(document).ready(function () {
             $(this).addClass('added');
         }
     });
+
+    $('#chosenServicePerson').chosen();
+
+    $('#chosenServicePerson1').chosen({
+        isShowDropDown: true
+    });
 });
 
 $(window).on('resize', function () {
