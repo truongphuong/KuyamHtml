@@ -2155,21 +2155,18 @@ textarea.form-control:focus {
   font-size: 1em; }
 
 .radio-mark:checked ~ .radio-label:before {
-  border: 4px solid #000000; }
+  background-image: url(../images/dashboard/checked.png); }
 
 .radio-mark ~ .radio-label:before {
   content: '';
   display: block;
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
   vertical-align: middle;
   position: absolute;
-  background: #fff;
-  border: 2px solid #dcdcdc;
-  top: 3px;
+  width: 27px;
+  height: 29px;
+  background: url(../images/dashboard/check.png) center center no-repeat;
+  background-size: 27px auto;
+  top: 4px;
   left: 0;
   cursor: pointer; }
 
@@ -5930,6 +5927,17 @@ textarea.form-control:focus {
     float: none; } }
 .manage-promos form {
   width: 664px; }
+
+.manage-promos .radio-custom {
+  float: left;
+  width: 34px; }
+
+.manage-promos .radio-mark ~ .radio-label::before {
+  top: -5px; }
+
+.manage-promos .input-currency {
+  float: left;
+  width: calc(100% - 34px); }
 
 @media (max-width: 1023px) {
   .manage-promos form {
