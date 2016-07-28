@@ -475,22 +475,23 @@
 						<!-- .kuyam-content -->
 						<div class="kuyam-content">
                             <div class="kuyam-form">
-    							<form>
+
+                                <form id="infoForm">
                                     <section class="mobile-section">
-        								<div class="legend">Edit promo 1</div>
-        								<div class="row">
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="txtTilePromo">Title <span class="txt-required">*</span></label>
+                                        <div class="legend">adding a promo code</div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label" for="txtTilePromo">Title <span class="txt-required">*</span></label>
                                                 <input type="text" class="form-control" id="txtTilePromo" placeholder="Promo title" />
-        									</div>
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="txtCodePromo">Promo code</label>
-        										<input type="text" class="form-control" id="txtCodePromo" placeholder="Example: TENPERCENT" />
-        									</div>
-        								</div>
-        								<div class="row">
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="selectServicePromo">For which service?</label>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label" for="txtCodePromo">Promo code</label>
+                                                <input type="text" class="form-control" id="txtCodePromo" placeholder="Example: TENPERCENT" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label" for="selectServicePromo">For which service?</label>
 
                                                 <!-- .form-select -->
                                                 <div id="divServicePromo" class="form-select form-select-search2">
@@ -750,16 +751,30 @@
                                                 </div>
                                                 <!-- /.form-select -->
 
-        									</div>
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="txtRepeatCodePromo">Repeat the promo code</label>
-        										<input type="text" class="form-control" id="txtRepeatCodePromo" placeholder="Repeat the code" />
-        									</div>
-        								</div>
-        								<div class="row">
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="txtDiscountPromo">Discount amount</label>
-
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label" for="txtRepeatCodePromo">Repeat the promo code</label>
+                                                <input type="text" class="form-control" id="txtRepeatCodePromo" placeholder="Repeat the code" />
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <footer>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                               <input type="button" value="Back" class="btn btn-form btn-neutral visible-1023" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input id="btnDiscount" type="button" value="Next" class="btn btn-form btn-agree" />
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </form>
+                                <form id="discountForm" class="hide">
+                                    <section class="mobile-section">
+                                        <div class="legend">adding a promo code</div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label">Discount amount</label>
                                                 <div class="row">
                                                     <div class="col-xs-6">
                                                         <span class="radio-custom">
@@ -782,19 +797,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-        									</div>
-        									<div class="col-xs-12 col-sm-6">
-        										<label class="form-label" for="txtQuantityPromo">Quanlity</label>
-        										<input type="text" class="form-control" id="txtQuantity" placeholder="Quantity a promo code" />
-        									</div>
-        								</div>
-        								<div class="row">
-        									<div class="col-xs-6 col-sm-3">
-        										<label class="form-label" for="txtStartDatePromo">Start date</label>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6">
+                                                <label class="form-label" for="txtQuantityPromo">Quanlity</label>
+                                                <input type="text" class="form-control" id="txtQuantity" placeholder="Quantity a promo code" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-3">
+                                                <label class="form-label" for="txtStartDatePromo">Start date</label>
                                                 <span class="form-timepicker">
-        										  <input type="text" class="form-control txt-date" id="txtStartDate" />
+                                                  <input type="text" class="form-control txt-date" id="txtStartDate" />
                                                 </span>
-        									</div>
+                                            </div>
                                             <div class="col-xs-6 col-sm-3">
                                                 <label class="form-label" for="txtStartTimePromo">Start time</label>
                                                 <div class="form-time">
@@ -833,26 +848,28 @@
                                                     </ul>
                                                 </div>
                                             </div>
-        								</div>
-                                    </section>
-    								<footer>
-                                        <div class="row">
-                                            <div class="col-xs-6">
-        									   <input type="button" value="Make in active" class="btn btn-form btn-agree" />
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <input type="button" value="Save changes" class="btn btn-form btn-agree" />
-                                            </div>
                                         </div>
+                                    </section>
+                                    <footer>
                                         <div class="row">
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12 col-lg-6">
+                                               <input type="button" value="Make in active" class="btn btn-form btn-agree" />
+                                            </div>
+                                            <div class="col-xs-12 col-lg-6 visible-1023">
+                                                <input type="button" value="Delete this promo" class="btn btn-form btn-disagree" data-target="#deleteModal" data-toggle="modal" />
+                                            </div>
+                                            <div class="col-xs-6 pull-right">
+                                                <input type="button" value="Save promo" class="btn btn-form btn-agree" />
                                             </div>
                                             <div class="col-xs-6">
+                                                <input id="btnInfo" type="button" value="Back" class="btn btn-form btn-neutral" />
+                                            </div>
+                                            <div class="col-xs-6 hidden-1023">
                                                 <input type="button" value="Delete this promo" class="btn btn-form btn-disagree" data-target="#deleteModal" data-toggle="modal" />
                                             </div>
                                         </div>
-    								</footer>
-    							</form>
+                                    </footer>
+                                </form>
                             </div>
 						</div>
 						<!-- /.kuyam-content -->
@@ -2775,6 +2792,17 @@
 	<script type="text/javascript" src="scripts/ui-promo.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navManage').className = "active";
+
+        $(document).ready(function(){
+            $('#btnDiscount').click(function(){
+                $('#infoForm').addClass('hide');
+                $('#discountForm').removeClass('hide');
+            });
+            $('#btnInfo').click(function(){
+                $('#infoForm').removeClass('hide');
+                $('#discountForm').addClass('hide');
+            });
+        });
 	</script>
     <!-- InstanceEndEditable -->
 

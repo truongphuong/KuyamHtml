@@ -233,7 +233,7 @@
 						<!-- .kuyam-content -->
 						<div class="kuyam-content">
                             <div class="kuyam-form">
-    							<form>
+    							<form id="infoForm">
                                     <section class="mobile-section">
         								<div class="legend">adding a package</div>
         								<div class="row">
@@ -538,6 +538,21 @@
 
         									</div>
         								</div>
+                                    </section>
+    								<footer>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                               <input type="button" value="Back" class="btn btn-form btn-neutral visible-1023" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input id="btnPhoto" type="button" value="Next" class="btn btn-form btn-agree" />
+                                            </div>
+                                        </div>
+    								</footer>
+    							</form>
+                                <form id="photoForm" class="hide">
+                                    <section class="mobile-section">
+                                        <div class="legend">adding a package</div>
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <section class="photo-section">
@@ -623,24 +638,26 @@
                                             </div>
                                         </div>
                                     </section>
-    								<footer>
+                                    <footer>
                                         <div class="row">
-                                            <div class="col-xs-6">
-        									   <input type="button" value="Make active" class="btn btn-form btn-agree hide" data-target="#deleteModal" data-toggle="modal" />
+                                            <div class="col-xs-12 col-lg-6 hide">
+                                               <input type="button" value="Make active" class="btn btn-form btn-agree" data-target="#deleteModal" data-toggle="modal" />
                                             </div>
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12 visible-1023 hide">
+                                               <input type="button" value="Delete this package" class="btn btn-form btn-disagree" data-target="#deleteModal" data-toggle="modal" />
+                                            </div>
+                                            <div class="col-xs-6 pull-right">
                                                 <input type="button" value="Add package" class="btn btn-form btn-agree" />
                                             </div>
-                                        </div>
-                                        <div class="row hide">
                                             <div class="col-xs-6">
+                                               <input class="btnInfo" type="button" value="Back" class="btn btn-form btn-neutral" />
                                             </div>
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-6 hidden-1023 hide">
                                                <input type="button" value="Delete this package" class="btn btn-form btn-disagree" data-target="#deleteModal" data-toggle="modal" />
                                             </div>
                                         </div>
-    								</footer>
-    							</form>
+                                    </footer>
+                                </form>
                             </div>
 						</div>
 						<!-- /.kuyam-content -->
@@ -2563,6 +2580,17 @@
 	<script type="text/javascript" src="scripts/ui-package.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navManage').className = "active";
+
+        $(document).ready(function(){
+            $('#btnPhoto').click(function(){
+                $('#infoForm').addClass('hide');
+                $('#photoForm').removeClass('hide');
+            });
+            $('#btnInfo').click(function(){
+                $('#infoForm').removeClass('hide');
+                $('#photoForm').addClass('hide');
+            });
+        });
 	</script>
     <!-- InstanceEndEditable -->
 
