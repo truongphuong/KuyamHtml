@@ -46,7 +46,77 @@
 <!-- === END SCRIPTS === -->
 </head>
 <body>
-	<div id="detech-devices">
+	<div id="ml-menu">
+		<div class="icon_mobile_close_menu"></div>		
+		<div class="menu__wrap">
+			 <a class="logo" title="" href="home.html"><img alt="" src="content/images/icons_2016/header_logo_kuyam.png" /></a>
+				<ul class="menu__level1 hidden">
+					<li class="menu__item"><a href="#">Lifestyle blog</a></li>
+					<li class="menu__item"><a href="#">How it works</a></li>
+					<li class="menu__item blue-item"><a href="#">Login</a></li>
+					<li class="menu__item blue-item"><a href="#">Signup</a></li>
+				</ul>
+					
+				<ul class="menu__level2">
+					<li class="menu__item username-item"><a href="#">Hi <span>Vubin</span></a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_dashboard btn_menu_dashboard">Company dashboard</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_search">Search</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_favourites">Favourites</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_receipt">Receipt history</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_appointments">Appointments<div class="badge">13</div></a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_gift btn_sub_item">Gift cards</a>
+					
+						<ul class="dropmenu-item-content">
+							<li class="menu__item"><a href="#">Buy gift card</a></li>
+							<li class="menu__item"><a href="#">Balance</a></li>
+						</ul>
+					
+					</li>
+					<li class="menu__item"><a href="#">Lifestyle blog</a></li>
+					<li class="menu__item"><a href="#">How it works</a></li>
+					<li class="menu__item "><a href="#">Settings</a></li>
+					<li class="menu__item "><a href="#" class="have-icon icon_mobile_add">Add a company</a></li>
+					<li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+				</ul>
+				
+				
+				<!-- Submenu 1 -->
+				<ul class="menu__level3">
+					<li class="menu__item back-item"><a href="#" class="have-icon icon_mobile_back btn_menu_back" >Back</a>
+					<li class="menu__item"><a href="#"  class="have-icon icon_mobile_manage btn_sub_item">Manage</a>
+						
+						<ul class="dropmenu-item-content">
+							<li class="menu__item"><a href="#">Staff</a></li>
+							<li class="menu__item"><a href="#">Services</a></li>
+							<li class="menu__item"><a href="#">Classes</a></li>
+						<li class="menu__item"><a href="#">Packages</a></li>
+						<li class="menu__item"><a href="#">Clients</a></li>
+						<li class="menu__item"><a href="#">Invoices</a></li>
+						<li class="menu__item"><a href="#">Promo codes</a></li>
+					</ul>
+				
+				</li>
+				<li class="menu__item"><a href="#" class="have-icon icon_mobile_company  btn_sub_item">Company</a>
+				
+					<ul class="dropmenu-item-content">
+						<li class="menu__item"><a href="#">Profile</a></li>
+						<li class="menu__item"><a href="#">Image gallery</a></li>
+						<li class="menu__item"><a href="#">Payments &amp; booking</a></li>
+						<li class="menu__item"><a href="#">Notifications</a></li>
+						<li class="menu__item"><a href="#">Settings</a></li>							
+					</ul>
+					
+				</li>
+				<li class="menu__item"><a href="#" class="have-icon icon_mobile_calendar">Calendar</a></li>
+				<li class="menu__item"><a href="#" class="have-icon icon_mobile_signout">Signout</a></li>
+			</ul>
+			
+		</div>
+		<div class="bg-fading"></div>
+	</div>
+
+
+	<div class="wrapper"><!-- remove id="detech-devices" -->
 		<!-- InstanceBeginEditable name="page" -->
     <!-- InstanceEndEditable -->
         
@@ -56,12 +126,12 @@
                     
                 <!-- .navbar-header -->
                 <div class="navbar-header">                	
-                    <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
+                    <div class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>       
+                    </div>       
                     <a title="" href="#" class="account-user on-device">hi, Kourosh!</a>         
                     <a class="logo" title="" href="home.html"><img alt="" src="content/images/icons_2016/header_logo_kuyam.png" /></a>
                                   
@@ -591,16 +661,14 @@
 	<!-- InstanceEndEditable -->
         
         <!-- .site-contact -->
-        <section id="contact" class="site-contact hidden-xs"> 
+        <section id="contact" class="site-contact"> 
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 "> 
                         <header class="section-header clearfix">
-                            <a class="logo" title="" href="#">
-                                <img alt="" src="content/images/icons_2016/footer_logo_kuyam.png" />
-                            </a>
                             
-                             <ul class="menu-footer">
+                            
+                             <ul class="menu-footer hidden">
                              	<li><a href="" title="">Favorites</a></li>
                                 <li><a href="" title="">Lifestyle blog</a></li>
                                 <li><a href="" title="">Company dashboard</a></li>
@@ -613,12 +681,14 @@
                        
                         <div class="site-address">
                             <ul>
+	                            <li><a class="logo" title="" href="#">
+                                <img alt="" src="content/images/icons_2016/footer_logo_kuyam.png" />
+                            	</a></li>
                             	<li class="contact-text">We love hearing your questions and feedback.<br/>Send us an email or give us a call!</li>
                                 <li class="icon-location">1901 Avenue of the Stars, Suite 1900<br /> Los Angeles, CA 90067</li>
                                 <li class="icon-phone">(310) 461-15151</li>
                                 <li class="icon-email"><a title="info@kuyam.com" href="mailto:info@kuyam.com">info@kuyam.com</a></li>
-                                <li class="terms on-device"><a title="terms of user" href="terms.html">terms of user</a> and <a title="privacy" href="terms.html#device-terms-tabs-2">privacy</a></li>	
-                                <li class="terms on-desktop visible-xs"><a title="terms of use" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">terms of use</a> and <a title="privacy" data-target="#modal-terms" data-toggle="modal" href="javascript:void(0);">privacy</a></li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -631,28 +701,20 @@
         <footer class="site-footer">  
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-7 col-sm-8">  	
-                        <p>Copyright © 2014 Kuyam Companies, Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
+                    <div class="col-xs-8">  	
+                        <p>Copyright © 2014 Kuyam Companies, Inc. All rights reserved. Patent pending.</p>
                     </div>
-                    <div class="col-xs-5 col-sm-4">
-                        <ul class="link-socials clearfix">                        
-                            <li><a title="Comment" href="#" target="_blank"><span class="footer_icon_comment off "></span></a></li>                        
-                            <li class="hidden-xs">
-                                <a  class="icon icon-facebook"title="Facebook" href="https://www.facebook.com/mykuyam" target="_blank">
-                                    <img src="content/images/icons_2016/footer_icon_facebook.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a title="Twitter" class="icon icon-twitter" href="https://twitter.com/mykuyam" target="_blank">
-                                    <img src="content/images/icons_2016/footer_icon_twitter.png" alt="">
-                                </a>
-                            </li>             
-                            <li class="visible-xs">
-                                <a class="icon icon-facebook" title="Facebook" href="https://www.facebook.com/mykuyam" target="_blank">
-                                    <img src="content/images/icons_2016/footer_icon_facebook.png" alt="">
-                                </a>
-                            </li>							
-                            <li class="hidden-xs"><a title="Terms of use and privacy" href="#" target="_blank"><p>Terms of use and privacy</p></a></li>                            
+                    <div class="col-xs-4">
+                        <ul class="link-socials clearfix">
+                        
+                        	<li><a target="_blank" href="#" title="Comment"><span class="footer_icon_comment off "></span></a></li>
+                        
+                            <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="" src="content/images/icons_2016/footer_icon_facebook.png" /></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="" src="content/images/icons_2016/footer_icon_twitter.png" /></a></li>
+                            
+                            <li class="hidden-xs"><a target="_blank" href="#" title="Terms of use and privacy"><p>Terms of use and privacy</p></a></li>
+                          
+                            
                         </ul>
                     </div>
                 </div>
@@ -662,7 +724,7 @@
     
     <div class="loading hide">
         <div>
-        	<div class="loader">Loading...</div>
+        	<div class="loader">Loading...</div>   
         </div>
     </div>
     <div class="light-box"></div>
