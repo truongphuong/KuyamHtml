@@ -102,6 +102,7 @@
 }
 .company-purchase .cart-section{
     padding-top: 8px;
+    width: 807px;
 }
 .company-purchase .cart-section .form-label{
     margin-bottom: 8px;
@@ -119,12 +120,15 @@
     color: #ff5656;
     font-weight: 700;
 }
+.company-purchase .cart-section .photo-list li{
+    width: 16.6667%;
+}
 
 .company-purchase .kuyam-form footer{
     text-align: left;
     padding: 34px 0;
 }
-.company-purchase .kuyam-form footer ul{
+.company-purchase .kuyam-form footer ul.nav-form{
     margin:0 -11px;
     padding:0;
     list-style:none;
@@ -135,12 +139,12 @@
 .company-purchase .kuyam-form footer .form-label strong{
     font-weight: 700;
 }
-.company-purchase .kuyam-form footer li{
+.company-purchase .kuyam-form footer ul.nav-form li{
     float:left;
     width: 136px;
     padding: 0 11px;
 }
-.company-purchase .kuyam-form footer li:last-child{
+.company-purchase .kuyam-form footer ul.nav-form li:last-child{
     width: 217px;
 }
 
@@ -189,7 +193,8 @@
 }
 
 @media (max-width: 1023px){
-    .company-purchase .photo-section{
+    .company-purchase .photo-section,
+    .company-purchase .cart-section{
         width: auto;
     }
 
@@ -204,8 +209,8 @@
     .company-purchase .photo-list li{
         width: 20%;
     }
-    .company-purchase .kuyam-form footer li,
-    .company-purchase .kuyam-form footer li:last-child{
+    .company-purchase .kuyam-form footer ul.nav-form li,
+    .company-purchase .kuyam-form footer ul.nav-form li:last-child{
         width: 50%;
     }
 }
