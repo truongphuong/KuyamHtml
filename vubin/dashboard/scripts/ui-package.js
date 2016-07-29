@@ -37,6 +37,17 @@ $(document).ready(function () {
     $("#searchSection .prev").click(function(){
         owl.trigger('owl.prev');
     });
+
+    var owl = $("#viewPackageOwl");
+
+    owl.owlCarousel({
+        pagination : true,
+        items : 1,
+        itemsDesktop : [1199,1], //5 items between 1000px and 901px
+        itemsDesktopSmall : [991,1], // betweem 900px and 601px
+        itemsTablet: [767,1], //2 items between 600 and 0
+        itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+    });
 });
 
 $(window).on('resize', function () {
