@@ -2738,7 +2738,10 @@ textarea.form-control:focus {
     display: none; }
 
   .kuyam-footer {
-    line-height: 140%; } }
+    line-height: 140%; }
+
+  .kuyam-footer ul li {
+    margin-left: 18px; } }
 @media (max-width: 767px) {
   .kuyam-footer {
     min-height: 46px; }
@@ -3216,6 +3219,204 @@ textarea.form-control:focus {
     position: absolute;
     left: -100%;
     height: 0; } }
+.mobile-section .search-section {
+  width: 100%;
+  padding-bottom: 20px; }
+
+.mobile-section .search-section .form-control,
+.mobile-section .search-section .form-control:focus {
+  height: 28px;
+  color: #3891ff;
+  padding-right: 25px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.75em;
+  border-color: rgba(36, 36, 36, 0.25);
+  background: url(../images/dashboard/icon-search.png) right center no-repeat;
+  background-size: 25px auto; }
+
+.mobile-section .search-section .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-weight: 400;
+  color: #242424;
+  opacity: 0.3; }
+
+.mobile-section .search-section .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 400;
+  color: #242424;
+  opacity: 0.3; }
+
+.mobile-section .search-section .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  font-weight: 400;
+  color: #242424;
+  opacity: 0.3; }
+
+.mobile-section .search-section .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 400;
+  color: #242424;
+  opacity: 0.3; }
+
+.mobile-list {
+  position: relative;
+  height: 334px;
+  padding-bottom: 5px;
+  overflow: hidden; }
+
+.mobile-list .scroll-content {
+  padding-right: 24px; }
+
+.on-nicescroll .mobile-list .wrap-dropdown-menu-inner {
+  max-height: 100%; }
+
+.on-device .mobile-list {
+  overflow-y: auto; }
+
+.mobile-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  word-wrap: break-word; }
+
+.mobile-ul > li {
+  clear: both;
+  border-bottom: 1px solid #ccc; }
+
+.mobile-ul[data-dropdown="false"] > li {
+  padding: 8px 0; }
+
+.mobile-ul > li > a:before, .mobile-ul > li > a:after {
+  content: "";
+  display: table; }
+
+.mobile-ul > li > a:after {
+  clear: both; }
+
+.mobile-ul > li > a {
+  display: block;
+  text-decoration: none;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  color: #242424;
+  zoom: 1;
+  padding: 8px 0; }
+
+.mobile-ul > li > a:hover {
+  background: transparent; }
+
+.mobile-ul[data-dropdown="false"] > li > a:hover {
+  text-transform: capitalize;
+  font-weight: 700 !important;
+  background: transparent; }
+
+.mobile-ul > li > a .text {
+  font-size: .8125em;
+  float: left;
+  display: inline-block;
+  margin-right: 5px; }
+
+.mobile-ul > li > a .text:first-letter {
+  text-transform: uppercase; }
+
+.mobile-ul[data-dropdown="false"] > li > a {
+  padding: 0;
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: .8125em;
+  text-transform: capitalize;
+  color: #555;
+  text-decoration: none; }
+
+.mobile-ul[data-dropdown="false"] > li > a .text {
+  float: none;
+  max-width: 100%;
+  margin-right: 0; }
+
+.mobile-ul > li > a .total {
+  float: left;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .6em;
+  line-height: 13px;
+  display: inline-block;
+  min-width: 13px;
+  height: 13px;
+  padding: 0 3px;
+  text-align: center;
+  border-radius: 6px;
+  background: #509cfe;
+  margin-top: 4px; }
+
+.mobile-ul > li > a .icon {
+  float: right;
+  height: 22px;
+  margin-right: 10px; }
+
+.mobile-ul > li.open > a .icon-collapse {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.mobile-ul > li ul {
+  display: none;
+  clear: both; }
+
+.mobile-ul > li li {
+  border-top: 1px solid #ccc;
+  padding: 8px 0; }
+
+.mobile-ul > li li a.text {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: .8125em;
+  text-transform: capitalize;
+  color: #555;
+  text-decoration: none; }
+
+.mobile-ul > li li a.text:hover {
+  background: transparent;
+  color: #3d91ff;
+  font-weight: 700; }
+
+.mobile-ul > li li.active a {
+  color: #3d91ff; }
+
+.mobile-ul[data-dropdown="false"] > li > a {
+  text-transform: capitalize; }
+
+.mobile-ul[data-dropdown="false"] > li.active > a {
+  font-family: Lato, sans-serif;
+  font-weight: 700; }
+
+.mobile-ul[data-dropdown="false"] > li > a .text {
+  float: none;
+  max-width: 100%;
+  margin-right: 0;
+  font-size: .875em; }
+
+.mobile-ul .icon {
+  width: 14px;
+  height: 14px; }
+
+.mobile-ul .action {
+  float: right;
+  padding-top: 3px;
+  padding-right: 10px; }
+
+.mobile-ul .icon-edit {
+  background-image: url(../images/dashboard/manage/icon-edit.png);
+  background-size: 14px auto; }
+
+.mobile-ul .icon-delete {
+  background-image: url(../images/dashboard/manage/icon-delete.png);
+  background-size: 12px auto;
+  margin-left: 15px; }
+
 .no-data {
   text-align: center;
   width: 388px;
@@ -4358,7 +4559,6 @@ textarea.form-control:focus {
 .block-personal.modal-dialog .modal-body {
   padding: 15px; }
 
-/*@import "sass/pages/calendar/working-section";*/
 .company-info .kuyam-form {
   width: 670px; }
 
@@ -5795,11 +5995,6 @@ textarea.form-control:focus {
   padding: 0;
   width: 806px; }
 
-.manage-packages .kuyam-form p {
-  font-size: 1.0625em;
-  color: #9b9b9b;
-  text-align: center; }
-
 .manage-packages .kuyam-form header {
   padding: 6px 0;
   margin-bottom: 2px; }
@@ -6015,13 +6210,14 @@ textarea.form-control:focus {
   overflow: hidden; }
 
 .package-view .owl-carousel {
-  position: relative; }
+  position: relative;
+  margin-bottom: 20px; }
 
 .package-view .owl-controls {
   width: 100%;
   position: absolute;
   bottom: 0;
-  margin-bottom: 0; }
+  margin-bottom: 10px; }
 
 .package-view .owl-theme .owl-controls .owl-page span {
   background: #fff;
@@ -6038,18 +6234,31 @@ textarea.form-control:focus {
 
 .package-view .package-title {
   font-family: "Lato", sans-serif;
-  font-size: 1.75em;
-  font-weight: 400; }
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 10px; }
 
 .package-view .package-price {
   font-family: "Lato", sans-serif;
-  font-size: 1.75em;
-  font-weight: 300; }
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 10px; }
 
 .package-view .package-des {
   font-family: "Lato", sans-serif;
-  font-size: 1.25em;
-  font-weight: 400; }
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 20px; }
+
+.package-view .package-control {
+  margin-bottom: 20px; }
+
+.package-view .package-control a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.0625em;
+  font-weight: 400;
+  color: #3891ff;
+  text-decoration: none; }
 
 .manage-client .subnav-content .add-link-section {
   padding-bottom: 4px; }
