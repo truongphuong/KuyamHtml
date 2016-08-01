@@ -511,3 +511,22 @@
         line-height: 19px;
     }
 }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .bootstrap-select.btn-group .btn .caret {
+        background-image: url(../images/dashboard/icon-select-blue@2x.png);
+    }
+
+    .bootstrap-select.btn-group .btn.disabled .caret {
+        background-image: url(../images/dashboard/icon-select-grey@2x.png);
+    }
+    .form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+        background-image: url(../images/icon_mark@2x.png);
+    }
+}

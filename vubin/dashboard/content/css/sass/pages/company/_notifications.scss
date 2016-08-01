@@ -59,3 +59,18 @@
         margin-bottom:0;
     }
 }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:1023px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:1023px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:1023px),
+only screen and (        min-device-pixel-ratio:1.25)      and (max-width:1023px),
+only screen and (              min-resolution:120dpi)      and (max-width:1023px),
+only screen and (               min-resolution:2dppx)      and (max-width:1023px){
+    .company-notifications .cb-mark ~ .cb-label:before{
+        background-image: url(../images/dashboard/company/mobile/icon-check@2x.png);
+    }
+    .company-notifications .cb-mark:checked ~ .cb-label:before{
+        background-image: url(../images/dashboard/company/mobile/icon-checked@2x.png);
+    }
+}

@@ -1,18 +1,18 @@
 .mobile-section .search-section{
     width:100%;
-    padding-bottom: 20px;
+    padding-bottom: 14px;
 }
 .mobile-section .search-section .form-control,
 .mobile-section .search-section .form-control:focus{
-    height: 28px;
+    height: 38px;
     color: $positive;
-    padding-right: 25px;
+    padding-right: 42px;
     font-weight: 700;
     font-style: italic;
-    font-size:$p;
+    font-size:$s13;
     border-color: rgba(36, 36, 36, .25);
-    background:url(../images/dashboard/icon-search.png) right center no-repeat;
-    background-size: 25px auto;
+    background:url(../images/dashboard/mobile/icon-search.png) right center no-repeat;
+    background-size: 42px auto;
 }
 .mobile-section .search-section .form-control::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -90,7 +90,7 @@
      background: transparent;
 }
 .mobile-ul > li > a .text{
-    font-size:.8125em;
+    font-size: $h6;
     float:left;
     display:inline-block;
     margin-right:5px;
@@ -178,6 +178,11 @@
     font-size:.875em;
 }
 
+.mobile-ul .icon.icon-collapse{
+    width: 18px;
+    background-image: url(../images/dashboard/mobile/icon-collapse.png);
+    background-size: 18px auto;
+}
 .mobile-ul .icon{
     width: 14px;
     height: 14px;
@@ -192,9 +197,79 @@
     background-image:url(../images/dashboard/manage/icon-edit.png);
     background-size:14px auto;
 }
-
 .mobile-ul .icon-delete{
     background-image:url(../images/dashboard/manage/icon-delete.png);
     background-size:12px auto;
-    margin-left: 15px;
+    margin-left: 40px;
+    margin-right: 2px;
+}
+
+@media (max-width: 1023px){
+    .mobile-ul > li > a{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mobile-section .search-section .form-control,
+    .mobile-section .search-section .form-control:focus{
+        height: 33px;
+        padding-right: 35px;
+        font-size:$s11;
+        background-size: 35px auto;
+    }
+
+    .mobile-list .nicescroll-rails{
+        margin-top:15px;
+    }
+}
+
+@media (max-width: 374px){
+    .mobile-ul > li > a{
+        padding-top: 9px;
+        padding-bottom: 8px;
+    }
+    .mobile-ul > li > a .text{
+        font-size: $s13;
+    }
+    .mobile-ul > li li a.text{
+        font-size: $s11;
+    }
+    .mobile-ul .icon.icon-collapse{
+        width: 15px;
+        background-size: 15px auto;
+    }
+    .mobile-ul .icon{
+        width: 12px;
+        height: 12px;
+    }
+    .mobile-ul .icon-edit{
+        background-size:12px auto;
+    }
+    .mobile-ul .icon-delete{
+        background-size:10px auto;
+        margin-left: 30px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .mobile-section .search-section .form-control,
+    .mobile-section .search-section .form-control:focus{
+        background-image:url(../images/dashboard/mobile/icon-search@2x.png);
+    }
+
+    .mobile-ul .icon.icon-collapse{
+        background-image: url(../images/dashboard/mobile/icon-collapse@2x.png);
+    }
+    .mobile-ul .icon-edit{
+        background-image:url(../images/dashboard/manage/icon-edit@2x.png);
+    }
+    .mobile-ul .icon-delete{
+        background-image:url(../images/dashboard/manage/icon-delete@2x.png);
+    }
 }
