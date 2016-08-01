@@ -51,6 +51,7 @@
     background: center center no-repeat;
     background-size: cover;
     position:relative;
+    cursor: pointer;
 }
 .company-purchase .photo-list li a,
 .company-purchase .photo-list .photo-item a{
@@ -60,12 +61,14 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
     top: 0;
-    display: none;
     font-size: $s11;
     color: $white;
     text-decoration: none;
     line-height: 26px;
     font-weight: 400;
+    transition:visibility 1s, opacity 1s;
+    visibility:hidden;
+    opacity:0;
 }
 .company-purchase .photo-list strong{
     font-weight: 700;
@@ -81,7 +84,8 @@
 }
 .company-purchase .photo-list li:hover a,
 .company-purchase .photo-list .photo-item:hover a{
-    display: block;
+    visibility:visible;
+    opacity:1;
 }
 .company-purchase .search-section,
 .company-purchase .popular-section{
@@ -222,8 +226,11 @@
 }
 
 @media (min-device-width: 320px){
+    .company-purchase .photo-list li:active a,
     .company-purchase .photo-list li:focus a,
-    .company-purchase .photo-list li:active a{
-        display: block;
+    .company-purchase .photo-list .photo-item:active a,
+    .company-purchase .photo-list .photo-item:focus a{
+        visibility:visible;
+        opacity:1;
     }
 }

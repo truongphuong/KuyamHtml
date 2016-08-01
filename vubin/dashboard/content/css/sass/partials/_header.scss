@@ -3,7 +3,7 @@
     border: 0 none;
     border-bottom: 1px solid #bebebe;
     margin-bottom: 0;
-    height: 59px;
+    min-height: 59px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -156,7 +156,7 @@
 @media (max-width: 1023px){
     .kuyam-header {
         z-index: 9;
-        height: 50px;
+        min-height: 45px;
     }
     .kuyam-header .navbar-header{
         float: none;
@@ -170,15 +170,39 @@
         display: block;
         float: right;
         cursor: pointer;
+        padding-top: 15px;
+        padding-bottom: 14px;
     }
 
     .kuyam-header .navbar-brand {
         width: 103px;
         background-size: 103px auto;
+        height: 45px;
+    }
+    .kuyam-header .navbar-brand img{
+        width: 100%;
     }
 
     .kuyam-header .navbar-nav {
         display: none;
+    }
+}
+
+@media (max-width: 374px){
+    .kuyam-header {
+        min-height: 38px;
+    }
+
+    .kuyam-header .navbar-toggle{
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    .kuyam-header .navbar-brand{
+        width: 65px;
+        height: 18px;
+        background-size: 65px auto;
+        padding-top: 19px;
+        padding-bottom: 19px;
     }
 }
 

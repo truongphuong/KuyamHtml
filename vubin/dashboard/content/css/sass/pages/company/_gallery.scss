@@ -88,7 +88,9 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
     top: 0;
-    display: none;
+    transition:visibility 1s, opacity 1s;
+    visibility:hidden;
+    opacity:0;
 }
 .company-gallery .photo-list .control .table-css{
     width: 100%;
@@ -115,7 +117,8 @@
     color: #ff4f4e;
 }
 .company-gallery .photo-list li:hover .control{
-    display: block;
+    visibility:visible;
+    opacity:1;
 }
 .company-gallery .photo-list li.added .border{
     display:block;
@@ -186,6 +189,7 @@
 @media (min-device-width: 320px){
     .company-gallery .photo-list li:active .controls,
     .company-gallery .photo-list li:focus .controls{
-        display: block;
+        visibility:visible;
+        opacity:1;
     }
 }

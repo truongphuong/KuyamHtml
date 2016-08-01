@@ -55,12 +55,14 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
     top: 0;
-    display: none;
     font-size: $s11;
     color: $white;
     text-decoration: none;
     line-height: 26px;
     font-weight: 400;
+    transition:visibility 1s, opacity 1s;
+    visibility:hidden;
+    opacity:0;
 }
 .manage-packages .photo-list strong{
     font-weight: 700;
@@ -76,7 +78,8 @@
 }
 .manage-packages .photo-list li:hover a,
 .manage-packages .photo-list .photo-item:hover a{
-    display: block;
+    visibility:visible;
+    opacity:1;
 }
 .manage-packages .search-section,
 .manage-packages .popular-section{
@@ -206,6 +209,10 @@
     .manage-packages .kuyam-form footer ul.nav-form li:last-child{
         width: 50%;
     }
+    .manage-packages .kuyam-form footer{
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
 }
 
 @media (max-width: 767px){
@@ -221,6 +228,10 @@
 @media (min-device-width: 320px){
     .manage-packages .photo-list li:focus a,
     .manage-packages .photo-list li:active a{
-        display: block;
+        visibility:visible;
+        opacity:1;
+    }
+    .manage-packages .kuyam-form footer{
+        padding-top: 13px;
     }
 }

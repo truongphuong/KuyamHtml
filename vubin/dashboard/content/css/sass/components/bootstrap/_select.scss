@@ -451,7 +451,10 @@
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
+    .form-select{
+        height: 39px;
+    }
     .form-select .bootstrap-select > .btn,
     .form-select .bootstrap-select > .btn:focus,
     .form-select .bootstrap-select > .btn:active,
@@ -462,7 +465,7 @@
     .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
     .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
         border-color: #747474;
-        height: 43px;
+        height: 39px;
     }
 
     /*.bootstrap-select.btn-group .btn .caret {
@@ -472,6 +475,10 @@
         background-image: url(../images/mobile/icon-select-blue.png);
         background-size: 8px auto;
     }*/
+    .form-select-search2 .bootstrap-select.btn-group .btn .filter-option,
+    .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+        font-size: $s14;
+    }
 
     .form-select-search.single-left .btn-personal {
         left: inherit;
@@ -481,5 +488,26 @@
     .form-select-search.single-left .bootstrap-select .dropdown-menu > li > a {
         padding-left: 10px;
         padding-right: 40px;
+    }
+}
+@media (max-width: 374px) {
+    .form-select{
+        height: 33px;
+    }
+    .form-select .bootstrap-select > .btn,
+    .form-select .bootstrap-select > .btn:focus,
+    .form-select .bootstrap-select > .btn:active,
+    .form-select .bootstrap-select > .btn-default.disabled,
+    .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .form-select .bootstrap-select > .btn-default.disabled:active,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+        height: 33px;
+    }
+    .form-select-search2 .bootstrap-select.btn-group .btn .filter-option,
+    .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+        font-size: $s11;
+        line-height: 19px;
     }
 }

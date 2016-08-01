@@ -32,10 +32,20 @@
     background-color: $white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .form-control,
     .form-control:focus {
-        height: 43px;
+        height: 39px;
         border-color: #747474;
+        font-size: $s14;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 374px) {
+    .form-control,
+    .form-control:focus {
+        height: 33px;
+        font-size: $s11;
     }
 }
