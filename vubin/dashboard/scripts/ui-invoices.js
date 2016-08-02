@@ -41,7 +41,7 @@ $(document).ready(function () {
             htmlVal += '</tr>';
             htmlVal += '<tr>';
             htmlVal += '<th valign="top">payment:</th>';
-            htmlVal += '<td valign="top"><span>paypal, gift card<br />Victoria Rodriguez</span></td>';
+            htmlVal += '<td valign="top"><span>paypal, gift card Victoria Rodriguez</span></td>';
             htmlVal += '</tr>';
             htmlVal += '</table>';
             return htmlVal;

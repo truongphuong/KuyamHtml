@@ -10,15 +10,24 @@
 
 .invoices-table .btn-download {
     float: right;
-    background: #b4b4b4;
-    color: $white;
-    width: 125px;
+    background: transparent;
+    color: $positive;
+    width: auto;
     height: 30px;
     font-family: $primary;
-    font-weight: 600;
-    font-size: $s15;
+    font-weight: 400;
+    font-size: 16px;
     padding: 0;
-    text-transform: capitalize;
+    box-shadow: none;
+}
+.invoices-table .btn-download .text{
+    font-size: $s15;
+}
+.invoices-table .btn-download .icon{
+    background-image: url(../images/dashboard/manage/icon-download.png);
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
 }
 
 .invoices-table form {
@@ -57,6 +66,11 @@
     font-weight: normal;
     font-family: $primary;
     font-weight: 400;
+    font-size: $s15;
+}
+.invoices-table .txt-date{
+    background-image: url(../images/dashboard/manage/icon_calendar_blue_2.png);
+    background-size: 35px auto;
 }
 
 .invoices-table .form-timepicker {
@@ -79,9 +93,9 @@
 }
 
 .invoices-table .bootstrap-table .form-control{
-    background:url(../images/icon_search_black.png) 8px center no-repeat;
-    background-size:19px auto;
-    padding-left: 31px;
+    background:url(../images/dashboard/manage/icon-search.png) right center no-repeat;
+    background-size:36px auto;
+    padding-right: 36px;
 }
 
 .invoices-table .table {
@@ -94,8 +108,11 @@
     border: 0 none;
     font-family: $primary;
     font-weight: 600;
-    text-transform: uppercase;
     font-size: $s13;
+}
+
+.invoices-table .table > thead > tr > th:first-letter{
+    text-transform: uppercase;
 }
 
 .invoices-table .page-list {
@@ -150,16 +167,16 @@
     }
 
 .invoices-table thead th .both {
-    background-image: url(../images/icon_sort.png);
+    background-image: url(../images/dashboard/manage/icon_sort.png);
     background-size: 36px auto;
 }
 
 .invoices-table thead th .asc {
-    background-image: url(../images/icon_asc.png);
+    background-image: url(../images/dashboard/manage/icon_asc.png);
 }
 
 .invoices-table thead th .desc {
-    background-image: url(../images/icon_desc.png);
+    background-image: url(../images/dashboard/manage/icon_desc.png);
 }
 
 .invoices-table tbody td {
@@ -208,29 +225,22 @@
     float: right;
     width: 20px;
     height: 20px;
-    background: url(../images/icon_next_black.png) center center no-repeat;
-    background-size: 7px auto;
+    background: url(../images/dashboard/icon-select-blue.png) center center no-repeat;
+    background-size: 13px auto;
 }
 
 .invoices-table .glyphicon-minus {
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
     .invoices-table .glyphicon-minus:before {
         content: '';
     }
 
-.invoices-table .glyphicon-plus {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
 
     .invoices-table .glyphicon-plus:before {
         content: '';
@@ -253,16 +263,22 @@
     }
 
 .invoices-table .detail-view .btn-print {
-    background: #b4b4b4;
+    background: transparent;
     font-size: $p;
     font-family: $primary;
     font-weight: 500;
-    color:$white;
+    color:$positive;
+    box-shadow: none;
 }
 
 .invoices-table .detail-view .icon {
     position: relative;
     bottom: -1px;
+    width: 11px;
+    height: 11px;
+    background-image: url(../images/dashboard/manage/icon-print.png);
+    background-size: 11px auto;
+    margin-right: 5px;
 }
 
 .invoices-table .pagination-info {
@@ -276,6 +292,7 @@
     font-family: $primary;
     font-weight: 500;
     color: $base;
+    background:transparent;
 }
 
     .invoices-table .fixed-table-pagination .pagination .disabled a,
@@ -289,6 +306,28 @@
     padding: 0 6px;
     margin: 0 0 0 5px;
 }
+.invoices-table .pagination > li.page-pre a{
+    display: block;
+    height: 20px;
+    width: 20px;
+    font-size: 0;
+    background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
+    background-size: 10px auto;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.invoices-table .pagination > li.page-next a{
+    font-size: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    font-size: 0;
+    background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
+    background-size: 10px auto;
+}
 
 .invoices-table .pagination > .active > a,
 .invoices-table .pagination > .active > span,
@@ -296,7 +335,9 @@
 .invoices-table .pagination > .active > span:hover,
 .invoices-table .pagination > .active > a:focus,
 .invoices-table .pagination > .active > span:focus {
-    background: #dcdcdc;
+    background:transparent;
+    color: $positive;
+    font-weight: 700;
 }
 
 @media (max-width: 1023px) {

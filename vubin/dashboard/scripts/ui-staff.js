@@ -29,4 +29,8 @@ $(document).ready(function () {
     $('#chosenClassTeacher1').chosen({
         isShowDropDown: true
     });
+
+    listFilterNew('#txtSearchClient', '#subnavList .subnav-ul', '#subnavList');
+
+    listFilterNew('#txtMobileSearchClient', '#mobileList .mobile-ul', '#mobileList');
 });

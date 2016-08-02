@@ -30,6 +30,34 @@ function refreshNiceScroll(sectionID){
     $(sectionID + " .wrap-dropdown-menu-inner").getNiceScroll().resize();
 }
 
+function listFilterNew(inputSearch, list, scrollID) {
+    var $object = $(inputSearch);
+    var filter = $object.val();
+    $object.change(function (e) {
+        e.preventDefault();
+        filter = $(this).val();
+        if (filter != null) {
+            //highlighted letters in the list when it match key
+            var match = new RegExp(this.value, 'gi');
+            $(list).find(".text").html(function () {
+                if (!filter) { return $(this).text(); }
+                return $(this).text().replace(match, '<u>$&</u>');
+            });
+            if (filter) {
+                $(list).find("li:not(:contains(" + filter + "))").hide();
+                $(list).find("li:contains(" + filter + ")").show();
+            } else {
+                $(list).find("li").show();
+            }
+            refreshNiceScroll(scrollID);
+        }
+        return false;
+    }).keyup(function () {
+        // fire the above change event after every letter
+        $(this).change();
+    });
+}
+
 function listFilter(inputSearch, list) {
     var $object = $(inputSearch);
     var filter = $object.val();
