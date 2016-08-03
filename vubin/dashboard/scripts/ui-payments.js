@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('.dl-list .radio-mark').each(function () {
         var isChecked = $(this).is(':checked');
         if (isChecked === true) {
-            $(this).closest('.dl-item-item').addClass('active');
+            $(this).closest('.dl-item').addClass('active');
         } else {
             $(this).closest('.dl-item').removeClass('active');
         }
