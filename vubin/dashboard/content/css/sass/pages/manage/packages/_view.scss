@@ -32,18 +32,21 @@
     font-size: $h4;
     font-weight: 400;
     margin-bottom: 10px;
+    color: #303030;
 }
 .package-view .package-price{
     font-family: $primary;
     font-size: $h4;
     font-weight: 300;
     margin-bottom: 10px;
+    color:#3d3d3d;
 }
 .package-view .package-des{
     font-family: $primary;
     font-size: $s17;
     font-weight: 400;
     margin-bottom: 20px;
+    color: #303030;
 }
 .package-view .package-control{
     margin-bottom: 20px;
@@ -54,4 +57,25 @@
     font-weight: 400;
     color: $positive;
     text-decoration: none;
+}
+
+@media (max-width: 1023px){
+    .package-view .owl-carousel{
+        margin-bottom: 15px;
+    }
+    .package-view .item{
+        height: 190px;
+    }
+    .package-view .package-title,
+    .package-view .package-price{
+        font-size: $h6;
+        margin-bottom: 5px;
+    }
+    .package-view .package-des{
+        font-size: $p;
+    }
+}
+
+@media (max-width: 374px){
+
 }

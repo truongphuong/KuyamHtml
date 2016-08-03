@@ -1578,14 +1578,16 @@ body.pr0 {
   border: 1px solid #979797;
   color: #242424;
   padding-bottom: 0;
-  padding-top: 0; }
+  padding-top: 0;
+  padding: 0; }
 
 .btn-form:hover {
   color: #242424;
   background: #fff;
   border-width: 2px;
   font-weight: 700;
-  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+  padding: 0; }
 
 .btn-agree,
 .btn-agree:focus {
@@ -1639,7 +1641,7 @@ button.close {
   height: 40px;
   width: 40px;
   background: url(../images/dashboard/icon-close.png) center center no-repeat;
-  background-size: 13px auto; }
+  background-size: 12px auto; }
 
 @media (max-width: 1023px) {
   .btn-form,
@@ -6841,19 +6843,22 @@ textarea.form-control:focus {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  color: #303030; }
 
 .package-view .package-price {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  color: #3d3d3d; }
 
 .package-view .package-des {
   font-family: "Lato", sans-serif;
   font-size: 1.0625em;
   font-weight: 400;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #303030; }
 
 .package-view .package-control {
   margin-bottom: 20px; }
@@ -6865,6 +6870,20 @@ textarea.form-control:focus {
   color: #3891ff;
   text-decoration: none; }
 
+@media (max-width: 1023px) {
+  .package-view .owl-carousel {
+    margin-bottom: 15px; }
+
+  .package-view .item {
+    height: 190px; }
+
+  .package-view .package-title,
+  .package-view .package-price {
+    font-size: 1em;
+    margin-bottom: 5px; }
+
+  .package-view .package-des {
+    font-size: 0.75em; } }
 .manage-client .subnav-content .add-link-section {
   padding-bottom: 4px; }
 
