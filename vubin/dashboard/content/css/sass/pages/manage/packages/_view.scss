@@ -6,7 +6,6 @@
 }
 .package-view .owl-carousel{
     position: relative;
-    margin-bottom: 20px;
 }
 .package-view .owl-controls{
     width: 100%;
@@ -26,6 +25,14 @@
     background: center center no-repeat;
     background-size: cover;
     height: 323px;
+}
+.package-view .package-details{
+    padding-top: 20px;
+    border: 1px solid #878787;
+    border-top: 0 none;
+    border-radius: 0 0 3px 3px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .package-view .package-title{
     font-family: $primary;
@@ -60,11 +67,23 @@
 }
 
 @media (max-width: 1023px){
+    .package-view{
+        margin-top: 28px;
+        margin-bottom: 14px;
+    }
     .package-view .owl-carousel{
-        margin-bottom: 15px;
     }
     .package-view .item{
         height: 190px;
+    }
+    .package-view .owl-controls{
+        margin-bottom: 5px;
+    }
+    .package-view .package-details{
+        padding-top: 15px;
+        padding-bottom: 3px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
     .package-view .package-title,
     .package-view .package-price{
@@ -73,9 +92,45 @@
     }
     .package-view .package-des{
         font-size: $p;
+        margin-bottom: 16px;
+    }
+    .package-view .package-control{
+        margin-bottom: 16px;
+    }
+    .package-view .package-control a{
+        font-size: $s14;
     }
 }
 
 @media (max-width: 374px){
-
+    .package-view{
+        margin-bottom: 9px;
+        margin-top: 24px;
+    }
+    .package-view .item{
+        height: 161px;
+    }
+    .package-view .owl-controls{
+        margin-bottom: 0;
+    }
+    .package-view .package-details{
+        padding-top: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .package-view .package-title,
+    .package-view .package-price{
+        font-size: $s13;
+        margin-bottom: 1px;
+    }
+    .package-view .package-des{
+        font-size: $s10;
+        margin-bottom: 8px;
+    }
+    .package-view .package-control{
+        margin-bottom: 12px;
+    }
+    .package-view .package-control a{
+        font-size: $p;
+    }
 }
