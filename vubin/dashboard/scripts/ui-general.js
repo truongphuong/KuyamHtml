@@ -274,19 +274,12 @@ function existSelect(sectionClass) {
 }
 
 function centerModals($element) {
-    var $modals;
-    if ($element.length) {
-        $modals = $element;
-    } else {
-        $modals = $('.modal-vcenter:visible');
-    }
-    $modals.each(function () {
-        var $clone = $(this).clone().css('display', 'block').appendTo('body');
-        var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-        top = top > 0 ? top : 0;
-        $clone.remove();
-        $(this).find('.modal-dialog').css("margin-top", top);
-    });
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(this).height() - $dialog.height()) / 2;
+    offset = offset > 0 ? offset : 0;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
 }
 
 function minHeightBody() {
@@ -502,9 +495,7 @@ $(document).ready(function () {
 
     siteHeader();
 
-    $(document).on('show.bs.modal', '.modal', function () {
-        centerModals($(this));
-    });
+    $('.modal').on('show.bs.modal', centerModals);
 
     var termActive;
     $('.link-terms').click(function (e) {
@@ -613,9 +604,7 @@ $(window).on('resize', function () {
 
     siteHeader();
 
-    $(document).on('shown.bs.modal', '.modal', function () {
-        centerModals($(this));
-    });
+    $('.modal:visible').each(centerModals);
 
     // prevent screen flashing when multiple modals shown
     $(document).on('hidden.bs.modal', '.modal', function () {
