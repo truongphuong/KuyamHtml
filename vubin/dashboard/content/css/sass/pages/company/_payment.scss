@@ -29,6 +29,7 @@
     font-weight: 300;
     font-style: italic;
     padding-left: 10px;
+    color: #9b9b9b;
 }
 .company-payment footer {
     text-align: left;
@@ -47,10 +48,10 @@
     margin-bottom: 60px !important;
 }
 .company-payment .payment-section .form-label {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
 }
 .company-payment .method-section .form-label {
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
 }
 .company-payment .method-section div[class*="col-"] {
     margin-bottom: 50px !important;
@@ -213,9 +214,14 @@
     .company-payment .form-label{
         color: $base;
         font-size: $s15;
+        margin-bottom: 7px;
     }
     .company-payment .form-control{
         width: 100%;
+    }
+    .company-payment .radio-list li{
+        margin-top: 0;
+        margin-bottom: 2px;
     }
     .company-payment .radio-mark ~ .radio-label{
         font-size: $s13;
@@ -224,8 +230,27 @@
         background-size: 25px auto;
         top: -2px;
     }
+    .company-payment .payment-section{
+        border-top: 4px solid #f5f5f5;
+        border-bottom: 4px solid #f5f5f5;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 8px;
+        padding: 20px 15px 17px;
+    }
+    .company-payment .method-section{
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 23px;
+        border-bottom: 4px solid #f5f5f5;
+    }
     .company-payment .policy-section p{
         font-weight: 400;
+        font-size: $s13;
+        line-height: 16px;
+        margin-bottom: 26px;
     }
     .company-payment .policy-section .dl-list{
         display: block;
@@ -243,8 +268,8 @@
         margin-top: 0;
     }
     .company-payment .policy-section .dl-list .dt{
-        padding-top: 5px;
-        height: 39px;
+        padding-top: 8px;
+        height: 43px;
     }
     .company-payment .policy-section .dl-list .dd{
         padding-top: 0;
@@ -260,7 +285,7 @@
     }
     .company-payment .policy-section .dl-list .dd.refund-policy{
         padding-top: 9px;
-        padding-bottom: 20px;
+        padding-bottom: 18px;
     }
     .company-payment .policy-section .dl-list > div.active{
         border:1px solid $positive;
@@ -310,5 +335,116 @@
     .company-payment .carousel-control.right,
     .company-payment .dl-item.active .carousel-control.right{
         background-image: url(../images/dashboard/company/mobile/icon-carousel-right.png);
+    }
+}
+
+@media (max-width: 374px){
+    .company-payment .form-label{
+        font-size: $s13;
+        margin-bottom: 4px;
+    }
+    .company-payment .radio-mark ~ .radio-label{
+        font-size: $s11;
+    }
+    .company-payment .radio-mark ~ .radio-label::before{
+        background-size: 21px auto;
+        top: -2px;
+    }
+    .company-payment .payment-section{
+        border-top: 3px solid #f5f5f5;
+        border-bottom: 3px solid #f5f5f5;
+        margin-top: 9px;
+        padding: 13px 15px 17px;
+    }
+    .company-payment .payment-section .form-label{
+        margin-bottom: 3px;
+    }
+    .company-payment .payment-section .radio-mark ~ .radio-label{
+        margin-bottom: 0;
+    }
+    .company-payment .method-section{
+        padding-bottom: 18px;
+        border-bottom: 3px solid #f5f5f5;
+        padding-top: 4px;
+    }
+    .company-payment .method-section .form-label{
+        margin-bottom: 3px;
+    }
+    .company-payment .method-section .radio-mark ~ .radio-label{
+        margin-bottom: 0;
+    }
+    .company-payment .policy-section{
+        padding-top: 1px;
+    }
+    .company-payment .policy-section .form-label{
+        margin-bottom: 5px;
+    }
+    .company-payment .policy-section p{
+        font-size: $s11;
+        line-height: 14px;
+        margin-bottom: 20px;
+    }
+    .company-payment .policy-section .dl-list > div{
+        margin-top: 22px;
+    }
+    .company-payment .policy-section .dl-list > div:nth-child(2){
+        margin-top: 0;
+    }
+    .company-payment .policy-section .dl-list .dt{
+        padding-top: 1px;
+        height: 34px;
+    }
+    .company-payment .policy-section .dl-list .dd{
+        font-size: $s11;
+    }
+    .company-payment .policy-section .dl-list .dd.refund-policy{
+        padding-top: 9px;
+        padding-bottom: 16px;
+    }
+    .company-payment .policy-section .dl-list .dl-item.active .dd{
+        font-weight: 700;
+    }
+    .company-payment .policy-section .dl-list .dt{
+        border-bottom:0 none;
+    }
+    .company-payment .policy-section .dl-list .dd .visible-1023{
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: 400;
+    }
+    .company-payment .policy-section .radio-mark ~ .radio-label{
+        font-size: $s13;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .company-payment .carousel-control.left,
+    .company-payment .dl-item.active .carousel-control.left{
+        background-image: url(../images/dashboard/company/mobile/icon-carousel-left@2x.png);
+    }
+    .company-payment .carousel-control.right,
+    .company-payment .dl-item.active .carousel-control.right{
+        background-image: url(../images/dashboard/company/mobile/icon-carousel-right@2x.png);
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:1024px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:1024px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:1024px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:1024px),
+only screen and (              min-resolution:120dpi)      and (min-width:1024px),
+only screen and (               min-resolution:2dppx)      and (min-width:1024px){
+    .company-payment .carousel-control{
+        background-image:url(../images/dashboard/company/icon-carousel@2x.png);
+    }
+    .company-payment .dl-item.active .carousel-control{
+        background-image:url(../images/dashboard/company/icon-carousel-active@2x.png);
     }
 }
