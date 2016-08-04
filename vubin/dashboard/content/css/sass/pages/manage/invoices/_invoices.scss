@@ -1,14 +1,12 @@
+.manage-invoices .kuyam-content .kuyam-form{
+    padding: 1px 0;
+}
 .manage-invoices .form-control{
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
 }
-
-.invoices-table {
-    display: none;
-}
-
-.invoices-table .btn-download {
+.manage-invoices .btn-download {
     float: right;
     background: transparent;
     color: $positive;
@@ -20,56 +18,57 @@
     padding: 0;
     box-shadow: none;
 }
-.invoices-table .btn-download .text{
+.manage-invoices .btn-download .text{
     font-size: $s15;
 }
-.invoices-table .btn-download .icon{
+.manage-invoices .btn-download .icon{
     background-image: url(../images/dashboard/manage/icon-download.png);
     width: 11px;
     height: 11px;
     margin-right: 10px;
 }
-
-.invoices-table form {
-    text-align: right;
-    margin: 0 !important;
-    height: 50px;
+.manage-invoices .invoices-table{
+    display: none;
 }
 
-.invoices-table form .legend {
+.manage-invoices .legend {
     text-align: left;
-    margin-bottom: 25px !important;
+    margin-bottom: 15px;
+}
+.manage-invoices form {
+    text-align: right;
+    height: 0;
 }
 
-.invoices-table form .filter-list {
+.manage-invoices form .filter-list {
     margin: 0;
     padding: 0;
     list-style: none;
     float: right;
 }
 
-.invoices-table form .filter-list > li {
+.manage-invoices form .filter-list > li {
     float: left;
     margin: 0 0 10px 38px;
 }
 
-.invoices-table form .filter-list > li:first-child {
+.manage-invoices form .filter-list > li:first-child {
     margin-left: 0;
 }
-.invoices-table form .filter-list > li:last-child {
+.manage-invoices form .filter-list > li:last-child {
     width:169px;
     margin-left: 40px;
 }
-.invoices-table .bootstrap-select > .btn,
-.invoices-table .bootstrap-select > .btn:focus,
-.invoices-table .bootstrap-select > .btn:active,
-.invoices-table .bootstrap-select > .btn-default.disabled,
-.invoices-table .bootstrap-select > .btn-default.disabled:focus,
-.invoices-table .bootstrap-select > .btn-default.disabled:active{
+.manage-invoices .bootstrap-select > .btn,
+.manage-invoices .bootstrap-select > .btn:focus,
+.manage-invoices .bootstrap-select > .btn:active,
+.manage-invoices .bootstrap-select > .btn-default.disabled,
+.manage-invoices .bootstrap-select > .btn-default.disabled:focus,
+.manage-invoices .bootstrap-select > .btn-default.disabled:active{
     padding-left: 16px;
 }
 
-.invoices-table .form-label {
+.manage-invoices .form-label {
     margin: 9px 10px 9px 0 !important;
     float: left;
     font-weight: normal;
@@ -77,41 +76,42 @@
     font-weight: 400;
     font-size: $s15;
 }
-.invoices-table .txt-date{
+.manage-invoices .txt-date{
     background-image: url(../images/dashboard/manage/icon_calendar_blue_2.png);
     background-size: 35px auto;
 }
 
-.invoices-table .form-timepicker {
+.manage-invoices .form-timepicker {
     float: left;
     display: block;
     width: 150px;
 }
 
-.invoices-table .bootstrap-datetimepicker-widget {
+.manage-invoices .bootstrap-datetimepicker-widget {
     width: auto;
 }
 
-.invoices-table .fixed-table-toolbar .search {
-    margin-bottom: 30px;
+.manage-invoices .fixed-table-toolbar .search {
+    margin-bottom: 29px;
     width:305px;
+    margin-top: 0;
 }
 
-.invoices-table .bootstrap-table {
+.manage-invoices .bootstrap-table {
     min-width: 1034px;
 }
 
-.invoices-table .bootstrap-table .form-control{
+.manage-invoices .bootstrap-table .form-control{
     background:url(../images/dashboard/manage/icon-search.png) right center no-repeat;
     background-size:36px auto;
     padding-right: 36px;
 }
 
-.invoices-table .table {
+.manage-invoices .table {
     border-color: #f0f0f0;
 }
 
-.invoices-table .table > thead > tr > th {
+.manage-invoices .table > thead > tr > th {
     background: #f0f0f0;
     font-weight: normal;
     border: 0 none;
@@ -120,117 +120,118 @@
     font-size: $s13;
 }
 
-.invoices-table .table > thead > tr > th:first-letter{
+.manage-invoices .table > thead > tr > th:first-letter{
     text-transform: uppercase;
 }
 
-.invoices-table .page-list {
+.manage-invoices .page-list {
     display: none;
 }
 
-.invoices-table .fixed-table-container {
+.manage-invoices .fixed-table-container {
     border: 0 none;
 }
 
-.invoices-table .table-hover > tbody > tr:hover {
+.manage-invoices .table-hover > tbody > tr:hover {
     background: transparent;
 }
 
-.invoices-table .table > tbody > tr.odd {
+.manage-invoices .table > tbody > tr.odd {
     border-top: 1px solid #f0f0f0;
     background:$white;
 }
 
-.invoices-table .table > tbody > tr.even {
+.manage-invoices .table > tbody > tr.even {
     background: #fafafa;
     border-top: 1px solid #f0f0f0;
 }
-.invoices-table .table > tbody > tr.odd td,
-.invoices-table .table > tbody > tr.even td{
+.manage-invoices .table > tbody > tr.odd td,
+.manage-invoices .table > tbody > tr.even td{
     line-height:100%;
-    padding-top:2px !important;
-    padding-bottom:2px !important;
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+    vertical-align: middle;
 }
 
-.invoices-table .table > tbody > tr.detail-view td{
+.manage-invoices .table > tbody > tr.detail-view td{
     padding:0 0 4px;
     border:0 none;
     line-height:100%;
 }
-.invoices-table .table > tbody > tr.detail-view td.cols-print{
+.manage-invoices .table > tbody > tr.detail-view td.cols-print{
     vertical-align:bottom;
     padding-bottom:4px;
 }
-.invoices-table .table > tbody > tr.detail-view table{
+.manage-invoices .table > tbody > tr.detail-view table{
     width:100%;
 }
-.invoices-table .table > tbody > tr.detail-view table th{
+.manage-invoices .table > tbody > tr.detail-view table th{
     width:12%;
     padding:0 8px;
 }
-.invoices-table .table > tbody > tr.detail-view table  td{
+.manage-invoices .table > tbody > tr.detail-view table  td{
     padding:0 8px;
 }
-    .invoices-table .table > tbody > tr.even + .detail-view {
+    .manage-invoices .table > tbody > tr.even + .detail-view {
         background: #fafafa;
     }
 
-.invoices-table thead th .both {
+.manage-invoices thead th .both {
     background-image: url(../images/dashboard/manage/icon_sort.png);
     background-size: 36px auto;
 }
 
-.invoices-table thead th .asc {
+.manage-invoices thead th .asc {
     background-image: url(../images/dashboard/manage/icon_asc.png);
 }
 
-.invoices-table thead th .desc {
+.manage-invoices thead th .desc {
     background-image: url(../images/dashboard/manage/icon_desc.png);
 }
 
-.invoices-table tbody td {
+.manage-invoices tbody td {
     border: 0 none;
 }
 
-.invoices-table td[class*="cols-"] > span {
+.manage-invoices td[class*="cols-"] > span {
     font-size: $s14;
     font-family: $primary;
     font-weight: 400;
     border: 0 none;
 }
 
-.invoices-table tbody td small {
+.manage-invoices tbody td small {
     display: block;
     font-size: $p;
     font-family: $primary;
     font-weight: 400;
 }
 
-.invoices-table .cols-datetime {
+.manage-invoices .cols-datetime {
     width: 12%;
 }
 
-.invoices-table .cols-client {
+.manage-invoices .cols-client {
     width: 22%;
 }
 
-.invoices-table .cols-service {
+.manage-invoices .cols-service {
     width: 22%;
 }
 
-.invoices-table .cols-staff {
+.manage-invoices .cols-staff {
     width: 22%;
 }
 
-.invoices-table .cols-amount {
+.manage-invoices .cols-amount {
     width: 11%;
 }
 
-.invoices-table .cols-status {
+.manage-invoices .cols-status {
     width: 11%;
 }
 
-.invoices-table .glyphicon {
+.manage-invoices .glyphicon {
     float: right;
     width: 20px;
     height: 20px;
@@ -238,7 +239,7 @@
     background-size: 13px auto;
 }
 
-.invoices-table .glyphicon-minus {
+.manage-invoices .glyphicon-minus {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -246,32 +247,32 @@
     transform: rotate(180deg);
 }
 
-    .invoices-table .glyphicon-minus:before {
-        content: '';
-    }
-
-
-    .invoices-table .glyphicon-plus:before {
-        content: '';
-    }
-
-.invoices-table .detail-view table {
+.manage-invoices .glyphicon-minus:before {
+    content: '';
 }
 
-    .invoices-table .detail-view table th {
-        font-size: $p;
-        font-family: $primary;
-        font-weight: 600;
-        font-weight: normal;
-    }
 
-    .invoices-table .detail-view table td > span {
-        font-size: $p;
-        font-family: $primary;
-        font-weight: 400;
-    }
+.manage-invoices .glyphicon-plus:before {
+    content: '';
+}
 
-.invoices-table .detail-view .btn-print {
+.manage-invoices .detail-view table {
+}
+
+.manage-invoices .detail-view table th {
+    font-size: $p;
+    font-family: $primary;
+    font-weight: 600;
+    font-weight: normal;
+}
+
+.manage-invoices .detail-view table td > span {
+    font-size: $p;
+    font-family: $primary;
+    font-weight: 400;
+}
+
+.manage-invoices .detail-view .btn-print {
     background: transparent;
     font-size: $p;
     font-family: $primary;
@@ -280,7 +281,7 @@
     box-shadow: none;
 }
 
-.invoices-table .detail-view .icon {
+.manage-invoices .detail-view .icon {
     position: relative;
     bottom: -1px;
     width: 11px;
@@ -290,13 +291,13 @@
     margin-right: 5px;
 }
 
-.invoices-table .pagination-info {
+.manage-invoices .pagination-info {
     font-size: $s14;
     font-family: $primary;
     font-weight: 500;
 }
 
-.invoices-table .fixed-table-pagination .pagination a {
+.manage-invoices .fixed-table-pagination .pagination a {
     font-size: $s14;
     font-family: $primary;
     font-weight: 500;
@@ -304,18 +305,18 @@
     background:transparent;
 }
 
-    .invoices-table .fixed-table-pagination .pagination .disabled a,
-    .invoices-table .fixed-table-pagination .pagination .disabled a:hover{
-        opacity: .5;
-        background:transparent;
-    }
+.manage-invoices .fixed-table-pagination .pagination .disabled a,
+.manage-invoices .fixed-table-pagination .pagination .disabled a:hover{
+    opacity: .5;
+    background:transparent;
+}
 
-.invoices-table .pagination > li > a {
+.manage-invoices .pagination > li > a {
     border: 0 none;
     padding: 0 6px;
     margin: 0 0 0 5px;
 }
-.invoices-table .pagination > li.page-pre a{
+.manage-invoices .pagination > li.page-pre a{
     display: block;
     height: 20px;
     width: 20px;
@@ -328,7 +329,7 @@
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-.invoices-table .pagination > li.page-next a{
+.manage-invoices .pagination > li.page-next a{
     font-size: 0;
     display: block;
     height: 20px;
@@ -338,23 +339,29 @@
     background-size: 10px auto;
 }
 
-.invoices-table .pagination > .active > a,
-.invoices-table .pagination > .active > span,
-.invoices-table .pagination > .active > a:hover,
-.invoices-table .pagination > .active > span:hover,
-.invoices-table .pagination > .active > a:focus,
-.invoices-table .pagination > .active > span:focus {
+.manage-invoices .pagination > .active > a,
+.manage-invoices .pagination > .active > span,
+.manage-invoices .pagination > .active > a:hover,
+.manage-invoices .pagination > .active > span:hover,
+.manage-invoices .pagination > .active > a:focus,
+.manage-invoices .pagination > .active > span:focus {
     background:transparent;
     color: $positive;
     font-weight: 700;
 }
 
 @media (max-width: 1023px) {
-    .invoices-table form {
+    .manage-invoices .kuyam-content .kuyam-form{
+        padding: 0;
+    }
+    .manage-invoices form .legend{
+        text-align: center;
+    }
+    .manage-invoices form {
         height: auto;
     }
 
-    .invoices-table form .filter-list {
+    .manage-invoices form .filter-list {
         float: none;
     }
 }
