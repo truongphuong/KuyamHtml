@@ -273,7 +273,7 @@ function existSelect(sectionClass) {
     }
 }
 
-function centerModals($element) {
+function centerModals() {
     $(this).css('display', 'block');
     var $dialog = $(this).find(".modal-dialog");
     var offset = ($(this).height() - $dialog.height()) / 2;
@@ -495,7 +495,7 @@ $(document).ready(function () {
 
     siteHeader();
 
-    $('.modal').on('show.bs.modal', centerModals);
+    $(document).on('show.bs.modal', '.modal', centerModals);
 
     var termActive;
     $('.link-terms').click(function (e) {
