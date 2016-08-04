@@ -25,7 +25,7 @@
 <link type="text/css" rel="stylesheet" href="content/bootstrap-select.css" />
 <link type="text/css" rel="stylesheet" href="content/croppie.css" />
 <link type="text/css" rel="stylesheet" href="content/chosen.css" />
-<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 <link type="text/css" rel="stylesheet" href="content/style.css" /> 
 
 
@@ -52,7 +52,16 @@
 <body>
 
 	<div id="ml-menu">
-		<div class="icon_mobile_close_menu"></div>		
+		<div class="icon_mobile_close_menu"></div>	
+        
+         <script type="text/javascript">
+						$(function(){							
+							
+	 $(".menu__wrap").niceScroll({touchbehavior:false,cursorcolor:"#8ab21e",cursoropacitymax:.8,cursorwidth:6,cursorborder:"0px solid #8ab21e", railpadding:{top:0,right:10,left:0,bottom:0}, cursorborderradius:"8px",background:"transparent",autohidemode:"scroll"});
+							
+						});
+					</script>
+        	
 		<div class="menu__wrap">
 			 <a class="logo" title="" href="home.html"><img alt="" src="content/images/icons_2016/header_logo_kuyam.png" /></a>
 				<ul class="menu__level1 hidden">
@@ -211,7 +220,7 @@
                             <dt class="on-desktop hidden-xs text-left">
                                 <a href="#" title="Favourites"><span class="header_icon_favourites"></span>Favourites</a>
                                 <a href="#" title="Receipt history"><span class="header_icon_receipt_history"></span>Receipt history</a>
-                                <a href="#" title="Appointment" class="have-icon"><span class="header_icon_appointments"></span>Appointment<div class="badge">13</div></a>
+                                <a href="#" title="Appointment" class="have-icon"><span class="header_icon_appointments"></span>Appointments<div class="badge">13</div></a>
                                 <a href="#" title="Gift cards" ><span class="header_icon_gift_cards"></span>Gift cards</a>
                             </dt>
                             <dt class="on-desktop hidden-xs text-right">                            
@@ -882,6 +891,39 @@
     <div class="light-box"></div>
     <!-- END HTML --> 
     
+    
+    
+        <!-- .modal-welcome -->    
+    <div class="modal fade" id="modal-welcome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-form modal-welcome">
+    		<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal"></button>
+        			<h3 class="modal-title">Welcome to Kuyam!</h3>
+      			</div>
+                <div class="modal-body">
+                
+              
+                	<button type="button" class="btn-green btn-form btn-login">Start booking!</button>
+                    
+                	<div class="form-or">
+                        <span>or</span>             
+                    </div>
+                	
+                    <button type="button" class="btn-green btn-form btn-login">Login</button>
+                                      
+                </div>
+                <div class="modal-footer">
+                	
+                   
+                 </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    <!-- /.modal-welcome --> 
+    
+    
+    
     <!-- .modal-login -->    
     <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-dialog modal-form modal-login">
@@ -1025,6 +1067,12 @@
                     <script type="text/javascript">
 						$(function(){
 							$( "#terms-tabs" ).tabs();
+							
+							
+	 $(".scroll-bar").niceScroll({touchbehavior:false,cursorcolor:"#8ab21e",cursoropacitymax:.8,cursorwidth:6,cursorborder:"0px solid #8ab21e", railpadding:{top:0,right:-20,left:0,bottom:0}, cursorborderradius:"8px",background:"transparent",autohidemode:"scroll"});
+
+							
+							
 						});
 					</script>
         			<div id="terms-tabs">
