@@ -6179,6 +6179,9 @@ textarea.form-control:focus {
 @media (max-width: 374px) {
   .manage-staff .kuyam-form footer {
     padding-top: 13px; } }
+.manage-staff .subnav-ul[data-dropdown="false"] > li > a {
+  text-transform: none; }
+
 .manage-staff .no-data {
   text-align: center;
   width: 388px;
@@ -6976,6 +6979,9 @@ textarea.form-control:focus {
 @media (max-width: 1023px) {
   .manage-client form {
     width: auto; } }
+.manage-client .subnav-ul[data-dropdown="false"] > li > a {
+  text-transform: none; }
+
 .manage-clients .no-data {
   text-align: center;
   width: 388px;
@@ -7067,13 +7073,22 @@ textarea.form-control:focus {
 
 .invoices-table form .filter-list > li {
   float: left;
-  margin: 0 0 10px 20px; }
+  margin: 0 0 10px 38px; }
 
 .invoices-table form .filter-list > li:first-child {
   margin-left: 0; }
 
 .invoices-table form .filter-list > li:last-child {
-  width: 150px; }
+  width: 169px;
+  margin-left: 40px; }
+
+.invoices-table .bootstrap-select > .btn,
+.invoices-table .bootstrap-select > .btn:focus,
+.invoices-table .bootstrap-select > .btn:active,
+.invoices-table .bootstrap-select > .btn-default.disabled,
+.invoices-table .bootstrap-select > .btn-default.disabled:focus,
+.invoices-table .bootstrap-select > .btn-default.disabled:active {
+  padding-left: 16px; }
 
 .invoices-table .form-label {
   margin: 9px 10px 9px 0 !important;
@@ -7090,14 +7105,14 @@ textarea.form-control:focus {
 .invoices-table .form-timepicker {
   float: left;
   display: block;
-  width: 171px; }
+  width: 150px; }
 
 .invoices-table .bootstrap-datetimepicker-widget {
   width: auto; }
 
 .invoices-table .fixed-table-toolbar .search {
   margin-bottom: 30px;
-  width: 220px; }
+  width: 305px; }
 
 .invoices-table .bootstrap-table {
   min-width: 1034px; }
