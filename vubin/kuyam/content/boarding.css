@@ -12,11 +12,19 @@
 	position: relative;
 }
 
-/* .btn */
 .modal-boarding .txt-required{
     color: #ff5050;
     font-family: "Lato",sans-serif;
     font-weight: 700;
+}
+
+/* .btn */
+.modal-boarding .btn-form:hover{
+    color: #242424;
+    background: #fff;
+	border-width:2px;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
 .modal-boarding .btn-form,
 .modal-boarding .btn-form:active,
@@ -32,23 +40,9 @@
     color: #242424;
 	padding-top:0;
 	padding-bottom:0;
-}
-.modal-boarding .btn-form:hover{
-    color: #242424;
-    background: #fff;
-	border-width:2px;
-	font-weight:700;
-	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
+    box-shadow: none !important;
 }
 
-.modal-boarding .btn-agree,
-.modal-boarding .btn-agree:active,
-.modal-boarding .btn-agree:visited,
-.modal-boarding .btn-agree:focus {
-    border: 1px solid #3891ff;
-    background: #fff;
-    color: #3891ff;
-}
 .modal-boarding .btn-agree:hover{
     color: #3891ff;
     background: #fff;
@@ -56,15 +50,16 @@
 	border-width:2px;
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
-
-.modal-boarding .btn-neutral,
-.modal-boarding .btn-neutral:active,
-.modal-boarding .btn-neutral:visited,
-.modal-boarding .btn-neutral:focus {
-	border: 1px solid #878787;
+.modal-boarding .btn-agree,
+.modal-boarding .btn-agree:active,
+.modal-boarding .btn-agree:visited,
+.modal-boarding .btn-agree:focus {
+    border: 1px solid #3891ff;
     background: #fff;
-	color:#878787;
+    color: #3891ff;
+    box-shadow: none !important;
 }
+
 .modal-boarding .btn-neutral:hover{
 	color:#878787;
     background: #fff;
@@ -72,7 +67,22 @@
 	border-width:2px;
 	box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11) !important;
 }
+.modal-boarding .btn-neutral,
+.modal-boarding .btn-neutral:active,
+.modal-boarding .btn-neutral:visited,
+.modal-boarding .btn-neutral:focus {
+	border: 1px solid #878787;
+    background: #fff;
+	color:#878787;
+    box-shadow: none !important;
+}
 
+.modal-boarding .btn-disagree:hover{
+	background:#ff5050;
+    color: #fff;
+	font-weight:700;
+	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
+}
 .modal-boarding .btn-disagree,
 .modal-boarding .btn-disagree:active,
 .modal-boarding .btn-disagree:visited,
@@ -81,12 +91,7 @@
     background: #fff;
     background: #fff;
     color: #ff5050;
-}
-.modal-boarding .btn-disagree:hover{
-	background:#ff5050;
-    color: #fff;
-	font-weight:700;
-	box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11) !important;
+    box-shadow: none !important;
 }
 
 .modal-boarding .btn[disabled],
@@ -97,6 +102,7 @@
 	background:#dadada;
     color: #fff;
 	font-weight:700;
+    box-shadow: none !important;
 }
 
 /* =============================================================================

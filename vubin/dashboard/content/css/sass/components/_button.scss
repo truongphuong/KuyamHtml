@@ -1,3 +1,11 @@
+.btn-form:hover{
+    color: $base;
+    background: $white;
+    border-width:2px;
+    font-weight:700;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+    padding:0;
+}
 .btn-form,
 .btn-form:focus {
     font-size: $h6;
@@ -11,22 +19,9 @@
     padding-bottom: 0;
     padding-top: 0;
     padding:0;
-}
-.btn-form:hover{
-    color: $base;
-    background: $white;
-    border-width:2px;
-    font-weight:700;
-    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
-    padding:0;
+    box-shadow: none;
 }
 
-.btn-agree,
-.btn-agree:focus {
-    border: 1px solid $positive;
-    background: $white;
-    color: $positive;
-}
 .btn-agree:hover{
     color: $positive;
     background: $white;
@@ -34,13 +29,14 @@
     border-width:2px;
     box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
 }
-
-.btn-neutral,
-.btn-neutral:focus {
-    border: 1px solid $neutral;
+.btn-agree,
+.btn-agree:focus {
+    border: 1px solid $positive;
     background: $white;
-    color:$neutral;
+    color: $positive;
+    box-shadow: none;
 }
+
 .btn-neutral:hover{
     color:$neutral;
     background: $white;
@@ -48,18 +44,26 @@
     border-width:2px;
     box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
 }
-
-.btn-disagree,
-.btn-disagree:focus {
-    border: 1px solid $negative;
+.btn-neutral,
+.btn-neutral:focus {
+    border: 1px solid $neutral;
     background: $white;
-    color: $negative;
+    color:$neutral;
+    box-shadow: none;
 }
+
 .btn-disagree:hover{
     background:$negative;
     color: $white;
     font-weight:700;
     box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11);
+}
+.btn-disagree,
+.btn-disagree:focus {
+    border: 1px solid $negative;
+    background: $white;
+    color: $negative;
+    box-shadow: none;
 }
 
 .btn[disabled],
