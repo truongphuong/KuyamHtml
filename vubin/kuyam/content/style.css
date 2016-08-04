@@ -9605,6 +9605,9 @@ td ul {
 	#ml-menu .dropmenu-item-content li a {
 		font-weight: normal;
 	}
+    #ml-menu .dropmenu-item-content li a[data-dropdown="true"] + ul{
+        margin-left: 20px;
+    }
 	#ml-menu .menu__level1 li {
 		list-style: none;
 		margin: 30px 0;
@@ -9614,7 +9617,7 @@ td ul {
 	#ml-menu .menu__level3 li {
 		list-style: none;
 		margin: 18px 0;
-		padding-left: 10% !important;
+		padding-left: 11% !important;
 		display: block;
 	}
     #ml-menu .menu__level2 li li,
@@ -9633,13 +9636,19 @@ td ul {
 		font-weight: 900;
 	}
 	#ml-menu .back-item {
-		padding-left: 20px !important;
+		margin-left: -36px !important;
 		margin-bottom: 30px !important;
 	}
-	#ml-menu .username-item {
-		padding-left: 20px !important;
-		margin-bottom: 30px !important;
-	}
+    #ml-menu li.username-item {
+        margin-bottom: 30px !important;
+        margin-left: -36px;
+    }
+    #ml-menu li.username-item a{
+        font-weight: 400;
+    }
+    #ml-menu li.username-item span{
+       font-weight: 900;
+    }
 	#ml-menu .icon_mobile_back:after {
 		width: 20px;
 		height: 24px;
