@@ -32,7 +32,8 @@
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 <!-- === SCRIPTS === -->  
 <script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/jquery-ui.js"></script>	    	
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>	    	
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/responsiveslides.js"></script>
 <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
@@ -241,7 +242,17 @@
         <div class="site-banner">
         <!-- InstanceBeginEditable name="banner" -->
         	<!-- slide-feature -->
-            <div class="slide-feature hidden-xs">
+            
+                     <script type="text/javascript">
+						$(function(){							
+							
+	 $(".special-scroll-banner #carousel-desktop").niceScroll({touchbehavior:false,cursorcolor:"#8ab21e",cursoropacitymax:.8,cursorwidth:6,cursorborder:"0px solid #8ab21e", railpadding:{top:0,right:10,left:0,bottom:0}, cursorborderradius:"8px",background:"transparent",autohidemode:"scroll"});
+							
+						});
+					</script>
+            
+            
+            <div class="slide-feature hidden-xs special-scroll-banner">
                 <div id="carousel-desktop" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -270,9 +281,9 @@
                 <!-- register-form -->
                 <div class="register-section company-profile-section bg-black-50">        	 
                     <div class="container"> 
-                        <header class="section-header clearfix"> 
+                        <header class="section-header clearfix "> 
                         	<div class="company-profile-avatar hidden-xs" style="background-image:url(content/images/icons/avatar_default.png);"></div>
-                            <div class="company-profile-info">
+                            <div class="company-profile-info special-address">
                             	<h2>Amy's Hair Salon!</h2>
                                 <div class="site-address">                                	
                                     <ul class="clearfix">
@@ -312,7 +323,7 @@
                         <img width="101" src="content/images/icons/icon_featured-left.png" alt="" />
                     </div>    
                     <a class="link-favorite" href="#" title=""><span class="icon-unlike"></span></a>
-                    <div class="company-info">
+                    <div class="company-info ">
                         <h1>Amy's Hair Salon</h1>
                         <address>Santa Monica, CA</address>
                         <ul class="clearfix">                            
