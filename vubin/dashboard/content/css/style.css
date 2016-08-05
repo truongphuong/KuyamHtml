@@ -7716,16 +7716,10 @@ textarea.form-control:focus {
 .modal-terms {
   width: 700px; }
 
-.modal-terms .modal-header .close,
-.modal-terms .modal-header .close:hover {
-  width: 33px;
-  height: 33px;
-  background-image: url(../images/icons/btn_close_black.png);
-  background-size: 33px auto;
-  top: -16px;
-  right: -16px;
-  z-index: 1;
-  opacity: 1; }
+.modal-terms .modal-content {
+  border-radius: 10px;
+  border: 0 none;
+  overflow: hidden; }
 
 .modal-terms .modal-header {
   padding: 0 0 15px;
@@ -7734,10 +7728,7 @@ textarea.form-control:focus {
 .modal-terms .nav-tabs {
   padding: 0;
   border: 0 none;
-  background: none #333333;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0; }
+  background: url(../images/dashboard/modals/terms/bg_header_popup.jpg) center center no-repeat; }
 
 .modal-terms .nav-tabs > li {
   margin: 0;
@@ -7752,48 +7743,67 @@ textarea.form-control:focus {
 .modal-terms .nav-tabs > li > a {
   float: none;
   display: block;
-  padding: 30px 0;
+  padding: 12px 0 8px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 0.8125em;
   line-height: 28px;
   font-family: "Lato", sans-serif;
-  font-weight: 800;
-  color: #ABABAB; }
-
-.modal-terms .nav-tabs > li > a span {
-  display: block;
-  height: 32px;
-  background: url(../images/icons/arrow_down_2.png) center center no-repeat;
-  background-size: 34px auto;
-  margin: 10px 0 0; }
-
-.modal-terms .nav-tabs > li.active > a {
+  font-weight: 700;
   color: #fff; }
 
-.modal-terms .nav-tabs > li.active > a span {
-  background: url(../images/icons/arrow_down_3.png) center center no-repeat; }
+.modal-terms .nav-tabs > li > a .icon {
+  display: block;
+  margin: 0 auto;
+  width: 42px;
+  height: 47px;
+  background: center center no-repeat; }
+
+.modal-terms .nav-tabs > li > a .icon-term {
+  background-image: url(../images/dashboard/modals/terms/header_icon_terms.png);
+  background-size: 42px auto; }
+
+.modal-terms .nav-tabs > li > a .icon-privacy {
+  background-image: url(../images/dashboard/modals/terms/header_icon_privacy.png);
+  background-size: 38px auto; }
+
+.modal-terms .nav-tabs > li > a .icon-service {
+  background-image: url(../images/dashboard/modals/terms/header_icon_services.png);
+  background-size: 38px auto; }
+
+.modal-terms .nav-tabs > li.active > a {
+  color: #a7d627; }
+
+.modal-terms .nav-tabs > li.active > a .icon-term {
+  background-image: url(../images/dashboard/modals/terms/header_icon_terms_hover.png); }
+
+.modal-terms .nav-tabs > li.active > a .icon-privacy {
+  background-image: url(../images/dashboard/modals/terms/header_icon_privacy_hover.png); }
+
+.modal-terms .nav-tabs > li.active > a .icon-service {
+  background-image: url(../images/dashboard/modals/terms/header_icon_services_hover.png); }
 
 .modal-terms .tab-content {
   margin: 0 15px;
-  padding: 20px 10px;
-  border: 2px solid #ABABAB; }
-
-.modal-terms .tab-content {
-  font-size: 1.25em;
-  line-height: 24px;
+  padding: 24px 10px 0;
+  font-size: 0.875em;
+  line-height: 22px;
   font-family: "Lato", sans-serif;
-  font-weight: 500; }
+  font-weight: 400;
+  color: #313131; }
 
 .modal-terms .tab-content h3 {
-  font-size: Sh5;
+  font-size: 0.875em;
   line-height: 24px;
   font-family: "Lato", sans-serif;
-  font-weight: 800;
-  margin: 20px 0 15px; }
+  font-weight: 700;
+  margin: 0 0 20px; }
+
+.modal-terms .tab-content p {
+  margin-bottom: 15px; }
 
 .modal-terms .tab-pane {
   position: relative;
-  height: 310px;
+  height: 423px;
   overflow: hidden; }
 
 .modal-terms .ui-tabs-panel h3 {
