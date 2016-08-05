@@ -7145,7 +7145,8 @@ textarea.form-control:focus {
   padding-right: 36px; }
 
 .manage-invoices .table {
-  border-color: #f0f0f0; }
+  border-color: #f0f0f0;
+  border-radius: 0; }
 
 .manage-invoices .table > thead > tr > th {
   background: #f0f0f0;
@@ -7158,11 +7159,15 @@ textarea.form-control:focus {
 .manage-invoices .table > thead > tr > th:first-letter {
   text-transform: uppercase; }
 
+.manage-invoices .table > thead > tr > th:first-child {
+  border-radius: 0; }
+
 .manage-invoices .page-list {
   display: none; }
 
 .manage-invoices .fixed-table-container {
-  border: 0 none; }
+  border: 0 none;
+  border-radius: 0; }
 
 .manage-invoices .table-hover > tbody > tr:hover {
   background: transparent; }
@@ -8008,3 +8013,4 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
+
