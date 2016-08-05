@@ -60,6 +60,9 @@ $(document).ready(function () {
         });
         $('.invoices-table').show();
     }
+
+    $('ul.pagination').prepend($('<li class="page-first disabled"><a href="javascript:void(0)">First</a></li>'));
+    $('<li class="page-last"><a href="javascript:void(0)">Last</a></li>').appendTo($('ul.pagination'));
 });
 
 function invoicesPrint(){
