@@ -42,9 +42,45 @@ $(function() {
 		//$('.navbar-toggle').show();
 	});
 	
+	
+	var _defaultWidthSelect = 14;	
+	var _selectBox = $('.select-custom-box .book-me-session-select');
+	
+	_selectBox.change(function(){
+		
+		 resizeSelectBox();
+		
+	});
+	
+	$(window).resize(function(){
+		
+		 resizeSelectBox();
+	});
+	
+	
+	function resizeSelectBox(){
+		
+		
+		var _widthSelect = _selectBox.val().length * _defaultWidthSelect;
+		if($('body').width()< 480){
+			if(_widthSelect > 145){_widthSelect = 145;}		
+			if(_widthSelect < 70){_widthSelect = 70;}
+		}else{
+			if(_widthSelect > 180){_widthSelect = 180;}		
+			if(_widthSelect < 120){_widthSelect = 120;}
+		}
+		_selectBox.css("width",_widthSelect);
+		
+	}
+	
+	
+	
+	$('.btn_sub_item').addClass('sub_menu_icon_down');
+	
 	$('.btn_sub_item').click(function() {
 		//$('.dropmenu-item-content').slideUp();
 		$(this).parent().find('.dropmenu-item-content').slideToggle();
+		$(this).toggleClass( 'sub_menu_icon_up', 'sub_menu_icon_down' );
 	});
 	 
 	
