@@ -310,93 +310,46 @@
     font-weight: 500;
 }
 
-.manage-invoices .fixed-table-pagination .pagination a {
-    font-size: $s14;
-    font-family: $primary;
-    font-weight: 500;
-    color: $base;
-    background:transparent;
+.manage-invoices .fixed-table-pagination .pagination,
+.manage-invoices .fixed-table-pagination .pagination-detail{
+    margin-top: 88px;
 }
-
-.manage-invoices .fixed-table-pagination .pagination .disabled a,
-.manage-invoices .fixed-table-pagination .pagination .disabled a:hover{
-    opacity: .5;
-    background:transparent;
+.manage-invoices .fixed-table-pagination .pagination .pagination{
+    margin-top: 6px;
 }
-
 .manage-invoices .pagination > li > a {
-    border: 0 none;
     padding: 0 6px;
     margin: 0 0 0 5px;
 }
-.manage-invoices .pagination > li.page-pre a{
-    display: block;
-    height: 20px;
-    width: 20px;
-    font-size: 0;
-    background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
-    background-size: 10px auto;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-.manage-invoices .pagination > li.page-next a{
-    font-size: 0;
-    display: block;
-    height: 20px;
-    width: 20px;
-    font-size: 0;
-    background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
-    background-size: 10px auto;
-}
-.manage-invoices .pagination > li.page-first a,
-.manage-invoices .pagination > li.page-last a{
-    color: $positive;
-    font-weight: 700;
-}
-.manage-invoices .pagination > li.page-first.disabled a,
-.manage-invoices .pagination > li.page-last.disabled a{
-    color: $disabled;
-}
 
-.manage-invoices .pagination > .active > a,
-.manage-invoices .pagination > .active > span,
-.manage-invoices .pagination > .active > a:hover,
-.manage-invoices .pagination > .active > span:hover,
-.manage-invoices .pagination > .active > a:focus,
-.manage-invoices .pagination > .active > span:focus {
-    background:transparent;
-    color: $positive;
-    font-weight: 700;
+.manage-invoices .invoices-mobile{
+    display: none;
 }
-
-.manage-invoices .invoices-mobile .ul-header{
+.manage-invoices .invoices-mobile header > ul{
     margin:0;
     padding:0;
     list-style: none;
 }
-.manage-invoices .invoices-mobile .ul-header li:first-child{
+.manage-invoices .invoices-mobile header > ul > li:first-child{
     float: left;
     font-size: $s15;
     color:#303030;
     padding-top: 13px;
     padding-bottom: 10px;
 }
-.manage-invoices .invoices-mobile .ul-header li:last-child{
+.manage-invoices .invoices-mobile header > ul > li:last-child{
     float: right;
 }
-.manage-invoices .invoices-mobile .ul-header li .form-label{
+.manage-invoices .invoices-mobile header > ul > li .form-label{
     float: left;
     font-style: italic;
     font-size: $s11;
     color: #9b9b9b;
-    margin-top: 15px;
-    margin-bottom: 0;
+    margin: 15px 5px 0;
 }
 .manage-invoices .invoices-mobile .form-select{
     float: left;
+    margin-top: 10px;
 }
 .manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn,
 .manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn:focus,
@@ -409,6 +362,29 @@
 .manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
     border:0 none;
     padding-left: 0;
+    padding-right: 22px;
+    height: 30px;
+    color: #1c1c1c;
+    font-style: italic;
+    font-weight: 700;
+}
+.manage-invoices .invoices-mobile .bootstrap-select.btn-group .dropdown-toggle .caret{
+    background-image: url(../images/dashboard/manage/icon-select-sort.png);
+    width: 17px;
+    height:9px;
+    margin-top: -4px;
+    right: 0;
+    background-size: 17px auto;
+}
+.manage-invoices .invoices-mobile .bootstrap-select.btn-group .dropdown-menu{
+    max-width: 200px;
+    left: inherit;
+    right: 0;
+    border: 0 none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+.manage-invoices .invoices-mobile footer{
+    text-align: center;
 }
 
 @media (max-width: 1023px) {
@@ -475,6 +451,10 @@
     }
     .manage-invoices .invoices-table{
         display: none !important;
+    }
+
+    .manage-invoices .invoices-mobile{
+        display: block;
     }
 }
 

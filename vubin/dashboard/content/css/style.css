@@ -1171,6 +1171,70 @@ div[class*="col-"] {
 
   .form-select-search .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
     background-image: url(../images/icon_mark@2x.png); } }
+.pagination > li > a,
+.pagination > li > span {
+  border: 0 none;
+  margin: 0 0 0 5px;
+  padding: 0 6px;
+  color: #7a7a7a;
+  font-size: 0.875em;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background-color: transparent; }
+
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  background-color: transparent; }
+
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: transparent;
+  color: #3891ff;
+  font-weight: 700; }
+
+.pagination > li.page-pre a {
+  display: block;
+  height: 20px;
+  width: 20px;
+  font-size: 0;
+  background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
+  background-size: 10px auto;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.pagination > li.page-next a {
+  font-size: 0;
+  display: block;
+  height: 20px;
+  width: 20px;
+  font-size: 0;
+  background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
+  background-size: 10px auto; }
+
+.pagination .page-pre.disabled a,
+.pagination .page-pre.disabled a:hover,
+.pagination .page-next.disabled a,
+.pagination .page-next.disabled a:hover {
+  opacity: .5; }
+
+.pagination > li.page-first a,
+.pagination > li.page-last a {
+  color: #3891ff;
+  font-weight: 700; }
+
+.pagination > li.page-first.disabled a,
+.pagination > li.page-last.disabled a {
+  color: #dadada; }
+
 .croppie-container {
   width: 321px;
   margin: 0 auto;
@@ -7317,89 +7381,45 @@ textarea.form-control:focus {
   font-family: "Lato", sans-serif;
   font-weight: 500; }
 
-.manage-invoices .fixed-table-pagination .pagination a {
-  font-size: 0.875em;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  color: #242424;
-  background: transparent; }
+.manage-invoices .fixed-table-pagination .pagination,
+.manage-invoices .fixed-table-pagination .pagination-detail {
+  margin-top: 88px; }
 
-.manage-invoices .fixed-table-pagination .pagination .disabled a,
-.manage-invoices .fixed-table-pagination .pagination .disabled a:hover {
-  opacity: .5;
-  background: transparent; }
+.manage-invoices .fixed-table-pagination .pagination .pagination {
+  margin-top: 6px; }
 
 .manage-invoices .pagination > li > a {
-  border: 0 none;
   padding: 0 6px;
   margin: 0 0 0 5px; }
 
-.manage-invoices .pagination > li.page-pre a {
-  display: block;
-  height: 20px;
-  width: 20px;
-  font-size: 0;
-  background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
-  background-size: 10px auto;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg); }
+.manage-invoices .invoices-mobile {
+  display: none; }
 
-.manage-invoices .pagination > li.page-next a {
-  font-size: 0;
-  display: block;
-  height: 20px;
-  width: 20px;
-  font-size: 0;
-  background: url(../images/dashboard/manage/icon-next.png) center center no-repeat;
-  background-size: 10px auto; }
-
-.manage-invoices .pagination > li.page-first a,
-.manage-invoices .pagination > li.page-last a {
-  color: #3891ff;
-  font-weight: 700; }
-
-.manage-invoices .pagination > li.page-first.disabled a,
-.manage-invoices .pagination > li.page-last.disabled a {
-  color: #dadada; }
-
-.manage-invoices .pagination > .active > a,
-.manage-invoices .pagination > .active > span,
-.manage-invoices .pagination > .active > a:hover,
-.manage-invoices .pagination > .active > span:hover,
-.manage-invoices .pagination > .active > a:focus,
-.manage-invoices .pagination > .active > span:focus {
-  background: transparent;
-  color: #3891ff;
-  font-weight: 700; }
-
-.manage-invoices .invoices-mobile .ul-header {
+.manage-invoices .invoices-mobile header > ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.manage-invoices .invoices-mobile .ul-header li:first-child {
+.manage-invoices .invoices-mobile header > ul > li:first-child {
   float: left;
   font-size: 0.9375em;
   color: #303030;
   padding-top: 13px;
   padding-bottom: 10px; }
 
-.manage-invoices .invoices-mobile .ul-header li:last-child {
+.manage-invoices .invoices-mobile header > ul > li:last-child {
   float: right; }
 
-.manage-invoices .invoices-mobile .ul-header li .form-label {
+.manage-invoices .invoices-mobile header > ul > li .form-label {
   float: left;
   font-style: italic;
   font-size: 0.6875em;
   color: #9b9b9b;
-  margin-top: 15px;
-  margin-bottom: 0; }
+  margin: 15px 5px 0; }
 
 .manage-invoices .invoices-mobile .form-select {
-  float: left; }
+  float: left;
+  margin-top: 10px; }
 
 .manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn,
 .manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn:focus,
@@ -7411,7 +7431,30 @@ textarea.form-control:focus {
 .manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
 .manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
   border: 0 none;
-  padding-left: 0; }
+  padding-left: 0;
+  padding-right: 22px;
+  height: 30px;
+  color: #1c1c1c;
+  font-style: italic;
+  font-weight: 700; }
+
+.manage-invoices .invoices-mobile .bootstrap-select.btn-group .dropdown-toggle .caret {
+  background-image: url(../images/dashboard/manage/icon-select-sort.png);
+  width: 17px;
+  height: 9px;
+  margin-top: -4px;
+  right: 0;
+  background-size: 17px auto; }
+
+.manage-invoices .invoices-mobile .bootstrap-select.btn-group .dropdown-menu {
+  max-width: 200px;
+  left: inherit;
+  right: 0;
+  border: 0 none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176); }
+
+.manage-invoices .invoices-mobile footer {
+  text-align: center; }
 
 @media (max-width: 1023px) {
   .manage-invoices .kuyam-content .kuyam-form {
@@ -7476,7 +7519,10 @@ textarea.form-control:focus {
     width: 100%; }
 
   .manage-invoices .invoices-table {
-    display: none !important; } }
+    display: none !important; }
+
+  .manage-invoices .invoices-mobile {
+    display: block; } }
 .manage-promos form {
   width: 664px; }
 
@@ -7835,8 +7881,11 @@ textarea.form-control:focus {
   overflow: hidden; }
 
 .modal-terms .modal-header {
-  padding: 0 0 15px;
+  padding: 0 0 20px;
   text-align: left; }
+
+.modal-terms button.close {
+  z-index: 2; }
 
 .modal-terms .nav-tabs {
   padding: 0;
@@ -7856,7 +7905,7 @@ textarea.form-control:focus {
 .modal-terms .nav-tabs > li > a {
   float: none;
   display: block;
-  padding: 12px 0 8px;
+  padding: 10px 0 8px;
   text-align: center;
   font-size: 0.8125em;
   line-height: 28px;
@@ -7866,7 +7915,7 @@ textarea.form-control:focus {
 
 .modal-terms .nav-tabs > li > a .icon {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto -15px;
   width: 42px;
   height: 47px;
   background: center center no-repeat; }
@@ -7916,7 +7965,7 @@ textarea.form-control:focus {
 
 .modal-terms .tab-pane {
   position: relative;
-  height: 423px;
+  height: 418px;
   overflow: hidden; }
 
 .modal-terms .ui-tabs-panel h3 {
