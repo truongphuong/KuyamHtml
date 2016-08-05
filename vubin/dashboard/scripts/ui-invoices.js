@@ -1,14 +1,14 @@
 $(document).ready(function () {
     $('#txtFrom').datetimepicker({
         sideBySide: true,
-        format: 'ddd, MMM Do',
+        format: 'MM/DD/YYYY',
         defaultDate: moment(),
         minDate: '03/10/2016'
     });
 
     $('#txtTo').datetimepicker({
         sideBySide: true,
-        format: 'ddd, MMM Do',
+        format: 'MM/DD/YYYY',
         defaultDate: moment(),
         minDate: '03/10/2016'
     });
@@ -45,12 +45,6 @@ $(document).ready(function () {
             htmlVal += '</tr>';
             htmlVal += '</table>';
             return htmlVal;
-        },
-        onExpandRow: function (index, row, $detail) {
-            console.log('open');
-        },
-        onCollapseRow: function (index, row) {
-            console.log('close');
         }
     });
 
@@ -63,6 +57,8 @@ $(document).ready(function () {
 
     $('ul.pagination').prepend($('<li class="page-first disabled"><a href="javascript:void(0)">First</a></li>'));
     $('<li class="page-last"><a href="javascript:void(0)">Last</a></li>').appendTo($('ul.pagination'));
+
+    existSelect('form-select-sort');
 });
 
 function invoicesPrint(){

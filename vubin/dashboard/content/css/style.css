@@ -2989,26 +2989,26 @@ textarea.form-control:focus {
 .kuyam-content .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: 1.0625em;
-  color: #7c7c7c;
-  font-weight: 300; }
+  color: #9b9b9b;
+  font-weight: 400; }
 
 .kuyam-content .form-control::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 1.0625em;
-  color: #7c7c7c;
-  font-weight: 300; }
+  color: #9b9b9b;
+  font-weight: 400; }
 
 .kuyam-content .form-control:-ms-input-placeholder {
   /* IE 10+ */
   font-size: 1.0625em;
-  color: #7c7c7c;
-  font-weight: 300; }
+  color: #9b9b9b;
+  font-weight: 400; }
 
 .kuyam-content .form-control:-moz-placeholder {
   /* Firefox 18- */
   font-size: 1.0625em;
-  color: #7c7c7c;
-  font-weight: 300; }
+  color: #9b9b9b;
+  font-weight: 400; }
 
 .kuyam-content .form-label {
   margin-bottom: 6px; }
@@ -3016,7 +3016,7 @@ textarea.form-control:focus {
 .kuyam-content .form-placeholder .form-label {
   margin-bottom: 0;
   font-size: 1.0625em;
-  color: #7c7c7c; }
+  color: #9b9b9b; }
 
 .kuyam-content .row {
   margin-left: -10px;
@@ -4919,8 +4919,12 @@ textarea.form-control:focus {
   height: 100%;
   background: rgba(0, 0, 0, 0.79);
   transition: visibility 1s, opacity 1s;
-  visibility: hidden;
+  display: none;
   opacity: 0; }
+
+.company-photo .has-image:hover .caption {
+  display: block;
+  visibility: hidden; }
 
 .company-photo .has-image:hover .caption {
   visibility: visible;
@@ -7076,32 +7080,40 @@ textarea.form-control:focus {
   margin-right: 10px; }
 
 .manage-invoices .invoices-table {
-  display: none; }
+  display: none;
+  width: 100% !important; }
 
 .manage-invoices .legend {
   text-align: left;
   margin-bottom: 15px; }
 
-.manage-invoices form {
-  text-align: right;
-  height: 0; }
-
-.manage-invoices form .filter-list {
+.manage-invoices .filter-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  float: right; }
+  float: right;
+  text-align: right;
+  height: 0; }
 
-.manage-invoices form .filter-list > li {
+.manage-invoices .filter-list > li {
   float: left;
   margin: 0 0 10px 38px; }
 
-.manage-invoices form .filter-list > li:first-child {
+.manage-invoices .filter-list > li.li-from {
   margin-left: 0; }
 
-.manage-invoices form .filter-list > li:last-child {
+.manage-invoices .filter-list > li.li-payment {
   width: 169px;
   margin-left: 40px; }
+
+.manage-invoices .filter-list .li-search,
+.manage-invoices .filter-list .li-btn {
+  display: none; }
+
+.manage-invoices .filter-list .li-search .form-control {
+  background: url(../images/dashboard/manage/icon-search.png) right center no-repeat;
+  background-size: 36px auto;
+  padding-right: 36px; }
 
 .manage-invoices .bootstrap-select > .btn,
 .manage-invoices .bootstrap-select > .btn:focus,
@@ -7112,7 +7124,7 @@ textarea.form-control:focus {
   padding-left: 16px; }
 
 .manage-invoices .form-label {
-  margin: 9px 10px 9px 0 !important;
+  margin: 9px 10px 9px 0;
   float: left;
   font-weight: normal;
   font-family: "Lato", sans-serif;
@@ -7363,6 +7375,44 @@ textarea.form-control:focus {
   color: #3891ff;
   font-weight: 700; }
 
+.manage-invoices .invoices-mobile .ul-header {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.manage-invoices .invoices-mobile .ul-header li:first-child {
+  float: left;
+  font-size: 0.9375em;
+  color: #303030;
+  padding-top: 13px;
+  padding-bottom: 10px; }
+
+.manage-invoices .invoices-mobile .ul-header li:last-child {
+  float: right; }
+
+.manage-invoices .invoices-mobile .ul-header li .form-label {
+  float: left;
+  font-style: italic;
+  font-size: 0.6875em;
+  color: #9b9b9b;
+  margin-top: 15px;
+  margin-bottom: 0; }
+
+.manage-invoices .invoices-mobile .form-select {
+  float: left; }
+
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn:focus,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn:active,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn-default.disabled,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn-default.disabled:focus,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select > .btn-default.disabled:active,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.manage-invoices .invoices-mobile .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+  border: 0 none;
+  padding-left: 0; }
+
 @media (max-width: 1023px) {
   .manage-invoices .kuyam-content .kuyam-form {
     padding: 0; }
@@ -7370,11 +7420,63 @@ textarea.form-control:focus {
   .manage-invoices .legend {
     text-align: center; }
 
-  .manage-invoices form {
+  .manage-invoices p {
+    text-align: center;
+    font-size: 0.8125em;
+    font-weight: 400;
+    color: #9b9b9b;
+    margin-top: 22px;
+    margin-bottom: 20px; }
+
+  .manage-invoices .filter-form {
+    padding-bottom: 16px;
+    border-bottom: 4px solid #f5f5f5;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .manage-invoices .filter-list {
+    float: none;
+    margin-left: -4px;
+    margin-right: -4px;
     height: auto; }
 
-  .manage-invoices form .filter-list {
-    float: none; } }
+  .manage-invoices .filter-list > li {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 0;
+    margin-bottom: 7px;
+    width: 50%;
+    position: relative; }
+
+  .manage-invoices .filter-list .form-label {
+    position: absolute;
+    left: 14px;
+    color: #9b9b9b; }
+
+  .manage-invoices .txt-date {
+    background-color: transparent;
+    padding-left: 49px;
+    padding-right: 49px;
+    text-align: center; }
+
+  .manage-invoices .filter-list > li.li-payment {
+    margin-left: 0;
+    width: 50%; }
+
+  .manage-invoices .filter-list .li-search {
+    display: block;
+    width: 100%; }
+
+  .manage-invoices .filter-list .li-btn {
+    display: block; }
+
+  .manage-invoices .form-timepicker {
+    width: 100%; }
+
+  .manage-invoices .invoices-table {
+    display: none !important; } }
 .manage-promos form {
   width: 664px; }
 
@@ -8014,3 +8116,4 @@ textarea.form-control:focus {
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
 
+/*# sourceMappingURL=style.css.map */

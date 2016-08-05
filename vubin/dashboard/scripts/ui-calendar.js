@@ -298,7 +298,7 @@ $(document).ready(function () {
         // Datetimepicker
         $('.txt-date').datetimepicker({
             sideBySide: true,
-            format: 'ddd, MMM Do',
+            format: 'MM/DD/YYYY',
             defaultDate: moment(),
             minDate: '03/10/2016'
         });

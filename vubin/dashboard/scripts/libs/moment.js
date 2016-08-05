@@ -1894,15 +1894,10 @@
 
     moment.suppressDeprecationWarnings = false;
 
-    moment.createFromInputFallback = deprecate(
-        'moment construction falls back to js Date. This is ' +
-        'discouraged and will be removed in upcoming major ' +
-        'release. Please refer to ' +
-        'https://github.com/moment/moment/issues/1407 for more info.',
-        function (config) {
-            config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-        }
-    );
+    moment.createFromInputFallback = function(config) {
+        // unreliable string magic, or
+        config._d = new Date(config._i);
+    };
 
     // Pick a moment m from moments so that m[fn](other) is true for all
     // other. This relies on the function fn to be transitive.
