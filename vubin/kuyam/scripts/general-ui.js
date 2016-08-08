@@ -32,6 +32,17 @@ $(function() {
 	  $('.bg-fading').addClass('show-bg-fading');
 	  $('.icon_mobile_close_menu').show();
 	 //$(this).hide();
+	 
+	 		$('.menu__level3, .menu__level2 li').hide();
+			$('.menu__level2').show();
+		
+		  $($('.menu__level2 li').get()).each(function(i) {
+			var $li = $(this);
+			setTimeout(function() {
+			  $li.addClass('fadeInLeft').show();
+			}, i*50); // delay 100 ms
+		  });
+		
 		
 	});
 	
