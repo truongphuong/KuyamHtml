@@ -6121,8 +6121,14 @@ textarea.form-control:focus {
     width: auto;
     padding: 0; }
 
+  .company-notifications .kuyam-form .legend {
+    margin-bottom: 23px; }
+
   .company-notifications .mobile-section p {
-    text-align: center; }
+    text-align: center;
+    color: #9b9b9b;
+    margin-bottom: 24px;
+    font-size: 0.8125em; }
 
   .company-notifications .form-control {
     float: left;
@@ -6154,10 +6160,24 @@ textarea.form-control:focus {
     background-image: url(../images/dashboard/company/mobile/icon-checked.png); }
 
   .company-notifications .kuyam-form footer {
-    padding: 10px 0; }
+    padding: 15px 0; }
 
   .company-notifications footer div[class*="col-"] {
     margin-bottom: 0; } }
+@media (max-width: 374px) {
+  .company-notifications .kuyam-form .legend {
+    margin-bottom: 18px; }
+
+  .company-notifications .mobile-section p {
+    font-size: 0.6875em;
+    margin-bottom: 16px; }
+
+  .company-notifications .cb-custom {
+    padding-top: 0;
+    height: 36px; }
+
+  .company-notifications .kuyam-form footer {
+    padding-bottom: 12px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 1023px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 1023px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (max-width: 1023px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 1023px), only screen and (min-resolution: 120dpi) and (max-width: 1023px), only screen and (min-resolution: 2dppx) and (max-width: 1023px) {
   .company-notifications .cb-mark ~ .cb-label:before {
     background-image: url(../images/dashboard/company/mobile/icon-check@2x.png); }
@@ -6177,7 +6197,17 @@ textarea.form-control:focus {
 @media (max-width: 1023px) {
   .company-settings .kuyam-form {
     width: auto;
-    padding: 0; } }
+    padding: 0; }
+
+  .company-settings .kuyam-form footer {
+    padding-top: 15px;
+    padding-bottom: 0; }
+
+  .company-settings .kuyam-form footer div[class*="col-"] {
+    margin-bottom: 15px; } }
+@media (max-width: 374px) {
+  .company-settings .kuyam-form footer div[class*="col-"] {
+    margin-bottom: 12px; } }
 .company-password .kuyam-form {
   width: 680px;
   padding: 0; }
@@ -7505,7 +7535,10 @@ textarea.form-control:focus {
   .manage-invoices .filter-list .form-label {
     position: absolute;
     left: 14px;
-    color: #9b9b9b; }
+    color: #9b9b9b;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 39px; }
 
   .manage-invoices .txt-date {
     background-color: transparent;
@@ -7531,7 +7564,104 @@ textarea.form-control:focus {
     display: none !important; }
 
   .manage-invoices .invoices-mobile {
-    display: block; } }
+    display: block; }
+
+  .manage-invoices .bootstrap-select .dropdown-menu > li > a {
+    font-size: 0.875em; } }
+@media (max-width: 374px) {
+  .manage-invoices .filter-list .form-label {
+    font-size: 0.6875em;
+    line-height: 33px; }
+
+  .manage-invoices .txt-date {
+    padding-left: 40px;
+    padding-right: 40px; }
+
+  .manage-invoices .bootstrap-select .dropdown-menu > li > a {
+    font-size: 0.6875em; } }
+.manage-invoices .panel-group {
+  padding: 1px 0; }
+
+.manage-invoices .panel-group .panel {
+  border-radius: 0;
+  border: 1px solid #d9d9d9;
+  box-shadow: none;
+  transition: 0.5s ease; }
+
+.manage-invoices .panel-group .panel.open {
+  box-shadow: 0 7px 19px 0 rgba(0, 0, 0, 0.14); }
+
+.manage-invoices .panel-group .panel + .panel {
+  margin-top: 17px; }
+
+.manage-invoices .panel-heading {
+  padding: 12px 18px 4px;
+  background: transparent; }
+
+.manage-invoices .panel-heading .table-css {
+  width: 100%; }
+
+.manage-invoices .panel-heading .th {
+  font-size: 0.6875em;
+  width: 61%;
+  line-height: 18px; }
+
+.manage-invoices .panel-heading .th label {
+  color: #858585;
+  font-weight: 400; }
+
+.manage-invoices .panel-heading .th span {
+  font-size: 0.68em; }
+
+.manage-invoices .panel-heading .td {
+  text-align: center;
+  vertical-align: middle; }
+
+.manage-invoices .panel-heading .td a {
+  width: 100%;
+  font-size: 0.6875em;
+  color: #3891ff;
+  text-decoration: none; }
+
+.manage-invoices .panel-heading .td a .text-off {
+  display: none; }
+
+.manage-invoices .panel-heading .td a .text-on {
+  display: inline-block; }
+
+.manage-invoices .panel-heading .td a.collapsed .text-off {
+  display: inline-block; }
+
+.manage-invoices .panel-heading .td a.collapsed .text-on {
+  display: none; }
+
+.manage-invoices .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-color: transparent; }
+
+.manage-invoices .panel-body {
+  font-size: 0.75em;
+  color: #6d6d6d;
+  line-height: 20px;
+  padding: 9px 18px 8px; }
+
+.manage-invoices .pagination {
+  margin-top: 11px;
+  margin-bottom: 10px; }
+
+@media (max-width: 374px) {
+  .manage-invoices .panel-heading {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .manage-invoices .panel-heading .th {
+    width: 75%; }
+
+  .manage-invoices .pagination > li > a,
+  .manage-invoices .pagination > li > span {
+    font-size: 0.75em; }
+
+  .manage-invoices .pagination > li.page-next a {
+    background-size: 8px auto; } }
 .manage-promos form {
   width: 664px; }
 

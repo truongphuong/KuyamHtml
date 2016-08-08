@@ -61,6 +61,15 @@ $(document).ready(function () {
     $('<li class="page-number active"><a href="javascript:void(0)">6</a></li><li class="page-number"><a href="javascript:void(0)">5</a></li><li class="page-number"><a href="javascript:void(0)">6</a></li><li class="page-number"><span>.&nbsp;.&nbsp;.</span></li>').insertBefore($('.invoices-table .page-next'));
     $('.invoices-table .page-pre').addClass('disabled');
     existSelect('form-select-sort');
+
+    $('#invoiceAccordion').on('shown.bs.collapse', function () {
+        $(this).find('.panel').removeClass('open');
+        $(this).find('a[aria-expanded="true"]').closest('.panel').addClass('open');
+    });
+
+    $('#invoiceAccordion').on('hide.bs.collapse', function () {
+        $(this).find('.panel').removeClass('open');
+    });
 });
 
 function invoicesPrint(){

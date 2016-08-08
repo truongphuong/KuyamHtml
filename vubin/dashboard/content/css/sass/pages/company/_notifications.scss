@@ -20,8 +20,14 @@
         width: auto;
         padding:0;
     }
+    .company-notifications .kuyam-form .legend{
+        margin-bottom: 23px;
+    }
     .company-notifications .mobile-section p{
         text-align:center;
+        color:#9b9b9b;
+        margin-bottom: 24px;
+        font-size: $s13;
     }
     .company-notifications .form-control{
         float:left;
@@ -53,10 +59,27 @@
         background-image: url(../images/dashboard/company/mobile/icon-checked.png);
     }
     .company-notifications .kuyam-form footer{
-        padding: 10px 0;
+        padding: 15px 0;
     }
     .company-notifications footer div[class*="col-"]{
-        margin-bottom:0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 374px) {
+    .company-notifications .kuyam-form .legend{
+        margin-bottom: 18px;
+    }
+    .company-notifications .mobile-section p{
+        font-size: $s11;
+        margin-bottom: 16px;
+    }
+    .company-notifications .cb-custom{
+        padding-top:0;
+        height: 36px;
+    }
+    .company-notifications .kuyam-form footer{
+        padding-bottom: 12px;
     }
 }
 
