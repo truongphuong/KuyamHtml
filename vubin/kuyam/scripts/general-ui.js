@@ -93,12 +93,17 @@ $(function() {
 		
 		$('.menu__level2').hide();
 		$('.menu__level3').show();
+		
+		$('.menu__level3 li').addClass('fadeInRight');
+		
 	});
 	
 	$('.btn_menu_back').click(function(){
 		
 		$('.menu__level3').hide();
 		$('.menu__level2').show();
+		
+		$('.menu__level2 li').addClass('fadeInLeft');
 	});
 	
 });
