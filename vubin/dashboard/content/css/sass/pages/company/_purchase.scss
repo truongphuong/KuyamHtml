@@ -99,7 +99,8 @@
 .company-purchase .popular-section .form-label{
     margin-bottom: 8px;
 }
-.company-purchase .search-section .controls{
+.company-purchase .search-section .controls,
+.company-purchase .popular-section .controls{
     float: right;
     font-size: $s15;
 }
@@ -196,11 +197,22 @@
 }
 
 @media (max-width: 1023px){
+    .company-purchase .kuyam-form p{
+        margin-bottom: 16px;
+        font-size: $s13;
+        line-height: 20px;
+    }
     .company-purchase .photo-section,
     .company-purchase .search-section,
     .company-purchase .popular-section,
     .company-purchase .cart-section{
         width: auto;
+    }
+    .company-purchase .cart-section .controls,
+    .company-purchase .search-section .controls,
+    .company-purchase .popular-section .controls{
+        font-size: $s11;
+        color:#9b9b9b;
     }
 
     .company-purchase .kuyam-form .search-form .form-control{
@@ -238,6 +250,18 @@
 }
 
 @media (max-width: 374px){
+    .company-purchase .kuyam-form .legend{
+        margin-bottom: 19px;
+    }
+    .company-purchase .kuyam-form p{
+        font-size: $s11;
+        line-height: 17px;
+    }
+    .company-purchase .cart-section .controls,
+    .company-purchase .search-section .controls,
+    .company-purchase .popular-section .controls{
+        font-size: $s9;
+    }
     .company-purchase .kuyam-form footer{
         padding-top: 13px;
     }
