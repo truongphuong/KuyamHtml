@@ -428,6 +428,9 @@
         position: absolute;
         left: 14px;
         color:#9b9b9b;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 39px;
     }
     .manage-invoices .txt-date{
         background-color: transparent;
@@ -455,6 +458,23 @@
 
     .manage-invoices .invoices-mobile{
         display: block;
+    }
+    .manage-invoices .bootstrap-select .dropdown-menu > li > a{
+        font-size: $s14;
+    }
+}
+
+@media (max-width: 374px){
+    .manage-invoices .filter-list .form-label{
+        font-size: $s11;
+        line-height: 33px;
+    }
+    .manage-invoices .txt-date{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .manage-invoices .bootstrap-select .dropdown-menu > li > a{
+        font-size: $s11;
     }
 }
 
