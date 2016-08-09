@@ -101,6 +101,8 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
 		if (!isMobile.Windows()) {
 			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
 			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+                $('#' + sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+                $('#' + sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
 				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
@@ -156,6 +158,8 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 		if (!isMobile.Windows()) {
 			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
 			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+                $('#' + sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+                $('#' + sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
 				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
@@ -193,6 +197,8 @@ function iscrollSelectSearch(sectionID, scrollName) {
         if (!isMobile.Windows()) {
             $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
             $('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+                $('#' + sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+                $('#' + sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
                 var heightOfUL = $('#' + sectionID + ' ul.inner').height();
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
@@ -231,6 +237,8 @@ function iscrollSelect(sectionID, scrollName) {
 		if (!isMobile.Windows()) {
 			$sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
 			$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
+                $('#' + sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+                $('#' + sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
 				var heightOfUL = $('#' + sectionID + ' ul.inner').height();
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
 				$('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
