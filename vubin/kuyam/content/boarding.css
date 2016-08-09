@@ -22,6 +22,10 @@
 	position: relative;
 }
 
+.modal-boarding .modal-body {
+    overflow: hidden;
+}
+
 .modal-boarding .txt-required{
     color: #ff5050;
     font-family: "Lato",sans-serif;
@@ -831,11 +835,14 @@
 	position:absolute;
 	width: 100%;
 	height: 100%;
+    top: 0;
+    left: 0;
 	background: rgba(0, 0, 0, .79);
-	transition:visibility 1s, opacity 1s;
+	transition:visibility 2s, opacity 2s;
     display: none;
 }
-.modal-boarding-profile  .has-image:hover .caption{
+.modal-boarding-profile  .has-image .caption{
+    display: block;
 	visibility:hidden; 
 	opacity:0;
 }
