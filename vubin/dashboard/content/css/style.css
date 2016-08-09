@@ -4991,13 +4991,13 @@ textarea.form-control:focus {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.79);
-  transition: visibility 1s, opacity 1s;
-  display: none;
-  opacity: 0; }
+  transition: visibility 2s, opacity 2s;
+  display: none; }
 
-.company-photo .has-image:hover .caption {
+.company-photo .has-image .caption {
   display: block;
-  visibility: hidden; }
+  visibility: hidden;
+  opacity: 0; }
 
 .company-photo .has-image:hover .caption {
   visibility: visible;
@@ -5331,20 +5331,31 @@ textarea.form-control:focus {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.8);
+  transition: visibility 2s, opacity 2s; }
+
+.modal-boarding-profile .has-image .caption {
+  display: block;
+  visibility: hidden;
+  opacity: 0; }
+
+.modal-boarding-profile .has-image:hover .caption {
+  visibility: visible;
+  opacity: 1; }
 
 .company-gallery .photo-list li .caption .icon-added {
   width: 12px;
   height: 9px;
   background-image: url(../images/dashboard/manage/icon-added.png);
   background-size: 12px auto;
-  margin-right: 5px; }
+  margin-right: 5px;
+  display: none; }
 
 .company-gallery .photo-list li .caption .text {
   color: #fff;
   line-height: 26px;
   font-size: 0.75em;
-  padding: 0 17px; }
+  padding: 0 10px; }
 
 .company-gallery .photo-list .control {
   text-align: center;
@@ -5353,7 +5364,7 @@ textarea.form-control:focus {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
-  transition: visibility 1s, opacity 1s;
+  transition: visibility 2s, opacity 2s;
   visibility: hidden;
   opacity: 0; }
 
@@ -5436,6 +5447,9 @@ textarea.form-control:focus {
   .company-gallery .photo-section .controls i {
     font-size: 0.625em; }
 
+  .company-gallery .photo-list li .caption .icon-added {
+    display: inline-block; }
+
   .company-gallery .photo-list li .caption .text {
     font-size: 0.625em; }
 
@@ -5509,18 +5523,20 @@ textarea.form-control:focus {
 
 .company-purchase .photo-list li a,
 .company-purchase .photo-list .photo-item a {
+  display: block;
   text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
   top: 0;
   font-size: 0.6875em;
   color: #fff;
   text-decoration: none;
   line-height: 26px;
   font-weight: 400;
-  transition: visibility 1s, opacity 1s;
+  transition: visibility 2s, opacity 2s;
   visibility: hidden;
   opacity: 0; }
 
@@ -6762,18 +6778,20 @@ textarea.form-control:focus {
 
 .manage-packages .photo-list li a,
 .manage-packages .photo-list .photo-item a {
+  display: block;
   text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
+  left: 0;
   font-size: 0.6875em;
   color: #fff;
   text-decoration: none;
   line-height: 26px;
   font-weight: 400;
-  transition: visibility 1s, opacity 1s;
+  transition: visibility 2s, opacity 2s;
   visibility: hidden;
   opacity: 0; }
 
@@ -8303,5 +8321,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
-/*# sourceMappingURL=style.css.map */

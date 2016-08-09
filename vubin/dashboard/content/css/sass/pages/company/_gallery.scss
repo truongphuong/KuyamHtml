@@ -67,6 +67,16 @@
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, .8);
+    transition:visibility 2s, opacity 2s;
+}
+.modal-boarding-profile  .has-image .caption{
+    display: block;
+    visibility:hidden;
+    opacity:0;
+}
+.modal-boarding-profile  .has-image:hover .caption{
+    visibility:visible;
+    opacity:1;
 }
 .company-gallery .photo-list li .caption .icon-added{
     width: 12px;
@@ -74,12 +84,13 @@
     background-image:url(../images/dashboard/manage/icon-added.png);
     background-size: 12px auto;
     margin-right: 5px;
+    display: none;
 }
 .company-gallery .photo-list li .caption .text{
     color: $white;
     line-height: 26px;
     font-size: $p;
-    padding: 0 17px;
+    padding: 0 10px;
 }
 .company-gallery .photo-list .control{
     text-align:center;
@@ -88,7 +99,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
     top: 0;
-    transition:visibility 1s, opacity 1s;
+    transition:visibility 2s, opacity 2s;
     visibility:hidden;
     opacity:0;
 }
@@ -180,6 +191,9 @@
     }
     .company-gallery .photo-section .controls i{
         font-size: $s10;
+    }
+    .company-gallery .photo-list li .caption .icon-added{
+        display: inline-block;
     }
     .company-gallery .photo-list li .caption .text{
         font-size: $s10;
