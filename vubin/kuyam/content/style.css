@@ -8357,10 +8357,16 @@ td ul {
 	border: none;
 }
 
+.site-header .logo img{
+	display: none;
+}
+
 .site-header .logo {
 	margin: 16px 0 0;
 	width: 103px;
 	height: 28px;
+	background: url(images/icons_2016/header_logo_kuyam@2x.png) center center no-repeat;
+	background-size: 103px auto;
 }
 
 .site-header .search-form {
@@ -8859,8 +8865,16 @@ td ul {
 	padding: 20px 0 32px;
 }
 
+.site-contact .logo img{
+	display: none;
+}
+
 .site-contact .logo {
 	width: 104px;
+	height: 31px;
+	background: url(images/icons_2016/footer_logo_kuyam@2x.png) center center no-repeat;
+	background-size: 104px auto;
+
 }
 
 .site-contact .section-header {
@@ -9770,9 +9784,17 @@ td ul {
 	#ml-menu .menu-slide-right {
 		left: 0;
 	}
+	
+	#ml-menu .logo img{
+		display: none;
+	}
+	
 	#ml-menu .logo {
 		margin: 30px 0 20px 30px;
 		width: 100px;
+		height: 27px;
+		background: url(images/icons_2016/header_logo_kuyam@2x.png) no-repeat;
+		background-size: 100px auto;
 	}
 	#ml-menu li {
 		list-style: none;
@@ -10114,3 +10136,27 @@ td ul {
 	
 }
 
+
+/* Retina support */
+
+.img-normal{
+    display:block;
+}
+.img-retina{
+    display:none;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .img-normal{
+        display:none;
+    }
+    .img-retina{
+        display:block;
+    }
+}
