@@ -15,16 +15,21 @@
     transition:visibility 2s, opacity 2s;
     display: none;
 }
-.company-photo  .has-image .caption{
+.company-photo .has-image .caption{
     display: block;
     visibility:hidden;
     opacity:0;
 }
-.company-photo  .has-image:hover .caption{
+.company-photo .animated .caption,
+.company-photo .unit-loading .caption,
+.company-photo .unit-loading .edit{
+	display: none;
+}
+.company-photo .has-image:hover .caption{
     visibility:visible;
     opacity:1;
 }
-.company-photo  .has-image:hover .edit{
+.company-photo .has-image:hover .edit{
     background: none;
 }
 .company-photo .caption ul{
@@ -74,6 +79,7 @@
 }
 .company-photo .boarding-avatar .avatar.invisible{
     height: 0;
+	overflow: hidden;
 }
 .company-photo .boarding-avatar .default{
     width: 100%;
@@ -106,6 +112,7 @@
 }
 .company-photo .boarding-avatar .croppie-section.invisible{
     height: 0;
+	overflow:hidden;
 }
 .company-photo .boarding-avatar .croppie-section footer{
     text-align: center;

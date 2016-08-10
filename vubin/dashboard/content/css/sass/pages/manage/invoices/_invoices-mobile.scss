@@ -1,0 +1,95 @@
+.manage-invoices .panel-group{
+    padding: 1px 0;
+}
+.manage-invoices .panel-group .panel{
+    border-radius: 0;
+    border: 1px solid #d9d9d9;
+    box-shadow: none;
+    transition: 0.5s ease;
+}
+.manage-invoices .panel-group .panel.open{
+    box-shadow: 0 7px 19px 0 rgba(0, 0, 0, 0.14);
+}
+.manage-invoices .panel-group .panel + .panel{
+    margin-top: 17px;
+}
+.manage-invoices .panel-heading{
+    padding: 12px 18px 4px;
+    background: transparent;
+}
+.manage-invoices .panel-heading .table-css{
+    width: 100%;
+}
+.manage-invoices .panel-heading .th{
+    font-size: $s11;
+    width:61%;
+    line-height: 18px;
+}
+.manage-invoices .panel-heading .th label{
+    color: #858585;
+    font-weight: 400;
+}
+.manage-invoices .panel-heading .th span{
+  font-size: $s8;
+}
+.manage-invoices .panel-heading .td{
+    text-align: center;
+    vertical-align: middle;
+}
+.manage-invoices .panel-heading .td a{
+    width: 100%;
+    font-size: $s11;
+    color: $positive;
+    text-decoration: none;
+}
+.manage-invoices .panel-heading .td a .text-off{
+    display: none;
+}
+.manage-invoices .panel-heading .td a .text-on{
+    display: inline-block;
+}
+.manage-invoices .panel-heading .td a.collapsed .text-off{
+    display: inline-block;
+}
+.manage-invoices .panel-heading .td a.collapsed .text-on{
+    display: none;
+}
+.manage-invoices .panel-default > .panel-heading + .panel-collapse > .panel-body{
+    border-color: transparent;
+}
+.manage-invoices .panel-body{
+    font-size: $p;
+    color:#6d6d6d;
+    line-height: 20px;
+    padding: 9px 18px 8px;
+}
+.manage-invoices .pagination{
+    margin-top:11px;
+    margin-bottom: 10px;
+}
+@media (max-width: 374px) {
+    .manage-invoices .panel-heading{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .manage-invoices .panel-heading .th{
+        width: 75%;
+    }
+    .manage-invoices .pagination > li > a,
+    .manage-invoices .pagination > li > span{
+        font-size: $p;
+    }
+    .manage-invoices .pagination > li.page-next a{
+        background-size: 8px auto;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+
+}
