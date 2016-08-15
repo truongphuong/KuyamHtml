@@ -432,7 +432,7 @@ textarea {
 
 .form-control,
 .form-control:focus {
-  font-size: 1.0625em;
+  font-size: 0.6875em;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   border-color: #979797;
@@ -643,11 +643,12 @@ div[class*="col-"] {
 
 .modal-dialog {
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  width: 620px; }
 
 .modal-content {
   border: 1px solid #888;
-  border-radius: 4px;
+  border-radius: 8px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
@@ -655,14 +656,14 @@ div[class*="col-"] {
 .modal-header {
   text-align: center;
   border: 0 none;
-  padding-top: 25px;
-  padding-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 0px;
   position: relative; }
 
 .modal-header h4 {
-  font-size: 1.1875em;
+  font-size: 1.0625em;
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   padding-bottom: 0; }
 
 .modal-header .close {
@@ -672,7 +673,7 @@ div[class*="col-"] {
   right: 0; }
 
 .modal-body {
-  padding-bottom: 0; }
+  padding-bottom: 8px; }
 
 .modal-footer {
   padding-top: 0;
@@ -710,8 +711,8 @@ div[class*="col-"] {
 
 @media (min-width: 1024px) {
   .modal-body {
-    padding-left: 25px;
-    padding-right: 25px; } }
+    padding-left: 35px;
+    padding-right: 35px; } }
 @media (max-width: 767px) {
   .modal-footer {
     padding-bottom: 20px; } }
@@ -758,7 +759,9 @@ div[class*="col-"] {
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  font-size: 0.6875em;
+  margin-top: 4px; }
 
 .bootstrap-select > .dropdown-toggle {
   padding-right: 30px; }
@@ -999,12 +1002,12 @@ div[class*="col-"] {
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn,
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:focus,
 .form-select .bootstrap-select.ng-dirty.ng-invalid > .btn:active {
-  border-color: #ff5050; }
+  border-color: #f31642; }
 
 .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn,
 .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:focus,
 .form-select .bootstrap-select.invalid-forced.ng-invalid > .btn:active {
-  border-color: #ff5050; }
+  border-color: #f31642; }
 
 .form-select .bootstrap-select .dropdown-menu {
   margin-top: -1px; }
@@ -1040,7 +1043,8 @@ div[class*="col-"] {
   top: -33px; }
 
 .form-select-search .bootstrap-select.btn-group .btn .filter-option {
-  font-size: 1.0625em; }
+  font-size: 0.6875em;
+  margin-top: 4px; }
 
 .form-select-search .bootstrap-select .bs-searchbox .form-control {
   border-color: transparent transparent #979797;
@@ -1653,7 +1657,8 @@ body.pr0 {
   padding-bottom: 0;
   padding-top: 0;
   padding: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  margin-top: 20px; }
 
 .btn-agree:hover {
   color: #3891ff;
@@ -1684,16 +1689,16 @@ body.pr0 {
   box-shadow: none; }
 
 .btn-disagree:hover {
-  background: #ff5050;
+  background: #f31642;
   color: #fff;
   font-weight: 700;
   box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11); }
 
 .btn-disagree,
 .btn-disagree:focus {
-  border: 1px solid #ff5050;
+  border: 1px solid #f31642;
   background: #fff;
-  color: #ff5050;
+  color: #f31642;
   box-shadow: none; }
 
 .btn[disabled],
@@ -1712,19 +1717,6 @@ button.close {
   background: url(../images/dashboard/icon-close.png) center center no-repeat;
   background-size: 12px auto; }
 
-@media (max-width: 1023px) {
-  .btn-form,
-  .btn-form:focus {
-    font-size: 0.875em;
-    height: 38px; } }
-@media (max-width: 374px) {
-  .btn-form,
-  .btn-form:focus {
-    font-size: 0.75em;
-    height: 34px; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  button.close {
-    background-image: url(../images/dashboard/icon-close@2x.png); } }
 .cb-custom {
   position: relative; }
 
@@ -1876,7 +1868,7 @@ textarea.form-control:focus {
   resize: none; }
 
 .txt-required {
-  color: #ff5050;
+  color: #f31642;
   font-family: "Lato", sans-serif;
   font-weight: 700; }
 
@@ -1887,27 +1879,29 @@ textarea.form-control:focus {
   color: #434343; }
 
 .txt-error {
-  color: #ff5050; }
+  color: #f31642; }
 
 .alert-error {
   color: #ff0000; }
 
 .invalid-forced.ng-invalid, .input-error {
-  border-color: #ff5050; }
+  border-color: #f31642; }
 
 .txt-date {
   background-image: url(../images/dashboard/calendar/icon_calendar_blue_2.png);
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 37px auto;
-  padding-right: 37px; }
+  padding-right: 37px;
+  font-size: 0.6875em; }
 
 .txt-hour {
   background-image: url(../images/icon_time_grey_2.png);
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 30px auto;
-  padding-right: 30px; }
+  padding-right: 30px;
+  font-size: 0.6875em; }
 
 @media (max-width: 1023px) {
   .form-label {
@@ -4385,7 +4379,8 @@ textarea.form-control:focus {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   color: #242424;
-  text-transform: none; }
+  text-transform: none;
+  margin-top: 0px; }
 
 .calendar-select-staff .bootstrap-select .dropdown-menu.inner {
   width: 180px; }
@@ -4488,8 +4483,8 @@ textarea.form-control:focus {
   font-size: 0.8125em;
   font-weight: 700;
   padding: 5px 10px;
-  border: 1px solid #bc347c;
-  color: #bc347c;
+  border: 1px solid #3891ff;
+  color: #3891ff;
   position: absolute;
   right: -50%; }
 
@@ -4614,7 +4609,9 @@ textarea.form-control:focus {
 .calendar-block p.calendar-user {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  font-weight: 700;
+  margin-bottom: 6px; }
 
 .calendar-block p.calendar-with {
   word-wrap: break-word; }
@@ -4643,7 +4640,8 @@ textarea.form-control:focus {
   font-size: 0.6875em;
   line-height: 20px;
   font-family: "Lato", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-top: 0px; }
 
 .calendar-block .bootstrap-select.btn-group.open .btn .filter-option {
   font-family: "Lato", sans-serif;
@@ -7899,6 +7897,10 @@ textarea.form-control:focus {
   font-size: 1em;
   font-weight: 400; }
 
+.time-picker-custom .working-time {
+  padding-bottom: 0px;
+  padding-top: 28px; }
+
 .calendar-tabs .nav-tabs {
   text-align: center;
   border: 0 none;
@@ -7927,7 +7929,11 @@ textarea.form-control:focus {
   background: transparent;
   color: #282828;
   font-size: 1em;
-  padding: 0; }
+  padding: 0;
+  font-weight: 600; }
+
+.calendar-tabs .nav-tabs > li.active a {
+  color: #3891ff; }
 
 .calendar-tabs .nav-tabs > li.active .dot {
   background-image: url(../images/dashboard/calendar/dot-active.png); }
@@ -7973,14 +7979,14 @@ textarea.form-control:focus {
   .modal-dialog.block-attendee {
     width: auto; } }
 .modal-cancel-calendar h5 {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin: 5px 0 30px; }
+  margin: 10px 0 10px; }
 
 .modal-cancel-calendar h5 a {
-  color: #ff5050;
+  color: #f31642;
   text-decoration: underline; }
 
 .modal-croppie .modal-header {
@@ -8169,14 +8175,14 @@ textarea.form-control:focus {
   .modal-dialog.block-personal {
     width: auto; } }
 .modal-repeat-calendar h5 {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin: 5px 0 30px; }
+  margin: 10px 0 10px; }
 
 .modal-repeat-calendar h5 a {
-  color: #ff5050;
+  color: #f31642;
   text-decoration: underline; }
 
 .modal-terms {

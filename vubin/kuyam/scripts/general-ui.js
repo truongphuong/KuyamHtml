@@ -54,7 +54,10 @@ $(function() {
 	});
 	
 	
-	var _defaultWidthSelect = 14;	
+	var _defaultWidthSelect = 14;
+	var _mobilePort = 480;	
+	
+	
 	var _selectBox = $('.select-custom-box .book-me-session-select');
 	
 	_selectBox.change(function(){
@@ -73,7 +76,7 @@ $(function() {
 		
 		
 		var _widthSelect = _selectBox.val().length * _defaultWidthSelect;
-		if($('body').width()< 480){
+		if($('body').width()< _mobilePort){
 			if(_widthSelect > 145){_widthSelect = 145;}		
 			if(_widthSelect < 70){_widthSelect = 70;}
 		}else{

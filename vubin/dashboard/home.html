@@ -207,7 +207,8 @@
                 	<!-- .calendar-header -->
                     <header class="calendar-header">
                     	<div class="">
-                            <input disabled class="btn-today" type="button" value="Today" />
+                            <input  class="btn-today" type="button" value="Today" />
+							 <input disabled class="btn-today hidden" type="button" value="Today" />
                             <a title="" href="javascript:void(0);" class="calendar-controls calendar-pre disabled"><span class="icon icon-pre"></span></a>
                             <a title="" href="javascript:void(0);" class="calendar-controls calendar-next"><span class="icon icon-next"></span></a>
                             <div class="calendar-title">
@@ -1597,10 +1598,10 @@
 				<div class="modal-body">
                     <div class="row">
                         <div class="col-xs-6">
-                            <button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
+                            <button class="btn btn-form btn-disagree" data-dismiss="modal">No</button>
                         </div>
                         <div class="col-xs-6">
-                            <button class="btn btn-form btn-agree">yes</button>
+                            <button class="btn btn-form btn-agree">Yes</button>
                         </div>
                     </div>
 				</div>
@@ -1620,10 +1621,10 @@
 				<div class="modal-body">
                     <div class="row">
                         <div class="col-xs-6">
-                            <button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
+                            <button class="btn btn-form btn-neutral" data-dismiss="modal">Cancel</button>
                         </div>
                         <div class="col-xs-6">
-                            <button class="btn btn-form btn-agree">yes</button>
+                            <button class="btn btn-form btn-agree">Save changes</button>
                         </div>
                     </div>
 				</div>
@@ -1643,7 +1644,7 @@
 				<div class="modal-body">
                     <div class="row">
                         <div class="col-xs-6 col-xs-offset-3">
-                            <button class="btn btn-form btn-agree" data-dismiss="modal">ok</button>
+                            <button class="btn btn-form btn-agree" data-dismiss="modal">Ok</button>
                         </div>
                     </div>
 				</div>
@@ -1669,12 +1670,13 @@
 
 						<!-- .nav-tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Appointment</a></li>
-							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Class</a></li>
-							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Blocker</a></li>
+							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> appointment</a></li>
+							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> class</a></li>
+							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> blocker</a></li>
 						</ul>
 						<!-- /.nav-tabs -->
 
+						<br/>
 						<!-- .tab-content -->
 						<div class="tab-content">
 
@@ -1733,8 +1735,8 @@
 											</div>
 										</div>
 										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeAppointment">Time</label>
-											<div id="timepickerAppointment" class="dropdown form-timepicker">
+											<label class="form-label hidden" for="txtTimeAppointment">Time</label>
+											<div id="timepickerAppointment" class="hidden dropdown form-timepicker">
 												<input id="txtTimeAppointment" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
 												<section class="dropdown-menu" aria-labelledby="txtTime">
 													<div class="dropdown-section">
@@ -1779,6 +1781,75 @@
 											</div>
 										</div>
 									</div>
+									
+									<div class="row">
+										
+										
+										<div class="col-xs-12 col-sm-4">
+											<label class="form-label" for="txtDateAppointment">Starting date</label>
+											<div class="form-timepicker">
+												<input id="txtDateAppointment" type="text" class="form-control txt-date" />
+											</div>
+										</div>
+										
+										<div class="col-xs-12 col-sm-8">
+											
+										<div class="working-section time-picker-custom">
+                                    <section class="table-css">
+                                        
+                                        
+                                        
+                                        <div class="tr active">
+                                             <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM" aria-expanded="false"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" style="max-height: 603px; overflow: hidden; min-height: 0px;"><ul class="dropdown-menu inner" role="menu" style="max-height: 601px; overflow-y: auto; min-height: 0px;"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </section>
+                                </div>
+											
+										</div>
+										
+										
+									</div>
+									
 									<div class="row repeat-section">
 										<div class="col-xs-12 col-sm-6">
 											<label class="form-label" for="selectRepeatAppointment">Repeat</label>
@@ -1841,7 +1912,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add appointment</button>
+											<button class="btn btn-form btn-agree">Add appointment</button>
 										</div>
 									</div>
 
@@ -1875,60 +1946,80 @@
 
 										</div>
 									</div>
+								
+											
 									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtStartDateClass">Starting date</label>
+										
+										
+										<div class="col-xs-12 col-sm-4">
+											<label class="form-label" for="txtDateAppointment">Starting date</label>
 											<div class="form-timepicker">
-												<input id="txtStartDateClass" type="text" class="form-control txt-date" />
+												<input id="txtDateAppointment" type="text" class="form-control txt-date" />
 											</div>
 										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeClass">Time</label>
-											<div id="timepickerClass" class="dropdown form-timepicker">
-												<input id="txtTimeClass" type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-												<section class="dropdown-menu" aria-labelledby="txtTime">
-													<div class="dropdown-section">
-														<footer></footer>
-														<table>
-															<tbody>
-																<tr>
-																	<td class="td-timepicker td-field">
-																		From
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-section" data-section="timepickerClass"></div>
-																	</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td class="td-timepicker td-field text-right">
-																		To
-																	</td>
-																	<td class="td-timepicker">
-																		<table>
-																			<tr>
-																				<td>
-																					<span class="timepicker-hour">1</span>
-																				</td>
-																				<td class="separator">:</td>
-																				<td>
-																					<span class="timepicker-minute">00</span>
-																				</td>
-																				<td>
-																					<span class="timepicker-period">AM</span>
-																				</td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-												</section>
-											</div>
+										
+										<div class="col-xs-12 col-sm-8">
+											
+										<div class="working-section time-picker-custom">
+                                    <section class="table-css">
+                                        
+                                        
+                                        
+                                        <div class="tr active">
+                                             <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM" aria-expanded="false"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" style="max-height: 603px; overflow: hidden; min-height: 0px;"><ul class="dropdown-menu inner" role="menu" style="max-height: 601px; overflow-y: auto; min-height: 0px;"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </section>
+                                </div>
+											
 										</div>
+										
+										
 									</div>
+									
+								
+									
+									
+									
 									<div class="row">
 										<div class="col-xs-12 col-sm-6">
 											<label class="form-label" for="txtEndDateClass">Ending date</label>
@@ -1990,7 +2081,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add class</button>
+											<button class="btn btn-form btn-agree">Add class</button>
 										</div>
 									</div>
 								</form>
@@ -2027,47 +2118,81 @@
 											<input id="txtReason" type="text" class="form-control" />
 										</div>
 									</div>
+								
+									
+											
 									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtDateBlocker">Date</label>
+										
+										
+										<div class="col-xs-12 col-sm-4">
+											<label class="form-label" for="txtDateAppointment">Starting date</label>
 											<div class="form-timepicker">
-												<input id="txtDateBlocker" type="text" class="form-control txt-date" />
+												<input id="txtDateAppointment" type="text" class="form-control txt-date" />
 											</div>
 										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeBlocker">Time</label>
-											<div id="timepickerBlocker" class="dropdown form-timepicker form-timepicker-range">
-												<input id="txtTimeBlocker" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-												<section class="dropdown-menu" aria-labelledby="txtTime">
-													<div class="dropdown-section">
-														<footer></footer>
-														<table>
-															<tbody>
-																<tr>
-																	<td class="td-timepicker td-field">
-																		From
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-from"></div>
-																	</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td class="td-timepicker td-field text-right">
-																		To
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-to"></div>
-																	</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-												</section>
-											</div>
+										
+										<div class="col-xs-12 col-sm-8">
+											
+										<div class="working-section time-picker-custom">
+                                    <section class="table-css">
+                                        
+                                        
+                                        
+                                        <div class="tr active">
+                                             <div class="td working-time">
+                                                <div class="table-css">
+                                                    <div class="tr">
+                                                        <div class="td td-from">
+                                                            From
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM" aria-expanded="false"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" style="max-height: 603px; overflow: hidden; min-height: 0px;"><ul class="dropdown-menu inner" role="menu" style="max-height: 601px; overflow-y: auto; min-height: 0px;"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="td td-to">
+                                                            to
+                                                        </div>
+                                                        <div class="td">
+                                                            <ul class="clearfix">
+                                                                <li>
+                                                                    <input type="text" value="10 : 00">
+                                                                </li>
+                                                                <li class="form-select form-select-time">
+                                                                    <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="AM"><span class="filter-option pull-left">AM</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">AM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">PM</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select tabindex="-98">
+                                                                        <option>AM</option>
+                                                                        <option>PM</option>
+                                                                    </select></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </section>
+                                </div>
+											
 										</div>
+										
+										
 									</div>
+									
+								
+									
+									
+									
 									<div class="row">
 										<div class="col-xs-12">
 											<label class="form-label" for="txtNoteBlocker">Internal notes</label>
@@ -2076,7 +2201,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add blocker</button>
+											<button class="btn btn-form btn-agree">Add blocker</button>
 										</div>
 									</div>
 								</form>
@@ -2126,10 +2251,10 @@
 						</div>
 						<div class="row">
 							<div class="col-xs-6 hidden-lg">
-								<input class="btn btn-form btn-disagree" type="button" value="no" data-dismiss="modal" />
+								<input class="btn btn-form btn-disagree" type="button" value="No" data-dismiss="modal" />
 							</div>
 							<div class="col-xs-6 col-lg-12">
-								<button class="btn btn-form btn-agree"><span class="visible-lg">add staff</span><span class="hidden-lg">yes</span></button>
+								<button class="btn btn-form btn-agree"><span class="visible-lg">Add staff</span><span class="hidden-lg">Yes</span></button>
 							</div>
 						</div>
 					</form>
@@ -2144,7 +2269,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="addClientModalLabel" class="modal-title">Add new client</h4>
+					<h4 id="addClientModalLabel" class="modal-title">Add new client</h4><br>
 				</div>
 				<div class="modal-body">
 					<form>
@@ -2185,11 +2310,12 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="cancelCalendarModalLabel" class="modal-title">Are you sure you want to cancel<br /> this appointment</h4>
+					<h4 id="cancelCalendarModalLabel" class="modal-title">Are you sure you want to cancel this appointment</h4><br/>
 				</div>
 				<div class="modal-body">
 					<h5><a title="" href="">Cancel for this appointment only</a></h5>
 					<h5><a title="" href="">Cancel for future appointments</a></h5>
+					<br/><br/>
 					<form>
 						<div class="row">
 							<div class="col-xs-12">
@@ -2209,14 +2335,15 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="repeatCalendarModalLabel" class="modal-title">This is a repeating appointment</h4>
+					<h4 id="repeatCalendarModalLabel" class="modal-title">This is a repeating appointment</h4><br>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body">					
 					<h5><a title="" href="">Save for this appointment only</a></h5>
 					<h5><a title="" href="">Save for future appointments</a></h5>
+					<br><br>
 					<div class="row">
-						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-							<input class="btn btn-form btn-agree" type="button" value="cancel" data-dismiss="modal" />
+						<div class="col-xs-6 col-xs-offset-3">
+							<input class="btn btn-form btn-neutral" type="button" value="Cancel" data-dismiss="modal" />
 						</div>
 					</div>
 				</div>
@@ -2279,10 +2406,10 @@
 				<div class="modal-footer">
 					<div class="row">
 						<div class="col-xs-6">
-							<button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
+							<button class="btn btn-form btn-disagree" data-dismiss="modal">No</button>
 						</div>
 						<div class="col-xs-6">
-							<button class="btn btn-form btn-agree">yes</button>
+							<button class="btn btn-form btn-agree">Yes</button>
 						</div>
 					</div>
 				</div>
@@ -2301,10 +2428,10 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-xs-6">
-							<button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
+							<button class="btn btn-form btn-disagree" data-dismiss="modal">No</button>
 						</div>
 						<div class="col-xs-6">
-							<button class="btn btn-form btn-agree">yes</button>
+							<button class="btn btn-form btn-agree">Yes</button>
 						</div>
 					</div>
 				</div>
