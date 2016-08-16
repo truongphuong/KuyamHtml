@@ -54,7 +54,6 @@ $(function() {
 	});
 	
 	
-
 	/* begin responsive select box custom */
 	
 	var _defaultWidthSelect = 14;
