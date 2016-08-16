@@ -167,6 +167,7 @@ body.pr0 {
     right: 0;
     bottom: 0;
     z-index: 9999;
+    display: none;
 }
 
     .loading > div {
@@ -510,6 +511,7 @@ textarea.form-control:focus {
 .modal {
     background: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
+    padding-right: 0 !important;
 }
 .modal-open .modal {
     background: rgba(0, 0, 0, 0.5);
@@ -1206,10 +1208,10 @@ textarea.form-control:focus {
 }
 
 .icon-chat {
-    width: 91px;
-    height: 38px;
-    background-image: url(../images/icon_chat.png);
-    background-size: 91px auto;
+    width: 16px;
+    height: 14px;
+    background-image: url(../images/footer_icon_comment.png);
+    
 }
 
 .active .icon-chat {
@@ -1224,17 +1226,17 @@ textarea.form-control:focus {
 }
 
 .icon-facebook {
-    width: 28px;
-    height: 28px;
-    background-image: url(../images/icon_facebook.png);
-    background-size: 28px auto;
+    width: 18px;
+    height: 17px;
+    background-image: url(../images/footer_icon_facebook.png);
+   
 }
 
 .icon-twitter {
-    width: 28px;
-    height: 28px;
-    background-image: url(../images/icon_twitter.png);
-    background-size: 28px auto;
+    width: 20px;
+    height: 17px;
+    background-image: url(../images/footer_icon_twitter.png);
+   
 }
 
 .icon-next {
@@ -2027,30 +2029,6 @@ textarea.form-control:focus {
         padding-left: 25px;
         padding-right: 25px;
     }
-    .modal-paypal .modal-body {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    .modal-s .modal-dialog {
-        width: 450px;
-    }
-
-    .modal-m .modal-dialog {
-        width: 550px;
-    }
-
-    .modal-l .modal-dialog {
-        width: 650px;
-    }
-    .modal-l .modal-dialog.modal-paypal {
-        width: 590px;
-    }
-    .modal-paypal .col-xs-6:last-child {
-        padding-left: 5rem;
-    }
-    .modal-paypal .lines {
-        padding-right: 4rem;
-    }
 }
 
 @media (max-width:1023px) {
@@ -2402,47 +2380,186 @@ textarea.form-control:focus {
     background-color: #95be31;
     color: #fff;
 }
-.modal-paypal .col-xs-6 {
+
+/* Begin vuho customization */
+.kuyam-header{
+	background-color: #ffffff;
+	border: none;
+	border-bottom: 1px solid #bebebe;
+
+}
+
+.kuyam-footer{
+	font-size: 12px;
+    padding: 0 20px;
+}
+
+.user-info{
+	border-left: 1px solid #bebebe;
+	position: relative;
+}
+
+.kuyam-header .navbar-nav > li > a, .kuyam-header .navbar-nav > li > a:focus, .kuyam-header .navbar-nav > li > a:hover {
+    color: #242424;
+    background: transparent;
+}
+
+
+
+.kuyam-header .navbar-brand{
+	 background: url(../images/header_logo_kuyam.png) center center no-repeat;
+	 margin-left: 10px  !important;
+}
+
+.kuyam-header .navbar-nav > li.active > a, .kuyam-header .navbar-nav > li.active > a:focus, .kuyam-header .navbar-nav > li.active > a:hover {
+    background-color: transparent;	
+    
+}
+
+.kuyam-header .navbar-nav .active{
+	border-bottom: 4px solid #3891ff;
+}
+
+.kuyam-header .navbar-nav > li > a {
+    padding: 18px 0 16px;
     text-align: center;
-    padding-bottom: 3.5rem;
-    padding-top: 2.5rem;
 }
-.modal-paypal .lines {
-    border-right: 1px solid #ddd;
+
+.navSettings{
+	font-size: 13px;
+	width: 200px !important;
+	text-align:left !important;
+	
 }
-.modal-paypal .modal-header {
-    margin-bottom: 4rem;
-    margin-top: 0rem;
+
+
+.user-info a {
+   
+    text-align: left !important;
+	padding: 12px 20px 26px !important;
+	font-size: 13px;
+	font-weight: bold  !important;
+	
 }
-.modal-paypal .modal-header h4 {
-    font-weight: 400;
-    padding-bottom: 0;
-    margin-top: 0.51rem;
-    font-size:19px;
-    color:#4a4a4a;
+
+
+.kuyam-footer ul li .icon {
+    margin-bottom: -3px;
 }
-.modal-paypal .modal-body {
-    padding-bottom: 2rem;
+
+.kuyam-page .kuyam-sidebar {
+    background: #f5f5f5;
+    min-width: 190px;
 }
-.modal-paypal .modal-content {
-    border-radius: 12px !important;
+
+.kuyam-subnav{
+    background: #f5f5f5;
+    min-width: 190px;
 }
-a[name="paymentmethod"] {
-    background: url(../images/paypal.png);
-    height: 111px;
-    width: 111px;
-    border: none;
-    text-indent: -9999px;
-    cursor: pointer;
-    display: inline-block;
+
+
+.subnav-ul[data-dropdown="false"] > li > a .text {
+    float: none;
+    max-width: 100%;
+    margin-right: 0;
+     font: 13px Lato, sans-serif !important;
 }
-a[name="creditcardtmethod"] {
-    background: url(../images/cards.png);
-    height: 93px;
-    width: 147px;
-    border: none;
-    text-indent: -9999px;
-    outline: none;
-    cursor: pointer;
-    display: inline-block;
+
+.kuyam-sidebar ul li a{
+	
+    font: 13px Lato, sans-serif !important;
+    text-transform: capitalize ;
+	font-weight:300 !important;
+	color: #242424 !important;
+	 padding-left: 45px;
+	 position: relative;	
+ 
 }
+.kuyam-sidebar ul li.active a, .kuyam-sidebar ul li a:hover  {
+    
+	 text-transform: capitalize ;
+	 font-weight:700 !important;
+
+}
+
+.subnav-ul[data-dropdown="false"] > li > a:hover {
+    
+	 text-transform: capitalize ;
+	 font-weight:700 !important;
+     background: #f0f0f0;
+}
+
+
+.dashboard_icon_profile{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_profile.png) center center no-repeat;
+}
+.dashboard_icon_image_gallery{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_image_gallery.png) center center no-repeat;	
+
+}
+.dashboard_icon_payment_booking{	
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_payment_booking.png) center center no-repeat;
+}
+.dashboard_icon_notifications{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_notifications.png) center center no-repeat;
+	
+}
+.dashboard_icon_calendars{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_calendars.png) center center no-repeat;
+	
+}
+.dashboard_icon_settings{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 19px;
+	left: 24px;
+	background: url(../images/dashboard_icon_settings.png) center center no-repeat;
+}
+
+.header_icon_sign_out{
+	width: 10px;
+	height: 10px;	
+	background: url(../images/header_icon_sign_out.png) center center no-repeat;
+	position: absolute  !important;
+	top: 18px;
+	left: -6px;
+}
+
+.user-sign-out-icon{
+	font-size: 10px  !important;
+	position: absolute  !important;
+	top: 17px;
+	left: 17px;
+	
+}
+
+.link-terms{
+	color: #ffffff !important;	
+}
+/* End vuho customization */
