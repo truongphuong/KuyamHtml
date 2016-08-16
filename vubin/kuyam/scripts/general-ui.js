@@ -54,7 +54,15 @@ $(function() {
 	});
 	
 	
-	var _defaultWidthSelect = 14;	
+	/* begin responsive select box custom */
+	
+	var _defaultWidthSelect = 14;
+	var _mobilePort = 480;	
+	var _maxWidthSelectBox = 145;
+	var _minWidthSelectBox = 70;
+	var	_maxWidthSelectBoxSmall = 180;
+	var	_minWidthSelectBoxSmall = 120;
+	
 	var _selectBox = $('.select-custom-box .book-me-session-select');
 	
 	_selectBox.change(function(){
@@ -73,16 +81,18 @@ $(function() {
 		
 		
 		var _widthSelect = _selectBox.val().length * _defaultWidthSelect;
-		if($('body').width()< 480){
-			if(_widthSelect > 145){_widthSelect = 145;}		
-			if(_widthSelect < 70){_widthSelect = 70;}
+		if($('body').width()< _mobilePort){
+			if(_widthSelect > _maxWidthSelectBox){_widthSelect = _maxWidthSelectBox;}		
+			if(_widthSelect < _minWidthSelectBox){_widthSelect = _minWidthSelectBox;}
 		}else{
-			if(_widthSelect > 180){_widthSelect = 180;}		
-			if(_widthSelect < 120){_widthSelect = 120;}
+			if(_widthSelect > _maxWidthSelectBoxSmall){_widthSelect = _maxWidthSelectBoxSmall;}		
+			if(_widthSelect < _minWidthSelectBoxSmall){_widthSelect = _minWidthSelectBoxSmall;}
 		}
 		_selectBox.css("width",_widthSelect);
 		
 	}
+	
+	/* end responsive select box custom */
 	
 	
 	
