@@ -614,6 +614,8 @@ $(document).ready(function () {
             $(this).closest('li').addClass('active');
         }
     });
+
+    iscrollSelect('spanLocation', 'iscrollLocation');
 });
 
 $(window).on('resize', function () {

@@ -1418,7 +1418,7 @@ textarea.form-control:focus {
     background: #292929;
     border: 0 none;
     margin-bottom: 0;
-    height: 59px;
+    height: 60px;
 }
 
     .kuyam-header .navbar-header {
@@ -1456,6 +1456,59 @@ textarea.form-control:focus {
     .kuyam-header .navbar-nav > li.active > a:hover {
         background: #95be31;
     }
+	
+/* Begin dropdown header*/
+.kuyam-header .form-select-location{
+    display: block;
+    height: 58px;
+	font-family: lato, sans-serif;
+}
+.kuyam-header .form-select-location .bootstrap-select:before{
+    position: absolute;
+    background: $white;
+    top:0;
+    left:0;
+    height: 58px;
+    content: '';
+    width: 100%;
+    z-index: 1001;
+}
+.kuyam-header .form-select-location .bootstrap-select > .btn,
+.kuyam-header .form-select-location .bootstrap-select > .btn:focus,
+.kuyam-header .form-select-location .bootstrap-select > .btn:active,
+.kuyam-header .form-select-location .bootstrap-select > .btn-default.disabled,
+.kuyam-header .form-select-location .bootstrap-select > .btn-default.disabled:focus,
+.kuyam-header .form-select-location .bootstrap-select > .btn-default.disabled:active,
+.kuyam-header .form-select-location .bootstrap-select.open > .dropdown-toggle.btn-default,
+.kuyam-header .form-select-location .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.kuyam-header .form-select-location .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+    border:0 none;
+    height: 60px;
+    position: relative;
+    z-index: 1001;
+    width: auto;
+	background: transparent;
+}
+.kuyam-header .form-select-location .bootstrap-select.btn-group .btn .filter-option{
+    display: inline-block;
+    width: auto;
+    font-weight: 700;
+	color:#fff;
+}
+.kuyam-header .form-select-location .bootstrap-select.btn-group .btn .caret{
+	background-image:url(../images/icon_next_white.png);
+	margin-top: -3px;
+}
+.kuyam-header .form-select-location .bootstrap-select .dropdown-menu{
+    margin-top: 0;
+    border-top: 0 none;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.13);
+}
+.kuyam-header .form-select-location .bootstrap-select.btn-group .dropdown-menu > li > a:hover,
+.kuyam-header .form-select-location .bootstrap-select.btn-group .dropdown-menu > li > a:focus{
+    font-weight: 700;
+}
+/* End dropdown header*/
 
 .kuyam-footer {
     min-height: 65px;
@@ -2057,14 +2110,9 @@ textarea.form-control:focus {
 }
 
 @media (min-width: 768px) {
-    .kuyam-header {
-        overflow: hidden;
-    }
-
         .kuyam-header .navbar-header {
             padding-left: 30px;
             margin-left: -15px;
-            overflow: hidden;
         }
 
         .kuyam-header .navbar-brand {

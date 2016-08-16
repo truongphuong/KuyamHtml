@@ -637,6 +637,8 @@ $(document).ready(function () {
 });
     /* End nav */
 
+    iscrollSelect('spanLocation', 'iscrollLocation');
+
 });
 
 $(window).on('resize', function () {
