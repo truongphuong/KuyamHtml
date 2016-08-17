@@ -4830,13 +4830,6 @@ textarea.form-control:focus {
   top: 9px;
   left: 15px; }
 
-.calendar-block .icon-checkmark {
-  background-image: url("../images/dashboard/icon-confirm.png");
-  background-size: 16px auto;
-  width: 20px;
-  height: 14px;
-  margin: 0px -15px 0px 10px; }
-
 .calendar-select-staff .bootstrap-select.open {
   z-index: 9; }
 
@@ -4885,11 +4878,18 @@ textarea.form-control:focus {
   height: 38px; }
 
 .calendar-select-status .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-  width: 110px; }
+  width: 125px; }
 
 .calendar-select-status .bootstrap-select.btn-group .btn .caret {
   background-image: url(../images/dashboard/calendar/icon-select-blue-2.png);
   background-size: 10px auto; }
+
+.calendar-select-status .bootstrap-select.btn-group .btn .icon-confirm {
+  width: 13px;
+  height: 10px;
+  background-image: url(../images/dashboard/calendar/icon-confirm.png);
+  background-size: 13px auto;
+  margin-right: 5px; }
 
 .calendar-select-status .btn-default.disabled .caret {
   display: none; }
@@ -5123,6 +5123,9 @@ textarea.form-control:focus {
   font-family: "Lato", sans-serif;
   font-weight: 600; }
 
+.calendar-block .bootstrap-select.btn-group .dropdown-menu.inner .glyphicon {
+  float: left; }
+
 .block-confirmed {
   border-color: #9eca35; }
 
@@ -5331,6 +5334,15 @@ textarea.form-control:focus {
     right: 0;
     width: 45px;
     height: 45px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .calendar-select-status .bootstrap-select.btn-group .btn .caret {
+    background-image: url(../images/dashboard/calendar/icon-select-blue-2@2x.png); }
+
+  .calendar-select-status .bootstrap-select.btn-group .btn .icon-confirm {
+    background-image: url(../images/dashboard/calendar/icon-confirm@2x.png); }
+
+  .block-cancelled .bootstrap-select.btn-group .btn .caret {
+    background-image: url(../images/dashboard/calendar/icon-select-blue-2@2x.png); } }
 .block-attendee {
   width: 257px; }
 
