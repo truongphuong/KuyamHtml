@@ -48,6 +48,14 @@ $(document).ready(function () {
         itemsTablet: [767,1], //2 items between 600 and 0
         itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
     });
+
+    $('#subnavAccordion').on('shown.bs.collapse', function () {
+        refreshNiceScroll('#subnavList');
+    });
+
+    $('#mobileListAccordion').on('shown.bs.collapse', function () {
+        refreshNiceScroll('#mobileList');
+    });
 });
 
 $(window).on('resize', function () {

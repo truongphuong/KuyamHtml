@@ -17,6 +17,14 @@ $(document).ready(function () {
 
     $('#selectStartTime').selectpicker();
     $('#selectEndTime').selectpicker();
+
+    $('#subnavAccordion').on('shown.bs.collapse', function () {
+        refreshNiceScroll('#subnavList');
+    });
+
+    $('#mobileListAccordion').on('shown.bs.collapse', function () {
+        refreshNiceScroll('#mobileList');
+    });
 });
 
 $(window).on('resize', function () {

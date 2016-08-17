@@ -30,7 +30,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Dashboard</title>
+<title>Kuyam Admin - Manage Classes</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -199,56 +199,142 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-staff-nodata.html">staff no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-staff.html">staff list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-staff-add.html">staff add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-staff-edit.html">staff edit</a><br/><br/>
-                        <a target="_blank" title="" href="manage-staff-working.html">staff working</a><br/><br/>
-                    </div>
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-services-nodata.html">services no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-services.html">services list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-services-add.html">services add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-services-edit.html">services edit</a><br/><br/>
-                    </div>
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-classes-nodata.html">classes no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-classes.html">classes list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-classes-add.html">classes add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-classes-edit.html">classes edit</a><br/><br/>
-                    </div>
+        	<div class="kuyam-page manage-page manage-packages">
 
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-packages-nodata.html">packages no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages.html">packages list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-accordion.html">packages list accordion</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-add.html">packages add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-edit.html">packages edit</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-purchasse-popular.html">packages purchasse popular</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-purchasse-empty.html">packages purchasse empty</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-purchasse.html">packages purchasse</a><br/><br/>
-                        <a target="_blank" title="" href="manage-packages-view.html">packages view</a><br/><br/>
-                    </div>
+				<!-- .kuyam-sidebar -->
+				<div class="kuyam-sidebar">
+					<ul>
+						<li><a title="" href="manage-staff.html"><span class="icon icon-staff"></span><span class="text">Staff</span></a></li>
+                        <li><a title="" href="manage-services.html"><span class="icon icon-service"></span><span class="text">Services</span></a></li>
+                        <li><a title="" href="manage-classes.html"><span class="icon icon-class"></span><span class="text">Classes</span></a></li>
+                        <li class="active"><a title="" href="manage-packages.html"><span class="icon icon-package"></span><span class="text">Packages</span></a></li>
+                        <li><a title="" href="manage-clients.html"><span class="icon icon-client"></span><span class="text">Clients</span></a></li>
+                        <li><a title="" href="manage-invoices.html"><span class="icon icon-invoice"></span><span class="text">Invoices</span></a></li>
+                        <li><a title="" href="manage-promo.html"><span class="icon icon-promo"></span><span class="text">Promo codes</span></a></li>
+					</ul>
+				</div>
+				<!-- /.kuyam-sidebar -->
 
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-clients-nodata.html">clients no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-clients.html">clients list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-clients-add.html">clients add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-clients-edit.html">clients edit</a><br/><br/>
-                    </div>
+				<!-- .kuyam-main -->
+				<div class="kuyam-main">
 
-                    <div class="col-xs-12 col-sm-2">
-                        <a target="_blank" title="" href="manage-promo-nodata.html">promo no data</a><br/><br/>
-                        <a target="_blank" title="" href="manage-promo.html">promo list</a><br/><br/>
-                        <a target="_blank" title="" href="manage-promo-accordion.html">promo list accordion</a><br/><br/>
-                        <a target="_blank" title="" href="manage-promo-add.html">promo add</a><br/><br/>
-                        <a target="_blank" title="" href="manage-promo-edit.html">promo edit</a><br/><br/>
-                    </div>
-                </div>
-            </div>
+					<!-- .kuyam-main-content -->
+					<div class="kuyam-main-content">
+
+						<!-- .kuyam-subnav -->
+						<div class="kuyam-subnav">
+							<div class="subnav-content">
+								<div id="addSection" class="add-link-section">
+									<a class="add-link" title="" href="manage-packages-add.html"><span class="prefix">+</span> <span class="text">Add new package</span></a>
+								</div>
+								<div id="subnavList" class="subnav-list">
+                                	<div class="scroll-content">
+                                        <ul id="subnavAccordion" class="panel-group subnav-ul-accordion" role="tablist" aria-multiselectable="true">
+                                            <li class="panel panel-default">
+                                                <span class="panel-heading" role="tab" id="subnavHeading1">
+                                                    <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#subnavAccordion" href="#subnavCollapse1" aria-expanded="false" aria-controls="subnavCollapse1"><span class="icon icon-collapse"></span><span class="text">massage</span><span class="total">1</span></a>
+                                                </span>
+                                                <ul id="subnavCollapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subnavHeading1">
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="panel panel-default">
+                                                <span class="panel-heading" role="tab" id="subnavHeading2">
+                                                    <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#subnavAccordion" href="#subnavCollapse2" aria-expanded="false" aria-controls="subnavCollapse2"><span class="icon icon-collapse"></span><span class="text">hair</span><span class="total">1</span></a>
+                                                </span>
+                                                <ul id="subnavCollapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subnavHeading2">
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="panel panel-default">
+                                                <span class="panel-heading" role="tab" id="subnavHeading3">
+                                                    <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#subnavAccordion" href="#subnavCollapse3" aria-expanded="false" aria-controls="subnavCollapse3"><span class="icon icon-collapse"></span><span class="text">yoga</span><span class="total">1</span></a>
+                                                </span>
+                                                <ul id="subnavCollapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subnavHeading3">
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<!-- /.kuyam-subnav -->
+
+						<!-- .kuyam-content -->
+						<div class="kuyam-content">
+                            <div class="kuyam-form">
+                                <section class="mobile-section mobile-section-list">
+                                    <div class="legend">Packages</div>
+                                    <!-- .mobile-list -->
+                                    <div id="mobileList" class="mobile-list">
+
+                                        <div class="scroll-content">
+                                            <ul id="mobileListAccordion" class="panel-group mobile-ul-accordion" role="tablist" aria-multiselectable="true">
+                                                <li class="panel panel-default">
+                                                    <span class="panel-heading" role="tab" id="mobileListHeading1">
+                                                        <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#mobileListAccordion" href="#mobileListCollapse1" aria-expanded="false" aria-controls="mobileListCollapse1"><span class="icon icon-collapse"></span><span class="text">Active packages</span><span class="total">1</span></a>
+                                                    </span>
+                                                    <ul id="mobileListCollapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mobileListHeading1">
+                                                        <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="panel panel-default">
+                                                    <span class="panel-heading" role="tab" id="mobileListHeading2">
+                                                        <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#mobileListAccordion" href="#mobileListCollapse2" aria-expanded="false" aria-controls="mobileListCollapse2"><span class="icon icon-collapse"></span><span class="text">Inactive packages</span><span class="total">1</span></a>
+                                                    </span>
+                                                    <ul id="mobileListCollapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mobileListHeading2">
+                                                        <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- /.mobile-list -->
+                                </section>
+                                <footer>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <input type="button" value="Add package" class="btn btn-form btn-agree" />
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+						</div>
+						<!-- /.kuyam-content -->
+
+					</div>
+					<!-- /.kuyam-main-content -->
+
+				</div>
+				<!-- /.kuyam-main -->
+
+			</div>
         <!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer">
@@ -1261,903 +1347,833 @@
 	</div><!-- /#signOutModal -->
 
     <!-- InstanceBeginEditable name="modal" -->
-
-	<!-- #addCalendarModal -->
-	<div id="addCalendarModal" class="modal fade modal-m" role="dialog" aria-labelledby="addCalendarModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-calendar">
+	<!-- #editCategoryModal -->
+	<div id="editCategoryModal" class="modal fade modal-m" role="dialog" aria-labelledby="editCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-edit-category">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="addCalendarModalLabel" class="modal-title">Add:</h4>
+					<h4 id="editCategoryModalLabel" class="modal-title">Edit Categories</h4>
 				</div>
 				<div class="modal-body">
-
-					<!-- .calendar-tabs -->
-					<section id="tabsCalendar" class="calendar-tabs">
-
-						<!-- .nav-tabs -->
-						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#formAppointment" aria-controls="formAppointment" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Appointment</a></li>
-							<li role="presentation"><a href="#formClass" aria-controls="formClass" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Class</a></li>
-							<li role="presentation"><a href="#formBlocker" aria-controls="formBlocker" role="tab" data-toggle="tab" aria-iscroll="false"><span class="dot"></span> Blocker</a></li>
-						</ul>
-						<!-- /.nav-tabs -->
-
-						<!-- .tab-content -->
-						<div class="tab-content">
-
-							<!-- #formAppointment -->
-							<div role="tabpanel" class="tab-pane active" id="formAppointment">
-								<form>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectClientAppointment">Client</label>
-
-											<!-- .form-select -->
-											<div id="divClientAppointment" class="form-select form-select-search single-right" data-position="right">
-												<select id="selectClientAppointment" data-header="Add client">
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="0" selected>Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
-												</select>
-											</div>
-											<!-- /.form-select -->
-
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectStaffAppointment">Staff</label>
-
-											<!-- .form-select -->
-											<div id="divStaffAppointment" class="form-select form-select-search single-left" data-position="left">
-												<select id="selectStaffAppointment" data-header="Add staff">
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</span>" value="0" selected>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2">Carl Viduka</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4">Carl Viduka</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6">Carl Viduka</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8">Carl Viduka</option>
-													<option data-content="<button class='btn-personal' onClick='showPesonalInfo(this);'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
-												</select>
-											</div>
-											<!-- /.form-select -->
-
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtDateAppointment">Starting date</label>
-											<div class="form-timepicker">
-												<input id="txtDateAppointment" type="text" class="form-control txt-date" />
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeAppointment">Time</label>
-											<div id="timepickerAppointment" class="dropdown form-timepicker">
-												<input id="txtTimeAppointment" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-												<section class="dropdown-menu" aria-labelledby="txtTime">
-													<div class="dropdown-section">
-														<footer></footer>
-														<table>
-															<tbody>
-																<tr>
-																	<td class="td-timepicker td-field">
-																		From
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-section" data-section="timepickerAppointment"></div>
-																	</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td class="td-timepicker td-field text-right">
-																		To
-																	</td>
-																	<td class="td-timepicker">
-																		<table>
-																			<tr>
-																				<td>
-																					<span class="timepicker-hour">1</span>
-																				</td>
-																				<td class="separator">:</td>
-																				<td>
-																					<span class="timepicker-minute">00</span>
-																				</td>
-																				<td>
-																					<span class="timepicker-period">AM</span>
-																				</td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-									<div class="row repeat-section">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectRepeatAppointment">Repeat</label>
-											<div class="form-select form-select-repeat">
-												<select id="selectRepeatAppointment">
-													<option value="0" selected>never</option>
-													<option value="1">custom</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label">&nbsp;</label>
-											<ul class="week-list hide">
-												<li class="active">m</li>
-												<li>t</li>
-												<li>w</li>
-												<li>t</li>
-												<li>f</li>
-												<li>s</li>
-												<li>s</li>
-											</ul>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectCategoryAppointment">Category</label>
-											<div id="divCategoryAppointment" class="form-select form-select-readonly">
-												<select id="selectCategoryAppointment">
-													<option value="2" selected>Yoga</option>
-													<option value="1">Make up</option>
-													<option value="0">Massage</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectServiceAppointment">Service</label>
-											<div id="divServiceAppointment" class="form-select form-select-readonly">
-												<select id="selectServiceAppointment">
-													<option value="0" selected>Restoration yoga</option>
-													<option value="1">Restoration</option>
-													<option value="2">yoga</option>
-													<option value="3" selected>Restoration yoga</option>
-													<option value="4">Restoration</option>
-													<option value="5">yoga</option>
-													<option value="6" selected>Restoration yoga</option>
-													<option value="7">Restoration</option>
-													<option value="8">yoga</option>
-													<option value="9" selected>Restoration yoga</option>
-													<option value="10">Restoration</option>
-													<option value="11">yoga</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
-											<label class="form-label" for="txtNoteAppointment">Internal notes</label>
-											<textarea id="txtNoteAppointment" cols="" rows="" class="form-control"></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add appointment</button>
-										</div>
-									</div>
-
-								</form>
-							</div>
-							<!-- #formAppointment -->
-
-							<!-- #formClass -->
-							<div role="tabpanel" class="tab-pane" id="formClass">
-								<form>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectStaffClass">Staff</label>
-
-											<!-- .form-select -->
-											<div id="divStaffClass" class="form-select form-select-search single-right" data-position="right">
-												<select id="selectStaffClass" data-header="Add staff">
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</span>" value="0" selected>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8">Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
-												</select>
-											</div>
-											<!-- /.form-select -->
-
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtStartDateClass">Starting date</label>
-											<div class="form-timepicker">
-												<input id="txtStartDateClass" type="text" class="form-control txt-date" />
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeClass">Time</label>
-											<div id="timepickerClass" class="dropdown form-timepicker">
-												<input id="txtTimeClass" type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-												<section class="dropdown-menu" aria-labelledby="txtTime">
-													<div class="dropdown-section">
-														<footer></footer>
-														<table>
-															<tbody>
-																<tr>
-																	<td class="td-timepicker td-field">
-																		From
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-section" data-section="timepickerClass"></div>
-																	</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td class="td-timepicker td-field text-right">
-																		To
-																	</td>
-																	<td class="td-timepicker">
-																		<table>
-																			<tr>
-																				<td>
-																					<span class="timepicker-hour">1</span>
-																				</td>
-																				<td class="separator">:</td>
-																				<td>
-																					<span class="timepicker-minute">00</span>
-																				</td>
-																				<td>
-																					<span class="timepicker-period">AM</span>
-																				</td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtEndDateClass">Ending date</label>
-											<div class="form-timepicker">
-												<input id="txtEndDateClass" type="text" class="form-control txt-date" />
-											</div>
-										</div>
-									</div>
-									<div class="row repeat-section">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectRepeatClass">Repeat</label>
-											<div class="form-select form-select-repeat">
-												<select id="selectRepeatClass">
-													<option value="0" selected>never</option>
-													<option value="1">custom</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label">&nbsp;</label>
-											<ul class="week-list hide">
-												<li class="active">m</li>
-												<li>t</li>
-												<li>w</li>
-												<li>t</li>
-												<li>f</li>
-												<li>s</li>
-												<li>s</li>
-											</ul>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectCategoryClass">Category</label>
-											<div id="divCategoryClass" class="form-select form-select-readonly">
-												<select id="selectCategoryClass">
-													<option value="2" selected>Yoga</option>
-													<option value="1">Make up</option>
-													<option value="0">Massage</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectClass">Class</label>
-											<div id="divClass" class="form-select form-select-readonly">
-												<select id="selectClass">
-													<option value="2" selected>Restoration yoga</option>
-													<option value="1">Restoration</option>
-													<option value="0">yoga</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
-											<label class="form-label" for="txtNoteClass">Internal notes</label>
-											<textarea id="txtNoteClass" cols="" rows="" class="form-control"></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add class</button>
-										</div>
-									</div>
-								</form>
-							</div>
-							<!-- #formClass -->
-
-							<!-- #formBlocker -->
-							<div role="tabpanel" class="tab-pane" id="formBlocker">
-								<form>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="selectStaffBlocker">Staff</label>
-
-											<!-- .form-select -->
-											<div id="divStaffBlocker" class="form-select form-select-search multi-right" data-position="right">
-												<select id="selectStaffBlocker" data-header="Add staff" multiple>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</span>" value="0" selected>Carl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl VidukaCarl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="1">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="2" selected>Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="3">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="4" selected>Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="5">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="6" selected>Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="7">Caroline Spencer</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Carl Viduka</span>" value="8" selected>Carl Viduka</option>
-													<option data-content="<button class='btn-personal'><span class='icon icon-details'>+</span></button><span class='text'>Caroline Spencer</span>" value="9">Caroline Spencer</option>
-												</select>
-											</div>
-											<!-- /.form-select -->
-
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtReason">Reason</label>
-											<input id="txtReason" type="text" class="form-control" />
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtDateBlocker">Date</label>
-											<div class="form-timepicker">
-												<input id="txtDateBlocker" type="text" class="form-control txt-date" />
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6">
-											<label class="form-label" for="txtTimeBlocker">Time</label>
-											<div id="timepickerBlocker" class="dropdown form-timepicker form-timepicker-range">
-												<input id="txtTimeBlocker" readonly type="text" class="form-control txt-hour" value="12:00 AM - 1:00 AM" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-												<section class="dropdown-menu" aria-labelledby="txtTime">
-													<div class="dropdown-section">
-														<footer></footer>
-														<table>
-															<tbody>
-																<tr>
-																	<td class="td-timepicker td-field">
-																		From
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-from"></div>
-																	</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td class="td-timepicker td-field text-right">
-																		To
-																	</td>
-																	<td class="td-timepicker">
-																		<div class="timepicker-to"></div>
-																	</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-xs-12">
-											<label class="form-label" for="txtNoteBlocker">Internal notes</label>
-											<textarea id="txtNoteBlocker" cols="" rows="" class="form-control"></textarea>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-12">
-											<button class="btn btn-form btn-agree">add blocker</button>
-										</div>
-									</div>
-								</form>
-							</div>
-							<!-- #formBlocker -->
-
-						</div>
-						<!-- /.tab-content -->
-
-					</section>
-					<!-- /.calendar-tabs -->
-
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#addCalendarModal -->
-
-	<!-- #addStaffModal -->
-	<div id="addStaffModal" class="modal fade modal-m" role="dialog" aria-labelledby="addStaffModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-staff">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="addStaffModalLabel" class="modal-title">Add staff</h4>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtFirstNameStaff">First name <span class="txt-required">*</span></label>
-								<input id="txtFirstNameStaff" type="text" class="form-control" />
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtLastNameStaff">Last name <span class="txt-required">*</span></label>
-								<input id="txtLastNameStaff" type="text" class="form-control" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtPhoneStaff">Cell phone number</label>
-								<input id="txtPhoneStaff" type="text" class="form-control" />
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtEmailStaff">Email address <span class="txt-required">*</span></label>
-								<input id="txtEmailStaff" type="text" class="form-control" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-6 hidden-lg">
-								<input class="btn btn-form btn-disagree" type="button" value="no" data-dismiss="modal" />
-							</div>
-							<div class="col-xs-6 col-lg-12">
-								<button class="btn btn-form btn-agree"><span class="visible-lg">add staff</span><span class="hidden-lg">yes</span></button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#addStaffModal -->
-
-	<!-- #addClientModal -->
-	<div id="addClientModal" class="modal fade modal-m" role="dialog" aria-labelledby="addClientModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-add-client">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="addClientModalLabel" class="modal-title">Add new client</h4>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtFirstNameClient">First name <span class="txt-required">*</span></label>
-								<input id="txtFirstNameClient" type="text" class="form-control" />
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtLastNameClient">Last name <span class="txt-required">*</span></label>
-								<input id="txtLastNameClient" type="text" class="form-control" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtPhoneClient">Cell phone number</label>
-								<input id="txtPhoneClient" type="text" class="form-control" />
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<label class="form-label" for="txtEmailClient">Email address <span class="txt-required">*</span></label>
-								<input id="txtEmailClient" type="text" class="form-control" />
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-xs-6 hidden-lg">
-								<input class="btn btn-form btn-disagree" type="button" value="no" data-dismiss="modal" />
-							</div>
-							<div class="col-xs-6 col-lg-12">
-								<button class="btn btn-form btn-agree"><span class="visible-lg">add new client</span><span class="hidden-lg">yes</span></button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#addClientModal -->
-
-	<!-- #cancelCalendarModal -->
-	<div id="cancelCalendarModal" class="modal fade modal-m" role="dialog" aria-labelledby="cancelCalendarModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-cancel-calendar">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="cancelCalendarModalLabel" class="modal-title">Are you sure you want to cancel<br /> this appointment</h4>
-				</div>
-				<div class="modal-body">
-					<h5><a title="" href="">Cancel for this appointment only</a></h5>
-					<h5><a title="" href="">Cancel for future appointments</a></h5>
 					<form>
 						<div class="row">
 							<div class="col-xs-12">
-								<label class="form-label" for="txtNote">Note to cilent</label>
-								<textarea id="txtNote" cols="" rows="" class="form-control"></textarea>
+								<div class="form-placeholder">
+									<input id="txtSearch" type="text" class="form-control" value="" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+									<label class="form-label" for="txtSearch">Search Categories</label>
+								</div>
+							</div>
+						</div>
+						<section id="selectionCaterogy" class="selection-section">
+							<ul>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+							</ul>
+						</section>
+						<div class="row">
+							<div class="col-xs-6">
+								<input class="btn btn-form btn-disagree" type="button" value="cancel" data-dismiss="modal" />
+							</div>
+							<div class="col-xs-6">
+								<button class="btn btn-form btn-agree">save</button>
 							</div>
 						</div>
 					</form>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
-	</div><!-- /#cancelCalendarModal -->
-
-	<!-- #repeatCalendarModal -->
-	<div id="repeatCalendarModal" class="modal fade modal-s" role="dialog" aria-labelledby="repeatCalendarModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-repeat-calendar">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="repeatCalendarModalLabel" class="modal-title">This is a repeating appointment</h4>
-				</div>
-				<div class="modal-body">
-					<h5><a title="" href="">Save for this appointment only</a></h5>
-					<h5><a title="" href="">Save for future appointments</a></h5>
-					<div class="row">
-						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-							<input class="btn btn-form btn-agree" type="button" value="cancel" data-dismiss="modal" />
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#repeatCalendarModal -->
-
-	<!-- #callModal -->
-	<div id="overwriteModal" class="modal fade modal-s" role="dialog" aria-labelledby="overwriteModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-overwrite">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="overwriteModalLabel" class="modal-title">Are you sure you want to overwrite these appointment?</h4>
-				</div>
-				<div class="modal-body">
-					<div id="blockList" class="block-list">
-						<div class="block-scroll">
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-							<div class="calendar-block block-overwrite">
-								<p class="calendar-user"><span class="icon icon-user"></span>Carl Viduka</p>
-								<p class="calendar-with">with John Smith</p>
-								<p class="calendar-time">9:00 AM - 10:00 AM</p>
-								<p class="calendar-type">David cameron</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<div class="row">
-						<div class="col-xs-6">
-							<button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
-						</div>
-						<div class="col-xs-6">
-							<button class="btn btn-form btn-agree">yes</button>
-						</div>
-					</div>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#callModal -->
-
-	<!-- #callModal -->
-	<div id="callModal" class="modal fade modal-s" role="dialog" aria-labelledby="callModalLabel" data-keyboard="false" data-backdrop="static">
-		<div class="modal-dialog modal-call">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="callModalLabel" class="modal-title">Call Jan L?</h4>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-xs-6">
-							<button class="btn btn-form btn-disagree" data-dismiss="modal">no</button>
-						</div>
-						<div class="col-xs-6">
-							<button class="btn btn-form btn-agree">yes</button>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer"></div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#callModal -->
-
-	<!-- #detailsModal -->
-	<div id="detailsModal" class="modal fade modal-s" role="dialog" aria-labelledby="detailsModalLabel" data-keyboard="false" data-backdrop="static">
-		<div id="blockDetails" class="modal-dialog block-details">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="detailsModalLabel">Wedmesday, Nov 18th</h4>
-					<p>11:00 AM - 12:30 PM</p>
-				</div>
-				<div class="modal-body">
-
-					<!-- .table-css -->
-					<div class="table-css">
-						<div class="tr">
-							<div class="td col-title">Client:</div>
-							<div class="td col-info">Jane Rodriguez</div>
-						</div>
-						<div class="tr">
-							<div class="td col-title">Staff:</div>
-							<div class="td col-info">Candlelight vinyasa</div>
-						</div>
-						<div class="tr">
-							<div class="td col-title">Repeat:</div>
-							<div class="td col-info">Custom (M, W, F)</div>
-						</div>
-						<div class="tr">
-							<div class="td col-title">Caterory:</div>
-							<div class="td col-info">Yoga</div>
-						</div>
-						<div class="tr">
-							<div class="td col-title">Service:</div>
-							<div class="td col-info">Restoration yoga</div>
-						</div>
-						<div class="tr">
-							<div class="td col-title">Internal notes:</div>
-							<div class="td col-info"></div>
-						</div>
-					</div>
-					<!-- /.table-css -->
-
-					<div class="notes-section">
-						<div id="iscrollBlockNotes">
-							<div class="scroll-content">
-								With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<div class="table-css">
-						<div class="tr">
-							<div class="td col-title"></div>
-							<div class="td col-info">
-								<a title="" href="">Modify appointment</a><br />
-								<a title="" href="">Cancel appointment</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#detailsModal -->
-
-	<!-- #attendeeModal -->
-	<div id="attendeeModal" class="modal fade modal-s" role="dialog" aria-labelledby="attendeeModalLabel" data-keyboard="false" data-backdrop="static">
-		<div id="classAttendee" class="modal-dialog block-attendee">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-					<h4 id="attendeeModalLabel">Attendee</h4>
-				</div>
-				<div class="modal-body">
-
-					<!-- .attendee-list -->
-					<div id="iscrollBlockAttendeeList" class="attendee-list">
-                    	<div class="scroll-content">
-                            <ul>
-                                <li>Jane Lois</li>
-                                <li>Valentina Lucas</li>
-                                <li>Kourosh Gohar</li>
-                                <li>Sven Larson</li>
-                                <li>John Smith</li>
-                                <li>Nick Brown</li>
-                                <li>Jane Lois</li>
-                                <li>Valentina Lucas</li>
-                                <li>Kourosh Gohar</li>
-                                <li>Sven Larson</li>
-                                <li>Jane Lois</li>
-                                <li>Valentina Lucas</li>
-                                <li>Kourosh Gohar</li>
-                                <li>Sven Larson</li>
-                                <li>John Smith</li>
-                                <li>Nick Brown</li>
-                                <li>Jane Lois</li>
-                                <li>Valentina Lucas</li>
-                                <li>Kourosh Gohar</li>
-                                <li>Sven Larson</li>
-                            </ul>
-                        </div>
-					</div>
-					<!-- /.attendee-list -->
-
-				</div>
-				<div class="modal-footer">
-				</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#attendeeModal -->
-
-	<!-- #personalModal -->
-	<div id="personalModal" class="modal fade modal-s" role="dialog" aria-labelledby="personalModalLabel" data-keyboard="false" data-backdrop="static">
-		<div id="personalInfo" class="modal-dialog block-personal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">x</button>
-				</div>
-				<div class="modal-body">
-				<p><span>Client:<br />Caroline Spencer</span></p>
-				<p>Email:<br />carolinesencer@gmail.com</p>
-				<p>Phone:<br />(425)298 - 7836</p>
-			</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /#personalModal -->
-
-	<!-- #dataDetails -->
-	<div id="dataDetails" class="hide">
-		<div id="calendarDetails" class="block-details">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">x</button>
-				<h4>Wedmesday, Nov 18th</h4>
-				<p>11:00 AM - 12:30 PM</p>
-			</div>
-			<div class="modal-body">
-				<div class="table-css">
-					<!--<div class="tr">
-						<div class="td col-title">Client:</div>
-						<div class="td col-info">Jane Rodriguez</div>
-					</div>
-					<div class="tr">
-						<div class="td col-title">Staff:</div>
-						<div class="td col-info">Candlelight vinyasa</div>
-					</div>
-					<div class="tr">
-						<div class="td col-title">Repeat:</div>
-						<div class="td col-info">Custom (M, W, F)</div>
-					</div>-->
-					<div class="tr">
-						<div class="td col-title">Caterory:</div>
-						<div class="td col-info">Yoga</div>
-					</div>
-					<div class="tr">
-						<div class="td col-title">Service:</div>
-						<div class="td col-info">Restoration yoga</div>
-					</div>
-					<div class="tr">
-						<div class="td col-title">Internal notes:</div>
-						<div class="td col-info"></div>
-					</div>
-				</div>
-				<div class="notes-section">
-					<div id="iscrollDetailsNotes">
-						<div class="scroll-content">
-							With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, Bootstrap is mobile first. Mobile first styles can be found throughout the entire library instead of in separate files.
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class="table-css">
-					<div class="tr">
-						<div class="td col-title"></div>
-						<div class="td col-info">
-							<a title="" href="">Modify appointment</a><br />
-							<a title="" href="">Cancel appointment</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /#dataDetails -->
-
-	<!-- #dataAttendee -->
-	<div id="dataAttendee" class="hide">
-		<div id="classAttendee" class="block-attendee">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">x</button>
-				<h4>Attendee</h4>
-			</div>
-			<div class="modal-body">
-				<div id="iscrollAttendeeList" class="attendee-list">
-                    <div class="scroll-content">
-    					<ul>
-    						<li>Jane Lois</li>
-    						<li>Valentina Lucas</li>
-    						<li>Kourosh Gohar</li>
-    						<li>Sven Larson</li>
-    						<li>John Smith</li>
-    						<li>Nick Brown</li>
-    						<li>Jane Lois</li>
-    						<li>Valentina Lucas</li>
-    						<li>Kourosh Gohar</li>
-    						<li>Sven Larson</li>
-    						<li>Jane Lois</li>
-    						<li>Valentina Lucas</li>
-    						<li>Kourosh Gohar</li>
-    						<li>Sven Larson</li>
-    						<li>John Smith</li>
-    						<li>Nick Brown</li>
-    						<li>Jane Lois</li>
-    						<li>Valentina Lucas</li>
-    						<li>Kourosh Gohar</li>
-    						<li>Sven Larson</li>
-    					</ul>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /#dataAttendee -->
-
-	<!-- #dataPersonal -->
-	<div id="dataPersonal" class="hide">
-		<div id="personalInfo" class="block-personal">
-			<div class="modal-body">
-				<p><span>Client:<br />Caroline Spencer</span></p>
-				<p>Email:<br />carolinesencer@gmail.com</p>
-				<p>Phone:<br />(425)298 - 7836</p>
-			</div>
-		</div>
-	</div>
-	<!-- /#dataPersonal -->
-
+	</div><!-- /#editCategoryModal -->
     <!-- InstanceEndEditable -->
 
     <!-- === SCRIPTS === -->
@@ -2206,10 +2222,11 @@
     <!-- Site js -->
     <script type="text/javascript" src="scripts/ui-general.js"></script>
     <!-- InstanceBeginEditable name="script" -->
+	<script type="text/javascript" src="scripts/ui-manage.js"></script>
+    <script type="text/javascript" src="scripts/ui-package.js"></script>
 	<script type="text/javascript">
-		document.getElementById('navDashboard').className = "active";
+		document.getElementById('navManage').className = "active";
 	</script>
-	<script type="text/javascript" src="scripts/ui-calendar.js"></script>
     <!-- InstanceEndEditable -->
 
 </body>
