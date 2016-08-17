@@ -69,11 +69,18 @@
 }
 
 .calendar-select-status .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 110px;
+    width: 125px;
 }
 .calendar-select-status .bootstrap-select.btn-group .btn .caret{
 	background-image: url(../images/dashboard/calendar/icon-select-blue-2.png);
 	background-size: 10px auto;
+}
+.calendar-select-status .bootstrap-select.btn-group .btn .icon-confirm{
+    width: 13px;
+    height: 10px;
+    background-image: url(../images/dashboard/calendar/icon-confirm.png);
+    background-size: 13px auto;
+    margin-right: 5px;
 }
 .calendar-select-status .btn-default.disabled .caret {
     display: none;
@@ -343,6 +350,9 @@
     font-family: $primary;
 	font-weight: 600;
 }
+.calendar-block .bootstrap-select.btn-group .dropdown-menu.inner .glyphicon{
+    float: left;
+}
 
 .block-confirmed {
     border-color: #9eca35;
@@ -604,6 +614,24 @@
         right: 0;
         width: 45px;
         height: 45px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .calendar-select-status .bootstrap-select.btn-group .btn .caret{
+        background-image: url(../images/dashboard/calendar/icon-select-blue-2@2x.png);
+    }
+    .calendar-select-status .bootstrap-select.btn-group .btn .icon-confirm{
+        background-image: url(../images/dashboard/calendar/icon-confirm@2x.png);
+    }
+    .block-cancelled .bootstrap-select.btn-group .btn .caret {
+        background-image: url(../images/dashboard/calendar/icon-select-blue-2@2x.png);
     }
 }
 
