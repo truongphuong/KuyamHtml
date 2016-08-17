@@ -4718,6 +4718,13 @@ textarea.form-control:focus {
   top: 9px;
   left: 15px; }
 
+.calendar-block .icon-checkmark {
+  background-image: url("../images/dashboard/icon-confirm.png");
+  background-size: 16px auto;
+  width: 20px;
+  height: 14px;
+  margin: 0px -15px 0px 10px; }
+
 .calendar-select-staff .bootstrap-select.open {
   z-index: 9; }
 
@@ -4728,7 +4735,7 @@ textarea.form-control:focus {
   font-size: 0.8125em;
   line-height: 20px;
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   color: #242424;
   text-transform: none; }
 
@@ -4826,15 +4833,15 @@ textarea.form-control:focus {
   line-height: 34px;
   font-size: 0.875em;
   font-family: "Lato", sans-serif;
-  font-weight: 700; }
+  font-weight: 800; }
 
 .calendar-header .btn-today {
   background: #fff;
   font-size: 0.8125em;
   font-weight: 700;
   padding: 5px 10px;
-  border: 1px solid #bc347c;
-  color: #bc347c;
+  border: 1px solid #3891ff;
+  color: #3891ff;
   position: absolute;
   right: -50%; }
 
@@ -4954,12 +4961,16 @@ textarea.form-control:focus {
   font-family: "Lato", sans-serif;
   font-weight: 500;
   text-shadow: 0.5px 0 0 #797979;
-  letter-spacing: 0.05em; }
+  letter-spacing: 0.05em;
+  color: #242424; }
 
 .calendar-block p.calendar-user {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  color: #242424;
+  margin-bottom: 6px;
+  font-weight: 700; }
 
 .calendar-block p.calendar-with {
   word-wrap: break-word; }
@@ -5208,6 +5219,118 @@ textarea.form-control:focus {
     right: 0;
     width: 45px;
     height: 45px; } }
+/* =============================================================================
+   bootstrap-datetimepicker-widget
+   ========================================================================== */
+.bootstrap-datetimepicker-widget {
+  width: 320px !important;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  min-height: 275px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  border: 1px solid #878787;
+  padding: 15px; }
+
+.bootstrap-datetimepicker-widget .glyphicon-chevron-right:before {
+  content: none; }
+
+.bootstrap-datetimepicker-widget .glyphicon-chevron-right:after {
+  content: '';
+  width: 8px;
+  height: 14px;
+  background-image: url(../images/dashboard/calendar/icon_next_blue@2x.png);
+  background-size: 8px auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -13px;
+  left: -3px; }
+
+.bootstrap-datetimepicker-widget .glyphicon-chevron-left:before {
+  content: none; }
+
+.bootstrap-datetimepicker-widget .glyphicon-chevron-left:after {
+  content: '';
+  width: 8px;
+  height: 14px;
+  background-image: url(../images/dashboard/calendar/icon_next_blue@2x.png);
+  background-size: 8px auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: -3px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.top {
+  top: 60px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom {
+  bottom: 60px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid #878787;
+  border-bottom-color: #878787;
+  top: -17px;
+  left: 52px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 16px solid white;
+  top: -16px;
+  left: 52px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.top:before {
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid #878787;
+  border-top-color: #878787;
+  bottom: -17px;
+  left: 52px; }
+
+.bootstrap-datetimepicker-widget.dropdown-menu.top:after {
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 16px solid white;
+  bottom: -16px;
+  left: 52px; }
+
+.bootstrap-datetimepicker-widget .picker-switch {
+  color: #224660;
+  font-size: 0.8125em;
+  font-weight: 800; }
+
+.bootstrap-datetimepicker-widget .dow {
+  color: #224660;
+  font-size: 0.6875em;
+  font-weight: 800 !important; }
+
+.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {
+  color: #cccccc;
+  pointer-events: none; }
+
+.bootstrap-datetimepicker-widget .day {
+  color: #224660;
+  font-size: 0.6875em;
+  font-weight: 800 !important; }
+
+.bootstrap-datetimepicker-widget table td.new {
+  color: #cccccc !important;
+  font-size: 0.6875em;
+  font-weight: 800 !important;
+  pointer-events: none; }
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+  color: #328eff;
+  background-color: #fff;
+  position: relative;
+  background-image: url(../images/dashboard/calendar/calendar_active.png);
+  background-size: 28px auto;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .block-attendee {
   width: 257px; }
 
@@ -8256,14 +8379,101 @@ textarea.form-control:focus {
 /**
  * Modals
  */
-.modal-add-calendar .modal-title {
-  font-size: 1em;
+/* =============================================================================
+   modal add client
+   ========================================================================== */
+.modal-add-client .modal-content {
+  border-radius: 8px; }
+.modal-add-client input[type="text"],
+.modal-add-client input[type="email"],
+.modal-add-client input[type="search"],
+.modal-add-client input[type="password"],
+.modal-add-client textarea.form-control, .modal-add-client textarea.form-control:focus {
+  font-size: 0.6875em;
   font-weight: 400; }
+.modal-add-client .modal-title {
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 5px; }
+.modal-add-client .working-section .working-time {
+  padding-bottom: 0px;
+  padding-top: 35px; }
+.modal-add-client .txt-date,
+.modal-add-client .working-section .working-time ul.clearfix > li > input[type="text"] {
+  font-size: 0.6875em; }
+.modal-add-client .bootstrap-select.btn-group .btn .filter-option {
+  color: #434343;
+  font-size: 0.6875em;
+  margin-top: 4px; }
+.modal-add-client .bootstrap-select.btn-group .btn .pull-left {
+  color: #434343; }
+.modal-add-client .working-section .working-time .td-from,
+.modal-add-client .working-section .working-time .td-to {
+  padding-left: 15px;
+  padding-right: 0px; }
+.modal-add-client div[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px; }
+.modal-add-client .form-label {
+  margin-top: 5px;
+  margin-bottom: 8px; }
+.modal-add-client .modal-body {
+  padding-bottom: 10px;
+  padding-top: 0px; }
+.modal-add-client .btn-agree {
+  margin-top: 15px; }
+
+/* =============================================================================
+   modal add calendar
+   ========================================================================== */
+.modal-add-calendar .modal-content {
+  border-radius: 8px; }
+.modal-add-calendar input[type="text"],
+.modal-add-calendar input[type="email"],
+.modal-add-calendar input[type="search"],
+.modal-add-calendar input[type="password"],
+.modal-add-calendar textarea.form-control, .modal-add-calendar textarea.form-control:focus {
+  font-size: 0.6875em;
+  font-weight: 400; }
+.modal-add-calendar .modal-title {
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 8px; }
+.modal-add-calendar .form-select-time .bootstrap-select .btn .filter-option {
+  font-size: 0.9375em !important; }
+.modal-add-calendar .working-section .working-time {
+  padding-bottom: 0px;
+  padding-top: 35px; }
+.modal-add-calendar .txt-date,
+.modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
+  font-size: 0.6875em; }
+.modal-add-calendar .bootstrap-select.btn-group .btn .filter-option {
+  color: #434343;
+  font-size: 0.6875em;
+  margin-top: 4px; }
+.modal-add-calendar .bootstrap-select.btn-group .btn .pull-left {
+  color: #434343; }
+.modal-add-calendar .working-section .working-time .td-from,
+.modal-add-calendar .working-section .working-time .td-to {
+  padding-left: 15px;
+  padding-right: 0px; }
+.modal-add-calendar div[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px; }
+.modal-add-calendar .form-label {
+  margin-top: 5px;
+  margin-bottom: 8px; }
+.modal-add-calendar .modal-body {
+  padding-bottom: 10px;
+  padding-top: 0px; }
+.modal-add-calendar .btn-agree {
+  margin-top: 15px; }
 
 .calendar-tabs .nav-tabs {
   text-align: center;
   border: 0 none;
-  margin-bottom: 25px; }
+  margin-bottom: 20px; }
 
 .calendar-tabs .nav-tabs > li {
   float: none;
@@ -8280,6 +8490,10 @@ textarea.form-control:focus {
   margin-right: 10px;
   bottom: -8px; }
 
+.calendar-tabs .nav-tabs > li.active a {
+  font-weight: 600;
+  color: #3891ff !important; }
+
 .calendar-tabs .nav-tabs > li a,
 .calendar-tabs .nav-tabs > li a:hover,
 .calendar-tabs .nav-tabs > li.active a,
@@ -8287,7 +8501,7 @@ textarea.form-control:focus {
   border: 0 none;
   background: transparent;
   color: #282828;
-  font-size: 1em;
+  font-size: 1.0625em;
   padding: 0; }
 
 .calendar-tabs .nav-tabs > li.active .dot {
@@ -8333,16 +8547,49 @@ textarea.form-control:focus {
 @media (max-width: 350px) {
   .modal-dialog.block-attendee {
     width: auto; } }
+/* =============================================================================
+   modal cancel calendar
+   ========================================================================== */
+.modal-cancel-calendar .modal-content {
+  border-radius: 8px; }
+.modal-cancel-calendar h5 a {
+  color: #ff3838;
+  text-decoration: underline; }
 .modal-cancel-calendar h5 {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin: 5px 0 30px; }
-
-.modal-cancel-calendar h5 a {
-  color: #ff5050;
-  text-decoration: underline; }
+  margin: 0px 0 15px; }
+.modal-cancel-calendar input[type="text"],
+.modal-cancel-calendar input[type="email"],
+.modal-cancel-calendar input[type="search"],
+.modal-cancel-calendar input[type="password"],
+.modal-cancel-calendar textarea.form-control, .modal-cancel-calendar textarea.form-control:focus {
+  font-size: 0.6875em;
+  font-weight: 400; }
+.modal-cancel-calendar .modal-title {
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 5px; }
+.modal-cancel-calendar .bootstrap-select.btn-group .btn .filter-option {
+  color: #434343;
+  font-size: 0.6875em;
+  margin-top: 4px; }
+.modal-cancel-calendar .bootstrap-select.btn-group .btn .pull-left {
+  color: #434343; }
+.modal-cancel-calendar div[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px; }
+.modal-cancel-calendar .form-label {
+  margin-top: 40px;
+  margin-bottom: 8px; }
+.modal-cancel-calendar .modal-body {
+  padding-bottom: 10px;
+  padding-top: 0px; }
+.modal-cancel-calendar .btn-agree {
+  margin-top: 15px; }
 
 .modal-croppie .modal-header {
   padding-top: 16px;
@@ -8529,16 +8776,114 @@ textarea.form-control:focus {
 @media (max-width: 350px) {
   .modal-dialog.block-personal {
     width: auto; } }
+/* =============================================================================
+   modal repeat calendar
+   ========================================================================== */
+.modal-repeat-calendar .modal-content {
+  border-radius: 8px; }
+.modal-repeat-calendar h5 a {
+  color: #ff3838;
+  text-decoration: underline; }
 .modal-repeat-calendar h5 {
-  font-size: 1.125em;
+  font-size: 1.0625em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   text-align: center;
-  margin: 5px 0 30px; }
+  margin: 0px 0 15px; }
+.modal-repeat-calendar input[type="text"],
+.modal-repeat-calendar input[type="email"],
+.modal-repeat-calendar input[type="search"],
+.modal-repeat-calendar input[type="password"],
+.modal-repeat-calendar textarea.form-control,
+.modal-repeat-calendar textarea.form-control:focus {
+  font-size: 0.6875em;
+  font-weight: 400; }
+.modal-repeat-calendar .modal-title {
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 35px;
+  margin-top: 10px; }
+.modal-repeat-calendar .bootstrap-select.btn-group .btn .filter-option {
+  color: #434343;
+  font-size: 0.6875em;
+  margin-top: 4px; }
+.modal-repeat-calendar .bootstrap-select.btn-group .btn .pull-left {
+  color: #434343; }
+.modal-repeat-calendar div[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px; }
+.modal-repeat-calendar .form-label {
+  margin-top: 5px;
+  margin-bottom: 8px; }
+.modal-repeat-calendar .modal-body {
+  padding-bottom: 10px;
+  padding-top: 0px; }
+.modal-repeat-calendar .btn-agree,
+.modal-repeat-calendar .btn-neutral {
+  margin-top: 30px; }
 
-.modal-repeat-calendar h5 a {
-  color: #ff5050;
+/* =============================================================================
+   modal call
+   ========================================================================== */
+.modal-call .modal-content,
+.modal-save .modal-content,
+.modal-success .modal-content {
+  border-radius: 8px; }
+.modal-call h5 a,
+.modal-save h5 a,
+.modal-success h5 a {
+  color: #ff3838;
   text-decoration: underline; }
+.modal-call h5,
+.modal-save h5,
+.modal-success h5 {
+  font-size: 1.0625em;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 0px 0 15px; }
+.modal-call .modal-title,
+.modal-save .modal-title,
+.modal-success .modal-title {
+  font-size: 1.0625em;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 10px; }
+.modal-call .bootstrap-select.btn-group .btn .filter-option,
+.modal-save .bootstrap-select.btn-group .btn .filter-option,
+.modal-success .bootstrap-select.btn-group .btn .filter-option {
+  color: #434343;
+  font-size: 0.6875em;
+  margin-top: 4px; }
+.modal-call .bootstrap-select.btn-group .btn .pull-left,
+.modal-save .bootstrap-select.btn-group .btn .pull-left,
+.modal-success .bootstrap-select.btn-group .btn .pull-left {
+  color: #434343; }
+.modal-call div[class*="col-"],
+.modal-save div[class*="col-"],
+.modal-success div[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px; }
+.modal-call .form-label,
+.modal-save .form-label,
+.modal-success .form-label {
+  margin-top: 5px;
+  margin-bottom: 8px; }
+.modal-call .modal-body,
+.modal-save .modal-body,
+.modal-success .modal-body {
+  padding-bottom: 10px;
+  padding-top: 0px; }
+.modal-call .btn-agree,
+.modal-call .btn-neutral,
+.modal-call .btn-disagree,
+.modal-save .btn-agree,
+.modal-save .btn-neutral,
+.modal-save .btn-disagree,
+.modal-success .btn-agree,
+.modal-success .btn-neutral,
+.modal-success .btn-disagree {
+  margin-top: 30px; }
 
 .modal-terms {
   width: 700px; }
