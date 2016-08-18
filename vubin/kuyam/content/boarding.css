@@ -1137,10 +1137,19 @@
 /* Begin .modal-boarding-complete */
 
 @media (max-width: 767px) {
+    body.modal-open.boarding-open {
+        padding-right: 0 !important;
+        overflow-y: auto;
+    }
     .boarding-open .wrapper {
         position: fixed;
         top: 0;
         width: 100%;
+        display: none;
+    }
+    .modal-boarding {
+        position: relative;
+        overflow: hidden;
     }
 
     .modal-intro {
