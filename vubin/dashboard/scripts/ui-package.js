@@ -53,6 +53,10 @@ $(document).ready(function () {
         refreshNiceScroll('#subnavList');
     });
 
+    $('#mobileListAccordion').on('show.bs.collapse', function () {
+        $('#mobileList .wrap-dropdown-menu-inner-content').css({'height': ''});
+    });
+
     $('#mobileListAccordion').on('shown.bs.collapse', function () {
         refreshNiceScroll('#mobileList');
     });

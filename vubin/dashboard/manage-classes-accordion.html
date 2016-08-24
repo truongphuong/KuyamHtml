@@ -30,7 +30,7 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Kuyam Admin - Manage Staff Members</title>
+<title>Kuyam Admin - Manage Classes</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -199,16 +199,16 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-        	<div class="kuyam-page manage-page manage-client">
+        	<div class="kuyam-page manage-page manage-classes">
 
 				<!-- .kuyam-sidebar -->
 				<div class="kuyam-sidebar">
 					<ul>
 						<li><a title="" href="manage-staff.html"><span class="icon icon-staff"></span><span class="text">Staff</span></a></li>
                         <li><a title="" href="manage-services.html"><span class="icon icon-service"></span><span class="text">Services</span></a></li>
-                        <li><a title="" href="manage-classes.html"><span class="icon icon-class"></span><span class="text">Classes</span></a></li>
+                        <li class="active"><a title="" href="manage-classes.html"><span class="icon icon-class"></span><span class="text">Classes</span></a></li>
                         <li><a title="" href="manage-packages.html"><span class="icon icon-package"></span><span class="text">Packages</span></a></li>
-                        <li class="active"><a title="" href="manage-clients.html"><span class="icon icon-client"></span><span class="text">Clients</span></a></li>
+                        <li><a title="" href="manage-clients.html"><span class="icon icon-client"></span><span class="text">Clients</span></a></li>
                         <li><a title="" href="manage-invoices.html"><span class="icon icon-invoice"></span><span class="text">Invoices</span></a></li>
                         <li><a title="" href="manage-promo.html"><span class="icon icon-promo"></span><span class="text">Promo codes</span></a></li>
 					</ul>
@@ -224,45 +224,276 @@
 						<!-- .kuyam-subnav -->
 						<div class="kuyam-subnav">
 							<div class="subnav-content">
-                                <div id="addSection" class="add-link-section">
-                                    <a class="add-link" title="manage-clients-add.html" href=""><span class="prefix">+</span> <span class="text">Add new client</span></a>
-                                </div>
-                                <div id="searchSection" class="search-section">
-                                    <input type="text" class="form-control" id="txtSearchClient" placeholder="Search for clients" />
-                                </div>
+								<div id="addSection" class="add-link-section">
+									<a class="add-link" title="" href="manage-classes-add.html"><span class="prefix">+</span> <span class="text">Add new class</span></a>
+								</div>
 								<div id="subnavList" class="subnav-list">
                                 	<div class="scroll-content">
-                                        <ul class="subnav-ul" data-dropdown="false">
-                                            <li><a title="" href=""><span class="text">massage</span></a></li>
-                                            <li><a title="" href=""><span class="text">hair</span></a></li>
-                                            <li><a title="" href=""><span class="text">yoga</span></a></li>
-                                            <li><a title="" href=""><span class="text">pilates</span></a></li>
-                                            <li><a title="" href=""><span class="text">personal trainer</span></a></li>
-                                            <li><a title="" href=""><span class="text">fitness</span></a></li>
-                                            <li><a title="" href=""><span class="text">massage</span></a></li>
-                                            <li><a title="" href=""><span class="text">hair</span></a></li>
-                                            <li><a title="" href=""><span class="text">yoga</span></a></li>
-                                            <li><a title="" href=""><span class="text">pilates</span></a></li>
-                                            <li><a title="" href=""><span class="text">personal trainer</span></a></li>
-                                            <li><a title="" href=""><span class="text">fitness</span></a></li>
-                                            <li><a title="" href=""><span class="text">massage</span></a></li>
-                                            <li><a title="" href=""><span class="text">hair</span></a></li>
-                                            <li><a title="" href=""><span class="text">yoga</span></a></li>
-                                            <li><a title="" href=""><span class="text">pilates</span></a></li>
-                                            <li><a title="" href=""><span class="text">personal trainer</span></a></li>
-                                            <li><a title="" href=""><span class="text">fitness</span></a></li>
-                                            <li><a title="" href=""><span class="text">massage</span></a></li>
-                                            <li><a title="" href=""><span class="text">hair</span></a></li>
-                                            <li><a title="" href=""><span class="text">yoga</span></a></li>
-                                            <li><a title="" href=""><span class="text">pilates</span></a></li>
-                                            <li><a title="" href=""><span class="text">personal trainer</span></a></li>
-                                            <li><a title="" href=""><span class="text">fitness</span></a></li>
-                                            <li><a title="" href=""><span class="text">massage</span></a></li>
-                                            <li><a title="" href=""><span class="text">hair</span></a></li>
-                                            <li><a title="" href=""><span class="text">yoga</span></a></li>
-                                            <li><a title="" href=""><span class="text">pilates</span></a></li>
-                                            <li><a title="" href=""><span class="text">personal trainer</span></a></li>
-                                            <li><a title="" href=""><span class="text">fitness</span></a></li>
+                                        <ul class="subnav-ul" data-dropdown="true">
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">massage</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">hair</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">yoga</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">pilates</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">personal trainer</span><span class="total">1111</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">fitness</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">massage</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">hair</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">yoga</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">pilates</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">personal trainer</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">fitness</span><span class="total">1</span> </a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">massage</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">hair</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">yoga</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">pilates</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">personal trainer</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">fitness</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">massage</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">hair</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">yoga</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">pilates</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">personal trainer</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a title="" href=""><span class="icon icon-collapse"></span><span class="text">fitness</span><span class="total">1</span></a>
+                                                <ul>
+                                                    <li><a title="" href="">massage</a></li>
+                                                    <li><a title="" href="">hair</a></li>
+                                                    <li><a title="" href="">yoga</a></li>
+                                                    <li><a title="" href="">pilates</a></li>
+                                                    <li><a title="" href="">personal trainer</a></li>
+                                                    <li><a title="" href="">fitness</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
 								</div>
@@ -273,40 +504,39 @@
 						<!-- .kuyam-content -->
 						<div class="kuyam-content">
                             <div class="kuyam-form visible-1023">
-                                <section class="mobile-section">
-                                    <div class="legend">Client</div>
-                                    <div id="mobileSearchSection" class="search-section">
-                                        <input type="text" class="form-control" id="txtMobileSearchClient" placeholder="Search for clients" />
-                                    </div>
-                                    <!-- .mobile-list -->
+                                <section class="mobile-section mobile-section-list">
+                                    <div class="legend">Classes</div>
+        							<!-- .mobile-list -->
                                     <div id="mobileList" class="mobile-list">
 
                                         <div class="scroll-content">
-                                            <ul class="mobile-ul" data-dropdown="false">
-                                                <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
-                                                <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                            <ul id="mobileListAccordion" class="panel-group mobile-ul-accordion" role="tablist" aria-multiselectable="true">
+                                                <li class="panel panel-default">
+                                                    <span class="panel-heading" role="tab" id="mobileListHeading1">
+                                                        <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#mobileListAccordion" href="#mobileListCollapse1" aria-expanded="false" aria-controls="mobileListCollapse1"><span class="icon icon-collapse"></span><span class="text">Active packages</span><span class="total">1</span></a>
+                                                    </span>
+                                                    <ul id="mobileListCollapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mobileListHeading1">
+                                                        <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="panel panel-default">
+                                                    <span class="panel-heading" role="tab" id="mobileListHeading2">
+                                                        <a title="" class="collapsed" role="button" data-toggle="collapse" data-parent="#mobileListAccordion" href="#mobileListCollapse2" aria-expanded="false" aria-controls="mobileListCollapse2"><span class="icon icon-collapse"></span><span class="text">Inactive packages</span><span class="total">1</span></a>
+                                                    </span>
+                                                    <ul id="mobileListCollapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mobileListHeading2">
+                                                        <li><a class="text" title="" href="">massage</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">hair</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">yoga</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">pilates</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">personal trainer</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                        <li><a class="text" title="" href="">fitness</a><span class="action"><a title="" href=""><span class="icon icon-edit"></span></a><a title="" href=""><span class="icon icon-delete"></span></a></span></li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -315,7 +545,7 @@
                                 <footer>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <input type="button" value="Add client" class="btn btn-form btn-agree" />
+                                            <input type="button" value="Add class" class="btn btn-form btn-agree" />
                                         </div>
                                     </div>
                                 </footer>
@@ -1342,6 +1572,833 @@
 	</div><!-- /#signOutModal -->
 
     <!-- InstanceBeginEditable name="modal" -->
+	<!-- #editCategoryModal -->
+	<div id="editCategoryModal" class="modal fade modal-m" role="dialog" aria-labelledby="editCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-edit-category">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 id="editCategoryModalLabel" class="modal-title">Edit Categories</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-placeholder">
+									<input id="txtSearch" type="text" class="form-control" value="" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+									<label class="form-label" for="txtSearch">Search Categories</label>
+								</div>
+							</div>
+						</div>
+						<section id="selectionCaterogy" class="selection-section">
+							<ul>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">cut</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Yoga training</span>
+								</li>
+								<li class="selection-choice">
+									<span class="selection-choice-remove">X</span>
+									<span class="selection-choice-text">Gentle yoga</span>
+								</li>
+							</ul>
+						</section>
+						<div class="row">
+							<div class="col-xs-6">
+								<input class="btn btn-form btn-disagree" type="button" value="cancel" data-dismiss="modal" />
+							</div>
+							<div class="col-xs-6">
+								<button class="btn btn-form btn-agree">save</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /#editCategoryModal -->
     <!-- InstanceEndEditable -->
 
     <!-- === SCRIPTS === -->
@@ -1391,7 +2448,7 @@
     <script type="text/javascript" src="scripts/ui-general.js"></script>
     <!-- InstanceBeginEditable name="script" -->
 	<script type="text/javascript" src="scripts/ui-manage.js"></script>
-	<script type="text/javascript" src="scripts/ui-staff.js"></script>
+    <script type="text/javascript" src="scripts/ui-classes.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navManage').className = "active";
 	</script>

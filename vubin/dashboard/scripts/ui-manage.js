@@ -85,5 +85,9 @@ $(window).on('resize', function () {
 
     maxWidthSideSub();
 
-    minHeightMobileList()
+    minHeightMobileList();
+
+    if (wScreen < 1024 && $('#mobileList').length !== 0) {
+        refreshNiceScroll('#mobileList');
+    }
 });
