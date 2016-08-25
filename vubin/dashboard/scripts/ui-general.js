@@ -281,11 +281,10 @@ function iscrollSelect(sectionID, scrollName) {
 }
 
 function iscrollContent(sectionID) {
-	if (!isMobile.Windows()) {
-
-        if($sectionID.find('.wrap-dropdown-menu-inner').length){
-            refreshNiceScroll('#' + sectionID);
-            return
+	if (!isMobile.Windows()) {		
+        if($(sectionID).find('.wrap-dropdown-menu-inner').length){
+            refreshNiceScroll(sectionID);
+            return;
         }
 
 		$(sectionID).find('.scroll-content').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
