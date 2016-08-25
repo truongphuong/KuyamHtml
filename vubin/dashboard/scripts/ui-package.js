@@ -49,6 +49,10 @@ $(document).ready(function () {
         itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
     });
 
+    $('#subnavAccordion').on('show.bs.collapse', function () {
+        $('#subnavList .wrap-dropdown-menu-inner-content').css({'height': ''});
+    });
+
     $('#subnavAccordion').on('shown.bs.collapse', function () {
         refreshNiceScroll('#subnavList');
     });

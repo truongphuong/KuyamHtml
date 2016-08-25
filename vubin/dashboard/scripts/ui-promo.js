@@ -18,6 +18,10 @@ $(document).ready(function () {
     $('#selectStartTime').selectpicker();
     $('#selectEndTime').selectpicker();
 
+    $('#subnavAccordion').on('show.bs.collapse', function () {
+        $('#subnavList .wrap-dropdown-menu-inner-content').css({'height': ''});
+    });
+
     $('#subnavAccordion').on('shown.bs.collapse', function () {
         refreshNiceScroll('#subnavList');
     });

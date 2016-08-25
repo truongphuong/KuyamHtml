@@ -1142,7 +1142,7 @@ div[class*="col-"] {
   border-color: #979797;
   top: 0; }
 
-.on-device .form-select-search .bootstrap-select .dropdown-menu.open {
+.on-nicescroll .form-select-search .bootstrap-select .dropdown-menu.open {
   max-height: 256px !important; }
 
 .form-select-search .bootstrap-select .popover-title {
@@ -3649,13 +3649,13 @@ textarea.form-control:focus {
   position: relative;
   height: 0;
   padding-bottom: 5px;
-  overflow: hidden; }
+  overflow-y: auto; }
 
 .on-nicescroll .subnav-list .wrap-dropdown-menu-inner {
   max-height: 100%; }
 
-.on-device .subnav-list {
-  overflow-y: auto; }
+.on-nicescroll .subnav-list {
+  overflow: hidden; }
 
 .subnav-list ul {
   margin: 0;
@@ -3919,16 +3919,16 @@ textarea.form-control:focus {
   position: relative;
   height: 334px;
   padding-bottom: 5px;
-  overflow: hidden; }
+  overflow-y: auto; }
 
 .mobile-list .scroll-content {
   padding-right: 24px; }
 
+.on-nicescroll .mobile-list {
+  overflow: hidden; }
+
 .on-nicescroll .mobile-list .wrap-dropdown-menu-inner {
   max-height: 100%; }
-
-.on-device .mobile-list {
-  overflow-y: auto; }
 
 .mobile-list ul {
   margin: 0;
@@ -8674,10 +8674,10 @@ textarea.form-control:focus {
   top: 39px !important;
   background: #fff;
   max-height: 136px;
-  overflow: hidden; }
-
-.on-device .modal-edit-category .tt-menu {
   overflow-y: auto; }
+
+.on-nicescroll .modal-edit-category .tt-menu {
+  overflow: hidden; }
 
 .modal-edit-category .tt-suggestion {
   padding: 6px 12px; }
@@ -8689,12 +8689,12 @@ textarea.form-control:focus {
 
 .modal-edit-category .selection-section {
   height: 335px;
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
   margin-bottom: 25px; }
 
-.on-device .modal-edit-category .selection-section {
-  overflow-y: auto; }
+.on-nicescroll .modal-edit-category .selection-section {
+  overflow: hidden; }
 
 .modal-edit-category .selection-section ul {
   margin: 0;
@@ -9182,4 +9182,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
