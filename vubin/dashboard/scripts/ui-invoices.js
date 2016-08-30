@@ -58,7 +58,7 @@ $(document).ready(function () {
     $('.invoices-table ul.pagination').prepend($('<li class="page-first disabled"><a href="javascript:void(0)">First</a></li>'));
     $('<li class="page-last"><a href="javascript:void(0)">Last</a></li>').appendTo($('.invoices-table ul.pagination'));
     $('<li class="page-number"><span>.&nbsp;.&nbsp;.</span></li>').insertAfter($('.invoices-table .page-pre'));
-    $('<li class="page-number active"><a href="javascript:void(0)">6</a></li><li class="page-number"><a href="javascript:void(0)">5</a></li><li class="page-number"><a href="javascript:void(0)">6</a></li><li class="page-number"><span>.&nbsp;.&nbsp;.</span></li>').insertBefore($('.invoices-table .page-next'));
+    $('<li class="page-number"><a href="javascript:void(0)">6</a></li><li class="page-number"><a href="javascript:void(0)">5</a></li><li class="page-number"><a href="javascript:void(0)">6</a></li><li class="page-number"><span>.&nbsp;.&nbsp;.</span></li>').insertBefore($('.invoices-table .page-next'));
     $('.invoices-table .page-pre').addClass('disabled');
     existSelect('form-select-sort');
 

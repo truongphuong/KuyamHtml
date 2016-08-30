@@ -184,9 +184,9 @@
 .manage-invoices .table > tbody > tr.detail-view table  td{
     padding:0 8px;
 }
-    .manage-invoices .table > tbody > tr.even + .detail-view {
-        background: #fafafa;
-    }
+.manage-invoices .table > tbody > tr.even + .detail-view {
+    background: #fafafa;
+}
 
 .manage-invoices thead th .both {
     background-image: url(../images/dashboard/manage/icon_sort.png);
@@ -452,8 +452,29 @@
     .manage-invoices .form-timepicker{
         width: 100%;
     }
-    .manage-invoices .fixed-table-container{
+    .manage-invoices .bootstrap-table{
+        min-width: auto;
+    }
+    .manage-invoices .fixed-table-body{
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+    .manage-invoices .fixed-table-pagination{
+        padding-top: 15px;
+    }
+    .manage-invoices .fixed-table-pagination .pagination-detail{
         display: none;
+    }
+    .manage-invoices .fixed-table-pagination div.pagination{
+        margin-top: 0;
+        float: none !important;
+        display: block;
+        text-align: center;
+    }
+    .manage-invoices .fixed-table-pagination .pagination{
+        margin-top: 11px !important;
+        margin-bottom: 10px !important;
     }
     .manage-invoices .fixed-table-toolbar .search{
         position: absolute;
@@ -466,6 +487,13 @@
     }
     .manage-invoices .bootstrap-select .dropdown-menu > li > a{
         font-size: $s14;
+    }
+}
+
+@media (max-width: 767px){
+    .manage-invoices .fixed-table-pagination div.pagination .page-first,
+    .manage-invoices .fixed-table-pagination div.pagination .page-last{
+        display: none;
     }
 }
 
