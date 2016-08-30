@@ -389,8 +389,9 @@ textarea {
   background-color: #95be31;
   color: #fff; }
 
-.bootstrap-datetimepicker-widget table td.today:before {
-  border-bottom-color: #95be31; }
+.bootstrap-datetimepicker-widget table td.active.today::before {
+  border-bottom-color: #3891ff;
+  right: 8px; }
 
 .bootstrap-datetimepicker-widget table td span.active {
   background-color: #95be31;
@@ -442,10 +443,10 @@ textarea {
   left: -3px; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.top {
-  top: 60px; }
+  bottom: 60px !important; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom {
-  bottom: 60px; }
+  top: 60px !important; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
   border-left: 16px solid transparent;
@@ -499,8 +500,7 @@ textarea {
 .bootstrap-datetimepicker-widget table td.new {
   color: #cccccc !important;
   font-size: 0.6875em;
-  font-weight: 800 !important;
-  pointer-events: none; }
+  font-weight: 800 !important; }
 
 .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
   color: #328eff;
@@ -4336,7 +4336,7 @@ textarea.form-control:focus {
 
 .form-timepicker .dropdown-menu {
   top: 0;
-  border: 1px solid #000;
+  border: 1px solid #878787;
   margin-top: 0;
   width: 100%;
   padding: 0; }
@@ -8025,7 +8025,7 @@ textarea.form-control:focus {
 .manage-invoices .cols-status {
   width: 11%; }
 
-.manage-invoices .glyphicon {
+.manage-invoices .bootstrap-table .glyphicon {
   float: right;
   width: 20px;
   height: 20px;
@@ -8219,52 +8219,29 @@ textarea.form-control:focus {
   .manage-invoices .form-timepicker {
     width: 100%; }
 
-  .manage-invoices .bootstrap-table {
-    min-width: auto; }
-
-  .manage-invoices .fixed-table-body {
-    visibility: hidden;
-    height: 0;
-    overflow: hidden; }
-
-  .manage-invoices .fixed-table-pagination {
-    padding-top: 15px; }
-
-  .manage-invoices .fixed-table-pagination .pagination-detail {
-    display: none; }
-
-  .manage-invoices .fixed-table-pagination div.pagination {
-    margin-top: 0;
-    float: none !important;
-    display: block;
-    text-align: center; }
-
-  .manage-invoices .fixed-table-pagination .pagination {
-    margin-top: 11px !important;
-    margin-bottom: 10px !important; }
-
   .manage-invoices .fixed-table-toolbar .search {
     position: absolute;
     top: 0;
     width: 100%; }
+
+  .manage-invoices .fixed-table-container {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden; }
 
   .manage-invoices .invoices-mobile {
     display: block; }
 
   .manage-invoices .bootstrap-select .dropdown-menu > li > a {
     font-size: 0.875em; } }
-@media (max-width: 767px) {
-  .manage-invoices .fixed-table-pagination div.pagination .page-first,
-  .manage-invoices .fixed-table-pagination div.pagination .page-last {
-    display: none; } }
 @media (max-width: 374px) {
   .manage-invoices .filter-list .form-label {
     font-size: 0.6875em;
     line-height: 33px; }
 
   .manage-invoices .txt-date {
-    padding-left: 40px;
-    padding-right: 40px; }
+    padding-left: 35px;
+    padding-right: 35px; }
 
   .manage-invoices .bootstrap-select .dropdown-menu > li > a {
     font-size: 0.6875em; } }
