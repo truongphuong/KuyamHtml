@@ -28,7 +28,6 @@
     margin-right: 10px;
 }
 .manage-invoices .invoices-table{
-    display: none;
     width: 100% !important;
 }
 
@@ -445,6 +444,7 @@
     .manage-invoices .filter-list .li-search{
         display: block;
         width: 100%;
+        visibility: hidden;
     }
     .manage-invoices .filter-list .li-btn{
         display: block;
@@ -452,8 +452,13 @@
     .manage-invoices .form-timepicker{
         width: 100%;
     }
-    .manage-invoices .invoices-table{
-        display: none !important;
+    .manage-invoices .fixed-table-container{
+        display: none;
+    }
+    .manage-invoices .fixed-table-toolbar .search{
+        position: absolute;
+        top:0;
+        width: 100%;
     }
 
     .manage-invoices .invoices-mobile{
