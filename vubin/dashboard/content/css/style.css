@@ -389,8 +389,9 @@ textarea {
   background-color: #95be31;
   color: #fff; }
 
-.bootstrap-datetimepicker-widget table td.today:before {
-  border-bottom-color: #95be31; }
+.bootstrap-datetimepicker-widget table td.active.today::before {
+  border-bottom-color: #3891ff;
+  right: 8px; }
 
 .bootstrap-datetimepicker-widget table td span.active {
   background-color: #95be31;
@@ -442,10 +443,10 @@ textarea {
   left: -3px; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.top {
-  top: 60px; }
+  bottom: 60px !important; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom {
-  bottom: 60px; }
+  top: 60px !important; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
   border-left: 16px solid transparent;
@@ -499,8 +500,7 @@ textarea {
 .bootstrap-datetimepicker-widget table td.new {
   color: #cccccc !important;
   font-size: 0.6875em;
-  font-weight: 800 !important;
-  pointer-events: none; }
+  font-weight: 800 !important; }
 
 .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
   color: #328eff;
@@ -4336,7 +4336,7 @@ textarea.form-control:focus {
 
 .form-timepicker .dropdown-menu {
   top: 0;
-  border: 1px solid #000;
+  border: 1px solid #878787;
   margin-top: 0;
   width: 100%;
   padding: 0; }
@@ -8025,7 +8025,7 @@ textarea.form-control:focus {
 .manage-invoices .cols-status {
   width: 11%; }
 
-.manage-invoices .glyphicon {
+.manage-invoices .bootstrap-table .glyphicon {
   float: right;
   width: 20px;
   height: 20px;

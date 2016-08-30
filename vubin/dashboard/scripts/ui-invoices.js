@@ -2,15 +2,13 @@ $(document).ready(function () {
     $('#txtFrom').datetimepicker({
         sideBySide: true,
         format: 'MM/DD/YYYY',
-        defaultDate: moment(),
-        minDate: '03/10/2016'
+        defaultDate: moment()
     });
 
     $('#txtTo').datetimepicker({
         sideBySide: true,
         format: 'MM/DD/YYYY',
-        defaultDate: moment(),
-        minDate: '03/10/2016'
+        defaultDate: moment()
     });
 
     iscrollSelect('divPayment', 'iscrollPayment');

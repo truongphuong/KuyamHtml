@@ -11,7 +11,7 @@ function minHeightCalendar() {
 }
 
 function iscrollSelectTabs(tabContentID) {
-    $('.txt-date').val('03/10/2016').change();
+    //$('.txt-date').val('03/10/2016').change();
 
     if (tabContentID === "formAppointment") {
         iscrollSelectSearchModal('divClientAppointment', 'iscrollClientAppointment', 'addClientModal');
@@ -300,7 +300,7 @@ $(document).ready(function () {
             sideBySide: true,
             format: 'MM/DD/YYYY',
             defaultDate: moment(),
-            minDate: '03/10/2016'
+            minDate: moment()
         });
 
         $('.timepicker-section').datetimepicker({
