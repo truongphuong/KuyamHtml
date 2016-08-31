@@ -1352,8 +1352,11 @@ div[class*="col-"] {
 
 .pagination > li.page-first.disabled a,
 .pagination > li.page-last.disabled a,
-.pagination > li.disabled a {
-  color: #dadada; }
+.pagination > li.disabled a,
+.pagination > li.disabled a:hover,
+.pagination > li.disabled a:focus {
+  color: #dadada;
+  cursor: text; }
 
 .croppie-container {
   width: 321px;
@@ -8367,6 +8370,9 @@ textarea.form-control:focus {
 
 .manage-promos form {
   width: 664px; }
+
+.manage-promos .form-timepicker {
+  display: block; }
 
 .manage-promos .radio-custom {
   float: left;
