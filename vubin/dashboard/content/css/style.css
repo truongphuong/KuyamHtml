@@ -8477,8 +8477,7 @@ textarea.form-control:focus {
   margin-bottom: 40px;
   margin-top: 5px; }
 .modal-add-client .working-section .working-time {
-  padding-bottom: 0px;
-  padding-top: 35px; }
+  padding-bottom: 0px; }
 .modal-add-client .txt-date,
 .modal-add-client .working-section .working-time ul.clearfix > li > input[type="text"] {
   font-size: 0.6875em; }
@@ -8523,9 +8522,10 @@ textarea.form-control:focus {
   font-size: 1.0625em;
   font-weight: 400;
   margin-bottom: 8px; }
+.modal-add-calendar .working-section > .form-label {
+  visibility: hidden; }
 .modal-add-calendar .working-section .working-time {
-  padding-bottom: 0px;
-  padding-top: 35px; }
+  padding-bottom: 0px; }
 .modal-add-calendar .txt-date,
 .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
   font-size: 0.6875em; }
@@ -8598,13 +8598,6 @@ textarea.form-control:focus {
     float: left;
     width: 33.33%; }
 
-  .calendar-tabs .nav-tabs > li a:hover,
-  .calendar-tabs .nav-tabs > li.active a,
-  .calendar-tabs .nav-tabs > li.active a:hover {
-    text-decoration: underline;
-    font-family: "Lato", sans-serif;
-    font-weight: 700; }
-
   .modal-dialog.block-attendee,
   .modal-dialog.block-details,
   .modal-dialog.block-personal {
@@ -8615,14 +8608,29 @@ textarea.form-control:focus {
   #addCalendarModal .modal-content {
     border-color: transparent; }
 
-  #addCalendarModal .modal-title {
-    display: none; }
-
   #addCalendarModal .nav-tabs {
-    margin-top: -30px; }
+    margin-bottom: 0; }
 
   #addCalendarModal .close {
-    z-index: 9999; } }
+    z-index: 9999; }
+
+  .modal-add-calendar .working-section > .form-label {
+    visibility: visible; } }
+@media (max-width: 400px) {
+  .calendar-tabs .nav-tabs > li {
+    width: 30%; }
+
+  .calendar-tabs .nav-tabs > li:first-child {
+    width: 40%; }
+
+  .calendar-tabs .nav-tabs > li a,
+  .calendar-tabs .nav-tabs > li a:hover,
+  .calendar-tabs .nav-tabs > li.active a,
+  .calendar-tabs .nav-tabs > li.active a:hover {
+    font-size: 0.75em; }
+
+  .calendar-tabs .nav-tabs > li .dot {
+    margin-right: 5px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .calendar-tabs .nav-tabs > li .dot {
     background-image: url(../images/dashboard/calendar/dot@2x.png); }

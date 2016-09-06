@@ -25,7 +25,6 @@
 	}
 	.working-section .working-time {
 		padding-bottom: 0px;
-		padding-top: 35px;
 	}
 	.txt-date,
 	.working-section .working-time ul.clearfix > li > input[type="text"] {
@@ -92,9 +91,11 @@
 		font-weight: 400;
 		margin-bottom: 8px;
 	}
+    .working-section > .form-label{
+        visibility: hidden;
+    }
 	.working-section .working-time {
 		padding-bottom: 0px;
-		padding-top: 35px;
 	}
 	.txt-date,
 	.working-section .working-time ul.clearfix > li > input[type="text"] {
@@ -186,13 +187,6 @@
 		float: left;
 		width: 33.33%;
 	}
-	.calendar-tabs .nav-tabs > li a:hover,
-	.calendar-tabs .nav-tabs > li.active a,
-	.calendar-tabs .nav-tabs > li.active a:hover {
-		text-decoration: underline;
-		font-family: $primary;
-		font-weight: 700;
-	}
 	.modal-dialog.block-attendee,
 	.modal-dialog.block-details,
 	.modal-dialog.block-personal {
@@ -203,15 +197,33 @@
 	#addCalendarModal .modal-content {
 		border-color: transparent;
 	}
-	#addCalendarModal .modal-title {
-		display: none;
-	}
 	#addCalendarModal .nav-tabs {
-		margin-top: -30px;
+        margin-bottom: 0;
 	}
 	#addCalendarModal .close {
 		z-index: 9999;
 	}
+    .modal-add-calendar .working-section > .form-label{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 400px){
+    .calendar-tabs .nav-tabs > li {
+        width: 30%;
+    }
+    .calendar-tabs .nav-tabs > li:first-child {
+        width: 40%;
+    }
+    .calendar-tabs .nav-tabs > li a,
+    .calendar-tabs .nav-tabs > li a:hover,
+    .calendar-tabs .nav-tabs > li.active a,
+    .calendar-tabs .nav-tabs > li.active a:hover{
+        font-size: $p;
+    }
+    .calendar-tabs .nav-tabs > li .dot{
+        margin-right: 5px;
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px),
