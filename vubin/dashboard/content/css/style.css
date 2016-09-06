@@ -8529,10 +8529,13 @@ textarea.form-control:focus {
 .modal-add-calendar .txt-date,
 .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
   font-size: 0.6875em; }
+.modal-add-calendar .bootstrap-select.btn-group .btn {
+  font-size: 16px;
+  padding-top: 2px;
+  padding-bottom: 0; }
 .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option {
   color: #434343;
-  font-size: 0.6875em;
-  margin-top: 4px; }
+  font-size: 0.6875em; }
 .modal-add-calendar .bootstrap-select.btn-group .btn .pull-left {
   color: #434343; }
 .modal-add-calendar .working-section .working-time .td-from {
@@ -8615,7 +8618,24 @@ textarea.form-control:focus {
     z-index: 9999; }
 
   .modal-add-calendar .working-section > .form-label {
-    visibility: visible; } }
+    visibility: visible; }
+
+  .modal-add-calendar .working-section .working-time .table-css {
+    width: 100%; }
+
+  .modal-add-calendar .working-section .working-time .td-from,
+  .modal-add-calendar .working-section .working-time .td-to {
+    width: 25px; }
+
+  .modal-add-calendar .working-section .working-time .td-from + .td,
+  .modal-add-calendar .working-section .working-time .td-to + .td {
+    width: inherit; }
+
+  .modal-add-calendar .working-section .working-time ul.clearfix {
+    width: 100%; }
+
+  .modal-add-calendar .working-section .working-time .td-from {
+    text-align: left; } }
 @media (max-width: 400px) {
   .calendar-tabs .nav-tabs > li {
     width: 30%; }

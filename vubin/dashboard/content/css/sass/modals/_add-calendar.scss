@@ -101,10 +101,14 @@
 	.working-section .working-time ul.clearfix > li > input[type="text"] {
 		font-size: $s11;
 	}
+    .bootstrap-select.btn-group .btn{
+        font-size: 16px;
+        padding-top: 2px;
+        padding-bottom:0;
+    }
 	.bootstrap-select.btn-group .btn .filter-option {
 		color: #434343;
 		font-size: $s11;
-		margin-top: 4px;
 	}
 	.bootstrap-select.btn-group .btn .pull-left {
 		color: #434343;
@@ -205,6 +209,23 @@
 	}
     .modal-add-calendar .working-section > .form-label{
         visibility: visible;
+    }
+    .modal-add-calendar .working-section .working-time .table-css{
+        width: 100%;
+    }
+    .modal-add-calendar .working-section .working-time .td-from,
+    .modal-add-calendar .working-section .working-time .td-to{
+        width: 25px;
+    }
+    .modal-add-calendar .working-section .working-time .td-from + .td,
+    .modal-add-calendar .working-section .working-time .td-to + .td{
+        width: inherit;
+    }
+    .modal-add-calendar .working-section .working-time ul.clearfix{
+        width: 100%;
+    }
+    .modal-add-calendar .working-section .working-time .td-from{
+        text-align: left;
     }
 }
 
