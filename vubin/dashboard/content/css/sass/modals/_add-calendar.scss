@@ -101,10 +101,23 @@
 	.working-section .working-time ul.clearfix > li > input[type="text"] {
 		font-size: $s11;
 	}
+    .working-section .form-select .bootstrap-select > .btn,
+    .working-section .form-select .bootstrap-select > .btn:focus,
+    .working-section .form-select .bootstrap-select > .btn:active,
+    .working-section .form-select .bootstrap-select > .btn-default.disabled,
+    .working-section .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .working-section .form-select .bootstrap-select > .btn-default.disabled:active,
+    .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+        font-size: 16px;
+        padding-top: 0;
+    }
     .bootstrap-select.btn-group .btn{
         font-size: 16px;
         padding-top: 2px;
         padding-bottom:0;
+        line-height: inherit;
     }
 	.bootstrap-select.btn-group .btn .filter-option {
 		color: #434343;

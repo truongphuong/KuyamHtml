@@ -1247,8 +1247,7 @@ div[class*="col-"] {
       background-image: url(../images/mobile/icon-select-blue.png);
       background-size: 8px auto;
   }*/
-  .form-select-search2 .bootstrap-select.btn-group .btn .filter-option,
-  .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  .form-select-search2 .bootstrap-select.btn-group .btn .filter-option {
     font-size: 0.875em; }
 
   .form-select-search.single-left .btn-personal {
@@ -1273,8 +1272,7 @@ div[class*="col-"] {
   .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
     height: 33px; }
 
-  .form-select-search2 .bootstrap-select.btn-group .btn .filter-option,
-  .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  .form-select-search2 .bootstrap-select.btn-group .btn .filter-option {
     font-size: 0.6875em;
     line-height: 19px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
@@ -2015,6 +2013,9 @@ form div[class*="col-"] {
 .input-currency .form-control {
   background: transparent;
   padding-left: 23px; }
+
+.input-currency .form-control-percent {
+  padding-left: 26px; }
 
 textarea.form-control,
 textarea.form-control:focus {
@@ -4539,7 +4540,14 @@ textarea.form-control:focus {
   .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
   .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
   .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
-    height: 40px; } }
+    height: 40px; }
+
+  .form-time .form-select .bootstrap-select .filter-option {
+    font-size: 0.875em; } }
+@media (max-width: 374px) {
+  .form-time .form-select .bootstrap-select .filter-option {
+    font-size: 0.6875em;
+    line-height: 19px; } }
 .working-section .td {
   vertical-align: middle; }
 
@@ -4780,7 +4788,7 @@ textarea.form-control:focus {
     width: 108px; }
 
   .working-section .working-time ul.clearfix > li > input[type="text"] {
-    height: 26px;
+    height: 25px;
     font-size: .5625em; }
 
   .working-section .form-select .bootstrap-select > .btn,
@@ -7703,7 +7711,7 @@ textarea.form-control:focus {
 @media (max-width: 1023px) {
   .package-view {
     padding-top: 6px;
-    margin-bottom: 14px; }
+    padding-bottom: 14px; }
 
   .package-view .item {
     height: 190px; }
@@ -7733,7 +7741,7 @@ textarea.form-control:focus {
     font-size: 0.875em; } }
 @media (max-width: 374px) {
   .package-view {
-    margin-bottom: 9px;
+    padding-bottom: 9px;
     padding-top: 8px; }
 
   .package-view .item {
@@ -8410,7 +8418,34 @@ textarea.form-control:focus {
 
 @media (max-width: 1023px) {
   .manage-promos form {
-    width: auto; } }
+    width: auto; }
+
+  .manage-promos .form-time ul.clearfix > li > input[type="text"],
+  .manage-promos .form-time .form-select .bootstrap-select > .btn,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn:focus,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn:active,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled:active,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    height: 38px; } }
+@media (max-width: 374px) {
+  .manage-promos .form-time ul.clearfix {
+    height: 33px; }
+
+  .manage-promos .form-time ul.clearfix > li > input[type="text"],
+  .manage-promos .form-time .form-select .bootstrap-select > .btn,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn:focus,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn:active,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+  .manage-promos .form-time .form-select .bootstrap-select > .btn-default.disabled:active,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+  .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    height: 32px; } }
 .manage-promos .no-data {
   text-align: center;
   width: 388px;
@@ -8529,10 +8564,22 @@ textarea.form-control:focus {
 .modal-add-calendar .txt-date,
 .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
   font-size: 0.6875em; }
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn,
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn:focus,
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn:active,
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled,
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled:focus,
+.modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled:active,
+.modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+  font-size: 16px;
+  padding-top: 0; }
 .modal-add-calendar .bootstrap-select.btn-group .btn {
   font-size: 16px;
   padding-top: 2px;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  line-height: inherit; }
 .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option {
   color: #434343;
   font-size: 0.6875em; }
