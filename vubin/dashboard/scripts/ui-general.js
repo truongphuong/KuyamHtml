@@ -281,7 +281,7 @@ function iscrollSelect(sectionID, scrollName) {
 }
 
 function iscrollContent(sectionID) {
-	if (!isMobile.Windows()) {		
+	if (!isMobile.Windows()) {
         if($(sectionID).find('.wrap-dropdown-menu-inner').length){
             refreshNiceScroll(sectionID);
             return;
@@ -559,6 +559,9 @@ $(document).ready(function () {
         /*$('#tabTerms').data('IScroll').refresh();
         $('#tabPrivacy').data('IScroll').refresh();
         $('#tabServices').data('IScroll').refresh();*/
+        refreshNiceScroll('#tabTerms');
+        refreshNiceScroll('#tabPrivacy');
+        refreshNiceScroll('#tabServices');
     });
 
     $('.subnav-ul a').on('click', function (e) {
