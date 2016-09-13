@@ -23,13 +23,8 @@
 .modal-terms .nav-tabs > li {
     margin: 0;
     width: 33.33%;
-}
-
-.modal-terms .nav-tabs > li > a,
-.modal-terms .nav-tabs > li > a:hover,
-.modal-terms .nav-tabs > li.active > a {
-    background: none transparent;
-    border: 0 none;
+    overflow: hidden;
+    height: 76px;
 }
 
 .modal-terms .nav-tabs > li > a {
@@ -42,6 +37,12 @@
     font-family: $primary;
     font-weight: 700;
     color: $white;
+    margin: 0;
+}
+.modal-terms .nav-tabs > li > a,
+.modal-terms .nav-tabs > li > a:hover{
+    background: none transparent;
+    border: 0 none;
 }
 .modal-terms .nav-tabs > li > a .icon{
     display: block;
@@ -62,9 +63,13 @@
     background-image: url(../images/dashboard/modals/terms/header_icon_services.png);
     background-size: 38px auto;
 }
-
-.modal-terms .nav-tabs > li.active > a {
-    color:#a7d627;
+.modal-terms .nav-tabs > li.active > a,
+.modal-terms .nav-tabs > li.active > a:hover,
+.modal-terms .nav-tabs > li.active > a:focus {
+    color: $positive;
+    box-shadow: none;
+    background: none transparent;
+    border: 0 none;
 }
 .modal-terms .nav-tabs > li.active > a .icon-term {
     background-image: url(../images/dashboard/modals/terms/header_icon_terms_hover.png) ;
@@ -106,6 +111,12 @@
 .on-nicescroll .modal-terms .tab-pane .wrap-dropdown-menu-inner{
     height: 418px;
 }
+.on-nicescroll .modal-terms .tab-content{
+    padding-right: 0;
+}
+.on-nicescroll .modal-terms .tab-pane .scroll-content{
+    padding-right: 10px;
+}
 
 .modal-terms .ui-tabs-panel h3 {
     font-size: $h5;
@@ -128,40 +139,8 @@
         width: auto;
     }
 
-    .modal-terms .nav-tabs {
-        background: $white;
-    }
-
-    .modal-terms .nav-tabs > li > a {
-        font-size: $s18;
-        color: #ababab;
-    }
-
-    .modal-terms .nav-tabs > li > a span {
-        background-image: url(../images/icons/arrow_down_2.png);
-    }
-
-    .modal-terms .nav-tabs > li.active > a {
-        color: $base;
-    }
-
-    .modal-terms .nav-tabs > li.active > a span {
-        background-image: url(../images/icons/arrow_down.png);
-    }
-
     .modal-terms .tab-content {
         border: 0 none;
-    }
-}
-
-@media (max-width: 479px) {
-    .modal-terms .nav-tabs > li > a {
-        font-size: $p;
-    }
-
-    .modal-terms .tab-content,
-    .modal-terms .tab-content h3 {
-        font-size: $s14;
     }
 }
 

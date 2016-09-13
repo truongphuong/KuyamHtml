@@ -9073,13 +9073,9 @@ textarea.form-control:focus {
 
 .modal-terms .nav-tabs > li {
   margin: 0;
-  width: 33.33%; }
-
-.modal-terms .nav-tabs > li > a,
-.modal-terms .nav-tabs > li > a:hover,
-.modal-terms .nav-tabs > li.active > a {
-  background: none transparent;
-  border: 0 none; }
+  width: 33.33%;
+  overflow: hidden;
+  height: 76px; }
 
 .modal-terms .nav-tabs > li > a {
   float: none;
@@ -9090,7 +9086,13 @@ textarea.form-control:focus {
   line-height: 28px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #fff; }
+  color: #fff;
+  margin: 0; }
+
+.modal-terms .nav-tabs > li > a,
+.modal-terms .nav-tabs > li > a:hover {
+  background: none transparent;
+  border: 0 none; }
 
 .modal-terms .nav-tabs > li > a .icon {
   display: block;
@@ -9111,8 +9113,13 @@ textarea.form-control:focus {
   background-image: url(../images/dashboard/modals/terms/header_icon_services.png);
   background-size: 38px auto; }
 
-.modal-terms .nav-tabs > li.active > a {
-  color: #a7d627; }
+.modal-terms .nav-tabs > li.active > a,
+.modal-terms .nav-tabs > li.active > a:hover,
+.modal-terms .nav-tabs > li.active > a:focus {
+  color: #3891ff;
+  box-shadow: none;
+  background: none transparent;
+  border: 0 none; }
 
 .modal-terms .nav-tabs > li.active > a .icon-term {
   background-image: url(../images/dashboard/modals/terms/header_icon_terms_hover.png); }
@@ -9150,6 +9157,12 @@ textarea.form-control:focus {
 .on-nicescroll .modal-terms .tab-pane .wrap-dropdown-menu-inner {
   height: 418px; }
 
+.on-nicescroll .modal-terms .tab-content {
+  padding-right: 0; }
+
+.on-nicescroll .modal-terms .tab-pane .scroll-content {
+  padding-right: 10px; }
+
 .modal-terms .ui-tabs-panel h3 {
   font-size: 1.25em;
   line-height: 24px;
@@ -9167,31 +9180,8 @@ textarea.form-control:focus {
   .modal-terms {
     width: auto; }
 
-  .modal-terms .nav-tabs {
-    background: #fff; }
-
-  .modal-terms .nav-tabs > li > a {
-    font-size: 1.125em;
-    color: #ababab; }
-
-  .modal-terms .nav-tabs > li > a span {
-    background-image: url(../images/icons/arrow_down_2.png); }
-
-  .modal-terms .nav-tabs > li.active > a {
-    color: #242424; }
-
-  .modal-terms .nav-tabs > li.active > a span {
-    background-image: url(../images/icons/arrow_down.png); }
-
   .modal-terms .tab-content {
     border: 0 none; } }
-@media (max-width: 479px) {
-  .modal-terms .nav-tabs > li > a {
-    font-size: 0.75em; }
-
-  .modal-terms .tab-content,
-  .modal-terms .tab-content h3 {
-    font-size: 0.875em; } }
 .modal-chosen .modal-dialog {
   margin-top: 25px !important; }
 
