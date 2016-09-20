@@ -30,7 +30,7 @@ $(document).ready(function () {
         isShowDropDown: true
     });
 
-    listFilterNew('#txtSearchClient', '#subnavList .subnav-ul', '#subnavList');
+    listFilterNew('#txtSearchStaff', '#subnavList .subnav-ul', '#subnavList');
 
-    listFilterNew('#txtMobileSearchClient', '#mobileList .mobile-ul', '#mobileList');
+    listFilterNew('#txtMobileSearchStaff', '#mobileList .mobile-ul', '#mobileList');
 });
