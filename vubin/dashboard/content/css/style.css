@@ -2671,7 +2671,7 @@ textarea.form-control:focus {
     margin-bottom: 30px !important; }
 
   #ml-menu li.username-item {
-    margin-bottom: 25px !important;
+    margin-bottom: 2px !important;
     margin-left: -36px; }
 
   #ml-menu li.username-item a {
@@ -2679,6 +2679,28 @@ textarea.form-control:focus {
 
   #ml-menu li.username-item span {
     font-weight: 900; }
+
+  #ml-menu li.location-item {
+    margin-top: 0;
+    margin-bottom: 34px !important;
+    margin-left: -36px; }
+
+  #ml-menu li.location-item .sub_menu_icon_down:before {
+    background-image: url(../images/dashboard/nav/icon_mobile_drop_location_down.png); }
+
+  #ml-menu li.location-item .sub_menu_icon_up:before {
+    background-image: url(../images/dashboard/nav/icon_mobile_drop_location_up.png); }
+
+  #ml-menu li.location-item > a {
+    color: #a0bf3a;
+    max-width: calc(100% - 40px); }
+
+  #ml-menu li.location-item > a > span {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
   #ml-menu a.icon_mobile_back {
     font-weight: 400; }
@@ -2807,7 +2829,7 @@ textarea.form-control:focus {
     background-image: url(../images/dashboard/nav/icon_mobile_drop_up.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 16px auto;
+    background-size: 14px auto;
     content: '';
     position: absolute;
     top: 0px;
@@ -2958,13 +2980,17 @@ textarea.form-control:focus {
     height: 17px;
     background-size: 65px auto;
     margin-top: 12px;
+    margin-bottom: 16px;
     margin-left: 14px; }
 
   #ml-menu a {
     font-size: 0.875em; }
 
   #ml-menu .menu__level2 li, #ml-menu .menu__level3 li {
-    padding-left: 38px !important; } }
+    padding-left: 38px !important; }
+
+  #ml-menu li.location-item {
+    margin-bottom: 24px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   #ml-menu .icon_mobile_close_menu {
     background-image: url(../images/dashboard/nav/icon_mobile_close_menu@2x.png); }
@@ -3015,7 +3041,13 @@ textarea.form-control:focus {
     background-image: url(../images/dashboard/nav/icon_mobile_company@2x.png); }
 
   #ml-menu .icon_mobile_calendar:after {
-    background-image: url(../images/dashboard/nav/icon_mobile_calendar@2x.png); } }
+    background-image: url(../images/dashboard/nav/icon_mobile_calendar@2x.png); }
+
+  #ml-menu li.location-item .sub_menu_icon_down:before {
+    background-image: url(../images/dashboard/nav/icon_mobile_drop_location_down@2x.png); }
+
+  #ml-menu li.location-item .sub_menu_icon_up:before {
+    background-image: url(../images/dashboard/nav/icon_mobile_drop_location_up@2x.png); } }
 .kuyam-header {
   background: #fff;
   border: 0 none;
@@ -9359,4 +9391,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
