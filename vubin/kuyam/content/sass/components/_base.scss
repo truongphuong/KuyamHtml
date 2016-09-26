@@ -1,0 +1,110 @@
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, time {
+    display: block;
+}
+
+audio[controls], canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height:24px;
+    font-family: $primary;
+    font-weight: 500;
+    color: #000;
+    overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+*, *:hover, *:active, *:focus, *:visited {
+    outline: 0 none !important;
+    outline-offset: inherit;
+}
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+img {
+    border: 0;
+}
+
+form, fieldset, legend {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-weight: normal;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.clearer {
+    clear: both;
+    line-height: 0;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 0;
+}
+
+.clear10 {
+    clear: both;
+    display: block;
+    line-height: 0;
+    height: 10px;
+}
+
+.relative{
+    position: relative;
+}
+
+.fixed{
+    position: fixed;
+    width:100%;
+}
+
+.on-device {
+    display: none !important;
+}
+
+.on-desktop {}
+
+.float-left {
+    float: left;
+}
