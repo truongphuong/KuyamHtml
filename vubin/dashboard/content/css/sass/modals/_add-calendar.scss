@@ -1,90 +1,7 @@
-/* =============================================================================
-   modal add client
-   ========================================================================== */
-
-
-.modal-add-client {
-
-	.modal-content{
-		border-radius: 8px;
-	}
-
-	input[type="text"],
-	input[type="email"],
-	input[type="search"],
-	input[type="password"],
-	textarea.form-control, textarea.form-control:focus{
-		font-size: $s11;
-		font-weight: 400;
-	}
-	.modal-title {
-		font-size: $s17;
-		font-weight: 400;
-		margin-bottom: 40px;
-		margin-top: 5px;
-	}
-	.working-section .working-time {
-		padding-bottom: 0px;
-	}
-	.txt-date,
-	.working-section .working-time ul.clearfix > li > input[type="text"] {
-		font-size: $s11;
-	}
-	.bootstrap-select.btn-group .btn .filter-option {
-		color: #434343;
-		font-size: $s11;
-		margin-top: 4px;
-	}
-	.bootstrap-select.btn-group .btn .pull-left {
-		color: #434343;
-	}
-	.working-section .working-time .td-from{
-        padding-left: 0;
-        padding-right: 0px;
-        text-align: right;
-    }
-	.working-section .working-time .td-to {
-		padding-left: 15px;
-		padding-right: 0px;
-	}
-	div[class*="col-"] {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.form-label {
-		margin-top: 5px;
-		margin-bottom: 8px;
-	}
-	.modal-body {
-		padding-bottom: 10px;
-		padding-top: 0px;
-	}
-	.btn-agree {
-		margin-top: 15px;
-	}
-}
-
-
-
-/* =============================================================================
-   modal add calendar
-   ========================================================================== */
-
-
 .modal-add-calendar {
 
 	.modal-content{
 		border-radius: 8px;
-	}
-
-
-	input[type="text"],
-	input[type="email"],
-	input[type="search"],
-	input[type="password"],
-	textarea.form-control, textarea.form-control:focus {
-		font-size: $s11;
-		font-weight: 400;
 	}
 	.modal-title {
 		font-size: $s17;
@@ -97,9 +14,9 @@
 	.working-section .working-time {
 		padding-bottom: 0px;
 	}
-	.txt-date,
 	.working-section .working-time ul.clearfix > li > input[type="text"] {
-		font-size: $s11;
+		font-size: $s17;
+        font-weight: 300;
 	}
     .working-section .form-select .bootstrap-select > .btn,
     .working-section .form-select .bootstrap-select > .btn:focus,
@@ -121,7 +38,7 @@
     }
 	.bootstrap-select.btn-group .btn .filter-option {
 		color: #434343;
-		font-size: $s11;
+		font-size: $s17;
 	}
 	.bootstrap-select.btn-group .btn .pull-left {
 		color: #434343;
@@ -150,6 +67,10 @@
 	.btn-agree {
 		margin-top: 15px;
 	}
+    .working-section .working-time .td{
+        font-size: $h5;
+        font-weight: 300;
+    }
 }
 
 .calendar-tabs {}
@@ -198,7 +119,15 @@
 	background-image: url(../images/dashboard/calendar/dot-active.png);
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1024px) {
+    .modal-add-calendar {
+        .working-section .bootstrap-select > .dropdown-toggle{
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
 	.calendar-tabs .nav-tabs > li {
 		margin: 0;
 		float: left;
@@ -240,6 +169,13 @@
     .modal-add-calendar .working-section .working-time .td-from{
         text-align: left;
     }
+    .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
+    .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"]{
+        font-size: $s14;
+    }
+    .modal-add-calendar .working-section .working-time .td{
+        font-size: $s15;
+    }
 }
 
 @media (max-width: 400px){
@@ -257,6 +193,22 @@
     }
     .calendar-tabs .nav-tabs > li .dot{
         margin-right: 5px;
+    }
+}
+
+@media (max-width: 374px){
+    .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
+    .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"]{
+        font-size: $s11;
+    }
+    .modal-add-calendar .working-section .working-time .td{
+        font-size: $s13;
+    }
+    .modal-add-calendar .working-section .bootstrap-select > .dropdown-toggle{
+        padding-right: 16px;
+    }
+    .modal-add-calendar .working-section .form-select .bootstrap-select div.dropdown-menu{
+        margin-top: 0;
     }
 }
 

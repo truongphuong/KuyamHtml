@@ -2065,7 +2065,7 @@ textarea.form-control:focus {
 
   form div[class*="col-"] {
     margin-bottom: 16px; } }
-@media (max-width: 1023px) {
+@media (max-width: 374px) {
   .form-label {
     font-size: 0.8125em; }
 
@@ -8544,65 +8544,8 @@ textarea.form-control:focus {
 /**
  * Modals
  */
-/* =============================================================================
-   modal add client
-   ========================================================================== */
-.modal-add-client .modal-content {
-  border-radius: 8px; }
-.modal-add-client input[type="text"],
-.modal-add-client input[type="email"],
-.modal-add-client input[type="search"],
-.modal-add-client input[type="password"],
-.modal-add-client textarea.form-control, .modal-add-client textarea.form-control:focus {
-  font-size: 0.6875em;
-  font-weight: 400; }
-.modal-add-client .modal-title {
-  font-size: 1.0625em;
-  font-weight: 400;
-  margin-bottom: 40px;
-  margin-top: 5px; }
-.modal-add-client .working-section .working-time {
-  padding-bottom: 0px; }
-.modal-add-client .txt-date,
-.modal-add-client .working-section .working-time ul.clearfix > li > input[type="text"] {
-  font-size: 0.6875em; }
-.modal-add-client .bootstrap-select.btn-group .btn .filter-option {
-  color: #434343;
-  font-size: 0.6875em;
-  margin-top: 4px; }
-.modal-add-client .bootstrap-select.btn-group .btn .pull-left {
-  color: #434343; }
-.modal-add-client .working-section .working-time .td-from {
-  padding-left: 0;
-  padding-right: 0px;
-  text-align: right; }
-.modal-add-client .working-section .working-time .td-to {
-  padding-left: 15px;
-  padding-right: 0px; }
-.modal-add-client div[class*="col-"] {
-  padding-left: 15px;
-  padding-right: 15px; }
-.modal-add-client .form-label {
-  margin-top: 5px;
-  margin-bottom: 8px; }
-.modal-add-client .modal-body {
-  padding-bottom: 10px;
-  padding-top: 0px; }
-.modal-add-client .btn-agree {
-  margin-top: 15px; }
-
-/* =============================================================================
-   modal add calendar
-   ========================================================================== */
 .modal-add-calendar .modal-content {
   border-radius: 8px; }
-.modal-add-calendar input[type="text"],
-.modal-add-calendar input[type="email"],
-.modal-add-calendar input[type="search"],
-.modal-add-calendar input[type="password"],
-.modal-add-calendar textarea.form-control, .modal-add-calendar textarea.form-control:focus {
-  font-size: 0.6875em;
-  font-weight: 400; }
 .modal-add-calendar .modal-title {
   font-size: 1.0625em;
   font-weight: 400;
@@ -8611,9 +8554,9 @@ textarea.form-control:focus {
   visibility: hidden; }
 .modal-add-calendar .working-section .working-time {
   padding-bottom: 0px; }
-.modal-add-calendar .txt-date,
 .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
-  font-size: 0.6875em; }
+  font-size: 1.0625em;
+  font-weight: 300; }
 .modal-add-calendar .working-section .form-select .bootstrap-select > .btn,
 .modal-add-calendar .working-section .form-select .bootstrap-select > .btn:focus,
 .modal-add-calendar .working-section .form-select .bootstrap-select > .btn:active,
@@ -8632,7 +8575,7 @@ textarea.form-control:focus {
   line-height: inherit; }
 .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option {
   color: #434343;
-  font-size: 0.6875em; }
+  font-size: 1.0625em; }
 .modal-add-calendar .bootstrap-select.btn-group .btn .pull-left {
   color: #434343; }
 .modal-add-calendar .working-section .working-time .td-from {
@@ -8653,6 +8596,9 @@ textarea.form-control:focus {
   padding-top: 0px; }
 .modal-add-calendar .btn-agree {
   margin-top: 15px; }
+.modal-add-calendar .working-section .working-time .td {
+  font-size: 1.25em;
+  font-weight: 300; }
 
 .calendar-tabs .nav-tabs {
   text-align: center;
@@ -8692,7 +8638,10 @@ textarea.form-control:focus {
 .calendar-tabs .nav-tabs > li.active .dot {
   background-image: url(../images/dashboard/calendar/dot-active.png); }
 
-@media (max-width: 767px) {
+@media (min-width: 1024px) {
+  .modal-add-calendar .working-section .bootstrap-select > .dropdown-toggle {
+    padding-right: 20px; } }
+@media (max-width: 1023px) {
   .calendar-tabs .nav-tabs > li {
     margin: 0;
     float: left;
@@ -8732,7 +8681,14 @@ textarea.form-control:focus {
     width: 100%; }
 
   .modal-add-calendar .working-section .working-time .td-from {
-    text-align: left; } }
+    text-align: left; }
+
+  .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
+  .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
+    font-size: 0.875em; }
+
+  .modal-add-calendar .working-section .working-time .td {
+    font-size: 0.9375em; } }
 @media (max-width: 400px) {
   .calendar-tabs .nav-tabs > li {
     width: 30%; }
@@ -8748,6 +8704,19 @@ textarea.form-control:focus {
 
   .calendar-tabs .nav-tabs > li .dot {
     margin-right: 5px; } }
+@media (max-width: 374px) {
+  .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
+  .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
+    font-size: 0.6875em; }
+
+  .modal-add-calendar .working-section .working-time .td {
+    font-size: 0.8125em; }
+
+  .modal-add-calendar .working-section .bootstrap-select > .dropdown-toggle {
+    padding-right: 16px; }
+
+  .modal-add-calendar .working-section .form-select .bootstrap-select div.dropdown-menu {
+    margin-top: 0; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .calendar-tabs .nav-tabs > li .dot {
     background-image: url(../images/dashboard/calendar/dot@2x.png); }
@@ -9035,65 +9004,74 @@ textarea.form-control:focus {
 /* =============================================================================
    modal call
    ========================================================================== */
-.modal-call .modal-content,
-.modal-save .modal-content,
-.modal-success .modal-content {
-  border-radius: 8px; }
-.modal-call h5 a,
-.modal-save h5 a,
-.modal-success h5 a {
-  color: #ff3838;
-  text-decoration: underline; }
-.modal-call h5,
-.modal-save h5,
-.modal-success h5 {
-  font-size: 1.0625em;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  text-align: center;
-  margin: 0px 0 15px; }
-.modal-call .modal-title,
-.modal-save .modal-title,
-.modal-success .modal-title {
-  font-size: 1.0625em;
-  font-weight: 400;
-  margin-bottom: 0px;
-  margin-top: 10px; }
-.modal-call .bootstrap-select.btn-group .btn .filter-option,
-.modal-save .bootstrap-select.btn-group .btn .filter-option,
-.modal-success .bootstrap-select.btn-group .btn .filter-option {
-  color: #434343;
-  font-size: 0.6875em;
-  margin-top: 4px; }
-.modal-call .bootstrap-select.btn-group .btn .pull-left,
-.modal-save .bootstrap-select.btn-group .btn .pull-left,
-.modal-success .bootstrap-select.btn-group .btn .pull-left {
-  color: #434343; }
-.modal-call div[class*="col-"],
-.modal-save div[class*="col-"],
-.modal-success div[class*="col-"] {
-  padding-left: 15px;
-  padding-right: 15px; }
-.modal-call .form-label,
-.modal-save .form-label,
-.modal-success .form-label {
-  margin-top: 5px;
-  margin-bottom: 8px; }
-.modal-call .modal-body,
-.modal-save .modal-body,
-.modal-success .modal-body {
-  padding-bottom: 10px;
-  padding-top: 0px; }
-.modal-call .btn-agree,
-.modal-call .btn-neutral,
-.modal-call .btn-disagree,
-.modal-save .btn-agree,
-.modal-save .btn-neutral,
-.modal-save .btn-disagree,
-.modal-success .btn-agree,
-.modal-success .btn-neutral,
-.modal-success .btn-disagree {
-  margin-top: 30px; }
+.modal-call,
+.modal-save,
+.modal-success {
+  width: 370px; }
+  @media (max-width: 767px) {
+    .modal-call,
+    .modal-save,
+    .modal-success {
+      width: auto; } }
+  .modal-call .modal-content,
+  .modal-save .modal-content,
+  .modal-success .modal-content {
+    border-radius: 8px; }
+  .modal-call h5 a,
+  .modal-save h5 a,
+  .modal-success h5 a {
+    color: #ff3838;
+    text-decoration: underline; }
+  .modal-call h5,
+  .modal-save h5,
+  .modal-success h5 {
+    font-size: 1.0625em;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 0px 0 15px; }
+  .modal-call .modal-title,
+  .modal-save .modal-title,
+  .modal-success .modal-title {
+    font-size: 1.0625em;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 10px; }
+  .modal-call .bootstrap-select.btn-group .btn .filter-option,
+  .modal-save .bootstrap-select.btn-group .btn .filter-option,
+  .modal-success .bootstrap-select.btn-group .btn .filter-option {
+    color: #434343;
+    font-size: 0.6875em;
+    margin-top: 4px; }
+  .modal-call .bootstrap-select.btn-group .btn .pull-left,
+  .modal-save .bootstrap-select.btn-group .btn .pull-left,
+  .modal-success .bootstrap-select.btn-group .btn .pull-left {
+    color: #434343; }
+  .modal-call div[class*="col-"],
+  .modal-save div[class*="col-"],
+  .modal-success div[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .modal-call .form-label,
+  .modal-save .form-label,
+  .modal-success .form-label {
+    margin-top: 5px;
+    margin-bottom: 8px; }
+  .modal-call .modal-body,
+  .modal-save .modal-body,
+  .modal-success .modal-body {
+    padding-bottom: 10px;
+    padding-top: 0px; }
+  .modal-call .btn-agree,
+  .modal-call .btn-neutral,
+  .modal-call .btn-disagree,
+  .modal-save .btn-agree,
+  .modal-save .btn-neutral,
+  .modal-save .btn-disagree,
+  .modal-success .btn-agree,
+  .modal-success .btn-neutral,
+  .modal-success .btn-disagree {
+    margin-top: 30px; }
 
 .modal-terms {
   width: 700px; }
@@ -9404,5 +9382,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
-/*# sourceMappingURL=style.css.map */
