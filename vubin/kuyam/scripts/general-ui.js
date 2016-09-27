@@ -18,7 +18,23 @@ var isMobile = {
 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 	}
 };
+
+function modalOpen(){
+    if (typeof window.verifyScrollbarWidth == "undefined") {
+        window.verifyScrollbarWidth = (window.innerWidth - $(window).width()) + 'px';
+        var $siteHeader = $('.site-header');
+        if($siteHeader.length && $siteHeader.css('position') === 'fixed'){
+            window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}.modal-open .site-header{padding-right:' + window.verifyScrollbarWidth + ';}</style>';
+        }else{
+            window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
+        }
+        $(window.verifyScrollbarWidth).appendTo($('head'));
+    }
+}
+
 $(function () {
+    modalOpen();
+
 	if (isMobile.any()) {
 		$('#detech-devices').addClass("detech-devices");
 	}
