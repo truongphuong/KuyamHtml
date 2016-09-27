@@ -36,21 +36,21 @@
 }
 .package-view .package-title{
     font-family: $primary;
-    font-size: $h4;
+    font-size: $h6;
     font-weight: 400;
     margin-bottom: 10px;
     color: #303030;
 }
 .package-view .package-price{
     font-family: $primary;
-    font-size: $h4;
+    font-size: $h6;
     font-weight: 300;
     margin-bottom: 10px;
     color:#3d3d3d;
 }
 .package-view .package-des{
     font-family: $primary;
-    font-size: $s17;
+    font-size: $p;
     font-weight: 400;
     margin-bottom: 20px;
     color: #303030;
@@ -60,10 +60,19 @@
 }
 .package-view .package-control a{
     font-family: $primary;
-    font-size: $s17;
+    font-size: $s14;
     font-weight: 400;
     color: $positive;
     text-decoration: none;
+}
+
+@media (min-width: 1024px){
+    .package-view .package-carousel{
+        width: 307px;
+    }
+    .package-view .item{
+        height: 160px;
+    }
 }
 
 @media (max-width: 1023px){
