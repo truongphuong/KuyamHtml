@@ -395,55 +395,332 @@ textarea {
 .modal-backdrop {
     display: none;
 }*/
-.modal-signout.modal-dialog {
+.modal-signout.modal-dialog,
+.modal-change-password.modal-dialog {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px; }
-
-.modal-signout .modal-content {
+.modal-signout .modal-content,
+.modal-change-password .modal-content {
   border: 1px solid #888;
   border-radius: 4px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
-
-.modal-signout .modal-header {
+.modal-signout .modal-header,
+.modal-change-password .modal-header {
   text-align: center;
   border: 0 none;
   padding-top: 25px;
   padding-bottom: 0;
   position: relative; }
-
-.modal-signout .modal-header h4 {
+.modal-signout .modal-header h4,
+.modal-change-password .modal-header h4 {
   font-size: 1.1875em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   padding-bottom: 0; }
-
-.modal-signout .modal-header .close {
+.modal-signout .modal-header .close,
+.modal-change-password .modal-header .close {
   margin-top: 0;
   position: absolute;
   top: 0;
   right: 0; }
-
-.modal-signout .modal-body {
+.modal-signout .modal-body,
+.modal-change-password .modal-body {
   padding-bottom: 0; }
-
-.modal-signout .modal-footer {
+.modal-signout .modal-footer,
+.modal-change-password .modal-footer {
   padding-top: 0;
   padding-bottom: 25px;
   border: 0 none; }
-
 @media (min-width: 1024px) {
-  .modal-signout .modal-body {
+  .modal-signout .modal-body,
+  .modal-change-password .modal-body {
     padding-left: 25px;
     padding-right: 25px; } }
 @media (max-width: 767px) {
-  .modal-signout .modal-footer {
+  .modal-signout .modal-footer,
+  .modal-change-password .modal-footer {
     padding-bottom: 20px; } }
-@media (max-width: 767px) {
-  .modal-signout .modal-footer {
+@media (max-width: 374px) {
+  .modal-signout .modal-footer,
+  .modal-change-password .modal-footer {
     padding-bottom: 15px; } }
+
+.settings-section .form-control::-webkit-input-placeholder,
+.modal-change-password .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #7c7c7c; }
+.settings-section .form-control::-moz-placeholder,
+.modal-change-password .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #7c7c7c; }
+.settings-section .form-control:-ms-input-placeholder,
+.modal-change-password .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #7c7c7c; }
+.settings-section .form-control:-moz-placeholder,
+.modal-change-password .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #7c7c7c; }
+.settings-section .form-control,
+.settings-section .form-control:focus,
+.modal-change-password .form-control,
+.modal-change-password .form-control:focus {
+  font-size: 1.0625em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  border-color: #979797;
+  height: 40px;
+  color: #242424;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0; }
+.settings-section .form-control[readonly],
+.modal-change-password .form-control[readonly] {
+  cursor: text;
+  background-color: #fff; }
+@media (max-width: 1023px) {
+  .settings-section .form-control,
+  .settings-section .form-control:focus,
+  .modal-change-password .form-control,
+  .modal-change-password .form-control:focus {
+    height: 39px;
+    border-color: #747474;
+    font-size: 0.875em;
+    font-weight: 400; } }
+@media (max-width: 374px) {
+  .settings-section .form-control,
+  .settings-section .form-control:focus,
+  .modal-change-password .form-control,
+  .modal-change-password .form-control:focus {
+    height: 33px;
+    font-size: 0.6875em; } }
+
+.modal-signout .container,
+.settings-section .container,
+.modal-change-password .container {
+  width: auto !important; }
+.modal-signout .row,
+.settings-section .row,
+.modal-change-password .row {
+  margin-left: -8px;
+  margin-right: -8px; }
+.modal-signout div[class*="col-"],
+.settings-section div[class*="col-"],
+.modal-change-password div[class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px; }
+@media (min-width: 1024px) {
+  .modal-signout .col-lg-12,
+  .settings-section .col-lg-12,
+  .modal-change-password .col-lg-12 {
+    width: 100%; }
+  .modal-signout .col-lg-11,
+  .settings-section .col-lg-11,
+  .modal-change-password .col-lg-11 {
+    width: 91.66666667%; }
+  .modal-signout .col-lg-10,
+  .settings-section .col-lg-10,
+  .modal-change-password .col-lg-10 {
+    width: 83.33333333%; }
+  .modal-signout .col-lg-9,
+  .settings-section .col-lg-9,
+  .modal-change-password .col-lg-9 {
+    width: 75%; }
+  .modal-signout .col-lg-8,
+  .settings-section .col-lg-8,
+  .modal-change-password .col-lg-8 {
+    width: 66.66666667%; }
+  .modal-signout .col-lg-7,
+  .settings-section .col-lg-7,
+  .modal-change-password .col-lg-7 {
+    width: 58.33333333%; }
+  .modal-signout .col-lg-6,
+  .settings-section .col-lg-6,
+  .modal-change-password .col-lg-6 {
+    width: 50%; }
+  .modal-signout .col-lg-5,
+  .settings-section .col-lg-5,
+  .modal-change-password .col-lg-5 {
+    width: 41.66666667%; }
+  .modal-signout .col-lg-4,
+  .settings-section .col-lg-4,
+  .modal-change-password .col-lg-4 {
+    width: 33.33333333%; }
+  .modal-signout .col-lg-3,
+  .settings-section .col-lg-3,
+  .modal-change-password .col-lg-3 {
+    width: 25%; }
+  .modal-signout .col-lg-2,
+  .settings-section .col-lg-2,
+  .modal-change-password .col-lg-2 {
+    width: 16.66666667%; }
+  .modal-signout .col-lg-1,
+  .settings-section .col-lg-1,
+  .modal-change-password .col-lg-1 {
+    width: 8.33333333%; }
+  .modal-signout .col-lg-pull-12,
+  .settings-section .col-lg-pull-12,
+  .modal-change-password .col-lg-pull-12 {
+    right: 100%; }
+  .modal-signout .col-lg-pull-11,
+  .settings-section .col-lg-pull-11,
+  .modal-change-password .col-lg-pull-11 {
+    right: 91.66666667%; }
+  .modal-signout .col-lg-pull-10,
+  .settings-section .col-lg-pull-10,
+  .modal-change-password .col-lg-pull-10 {
+    right: 83.33333333%; }
+  .modal-signout .col-lg-pull-9,
+  .settings-section .col-lg-pull-9,
+  .modal-change-password .col-lg-pull-9 {
+    right: 75%; }
+  .modal-signout .col-lg-pull-8,
+  .settings-section .col-lg-pull-8,
+  .modal-change-password .col-lg-pull-8 {
+    right: 66.66666667%; }
+  .modal-signout .col-lg-pull-7,
+  .settings-section .col-lg-pull-7,
+  .modal-change-password .col-lg-pull-7 {
+    right: 58.33333333%; }
+  .modal-signout .col-lg-pull-6,
+  .settings-section .col-lg-pull-6,
+  .modal-change-password .col-lg-pull-6 {
+    right: 50%; }
+  .modal-signout .col-lg-pull-5,
+  .settings-section .col-lg-pull-5,
+  .modal-change-password .col-lg-pull-5 {
+    right: 41.66666667%; }
+  .modal-signout .col-lg-pull-4,
+  .settings-section .col-lg-pull-4,
+  .modal-change-password .col-lg-pull-4 {
+    right: 33.33333333%; }
+  .modal-signout .col-lg-pull-3,
+  .settings-section .col-lg-pull-3,
+  .modal-change-password .col-lg-pull-3 {
+    right: 25%; }
+  .modal-signout .col-lg-pull-2,
+  .settings-section .col-lg-pull-2,
+  .modal-change-password .col-lg-pull-2 {
+    right: 16.66666667%; }
+  .modal-signout .col-lg-pull-1,
+  .settings-section .col-lg-pull-1,
+  .modal-change-password .col-lg-pull-1 {
+    right: 8.33333333%; }
+  .modal-signout .col-lg-pull-0,
+  .settings-section .col-lg-pull-0,
+  .modal-change-password .col-lg-pull-0 {
+    right: auto; }
+  .modal-signout .col-lg-push-12,
+  .settings-section .col-lg-push-12,
+  .modal-change-password .col-lg-push-12 {
+    left: 100%; }
+  .modal-signout .col-lg-push-11,
+  .settings-section .col-lg-push-11,
+  .modal-change-password .col-lg-push-11 {
+    left: 91.66666667%; }
+  .modal-signout .col-lg-push-10,
+  .settings-section .col-lg-push-10,
+  .modal-change-password .col-lg-push-10 {
+    left: 83.33333333%; }
+  .modal-signout .col-lg-push-9,
+  .settings-section .col-lg-push-9,
+  .modal-change-password .col-lg-push-9 {
+    left: 75%; }
+  .modal-signout .col-lg-push-8,
+  .settings-section .col-lg-push-8,
+  .modal-change-password .col-lg-push-8 {
+    left: 66.66666667%; }
+  .modal-signout .col-lg-push-7,
+  .settings-section .col-lg-push-7,
+  .modal-change-password .col-lg-push-7 {
+    left: 58.33333333%; }
+  .modal-signout .col-lg-push-6,
+  .settings-section .col-lg-push-6,
+  .modal-change-password .col-lg-push-6 {
+    left: 50%; }
+  .modal-signout .col-lg-push-5,
+  .settings-section .col-lg-push-5,
+  .modal-change-password .col-lg-push-5 {
+    left: 41.66666667%; }
+  .modal-signout .col-lg-push-4,
+  .settings-section .col-lg-push-4,
+  .modal-change-password .col-lg-push-4 {
+    left: 33.33333333%; }
+  .modal-signout .col-lg-push-3,
+  .settings-section .col-lg-push-3,
+  .modal-change-password .col-lg-push-3 {
+    left: 25%; }
+  .modal-signout .col-lg-push-2,
+  .settings-section .col-lg-push-2,
+  .modal-change-password .col-lg-push-2 {
+    left: 16.66666667%; }
+  .modal-signout .col-lg-push-1,
+  .settings-section .col-lg-push-1,
+  .modal-change-password .col-lg-push-1 {
+    left: 8.33333333%; }
+  .modal-signout .col-lg-push-0,
+  .settings-section .col-lg-push-0,
+  .modal-change-password .col-lg-push-0 {
+    left: auto; }
+  .modal-signout .col-lg-offset-12,
+  .settings-section .col-lg-offset-12,
+  .modal-change-password .col-lg-offset-12 {
+    margin-left: 100%; }
+  .modal-signout .col-lg-offset-11,
+  .settings-section .col-lg-offset-11,
+  .modal-change-password .col-lg-offset-11 {
+    margin-left: 91.66666667%; }
+  .modal-signout .col-lg-offset-10,
+  .settings-section .col-lg-offset-10,
+  .modal-change-password .col-lg-offset-10 {
+    margin-left: 83.33333333%; }
+  .modal-signout .col-lg-offset-9,
+  .settings-section .col-lg-offset-9,
+  .modal-change-password .col-lg-offset-9 {
+    margin-left: 75%; }
+  .modal-signout .col-lg-offset-8,
+  .settings-section .col-lg-offset-8,
+  .modal-change-password .col-lg-offset-8 {
+    margin-left: 66.66666667%; }
+  .modal-signout .col-lg-offset-7,
+  .settings-section .col-lg-offset-7,
+  .modal-change-password .col-lg-offset-7 {
+    margin-left: 58.33333333%; }
+  .modal-signout .col-lg-offset-6,
+  .settings-section .col-lg-offset-6,
+  .modal-change-password .col-lg-offset-6 {
+    margin-left: 50%; }
+  .modal-signout .col-lg-offset-5,
+  .settings-section .col-lg-offset-5,
+  .modal-change-password .col-lg-offset-5 {
+    margin-left: 41.66666667%; }
+  .modal-signout .col-lg-offset-4,
+  .settings-section .col-lg-offset-4,
+  .modal-change-password .col-lg-offset-4 {
+    margin-left: 33.33333333%; }
+  .modal-signout .col-lg-offset-3,
+  .settings-section .col-lg-offset-3,
+  .modal-change-password .col-lg-offset-3 {
+    margin-left: 25%; }
+  .modal-signout .col-lg-offset-2,
+  .settings-section .col-lg-offset-2,
+  .modal-change-password .col-lg-offset-2 {
+    margin-left: 16.66666667%; }
+  .modal-signout .col-lg-offset-1,
+  .settings-section .col-lg-offset-1,
+  .modal-change-password .col-lg-offset-1 {
+    margin-left: 8.33333333%; }
+  .modal-signout .col-lg-offset-0,
+  .settings-section .col-lg-offset-0,
+  .modal-change-password .col-lg-offset-0 {
+    margin-left: 0; } }
+
 /* =============================================================================
    HTML5 element display
    ========================================================================== */
@@ -535,16 +812,21 @@ label {
 .float-left {
   float: left; }
 
-.modal-signout .btn-form:hover {
+.modal-signout .btn-form:hover,
+.settings-section .btn-form:hover,
+.modal-change-password .btn-form:hover {
   color: #242424;
   background: #fff;
   border-width: 2px;
   font-weight: 700;
   box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
   padding: 0; }
-
 .modal-signout .btn-form,
-.modal-signout .btn-form:focus {
+.modal-signout .btn-form:focus,
+.settings-section .btn-form,
+.settings-section .btn-form:focus,
+.modal-change-password .btn-form,
+.modal-change-password .btn-form:focus {
   font-size: 1em;
   background: #fff;
   font-family: "Raleway", sans-serif;
@@ -557,56 +839,74 @@ label {
   padding-top: 0;
   padding: 0;
   box-shadow: none; }
-
-.modal-signout .btn-agree:hover {
+.modal-signout .btn-agree:hover,
+.settings-section .btn-agree:hover,
+.modal-change-password .btn-agree:hover {
   color: #3891ff;
   background: #fff;
   font-weight: 700;
   border-width: 2px;
   box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
-
 .modal-signout .btn-agree,
-.modal-signout .btn-agree:focus {
+.modal-signout .btn-agree:focus,
+.settings-section .btn-agree,
+.settings-section .btn-agree:focus,
+.modal-change-password .btn-agree,
+.modal-change-password .btn-agree:focus {
   border: 1px solid #3891ff;
   background: #fff;
   color: #3891ff;
   box-shadow: none; }
-
-.modal-signout .btn-neutral:hover {
+.modal-signout .btn-neutral:hover,
+.settings-section .btn-neutral:hover,
+.modal-change-password .btn-neutral:hover {
   color: #878787;
   background: #fff;
   font-weight: 700;
   border-width: 2px;
   box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
-
 .modal-signout .btn-neutral,
-.modal-signout .btn-neutral:focus {
+.modal-signout .btn-neutral:focus,
+.settings-section .btn-neutral,
+.settings-section .btn-neutral:focus,
+.modal-change-password .btn-neutral,
+.modal-change-password .btn-neutral:focus {
   border: 1px solid #878787;
   background: #fff;
   color: #878787;
   box-shadow: none; }
-
-.modal-signout .btn-disagree:hover {
+.modal-signout .btn-disagree:hover,
+.settings-section .btn-disagree:hover,
+.modal-change-password .btn-disagree:hover {
   background: #ff5050;
   color: #fff;
   font-weight: 700;
   box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11); }
-
 .modal-signout .btn-disagree,
-.modal-signout .btn-disagree:focus {
+.modal-signout .btn-disagree:focus,
+.settings-section .btn-disagree,
+.settings-section .btn-disagree:focus,
+.modal-change-password .btn-disagree,
+.modal-change-password .btn-disagree:focus {
   border: 1px solid #ff5050;
   background: #fff;
   color: #ff5050;
   box-shadow: none; }
-
 .modal-signout .btn[disabled],
 .modal-signout .btn[disabled]:hover,
-.modal-signout .btn[disabled]:focus {
+.modal-signout .btn[disabled]:focus,
+.settings-section .btn[disabled],
+.settings-section .btn[disabled]:hover,
+.settings-section .btn[disabled]:focus,
+.modal-change-password .btn[disabled],
+.modal-change-password .btn[disabled]:hover,
+.modal-change-password .btn[disabled]:focus {
   background: #dadada;
   color: #fff;
   font-weight: 700; }
-
-.modal-signout button.close {
+.modal-signout button.close,
+.settings-section button.close,
+.modal-change-password button.close {
   color: transparent !important;
   text-shadow: none !important;
   opacity: 1;
@@ -614,24 +914,37 @@ label {
   width: 40px;
   background: url(images/dashboard/icon-close.png) center center no-repeat;
   background-size: 12px auto; }
-
 .modal-signout button.close:focus,
-.modal-signout button.close:hover {
+.modal-signout button.close:hover,
+.settings-section button.close:focus,
+.settings-section button.close:hover,
+.modal-change-password button.close:focus,
+.modal-change-password button.close:hover {
   opacity: 0.5; }
-
 @media (max-width: 1023px) {
   .modal-signout .btn-form,
-  .modal-signout .btn-form:focus {
+  .modal-signout .btn-form:focus,
+  .settings-section .btn-form,
+  .settings-section .btn-form:focus,
+  .modal-change-password .btn-form,
+  .modal-change-password .btn-form:focus {
     font-size: 0.875em;
     height: 38px; } }
 @media (max-width: 374px) {
   .modal-signout .btn-form,
-  .modal-signout .btn-form:focus {
+  .modal-signout .btn-form:focus,
+  .settings-section .btn-form,
+  .settings-section .btn-form:focus,
+  .modal-change-password .btn-form,
+  .modal-change-password .btn-form:focus {
     font-size: 0.75em;
     height: 34px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .modal-signout button.close {
+  .modal-signout button.close,
+  .settings-section button.close,
+  .modal-change-password button.close {
     background-image: url(images/dashboard/icon-close@2x.png); } }
+
 @font-face {
   font-family: 'bebas_neueregular';
   src: url("fonts/bebasneue-webfont.eot");
@@ -692,6 +1005,98 @@ label {
   src: url("fonts/raleway-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/raleway-extrabold-webfont.woff2") format("woff2"), url("fonts/raleway-extrabold-webfont.woff") format("woff"), url("fonts/raleway-extrabold-webfont.ttf") format("truetype"), url("fonts/raleway-extrabold-webfont.svg#ralewayextrabold") format("svg");
   font-weight: normal;
   font-style: normal; }
+.settings-section form div[class*="col-"],
+.modal-change-password form div[class*="col-"] {
+  margin-bottom: 25px; }
+.settings-section .form-label,
+.modal-change-password .form-label {
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+.settings-section .input-currency,
+.modal-change-password .input-currency {
+  position: relative; }
+.settings-section .input-currency span,
+.modal-change-password .input-currency span {
+  display: block;
+  top: 0;
+  bottom: 0;
+  font-weight: 300;
+  padding: 0 13px;
+  line-height: 40px;
+  position: absolute;
+  color: #7c7c7c; }
+.settings-section .input-currency .form-control,
+.modal-change-password .input-currency .form-control {
+  background: transparent;
+  padding-left: 23px; }
+.settings-section .input-currency .form-control-percent,
+.modal-change-password .input-currency .form-control-percent {
+  padding-left: 26px; }
+.settings-section textarea.form-control,
+.settings-section textarea.form-control:focus,
+.modal-change-password textarea.form-control,
+.modal-change-password textarea.form-control:focus {
+  height: 115px;
+  resize: none; }
+.settings-section .txt-required,
+.modal-change-password .txt-required {
+  color: #ff5050;
+  font-family: "Lato", sans-serif;
+  font-weight: 700; }
+.settings-section .txt-note,
+.modal-change-password .txt-note {
+  font-size: 0.6875em;
+  font-style: italic;
+  padding-top: 5px;
+  color: #434343; }
+.settings-section .txt-error,
+.modal-change-password .txt-error {
+  color: #ff5050; }
+.settings-section .alert-error,
+.modal-change-password .alert-error {
+  color: #ff0000; }
+.settings-section .invalid-forced.ng-invalid, .settings-section .input-error,
+.modal-change-password .invalid-forced.ng-invalid,
+.modal-change-password .input-error {
+  border-color: #ff5050 !important; }
+.settings-section .txt-date,
+.modal-change-password .txt-date {
+  background-image: url(../images/dashboard/calendar/icon_calendar_blue_2.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 37px auto;
+  padding-right: 37px; }
+.settings-section .txt-hour,
+.modal-change-password .txt-hour {
+  background-image: url(../images/icon_time_grey_2.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 30px auto;
+  padding-right: 30px; }
+@media (max-width: 1023px) {
+  .settings-section .form-label,
+  .modal-change-password .form-label {
+    font-size: 0.9375em;
+    font-weight: 400; }
+  .settings-section form div[class*="col-"],
+  .modal-change-password form div[class*="col-"] {
+    margin-bottom: 16px; } }
+@media (max-width: 374px) {
+  .settings-section .form-label,
+  .modal-change-password .form-label {
+    font-size: 0.8125em; }
+  .settings-section form div[class*="col-"],
+  .modal-change-password form div[class*="col-"] {
+    margin-bottom: 16px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .settings-section .txt-date,
+  .modal-change-password .txt-date {
+    background-image: url(../images/dashboard/calendar/icon_calendar_blue_2@2x.png); }
+  .settings-section .txt-hour,
+  .modal-change-password .txt-hour {
+    background-image: url(../images/icon_time_grey_2@2x.png); } }
+
 .lightbox {
   display: none;
   background: rgba(0, 0, 0, 0.5);
@@ -765,6 +1170,31 @@ label {
   bottom: 0;
   z-index: 9999;
   display: none; }
+
+.modal-change-password .form-placeholder {
+  position: relative; }
+.modal-change-password .form-placeholder .form-control {
+  background: transparent;
+  position: relative;
+  z-index: 2; }
+.modal-change-password .form-placeholder .form-control:focus {
+  background: #fff; }
+.modal-change-password .form-placeholder label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 12px;
+  line-height: 40px;
+  z-index: 1;
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
+@media (max-width: 1023px) {
+  .modal-change-password .form-placeholder label {
+    line-height: 39px; } }
+@media (max-width: 374px) {
+  .modal-change-password .form-placeholder label {
+    line-height: 33px; } }
 
 /**
  * Partials
@@ -9154,6 +9584,24 @@ td ul {
   left: 0;
   bottom: 0; }
 
+.settings-section {
+  color: #242424;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  padding-top: 65px; }
+
+.settings-section a {
+  color: #242424;
+  text-decoration: underline; }
+
+@media (max-width: 1023px) {
+  .settings-section {
+    padding-top: 15px; } }
+@media (max-width: 374px) {
+  .settings-section {
+    padding-top: 12px; } }
 /**
  * Modals
  */

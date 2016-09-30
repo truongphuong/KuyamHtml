@@ -7,7 +7,7 @@
     position: relative;
     z-index: 2;
 }
-
+   
 .form-placeholder .form-control:focus {
     background: $white;
 }
@@ -22,4 +22,16 @@
     z-index: 1;
     font-family: $primary;
     font-weight: 300;
+}
+
+@media (max-width: 1023px) {
+	.form-placeholder label {
+		line-height: 39px;
+	}
+}
+
+@media (max-width: 374px) {
+	.form-placeholder label {
+		line-height: 33px;
+	}
 }

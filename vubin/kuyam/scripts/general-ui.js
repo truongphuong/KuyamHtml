@@ -32,8 +32,19 @@ function modalOpen(){
     }
 }
 
+function centerModals() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(this).height() - $dialog.height()) / 2;
+    offset = offset > 0 ? offset : 0;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
 $(function () {
     modalOpen();
+
+    $(document).on('show.bs.modal', '.modal', centerModals);
 
 	if (isMobile.any()) {
 		$('#detech-devices').addClass("detech-devices");

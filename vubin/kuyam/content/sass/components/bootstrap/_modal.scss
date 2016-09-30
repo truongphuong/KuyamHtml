@@ -16,66 +16,69 @@
 .modal-backdrop {
     display: none;
 }*/
-.modal-signout.modal-dialog{
-    margin-top:0;
-    margin-bottom: 0;
-    font-size: 16px;
-}
-.modal-signout .modal-content {
-    border: 1px solid #888;
-    border-radius: 4px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-.modal-signout .modal-header {
-    text-align: center;
-    border: 0 none;
-    padding-top: 25px;
-    padding-bottom: 0;
-    position: relative;
-}
-
-.modal-signout .modal-header h4 {
-    font-size: $s19;
-    font-family: $primary;
-    font-weight: 600;
-    padding-bottom: 0;
-}
-
-.modal-signout .modal-header .close {
-    margin-top: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.modal-signout .modal-body {
-    padding-bottom: 0;
-}
-
-.modal-signout .modal-footer {
-    padding-top: 0;
-    padding-bottom: 25px;
-    border: 0 none;
-}
-
-@media (min-width:1024px) {
-    .modal-signout .modal-body {
-        padding-left: 25px;
-        padding-right: 25px;
+.modal-signout,
+.modal-change-password{
+    &.modal-dialog{
+        margin-top:0;
+        margin-bottom: 0;
+        font-size: 16px;
     }
-}
-
-@media (max-width:767px) {
-    .modal-signout .modal-footer{
-        padding-bottom: 20px;
+    .modal-content {
+        border: 1px solid #888;
+        border-radius: 4px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
-}
 
-@media (max-width:767px) {
-    .modal-signout .modal-footer{
-        padding-bottom: 15px;
+    .modal-header {
+        text-align: center;
+        border: 0 none;
+        padding-top: 25px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .modal-header h4 {
+        font-size: $s19;
+        font-family: $primary;
+        font-weight: 600;
+        padding-bottom: 0;
+    }
+
+    .modal-header .close {
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .modal-body {
+        padding-bottom: 0;
+    }
+
+    .modal-footer {
+        padding-top: 0;
+        padding-bottom: 25px;
+        border: 0 none;
+    }
+
+    @media (min-width:1024px) {
+        .modal-body {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    @media (max-width:767px) {
+        .modal-footer{
+            padding-bottom: 20px;
+        }
+    }
+
+    @media (max-width:374px) {
+        .modal-footer{
+            padding-bottom: 15px;
+        }
     }
 }
