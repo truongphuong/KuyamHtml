@@ -72,6 +72,17 @@
         font-size: $h5;
         font-weight: 300;
     }
+    .working-section .working-time .td .time-control{
+        font-size: 16px;
+        padding:0;
+        text-align: center;
+        height: 37px;
+    }
+    .working-section .working-time .td .time-control input{
+        font-size: var($s17);
+        height: 37px;
+        width: 20px;
+    }
 }
 
 .calendar-tabs {}
@@ -177,6 +188,13 @@
     .modal-add-calendar .working-section .working-time .td{
         font-size: $s15;
     }
+    .modal-add-calendar .working-section .working-time .td .time-control input{
+        height: 31px;
+    }
+    .modal-add-calendar .working-section .working-time .td .time-control input{
+        font-size: var($s14);
+        height: 31px;
+    }
 }
 
 @media (max-width: 400px){
@@ -198,6 +216,10 @@
 }
 
 @media (max-width: 374px){
+    .modal-add-calendar .row{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
     .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
     .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"]{
         font-size: $s11;
@@ -208,8 +230,38 @@
     .modal-add-calendar .working-section .bootstrap-select > .dropdown-toggle{
         padding-right: 16px;
     }
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn,
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn:focus,
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn:active,
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled,
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .modal-add-calendar .working-section .form-select .bootstrap-select > .btn-default.disabled:active,
+    .modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .modal-add-calendar .working-section .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
+        padding-left: 3px;
+    }
     .modal-add-calendar .working-section .form-select .bootstrap-select div.dropdown-menu{
         margin-top: 0;
+    }
+    .modal-add-calendar .working-section .bootstrap-select .dropdown-menu > li > a{
+        padding-left: 3px;
+    }
+    .modal-add-calendar .working-section .working-time .td .time-control{
+        height: 26px;
+    }
+    .modal-add-calendar .working-section .working-time .td-from,
+    .modal-add-calendar .working-section .working-time .td-to{
+        width: 35px;
+    }
+    .modal-add-calendar .working-section .working-time .td .time-control{
+        height: 26px;
+    }
+    .modal-add-calendar .working-section .working-time .td .time-control input{
+        font-size: var($s14);
+        height: 33px;
+        width: 14px;
+        height: 26px;
     }
 }
 
