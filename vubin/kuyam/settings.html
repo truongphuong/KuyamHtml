@@ -276,10 +276,10 @@
 
         <!-- .site-contact -->
         <section class="settings-section">
-            <div class="container-fluid">
-                <form class="row">
-                    <div class="legend col-xs-12 visible-xs">Settings</div>
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+            <div class="container">
+                <form class="kuyam-form">
+                    <section class="mobile-section">
+                        <div class="legend">Your account settings</div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
@@ -300,17 +300,17 @@
                                 <input id="txtEmail" type="text" class="form-control" />
                             </div>
                         </div>
+                    </section>
+                    <footer>
                         <div class="row">
-                            <div class="col-xs-12 text-center">
-                                <a title="" href="javascript:void(0);"  data-toggle="modal" data-target="#changePassModal">change password</a>
+                            <div class="col-xs-6">
+                                <button class="btn btn-form btn-agree" data-toggle="modal" data-target="#changePassModal">Change password</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-form btn-agree">Save changes</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button class="btn btn-form btn-agree">save changes</button>
-                            </div>
-                        </div>
-                    </div>
+                    </footer>
                 </form>
             </div>
         </section>
