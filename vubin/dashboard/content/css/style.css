@@ -5702,10 +5702,25 @@ textarea.form-control:focus {
 .company-photo .boarding-avatar .default {
   width: 100%;
   height: 100%;
-  background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
-  background-size: 133px auto;
+  /*background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
+  background-size: 133px auto;*/
   position: relative;
   cursor: pointer; }
+
+.company-photo .boarding-avatar .default:before {
+  background: url(../images/dashboard/icon_add.png) center top no-repeat;
+  background-size: 30px auto;
+  content: 'Upload an image';
+  display: block;
+  padding: 38px 0;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: #3891ff;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -30px;
+  text-align: center; }
 
 .company-photo .boarding-avatar .edit {
   width: 65px;
@@ -5764,10 +5779,25 @@ textarea.form-control:focus {
 .company-photo .boarding-banner .default {
   width: 100%;
   height: 100%;
-  background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
-  background-size: 133px auto;
+  /*background: url(../images/dashboard/img-upload-avatar.png) center center no-repeat;
+  background-size: 133px auto;*/
   position: relative;
   cursor: pointer; }
+
+.company-photo .boarding-banner .default:before {
+  background: url(../images/dashboard/icon_add.png) center top no-repeat;
+  background-size: 30px auto;
+  content: 'Upload an image';
+  display: block;
+  padding: 38px 0;
+  font-size: 1.125em;
+  font-weight: 300;
+  color: #3891ff;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -30px;
+  text-align: center; }
 
 .company-photo .boarding-banner .has-image .default {
   display: none; }
@@ -5835,8 +5865,14 @@ textarea.form-control:focus {
     height: 144px;
     border-color: #b3b3b3; }
 
-  .company-photo .boarding-avatar .default {
-    background-size: 111px auto; }
+  /*.company-photo .boarding-avatar .default{
+      background-size: 111px auto;
+  }*/
+  .company-photo .boarding-avatar .default:before {
+    background-size: 25px auto;
+    font-size: 1em;
+    padding: 30px 0;
+    margin-top: -26px; }
 
   .company-photo .boarding-banner h2 {
     font-size: 1em;
@@ -5845,8 +5881,14 @@ textarea.form-control:focus {
   .company-photo .boarding-banner .frame {
     height: 144px; }
 
-  .company-photo .boarding-banner .default {
-    background-size: 111px auto; }
+  /*.company-photo .boarding-banner .default{
+      background-size: 111px auto;
+  }*/
+  .company-photo .boarding-banner .default:before {
+    background-size: 25px auto;
+    font-size: 1em;
+    padding: 30px 0;
+    margin-top: -26px; }
 
   .company-photo .kuyam-form div[class*="col-"] {
     margin-bottom: 15px; }
@@ -5878,9 +5920,9 @@ textarea.form-control:focus {
     height: 123px;
     border-color: #b3b3b3; }
 
-  .company-photo .boarding-avatar .default {
-    background-size: 111px auto; }
-
+  /*.company-photo .boarding-avatar .default{
+      background-size: 111px auto;
+  }*/
   .company-photo .boarding-banner h2 {
     font-size: .875em;
     margin-bottom: 18px; }
@@ -5888,9 +5930,9 @@ textarea.form-control:focus {
   .company-photo .boarding-banner .frame {
     height: 122px; }
 
-  .company-photo .boarding-banner .default {
-    background-size: 111px auto; }
-
+  /*.company-photo .boarding-banner .default{
+      background-size: 111px auto;
+  }*/
   .company-photo .kuyam-form div[class*="col-"] {
     margin-bottom: 12px; }
 
@@ -5898,8 +5940,8 @@ textarea.form-control:focus {
     height: 59px;
     padding: 13px 16px 0; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .company-photo .boarding-avatar .default {
-    background-image: url(../images/dashboard/img-upload-avatar@2x.png); }
+  .company-photo .boarding-avatar .default:before {
+    background-image: url(../images/dashboard/icon_add@2x.png); }
 
   .company-photo .boarding-avatar .edit {
     background-image: url(../images/dashboard/bg-edit@2x.png); }
@@ -5907,8 +5949,8 @@ textarea.form-control:focus {
   .company-photo .boarding-avatar .icon-edit {
     background-image: url(../images/dashboard/icon-edit@2x.png); }
 
-  .company-photo .boarding-banner .default {
-    background-image: url(../images/dashboard/img-upload-avatar@2x.png); } }
+  .company-photo .boarding-banner .default:before {
+    background-image: url(../images/dashboard/icon_add@2x.png); } }
 .company-gallery .kuyam-form {
   padding: 4px 0; }
 

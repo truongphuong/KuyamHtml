@@ -1011,10 +1011,26 @@
         .modal-boarding-profile .boarding-avatar .default {
             width: 100%;
             height: 100%;
-            background: url(images/boarding/img-upload-avatar.png) center center no-repeat;
-            background-size: 133px auto;
+            /*background: url(images/boarding/img-upload-avatar.png) center center no-repeat;
+            background-size: 133px auto;*/
             position: relative;
             cursor: pointer;
+        }
+
+        .modal-boarding-profile .boarding-avatar .default:before {
+            background: url(images/boarding/icon_add.png) center top no-repeat;
+            background-size: 30px auto;
+            content:'Upload an image';
+            display: block;
+            padding: 38px 0;
+            font-size: 1.1875em;
+            font-weight: 300;
+            color: #3891ff;
+            position: absolute;
+            width: 100%;
+            top:50%;
+            margin-top: -30px;
+			text-align: center;
         }
 
         .modal-boarding-profile .boarding-avatar .edit {
@@ -1083,10 +1099,26 @@
     .modal-boarding-profile .boarding-banner .default {
         width: 100%;
         height: 100%;
-        background: url(images/boarding/img-upload-avatar.png) center center no-repeat;
-        background-size: 133px auto;
+        /*background: url(images/boarding/img-upload-avatar.png) center center no-repeat;
+        background-size: 133px auto;*/
         position: relative;
         cursor: pointer;
+    }
+
+    .modal-boarding-profile .boarding-banner .default:before {
+        background: url(images/boarding/icon_add.png) center top no-repeat;
+        background-size: 30px auto;
+        content:'Upload an image';
+        display: block;
+        padding: 38px 0;
+        font-size: 1.1875em;
+        font-weight: 300;
+        color: #3891ff;
+        position: absolute;
+        width: 100%;
+        top:50%;
+        margin-top: -30px;
+		text-align: center;
     }
 
     .modal-boarding-profile .boarding-banner .has-image .default {
@@ -1447,8 +1479,14 @@
             overflow: hidden;
         }
 
-        .modal-boarding-profile .boarding-avatar .default {
+        /*.modal-boarding-profile .boarding-avatar .default {
             background-size: 111px auto;
+        }*/
+        .modal-boarding-profile .boarding-avatar .default:before {
+            background-size: 25px auto;
+            font-size: 1em;
+            padding: 30px 0;
+            margin-top: -26px;
         }
 
     .modal-boarding-profile .boarding-banner h2 {
@@ -1460,8 +1498,14 @@
         height: 144px;
     }
 
-    .modal-boarding-profile .boarding-banner .default {
+    /*.modal-boarding-profile .boarding-banner .default {
         background-size: 111px auto;
+    }*/
+    .modal-boarding-profile .boarding-banner .default:before {
+        background-size: 25px auto;
+        font-size: 1em;
+        padding: 30px 0;
+        margin-top: -26px;
     }
 
     .modal-boarding-profile .modal-footer {
@@ -1829,9 +1873,9 @@
             border-color: #b3b3b3;
         }
 
-        .modal-boarding-profile .boarding-avatar .default {
+        /*.modal-boarding-profile .boarding-avatar .default {
             background-size: 111px auto;
-        }
+        }*/
 
     .modal-boarding-profile .boarding-banner h2 {
         font-size: .875em;
@@ -1842,9 +1886,9 @@
         height: 122px;
     }
 
-    .modal-boarding-profile .boarding-banner .default {
+    /*.modal-boarding-profile .boarding-banner .default {
         background-size: 111px auto;
-    }
+    }*/
 
     .modal-boarding-profile .modal-footer {
         height: 59px;
@@ -1937,8 +1981,8 @@
         background-image: url(images/boarding/icon-down-blue@2x.png);
     }
 
-    .modal-boarding-profile .boarding-avatar .default {
-        background-image: url(images/boarding/img-upload-avatar@2x.png);
+    .modal-boarding-profile .boarding-avatar .default:before {
+        background-image: url(images/boarding/icon_add@2x.png);
     }
 
     .modal-boarding-profile .boarding-avatar .edit {
@@ -1949,8 +1993,8 @@
         background-image: url(images/boarding/icon-edit@2x.png);
     }
 
-    .modal-boarding-profile .boarding-banner .default {
-        background-image: url(images/boarding/img-upload-avatar@2x.png);
+    .modal-boarding-profile .boarding-banner .default:before {
+        background-image: url(images/boarding/icon_add@2x.png);
     }
 
     .modal-chosen .icon-ready {
