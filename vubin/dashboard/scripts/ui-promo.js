@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    iscrollSelectSearch('divServicePromo', 'iscrollServicePromo');
+    $('#chosenServicePromo').chosen();
+
+    $('#chosenServicePromo1').chosen({
+        isShowDropDown: true
+    });
 
     $('#txtStartDate').datetimepicker({
         sideBySide: true,
