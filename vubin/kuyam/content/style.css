@@ -1392,7 +1392,19 @@ label {
 
 .site-header .link-account-user .icon-down {
   background-image: url("images/icons_2016/header_icon_dropdown.png");
-  margin: 0 -10px -3px 0px; }
+  margin: 0 -10px -3px 0px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+.site-header .link-account-user.open .icon-down {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
 
 .site-header .header-icon-sign-out {
   background-image: url("images/icons_2016/header_icon_sign_out.png");
@@ -1824,8 +1836,7 @@ label {
   color: #000; }
 
 .site-banner .search-form .tt-menu {
-  width: calc(100% + 2px);
-  text-align: center; }
+  width: calc(100% + 2px); }
 
 .site-banner .lineBottom {
   z-index: 8;
@@ -1898,6 +1909,9 @@ label {
   .site-banner .search-form fieldset .btn-search {
     width: 45px;
     height: 38px; }
+
+  .site-banner .search-form .tt-menu {
+    text-align: center; }
 
   .site-banner .lineBottom {
     bottom: 57px; }
