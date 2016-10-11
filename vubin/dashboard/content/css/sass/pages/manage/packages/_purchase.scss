@@ -1,6 +1,5 @@
 .manage-packages .kuyam-form{
     padding:0;
-    width: 806px;
 }
 .manage-packages .kuyam-form header{
     padding: 6px 0;
@@ -8,10 +7,6 @@
 }
 .manage-packages .kuyam-form .search-form .form-control{
     width: 320px;
-}
-.manage-packages .photo-section{
-    width: 636px;
-    padding-top: 25px;
 }
 .manage-packages .photo-section .legend{
     display: inline-block;
@@ -190,7 +185,14 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0) 100%);
     background-repeat: repeat-x;
 }
-
+@media (min-width: 1024px) and (max-width: 1199px){
+    .manage-packages .photo-section,
+    .manage-packages .search-section,
+    .manage-packages .popular-section,
+    .manage-packages .cart-section{
+        width: 546px;
+    }
+}
 @media (max-width: 1023px){
     .manage-packages .photo-section,
     .manage-packages .search-section,

@@ -76,6 +76,28 @@ textarea.form-control:focus {
     padding-right: 30px;
 }
 
+.or-section {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    width: 0;
+    z-index: 3;
+}
+.or-text {
+    background: $white;
+    border: 1px solid #979797;
+    border-radius: 100%;
+    color: #979797;
+    font-family: $third;
+    font-size: $s18;
+    height: 36px;
+    line-height: 34px;
+    margin-left: -18px;
+    text-align: center;
+    width: 36px;
+    font-weight: 400;
+}
+
 @media (max-width: 1023px) {
     .form-label{
         font-size: $s15;
@@ -86,12 +108,46 @@ textarea.form-control:focus {
     }
 }
 
+@media (max-width: 767px) {
+    .or-section{
+        right: inherit;
+        left: 50%;
+        bottom: -13px;
+    }
+    .or-text{
+        margin-left: -13px;
+        line-height: 24px;
+        height: 26px;
+        width: 26px;
+        font-size: $s15;
+    }
+    .input-option .form-label span.visible-xs{
+        display: inline-block !important;
+    }
+    .input-option div[class*="col-"]:first-child{
+        margin-bottom: 0;
+    }
+    .input-option div[class*="col-"]:first-child .form-control{
+        border-bottom: 0 none;
+    }
+}
+
 @media (max-width: 374px) {
     .form-label{
         font-size: $s13;
     }
     form div[class*="col-"] {
         margin-bottom: 16px;
+    }
+    .or-section{
+        bottom: -10px;
+    }
+    .or-text{
+        margin-left: -10px;
+        line-height: 18px;
+        height: 20px;
+        width: 20px;
+        font-size: $s13;
     }
 }
 

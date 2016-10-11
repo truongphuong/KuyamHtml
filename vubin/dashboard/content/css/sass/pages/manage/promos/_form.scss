@@ -1,6 +1,29 @@
 .manage-promos form{
     width: 664px;
 }
+.manage-promos form a.link-send{
+    font-size: 15px;
+    font-weight: 700;
+    color: $positive;
+    text-decoration: none;
+    float: right;
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    margin-top: 3px;
+}
+.manage-promos form a.link-send:before{
+    content:'';
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url(../images/dashboard/manage/icon-send.png) center center no-repeat;
+    background-size: 25px auto;
+    display: block;
+    margin-right: 6px;
+}
 .manage-promos .form-timepicker{
     display: block;
 }
@@ -19,10 +42,13 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 1023px){
-    .manage-promos form{
+@media (max-width: 1199px){
+    .manage-promos .kuyam-form form{
         width: auto;
     }
+}
+
+@media (max-width: 1023px){
     .manage-promos .form-time ul.clearfix > li > input[type="text"],
     .manage-promos .form-time .form-select .bootstrap-select > .btn,
     .manage-promos .form-time .form-select .bootstrap-select > .btn:focus,
@@ -34,6 +60,16 @@
     .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
     .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
         height: 38px;
+    }
+    .manage-promos form a.link-send{
+        padding-left: 46px;
+        font-size: $h4;
+    }
+    .manage-promos form a.link-send:before{
+        content:'';
+        width: 36px;
+        height: 28px;
+        background-size: 36px auto;
     }
 }
 
@@ -52,5 +88,24 @@
     .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
     .manage-promos .form-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus{
         height: 32px;
+    }
+
+    .manage-promos form a:before{
+        content:'';
+        width: 36px;
+        height: 28px;
+        background-size: 36px auto;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .manage-promos form a.link-send:before{
+        background-image: url(../images/dashboard/manage/icon-send@2x.png);
     }
 }
