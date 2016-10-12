@@ -846,6 +846,10 @@ div[class*="col-"] {
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: 100%; }
 
+.bootstrap-select.btn-group.disabled,
+.bootstrap-select.btn-group > .disabled {
+  cursor: default; }
+
 .bootstrap-select.btn-group .no-results {
   margin: 0;
   padding: 10px; }
@@ -9781,4 +9785,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
