@@ -132,7 +132,8 @@ function iscrollSelectModal(sectionID, scrollName, modalName) {
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
 						cursorwidth: "7px",
-						background: "#8B8B8B"
+						background: "#8B8B8B",
+                        preservenativescrolling: false
 					});
 			});
 		}
@@ -195,7 +196,8 @@ function iscrollSelectSearchModal(sectionID, scrollName, modalName) {
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
 						cursorwidth: "7px",
-						background: "#8B8B8B"
+						background: "#8B8B8B",
+                        preservenativescrolling: false
 					});
 			});
 		}
@@ -240,7 +242,8 @@ function iscrollSelectSearch(sectionID, scrollName) {
                         cursorborder: "1px solid transparent",
                         cursorborderradius: "5px",
                         cursorwidth: "7px",
-                        background: "#8B8B8B"
+                        background: "#8B8B8B",
+                        preservenativescrolling: false
                     });
             });
         }
@@ -286,7 +289,8 @@ function iscrollSelect(sectionID, scrollName) {
 						cursorborder: "1px solid transparent",
 						cursorborderradius: "5px",
 						cursorwidth: "7px",
-						background: "#8B8B8B"
+						background: "#8B8B8B",
+                        preservenativescrolling: false
 					});
 			});
 		}
@@ -311,7 +315,8 @@ function iscrollContent(sectionID) {
 			cursorborder: "1px solid transparent",
 			cursorborderradius: "5px",
 			cursorwidth: "7px",
-			background: "#8B8B8B"
+			background: "#8B8B8B",
+            preservenativescrolling: false
 		});
 	}
 }

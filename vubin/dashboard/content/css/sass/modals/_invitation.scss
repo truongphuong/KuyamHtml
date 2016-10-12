@@ -1,0 +1,147 @@
+.modal-invitation{
+    width: 674px;
+}
+.modal-invitation .form-label{
+    font-size: $h6;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+.modal-invitation .form-control{
+    border-radius: 2px;
+    height: 148px;
+    resize: none;
+}
+.modal-invitation form div[class*="col-"]{
+    margin-bottom: 0;
+}
+.modal-invitation ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.modal-invitation .radio-mark ~ .radio-label{
+    font-size: $h6;
+    padding-left: 29px;
+}
+.modal-invitation .radio-mark ~ .radio-label:before{
+    top: -1px;
+}
+.modal-invitation .cb-mark ~ .cb-label{
+    font-size: $s13;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+.modal-invitation .modal-header{
+    padding: 11px 27px 13px;
+}
+.modal-invitation .modal-header .modal-title{
+    font-size: $s25;
+    font-weight: 300;
+    margin-bottom: 14px;
+}
+.modal-invitation .modal-header .modal-title strong{
+    font-weight: 700;
+}
+.modal-invitation .modal-header p{
+    font-size: $h6;
+    line-height: 20px;
+}
+.modal-invitation .modal-header p strong{
+    font-weight: 700;
+    color:#ff6a6a;
+}
+.modal-invitation .modal-body{
+    padding: 15px 27px 11px;
+}
+.modal-invitation .modal-body ul.radio-list{
+    margin: 26px -20px 11px;
+}
+.modal-invitation .modal-body ul.radio-list li{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.modal-invitation .modal-body .client-list{
+    height: 169px;
+    overflow-y: auto;
+    position: relative;
+}
+.on-nicescroll .modal-invitation .modal-body .client-list .wrap-dropdown-menu-inner{
+    max-height: 100%;
+}
+.on-nicescroll .modal-invitation .modal-body .client-list {
+    overflow: hidden;
+}
+.modal-invitation .modal-body ul.checkbox-list{
+
+}
+.modal-invitation .modal-footer{
+    padding: 15px 27px;
+}
+.modal-invitation .modal-footer ul{
+    margin-left: -9px;
+    margin-right: -9px;
+}
+.modal-invitation .modal-footer li{
+    float: left;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.modal-invitation .modal-footer .btn{
+    height: 40px;
+    font-size: $s17;
+    width: 100%;
+}
+.modal-invitation .modal-footer li:first-child{
+    width: 167px;
+}
+.modal-invitation .modal-footer li:last-child{
+    width: 154px;
+}
+
+@media (min-width: 768px){
+    .modal-invitation .modal-header{
+        text-align: left;
+    }
+    .modal-invitation .modal-header .close{
+        right: 14px;
+    }
+}
+
+@media (max-width: 1023px){
+    .modal-invitation .form-label{
+        font-size: $s15;
+    }
+    .radio-mark:checked ~ .radio-label{
+        font-weight: 700;
+        color: $positive;
+    }
+    .modal-invitation .modal-header .modal-title{
+        font-size: $h6;
+    }
+    .modal-invitation .modal-header .modal-title strong{
+        font-weight: 400;
+    }
+    .modal-invitation .modal-header p{
+        font-size: $s15;
+        line-height: 19px;
+    }
+    .modal-invitation .modal-body ul.radio-list li{
+        float: none;
+    }
+    .modal-invitation .modal-footer .btn{
+        height: 40px;
+        font-size: $s13;
+        width: 100%;
+    }
+    .modal-invitation .modal-footer li:first-child,
+    .modal-invitation .modal-footer li:last-child{
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .modal-invitation{
+        width: auto;
+    }
+}

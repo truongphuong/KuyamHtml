@@ -37,6 +37,10 @@ $(document).ready(function () {
     $('#mobileListAccordion').on('shown.bs.collapse', function () {
         refreshNiceScroll('#mobileList');
     });
+
+    $('#invitationModal').on('shown.bs.modal', function () {
+        iscrollContent('#clientsList');
+    });
 });
 
 $(window).on('resize', function () {

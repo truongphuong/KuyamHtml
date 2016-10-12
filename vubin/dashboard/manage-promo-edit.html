@@ -528,10 +528,10 @@
 
                                 <form id="infoForm">
                                     <section class="mobile-section">
-                                        <div class="legend">adding a promo code <a class="link-send hidden-1023" title="" href="#">Send to clients</a></div>
+                                        <div class="legend">adding a promo code <a class="link-send hidden-1023" title="" href="#" data-toggle="modal" data-target="#invitationModal">Send to clients</a></div>
                                         <div class="row visible-1023">
                                             <div class="col-xs-12">
-                                                <a class="link-send" title="" href="#">Send to clients</a>
+                                                <a class="link-send" title="" href="#" data-toggle="modal" data-target="#invitationModal">Send to clients</a>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -837,10 +837,10 @@
                                 </form>
                                 <form id="discountForm" class="hide">
                                     <section class="mobile-section">
-                                        <div class="legend">adding a promo code <a class="link-send hidden-1023" title="" href="#">Send to clients</a></div>
+                                        <div class="legend">adding a promo code <a class="link-send hidden-1023" title="" href="#" data-toggle="modal" data-target="#invitationModal">Send to clients</a></div>
                                         <div class="row visible-1023">
                                             <div class="col-xs-12">
-                                                <a class="link-send" title="" href="#">Send to clients</a>
+                                                <a class="link-send" title="" href="#" data-toggle="modal" data-target="#invitationModal">Send to clients</a>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -2813,6 +2813,82 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /#deleteModal -->
+
+    <!-- #invitationModal -->
+    <div id="invitationModal" class="modal fade" role="dialog" aria-labelledby="invitationModalLabel" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-invitation">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 id="invitationModalLabel" class="modal-title">Send <strong>xxxx</strong> promo to clients</h4>
+                    <p>We´ll send a Kuyam email blast to your clients to promote your promo code.<br /><strong>You have a limit of 1 email blast per promo code. Use it wisely!</strong></p>
+                </div>
+                <div class="modal-body">
+                    <label for="txtMessage" class="form-label">Include a message for your clients</label>
+                    <textarea id="txtMessage" cols="" rows="" class="form-control" placeholder="250 characters left"></textarea>
+                    <label class="form-label visible-1023">Send to:</label>
+                    <ul class="radio-list clearfix">
+                        <li class="radio-custom">
+                            <input class="radio-mark" type="radio" id="radioCertain" name="radioPayment" />
+                            <label class="radio-label" for="radioCertain">Select certain clients</label>
+                        </li>
+                        <li class="radio-custom">
+                            <input class="radio-mark" type="radio" id="radioRegular" name="radioPayment" />
+                            <label class="radio-label" for="radioRegular">Select all regular clients</label>
+                        </li>
+                    </ul>
+                    <div id="clientsList" class="client-list">
+                        <div class="scroll-content">
+                            <ul class="checkbox-list">
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox1" name="clientName" />
+                                    <label class="cb-label" for="checkbox1">Kourosh Gohar</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox2" name="clientName" />
+                                    <label class="cb-label" for="checkbox2">Sven Larson</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox3" name="clientName" />
+                                    <label class="cb-label" for="checkbox3">Fatima Dominguez</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox4" name="clientName" />
+                                    <label class="cb-label" for="checkbox4">Pablo Honey</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox5" name="clientName" />
+                                    <label class="cb-label" for="checkbox5">Pablo Mustard</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox6" name="clientName" />
+                                    <label class="cb-label" for="checkbox6">Gonzalo Medeiros</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox7" name="clientName" />
+                                    <label class="cb-label" for="checkbox7">Alfonso Medeiros</label>
+                                </li>
+                                <li class="cb-custom">
+                                    <input class="cb-mark" type="checkbox" id="checkbox8" name="clientName" />
+                                    <label class="cb-label" for="checkbox8">Sven Larson</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <ul>
+                        <li>
+                            <button class="btn btn-form btn-agree" data-dismiss="modal">Preview email</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-form btn-agree" data-dismiss="modal">Send email</button>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /#invitationModal -->
     <!-- InstanceEndEditable -->
 
     <!-- === SCRIPTS === -->
