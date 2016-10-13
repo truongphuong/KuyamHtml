@@ -8,7 +8,7 @@
 }
 .modal-invitation .form-control{
     border-radius: 2px;
-    height: 148px;
+    height: 148px !important;
     resize: none;
 }
 .modal-invitation form div[class*="col-"]{
@@ -52,11 +52,11 @@
     top: -1px;
     width: 22px;
     height: 22px;
-    background-image: url("../images/dashboard/modals/invitation/icon-check.png");
+    background-image: url(../images/dashboard/modals/invitation/icon-check.png);
     background-size: 22px auto;
 }
 .modal-invitation .modal-body > ul.checkbox-list .cb-mark:checked ~ .cb-label::before {
-    background-image: url("../images/dashboard/modals/invitation/icon-checked.png");
+    background-image: url(../images/dashboard/modals/invitation/icon-checked.png);
 }
 .modal-invitation .modal-body .client-list{
     height: 169px;
@@ -117,15 +117,11 @@
     }
     .modal-invitation .form-label{
         font-size: $s15;
+        margin-bottom: 3px;
     }
     .modal-invitation .form-control{
-        height: 123px;
+        height: 123px !important;
         margin-bottom: 24px;
-    }
-    .radio-mark:checked ~ .radio-label{
-        font-weight: 700;
-        color: $positive;
-        margin-bottom: 3px;
     }
     .modal-invitation .modal-header{
         padding: 18px 20px 3px;
@@ -148,13 +144,21 @@
         padding-right: 20px;
         background: $white;
     }
-    .modal-invitation .modal-body ul.radio-list{
+    .modal-invitation .modal-body > ul.checkbox-list{
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .modal-invitation .modal-body ul.radio-list li{
+    .modal-invitation .modal-body > ul.checkbox-list li{
         float: none;
         margin-bottom: 6px;
+    }
+    .modal-invitation .modal-body > ul.checkbox-list .cb-mark:checked ~ .cb-label{
+        font-weight: 700;
+        color: $positive;
+        margin-bottom: 3px;
+    }
+    .modal-invitation .modal-body .client-list{
+        height: 218px;
     }
     .modal-invitation .modal-footer{
         padding: 19px 30px;
@@ -186,6 +190,81 @@
         width: auto;
     }
 }
+@media (max-width: 374px){
+    .modal-invitation .form-label{
+        font-size: $s13;
+        margin-bottom: 0;
+    }
+    .modal-invitation .form-control{
+        height: 106px !important;
+        margin-bottom: 18px;
+        font-size: $p;
+    }
+    .modal-invitation .modal-header{
+        padding: 16px 16px 3px;
+        background: $white;
+    }
+    .modal-invitation .modal-header .modal-title{
+        font-size: $s14;
+        margin-bottom: 22px;
+    }
+    .modal-invitation .modal-header .modal-title strong{
+        font-weight: 400;
+    }
+    .modal-invitation .modal-header p{
+        font-size: $s13;
+        line-height: 16px;
+    }
+    .modal-invitation .modal-body{
+        padding-top: 11px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background: $white;
+    }
+    .modal-invitation .modal-body > ul.checkbox-list{
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .modal-invitation .modal-body > ul.checkbox-list li{
+        margin-bottom: 6px;
+    }
+    .modal-invitation .modal-body > ul.checkbox-list .cb-mark ~ .cb-label{
+        margin-bottom: 3px;
+        font-size: $s13;
+    }
+    .modal-invitation .modal-body > ul.checkbox-list .cb-mark ~ .cb-label:before{
+        width: 18px;
+        height: 18px;
+        background-size: 18px auto;
+        top: 1px;
+    }
+    .modal-invitation .modal-body .client-list{
+        height: 209px;
+    }
+    .modal-invitation .modal-body .client-list ul.checkbox-list{
+        margin-left: 3px;
+    }
+    .modal-invitation .modal-body .client-list ul.checkbox-list .cb-mark ~ .cb-label{
+        font-size: $p;
+        line-height: 21px;
+        padding-left: 25px;
+    }
+    .modal-invitation .modal-footer{
+        padding: 17px 26px;
+    }
+    .modal-invitation .modal-footer ul{
+        margin-left: -13px;
+        margin-right: -13px;
+    }
+    .modal-invitation .modal-footer li{
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .modal-invitation .modal-footer .btn{
+        height: 33px;
+        font-size: $p;
+    }
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
@@ -195,9 +274,9 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px)
 only screen and (              min-resolution:120dpi)      and (min-width:320px),
 only screen and (               min-resolution:2dppx)      and (min-width:320px){
     .modal-invitation .modal-body > ul.checkbox-list .cb-mark ~ .cb-label:before{
-        background-image: url("../images/dashboard/modals/invitation/icon-check@2x.png");
+        background-image: url(../images/dashboard/modals/invitation/icon-check@2x.png);
     }
     .modal-invitation .modal-body > ul.checkbox-list .cb-mark:checked ~ .cb-label::before {
-        background-image: url("../images/dashboard/modals/invitation/icon-checked@2x.png");
+        background-image: url(../images/dashboard/modals/invitation/icon-checked@2x.png);
     }
 }
