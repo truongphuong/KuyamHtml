@@ -1,0 +1,88 @@
+.category-select{
+    display: none;
+    position: relative;
+    top:-7px;
+}
+.category-select .btn,
+.category-select .btn:hover,
+.category-select .btn:visited,
+.category-select .btn:focus,
+.category-select .btn:active,
+.category-select .open .btn,
+.category-select .open .btn:hover,
+.category-select .open .btn:visited,
+.category-select .open .btn:focus,
+.category-select .open .btn:active{
+    background: transparent;
+    border: 0 none;
+    color: #b2d63c;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: none;
+    outline: none !important;
+    padding-left: 5px;
+    outline-offset: 0;
+}
+.category-select .bootstrap-select.btn-group .dropdown-toggle .caret{
+    width: 30px;
+    height: 30px;
+    background:url("images/icons_2016/icon_mobile_dropdown.jpg") no-repeat center center;
+    background-size: 28px auto;
+    border: 0 none;
+    right: 0;
+    margin-top: -15px;
+}
+.category-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+    width: auto;
+}
+.category-select .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.category-select .dropdown-menu{
+    box-shadow: none;
+    border-radius: 0;
+    max-height: inherit !important;
+    padding:0;
+    border-color:#96BE3D;
+}
+.category-select .dropdown-menu > li.selected{
+    display: none;
+}
+.category-select .dropdown-menu > li > a:hover,
+.category-select .dropdown-menu > li > a:focus{
+    color: $white;
+    background: #96BE3D;
+}
+
+@media (max-width: 767px){
+    .category-select{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px){
+    .category-select{
+        top: -5px;
+    }
+    .category-select .btn,
+    .category-select .btn:hover,
+    .category-select .btn:visited,
+    .category-select .btn:focus,
+    .category-select .btn:active,
+    .category-select .open .btn,
+    .category-select .open .btn:hover,
+    .category-select .open .btn:visited,
+    .category-select .open .btn:focus,
+    .category-select .open .btn:active{
+        font-size: 15px;
+    }
+    .category-select .dropdown-menu{
+        left: inherit;
+        right: 0;
+    }
+    .category-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+        max-width: 135px;
+    }
+}

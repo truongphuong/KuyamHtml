@@ -399,7 +399,7 @@
                         <!--<p>Select a time and let us book it</p>-->
                         </h2>
 
-                        <select class="visible-xs book-me-session-select">
+                        <!--<select class="visible-xs book-me-session-select">
                             <option>Blowout</option>
                             <option>Facial</option>
                             <option>Massage</option>
@@ -410,7 +410,21 @@
                             <option>Wax</option>
                             <option>Yoga</option>
                             <option>Spin</option>
-                        </select>
+                        </select>-->
+                        <div class="category-select">
+                            <select id="categorySelect">
+                                <option>Blowout</option>
+                                <option>Facial</option>
+                                <option>Massage</option>
+                                <option>Nails</option>
+                                <option>Personal Trainer</option>
+                                <option>Pilates</option>
+                                <option>Tanning</option>
+                                <option>Wax</option>
+                                <option>Yoga</option>
+                                <option>Spin</option>
+                            </select>
+                        </div>
 
                     </div>
 
@@ -1844,6 +1858,13 @@
 	<!-- InstanceEndEditable -->
 
     <!-- InstanceBeginEditable name="script2" -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#categorySelect').selectpicker({
+                dropupAuto: false
+            });
+        });
+    </script>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
