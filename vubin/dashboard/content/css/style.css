@@ -1818,7 +1818,7 @@ body.pr0 {
   padding-top: 0;
   box-shadow: none; }
 
-.btn-form span {
+.btn-form .txt-name {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -2041,6 +2041,7 @@ form div[class*="col-"] {
   font-weight: 300;
   padding: 0 13px;
   line-height: 40px;
+  font-size: 1.0625em;
   position: absolute;
   color: #7c7c7c; }
 
@@ -2117,7 +2118,10 @@ textarea.form-control:focus {
     font-weight: 400; }
 
   form div[class*="col-"] {
-    margin-bottom: 16px; } }
+    margin-bottom: 16px; }
+
+  .input-currency span {
+    font-size: 0.875em; } }
 @media (max-width: 767px) {
   .or-section {
     right: inherit;
@@ -2154,7 +2158,11 @@ textarea.form-control:focus {
     line-height: 18px;
     height: 20px;
     width: 20px;
-    font-size: 0.8125em; } }
+    font-size: 0.8125em; }
+
+  .input-currency span {
+    font-size: 0.6875em;
+    line-height: 33px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .txt-date {
     background-image: url(../images/dashboard/calendar/icon_calendar_blue_2@2x.png); }
@@ -9545,8 +9553,7 @@ textarea.form-control:focus {
   background: url(../images/dashboard/icon-ready.png) center center no-repeat;
   background-size: 10px auto;
   position: relative;
-  bottom: 2px;
-  display: inline-block; }
+  bottom: 2px; }
 
 @media (max-width: 767px) {
   .modal-chosen .modal-dialog {
@@ -9948,4 +9955,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
