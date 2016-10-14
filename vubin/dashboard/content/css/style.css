@@ -880,6 +880,9 @@ body.modal-open {
   -moz-box-shadow: none;
   box-shadow: none; }
 
+.bootstrap-select.btn-group .btn.disabled {
+  opacity: 1; }
+
 .bootstrap-select.btn-group .btn .filter-option {
   color: #242424;
   white-space: nowrap;
@@ -887,6 +890,9 @@ body.modal-open {
   text-overflow: ellipsis;
   display: block;
   max-width: 100%; }
+
+.bootstrap-select.btn-group .btn .filter-option {
+  color: #dadada; }
 
 .bootstrap-select > .dropdown-toggle {
   padding-right: 30px; }
@@ -1696,10 +1702,10 @@ body.modal-open {
   cursor: default;
   color: #242424; }
 
-.ku-time input[disabled],
-.ku-time input:disabled {
+.ku-time input[disabled] {
   color: #dadada;
-  cursor: default; }
+  cursor: default;
+  -webkit-text-fill-color: #dadada; }
 
 .ku-time input:focus {
   color: #000; }
