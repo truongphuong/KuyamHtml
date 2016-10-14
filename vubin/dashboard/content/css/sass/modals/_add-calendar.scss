@@ -206,14 +206,18 @@
         height: 31px;
     }
 }
-
-@media (max-width: 568px){
+@media (max-width: 520px){
     .calendar-tabs .nav-tabs > li {
-        width: 30%;
+        width: 27%;
     }
     .calendar-tabs .nav-tabs > li:first-child {
         width: 40%;
     }
+    .calendar-tabs .nav-tabs > li:last-child{
+        width: 33%;
+    }
+}
+@media (max-width: 479px){
     .calendar-tabs .nav-tabs > li a,
     .calendar-tabs .nav-tabs > li a:hover,
     .calendar-tabs .nav-tabs > li.active a,
@@ -234,13 +238,11 @@
 }
 
 @media (max-width: 374px){
-    .modal-add-calendar .row{
-        margin-left: -8px;
-        margin-right: -8px;
-    }
-    .modal-add-calendar div[class*="col-"]{
-        padding-left: 8px;
-        padding-right: 8px;
+    .calendar-tabs .nav-tabs > li .dot{
+        width: 20px;
+        height: 20px;
+        background-size: 20px auto;
+        margin-right:0;
     }
     .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
     .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"]{
