@@ -744,6 +744,9 @@ div[class*="col-"] {
   position: fixed;
   width: 100%; }
 
+body.modal-open {
+  overflow: hidden; }
+
 .modal {
   background: rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
@@ -7109,7 +7112,7 @@ textarea.form-control:focus {
   padding: 30px 0; }
 
 @media (max-width: 1199px) {
-  .manage-staff .kuyam-form form {
+  .manage-staff .kuyam-form {
     width: auto; } }
 @media (min-width: 1024px) {
   .manage-staff .kuyam-main-content {
@@ -8656,7 +8659,7 @@ textarea.form-control:focus {
   margin-bottom: 0; }
 
 @media (max-width: 1199px) {
-  .manage-promos .kuyam-form form {
+  .manage-promos form {
     width: auto; } }
 @media (min-width: 1024px) {
   .manage-promos .kuyam-main-content {
@@ -8866,6 +8869,12 @@ textarea.form-control:focus {
 @media (min-width: 1024px) {
   .modal-add-calendar .working-section .bootstrap-select > .dropdown-toggle {
     padding-right: 20px; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal-dialog.block-attendee,
+  .modal-dialog.block-details,
+  .modal-dialog.block-personal {
+    margin-left: auto;
+    margin-right: auto; } }
 @media (max-width: 1023px) {
   .calendar-tabs .nav-tabs > li {
     margin: 0;
@@ -8875,9 +8884,7 @@ textarea.form-control:focus {
   .modal-dialog.block-attendee,
   .modal-dialog.block-details,
   .modal-dialog.block-personal {
-    font-size: 0.8125em;
-    margin-left: auto;
-    margin-right: auto; }
+    font-size: 0.8125em; }
 
   #addCalendarModal .modal-content {
     border-color: transparent; }
@@ -8921,7 +8928,7 @@ textarea.form-control:focus {
   .modal-add-calendar .working-section .working-time .td .time-control input {
     font-size: 0.875em;
     height: 31px; } }
-@media (max-width: 400px) {
+@media (max-width: 568px) {
   .calendar-tabs .nav-tabs > li {
     width: 30%; }
 
@@ -8935,11 +8942,23 @@ textarea.form-control:focus {
     font-size: 0.75em; }
 
   .calendar-tabs .nav-tabs > li .dot {
-    margin-right: 5px; } }
+    margin-right: 5px; }
+
+  .modal-add-calendar .row {
+    margin-left: -8px;
+    margin-right: -8px; }
+
+  .modal-add-calendar div[class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px; } }
 @media (max-width: 374px) {
   .modal-add-calendar .row {
-    margin-left: -15px;
-    margin-right: -15px; }
+    margin-left: -8px;
+    margin-right: -8px; }
+
+  .modal-add-calendar div[class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px; }
 
   .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
   .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"] {
@@ -8981,7 +9000,9 @@ textarea.form-control:focus {
   .modal-add-calendar .working-section .working-time .td .time-control input {
     font-size: 0.6875em;
     width: 14px;
-    height: 26px; } }
+    height: 26px;
+    position: relative;
+    top: -2px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .calendar-tabs .nav-tabs > li .dot {
     background-image: url(../images/dashboard/calendar/dot@2x.png); }

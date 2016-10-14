@@ -142,6 +142,15 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .modal-dialog.block-attendee,
+    .modal-dialog.block-details,
+    .modal-dialog.block-personal {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 1023px) {
 	.calendar-tabs .nav-tabs > li {
 		margin: 0;
@@ -152,8 +161,6 @@
 	.modal-dialog.block-details,
 	.modal-dialog.block-personal {
 		font-size: $s13;
-		margin-left: auto;
-		margin-right: auto;
 	}
 	#addCalendarModal .modal-content {
 		border-color: transparent;
@@ -200,7 +207,7 @@
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 568px){
     .calendar-tabs .nav-tabs > li {
         width: 30%;
     }
@@ -216,12 +223,24 @@
     .calendar-tabs .nav-tabs > li .dot{
         margin-right: 5px;
     }
+    .modal-add-calendar .row{
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .modal-add-calendar div[class*="col-"]{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 
 @media (max-width: 374px){
     .modal-add-calendar .row{
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .modal-add-calendar div[class*="col-"]{
+        padding-left: 8px;
+        padding-right: 8px;
     }
     .modal-add-calendar .bootstrap-select.btn-group .btn .filter-option,
     .modal-add-calendar .working-section .working-time ul.clearfix > li > input[type="text"]{
@@ -264,6 +283,8 @@
         font-size: $s11;
         width: 14px;
         height: 26px;
+        position: relative;
+        top: -2px;
     }
 }
 
