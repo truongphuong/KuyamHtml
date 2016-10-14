@@ -2055,7 +2055,7 @@ label {
   background: transparent;
   border: 0 none;
   color: #b2d63c;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
   box-shadow: none;
   outline: none !important;
@@ -2083,11 +2083,16 @@ label {
   box-shadow: none;
   border-radius: 0;
   max-height: inherit !important;
+  font-size: 20px;
   padding: 0;
   border-color: #96BE3D; }
 
 .category-select .dropdown-menu > li.selected {
   display: none; }
+
+.category-select .dropdown-menu > li > a {
+  padding-left: 6px;
+  padding-right: 6px; }
 
 .category-select .dropdown-menu > li > a:hover,
 .category-select .dropdown-menu > li > a:focus {
@@ -2097,7 +2102,7 @@ label {
 @media (max-width: 767px) {
   .category-select {
     display: inline-block; } }
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .category-select {
     top: -5px; }
 
@@ -2115,7 +2120,8 @@ label {
 
   .category-select .dropdown-menu {
     left: inherit;
-    right: 0; }
+    right: 0;
+    font-size: 15px; }
 
   .category-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     max-width: 135px; } }
@@ -8999,24 +9005,49 @@ td ul {
   .book-page .search-form fieldset .btn-search {
     width: 70px; }
 
-  .full-select-on-mobile .book-me-session-select {
-    border: 1px solid #aaaaaa;
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    position: relative;
-    top: 0px;
-    right: 0px; }
+  .full-select-on-mobile .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%; }
 
-  .full-select-on-mobile .icon-mobile-dropdown {
-    background: url(images/icons_2016/icon_mobile_dropdown.jpg) no-repeat;
-    width: 20px;
+  .full-select-on-mobile .btn,
+  .full-select-on-mobile .btn:hover,
+  .full-select-on-mobile .btn:visited,
+  .full-select-on-mobile .btn:focus,
+  .full-select-on-mobile .btn:active,
+  .full-select-on-mobile .open .btn,
+  .full-select-on-mobile .open .btn:hover,
+  .full-select-on-mobile .open .btn:visited,
+  .full-select-on-mobile .open .btn:focus,
+  .full-select-on-mobile .open .btn:active {
+    background: transparent;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    color: #b2d63c;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: none;
+    outline: none !important;
+    outline-offset: 0;
+    padding-right: 43px; }
+
+  .full-select-on-mobile .bootstrap-select.btn-group .dropdown-toggle .caret {
+    width: 30px;
     height: 30px;
-    position: absolute;
-    top: 43px;
-    right: 8px;
-    pointer-events: none;
-    z-index: 1; }
+    background: url("images/icons_2016/icon_mobile_dropdown.jpg") no-repeat center center;
+    background-size: 28px auto;
+    border: 0 none;
+    right: 7px;
+    margin-top: -15px; }
+
+  .full-select-on-mobile .dropdown-menu {
+    border: 1px solid #aaa;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 20px;
+    max-height: 215px !important; }
+
+  .full-select-on-mobile .dropdown-menu > li > a {
+    padding: 7px 12px; }
 
   .hidden-mobile {
     display: none !important; }
@@ -9213,7 +9244,23 @@ td ul {
     right: 5px;
     pointer-events: none;
     z-index: 1; } }
-@media (max-width: 480px) {
+@media (max-width: 479px) {
+  .full-select-on-mobile .btn,
+  .full-select-on-mobile .btn:hover,
+  .full-select-on-mobile .btn:visited,
+  .full-select-on-mobile .btn:focus,
+  .full-select-on-mobile .btn:active,
+  .full-select-on-mobile .open .btn,
+  .full-select-on-mobile .open .btn:hover,
+  .full-select-on-mobile .open .btn:visited,
+  .full-select-on-mobile .open .btn:focus,
+  .full-select-on-mobile .open .btn:active {
+    font-size: 15px; }
+
+  .full-select-on-mobile .dropdown-menu {
+    font-size: 15px;
+    max-height: 175px !important; }
+
   .event-block {
     height: 100px !important; }
 

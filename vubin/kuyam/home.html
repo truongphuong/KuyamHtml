@@ -1860,9 +1860,15 @@
     <!-- InstanceBeginEditable name="script2" -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $('#categorySelect').selectpicker({
-                dropupAuto: false
-            });
+            if(isMobile.any()){
+                $('#categorySelect').selectpicker({
+                    mobile: true
+                });
+            }else{
+                $('#categorySelect').selectpicker({
+                    dropupAuto: false
+                });
+            }
         });
     </script>
     <!-- InstanceEndEditable -->

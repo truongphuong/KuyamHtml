@@ -16,7 +16,7 @@
     background: transparent;
     border: 0 none;
     color: #b2d63c;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     box-shadow: none;
     outline: none !important;
@@ -44,11 +44,16 @@
     box-shadow: none;
     border-radius: 0;
     max-height: inherit !important;
+    font-size: 20px;
     padding:0;
     border-color:#96BE3D;
 }
 .category-select .dropdown-menu > li.selected{
     display: none;
+}
+.category-select .dropdown-menu > li > a{
+    padding-left: 6px;
+    padding-right: 6px;
 }
 .category-select .dropdown-menu > li > a:hover,
 .category-select .dropdown-menu > li > a:focus{
@@ -62,7 +67,7 @@
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 479px){
     .category-select{
         top: -5px;
     }
@@ -81,6 +86,7 @@
     .category-select .dropdown-menu{
         left: inherit;
         right: 0;
+        font-size: 15px;
     }
     .category-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
         max-width: 135px;

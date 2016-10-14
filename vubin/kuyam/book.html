@@ -302,9 +302,9 @@
 
 			 <div class="row ">
         		<div class="col-xs-12">
-                	<div class="section-header full-select-on-mobile">
+                	<div class="section-header full-select-on-mobile visible-xs">
 
-                        <div class="icon-mobile-dropdown"></div>
+                        <!--<div class="icon-mobile-dropdown"></div>
                         <select class="visible-xs book-me-session-select">
 							<option>select a category</option>
                             <option>Blowout</option>
@@ -312,6 +312,18 @@
                             <option>Massage</option>
                             <option>Nails</option>
                             <option>Trainer</option>
+                            <option>Pilates</option>
+                            <option>Tanning</option>
+                            <option>Wax</option>
+                            <option>Yoga</option>
+                            <option>Spin</option>
+                        </select>-->
+                        <select id="categorySelect">
+                            <option>Blowout</option>
+                            <option>Facial</option>
+                            <option>Massage</option>
+                            <option>Nails</option>
+                            <option>Personal Trainer</option>
                             <option>Pilates</option>
                             <option>Tanning</option>
                             <option>Wax</option>
@@ -1865,6 +1877,19 @@
 	<!-- InstanceEndEditable -->
 
     <!-- InstanceBeginEditable name="script2" -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if(isMobile.any()){
+                $('#categorySelect').selectpicker({
+                    mobile: true
+                });
+            }else{
+                $('#categorySelect').selectpicker({
+                    dropupAuto: false
+                });
+            }
+        });
+    </script>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
