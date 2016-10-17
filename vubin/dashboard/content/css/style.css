@@ -1929,6 +1929,10 @@ button.close {
   left: 0;
   cursor: pointer; }
 
+.cb-mark:disabled ~ .cb-label {
+  opacity: .5;
+  cursor: default; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .cb-mark:checked ~ .cb-label:before {
     background-image: url(../images/dashboard/icon-checked@2x.png); }
@@ -2571,6 +2575,9 @@ textarea.form-control:focus {
   top: 4px;
   left: 0;
   cursor: pointer; }
+
+.radio-mark:disabled ~ .radio-label {
+  opacity: .5; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .radio-mark:checked ~ .radio-label:before {
@@ -9955,4 +9962,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
