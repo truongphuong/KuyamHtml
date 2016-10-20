@@ -396,78 +396,94 @@ textarea {
     display: none;
 }*/
 .modal-signout.modal-dialog,
-.modal-change-password.modal-dialog {
+.modal-change-password.modal-dialog,
+.modal-newsletter.modal-dialog {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px; }
 .modal-signout .modal-content,
-.modal-change-password .modal-content {
+.modal-change-password .modal-content,
+.modal-newsletter .modal-content {
   border: 1px solid #888;
   border-radius: 4px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none; }
 .modal-signout .modal-header,
-.modal-change-password .modal-header {
+.modal-change-password .modal-header,
+.modal-newsletter .modal-header {
   text-align: center;
   border: 0 none;
   padding-top: 25px;
   padding-bottom: 0;
   position: relative; }
 .modal-signout .modal-header h4,
-.modal-change-password .modal-header h4 {
+.modal-change-password .modal-header h4,
+.modal-newsletter .modal-header h4 {
   font-size: 1.1875em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   padding-bottom: 0; }
 .modal-signout .modal-header .close,
-.modal-change-password .modal-header .close {
+.modal-change-password .modal-header .close,
+.modal-newsletter .modal-header .close {
   margin-top: 0;
   position: absolute;
   top: 0;
   right: 0; }
 .modal-signout .modal-body,
-.modal-change-password .modal-body {
+.modal-change-password .modal-body,
+.modal-newsletter .modal-body {
   padding-bottom: 0; }
 .modal-signout .modal-footer,
-.modal-change-password .modal-footer {
+.modal-change-password .modal-footer,
+.modal-newsletter .modal-footer {
   padding-top: 0;
   padding-bottom: 25px;
   border: 0 none; }
 @media (min-width: 1024px) {
   .modal-signout .modal-body,
-  .modal-change-password .modal-body {
+  .modal-change-password .modal-body,
+  .modal-newsletter .modal-body {
     padding-left: 25px;
     padding-right: 25px; } }
 @media (max-width: 767px) {
   .modal-signout .modal-footer,
-  .modal-change-password .modal-footer {
+  .modal-change-password .modal-footer,
+  .modal-newsletter .modal-footer {
     padding-bottom: 20px; } }
 @media (max-width: 374px) {
   .modal-signout .modal-footer,
-  .modal-change-password .modal-footer {
+  .modal-change-password .modal-footer,
+  .modal-newsletter .modal-footer {
     padding-bottom: 15px; } }
 
 .settings-section .form-control::-webkit-input-placeholder,
-.modal-change-password .form-control::-webkit-input-placeholder {
+.modal-change-password .form-control::-webkit-input-placeholder,
+.modal-newsletter .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #7c7c7c; }
 .settings-section .form-control::-moz-placeholder,
-.modal-change-password .form-control::-moz-placeholder {
+.modal-change-password .form-control::-moz-placeholder,
+.modal-newsletter .form-control::-moz-placeholder {
   /* Firefox 19+ */
   color: #7c7c7c; }
 .settings-section .form-control:-ms-input-placeholder,
-.modal-change-password .form-control:-ms-input-placeholder {
+.modal-change-password .form-control:-ms-input-placeholder,
+.modal-newsletter .form-control:-ms-input-placeholder {
   /* IE 10+ */
   color: #7c7c7c; }
 .settings-section .form-control:-moz-placeholder,
-.modal-change-password .form-control:-moz-placeholder {
+.modal-change-password .form-control:-moz-placeholder,
+.modal-newsletter .form-control:-moz-placeholder {
   /* Firefox 18- */
   color: #7c7c7c; }
 .settings-section .form-control,
 .settings-section .form-control:focus,
 .modal-change-password .form-control,
-.modal-change-password .form-control:focus {
+.modal-change-password .form-control:focus,
+.modal-newsletter .form-control,
+.modal-newsletter .form-control:focus {
   font-size: 1.0625em;
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -481,14 +497,17 @@ textarea {
   -webkit-border-radius: 0;
   -moz-border-radius: 0; }
 .settings-section .form-control[readonly],
-.modal-change-password .form-control[readonly] {
+.modal-change-password .form-control[readonly],
+.modal-newsletter .form-control[readonly] {
   cursor: text;
   background-color: #fff; }
 @media (max-width: 1023px) {
   .settings-section .form-control,
   .settings-section .form-control:focus,
   .modal-change-password .form-control,
-  .modal-change-password .form-control:focus {
+  .modal-change-password .form-control:focus,
+  .modal-newsletter .form-control,
+  .modal-newsletter .form-control:focus {
     height: 39px;
     border-color: #747474;
     font-size: 0.875em;
@@ -497,7 +516,9 @@ textarea {
   .settings-section .form-control,
   .settings-section .form-control:focus,
   .modal-change-password .form-control,
-  .modal-change-password .form-control:focus {
+  .modal-change-password .form-control:focus,
+  .modal-newsletter .form-control,
+  .modal-newsletter .form-control:focus {
     height: 33px;
     font-size: 0.6875em; } }
 
@@ -814,7 +835,8 @@ label {
 
 .modal-signout .btn-form:hover,
 .settings-section .btn-form:hover,
-.modal-change-password .btn-form:hover {
+.modal-change-password .btn-form:hover,
+.modal-newsletter .btn-form:hover {
   color: #242424;
   background: #fff;
   border-width: 2px;
@@ -826,7 +848,9 @@ label {
 .settings-section .btn-form,
 .settings-section .btn-form:focus,
 .modal-change-password .btn-form,
-.modal-change-password .btn-form:focus {
+.modal-change-password .btn-form:focus,
+.modal-newsletter .btn-form,
+.modal-newsletter .btn-form:focus {
   font-size: 1em;
   background: #fff;
   font-family: "Raleway", sans-serif;
@@ -841,7 +865,8 @@ label {
   box-shadow: none; }
 .modal-signout .btn-agree:hover,
 .settings-section .btn-agree:hover,
-.modal-change-password .btn-agree:hover {
+.modal-change-password .btn-agree:hover,
+.modal-newsletter .btn-agree:hover {
   color: #3891ff;
   background: #fff;
   font-weight: 700;
@@ -852,14 +877,17 @@ label {
 .settings-section .btn-agree,
 .settings-section .btn-agree:focus,
 .modal-change-password .btn-agree,
-.modal-change-password .btn-agree:focus {
+.modal-change-password .btn-agree:focus,
+.modal-newsletter .btn-agree,
+.modal-newsletter .btn-agree:focus {
   border: 1px solid #3891ff;
   background: #fff;
   color: #3891ff;
   box-shadow: none; }
 .modal-signout .btn-neutral:hover,
 .settings-section .btn-neutral:hover,
-.modal-change-password .btn-neutral:hover {
+.modal-change-password .btn-neutral:hover,
+.modal-newsletter .btn-neutral:hover {
   color: #878787;
   background: #fff;
   font-weight: 700;
@@ -870,14 +898,17 @@ label {
 .settings-section .btn-neutral,
 .settings-section .btn-neutral:focus,
 .modal-change-password .btn-neutral,
-.modal-change-password .btn-neutral:focus {
+.modal-change-password .btn-neutral:focus,
+.modal-newsletter .btn-neutral,
+.modal-newsletter .btn-neutral:focus {
   border: 1px solid #878787;
   background: #fff;
   color: #878787;
   box-shadow: none; }
 .modal-signout .btn-disagree:hover,
 .settings-section .btn-disagree:hover,
-.modal-change-password .btn-disagree:hover {
+.modal-change-password .btn-disagree:hover,
+.modal-newsletter .btn-disagree:hover {
   background: #ff5050;
   color: #fff;
   font-weight: 700;
@@ -887,7 +918,9 @@ label {
 .settings-section .btn-disagree,
 .settings-section .btn-disagree:focus,
 .modal-change-password .btn-disagree,
-.modal-change-password .btn-disagree:focus {
+.modal-change-password .btn-disagree:focus,
+.modal-newsletter .btn-disagree,
+.modal-newsletter .btn-disagree:focus {
   border: 1px solid #ff5050;
   background: #fff;
   color: #ff5050;
@@ -900,14 +933,18 @@ label {
 .settings-section .btn[disabled]:focus,
 .modal-change-password .btn[disabled],
 .modal-change-password .btn[disabled]:hover,
-.modal-change-password .btn[disabled]:focus {
+.modal-change-password .btn[disabled]:focus,
+.modal-newsletter .btn[disabled],
+.modal-newsletter .btn[disabled]:hover,
+.modal-newsletter .btn[disabled]:focus {
   background: #dadada;
   border-color: #dadada;
   color: #fff;
   font-weight: 700; }
 .modal-signout button.close,
 .settings-section button.close,
-.modal-change-password button.close {
+.modal-change-password button.close,
+.modal-newsletter button.close {
   color: transparent !important;
   text-shadow: none !important;
   opacity: 1;
@@ -920,7 +957,9 @@ label {
 .settings-section button.close:focus,
 .settings-section button.close:hover,
 .modal-change-password button.close:focus,
-.modal-change-password button.close:hover {
+.modal-change-password button.close:hover,
+.modal-newsletter button.close:focus,
+.modal-newsletter button.close:hover {
   opacity: 0.5; }
 @media (max-width: 1023px) {
   .modal-signout .btn-form,
@@ -928,7 +967,9 @@ label {
   .settings-section .btn-form,
   .settings-section .btn-form:focus,
   .modal-change-password .btn-form,
-  .modal-change-password .btn-form:focus {
+  .modal-change-password .btn-form:focus,
+  .modal-newsletter .btn-form,
+  .modal-newsletter .btn-form:focus {
     font-size: 0.875em;
     height: 38px; } }
 @media (max-width: 374px) {
@@ -937,13 +978,16 @@ label {
   .settings-section .btn-form,
   .settings-section .btn-form:focus,
   .modal-change-password .btn-form,
-  .modal-change-password .btn-form:focus {
+  .modal-change-password .btn-form:focus,
+  .modal-newsletter .btn-form,
+  .modal-newsletter .btn-form:focus {
     font-size: 0.75em;
     height: 34px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .modal-signout button.close,
   .settings-section button.close,
-  .modal-change-password button.close {
+  .modal-change-password button.close,
+  .modal-newsletter button.close {
     background-image: url(images/dashboard/icon-close@2x.png); } }
 
 @font-face {
@@ -1007,18 +1051,22 @@ label {
   font-weight: normal;
   font-style: normal; }
 .settings-section form div[class*="col-"],
-.modal-change-password form div[class*="col-"] {
+.modal-change-password form div[class*="col-"],
+.modal-newsletter form div[class*="col-"] {
   margin-bottom: 25px; }
 .settings-section .form-label,
-.modal-change-password .form-label {
+.modal-change-password .form-label,
+.modal-newsletter .form-label {
   font-size: 1.25em;
   font-family: "Lato", sans-serif;
   font-weight: 300; }
 .settings-section .input-currency,
-.modal-change-password .input-currency {
+.modal-change-password .input-currency,
+.modal-newsletter .input-currency {
   position: relative; }
 .settings-section .input-currency span,
-.modal-change-password .input-currency span {
+.modal-change-password .input-currency span,
+.modal-newsletter .input-currency span {
   display: block;
   top: 0;
   bottom: 0;
@@ -1028,48 +1076,60 @@ label {
   position: absolute;
   color: #7c7c7c; }
 .settings-section .input-currency .form-control,
-.modal-change-password .input-currency .form-control {
+.modal-change-password .input-currency .form-control,
+.modal-newsletter .input-currency .form-control {
   background: transparent;
   padding-left: 23px; }
 .settings-section .input-currency .form-control-percent,
-.modal-change-password .input-currency .form-control-percent {
+.modal-change-password .input-currency .form-control-percent,
+.modal-newsletter .input-currency .form-control-percent {
   padding-left: 26px; }
 .settings-section textarea.form-control,
 .settings-section textarea.form-control:focus,
 .modal-change-password textarea.form-control,
-.modal-change-password textarea.form-control:focus {
+.modal-change-password textarea.form-control:focus,
+.modal-newsletter textarea.form-control,
+.modal-newsletter textarea.form-control:focus {
   height: 115px;
   resize: none; }
 .settings-section .txt-required,
-.modal-change-password .txt-required {
+.modal-change-password .txt-required,
+.modal-newsletter .txt-required {
   color: #ff5050;
   font-family: "Lato", sans-serif;
   font-weight: 700; }
 .settings-section .txt-note,
-.modal-change-password .txt-note {
+.modal-change-password .txt-note,
+.modal-newsletter .txt-note {
   font-size: 0.6875em;
   font-style: italic;
   padding-top: 5px;
   color: #434343; }
 .settings-section .txt-error,
-.modal-change-password .txt-error {
+.modal-change-password .txt-error,
+.modal-newsletter .txt-error {
   color: #ff5050; }
 .settings-section .alert-error,
-.modal-change-password .alert-error {
+.modal-change-password .alert-error,
+.modal-newsletter .alert-error {
   color: #ff0000; }
 .settings-section .invalid-forced.ng-invalid, .settings-section .input-error,
 .modal-change-password .invalid-forced.ng-invalid,
-.modal-change-password .input-error {
+.modal-change-password .input-error,
+.modal-newsletter .invalid-forced.ng-invalid,
+.modal-newsletter .input-error {
   border-color: #ff5050 !important; }
 .settings-section .txt-date,
-.modal-change-password .txt-date {
+.modal-change-password .txt-date,
+.modal-newsletter .txt-date {
   background-image: url(../images/dashboard/calendar/icon_calendar_blue_2.png);
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 37px auto;
   padding-right: 37px; }
 .settings-section .txt-hour,
-.modal-change-password .txt-hour {
+.modal-change-password .txt-hour,
+.modal-newsletter .txt-hour {
   background-image: url(../images/icon_time_grey_2.png);
   background-repeat: no-repeat;
   background-position: center right;
@@ -1077,25 +1137,31 @@ label {
   padding-right: 30px; }
 @media (max-width: 1023px) {
   .settings-section .form-label,
-  .modal-change-password .form-label {
+  .modal-change-password .form-label,
+  .modal-newsletter .form-label {
     font-size: 0.9375em;
     font-weight: 400; }
   .settings-section form div[class*="col-"],
-  .modal-change-password form div[class*="col-"] {
+  .modal-change-password form div[class*="col-"],
+  .modal-newsletter form div[class*="col-"] {
     margin-bottom: 16px; } }
 @media (max-width: 374px) {
   .settings-section .form-label,
-  .modal-change-password .form-label {
+  .modal-change-password .form-label,
+  .modal-newsletter .form-label {
     font-size: 0.8125em; }
   .settings-section form div[class*="col-"],
-  .modal-change-password form div[class*="col-"] {
+  .modal-change-password form div[class*="col-"],
+  .modal-newsletter form div[class*="col-"] {
     margin-bottom: 16px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .settings-section .txt-date,
-  .modal-change-password .txt-date {
+  .modal-change-password .txt-date,
+  .modal-newsletter .txt-date {
     background-image: url(../images/dashboard/calendar/icon_calendar_blue_2@2x.png); }
   .settings-section .txt-hour,
-  .modal-change-password .txt-hour {
+  .modal-change-password .txt-hour,
+  .modal-newsletter .txt-hour {
     background-image: url(../images/icon_time_grey_2@2x.png); } }
 
 .lightbox {
@@ -11616,6 +11682,98 @@ td ul {
 
   .modal-chosen .icon-ready {
     background-image: url(images/boarding/icon-ready@2x.png); } }
+.modal-newsletter {
+  width: 593px !important; }
+
+.modal-newsletter .form-control {
+  border-radius: 4px; }
+
+.modal-newsletter .btn-agree:hover {
+  color: #4d4d4d;
+  background: #fff;
+  font-weight: 700;
+  border-width: 2px;
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
+
+.modal-newsletter .btn-agree,
+.modal-newsletter .btn-agree:focus {
+  border: 1px solid #87b400;
+  background: #fff;
+  color: #4d4d4d;
+  box-shadow: none; }
+
+.modal-newsletter .modal-header h4 {
+  font-weight: 300;
+  font-family: "Raleway", sans-serif; }
+
+.modal-newsletter .modal-body p {
+  text-align: center;
+  color: #333232; }
+
+.modal-newsletter .modal-footer ul {
+  margin: 0 -13px;
+  padding: 0;
+  list-style: none; }
+
+.modal-newsletter .modal-footer li {
+  float: left;
+  padding-left: 13px;
+  padding-right: 13px; }
+
+@media (min-width: 768px) {
+  .modal-newsletter .form-control {
+    font-size: 1em;
+    height: 49px; }
+
+  .modal-newsletter .btn-agree,
+  .modal-newsletter .btn-agree:focus {
+    height: 49px; }
+
+  .modal-newsletter .modal-header {
+    padding: 30px 30px 24px; }
+
+  .modal-newsletter .modal-header h4 {
+    font-size: 1.75em; }
+
+  .modal-newsletter .modal-body {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 47px; }
+
+  .modal-newsletter .modal-body p {
+    font-size: 1.1875em;
+    line-height: 23px; }
+
+  .modal-newsletter .modal-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 26px; }
+
+  .modal-newsletter .modal-footer li:first-child {
+    width: 65.2%; }
+
+  .modal-newsletter .modal-footer li:last-child {
+    width: 34.8%; } }
+@media (max-width: 767px) {
+  .modal-newsletter {
+    width: auto !important; }
+
+  .modal-newsletter .form-control {
+    margin-bottom: 15px; }
+
+  .modal-newsletter .modal-body {
+    padding-bottom: 15px; }
+
+  .modal-newsletter .modal-footer ul {
+    margin: 0 -5px; }
+
+  .modal-newsletter .modal-footer li {
+    padding-left: 5px;
+    padding-right: 5px; } }
+@media (max-width: 374px) {
+  .modal-newsletter .modal-body p br {
+    display: none; } }
 /**
  * prints
  */
+

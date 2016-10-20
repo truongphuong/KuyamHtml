@@ -1,0 +1,101 @@
+.modal-newsletter{
+    width: 593px !important;
+}
+.modal-newsletter .form-control{
+    border-radius: 4px;
+}
+
+.modal-newsletter .btn-agree:hover{
+    color: #4d4d4d;
+    background: $white;
+    font-weight:700;
+    border-width:2px;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
+}
+.modal-newsletter .btn-agree,
+.modal-newsletter .btn-agree:focus {
+    border: 1px solid #87b400;
+    background: $white;
+    color: #4d4d4d;
+    box-shadow: none;
+}
+.modal-newsletter .modal-header h4{
+    font-weight: 300;
+    font-family: $second;
+}
+.modal-newsletter .modal-body p{
+    text-align: center;
+    color:#333232;
+}
+.modal-newsletter .modal-footer ul{
+    margin:0 -13px;
+    padding:0;
+    list-style: none;
+}
+.modal-newsletter .modal-footer li{
+    float: left;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+@media(min-width: 768px){
+    .modal-newsletter .form-control{
+        font-size: $h6;
+        height: 49px;
+    }
+    .modal-newsletter .btn-agree,
+    .modal-newsletter .btn-agree:focus {
+        height: 49px;
+    }
+    .modal-newsletter .modal-header{
+        padding: 30px 30px 24px;
+    }
+    .modal-newsletter .modal-header h4{
+        font-size: $h3;
+    }
+    .modal-newsletter .modal-body{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 47px;
+    }
+    .modal-newsletter .modal-body p{
+        font-size: $s19;
+        line-height: 23px;
+    }
+    .modal-newsletter .modal-footer{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 26px;
+    }
+    .modal-newsletter .modal-footer li:first-child{
+        width:65.2%;
+    }
+    .modal-newsletter .modal-footer li:last-child{
+        width:34.8%;
+    }
+}
+
+@media(max-width: 767px){
+    .modal-newsletter{
+        width: auto !important;
+    }
+    .modal-newsletter .form-control{
+        margin-bottom: 15px;
+    }
+    .modal-newsletter .modal-body{
+        padding-bottom: 15px;
+    }
+    .modal-newsletter .modal-footer ul{
+        margin:0 -5px;
+    }
+    .modal-newsletter .modal-footer li{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 374px){
+    .modal-newsletter .modal-body p br{
+        display: none;
+    }
+}
