@@ -11,7 +11,7 @@ form div[class*="col-"] {
 .input-currency{
     position:relative;
 }
-.input-currency span{
+.input-currency > span{
     display:block;
     top:0;
     bottom:0;
@@ -22,12 +22,16 @@ form div[class*="col-"] {
     position: absolute;
     color: $placeholder;
 }
+.input-currency span.input-val{
+    color: transparent;
+}
 .input-currency .form-control{
     background:transparent;
     padding-left:23px;
+    position: relative;
 }
 .input-currency .form-control-percent{
-    padding-left: 26px;
+    padding-left: 13px;
 }
 
 textarea.form-control,
