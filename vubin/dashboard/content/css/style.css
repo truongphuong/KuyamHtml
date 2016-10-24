@@ -874,6 +874,17 @@ body.modal-open {
   font-size: 16px;
   border-radius: 0; }
 
+.bootstrap-select.disabled > .btn,
+.bootstrap-select.disabled > .btn:focus,
+.bootstrap-select.disabled > .btn:active,
+.bootstrap-select.disabled > .btn-default.disabled,
+.bootstrap-select.disabled > .btn-default.disabled:focus,
+.bootstrap-select.disabled > .btn-default.disabled:active,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus {
+  border-color: #dadada; }
+
 .bootstrap-select > .btn,
 .bootstrap-select > .btn:focus,
 .bootstrap-select > .btn:active,
@@ -1118,6 +1129,17 @@ body.modal-open {
 
 .form-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: 100%; }
+
+.form-select .bootstrap-select.disabled > .btn,
+.form-select .bootstrap-select.disabled > .btn:focus,
+.form-select .bootstrap-select.disabled > .btn:active,
+.form-select .bootstrap-select.disabled > .btn-default.disabled,
+.form-select .bootstrap-select.disabled > .btn-default.disabled:focus,
+.form-select .bootstrap-select.disabled > .btn-default.disabled:active,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus {
+  border-color: #dadada; }
 
 .form-select .bootstrap-select > .btn,
 .form-select .bootstrap-select > .btn:focus,
@@ -4674,11 +4696,22 @@ textarea.form-control:focus {
   font-size: .8125em;
   text-align: center; }
 
-.form-time.disabled ul.clearfix {
+.form-time ul.clearfix.disabled {
   border-color: #dadada; }
 
 .form-time .form-select {
   height: 38px; }
+
+.form-time .form-select .bootstrap-select.disabled > .btn,
+.form-time .form-select .bootstrap-select.disabled > .btn:focus,
+.form-time .form-select .bootstrap-select.disabled > .btn:active,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled:focus,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled:active,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus {
+  border-color: #dadada; }
 
 .form-time .form-select .bootstrap-select > .btn,
 .form-time .form-select .bootstrap-select > .btn:focus,
@@ -9999,4 +10032,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-

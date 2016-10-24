@@ -17,6 +17,18 @@
     border-radius: 0;
 }
 
+.bootstrap-select.disabled > .btn,
+.bootstrap-select.disabled > .btn:focus,
+.bootstrap-select.disabled > .btn:active,
+.bootstrap-select.disabled > .btn-default.disabled,
+.bootstrap-select.disabled > .btn-default.disabled:focus,
+.bootstrap-select.disabled > .btn-default.disabled:active,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus{
+    border-color: $disabled;
+}
+
 .bootstrap-select > .btn,
 .bootstrap-select > .btn:focus,
 .bootstrap-select > .btn:active,
@@ -299,6 +311,19 @@
 
 .form-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width: 100%;
+}
+
+
+.form-select .bootstrap-select.disabled > .btn,
+.form-select .bootstrap-select.disabled > .btn:focus,
+.form-select .bootstrap-select.disabled > .btn:active,
+.form-select .bootstrap-select.disabled > .btn-default.disabled,
+.form-select .bootstrap-select.disabled > .btn-default.disabled:focus,
+.form-select .bootstrap-select.disabled > .btn-default.disabled:active,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus{
+    border-color: $disabled;
 }
 
 .form-select .bootstrap-select > .btn,

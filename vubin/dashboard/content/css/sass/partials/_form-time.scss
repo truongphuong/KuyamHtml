@@ -20,12 +20,25 @@
     font-size: .8125em;
     text-align: center;
 }
-.form-time.disabled ul.clearfix{
+.form-time ul.clearfix.disabled{
     border-color: $disabled;
 }
 .form-time .form-select{
     height: 38px;
 }
+
+.form-time .form-select .bootstrap-select.disabled > .btn,
+.form-time .form-select .bootstrap-select.disabled > .btn:focus,
+.form-time .form-select .bootstrap-select.disabled > .btn:active,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled:focus,
+.form-time .form-select .bootstrap-select.disabled > .btn-default.disabled:active,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:hover,
+.form-time .form-select .bootstrap-select.open.disabled > .dropdown-toggle.btn-default:focus{
+    border-color: $disabled;
+}
+
 .form-time .form-select .bootstrap-select > .btn,
 .form-time .form-select .bootstrap-select > .btn:focus,
 .form-time .form-select .bootstrap-select > .btn:active,
