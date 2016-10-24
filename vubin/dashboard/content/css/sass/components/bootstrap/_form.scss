@@ -32,6 +32,14 @@
     background-color: $white;
 }
 
+input[type="text"][disabled],
+.form-control[disabled]{
+    background: $white;
+    border-color: $disabled;
+    cursor: default;
+    color: $placeholder;
+}
+
 @media (max-width: 1023px) {
     .form-control,
     .form-control:focus {

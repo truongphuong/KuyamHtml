@@ -570,6 +570,13 @@ textarea {
   cursor: text;
   background-color: #fff; }
 
+input[type="text"][disabled],
+.form-control[disabled] {
+  background: #fff;
+  border-color: #dadada;
+  cursor: default;
+  color: #7c7c7c; }
+
 @media (max-width: 1023px) {
   .form-control,
   .form-control:focus {
@@ -1933,6 +1940,9 @@ button.close {
   opacity: .5;
   cursor: default; }
 
+.cb-mark:disabled ~ .radio-label::before {
+  cursor: default; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .cb-mark:checked ~ .cb-label:before {
     background-image: url(../images/dashboard/icon-checked@2x.png); }
@@ -2584,6 +2594,9 @@ textarea.form-control:focus {
 
 .radio-mark:disabled ~ .radio-label {
   opacity: .5;
+  cursor: default; }
+
+.radio-mark:disabled ~ .radio-label::before {
   cursor: default; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
@@ -4660,6 +4673,9 @@ textarea.form-control:focus {
   border: 0 none;
   font-size: .8125em;
   text-align: center; }
+
+.form-time.disabled ul.clearfix {
+  border-color: #dadada; }
 
 .form-time .form-select {
   height: 38px; }
@@ -9983,3 +9999,4 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
+
