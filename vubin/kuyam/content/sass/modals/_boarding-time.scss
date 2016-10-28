@@ -1,0 +1,378 @@
+.modal-boarding-time {
+    width: 609px;
+}
+.modal-boarding-time .cb-custom {
+    position: relative;
+}
+.modal-boarding-time .cb-mark {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.modal-boarding-time .cb-mark ~ .cb-label {
+    position: relative;
+    padding-left: 29px;
+    cursor: pointer;
+    display: inline-block !important;
+    font-size: 1.25em;
+}
+.modal-boarding-time .cb-mark:checked ~ .cb-label:before {
+    background-image: url(images/boarding/icon-checked.png);
+}
+.modal-boarding-time .cb-mark ~ .cb-label:before {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: url(images/boarding/icon-check.png) center center no-repeat;
+    background-size: 14px auto;
+    top: 4px;
+    left: 0;
+    cursor: pointer;
+}
+.modal-boarding-time .modal-body {
+    padding-right: 35px;
+    padding-left: 27px;
+    padding-bottom: 46px;
+}
+.modal-boarding-time .working-section .table-css {
+    width: 100%;
+}
+.modal-boarding-time .working-section .td {
+    vertical-align: middle;
+}
+.modal-boarding-time .working-section .working-day {
+    text-transform: capitalize;
+    font-size: .9375em;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 17px;
+    width: 178px;
+}
+.modal-boarding-time .working-section .working-day hr {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0;
+    visibility: hidden;
+}
+.modal-boarding-time .working-section .active .working-day hr {
+    visibility: visible;
+}
+.modal-boarding-time .working-section .working-day label.cb-label {
+    margin-bottom: 0;
+}
+.modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label {
+    font-size: 1em;
+    font-weight: 400;
+    background: #fff;
+    padding-right: 10px;
+}
+.modal-boarding-time .working-section .working-time {
+    padding-bottom: 17px;
+    visibility: hidden;
+    /*width:210px;*/
+}
+.modal-boarding-time .working-section .working-time .table-css {
+    width: auto;
+}
+.modal-boarding-time .working-section .active .working-time {
+    visibility: visible;
+}
+.modal-boarding-time .working-section .working-time .td {
+    font-size: .75em;
+    color: #a3a2a2;
+}
+.modal-boarding-time .working-section .working-time .td-from {
+    width: 45px;
+}
+.modal-boarding-time .working-section .working-time .td-to {
+    width: 50px;
+    text-align: center;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 130px;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #979797;
+    font-size: 16px;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix > li {
+    float: left;
+    width: 50%;
+}
+.modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"] {
+    width: 100%;
+    height: 24px;
+    border: 0 none;
+    font-size: .8125em;
+    text-align: center;
+}
+.modal-boarding-time .bootstrap-select > .dropdown-toggle {
+    padding-right: 35px;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .caret {
+    width: 16px;
+    background-image: url(images/boarding/icon-down-blue.png);
+    background-size: 16px auto;
+    right: 0;
+}
+.modal-boarding-time .bootstrap-select.btn-group .btn .filter-option {
+    color: #9b9b9b;
+    text-align: center;
+}
+.modal-boarding-time .bootstrap-select .dropdown-menu.open {
+    border-right-color: #fff;
+}
+.modal-boarding-time .bootstrap-select .dropdown-menu > li > a {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: .8125em;
+    padding-right: 26px;
+    text-align: center;
+}
+.modal-boarding-time .bootstrap-select .dropdown-menu > li.selected {
+    display: none;
+}
+.modal-boarding-time .form-select .bootstrap-select > .btn,
+.modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+.modal-boarding-time .form-select .bootstrap-select > .btn:active,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+.modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+.modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+    border: 0 none;
+    border-left: 1px solid #979797;
+    height: 24px;
+    font-size: .8125em;
+    padding-right: 26px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.modal-boarding-time .form-select .bootstrap-select div.dropdown-menu {
+    margin-top: 0;
+    border-top: 0 none;
+    border-right: 0 none;
+}
+.modal-boarding-time .modal-footer {
+    padding: 7px 30px 32px 32px;
+    margin: 0;
+}
+.modal-boarding-time .modal-footer .btn {
+    width: 223px;
+    height: 43px;
+}
+.modal-boarding-time .modal-footer .btn-neutral {
+    float: left;
+}
+.modal-boarding-time .modal-footer .btn-agree {
+    float: right;
+}
+
+@media (min-width: 768px){
+    .modal-boarding-time .modal-header {
+        padding-top: 36px;
+        padding-bottom: 44px;
+    }
+    .modal-boarding-time .modal-title {
+        font-size: 1.6875em;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 767px){
+    .modal-boarding-time .cb-mark ~ .cb-label:before {
+        background-size: 13px auto;
+        top: 5px;
+    }
+    .modal-boarding-time .cb-mark:checked ~ .cb-label:before {
+        background-size: 12px auto;
+    }
+    .modal-boarding-time .modal-body {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .modal-boarding-time .working-section > .table-css,
+    .modal-boarding-time .working-section > .table-css > .tr {
+        display: block;
+    }
+    .modal-boarding-time .working-section .working-day {
+        padding: 10px 0 8px;
+        display: block;
+    }
+    .modal-boarding-time .working-section .active .working-day hr {
+        display: none;
+    }
+    .modal-boarding-time .working-section .working-time {
+        margin-top: -5px;
+        padding-bottom: 3px;
+        visibility: visible;
+        display: none;
+    }
+    .modal-boarding-time .working-section .active .working-time {
+        display: block;
+    }
+    .modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label {
+        font-size: .8125em;
+        background: transparent;
+    }
+    .modal-boarding-time .working-section .working-time .table-css {
+        width: auto;
+    }
+    .modal-boarding-time .working-section .working-time .td {
+        font-size: .6875em;
+    }
+    .modal-boarding-time .working-section .working-time ul.clearfix {
+        width: 125px;
+    }
+    .modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"] {
+        height: 26px;
+        font-size: .6875em;
+    }
+    .modal-boarding-time .bootstrap-select.btn-group .btn .caret {
+        right: 0;
+    }
+    .modal-boarding-time .form-select .bootstrap-select > .btn,
+    .modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+    .modal-boarding-time .form-select .bootstrap-select > .btn:active,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+        height: 27px;
+        font-size: .6875em;
+    }
+    .modal-boarding-time .bootstrap-select > .dropdown-toggle {
+        padding-right: 26px;
+    }
+    .modal-boarding-time .form-select .bootstrap-select div.dropdown-menu {
+        right: 0;
+    }
+    .modal-boarding-time .bootstrap-select .dropdown-menu > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: .6875em;
+    }
+    .modal-boarding-time .modal-footer {
+        padding-bottom: 12px;
+        padding-left: 18px;
+        padding-right: 18px;
+        height: 58px;
+    }
+    .modal-boarding-time .modal-footer .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 374px){
+    .modal-boarding-time .cb-mark ~ .cb-label:before {
+        background-size: 11px auto;
+        top: 6px;
+    }
+    .modal-boarding-time .cb-mark:checked ~ .cb-label:before {
+        background-size: 11px auto;
+    }
+    .modal-boarding-time .modal-body {
+        padding: 10px;
+    }
+    .modal-boarding-time .working-section > .table-css,
+    .modal-boarding-time .working-section > .table-css > .tr {
+        display: block;
+    }
+    .modal-boarding-time .working-section .working-day {
+        padding: 7px 0 4px;
+        display: block;
+    }
+    .modal-boarding-time .working-section .active .working-day hr {
+        display: none;
+    }
+    .modal-boarding-time .working-section .working-time {
+        margin-top: -5px;
+        padding-bottom: 3px;
+        visibility: visible;
+        display: none;
+    }
+    .modal-boarding-time .working-section .active .working-time {
+        display: block;
+    }
+    .modal-boarding-time .working-section .working-day .cb-mark ~ .cb-label {
+        font-size: .6875em;
+    }
+    .modal-boarding-time .working-section .working-time .table-css {
+        width: auto;
+    }
+    .modal-boarding-time .working-section .working-time .td {
+        font-size: .5625em;
+    }
+    .modal-boarding-time .working-section .working-time ul.clearfix {
+        width: 108px;
+    }
+    .modal-boarding-time .working-section .working-time ul.clearfix > li > input[type="text"] {
+        height: 20px;
+        font-size: .5625em;
+    }
+    .modal-boarding-time .bootstrap-select.btn-group .btn .caret {
+        right: 0;
+    }
+    .modal-boarding-time .form-select .bootstrap-select > .btn,
+    .modal-boarding-time .form-select .bootstrap-select > .btn:focus,
+    .modal-boarding-time .form-select .bootstrap-select > .btn:active,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:focus,
+    .modal-boarding-time .form-select .bootstrap-select > .btn-default.disabled:active,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:hover,
+    .modal-boarding-time .form-select .bootstrap-select.open > .dropdown-toggle.btn-default:focus {
+        height: 22px;
+        font-size: .5625em;
+    }
+    .modal-boarding-time .bootstrap-select > .dropdown-toggle {
+        padding-right: 28px;
+    }
+
+    .modal-boarding-time .form-select .bootstrap-select div.dropdown-menu {
+        right: -1px;
+        margin-top: 1px;
+    }
+    .modal-boarding-time .bootstrap-select .dropdown-menu > li > a {
+        padding-top: 9px;
+        padding-bottom: 8px;
+        font-size: .5625em;
+    }
+    .modal-boarding-time .modal-footer {
+        padding-bottom: 9px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 49px;
+    }
+    .modal-boarding-time .modal-footer .btn {
+        width: 100%;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .modal-boarding-time .cb-mark:checked ~ .cb-label:before {
+        background-image: url(images/boarding/icon-checked@2x.png);
+    }
+    .modal-boarding-time .cb-mark ~ .cb-label:before {
+        background-image: url(images/boarding/icon-check@2x.png);
+    }
+    .modal-boarding-time .bootstrap-select.btn-group .btn .caret {
+        background-image: url(images/boarding/icon-down-blue@2x.png);
+    }
+}
