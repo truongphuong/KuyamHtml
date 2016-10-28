@@ -70,3 +70,20 @@
     color: $disabled;
     cursor: text;
 }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .pagination > li.page-pre a,
+    .pagination > li a.page-pre{
+        background-image: url(../images/dashboard/manage/icon-next@2x.png);
+    }
+    .pagination > li.page-next a,
+    .pagination > li a.page-next{
+        background-image: url(../images/dashboard/manage/icon-next@2x.png);
+    }
+}

@@ -1,0 +1,220 @@
+.plan-option{
+
+}
+.plan-option .radio-custom {
+    position: relative;
+    display: block;
+}
+.plan-option .radio-mark {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+.plan-option .radio-mark ~ .radio-label:hover {
+    box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.16);
+}
+.plan-option .radio-mark ~ .radio-label,
+.plan-option .radio-mark ~ .radio-label:focus {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 185px;
+    font-size: 16px;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    margin:0 auto;
+    box-shadow: none;
+    padding-left:0;
+    text-align: center;
+}
+.plan-option .radio-mark ~ .radio-label .plan{
+    display: block;
+    border: 1px solid $white;
+    border-radius: 3px;
+    padding: 12px 0 17px;
+    box-shadow: none;
+}
+.plan-option .radio-mark:checked ~ .radio-label,
+.plan-option .radio-mark:checked ~ .radio-label:focus{
+    border:1px solid $positive;
+}
+.plan-option .radio-mark:checked ~ .radio-label .plan{
+    border: 1px solid $positive;
+}
+.plan-option .radio-mark:checked ~ .radio-label:before {
+    background-image: url(../images/dashboard/company/icon-radio-checked.png);
+    background-color: $positive;
+    border-color: $positive;
+}
+.plan-option .radio-mark ~ .radio-label:before {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #878787;
+    border-radius: 100%;
+    background: $white center center no-repeat;
+    background-size: 14px auto;
+    top: -13px;
+    left: -13px;
+    cursor: pointer;
+}
+.plan-option .radio-custom{
+}
+.plan-option .radio-label{
+    position: relative;
+}
+.plan-option .price{
+    display: block;
+}
+.plan-option .unit{
+    font-size: $s49;
+    line-height: 100%;
+    font-weight: 300;
+    color: #818181;
+    position: relative;
+    top: -7px;
+}
+.plan-option .num{
+    font-size: $s64;
+    line-height: 100%;
+    color: $positive;
+    font-weight: 900;
+}
+.plan-option sup{
+    font-size: $s26;
+    line-height: 100%;
+    color: $positive;
+    position: relative;
+    top: -27px;
+    font-weight: 900;
+}
+.plan-option .name{
+    font-size: $s14;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: block;
+    color: #454546;
+    margin-top: -1px;
+}
+.plan-option .save{
+    font-size: $p;
+    line-height: 100%;
+    color: $positive;
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    text-align: center;
+}
+.plan-option .save .text{
+    display: inline-block;
+    padding:5px 10px;
+    background: $white;
+    border-radius: 4px;
+}
+
+@media (max-width: 1023px){
+    .plan-option{
+        text-align: center;
+    }
+    .plan-option .radio-custom{
+        margin-bottom: 21px;
+    }
+    .plan-option .radio-mark ~ .radio-label{
+        width: 250px;
+    }
+    .plan-option .radio-mark ~ .radio-label .plan{
+        padding-top: 17px;
+        padding-bottom: 26px;
+    }
+    .plan-option .radio-mark ~ .radio-label:before{
+        height: 35px;
+        width: 35px;
+        background-size: 23px auto;
+        left: -17px;
+        top: -17px;
+    }
+    .plan-option .unit{
+        font-size: $s66;
+        top: -7px;
+    }
+    .plan-option .num{
+        font-size: $s86;
+    }
+    .plan-option sup{
+        font-size: $s34;
+        top: -27px;
+    }
+    .plan-option .name{
+        font-size: $s19;
+        margin-top: -2px;
+    }
+    .plan-option .save{
+        font-size: $s14;
+        /*bottom: -16px;
+        line-height: 34px;*/
+    }
+    /*.plan-option .save .text{
+        padding:0 20%;
+        background: $white;
+        border: 1px solid #878787;
+        border-radius: 12px;
+    }*/
+}
+
+@media (max-width: 374px){
+    .plan-option .radio-custom{
+        margin-bottom: 18px;
+    }
+    .plan-option .radio-mark ~ .radio-label{
+        width: 212px;
+    }
+    .plan-option .radio-mark ~ .radio-label .plan{
+        padding-top: 13px;
+        padding-bottom: 20px;
+    }
+    .plan-option .radio-mark ~ .radio-label:before{
+        height: 30px;
+        width: 30px;
+        background-size: 19px auto;
+        left: -15px;
+        top: -15px;
+    }
+    .plan-option .unit{
+        font-size: $s57;
+        top: -7px;
+    }
+    .plan-option .num{
+        font-size: $s74;
+    }
+    .plan-option sup{
+        font-size: $s29;
+        top: -27px;
+    }
+    .plan-option .name{
+        font-size: $s17;
+        margin-top: -1px;
+    }
+    .plan-option .save{
+        font-size: $p;
+        /*bottom: -15px;
+        line-height: 30px;*/
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .plan-option .radio-mark:checked ~ .radio-label:before {
+        background-image: url(../images/dashboard/company/icon-radio-checked@2x.png);
+    }
+}
