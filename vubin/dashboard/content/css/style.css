@@ -3319,6 +3319,16 @@ textarea.form-control:focus {
 .kuyam-header .form-select-location .bootstrap-select.btn-group .dropdown-menu > li > a:focus {
   font-weight: 700; }
 
+.kuyam-header .countdown-free {
+  display: block;
+  font-size: 0.875em;
+  float: right;
+  line-height: 58px;
+  padding-right: 20px; }
+
+.kuyam-header .countdown-free strong {
+  font-weight: 700; }
+
 @media (min-width: 1024px) and (max-width: 1279px) {
   .kuyam-header .navbar-brand {
     width: 90%;
@@ -3402,7 +3412,11 @@ textarea.form-control:focus {
     width: 100%; }
 
   .kuyam-header .navbar-nav {
-    display: none; } }
+    display: none; }
+
+  .kuyam-header .countdown-free {
+    line-height: 44px;
+    padding-right: 15px; } }
 @media (max-width: 374px) {
   .kuyam-header {
     height: 38px;
@@ -3514,15 +3528,15 @@ textarea.form-control:focus {
     -webkit-flex: inherit;
     -ms-flex: inherit;
     flex: inherit; } }
-.kuyam-main-content {
-  display: -webkit-flex;
-  display: flex; }
+@media (min-width: 1024px) {
+  .kuyam-main-content {
+    display: -webkit-flex;
+    display: flex; }
 
-.kuyam-main-content > div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
+  .kuyam-main-content > div {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; } }
 .kuyam-content {
   float: left;
   padding: 24px 38px;
@@ -7552,8 +7566,15 @@ textarea.form-control:focus {
     line-height: 24px;
     margin-bottom: 20px; }
 
+  .company-account .account-section p span {
+    display: block;
+    padding-top: 13px; }
+
+  .company-account .account-section img {
+    width: 53px; }
+
   .company-account .account-section .btn {
-    margin-top: 28px; }
+    margin-top: 11px; }
 
   .company-account .history-section {
     padding-top: 50px; }
@@ -7568,7 +7589,7 @@ textarea.form-control:focus {
 
   .company-account .history-section .tr {
     border: 1px solid #646464;
-    padding: 8px 19px 9px;
+    padding: 8px 19px 10px;
     margin-bottom: 17px; }
 
   .company-account .history-section .span-field,
@@ -7589,7 +7610,72 @@ textarea.form-control:focus {
 @media (max-width: 374px) {
   .company-account .form-label {
     font-size: 0.8125em;
-    margin-bottom: 4px; } }
+    margin-bottom: 4px; }
+
+  .company-account .plan-option .radio-custom {
+    margin-bottom: 22px; }
+
+  .company-account .plan-option p {
+    font-size: 0.8125em;
+    margin-bottom: 35px; }
+
+  .company-account .plan-option .btn {
+    margin-top: 13px; }
+
+  .company-account .account-section {
+    padding-top: 40px; }
+
+  .company-account .account-section .form-label {
+    margin-bottom: 14px; }
+
+  .company-account .account-section p {
+    font-size: 0.9375em;
+    line-height: 20px;
+    margin-bottom: 19px; }
+
+  .company-account .account-section p span {
+    padding-top: 9px; }
+
+  .company-account .account-section img {
+    width: 45px; }
+
+  .company-account .account-section .btn {
+    margin-top: 8px; }
+
+  .company-account .history-section {
+    padding-top: 40px; }
+
+  .company-account .history-section .form-label {
+    margin-bottom: 7px; }
+
+  .company-account .history-section .table-css,
+  .company-account .history-section .tr,
+  .company-account .history-section .td {
+    display: block; }
+
+  .company-account .history-section .tr {
+    border: 1px solid #646464;
+    padding: 5px 16px 6px;
+    margin-bottom: 13px; }
+
+  .company-account .history-section .td {
+    line-height: 20px; }
+
+  .company-account .history-section .span-field,
+  .company-account .history-section .span-date,
+  .company-account .history-section .span-time {
+    font-size: 0.5625em; }
+
+  .company-account .history-section .td-name,
+  .company-account .history-section .td-price {
+    font-size: 0.6875em; }
+
+  .company-account footer {
+    padding-top: 24px;
+    padding-bottom: 32px; }
+
+  .company-account footer p {
+    font-size: 0.6875em; } }
 .manage-staff .subnav-content .add-link-section {
   padding-bottom: 4px; }
 
@@ -10452,6 +10538,87 @@ textarea.form-control:focus {
 
   .modal-invitation .modal-body > ul.checkbox-list .cb-mark:checked ~ .cb-label::before {
     background-image: url(../images/dashboard/modals/invitation/icon-checked@2x.png); } }
+.modal-unlock {
+  width: 594px; }
+
+.modal-unlock .modal-body {
+  text-align: center; }
+
+.modal-unlock .plan-option {
+  margin-top: 24px;
+  padding-left: 18px;
+  padding-right: 12px; }
+
+@media (min-width: 1024px) {
+  .modal-unlock .modal-header {
+    padding-top: 18px;
+    padding-bottom: 18px; }
+
+  .modal-unlock h4.modal-title {
+    font-size: 1.75em;
+    font-weight: 300;
+    line-height: 38px; }
+
+  .modal-unlock .modal-body {
+    padding-left: 28px;
+    padding-right: 36px; }
+
+  .modal-unlock .modal-body p {
+    font-size: 1.0625em;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 45px; }
+
+  .modal-unlock .modal-footer {
+    padding: 42px 58px 38px 56px; }
+
+  .modal-unlock .modal-footer .row {
+    margin-left: -15px;
+    margin-right: -15px; }
+
+  .modal-unlock .modal-footer div[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .modal-unlock .modal-footer .btn-form,
+  .modal-unlock .modal-footer .btn-form:focus {
+    height: 43px; } }
+@media (max-width: 1023px) {
+  .modal-unlock h4.modal-title {
+    /*font-size: .9375em;
+    line-height: 44px;*/
+    font-weight: 400; }
+
+  /*.modal-unlock .modal-body{
+      padding-top: 30px;
+  }
+  .modal-unlock .modal-body p {
+      font-size: $s13;
+      line-height: 18px;
+      margin-bottom: 0;
+  }
+  .modal-unlock .modal-footer {
+      padding: 5px 16px 13px;
+  }*/ }
+@media (max-width: 767px) {
+  .modal-unlock {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px; } }
+@media (max-width: 374px) {
+  /*.modal-unlock .modal-body{
+      padding-top: 26px;
+  }
+  .modal-unlock .modal-body p {
+      font-size: $s11;
+      line-height: 15px;
+  }
+  .modal-unlock .modal-footer {
+      padding: 3px 16px 12px;
+  }
+  .modal-unlock .plan-option{
+      margin-top: 22px;
+  }*/ }
 /**
  * prints
  */
@@ -10492,5 +10659,3 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
-
-/*# sourceMappingURL=style.css.map */
