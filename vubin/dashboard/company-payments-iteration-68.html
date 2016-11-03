@@ -30,11 +30,11 @@
 <meta name="msapplication-config" content="favicon/browserconfig.xml?v2" />
 
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>Kuyam Admin - Company</title>
-	<meta name="author" content="" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<!-- InstanceEndEditable -->
+<title>Kuyam Admin - Company</title>
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- InstanceEndEditable -->
 
 <!-- Input Time -->
 <link rel="stylesheet" type="text/css" href="content/css/style.min.css" />
@@ -222,25 +222,26 @@
         </header>
         <section class="kuyam-section">
 		<!-- InstanceBeginEditable name="content" -->
-			<div class="kuyam-page company-page company-purchase">
+        	<div class="kuyam-page company-page company-payment">
+				<!-- .kuyam-sidebar -->
 				<div class="kuyam-sidebar">
 					<ul>
 						<li>
                             <a title="" role="button" data-toggle="collapse" href="#subProfile" aria-expanded="false" aria-controls="subProfile"><span class="icon icon-profile"></span><span class="text">Profile</span><span class="icon icon-collapse"></span></a>
                             <ul id="subProfile" class="collapse">
-                                <li><a title="" href="company-info.html"><span class="text">Basic info</span></a></li>
+                                <li class="active"><a title="" href="company-info.html"><span class="text">Basic info</span></a></li>
                                 <li><a title="" href="company-photo.html"><span class="text">Profile photos</span></a></li>
                                 <li><a title="" href="company-working.html"><span class="text">Working hours</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a title="" role="button" data-toggle="collapse" href="#subPhoto" aria-expanded="true" aria-controls="subPhoto"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
-                             <ul id="subPhoto" class="collapse in">
+                            <a title="" role="button" data-toggle="collapse" href="#subPhoto" aria-expanded="false" aria-controls="subPhoto"><span class="icon icon-gallery"></span><span class="text">Image gallery</span><span class="icon icon-collapse"></span></a>
+                             <ul id="subPhoto" class="collapse">
                                 <li><a title="" href="company-gallery.html"><span class="text">My images</span></a></li>
-                                <li class="active"><a title="" href="company-purchasse.html"><span class="text">Purchase photos</span></a></li>
+                                <li><a title="" href="company-purchasse.html"><span class="text">Purchase photos</span></a></li>
                             </ul>
                         </li>
-                        <li><a title="" href="company-payments.html"><span class="icon icon-payment"></span><span class="text">Payments &amp; booking</span></a></li>
+                        <li class="active"><a title="" href="company-payments.html"><span class="icon icon-payment"></span><span class="text">Payments &amp; booking</span></a></li>
                         <li><a title="" href="company-notifications.html"><span class="icon icon-notifications"></span><span class="text">Notifications</span></a></li>
                         <li><a title="" href="company-calendars.html"><span class="icon icon-calendars"></span><span class="text">Calendars</span></a></li>
                         <li><a title="" href="#"><span class="icon icon-scripts"></span><span class="text">Scripts</span></a></li>
@@ -248,138 +249,248 @@
                         <li><a title="" href="company-account.html"><span class="icon icon-account"></span><span class="text">Account</span></a></li>
 					</ul>
 				</div>
+				<!-- /.kuyam-sidebar -->
+
 				<div class="kuyam-content">
                     <div class="kuyam-form">
-                        <form>
+    					<form>
                             <section class="mobile-section">
-                                <header class="hidden-1023"><a tile=""><span class="icon icon-back"></span> Go back to my images</a></header>
-                                <div class="legend visible-1023">Purchase stock photos</div>
-                                <p class="visible-1023">search, select & purchase photos for<br /> your gallery.</p>
-                                <div class="search-form">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <label class="form-label hidden-1023" for="txtSearch">Purchasse stock photos</label>
-                                            <input type="text" class="form-control txt-search" id="txtSearch" placeholder="Search stock photos" />
-                                        </div>
+                                <div class="legend visible-1023">Payments & booking</div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="form-label" for="txtEmail">PayPal e-mail</label>
+                                        <input type="text" class="form-control" id="txtEmail" placeholder="Enter a email address" />
                                     </div>
                                 </div>
-                                <section id="searchSection" class="search-section">
-                                    <label class="form-label">Search results for <strong>yoga</strong></label>
-                                    <div class="controls">
-                                        <div class="visible-1023"><i>Tap on image to see options</i></div>
-                                    </div>
-                                    <section class="photo-list">
-                                        <div class="photo-ul">
-                                            <div id="serchPhotoOwl" class="owl-carousel owl-theme">
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
+
+        						<div class="row">
+        							<div class="col-xs-12 col-sm-5">
+
+                                        <!-- .payment-section -->
+                                        <section class="payment-section">
+
+        									<label class="form-label">How do you accept payment?</label>
+
+        									<!-- .radio-list -->
+        									<ul class="radio-list clearfix">
+        										<li class="radio-custom">
+        											<input class="radio-mark" type="radio" id="radioPayment1" name="radioPayment" />
+        											<label class="radio-label" for="radioPayment1">Only PayPal </label>
+        										</li>
+        										<li class="radio-custom">
+        											<input class="radio-mark" type="radio" id="radioPayment2" name="radioPayment" />
+        											<label class="radio-label" for="radioPayment2">PayPal & pay in person</label>
+        										</li>
+        									</ul>
+        									<!-- /.radio-list -->
+
+                                        </section>
+                                        <!-- /.payment-section -->
+
+        							</div>
+
+        							<div class="col-xs-12 col-sm-5">
+
+                                        <!-- .method-section -->
+                                        <section class="method-section">
+
+        									<label class="form-label">Booking method</label>
+
+        									<!-- .radio-list -->
+        									<ul class="radio-list clearfix">
+        										<li class="radio-custom">
+        											<input class="radio-mark" type="radio" id="radioMethod1" name="radioMethod" />
+        											<label class="radio-label" for="radioMethod1">Instant book <small>No confirmation needed</small></label>
+        										</li>
+        										<li class="radio-custom">
+        											<input class="radio-mark" type="radio" id="radioMethod2" name="radioMethod" />
+        											<label class="radio-label" for="radioMethod2">Book it <small>You'll need to confirm each appointment</small></label>
+        										</li>
+        									</ul>
+        									<!-- /.radio-list -->
+
+                                        </section>
+                                        <!-- /.method-section -->
+
+        							</div>
+        						</div>
+
+        						<!-- .policy-section -->
+        						<section class="policy-section">
+        							<label class="form-label">Cancellation policy</label>
+        							<p>This is displayed on your profile.<br class="hidden-1023" />User receives a full refund if they cancel before the specified time period.</p>
+
+        							<!-- .dl-list -->
+        							<div class="dl-list">
+        								<div class="hidden-1023">
+
+        									<!-- .dl -->
+        									<div class="dl">
+        										<div class="dt">Type of policy</div>
+        										<div class="dd time-policy">Users must cancel how many hours prior to the appointment?</div>
+        										<div class="dd refund-policy">Refund for late cancellations</div>
+        									</div>
+        									<!-- /.dl -->
+
+        								</div>
+        								<div class="dl-item">
+
+        									<!-- .dl -->
+        									<div class="dl">
+                                                <span></span>
+        										<div class="dt">
+        											<span class="radio-custom">
+        												<input checked class="radio-mark" type="radio" id="radioCancellation1" name="radioCancellation" />
+        												<label class="radio-label" for="radioCancellation1">None</label>
+        											</span>
+        										</div>
+        										<div class="dd time-policy">
+        											<span class="visible-1023">Users can cancel the appointment:</span>Anytime
+        										</div>
+        										<div class="dd refund-policy"><span class="visible-1023">Refund for late cancellations:</span>Full refund</div>
+        									</div>
+        									<!-- /.dl -->
+
+        								</div>
+        								<div class="dl-item">
+
+        									<!-- .dl -->
+        									<div class="dl">
+                                                <span></span>
+        										<div class="dt">
+        											<span class="radio-custom">
+        												<input class="radio-mark" type="radio" id="radioCancellation2" name="radioCancellation" />
+        												<label class="radio-label" for="radioCancellation2">Standard</label>
+        											</span>
+        										</div>
+        										<div class="dd time-policy">
+        											<span class="visible-1023">Users can cancel the appointment:</span>24hrs
+        										</div>
+        										<div class="dd refund-policy"><span class="visible-1023">Refund for late cancellations:</span>50%</div>
+        									</div>
+        									<!-- /.dl -->
+
+        								</div>
+        								<div class="dl-item">
+
+        									<!-- .dl -->
+        									<div class="dl">
+                                                <span></span>
+        										<div class="dt">
+        											<span class="radio-custom">
+        												<input class="radio-mark" type="radio" id="radioCancellation3" name="radioCancellation" />
+        												<label class="radio-label" for="radioCancellation3">Strict</label>
+        											</span>
+        										</div>
+        										<div class="dd time-policy">
+        											<span class="visible-1023">Users can cancel the appointment:</span>72hrs
+        										</div>
+        										<div class="dd refund-policy"><span class="visible-1023">Refund for late cancellations:</span>50%</div>
+        									</div>
+        									<!-- /.dl -->
+
+        								</div>
+        								<div class="dl-item">
+
+        									<!-- .dl -->
+        									<div class="dl">
+                                                <span></span>
+        										<div class="dt">
+        											<span class="radio-custom">
+        												<input class="radio-mark" type="radio" id="radioCancellation4" name="radioCancellation" />
+        												<label class="radio-label" for="radioCancellation4">Custom</label>
+        											</span>
+        										</div>
+        										<div class="dd time-policy">
+                                                    <div id="carouselTime" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+                                                        <!-- Wrapper for slides -->
+                                                        <div class="carousel-inner" role="listbox">
+                                                            <div class="item">
+                                                                1 hr
+                                                            </div>
+                                                            <div class="item">
+                                                                2 hrs
+                                                            </div>
+                                                            <div class="item">
+                                                                3 hrs
+                                                            </div>
+                                                            <div class="item">
+                                                                6 hrs
+                                                            </div>
+                                                            <div class="item">
+                                                                12 hrs
+                                                            </div>
+                                                            <div class="item active">
+                                                                24 hrs
+                                                            </div>
+                                                            <div class="item">
+                                                                48 hrs
+                                                            </div>
+                                                            <div class="item">
+                                                                72 hrs
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Controls -->
+                                                        <a class="left carousel-control" href="#carouselTime" role="button" data-slide="prev">
+                                                        </a>
+                                                        <a class="right carousel-control" href="#carouselTime" role="button" data-slide="next">
                                                         </a>
                                                     </div>
-                                                </div>
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
+                                                    <span class="visible-1023">Users can cancel the appointment:</span>
+        										</div>
+        										<div class="dd refund-policy">
+                                                    <div id="carouselRefund" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+                                                        <!-- Wrapper for slides -->
+                                                        <div class="carousel-inner" role="listbox">
+                                                            <div class="item">
+                                                                None
+                                                            </div>
+                                                            <div class="item">
+                                                                25%
+                                                            </div>
+                                                            <div class="item active">
+                                                                50%
+                                                            </div>
+                                                            <div class="item">
+                                                                75%
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Controls -->
+                                                        <a class="left carousel-control" href="#carouselRefund" role="button" data-slide="prev">
+                                                        </a>
+                                                        <a class="right carousel-control" href="#carouselRefund" role="button" data-slide="next">
                                                         </a>
                                                     </div>
-                                                </div>
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="item photo-item">
-                                                    <div class="photo" style="background-image: url(content/photos/photo1.jpg);">
-                                                        <img alt="" src="content/images/dashboard/img_transparent.png" class="img-transparent" />
-                                                        <a title="" href="">
-                                                            <span class="table-css">
-                                                                <span class="tr">
-                                                                    <span class="td">
-                                                                        <strong>Add to cart</strong> ($0.99)
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="list-control prev"><span class="icon icon-owl"></span></div>
-                                            <div class="list-control next"><span class="icon icon-owl"></span></div>
-                                        </div>
-                                    </section>
-                                </section>
-                                <section id="cartSection" class="cart-section">
-                                    <label class="form-label"><span class="icon icon-cart"></span> Your cart is currently empty</label>
-                                </section>
+                                                    <span class="visible-1023">Refund for late cancellations:</span>
+        										</div>
+        									</div>
+        									<!-- .dl -->
+
+        								</div>
+        							</div>
+        							<!-- /.dl-list -->
+
+        						</section>
+        						<!-- /.policy-section -->
+
                             </section>
                             <footer>
-                                <ul class="nav-form clearfix">
-                                    <li>
-                                        <input type="button" value="Back" class="btn btn-form btn-neutral" />
-                                    </li>
-                                    <li>
-                                        <input type="button" value="Confirm purchase" class="btn btn-form btn-agree" />
-                                    </li>
-                                </ul>
+                                <div class="row">
+                                    <div class="col-xs-6 visible-1023">
+                                        <input type="button" value="Cancel" class="btn btn-form btn-neutral" />
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="button" value="Save" class="btn btn-form btn-agree" />
+                                    </div>
+                                </div>
                             </footer>
-                        </form>
+    					</form>
                     </div>
 				</div>
 			</div>
-			<!-- InstanceEndEditable -->
+		<!-- InstanceEndEditable -->
         </section>
     	<footer class="kuyam-footer">
         	<div class="container">
@@ -1391,7 +1502,7 @@
 	</div><!-- /#signOutModal -->
 
     <!-- InstanceBeginEditable name="modal" -->
-	<!-- InstanceEndEditable -->
+    <!-- InstanceEndEditable -->
 
     <!-- === SCRIPTS === -->
 	<script type="text/javascript" src="scripts/libs/modernizr.custom.js"></script>
@@ -1440,11 +1551,11 @@
     <script type="text/javascript" src="scripts/ui-general.js"></script>
     <!-- InstanceBeginEditable name="script" -->
 	<script type="text/javascript" src="scripts/ui-company.js"></script>
-    <script type="text/javascript" src="scripts/ui-gallery.js"></script>
+	<script type="text/javascript" src="scripts/ui-payments.js"></script>
 	<script type="text/javascript">
 		document.getElementById('navCompany').className = "active";
 	</script>
-	<!-- InstanceEndEditable -->
+    <!-- InstanceEndEditable -->
 
 </body>
 <!-- InstanceEnd --></html>
