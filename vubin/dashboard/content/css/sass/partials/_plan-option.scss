@@ -14,6 +14,9 @@
 .plan-option .radio-mark ~ .radio-label:hover {
     box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.16);
 }
+.plan-option .radio-mark:disabled ~ .radio-label:hover {
+    box-shadow: none;
+}
 .plan-option .radio-mark ~ .radio-label,
 .plan-option .radio-mark ~ .radio-label:focus {
     position: relative;
@@ -39,9 +42,9 @@
 .plan-option .radio-mark:checked ~ .radio-label:focus{
     border:1px solid $positive;
 }
-.plan-option .radio-mark:checked ~ .radio-label .plan{
+/*.plan-option .radio-mark:checked ~ .radio-label .plan{
     border: 1px solid $positive;
-}
+}*/
 .plan-option .radio-mark:checked ~ .radio-label:before {
     background-image: url(../images/dashboard/company/icon-radio-checked.png);
     background-color: $positive;
@@ -60,7 +63,6 @@
     background-size: 14px auto;
     top: -13px;
     left: -13px;
-    cursor: pointer;
 }
 .plan-option .radio-custom{
 }
@@ -101,13 +103,13 @@
     margin-top: -1px;
 }
 .plan-option .save{
-    font-size: $p;
+    font-size: $s11;
     line-height: 100%;
     color: $positive;
     font-weight: 900;
     position: absolute;
     left: 0;
-    bottom: -12px;
+    bottom: -11px;
     width: 100%;
     text-align: center;
 }
@@ -155,7 +157,7 @@
         margin-top: -2px;
     }
     .plan-option .save{
-        font-size: $s14;
+        font-size: $s13;
         /*bottom: -16px;
         line-height: 34px;*/
     }
@@ -201,7 +203,7 @@
         margin-top: -1px;
     }
     .plan-option .save{
-        font-size: $p;
+        font-size: $s11;
         /*bottom: -15px;
         line-height: 30px;*/
     }
