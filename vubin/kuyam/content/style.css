@@ -397,13 +397,15 @@ textarea {
 }*/
 .modal-signout.modal-dialog,
 .modal-change-password.modal-dialog,
-.modal-newsletter.modal-dialog {
+.modal-newsletter.modal-dialog,
+.modal-unlock.modal-dialog {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px; }
 .modal-signout .modal-content,
 .modal-change-password .modal-content,
-.modal-newsletter .modal-content {
+.modal-newsletter .modal-content,
+.modal-unlock .modal-content {
   border: 1px solid #888;
   border-radius: 4px;
   -webkit-box-shadow: none;
@@ -411,7 +413,8 @@ textarea {
   box-shadow: none; }
 .modal-signout .modal-header,
 .modal-change-password .modal-header,
-.modal-newsletter .modal-header {
+.modal-newsletter .modal-header,
+.modal-unlock .modal-header {
   text-align: center;
   border: 0 none;
   padding-top: 25px;
@@ -419,43 +422,50 @@ textarea {
   position: relative; }
 .modal-signout .modal-header h4,
 .modal-change-password .modal-header h4,
-.modal-newsletter .modal-header h4 {
+.modal-newsletter .modal-header h4,
+.modal-unlock .modal-header h4 {
   font-size: 1.1875em;
   font-family: "Lato", sans-serif;
   font-weight: 600;
   padding-bottom: 0; }
 .modal-signout .modal-header .close,
 .modal-change-password .modal-header .close,
-.modal-newsletter .modal-header .close {
+.modal-newsletter .modal-header .close,
+.modal-unlock .modal-header .close {
   margin-top: 0;
   position: absolute;
   top: 0;
   right: 0; }
 .modal-signout .modal-body,
 .modal-change-password .modal-body,
-.modal-newsletter .modal-body {
+.modal-newsletter .modal-body,
+.modal-unlock .modal-body {
   padding-bottom: 0; }
 .modal-signout .modal-footer,
 .modal-change-password .modal-footer,
-.modal-newsletter .modal-footer {
+.modal-newsletter .modal-footer,
+.modal-unlock .modal-footer {
   padding-top: 0;
   padding-bottom: 25px;
   border: 0 none; }
 @media (min-width: 1024px) {
   .modal-signout .modal-body,
   .modal-change-password .modal-body,
-  .modal-newsletter .modal-body {
+  .modal-newsletter .modal-body,
+  .modal-unlock .modal-body {
     padding-left: 25px;
     padding-right: 25px; } }
 @media (max-width: 767px) {
   .modal-signout .modal-footer,
   .modal-change-password .modal-footer,
-  .modal-newsletter .modal-footer {
+  .modal-newsletter .modal-footer,
+  .modal-unlock .modal-footer {
     padding-bottom: 20px; } }
 @media (max-width: 374px) {
   .modal-signout .modal-footer,
   .modal-change-password .modal-footer,
-  .modal-newsletter .modal-footer {
+  .modal-newsletter .modal-footer,
+  .modal-unlock .modal-footer {
     padding-bottom: 15px; } }
 
 .settings-section .form-control::-webkit-input-placeholder,
@@ -524,218 +534,271 @@ textarea {
 
 .modal-signout .row,
 .settings-section .row,
-.modal-change-password .row {
+.modal-change-password .row,
+.modal-unlock .row {
   margin-left: -8px;
   margin-right: -8px; }
 .modal-signout div[class*="col-"],
 .settings-section div[class*="col-"],
-.modal-change-password div[class*="col-"] {
+.modal-change-password div[class*="col-"],
+.modal-unlock div[class*="col-"] {
   padding-left: 8px;
   padding-right: 8px; }
 @media (min-width: 1024px) {
   .modal-signout .col-lg-12,
   .settings-section .col-lg-12,
-  .modal-change-password .col-lg-12 {
+  .modal-change-password .col-lg-12,
+  .modal-unlock .col-lg-12 {
     width: 100%; }
   .modal-signout .col-lg-11,
   .settings-section .col-lg-11,
-  .modal-change-password .col-lg-11 {
+  .modal-change-password .col-lg-11,
+  .modal-unlock .col-lg-11 {
     width: 91.66666667%; }
   .modal-signout .col-lg-10,
   .settings-section .col-lg-10,
-  .modal-change-password .col-lg-10 {
+  .modal-change-password .col-lg-10,
+  .modal-unlock .col-lg-10 {
     width: 83.33333333%; }
   .modal-signout .col-lg-9,
   .settings-section .col-lg-9,
-  .modal-change-password .col-lg-9 {
+  .modal-change-password .col-lg-9,
+  .modal-unlock .col-lg-9 {
     width: 75%; }
   .modal-signout .col-lg-8,
   .settings-section .col-lg-8,
-  .modal-change-password .col-lg-8 {
+  .modal-change-password .col-lg-8,
+  .modal-unlock .col-lg-8 {
     width: 66.66666667%; }
   .modal-signout .col-lg-7,
   .settings-section .col-lg-7,
-  .modal-change-password .col-lg-7 {
+  .modal-change-password .col-lg-7,
+  .modal-unlock .col-lg-7 {
     width: 58.33333333%; }
   .modal-signout .col-lg-6,
   .settings-section .col-lg-6,
-  .modal-change-password .col-lg-6 {
+  .modal-change-password .col-lg-6,
+  .modal-unlock .col-lg-6 {
     width: 50%; }
   .modal-signout .col-lg-5,
   .settings-section .col-lg-5,
-  .modal-change-password .col-lg-5 {
+  .modal-change-password .col-lg-5,
+  .modal-unlock .col-lg-5 {
     width: 41.66666667%; }
   .modal-signout .col-lg-4,
   .settings-section .col-lg-4,
-  .modal-change-password .col-lg-4 {
+  .modal-change-password .col-lg-4,
+  .modal-unlock .col-lg-4 {
     width: 33.33333333%; }
   .modal-signout .col-lg-3,
   .settings-section .col-lg-3,
-  .modal-change-password .col-lg-3 {
+  .modal-change-password .col-lg-3,
+  .modal-unlock .col-lg-3 {
     width: 25%; }
   .modal-signout .col-lg-2,
   .settings-section .col-lg-2,
-  .modal-change-password .col-lg-2 {
+  .modal-change-password .col-lg-2,
+  .modal-unlock .col-lg-2 {
     width: 16.66666667%; }
   .modal-signout .col-lg-1,
   .settings-section .col-lg-1,
-  .modal-change-password .col-lg-1 {
+  .modal-change-password .col-lg-1,
+  .modal-unlock .col-lg-1 {
     width: 8.33333333%; }
   .modal-signout .col-lg-pull-12,
   .settings-section .col-lg-pull-12,
-  .modal-change-password .col-lg-pull-12 {
+  .modal-change-password .col-lg-pull-12,
+  .modal-unlock .col-lg-pull-12 {
     right: 100%; }
   .modal-signout .col-lg-pull-11,
   .settings-section .col-lg-pull-11,
-  .modal-change-password .col-lg-pull-11 {
+  .modal-change-password .col-lg-pull-11,
+  .modal-unlock .col-lg-pull-11 {
     right: 91.66666667%; }
   .modal-signout .col-lg-pull-10,
   .settings-section .col-lg-pull-10,
-  .modal-change-password .col-lg-pull-10 {
+  .modal-change-password .col-lg-pull-10,
+  .modal-unlock .col-lg-pull-10 {
     right: 83.33333333%; }
   .modal-signout .col-lg-pull-9,
   .settings-section .col-lg-pull-9,
-  .modal-change-password .col-lg-pull-9 {
+  .modal-change-password .col-lg-pull-9,
+  .modal-unlock .col-lg-pull-9 {
     right: 75%; }
   .modal-signout .col-lg-pull-8,
   .settings-section .col-lg-pull-8,
-  .modal-change-password .col-lg-pull-8 {
+  .modal-change-password .col-lg-pull-8,
+  .modal-unlock .col-lg-pull-8 {
     right: 66.66666667%; }
   .modal-signout .col-lg-pull-7,
   .settings-section .col-lg-pull-7,
-  .modal-change-password .col-lg-pull-7 {
+  .modal-change-password .col-lg-pull-7,
+  .modal-unlock .col-lg-pull-7 {
     right: 58.33333333%; }
   .modal-signout .col-lg-pull-6,
   .settings-section .col-lg-pull-6,
-  .modal-change-password .col-lg-pull-6 {
+  .modal-change-password .col-lg-pull-6,
+  .modal-unlock .col-lg-pull-6 {
     right: 50%; }
   .modal-signout .col-lg-pull-5,
   .settings-section .col-lg-pull-5,
-  .modal-change-password .col-lg-pull-5 {
+  .modal-change-password .col-lg-pull-5,
+  .modal-unlock .col-lg-pull-5 {
     right: 41.66666667%; }
   .modal-signout .col-lg-pull-4,
   .settings-section .col-lg-pull-4,
-  .modal-change-password .col-lg-pull-4 {
+  .modal-change-password .col-lg-pull-4,
+  .modal-unlock .col-lg-pull-4 {
     right: 33.33333333%; }
   .modal-signout .col-lg-pull-3,
   .settings-section .col-lg-pull-3,
-  .modal-change-password .col-lg-pull-3 {
+  .modal-change-password .col-lg-pull-3,
+  .modal-unlock .col-lg-pull-3 {
     right: 25%; }
   .modal-signout .col-lg-pull-2,
   .settings-section .col-lg-pull-2,
-  .modal-change-password .col-lg-pull-2 {
+  .modal-change-password .col-lg-pull-2,
+  .modal-unlock .col-lg-pull-2 {
     right: 16.66666667%; }
   .modal-signout .col-lg-pull-1,
   .settings-section .col-lg-pull-1,
-  .modal-change-password .col-lg-pull-1 {
+  .modal-change-password .col-lg-pull-1,
+  .modal-unlock .col-lg-pull-1 {
     right: 8.33333333%; }
   .modal-signout .col-lg-pull-0,
   .settings-section .col-lg-pull-0,
-  .modal-change-password .col-lg-pull-0 {
+  .modal-change-password .col-lg-pull-0,
+  .modal-unlock .col-lg-pull-0 {
     right: auto; }
   .modal-signout .col-lg-push-12,
   .settings-section .col-lg-push-12,
-  .modal-change-password .col-lg-push-12 {
+  .modal-change-password .col-lg-push-12,
+  .modal-unlock .col-lg-push-12 {
     left: 100%; }
   .modal-signout .col-lg-push-11,
   .settings-section .col-lg-push-11,
-  .modal-change-password .col-lg-push-11 {
+  .modal-change-password .col-lg-push-11,
+  .modal-unlock .col-lg-push-11 {
     left: 91.66666667%; }
   .modal-signout .col-lg-push-10,
   .settings-section .col-lg-push-10,
-  .modal-change-password .col-lg-push-10 {
+  .modal-change-password .col-lg-push-10,
+  .modal-unlock .col-lg-push-10 {
     left: 83.33333333%; }
   .modal-signout .col-lg-push-9,
   .settings-section .col-lg-push-9,
-  .modal-change-password .col-lg-push-9 {
+  .modal-change-password .col-lg-push-9,
+  .modal-unlock .col-lg-push-9 {
     left: 75%; }
   .modal-signout .col-lg-push-8,
   .settings-section .col-lg-push-8,
-  .modal-change-password .col-lg-push-8 {
+  .modal-change-password .col-lg-push-8,
+  .modal-unlock .col-lg-push-8 {
     left: 66.66666667%; }
   .modal-signout .col-lg-push-7,
   .settings-section .col-lg-push-7,
-  .modal-change-password .col-lg-push-7 {
+  .modal-change-password .col-lg-push-7,
+  .modal-unlock .col-lg-push-7 {
     left: 58.33333333%; }
   .modal-signout .col-lg-push-6,
   .settings-section .col-lg-push-6,
-  .modal-change-password .col-lg-push-6 {
+  .modal-change-password .col-lg-push-6,
+  .modal-unlock .col-lg-push-6 {
     left: 50%; }
   .modal-signout .col-lg-push-5,
   .settings-section .col-lg-push-5,
-  .modal-change-password .col-lg-push-5 {
+  .modal-change-password .col-lg-push-5,
+  .modal-unlock .col-lg-push-5 {
     left: 41.66666667%; }
   .modal-signout .col-lg-push-4,
   .settings-section .col-lg-push-4,
-  .modal-change-password .col-lg-push-4 {
+  .modal-change-password .col-lg-push-4,
+  .modal-unlock .col-lg-push-4 {
     left: 33.33333333%; }
   .modal-signout .col-lg-push-3,
   .settings-section .col-lg-push-3,
-  .modal-change-password .col-lg-push-3 {
+  .modal-change-password .col-lg-push-3,
+  .modal-unlock .col-lg-push-3 {
     left: 25%; }
   .modal-signout .col-lg-push-2,
   .settings-section .col-lg-push-2,
-  .modal-change-password .col-lg-push-2 {
+  .modal-change-password .col-lg-push-2,
+  .modal-unlock .col-lg-push-2 {
     left: 16.66666667%; }
   .modal-signout .col-lg-push-1,
   .settings-section .col-lg-push-1,
-  .modal-change-password .col-lg-push-1 {
+  .modal-change-password .col-lg-push-1,
+  .modal-unlock .col-lg-push-1 {
     left: 8.33333333%; }
   .modal-signout .col-lg-push-0,
   .settings-section .col-lg-push-0,
-  .modal-change-password .col-lg-push-0 {
+  .modal-change-password .col-lg-push-0,
+  .modal-unlock .col-lg-push-0 {
     left: auto; }
   .modal-signout .col-lg-offset-12,
   .settings-section .col-lg-offset-12,
-  .modal-change-password .col-lg-offset-12 {
+  .modal-change-password .col-lg-offset-12,
+  .modal-unlock .col-lg-offset-12 {
     margin-left: 100%; }
   .modal-signout .col-lg-offset-11,
   .settings-section .col-lg-offset-11,
-  .modal-change-password .col-lg-offset-11 {
+  .modal-change-password .col-lg-offset-11,
+  .modal-unlock .col-lg-offset-11 {
     margin-left: 91.66666667%; }
   .modal-signout .col-lg-offset-10,
   .settings-section .col-lg-offset-10,
-  .modal-change-password .col-lg-offset-10 {
+  .modal-change-password .col-lg-offset-10,
+  .modal-unlock .col-lg-offset-10 {
     margin-left: 83.33333333%; }
   .modal-signout .col-lg-offset-9,
   .settings-section .col-lg-offset-9,
-  .modal-change-password .col-lg-offset-9 {
+  .modal-change-password .col-lg-offset-9,
+  .modal-unlock .col-lg-offset-9 {
     margin-left: 75%; }
   .modal-signout .col-lg-offset-8,
   .settings-section .col-lg-offset-8,
-  .modal-change-password .col-lg-offset-8 {
+  .modal-change-password .col-lg-offset-8,
+  .modal-unlock .col-lg-offset-8 {
     margin-left: 66.66666667%; }
   .modal-signout .col-lg-offset-7,
   .settings-section .col-lg-offset-7,
-  .modal-change-password .col-lg-offset-7 {
+  .modal-change-password .col-lg-offset-7,
+  .modal-unlock .col-lg-offset-7 {
     margin-left: 58.33333333%; }
   .modal-signout .col-lg-offset-6,
   .settings-section .col-lg-offset-6,
-  .modal-change-password .col-lg-offset-6 {
+  .modal-change-password .col-lg-offset-6,
+  .modal-unlock .col-lg-offset-6 {
     margin-left: 50%; }
   .modal-signout .col-lg-offset-5,
   .settings-section .col-lg-offset-5,
-  .modal-change-password .col-lg-offset-5 {
+  .modal-change-password .col-lg-offset-5,
+  .modal-unlock .col-lg-offset-5 {
     margin-left: 41.66666667%; }
   .modal-signout .col-lg-offset-4,
   .settings-section .col-lg-offset-4,
-  .modal-change-password .col-lg-offset-4 {
+  .modal-change-password .col-lg-offset-4,
+  .modal-unlock .col-lg-offset-4 {
     margin-left: 33.33333333%; }
   .modal-signout .col-lg-offset-3,
   .settings-section .col-lg-offset-3,
-  .modal-change-password .col-lg-offset-3 {
+  .modal-change-password .col-lg-offset-3,
+  .modal-unlock .col-lg-offset-3 {
     margin-left: 25%; }
   .modal-signout .col-lg-offset-2,
   .settings-section .col-lg-offset-2,
-  .modal-change-password .col-lg-offset-2 {
+  .modal-change-password .col-lg-offset-2,
+  .modal-unlock .col-lg-offset-2 {
     margin-left: 16.66666667%; }
   .modal-signout .col-lg-offset-1,
   .settings-section .col-lg-offset-1,
-  .modal-change-password .col-lg-offset-1 {
+  .modal-change-password .col-lg-offset-1,
+  .modal-unlock .col-lg-offset-1 {
     margin-left: 8.33333333%; }
   .modal-signout .col-lg-offset-0,
   .settings-section .col-lg-offset-0,
-  .modal-change-password .col-lg-offset-0 {
+  .modal-change-password .col-lg-offset-0,
+  .modal-unlock .col-lg-offset-0 {
     margin-left: 0; } }
 
 @media (max-width: 1023px) {
@@ -986,7 +1049,8 @@ label {
 .modal-signout .btn-form:hover,
 .settings-section .btn-form:hover,
 .modal-change-password .btn-form:hover,
-.modal-newsletter .btn-form:hover {
+.modal-newsletter .btn-form:hover,
+.modal-unlock .btn-form:hover {
   color: #242424;
   background: #fff;
   border-width: 2px;
@@ -1000,7 +1064,9 @@ label {
 .modal-change-password .btn-form,
 .modal-change-password .btn-form:focus,
 .modal-newsletter .btn-form,
-.modal-newsletter .btn-form:focus {
+.modal-newsletter .btn-form:focus,
+.modal-unlock .btn-form,
+.modal-unlock .btn-form:focus {
   font-size: 1em;
   background: #fff;
   font-family: "Raleway", sans-serif;
@@ -1016,7 +1082,8 @@ label {
 .modal-signout .btn-agree:hover,
 .settings-section .btn-agree:hover,
 .modal-change-password .btn-agree:hover,
-.modal-newsletter .btn-agree:hover {
+.modal-newsletter .btn-agree:hover,
+.modal-unlock .btn-agree:hover {
   color: #3891ff;
   background: #fff;
   font-weight: 700;
@@ -1029,7 +1096,9 @@ label {
 .modal-change-password .btn-agree,
 .modal-change-password .btn-agree:focus,
 .modal-newsletter .btn-agree,
-.modal-newsletter .btn-agree:focus {
+.modal-newsletter .btn-agree:focus,
+.modal-unlock .btn-agree,
+.modal-unlock .btn-agree:focus {
   border: 1px solid #3891ff;
   background: #fff;
   color: #3891ff;
@@ -1037,7 +1106,8 @@ label {
 .modal-signout .btn-neutral:hover,
 .settings-section .btn-neutral:hover,
 .modal-change-password .btn-neutral:hover,
-.modal-newsletter .btn-neutral:hover {
+.modal-newsletter .btn-neutral:hover,
+.modal-unlock .btn-neutral:hover {
   color: #878787;
   background: #fff;
   font-weight: 700;
@@ -1050,7 +1120,9 @@ label {
 .modal-change-password .btn-neutral,
 .modal-change-password .btn-neutral:focus,
 .modal-newsletter .btn-neutral,
-.modal-newsletter .btn-neutral:focus {
+.modal-newsletter .btn-neutral:focus,
+.modal-unlock .btn-neutral,
+.modal-unlock .btn-neutral:focus {
   border: 1px solid #878787;
   background: #fff;
   color: #878787;
@@ -1058,7 +1130,8 @@ label {
 .modal-signout .btn-disagree:hover,
 .settings-section .btn-disagree:hover,
 .modal-change-password .btn-disagree:hover,
-.modal-newsletter .btn-disagree:hover {
+.modal-newsletter .btn-disagree:hover,
+.modal-unlock .btn-disagree:hover {
   background: #ff5050;
   color: #fff;
   font-weight: 700;
@@ -1070,7 +1143,9 @@ label {
 .modal-change-password .btn-disagree,
 .modal-change-password .btn-disagree:focus,
 .modal-newsletter .btn-disagree,
-.modal-newsletter .btn-disagree:focus {
+.modal-newsletter .btn-disagree:focus,
+.modal-unlock .btn-disagree,
+.modal-unlock .btn-disagree:focus {
   border: 1px solid #ff5050;
   background: #fff;
   color: #ff5050;
@@ -1086,7 +1161,10 @@ label {
 .modal-change-password .btn[disabled]:focus,
 .modal-newsletter .btn[disabled],
 .modal-newsletter .btn[disabled]:hover,
-.modal-newsletter .btn[disabled]:focus {
+.modal-newsletter .btn[disabled]:focus,
+.modal-unlock .btn[disabled],
+.modal-unlock .btn[disabled]:hover,
+.modal-unlock .btn[disabled]:focus {
   background: #dadada;
   border-color: #dadada;
   color: #fff;
@@ -1094,7 +1172,8 @@ label {
 .modal-signout button.close,
 .settings-section button.close,
 .modal-change-password button.close,
-.modal-newsletter button.close {
+.modal-newsletter button.close,
+.modal-unlock button.close {
   color: transparent !important;
   text-shadow: none !important;
   opacity: 1;
@@ -1109,7 +1188,9 @@ label {
 .modal-change-password button.close:focus,
 .modal-change-password button.close:hover,
 .modal-newsletter button.close:focus,
-.modal-newsletter button.close:hover {
+.modal-newsletter button.close:hover,
+.modal-unlock button.close:focus,
+.modal-unlock button.close:hover {
   opacity: 0.5; }
 @media (max-width: 1023px) {
   .modal-signout .btn-form,
@@ -1119,7 +1200,9 @@ label {
   .modal-change-password .btn-form,
   .modal-change-password .btn-form:focus,
   .modal-newsletter .btn-form,
-  .modal-newsletter .btn-form:focus {
+  .modal-newsletter .btn-form:focus,
+  .modal-unlock .btn-form,
+  .modal-unlock .btn-form:focus {
     font-size: 0.875em;
     height: 38px; } }
 @media (max-width: 374px) {
@@ -1130,14 +1213,17 @@ label {
   .modal-change-password .btn-form,
   .modal-change-password .btn-form:focus,
   .modal-newsletter .btn-form,
-  .modal-newsletter .btn-form:focus {
+  .modal-newsletter .btn-form:focus,
+  .modal-unlock .btn-form,
+  .modal-unlock .btn-form:focus {
     font-size: 0.75em;
     height: 34px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .modal-signout button.close,
   .settings-section button.close,
   .modal-change-password button.close,
-  .modal-newsletter button.close {
+  .modal-newsletter button.close,
+  .modal-unlock button.close {
     background-image: url(images/dashboard/icon-close@2x.png) !important; } }
 
 @font-face {
@@ -2385,9 +2471,9 @@ label {
 .plan-option .radio-mark:checked ~ .radio-label:focus {
   border: 1px solid #3891ff; }
 
-.plan-option .radio-mark:checked ~ .radio-label .plan {
-  border: 1px solid #3891ff; }
-
+/*.plan-option .radio-mark:checked ~ .radio-label .plan{
+    border: 1px solid $positive;
+}*/
 .plan-option .radio-mark:checked ~ .radio-label:before {
   background-image: url(images/boarding/icon-radio-checked.png);
   background-color: #3891ff;
@@ -12027,6 +12113,87 @@ td ul {
 @media (max-width: 374px) {
   .modal-newsletter .modal-body p br {
     display: none; } }
+.modal-unlock {
+  width: 594px; }
+
+.modal-unlock .modal-body {
+  text-align: center; }
+
+.modal-unlock .plan-option {
+  margin-top: 24px;
+  padding-left: 18px;
+  padding-right: 12px; }
+
+@media (min-width: 1024px) {
+  .modal-unlock .modal-header {
+    padding-top: 18px;
+    padding-bottom: 18px; }
+
+  .modal-unlock h4.modal-title {
+    font-size: 1.75em;
+    font-weight: 300;
+    line-height: 38px; }
+
+  .modal-unlock .modal-body {
+    padding-left: 28px;
+    padding-right: 36px; }
+
+  .modal-unlock .modal-body p {
+    font-size: 1.0625em;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 45px; }
+
+  .modal-unlock .modal-footer {
+    padding: 42px 58px 38px 56px; }
+
+  .modal-unlock .modal-footer .row {
+    margin-left: -15px;
+    margin-right: -15px; }
+
+  .modal-unlock .modal-footer div[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .modal-unlock .modal-footer .btn-form,
+  .modal-unlock .modal-footer .btn-form:focus {
+    height: 43px; } }
+@media (max-width: 1023px) {
+  .modal-unlock h4.modal-title {
+    /*font-size: .9375em;
+    line-height: 44px;*/
+    font-weight: 400; }
+
+  /*.modal-unlock .modal-body{
+      padding-top: 30px;
+  }
+  .modal-unlock .modal-body p {
+      font-size: $s13;
+      line-height: 18px;
+      margin-bottom: 0;
+  }
+  .modal-unlock .modal-footer {
+      padding: 5px 16px 13px;
+  }*/ }
+@media (max-width: 767px) {
+  .modal-unlock {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px; } }
+@media (max-width: 374px) {
+  /*.modal-unlock .modal-body{
+      padding-top: 26px;
+  }
+  .modal-unlock .modal-body p {
+      font-size: $s11;
+      line-height: 15px;
+  }
+  .modal-unlock .modal-footer {
+      padding: 3px 16px 12px;
+  }
+  .modal-unlock .plan-option{
+      margin-top: 22px;
+  }*/ }
 /**
  * prints
  */
