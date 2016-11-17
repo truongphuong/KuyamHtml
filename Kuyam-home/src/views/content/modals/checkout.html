@@ -1,0 +1,190 @@
+<!-- #checkoutModal -->
+<div id="checkoutModal" class="modal fade" role="dialog" aria-labelledby="checkoutModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-checkout">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="checkoutModalLabel" class="modal-title"><span class="checkout-time-complete hidden-xs">time to complete booing <time>09:39</time></span>checkout</h4>
+            </div>
+            <div class="modal-body">
+
+                <!-- .checkout-fieldset -->
+                <fieldset class="checkout-fieldset clearfix">
+
+                    <!-- .checkout-col -->
+                    <div class="checkout-col">
+
+                        <!-- .checkout-title -->
+                        <div class="checkout-title">
+                            <h3>blow me away</h3>
+                            <address>8223 W 3rd st.<br />Los Angeles, CA 90026</address>
+                        </div>
+                        <!-- /.checkout-title -->
+
+                        <!-- .checkout-info -->
+                        <div class="checkout-info">
+                            <div class="checkout-row">
+                                <h4>blowout</h4>
+                                <div class="checkout-time-date"><time>Tue, Sept 9th</time> at 11:00 am - 11:45 am</div>
+                            </div>
+                            <div class="checkout-row checkout-select">
+                                <select class="selectpicker">
+                                    <option>with George</option>
+                                </select>
+                                <span class="alert-error">invalid</span>
+                            </div>
+                            <div class="checkout-row checkout-select">
+                                <select class="selectpicker">
+                                    <option>for Brett</option>
+                                </select>
+                                <span class="alert-error">invalid</span>
+                            </div>
+                            <div class="checkout-time-left hidden-sm hidden-md hidden-lg">
+                                time left to complete page
+                                <time><span class="icon-time-left"></span> 09:39</time>
+                            </div>
+                            <div class="checkout-row checkout-confirm">
+                                <span class="checkout-confirm-title">confirmation<span class="hidden-xs"> method</span>:</span>
+                                <input class="checkbox" type="checkbox" id="cbEmail" /><label for="cbEmail">email</label>
+                                <input class="checkbox" type="checkbox" id="cbSMS" /><label for="cbSMS">SMS</label>
+                            </div>
+                            <div class="checkout-row checkout-user">
+                                <div class="checkout-user-info">
+                                    <p>kourosh@kuyam.com</p>
+                                    <a class="link-change" title="" href="javascript:void(0);">change</a>
+                                </div>
+                                <div class="checkout-user-input hide">
+                                    <label for="txtEmail">please enter email</label>
+                                    <input class="form-control" id="txtEmail" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                                </div>
+                            </div>
+                            <div class="checkout-row checkout-user">
+                                <div class="checkout-user-info">
+                                    <p>(360)191-2821</p>
+                                    <a class="link-change" title="" href="javascript:void(0);">change</a>
+                                </div>
+                                <div class="checkout-user-input hide">
+                                    <label for="txtPhone">please enter phone number</label>
+                                    <input class="form-control" id="txtPhone" type="text" onblur="if (this.value == '') { this.value = 'phone #'; }" onfocus="if (this.value == 'phone #') { this.value = ''; }" value="phone #" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.checkout-info -->
+
+                    </div>
+                    <!-- /.checkout-col -->
+
+                    <!-- .checkout-col -->
+                    <div class="checkout-col">
+
+                        <!-- .checkout-price -->
+                        <div class="checkout-price clearfix">
+                            <div class="table-css">
+                                <div class="table-row">
+                                    <div class="table-cell price-details"><p>total due:</p></div>
+                                    <div class="table-cell price-type"></div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell price-details"><h3>$75.00</h3></div>
+                                    <div class="table-cell price-type"></div>
+                                </div>
+                                <div class="table-row checkout-discount-promo hide">
+                                    <div class="table-cell price-details"><h3>-$5.00</h3></div>
+                                    <div class="table-cell price-type">promo</div>
+                                </div>
+                                <div class="table-row checkout-discount-giftcard hide">
+                                    <div class="table-cell price-details"><h3>-$30.00</h3></div>
+                                    <div class="table-cell price-type">gift card</div>
+                                </div>
+                                <div class="table-row checkout-total hide">
+                                    <div class="table-cell price-total"><h3><span>$45.00</span></h3></div>
+                                    <div class="table-cell price-type"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.checkout-price -->
+
+                        <!-- .checkout-payment -->
+                        <div id="checkout-step1" class="checkout-payment">
+                            <header>select payment method</header>
+                            <div class="checkout-method method-promo">
+                                <span class="icon-method icon-promo"></span>
+                                <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
+                                <input class="btn-green btn-method btn-promo" type="button" value="apply" />
+                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                            </div>
+                            <div class="checkout-method method-gift-card">
+                                <span class="icon-method icon-gift-card"></span>
+                                <input id="btn-gift-card" class="btn-yellow btn-method btn-gift-card" type="button" value="gift card" />
+                            </div>
+                            <div class="checkout-method method-credit">
+                                <span class="icon-method icon-credit"></span>
+                                <input class="btn-blue btn-method btn-credit" type="button" value="PayPal or credit card" data-toggle="modal" data-target="#modal-request" />
+                            </div>
+                            <div class="checkout-method method-cash">
+                                <span class="icon-method icon-cash"></span>
+                                <input class="btn-green btn-method btn-cash" type="button" value="pay in person" />
+                            </div>
+                        </div>
+                        <!-- /.checkout-payment -->
+
+                        <!-- /.checkout-giftcard -->
+                        <div id="checkout-step2" class="checkout-payment checkout-gift-card hide">
+                            <div class="checkout-method">
+                                <input class="form-control txt-giftcard" type="text" value="enter gift card number" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" />
+                                <input class="btn-green btn-method btn-giftcard" type="button" value="redeem" />
+                            </div>
+                            <div class="checkout-balance">
+                                <p>current gift card balance</p>
+                                <h3>$0.00</h3>
+                                <div class="checkout-balance-use">use $30.00 today?</div>
+                            </div>
+                            <div class="checkout-method method-confirm">
+                                <input class="btn-yellow btn-method btn-confirm" type="button" value="confirm" />
+                            </div>
+                            <div class="checkout-back">
+                                <a id="link-back" class="link-back" title="" href="javascript:void(0);"><span class="icon-back"></span> back</a>
+                            </div>
+                        </div>
+                        <!-- /.checkout-giftcard -->
+
+                        <!-- .checkout-payment -->
+                        <div id="checkout-step3" class="checkout-payment checkout-applied hide">
+                            <div class="checkout-method method-promo">
+                                <span class="icon-method icon-promo"></span>
+                                <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
+                                <input class="btn-green btn-method btn-promo" type="button" value="apply" />
+                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                            </div>
+                            <div class="checkout-method method-gift-card">
+                                <span class="icon-method icon-gift-card"></span>
+                                <div class="discount-applied giftcard-applied">$30.00 applied</div>
+                            </div>
+                            <div class="checkout-method method-credit">
+                                <span class="icon-method icon-credit"></span>
+                                <input class="btn-blue btn-method btn-credit" type="button" value="PayPal or credit card" data-toggle="modal" data-target="#confirmRequestModal" />
+                            </div>
+                            <div class="checkout-method method-confirm">
+                                <input class="btn-yellow btn-method btn-confirm" type="button" value="confirm" />
+                            </div>
+                        </div>
+                        <!-- /.checkout-payment -->
+
+                        <!-- .checkout-rule -->
+                        <div class="checkout-rule">
+                            <header>cancellation policy:</header>
+                            <p>this appointment have a 24-hours cancellation policy. if you modify or cancel 24 hours before this appointment or later, you will be charge 50% of total amount.</p>
+                        </div>
+                        <!-- .checkout-rule -->
+
+                    </div>
+                    <!-- /.checkout-col -->
+
+                </fieldset>
+                <!-- /.checkout-fieldset -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#checkoutModal -->

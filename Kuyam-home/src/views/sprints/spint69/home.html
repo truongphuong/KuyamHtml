@@ -1,0 +1,29 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}
+
+{% include "./content/pages/home/banner.html" %}
+
+{% endblock %}
+
+{% block main %}
+
+{% include "./content/pages/home/list.html" %}
+
+{% include "./content/pages/home/parallel.html" %}
+
+{% include "./content/pages/home/ads.html" %}
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-home.js"></script>
+{% endblock %}
+

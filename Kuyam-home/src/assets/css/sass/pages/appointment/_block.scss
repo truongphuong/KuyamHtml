@@ -1,0 +1,259 @@
+.appointment-list{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.appointment-block {
+    height: 137px;
+    margin-bottom: 32px;
+    position: relative;
+    background: $white;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+    line-height: 120%;
+}
+.appointment-block.confirmed {
+    border: 1px solid #9aca00;
+}
+.appointment-block.confirmed .brand{
+    padding-left: 20px;
+    background: url(images/ui/pages/appointment/icon_confirmed@3x.png) left center no-repeat;
+    background-size: 15px auto;
+}
+.appointment-block.proposed {
+    border: 1px solid #498ff1;
+}
+.appointment-block.proposed li:nth-child(3) a {
+    color: #9aca00;
+}
+.appointment-block.pending {
+    border: 1px solid #fca610;
+}
+.appointment-block.pending li:nth-child(3) a {
+    color: #9aca00;
+}
+.appointment-block.cancelled {
+    border: 1px solid #ff3939;
+}
+.appointment-block.cancelled li:nth-child(3){
+    display: none;
+}
+.appointment-block:hover {
+    -moz-box-shadow: 0px 4px 10px #aaa;
+    -webkit-box-shadow: 0px 4px 10px #aaa;
+    box-shadow: 0px 4px 10px #aaa;
+}
+.appointment-block .avatar {
+    float: left;
+    width: 160px;
+    height: 135px;
+    margin: 0 18px 0 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.appointment-block .titles {
+    padding: 10px 10px 0;
+}
+.appointment-block .iName {
+    margin-bottom: 4px;
+    font-family: $primary;
+    font-size: $s15;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 250px);
+}
+.appointment-block .iName a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .97);
+}
+.appointment-block .iName a small{
+    font-size: $s11;
+    font-style: italic;
+    color: rgba(0, 0, 0, .97);
+}
+.appointment-block .iDate {
+    font-size: $h6;
+    line-height:20px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: rgba(51, 50, 50, .9);
+}
+.appointment-block .iDate span {
+    font-weight: 400;
+}
+.appointment-block dl{
+    margin-bottom:9px;
+}
+.appointment-block dt{
+    display: inline-block;
+    color: rgba(51, 50, 50, .9);
+    font-weight: 400;
+    font-size: $p;
+}
+.appointment-block dd{
+    display: inline-block;
+    color: #b1b1b1;
+    margin-left: 10px;
+    font-size: $p;
+}
+.appointment-block dd.active{
+    color: rgba(51, 50, 50, .9);
+}
+.appointment-block .shortDes {
+    display: block;
+    color: #498ff1;
+    text-align: justify;
+    font-size: $p;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 196px);
+}
+.appointment-block .shortDes a{
+    color: #498ff1;
+    text-decoration: underline;
+}
+.appointment-block .brand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: $p;
+    font-weight: 700;
+}
+.appointment-block ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.appointment-block ul:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.appointment-block ul li{
+    display: inline-block;
+    padding:0 10px;
+    border-left: 1px solid #ccc;
+    float: left;
+}
+.appointment-block ul li:first-child{
+    padding-left:0;
+    border-left: 0 none;
+}
+.appointment-block li a {
+    text-decoration: none;
+    color: #7f7f7f;
+    font-size: $p;
+    font-weight: 700;
+    font-style: italic;
+}
+.appointment-block .group_link .shortDes {
+    display: inline-block;
+    padding: 0;
+    font: 12px $primary;
+    color: #333232;
+    font-weight: 900;
+}
+.appointment-block .group_link {
+    line-height: 2px;
+}
+.appointment-block .group_link a {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #4589ff;
+    font: 12px $primary;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    .appointment-list{
+        padding-top: 28px;
+        padding-bottom: 18px;
+    }
+    .appointment-block {
+        height: 130px;
+        margin-bottom: 21px;
+    }
+    .appointment-block .avatar {
+        width: 140px;
+        height: 128px;
+        overflow: hidden;
+        margin: 0 14px 0 0;
+    }
+    .appointment-block .iName {
+        font-size: $h6;
+        line-height: 18px;
+        width: calc(100% - 225px);
+    }
+    .appointment-block .iName a {
+        color: $black;
+    }
+    .appointment-block .iDate {
+        line-height: 18px;
+        color: #333232;
+        font-size: 14px;
+    }
+    .appointment-block .shortDes{
+        width: calc(100% - 168px);
+    }
+}
+
+@media (max-width: 479px) {
+    .appointment-block {
+        height: inherit;
+    }
+    .appointment-block .avatar {
+        width: 104px;
+        height: 98px;
+        overflow: hidden;
+        margin: 0 12px 0 0;
+    }
+    .appointment-block .titles {
+        padding: 6px 10px 0;
+    }
+    .appointment-block .iName{
+        width: calc(100% - 180px);
+    }
+    .appointment-block .iName a {
+        color: #99bd25;
+        font-size: $s13;
+        font-weight: 700;
+    }
+    .appointment-block .iDate {
+        color: #333232;
+        font-size: $s11;
+        line-height: 14px;
+    }
+    .appointment-block dd{
+        margin-left: 3px;
+    }
+    .appointment-block .shortDes {
+        color: #777;
+        font-size: $s11;
+        font-weight: 500;
+        margin-bottom: 0;
+        width: calc(100% - 128px);
+    }
+    .appointment-block ul{
+        clear:both;
+        padding: 5px 10px;
+    }
+    .appointment-block ul li{
+        line-height: 100%;
+    }
+    .appointment-block li a{
+        font-size: $s11;
+    }
+    .appointment-block .brand {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}

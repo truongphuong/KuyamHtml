@@ -1,0 +1,39 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Facebook{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block main %}
+<!-- .modal-facebook -->
+<div class="modal-form modal-facebook">
+    <div class="modal-header">
+        <h3 class="modal-title">Facebook sign up</h3>
+        <h4>please double check the info<br /> provided to us by Facebook is<br /> accurate</h4>
+    </div>
+    <div class="modal-body">
+        <fieldset>
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="thaotran@vinasource.com" />
+            <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="" href="terms.html">terms of use</a> and <a class="link-term" title="" href="terms.html#device-terms-tabs-2">privacy</a></div>
+            <button type="button" class="btn-green btn-form btn-sign-up">create account!</button>
+            <div class="alert-error">invalid</div>
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+        <hr />
+        <div class="text-right link-form">already have an account? <a class="link-login" title="" href="login.html">login</a></div>
+     </div>
+</div><!-- /.modal -->
+<!-- /.modal-facebook -->
+{% endblock %}
+
+{% block script %}{% endblock %}
+

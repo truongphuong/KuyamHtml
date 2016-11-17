@@ -1,0 +1,78 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Blogger{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .blog-page -->
+<section class="blog-page">
+    <div class="container">
+
+        {% include "./content/pages/blog/nav.html" %}
+
+        <!-- .blogger-section -->
+        <div class="blogger-section">
+            <div class="blogger-header"><a title="" href="">< back to article</a></div>
+
+            <!-- .blogger-info -->
+            <div class="blogger-info clearfix">
+
+                <header class="section-header clearfix">
+                    <div class="blogger-avatar" style="background-image:url(http://localhost:3000/content/images/upload/images/blogs/appointment-img.jpg);"></div>
+                    <h1>Tammy Patterson</h1>
+                </header>
+
+                <!-- .blogger-connect -->
+                <div class="blogger-connect">
+                    <dl>
+                        <dt>connect with this author:</dt>
+                        <dd><a title="" href="#"><img src="http://localhost:3000/content/images/icons/icon-feed.png" alt=""></a></dd>
+                        <dd><a title="" href="#"><img src="http://localhost:3000/content/images/icons/icon-fb.png" alt=""></a></dd>
+                        <dd><a title="" href="#"><img src="http://localhost:3000/content/images/icons/icon-twitter.png" alt=""></a></dd>
+                        <dd><a title="" href="#"><img src="http://localhost:3000/content/images/icons/icon-googleplus.png" alt=""></a></dd>
+                        <dd><a title="" href="#"><img src="http://localhost:3000/content/images/icons/icon-email.png" alt=""></a></dd>
+                    </dl>
+                </div>
+                <!-- /.blogger-connect -->
+
+            </div>
+            <!-- /.blogger-info -->
+
+            <!-- .blogger-details -->
+            <div class="blogger-details">
+               <i>this author writes for <a title="" href="#">Health &amp; Fitness</a> and <a title="" href="#">The Women’s Blog</a></i>
+            </div>
+            <!-- /.blogger-details -->
+
+            <!-- .blogger-footer -->
+            <div class="blogger-footer">
+
+                <header class="section-header">
+                    <h3>more posts by Tammy Patterson:</h3>
+                </header>
+
+                {% include "./content/pages/blog/list.html" %}
+
+                {% include "./content/partials/pagination.html" %}
+
+            </div>
+            <!-- /.blogger-footer -->
+
+        </div>
+        <!-- /.blogger-section -->
+
+    </div>
+</section>
+<!-- .blog-page -->
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+

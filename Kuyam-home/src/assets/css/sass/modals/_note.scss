@@ -1,0 +1,69 @@
+.modal-note .modal-header {
+    background: #97BC47;
+    padding: 15px;
+    color: $white;
+    text-align: left;
+}
+
+.modal-note .modal-header .close {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/icons/icon_close_green.png);
+    top: -13px;
+    right: -13px;
+}
+
+.modal-note .modal-header .close span {
+    display: none;
+}
+
+.modal-note .modal-header .modal-title {
+    margin: 0;
+}
+
+.modal-note .modal-body h2 {
+    font: 26px/30px $primary;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.modal-note .modal-body h4 {
+    font: 16px/20px $primary;
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+.modal-note .modal-body h4 time {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.modal-note .modal-body .btn-form,
+.modal-note .modal-body .btn-form:hover {
+    border: 0 none;
+    width: auto;
+    padding: 0 45px;
+    font: 22px/44px $primary;
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    .modal-note .modal-header .close {
+        width: 22px;
+        height: 22px;
+        background-image: url(images/icons/icon_close_white.png) !important;
+        top: 22px;
+        right: 20px;
+    }
+    .modal-note .modal-body .text-right {
+        text-align: center;
+    }
+}
+
+@media (max-width:480px) {
+    .modal-note .modal-header .modal-title {
+        font-size: 24px !important;
+        font-family: $primary;
+        font-weight: 500;
+    }
+}

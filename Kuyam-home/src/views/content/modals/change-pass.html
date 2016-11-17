@@ -1,0 +1,36 @@
+<!-- #changePassModal -->
+<div id="changePassModal" class="modal fade" role="dialog" aria-labelledby="changePasModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-change-password">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h4 id="changePasModalLabel" class="modal-title">Change password</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label class="form-label" for="txtFirstName">New password <span class="txt-required">*</span></label>
+                            <input id="txtFirstName" type="text" class="form-control" value="" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label class="form-label" for="txtLastName">Re-enter password <span class="txt-required">*</span></label>
+                            <input id="txtLastName" type="text" class="form-control" value="" onfocus="this.style.backgroundColor='white';" onblur="if(this.value==''){this.style.backgroundColor='';}else{this.style.backgroundColor='white';}" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            * Password minumum 6 characters
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-form btn-agree">change password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#changePassModal -->

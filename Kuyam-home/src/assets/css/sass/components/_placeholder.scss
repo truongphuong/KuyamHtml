@@ -1,0 +1,39 @@
+.modal-change-password{
+    .form-placeholder {
+        position: relative;
+    }
+
+    .form-placeholder .form-control {
+        background: transparent;
+        position: relative;
+        z-index: 2;
+    }
+
+    .form-placeholder .form-control:focus {
+        background: $white;
+    }
+
+    .form-placeholder label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 12px;
+        line-height: 40px;
+        z-index: 1;
+        font-family: $primary;
+        font-weight: 300;
+    }
+
+    @media (max-width: 1023px) {
+        .form-placeholder label {
+            line-height: 39px;
+        }
+    }
+
+    @media (max-width: 374px) {
+        .form-placeholder label {
+            line-height: 33px;
+        }
+    }
+}

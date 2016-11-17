@@ -1,0 +1,55 @@
+.settings-section,
+.modal-change-password,
+.modal-newsletter {
+    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $placeholder;
+    }
+    .form-control::-moz-placeholder { /* Firefox 19+ */
+        color: $placeholder;
+    }
+    .form-control:-ms-input-placeholder { /* IE 10+ */
+        color: $placeholder;
+    }
+    .form-control:-moz-placeholder { /* Firefox 18- */
+        color: $placeholder;
+    }
+
+    .form-control,
+    .form-control:focus {
+        font-size: $s17;
+        font-family: $primary;
+        font-weight: 300;
+        border-color: $border;
+        height: 40px;
+        color: $base;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+    }
+
+    .form-control[readonly] {
+        cursor: text;
+        background-color: $white;
+    }
+
+    @media (max-width: 1023px) {
+        .form-control,
+        .form-control:focus {
+            height: 39px;
+            border-color: #747474;
+            font-size: $s14;
+            font-weight: 400;
+        }
+    }
+
+    @media (max-width: 374px) {
+        .form-control,
+        .form-control:focus {
+            height: 33px;
+            font-size: $s11;
+        }
+    }
+}

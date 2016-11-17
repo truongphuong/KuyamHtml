@@ -1,0 +1,35 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Forgot{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<!-- .modal-forgot -->
+<div class="modal-form modal-forgot">
+    <div class="modal-header">
+        <h3 class="modal-title">forgot password?</h3>
+        <h4>enter your email to reset password</h4>
+    </div>
+    <div class="modal-body">
+        <fieldset>
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+            <button type="button" class="btn-green btn-form btn-continue">continue</button>
+            <div class="alert-error">invalid</div>
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+        <hr />
+        <div class="text-right link-form"><a class="link-create" title="" href="login.html">back to login</a></div>
+     </div>
+</div><!-- /.modal -->
+<!-- /.modal-forgot -->
+{% endblock %}
+
+{% block script %}{% endblock %}
+

@@ -1,0 +1,43 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Login{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .modal-login -->
+<div class="modal-form modal-login">
+    <div class="modal-header">
+        <h3 class="modal-title">welcome back!</h3>
+    </div>
+    <div class="modal-body">
+        <a title="" href="facebook-login.html" class="btn-blue btn-facebook">login with facebook</a>
+        <div class="form-or">
+            <hr />
+            <span>or</span>
+        </div>
+        <fieldset>
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+            <div class="text-right link-form"><a class="link-forgot" title="" href="forgot-password.html">forgot password?</a></div>
+            <button type="button" class="btn-green btn-form btn-login">login</button>
+            <div class="alert-error">invalid</div>
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+        <hr />
+        <div class="text-right link-form">don't have an account? <a class="link-create" title="" href="register.html">create account now</a></div>
+     </div>
+</div><!-- /.modal -->
+<!-- /.modal-login -->
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+

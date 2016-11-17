@@ -1,0 +1,158 @@
+.croppie-container {
+    width: 321px;
+    margin: 0 auto;
+    padding: 0;
+}
+.croppie-container .cr-viewport {
+    border-color: #bfbfbf;
+    box-shadow: 0 0 0 899px rgba(191, 191, 191, 0.5) !important;
+    /*width:228px !important;
+    height:228px !important;*/
+}
+.croppie-container .cr-boundary {
+    /*width:100% !important;
+    height:297px !important;*/
+    background: #fff;
+}
+.croppie-container .cr-boundary img.cr-image {
+    width: auto !important;
+}
+.croppie-container .croppie-caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 11px;
+    /*top: 50%;
+    -webkit-transform: translate(0px,-50%);
+    -moz-transform: translate(0px,-50%);
+    -o-transform: translate(0px,-50%);
+    -ms-transform: translate(0px,-50%);
+    transform: translate(0px,-50%);
+    color:$base;
+    font-size:$s18;*/
+}
+.croppie-container .croppie-caption .drag-section {
+    /*background: rgba(0, 0, 0, .5);
+    border-radius: 3px;*/
+    width: 75px;
+    height: 44px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 0; /*$s11;*/
+    background: url(images/boarding/img-drag-drop.png) no-repeat center center;
+    background-size: 75px auto;
+}
+/*.croppie-container .croppie-caption .icon {
+    position: relative;
+    bottom: -3px;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(images/boarding/icon-move.png) no-repeat center center;
+    background-size: contain;
+    display: none;
+}*/
+.croppie-container .spinner {
+    opacity: 0;
+}
+.croppie-container .croppie-image-loading .spinner {
+    opacity: 1;
+}
+.croppie-container .cr-slider {
+    -webkit-appearance: none;
+    height: 21px;
+}
+.croppie-container .cr-slider:focus {
+    outline: none;
+}
+.croppie-container .cr-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #d7d7d7;
+    border-radius: 1px;
+}
+.croppie-container .cr-slider::-webkit-slider-thumb {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #fff;
+    border: 2px solid #3b93ff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+    background: #d7d7d7;
+}
+.croppie-container .cr-slider::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #d7d7d7;
+    border-radius: 1px;
+}
+.croppie-container .cr-slider::-moz-range-thumb {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    border-color: transparent;
+    background: #fff;
+    border: 2px solid #3b93ff;
+    cursor: pointer;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.21) !important;
+}
+.croppie-container .cr-slider-wrap {
+    padding: 9px 12px 0;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 0;
+    width: 183px;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 38px;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    background: center center no-repeat;
+    background-size: 9px auto;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-in {
+    left: 0;
+    top: 0;
+    background-image: url(images/boarding/icon-subtract.png);
+    background-position: right center;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-out {
+    right: 0;
+    background-image: url(images/boarding/icon-plus.png);
+    background-position: left center;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .croppie-container .croppie-caption .drag-section {
+        background-image: url(images/boarding/img-drag-drop@2x.png);
+    }
+    /*.modal-boarding .croppie-container .croppie-caption .icon {
+        background-image: url(images/boarding/icon-move@2x.png);
+    }*/
+    .croppie-container .cr-slider-wrap .croppie-zoom-in {
+        background-image: url(images/boarding/icon-subtract@2x.png);
+    }
+    .croppie-container .cr-slider-wrap .croppie-zoom-out {
+        background-image: url(images/boarding/icon-plus@2x.png);
+    }
+}

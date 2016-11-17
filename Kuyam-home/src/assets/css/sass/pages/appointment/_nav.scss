@@ -1,0 +1,86 @@
+.appointments-section nav{
+    border-bottom:1px solid #b2b2b2;
+    min-height: 77px;
+}
+.appointments-section nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    line-height: 76px;
+}
+.appointments-section nav ul li{
+    display: inline-block;
+}
+.appointments-section nav ul.pull-left li{
+    font-size: $h6;
+    font-weight: 700;
+    color:rgba(51, 50, 50, .7);
+    background: url(images/ui/pages/appointment/icon_next@3x.png) right center no-repeat;
+    background-size: 16px auto;
+    padding-right: 33px;
+}
+.appointments-section nav ul.pull-right li{
+    padding-left: 40px;
+}
+.appointments-section nav ul.pull-right li a{
+    text-decoration: none;
+    color:#333232;
+}
+.appointments-section nav ul.pull-right li .num{
+    display: inline-block;
+    font-weight: 700;
+    font-size: $s13;
+    line-height: 18px;
+    color: $white;
+    min-width: 18px;
+    padding:0 5px;
+    border-radius: 9px;
+}
+.appointments-section nav ul.pull-right .li-all .num{
+    background: #2e3b46;
+}
+.appointments-section nav ul.pull-right .li-confirmed .num{
+    background: #9aca00;
+}
+.appointments-section nav ul.pull-right .li-proposed .num{
+    background: #498ff1;
+}
+.appointments-section nav ul.pull-right .li-pending .num{
+    background: #fca610;
+}
+.appointments-section nav ul.pull-right .li-cancelled .num{
+    background: #ff3939;
+}
+.appointments-section nav ul.pull-right li .text{
+    font-size: $h6;
+}
+.appointments-section nav ul.pull-right li.active .text{
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .appointments-section nav{
+        min-height: inherit;
+    }
+    .appointments-section nav .container{
+        padding:0;
+    }
+    .appointments-section nav ul.pull-left{
+        float: none !important;
+    }
+    .appointments-section nav ul.pull-left li{
+        display: block;
+        text-align: center;
+        background: none;
+        padding:13px 0 23px;
+        line-height: 120%;
+        min-height: 55px;
+    }
+    .appointments-section nav ul.pull-right{
+        display: none;
+    }
+}
+
+@media (max-width: 374px) {
+
+}

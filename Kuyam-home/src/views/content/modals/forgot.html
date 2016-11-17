@@ -1,0 +1,23 @@
+<!-- #forgotModal -->
+<div id="forgotModal" class="modal fade" role="dialog" aria-labelledby="forgotModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-form modal-forgot">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h3 id="forgotModalLabel" class="modal-title">Forgot password?</h3>
+                <h4>Enter your email to reset password</h4>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="Email" />
+                    <button type="button" class="btn-green btn-form btn-continue" data-target="#confirmModal" data-toggle="modal">continue</button>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+
+                <div class="text-center link-form">I don't have an account, <a class="link-create" title="create account now" data-target="#registerModal" data-toggle="modal" href="javascript:void(0);">create one</a></div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#forgotModal -->

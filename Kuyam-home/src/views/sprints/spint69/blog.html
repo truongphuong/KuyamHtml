@@ -1,0 +1,29 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .blog-page -->
+<section class="blog-page">
+    <div class="container">
+        {% include "./content/pages/blog/nav.html" %}
+
+        {% include "./content/pages/blog/list.html" %}
+
+        {% include "./content/partials/pagination.html" %}
+    </div>
+</section>
+<!-- /.blog-page -->
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+

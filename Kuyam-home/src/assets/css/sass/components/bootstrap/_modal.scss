@@ -1,0 +1,88 @@
+/*.on-device .modal-open .kuyam-wrapper {
+    position: fixed;
+    width: 100%;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+
+.modal-backdrop {
+    display: none;
+}*/
+.modal-open .modal {
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+.modal-signout,
+.modal-change-password,
+.modal-newsletter,
+.modal-unlock,
+.modal-appointment,
+.modal-notes,
+.modal-repeat{
+    &.modal-dialog{
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    .modal-content {
+        border: 1px solid #888;
+        border-radius: 4px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .modal-header {
+        text-align: center;
+        border: 0 none;
+        padding-top: 25px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .modal-header h4 {
+        font-size: $s19;
+        font-family: $primary;
+        font-weight: 600;
+        padding-bottom: 0;
+    }
+
+    .modal-header .close {
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .modal-body {
+        padding-bottom: 0;
+    }
+
+    .modal-footer {
+        padding-top: 0;
+        padding-bottom: 25px;
+        border: 0 none;
+    }
+
+    @media (min-width:1024px) {
+        .modal-body {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    @media (max-width:767px) {
+        .modal-footer{
+            padding-bottom: 20px;
+        }
+    }
+
+    @media (max-width:374px) {
+        .modal-footer{
+            padding-bottom: 15px;
+        }
+    }
+}

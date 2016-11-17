@@ -1,0 +1,234 @@
+.modal-offer {
+    width: 924px;
+}
+
+.modal-offer .modal-content {
+    min-height: 550px;
+    border-radius: 0;
+}
+
+.modal-offer .modal-header {
+    min-height: 100px;
+    background: #F3472D;
+    padding: 0;
+}
+
+.modal-offer .modal-header .close {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/icons/btn_close_black.png);
+    top: -15px;
+    right: -15px;
+}
+
+.modal-offer .modal-header .close span {
+    display: none;
+}
+
+.modal-offer .logo-offer {
+    float: left;
+    margin: 20px;
+}
+
+.modal-offer .event {
+    width: 600px;
+    max-height: 90px;
+    overflow: hidden;
+    color: $white;
+    font: 26px/30px $primary;
+    font-weight: 600;
+    margin: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+
+.modal-offer .modal-body {
+    padding: 0 0 20px;
+    font: 20px/24px $primary;
+    font-weight: 500;
+    color: #333;
+}
+
+.modal-offer .nav-tabs {
+    width: 100%;
+    padding: 20px 0 20px 2%;
+    border: 0 none;
+}
+
+.modal-offer .nav-tabs li {
+    float: left;
+    width: 31%;
+    margin: 0 2% 0 0;
+}
+
+.modal-offer .nav-tabs li a {
+    display: block;
+    height: 100px;
+    padding: 15px 10px;
+    font: 22px/26px $primary;
+    font-weight: 500;
+    color: #333;
+    border: 1px solid #333;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: $white;
+}
+
+.modal-offer .nav-tabs li i {
+    float: right;
+    font: 28px/32px $primary;
+    font-weight: 800;
+    margin: 2px 0;
+}
+
+.modal-offer .nav-tabs li.active a,
+.modal-offer .nav-tabs li a:hover {
+    color: $white;
+    background: #333;
+}
+
+.modal-offer .offer-info {
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-left: -15px;
+    border-left: 1px solid #333;
+}
+
+.modal-offer .offer-scroll {
+    min-height: 220px;
+    max-height: 220px;
+    overflow: auto;
+}
+
+.modal-offer .offer-description {
+    height: 45px;
+    background: url(images/ui/modals/offer/offer-description.png) center center no-repeat;
+    margin: 0 0 10px;
+}
+
+.modal-offer h3 {
+    font: 28px/32px $primary;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.modal-offer h2 {
+    font: 38px/42px $primary;
+    font-weight: 800;
+    text-align: center;
+}
+
+.modal-offer h2 span {
+    display: inline-block;
+}
+
+.modal-offer h2 .new-price {
+    color: #F3472D;
+}
+
+.modal-offer h2 .regular-price {
+    float: left;
+    width: 50%;
+    color: #ABABAB;
+    font: 14px/18px $primary;
+    font-weight: 800;
+}
+
+.modal-offer h2 .regular-price del {
+    font: 38px/42px $primary;
+    font-weight: 800;
+}
+
+.modal-offer h2 .saleoff {
+    float: left;
+    width: 50%;
+}
+
+.modal-offer h4 {
+    font: 26px/30px $primary;
+    font-weight: 500;
+}
+
+.modal-offer .btn-availability {
+    background: #333;
+    display: block;
+    height: 44px;
+    font: 18px/44px $primary;
+    font-weight: 700;
+    color: $white;
+    margin: 20px 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.modal-offer .offer-terms {
+    color: #F3472D;
+    text-decoration: none;
+}
+
+@media (max-width:968px) {
+    .modal-offer {
+        width: 95%;
+    }
+    .modal-offer .event {
+        width: 58%;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-offer {
+        width: auto;
+    }
+    .modal-offer .modal-header .close {
+        width: 22px;
+        height: 22px;
+        background-image: url(images/assets/icon_close_white.png);
+        top: 22px;
+        right: 20px;
+    }
+    .modal-offer .modal-body {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .modal-offer .event {
+        position: relative;
+        width: 90%;
+        margin: 0 auto 15px;
+        text-align: center;
+    }
+    .modal-offer .nav-tabs {
+        padding: 20px 10px;
+    }
+    .modal-offer .nav-tabs li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    .modal-offer .offer-info {
+        margin: 0;
+        border: 0 none;
+    }
+    .modal-offer h2,
+    .modal-offer h2 .regular-price del {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .modal-offer h4 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .modal-offer .nav-tabs li {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width:480px) {
+    .modal-offer .logo-offer {
+        width: 60%;
+    }
+}

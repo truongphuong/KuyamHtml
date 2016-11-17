@@ -1,0 +1,103 @@
+.modal-repeat{
+    width: 428px;
+}
+.modal-repeat .modal-header{
+    padding-top: 31px;
+    padding-bottom: 23px;
+}
+.modal-repeat .modal-header .modal-title{
+    font-size: $s21;
+    line-height: 28px;
+    color: #333232;
+}
+.modal-repeat .modal-header .modal-title span{
+    color: $negative;
+}
+.modal-repeat .modal-body{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.modal-repeat .modal-body p{
+    font-size: $h6;
+    line-height: 19px;
+    color: rgba(51, 50, 50, .7);
+    margin-bottom: 47px;
+}
+.modal-repeat .btn-form,
+.modal-repeat .btn-form:focus{
+    height: 34px;
+    margin-bottom: 15px;
+    width: 75%;
+    font-size: $s15;
+}
+.modal-repeat .panel-group{
+    width: 75%;
+    margin:0 auto 15px;
+    border: 1px solid $negative;
+}
+.modal-repeat .panel-group .panel{
+    border: 0 none;
+    box-shadow: none;
+    border-radius: 4px;
+}
+.modal-repeat .panel-default > .panel-heading{
+    background: $white;
+    border:0 none;
+    padding: 0;
+}
+.modal-repeat .panel-title{
+    font-size: 16px;
+    font-family: $second;
+}
+.modal-repeat .panel-title > a{
+    text-decoration: none;
+    display: block;
+    font-size: $s15;
+    color: $negative;
+    font-weight: 400;
+    height: 34px;
+    line-height: 32px;
+    border-radius: 4px;
+    position: relative;
+}
+.modal-repeat .panel-title > a:after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 37px;
+    height: 100%;
+    background: url(images/ui/modals/appointment-repeat/icon_down@3x.png) center center no-repeat;
+    background-size: 17px auto;
+}
+.modal-repeat .panel-title > a[aria-expanded="true"]:after{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+}
+.modal-repeat .panel-default > .panel-heading + .panel-collapse > .panel-body{
+    border: 0 none;
+}
+.modal-repeat .panel-body{
+    padding: 10px 15px;
+    text-align: left;
+}
+.modal-repeat .panel-body .cb-custom{
+}
+.modal-repeat .panel-body footer{
+    text-align: right;
+}
+.modal-repeat .panel-body footer a{
+    text-decoration: none;
+    color: $negative;
+    font-size: $p;
+    font-weight: 700;
+}
+
+@media(max-width: 767px){
+    .modal-repeat{
+        width: 100%;
+    }
+}

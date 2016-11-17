@@ -1,0 +1,23 @@
+{% extends './master/main-logged.html' %}
+
+{% block title %}Kuyam - Cancelled Appointments{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<section class="appointments-section">
+    {% include "./content/pages/appointment/nav.html" %}
+    <div class="container">
+        {% include "./content/pages/appointment/list-cancelled.html" %}
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-appointment.js"></script>
+{% endblock %}
+

@@ -1,0 +1,40 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Boarding{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<section class="">
+    <div class="container">
+        <br />
+        <input type="button" value="step 1" data-target="#boardingInfoModal" data-toggle="modal" />
+        <input type="button" value="step 2" data-target="#boardingTimeModal" data-toggle="modal" />
+        <input type="button" value="step 3" data-target="#boardingProfileModal" data-toggle="modal" />
+        <input type="button" value="step 4" data-target="#boardingPlanModal" data-toggle="modal" />
+        <input type="button" value="step 5" data-target="#boardingCompleteModal" data-toggle="modal" />
+        <input type="button" value="Continue" data-target="#continueModal" data-toggle="modal" />
+        <br /><br />
+    </div>
+</section>
+{% endblock %}
+
+{% block modal %}
+{% include "./content/modals/boarding-info.html" %}
+{% include "./content/modals/boarding-time.html" %}
+{% include "./content/modals/boarding-profile.html" %}
+{% include "./content/modals/boarding-plan.html" %}
+{% include "./content/modals/boarding-complete.html" %}
+{% include "./content/modals/category-chosen.html" %}
+{% include "./content/modals/continue.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-boarding.js"></script>
+{% endblock %}
+

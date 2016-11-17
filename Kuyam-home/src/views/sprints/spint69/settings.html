@@ -1,0 +1,65 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Settings{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .settings-section -->
+<section class="settings-section">
+    <div class="container">
+        <form class="kuyam-form">
+            <section class="mobile-section">
+                <div class="legend">Your account settings</div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="form-label" for="txtFirstName">First name <span class="txt-required">*</span></label>
+                        <input id="txtFirstName" type="text" class="form-control" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="form-label" for="txtLastName">Last name <span class="txt-required">*</span></label>
+                        <input id="txtLastName" type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="form-label" for="txtPhone">Cell phone number</label>
+                        <input id="txtPhone" type="text" class="form-control" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="form-label" for="txtEmail">Email address <span class="txt-required">*</span></label>
+                        <input id="txtEmail" type="text" class="form-control" />
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button class="btn btn-form btn-agree" data-toggle="modal" data-target="#changePassModal">Change password</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-form btn-agree">Save changes</button>
+                    </div>
+                </div>
+            </footer>
+        </form>
+    </div>
+</section>
+<!-- /.settings-section -->
+
+{% endblock %}
+
+{% block modal %}
+
+{% include "./content/modals/change-pass.html" %}
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+

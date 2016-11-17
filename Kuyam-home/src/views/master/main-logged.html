@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+{% include "./components/meta.html" %}
+
+{% block meta %}{% endblock %}
+
+{% include "./components/favicon.html" %}
+
+{% include "./components/fonts.html" %}
+
+{% include "./components/css.html" %}
+</head>
+<body>
+{% include "./partials/sidebar.html" %}
+
+<div class="wrapper {% block namepage %}{% endblock %}">
+{% include "./partials/header-logged.html" %}
+    <div class="site-banner">
+        {% block banner %}{% endblock %}
+    </div>
+
+    <section class="site-body">
+    {% block main %}{% endblock %}
+    </section>
+
+{% include "./partials/footer.html" %}
+</div>
+
+{% include "../content/modals/register.html" %}
+
+{% include "../content/modals/login.html" %}
+
+{% include "../content/modals/facebook.html" %}
+
+{% include "../content/modals/forgot.html" %}
+
+{% include "../content/modals/welcome.html" %}
+
+{% include "../content/modals/confirm.html" %}
+
+{% include "../content/modals/logout.html" %}
+
+{% block modal %}{% endblock %}
+
+{% include "../content/modals/terms.html" %}
+
+{% include "./partials/loading.html" %}
+
+{% include "./components/js.html" %}
+
+{% block script %}{% endblock %}
+</body>
+</html>

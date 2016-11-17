@@ -1,0 +1,56 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Favorites{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .favorites-section -->
+<section class="favorites-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-7">
+                <header class="section-header section-header-favorites text-center">
+                    <h2>
+                        my favorites
+                        <span class="icon-favorites"></span>
+                    </h2>
+                </header>
+
+                <div class="no-data no-data-favorites text-center">
+                    when you add a company to<br /> favorites, it will appear here
+                </div>
+
+                {% include "./content/pages/favorite/list-produts.html" %}
+
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <header class="section-header section-header-package text-center">
+                    <h2>
+                        my packages
+                        <span class="icon-packages"></span>
+                    </h2>
+                </header>
+
+                <div class="no-data no-data-package text-center">
+                    when you purchase a<br /> package it will appear here
+                </div>
+
+                {% include "./content/pages/favorite/list-packages.html" %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- .favorites-section -->
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+

@@ -1,0 +1,38 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Book{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<!-- .event-section -->
+<div class="event-section book-page">
+    <div class="container">
+        {% include "./content/pages/book/categories.html" %}
+
+        {% include "./content/pages/book/list.html" %}
+
+        {% include "./content/partials/pagination.html" %}
+
+    </div>
+</div>
+<!-- /.event-section -->
+
+<!-- .map -->
+<div class="map-details on-desktop">
+
+    <div id="google-map" class="google-map"></div>
+</div>
+<!-- /.map -->
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-book.js"></script>
+{% endblock %}
+

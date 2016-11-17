@@ -1,0 +1,298 @@
+.event-block {
+    height: 142px;
+    margin-bottom: 20px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+    color: #87b400;
+}
+.event-block:hover {
+    border: 1px solid #87b400;
+    -moz-box-shadow: 0px 4px 10px #aaa;
+    -webkit-box-shadow: 0px 4px 10px #aaa;
+    box-shadow: 0px 4px 10px #aaa;
+}
+.event-block .avatar {
+    float: left;
+    width: 147px;
+    height: 140px;
+    margin: 0 18px 0 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.event-block .titles {
+    padding: 12px 10px 0;
+}
+.event-block .iName {
+    margin-bottom: 2px;
+    font: 18px/22px $primary;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 232px);
+}
+.event-block .iName a {
+    text-decoration: none;
+    color: #99bd25;
+    font-size: 18px;
+    font-weight: 700;
+}
+.event-block .iAddress {
+    font: 16px/20px $primary;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333232;
+}
+.event-block .shortDes {
+    display: block;
+    color: #777;
+    text-align: justify;
+    font: 14px/18px $primary;
+    font-weight: 500;
+    padding: 0 10px;
+    margin-bottom: 3px;
+}
+.event-block .sale {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    line-height: 0;
+}
+.event-block .mark {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    padding:0;
+    background: transparent;
+}
+.event-block .mark img{
+    width: 100%;
+}
+.event-block .group_link a {
+    width: 65px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background: #8c8c8c;
+    color: #fff;
+    font: 14px/22px arial, sans-serif;
+    margin-right: 5px;
+}
+.event-block .group_link a.bg-green {
+    position: relative;
+    text-decoration: none;
+    padding: 0 5px !important;
+    background: white;
+    color: #99bd25;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 900;
+}
+.event-block .group_link a.bg-green:before {
+    right: -10px;
+    top: 3px;
+    content: '';
+    background-image: url(images/icons_2016/icon_green_more.png);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.event-block .group_link a.btn-availability {
+    width: auto;
+    padding: 0 10px;
+}
+.event-block .group_link .shortDes {
+    display: inline-block;
+    padding: 0;
+    font: 12px $primary;
+    color: #333232;
+    font-weight: 900;
+}
+.event-block .votes {
+    margin: 6px 0 4px;
+    min-height: 24px;
+}
+.event-block .votes span {
+    display: inline-block;
+    margin-right: 5px;
+}
+.event-block .votes .list-star {
+    float: left;
+}
+.event-block .votes .vote-icon {
+    float: left;
+    width: 18px;
+    height: 20px;
+    background: no-repeat center center;
+}
+.event-block .votes .yellow-star {
+    background-image: url(images/icons/icon_star_full.png);
+}
+.event-block .votes .gray-star {
+    background-image: url(images/icons/icon_star_empty.png);
+}
+.event-block .votes .total-review {
+    float: left;
+    font-size: 14px;
+    font-family: $primary;
+    font-weight: 500;
+    color: #333232;
+    line-height: 20px;
+}
+.event-block .votes .icon-like {
+    background-image: url(images/icons/like_1.png);
+    cursor: pointer;
+}
+.event-block .votes .icon-unlike {
+    background-image: url(images/icons/unlike.png);
+    cursor: pointer;
+}
+.event-block .group_link {
+    line-height: 2px;
+}
+.event-block .group_link a {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #4589ff;
+    font: 12px $primary;
+    margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+    .event-block {
+        height: 130px;
+    }
+    .event-block .avatar {
+        width: 140px;
+        height: 128px;
+        overflow: hidden;
+        margin: 0 14px 0 0;
+    }
+    .event-block .iName {
+        font-size: 14px;
+        line-height: 18px;
+        width: calc(100% - 225px);
+    }
+    .event-block .iName a {
+        color: #99bd25;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .event-block .iAddress {
+        line-height: 18px;
+        color: #333232;
+        font-size: 14px;
+    }
+    .event-block .group_link {
+        padding: 0 0.5% 10px;
+    }
+    .event-block .votes {
+        margin: 0px 0 6px;
+        min-height: 16px;
+    }
+}
+
+@media (max-width: 479px) {
+    .event-block {
+        height: 100px;
+    }
+    .event-block .avatar {
+        width: 104px;
+        height: 98px;
+        overflow: hidden;
+        margin: 0 12px 0 0;
+    }
+    .event-block .titles {
+        padding: 6px 10px 0;
+    }
+    .event-block .iName{
+        width: calc(100% - 180px);
+    }
+    .event-block .iName a {
+        color: #99bd25;
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .event-block .sale {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+    .event-block .shortDes {
+        display: block;
+        color: #777;
+        text-align: justify;
+        font: 11px $primary;
+        font-weight: 500;
+        padding: 0;
+        margin-bottom: 3px;
+    }
+    .event-block .iAddress {
+        color: #333232;
+        font-size: 11px;
+        line-height: 14px;
+        margin-bottom: 0px;
+    }
+    .event-block .votes {
+        margin: 0px 0 6px;
+        min-height: 12px;
+    }
+    .event-block .votes .total-review {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .event-block .votes .vote-icon {
+        width: 18px;
+        height: 18px;
+        float: left;
+        background-size: contain;
+    }
+    .event-block .votes .icon-unlike,
+    .event-block .votes .icon-like {
+        width: 16px;
+    }
+    .event-block .group_link a.bg-green {
+        background: white;
+        color: #99bd25;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 700;
+    }
+    .event-block .group_link a {
+        font: 11px $primary;
+    }
+}
+
+@media (max-width:350px) {
+    .event-block {
+        height: 142px;
+    }
+    .event-block .votes .list-star {
+        margin: 0 15% 8px 0;
+    }
+    .event-block .shortDes {
+        clear: both;
+    }
+    .event-block > .shortDes{
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .event-block .group_link{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    .event-block .group_link .shortDes{
+        padding-left: 0 !important;
+    }
+}

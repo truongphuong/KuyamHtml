@@ -1,0 +1,27 @@
+<!-- #facebookModal -->
+<div id="facebookModal" class="modal fade" role="dialog" aria-labelledby="facebookModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-form modal-facebook">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h3 id="facebookModalLabel" class="modal-title">Facebook sign up</h3>
+                <h4>Please double check the info provided to us by Facebook is accurate</h4>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="First name" />
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="Last name" />
+                    <input class="form-control form-read-only" type="text" value="thaotran@vinasource.com" readonly="readonly" />
+
+                    <button type="button" class="btn-green btn-form btn-sign-up">Create account!</button>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+
+               <div class="text-center link-form">I'm agree with <a class="link-login" title="login" data-target="#termsModal" data-toggle="modal" href="javascript:void(0);">terms &amp; privacy policy</a></div>
+                <div class="text-center link-form">I already have an account, <a class="link-login" title="login" data-target="#loginModal" data-toggle="modal" href="javascript:void(0);">login</a></div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#facebookModal -->
