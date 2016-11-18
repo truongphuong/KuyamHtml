@@ -33,15 +33,14 @@
 .modal-repeat .panel-group{
     width: 75%;
     margin:0 auto 15px;
-    border: 1px solid $negative;
 }
 .modal-repeat .panel-group .panel{
-    border: 0 none;
     box-shadow: none;
+    border: 1px solid $negative;
     border-radius: 4px;
 }
 .modal-repeat .panel-default > .panel-heading{
-    background: $white;
+    background: transparent;
     border:0 none;
     padding: 0;
 }
@@ -80,14 +79,44 @@
 .modal-repeat .panel-default > .panel-heading + .panel-collapse > .panel-body{
     border: 0 none;
 }
+.modal-repeat .collapse{
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+.modal-repeat .collapse.in{
+    visibility: visible;
+    height: inherit;
+}
 .modal-repeat .panel-body{
-    padding: 10px 15px;
+    padding: 0 15px;
     text-align: left;
+    line-height: 20px;
 }
 .modal-repeat .panel-body .cb-custom{
 }
+.modal-repeat .cb-mark:checked ~ .cb-label{
+    font-weight: 700;
+    color: $negative;
+}
+.modal-repeat .cb-mark ~ .cb-label{
+    font-size: $s13;
+    font-weight: 400;
+    margin: 0;
+}
+.modal-repeat .cb-mark:checked ~ .cb-label:before {
+    background-image: url(images/ui/modals/appointment-repeat/icon_checked@3x.png);
+}
+.modal-repeat .cb-mark ~ .cb-label:before {
+    width: 21px;
+    height:21px;
+    background: url(images/ui/modals/appointment-repeat/icon_check@3x.png) center center no-repeat;
+    background-size: 21px auto;
+    top: 2px;
+}
 .modal-repeat .panel-body footer{
     text-align: right;
+    padding: 3px 0 4px;
 }
 .modal-repeat .panel-body footer a{
     text-decoration: none;
@@ -99,5 +128,49 @@
 @media(max-width: 767px){
     .modal-repeat{
         width: 100%;
+    }
+    .modal-repeat .modal-header{
+        padding-top: 35px;
+        padding-bottom: 40px;
+    }
+    .modal-repeat .modal-body{
+        padding-bottom: 0;
+    }
+    .modal-repeat .modal-body p{
+        margin-bottom: 68px;
+    }
+    .modal-repeat .modal-footer{
+        padding-bottom: 9px;
+    }
+}
+
+@media(max-width: 374px){
+    .modal-repeat .modal-header{
+        padding-top: 29px;
+        padding-bottom: 30px;
+    }
+    .modal-repeat .modal-header .modal-title{
+        font-size: $s19;
+        line-height: 25px;
+    }
+    .modal-repeat .modal-body p{
+        margin-bottom: 57px;
+        font-size: $s14;
+    }
+    .modal-repeat .panel-group{
+        margin-bottom: 11px;
+    }
+    .modal-repeat .panel-title > a{
+        font-size: $s13;
+        height: 30px;
+        line-height: 28px;
+    }
+    .modal-repeat .btn-form,
+    .modal-repeat .btn-form:focus{
+        font-size: $s13;
+        height: 30px;
+    }
+    .modal-repeat .modal-footer{
+        padding-bottom: 5px;
     }
 }

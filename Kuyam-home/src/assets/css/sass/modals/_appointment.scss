@@ -1,5 +1,5 @@
 .modal-appointment{
-    width: 428px !important;
+    width: 428px;
 }
 .modal-appointment .modal-header{
     padding-top: 31px;
@@ -28,5 +28,33 @@
 @media(max-width: 767px){
     .modal-appointment{
         width: 100%;
+    }
+    .modal-appointment .modal-header{
+        padding-top: 35px;
+    }
+    .modal-appointment .modal-body{
+        padding-bottom: 0;
+    }
+    .modal-appointment .modal-footer{
+        padding-bottom: 9px;
+    }
+}
+
+@media(max-width: 767px){
+    .modal-appointment .modal-header{
+        padding-top: 29px;
+    }
+    .modal-appointment .modal-header .modal-title{
+        font-size: $s19;
+        line-height: 25px;
+    }
+    .modal-appointment .btn-form,
+    .modal-appointment .btn-form:focus{
+        font-size: $s13;
+        height: 30px;
+        margin-bottom: 11px;
+    }
+    .modal-appointment .modal-footer{
+        padding-bottom: 5px;
     }
 }
