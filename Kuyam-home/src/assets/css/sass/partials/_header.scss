@@ -5,13 +5,15 @@
     height: 58px;
     box-shadow: 0px 3px 16px rgba(0, 0, 0, .15);
 }
+.site-header .search-form{
+    float: left;
+}
 .site-header .navbar-header {
     position: relative;
 }
 .site-header .collapsed .icon-bar {
     background: #96B84E;
 }
-
 .site-header .logo {
     display: inline-block;
     margin: 16px 0 0;
@@ -20,97 +22,9 @@
     background: url(images/icons_2016/header_logo_kuyam@2x.png) center center no-repeat;
     background-size: 103px auto;
 }
-
 .site-header .logo img{
     display: none;
 }
-
-.site-header .search-form {
-    margin: 10px 25px 0px 32px;
-    float: left;
-    border: 1px solid #c6c6c6;
-    border-radius: 3px;
-}
-
-.site-header .search-form ::-webkit-input-placeholder {
-    color: #5f5f5f;
-    font-style: italic;
-
-}
-
-.site-header .search-form :-moz-placeholder {
-    color: #5f5f5f;
-    font-style: italic;
-    opacity: 1;
-}
-
-.site-header .search-form ::-moz-placeholder {
-    color: #5f5f5f;
-    font-style: italic;
-    opacity: 1;
-}
-
-.site-header .search-form :-ms-input-placeholder {
-    color: #5f5f5f;
-    font-style: italic;
-}
-
-.site-header .search-form fieldset {
-    width: 355px;
-    padding: 0 48px 0 0px;
-    margin: 0px 0 0 0px;
-    height: 36px;
-    border-radius: 3px;
-    background: url("images/icons_2016/header_icon_search.png") no-repeat 325px center;
-    background-size: 16px auto;
-}
-
-.site-header .search-form fieldset .btn-search {
-    background: transparent;
-    width: 45px;
-}
-
-.site-header .company-info {
-    width: 750px;
-    float: right;
-    margin: 25px 0 0;
-    text-align: right;
-}
-
-.site-header .company-info h1 {
-    font: 38px/46px 'Lato', sans-serif;
-    font-weight: 800;
-}
-
-.site-header .company-info h1 .company-name {
-    display: block;
-    max-width: 590px;
-    float: right;
-    height: 46px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: $white;
-    text-decoration: none;
-}
-
-.site-header .company-info .btnLiveChat {
-    display: inline-block;
-    margin: 0 25px;
-}
-
-.site-header .company-info address {
-    font: 22px/30px 'Lato', sans-serif;
-    font-weight: 500;
-}
-
-.site-header .company-info ul {
-    float: right;
-    margin: 0 0 0 20px;
-    font: 22px/30px 'Lato', sans-serif;
-    font-weight: 500;
-}
-
 .site-header .account-user {
     float: right;
     font: 13px/32px 'Lato', sans-serif;
@@ -118,7 +32,6 @@
     color: $white;
     margin: 8px;
 }
-
 .site-header .nav-account {
     display: none;
     position: absolute;
@@ -131,21 +44,16 @@
     border: none;
     top: 58px;
 }
-
-
 .site-header .username-header {
     font-weight: bold;
     display: inline-block;
 }
-
 .site-header .navbar-nav {
-    margin: -28px 0 0;
+    margin: -30px 0 0;
 }
-
 .site-header .navbar-nav li {
     padding: 0 10px 0 20px;
 }
-
 .site-header .navbar-nav > li > a,
 .site-header .navbar-nav > li > a:focus,
 .site-header .navbar-nav > li > a:visited {
@@ -170,13 +78,11 @@
 .site-header .navbar-nav li.active a {
     color: #96be3d;
 }
-
 .site-header .link-account-user .icon-down {
     background-image: url(images/icons_2016/header_icon_dropdown.png);
     margin: 0 -10px -3px 0px;
     background-size: 15px auto;
 }
-
 .site-header .link-account-user.open .icon-down {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
@@ -184,7 +90,6 @@
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
-
 .site-header .header-icon-sign-out {
     background-image: url(images/icons_2016/header_icon_sign_out.png);
     width: 10px;
@@ -193,7 +98,6 @@
     background-position: center 2px;
     background-repeat: no-repeat;
 }
-
 .site-header .header-icon-mini-settings {
     background-image: url(images/icons_2016/header_icon_mini_settings.png);
     width: 10px;
@@ -202,25 +106,21 @@
     background-position: center 1px;
     background-repeat: no-repeat;
 }
-
 .site-header .have-icon {
     position: relative;
 }
-
 .site-header .link-sign-out {
     position: absolute !important;
     top: 16px;
     right: 0px;
     font-size: 10px;
 }
-
 .site-header .link-settings {
     position: absolute !important;
     top: 16px;
     left: 20px;
     font-size: 10px;
 }
-
 .site-header .badge {
     position: absolute !important;
     top: -5px;
@@ -237,7 +137,6 @@
     display: block;
     padding: 0 3px
 }
-
 .site-header .navbar-toggle,
 .site-header .navbar-toggle:hover{
     background: transparent;
@@ -247,18 +146,15 @@
 .site-header .navbar-collapse {
     background: #2a2a2a;
 }
-
 .site-header .navbar-nav .link-account-user {
     min-width: 100px;
 }
-
 .site-header .link-account-user span {
     display: inline-block;
     width: 19px;
     height: 17px;
     background: center center no-repeat;
 }
-
 .site-header .navbar-toggle,
 .site-header .navbar-toggle:hover {
     background: transparent;
@@ -273,61 +169,50 @@
 .site-header .navbar-toggle:visited .icon-bar {
     background: #96B84E;
 }
-
 .detech-devices .site-header {
     height: 50px;
 }
-
 .detech-devices .site-header .container {
     width: 100%;
 }
-
 .detech-devices .site-header .navbar-header {
     float: none;
     margin-left: -15px;
     margin-right: -15px;
 }
-
 .detech-devices .site-header .logo {
     width: 117px;
     margin: 8px 0 0 15px;
 }
-
 .detech-devices .site-header .navbar-toggle {
     display: block;
     float: right;
 }
-
 .detech-devices .site-header .navbar-collapse {
     height: 1px;
     margin-left: -15px;
     margin-right: -15px;
     overflow: hidden;
 }
-
 .detech-devices .site-header .navbar-collapse.in {
     height: auto;
     overflow-y: auto;
 }
-
 .detech-devices .site-header .collapsing {
     height: 0;
     overflow: hidden;
 }
-
 .detech-devices .site-header .navbar-nav {
     padding: 16px 0 8px;
     margin: 0;
     float: none !important;
 }
-
 .detech-devices .site-header .navbar-nav li {
     float: left;
     margin: 0 0 15px;
     padding: 0 10px;
     width: 50%;
 }
-
 .detech-devices .site-header .navbar-nav li a {
     background: #333333;
     border: 1px solid $white;
@@ -335,14 +220,12 @@
     padding: 12px;
     text-align: center;
 }
-
 .detech-devices .site-header .navbar-nav li a.bg-green,
 .detech-devices .site-header .navbar-nav li a.bg-green:hover {
     background: #97BC47;
     color: $white;
     border: 1px solid #97BC47;
 }
-
 .detech-devices .site-header .nav-account {
     border: 0 none;
     display: block;
@@ -351,23 +234,12 @@
     right: inherit;
     top: inherit;
 }
-
 .detech-devices .site-header .nav-account dd {
     padding: 15px 0;
 }
-
 .detech-devices .link-img a {
     width: auto;
     display: block;
-}
-
-@media (min-width: 768px) and (max-width: 980px) {
-    .site-header .search-form fieldset {
-        background: url(images/icons_2016/header_icon_search.png) no-repeat 195px center;
-        width: 220px;
-        padding: 0 25px 0 0px;
-        background-size: 16px auto;
-    }
 }
 
 @media (max-width:979px) {
@@ -403,6 +275,9 @@
         min-height: 43px;
         height: 43px;
     }
+    .site-header .search-form{
+        display: none;
+    }
     .site-header .logo {
         width: 103px;
         margin: 8px 0 0 15px;
@@ -413,38 +288,6 @@
     .site-header .navbar-collapse,
     .site-header .navbar-collapse.in {
         display: none;
-    }
-    .site-header .search-form {
-        margin: 0px auto 0px;
-        float: left;
-        border: 1px solid #c6c6c6;
-        border-radius: 3px;
-        background-color: white;
-        width: 100%;
-        -moz-box-shadow: 0px 4px 10px #aaa;
-        -webkit-box-shadow: 0px 4px 10px #aaa;
-        box-shadow: 0px 4px 10px #aaa;
-        display: none;
-    }
-    .site-header .search-form fieldset {
-        width: 100%;
-        padding: 0 40px 0 0px;
-        margin: 0px 0 0 0px;
-        height: 36px;
-        border-radius: 3px;
-        background: url(images/icons_2016/header_icon_search.png) no-repeat 375px center;
-        position: relative;
-        background: none;
-    }
-    .site-header .search-form fieldset:before {
-        width: 30px;
-        height: 30px;
-        background: url(images/icons_2016/header_icon_search.png) no-repeat center center;
-        position: absolute;
-        right: 4px;
-        top: 3px;
-        content: '';
-        cursor: none;
     }
 }
 

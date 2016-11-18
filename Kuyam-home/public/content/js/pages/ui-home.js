@@ -12,4 +12,15 @@ $(document).ready(function () {
         next: '#next',
         auto: false
     });
+
+    if (isMobile.any()) {
+        $('#categorySelect').selectpicker({
+            mobile: true
+        });
+    } else {
+        $('#categorySelect').selectpicker({
+            dropupAuto: false
+        });
+    }
+    $('#unlockModal').modal('show');
 });

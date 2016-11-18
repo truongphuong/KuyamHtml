@@ -1,37 +1,63 @@
-.search-form .btnLiveChat {
-    float: left;
+.search-form {
+    margin: 10px 25px 0px 32px;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    width: 355px;
 }
-
 .search-form fieldset {
-    width: 320px;
-    float: left;
-    padding: 0 73px 0 28px;
-    margin: 5px 0 0 25px;
+    width: 100%;
     position: relative;
-    height: 34px;
+    padding: 0 48px 0 0px;
+    margin: 0;
+    height: 36px;
+    border-radius: 3px;
+}
+.search-form fieldset:before {
+    background: url(images/icons_2016/header_icon_search.png) no-repeat center center;
+    background-size: 16px auto;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
 }
 
 .search-form fieldset .form-control {
     background: transparent;
     border: 0 none;
     font-size: $s14;
-    line-height:18px;
     font-family: $primary;
     font-weight: 500;
     color: #8c8c8c;
     box-shadow: none;
-    font-style: italic;
 }
 
 .search-form fieldset .form-control:hover,
 .search-form fieldset .form-control:focus {
     box-shadow: none;
 }
+.search-form ::-webkit-input-placeholder {
+    color: #5f5f5f;
+    font-style: italic;
+}
+.search-form :-moz-placeholder {
+    color: #5f5f5f;
+    font-style: italic;
+    opacity: 1;
+}
+.search-form ::-moz-placeholder {
+    color: #5f5f5f;
+    font-style: italic;
+    opacity: 1;
+}
+.search-form :-ms-input-placeholder {
+    color: #5f5f5f;
+    font-style: italic;
+}
 
 .search-form fieldset .btn-search {
-    background: #96BE3D;
     height: 34px;
-    width: 73px;
     border: 0 none;
     position: absolute;
     top: 0;
@@ -41,6 +67,8 @@
     font-family: $primary;
     font-weight: 500;
     color: $black;
+    background: transparent;
+    width: 45px;
 }
 
 .search-form .tt-menu {
@@ -62,6 +90,17 @@
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
+    .search-form{
+        width: 220px;
+    }
+    .search-form fieldset {
+        padding: 0 25px 0 0px;
+    }
+    .search-form fieldset:before{
+        background-image: url(images/icons_2016/header_icon_search.png);
+        background-size: 16px auto;
+        width: 25px;
+    }
     .search-form .tt-menu{
         width: calc(100% + 27px);
     }
