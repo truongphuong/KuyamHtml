@@ -94,6 +94,18 @@
     border-radius: 3px;
 }
 
+.btn-pink:hover {
+    background: #cccccc;
+    color: $white;
+    border: 1px solid #cccccc;
+}
+.btn-pink,
+.btn-pink:focus {
+    background: #BA337A;
+    border: 1px solid #BA337A;
+    color: $white;
+}
+
 .btn[disabled],
 .btn[disabled]:hover,
 .btn[disabled]:focus{
@@ -109,8 +121,8 @@ button.close {
     opacity: 1;
     height: 40px;
     width: 40px;
-    background: url(images/dashboard/icon-close.png) center center no-repeat !important;
-    background-size: 12px auto !important;
+    background: url(images/dashboard/icon-close.png) center center no-repeat;
+    background-size: 12px auto;
 }
 button.close:focus,
 button.close:hover {
@@ -141,6 +153,6 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px)
 only screen and (              min-resolution:120dpi)      and (min-width:320px),
 only screen and (               min-resolution:2dppx)      and (min-width:320px){
     button.close {
-        background-image: url(images/dashboard/icon-close@2x.png) !important;
+        background-image: url(images/dashboard/icon-close@2x.png);
     }
 }

@@ -35,3 +35,15 @@ function loadmap(lat, lon, googleIcon) {
 
     });
 }
+
+$(document).ready(function(){
+    if(isMobile.any()){
+        $('#categorySelect').selectpicker({
+            mobile: true
+        });
+    }else{
+        $('#categorySelect').selectpicker({
+            dropupAuto: false
+        });
+    }
+});

@@ -87,6 +87,13 @@ function centerModal() {
     $dialog.css("margin-top", offset);
 }
 
+function refreshNiceScroll(sectionID){
+    $(sectionID + " .wrap-dropdown-menu-inner").attr('style', '');
+    $(sectionID + " .wrap-dropdown-menu-inner-content").attr('style', '');
+    $(sectionID + " .wrap-dropdown-menu-inner").getNiceScroll().resize();
+}
+
+
 function iscrollSelect(sectionID, scrollName) {
     var $sectionID = $('#' + sectionID),
         scrollID = '#' + scrollName;
@@ -113,7 +120,7 @@ function iscrollSelect(sectionID, scrollName) {
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content',
                     {
                         bouncescroll: false,
-                        cursorcolor: "#278CFE",
+                        cursorcolor: "#99bd25",
                         cursorborder: "1px solid transparent",
                         cursorborderradius: "5px",
                         cursorwidth: "7px",
@@ -145,7 +152,7 @@ function iscrollContent(sectionID) {
         {
             bouncescroll: false,
             autohidemode: false,
-            cursorcolor: "#278CFE",
+            cursorcolor: "#99bd25",
             cursorborder: "1px solid transparent",
             cursorborderradius: "5px",
             cursorwidth: "7px",

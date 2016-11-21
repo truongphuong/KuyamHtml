@@ -4,36 +4,58 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h3 id="notesModalLabel" class="modal-title">Appointment notes</h3>
-                <p>Eternal yoga Jul. 14th, 4:00 pm</p>
+                <h3 id="notesModalLabel" class="modal-title">Appointments notes</h3>
+                <p><span>Eternal yoga</span> <time>Jul. 14th, 4:00 pm</time></p>
             </div>
             <div class="modal-body">
-                <div class="item you">
-                    <section>
-                        <p>Hi guys! I just want to know how hard this class is. I really don´t want to end it like super tired!</p>
-                        <time>July 15th 12:21 am</time>
-                    </section>
-                    <span class="avatar" data-name="you"></span>
-                </div>
-                <div class="item me">
-                    <section>
-                        <p>Hi guys! I just want to know how hard this class is. I really don´t want to end it like super tired!</p>
-                        <time>July 15th 12:21 am</time>
-                    </section>
-                    <span class="avatar" data-name="me"></span>
-                </div>
-                <div class="item you">
-                    <section>
-                        <p>Hi guys! I just want to know how hard this class is. I really don´t want to end it like super tired!</p>
-                        <time>July 15th 12:21 am</time>
-                    </section>
-                    <span class="avatar" data-name="me"></span>
+                <div id="notesList" class="notes-list">
+                    <div class="scroll-content">
+                        <div class="item you">
+                            <div class="avatar initials" data-name="you"></div>
+                            <section>
+                                <p>Hi guys! I just want to know how hard this class is. I really don´t want to end it like super tired!</p>
+                                <time>July 15th 12:23 am</time>
+                            </section>
+                        </div>
+                        <div class="item me">
+                            <div class="avatar" data-name="me" style="background-image: url(http://localhost:3000/content/images/upload/images/events/1.jpg);"></div>
+                            <section>
+                                <p>In facilisis scelerisque dui vel dignissim. Sed nunc orci, ultricies congue vehicula quis, facilisis a orci. In aliquet facilisis condimentum. Donec at orci orci, a dictum justo. Sed a nunc non lectus fringilla suscipit!</p>
+                                <time>July 15th 12:25 am</time>
+                            </section>
+                        </div>
+                        <div class="item you">
+                            <div class="avatar" data-name="you" style="background-image: url(http://localhost:3000/content/images/upload/images/events/2.jpg);"></div>
+                            <section>
+                                <p>Thanks a lot for that quick response! but I don´t understand a single word of your weird latinesque language.</p>
+                                <time>July 15th 12:21 am</time>
+                            </section>
+                        </div>
+                        <div class="item me">
+                            <div class="avatar initials" data-name="me"></div>
+                            <section>
+                                <p>In facilisis scelerisque dui vel dignissim. Sed nunc orci, ultricies congue vehicula quis, facilisis a orci. In aliquet facilisis condimentum. Donec at orci orci, a dictum justo. Sed a nunc non lectus fringilla suscipit!</p>
+                                <time>July 15th 12:25 am</time>
+                            </section>
+                        </div>
+                        <div class="item you">
+                            <div class="avatar initials" data-name="me"></div>
+                            <section>
+                                <p>Thanks a lot for that quick response! but I don´t understand a single word of your weird latinesque language.</p>
+                                <time>July 15th 12:21 am</time>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
-
-
-             </div>
+                <form>
+                    <div class="form-notes">
+                        <input type="text" class="form-control" placeholder="Write a new note..." />
+                        <input type="button" />
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -1,22 +1,184 @@
 .modal-notes{
-    width: 370px !important;
+    width: 428px;
 }
-.modal-notes .modal-header h4 span{
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
+.modal-notes .modal-header{
+    padding-top: 16px;
+    padding-bottom: 19px;
 }
-.modal-notes .row{
-    margin-left: -8px;
-    margin-right: -8px;
+.modal-notes .modal-header .modal-title{
+    font-size: $s21;
 }
-.modal-notes div[class*="col-"]{
-    padding-left: 8px;
-    padding-right: 8px;
+.modal-notes .modal-header p{
+    font-size: $s13;
+    color: rgba(51, 50, 50, .9);
+}
+.modal-notes .modal-header p span{
+    display: inline-block;
+    margin:0 3px;
+}
+.modal-notes .modal-header p time{
+    display: inline-block;
+    font-weight: 700;
+    margin:0 3px;
+}
+.modal-notes .modal-body{
+    padding:21px 6px 26px 18px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+.modal-notes .notes-list{
+    height: 240px;
+    overflow-y:auto;
+}
+.on-nicescroll .modal-notes .notes-list{
+    height: 240px;
+    overflow-y:hidden;
+}
+.on-nicescroll .modal-notes .notes-list .wrap-dropdown-menu-inner{
+    height: 240px;
+}
+.on-nicescroll .modal-notes .notes-list .scroll-content{
+    padding-right: 12px;
+}
+.modal-notes .item{
+    line-height: 16px;
+    margin-bottom: 24px;
+}
+.modal-notes .item:last-child{
+    margin-bottom: 0;
+}
+.modal-notes .item:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.modal-notes .item .avatar{
+    width: 45px;
+    height: 45px;
+    position: relative;
+    background: center center no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.modal-notes .item .avatar.initials:before{
+    content: attr(data-name);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border:1px solid #99bd25;
+    color:#99bd25;
+    font-size: $s14;
+    font-weight: bold;
+    line-height: 43px;
+    text-align: center;
+}
+.modal-notes .item section{
+    width: calc(100% - 55px);
+    float: left;
+}
+.modal-notes .item p{
+    font-size: $s13;
+    color: #333232;
+}
+.modal-notes .item time{
+    font-size: $s9;
+    color: rgba(51, 50, 50, .6);
+    font-style: italic;
+}
+.modal-notes .item.me .avatar{
+    float: left;
+    margin-right: 10px;
+}
+.modal-notes .item.me p{
+    color: rgba(51, 50, 50, .9);
+}
+.modal-notes .item.you .avatar{
+    float: right;
+    margin-left: 10px;
+}
+.modal-notes .modal-footer{
+    padding: 4px 18px 8px;
+    background: #f9f9f9;
+    border-radius:0 0 4px 4px;
+}
+.modal-notes .modal-footer .form-notes{
+    position: relative;
+}
+.modal-notes .modal-footer .form-control{
+    border:0 none;
+    box-shadow: none;
+    font-style: italic;
+    font-size: $s15;
+    padding:0 45px 0 0;
+    background: transparent;
+}
+.modal-notes .modal-footer input[type="button"]{
+    position: absolute;
+    width: 45px;
+    height: 34px;
+    right: 0;
+    top:0;
+    border:0 none;
+    background:url(images/ui/modals/notes/icon_send@3x.png) center center no-repeat;
+    background-size: 26px auto;
 }
 
 @media(max-width: 767px){
     .modal-notes{
-        width: auto !important;
+        width: auto;
+    }
+    .modal-notes .modal-header{
+        padding-top: 12px;
+        padding-bottom: 17px;
+    }
+    .modal-notes .modal-header .modal-title{
+        font-size: $s19;
+    }
+    .modal-notes .modal-header p{
+        font-size: $p;
+        line-height: 22px;
+    }
+    .modal-notes .modal-body{
+        padding: 18px 2px 27px 10px;
+    }
+    .on-nicescroll .modal-notes .notes-list,
+    .on-nicescroll .modal-notes .notes-list .wrap-dropdown-menu-inner{
+        height: 242px;
+    }
+    .on-nicescroll .modal-notes .notes-list .scroll-content{
+        padding-right: 8px;
+    }
+    .modal-notes .item{
+        line-height: 14px;
+        margin-bottom: 24px;
+    }
+    .modal-notes .item .avatar{
+        width: 40px;
+        height: 40px;
+    }
+    .modal-notes .item section{
+        width: calc(100% - 50px);
+    }
+    .modal-notes .item .avatar:before{
+        font-size: $s13;
+        font-weight: bold;
+        line-height: 38px;
+        text-align: center;
+    }
+    .modal-notes .item p{
+        font-size: $p;
+    }
+    .modal-notes .item time{
+        font-size: $s8;
+    }
+    .modal-notes .modal-footer{
+        padding: 4px 10px 5px;
+    }
+    .modal-notes .modal-footer .form-control{
+        font-size: $s13;
     }
 }

@@ -1,0 +1,73 @@
+.votes {
+    margin: 6px 0 4px;
+    min-height: 24px;
+}
+.votes span {
+    display: inline-block;
+    margin-right: 5px;
+}
+.votes .list-star {
+    float: left;
+}
+.votes .vote-icon {
+    float: left;
+    width: 18px;
+    height: 20px;
+    background: no-repeat center center;
+}
+.votes .yellow-star {
+    background-image: url(images/icons/icon_star_full.png);
+}
+.votes .gray-star {
+    background-image: url(images/icons/icon_star_empty.png);
+}
+.votes .total-review {
+    float: left;
+    font-size: 14px;
+    font-family: $primary;
+    font-weight: 500;
+    color: #333232;
+    line-height: 20px;
+}
+.votes .icon-like {
+    background-image: url(images/icons/like_1.png);
+    cursor: pointer;
+}
+.votes .icon-unlike {
+    background-image: url(images/icons/unlike.png);
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .votes {
+        margin: 0px 0 6px;
+        min-height: 16px;
+    }
+}
+
+@media (max-width: 479px) {
+    .event-block .votes {
+        margin: 0px 0 6px;
+        min-height: 12px;
+    }
+    .event-block .votes .total-review {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .event-block .votes .vote-icon {
+        width: 18px;
+        height: 18px;
+        float: left;
+        background-size: contain;
+    }
+    .event-block .votes .icon-unlike,
+    .event-block .votes .icon-like {
+        width: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .event-block .votes .list-star {
+        margin: 0 15% 8px 0;
+    }
+}
