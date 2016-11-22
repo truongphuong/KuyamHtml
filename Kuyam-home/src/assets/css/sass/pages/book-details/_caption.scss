@@ -1,0 +1,134 @@
+.book-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.book-caption .avatar {
+    width: 196px;
+    height: 196px;
+    background: #333333 center center no-repeat;
+    background-size: cover;
+    border: 5px solid $white;
+    position: absolute;
+    bottom: 32px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15);
+}
+.book-caption .section-header {
+    position: relative;
+}
+.book-caption .section-header h2 {
+    display: inline-block;
+    color: $white;
+    font-size: $s31;
+    font-weight: 800;
+    padding-right: 30px;
+    position: relative;
+    margin-bottom: 7px;
+}
+.book-caption .section-header h2 .votes .vote-icon{
+    height: 100%;
+    position: absolute;
+    top:0;
+    right: 0;
+    margin:0;
+}
+.book-caption .info {
+    padding: 0 0 20px 280px;
+}
+.book-caption .votes .total-review{
+    color: $white;
+    font-size: $s14;
+    font-style: italic;
+    font-weight: 700;
+}
+.book-caption .info ul {
+    margin:0;
+    padding:0;
+    list-style-type: disc;
+    color: $white;
+}
+.book-caption .info ul li{
+    float: left;
+    margin: 0 0 5px 15px;
+    padding: 0 15px 0 0;
+    font-size: $s14;
+    line-height: 26px;
+}
+.book-caption .info ul li a{
+    color: $white;
+    text-decoration: underline;
+}
+.book-caption .info ul li:last-child{
+    list-style: none;
+    margin-left: 0;
+}
+.book-caption nav{
+    height: 77px;
+    background:rgba(0, 0, 0, .78);
+    border-top: 1px solid rgba(255, 255, 255, .64);
+    //box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.16);
+}
+.book-caption nav .nav-tabs{
+    background: transparent;
+    border:0 none;
+}
+.book-caption nav .nav-tabs li{
+}
+.book-caption nav .nav-tabs li a{
+    background-color: transparent;
+    display: block;
+    color: $white;
+    line-height: 76px;
+    font-size: $h6;
+    position: relative;
+    text-decoration: none;
+    padding:0 60px 0 33px;
+    border:0 none;
+}
+.book-caption nav .nav-tabs li a:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 23px;
+    height: 100%;
+    background: center center no-repeat;
+}
+.book-caption nav .nav-tabs li.li-appointment a:before{
+    background-image: url(images/ui/pages/book-details/icon_appointment@3x.png);
+    background-size: 19px auto;
+}
+.book-caption nav .nav-tabs li.li-review a:before{
+    background-image: url(images/ui/pages/book-details/icon_views@3x.png);
+    background-size: 19px auto;
+}
+.book-caption nav .nav-tabs li.li-package a:before{
+    background-image: url(images/ui/pages/book-details/icon_packages@3x.png);
+    background-size: 19px auto;
+}
+.book-caption nav .nav-tabs li.li-photo a:before{
+    background-image: url(images/ui/pages/book-details/icon_photos@3x.png);
+    background-size: 23px auto;
+}
+.book-caption nav .nav-tabs > li.active > a,
+.book-caption nav .nav-tabs > li.active > a:hover,
+.book-caption nav .nav-tabs > li.active > a:focus{
+    background-color: transparent;
+    border:0 none;
+    font-weight: 800;
+    color: #87b400;
+}
+.book-caption nav .nav-tabs li.active.li-appointment a:before{
+    background-image: url(images/ui/pages/book-details/icon_appointment_active@3x.png);
+}
+.book-caption nav .nav-tabs li.active.li-review a:before{
+    background-image: url(images/ui/pages/book-details/icon_views_active@3x.png);
+}
+.book-caption nav .nav-tabs li.active.li-package a:before{
+    background-image: url(images/ui/pages/book-details/icon_packages_active@3x.png);
+}
+.book-caption nav .nav-tabs li.active.li-photo a:before{
+    background-image: url(images/ui/pages/book-details/icon_photos_active@3x.png);
+}

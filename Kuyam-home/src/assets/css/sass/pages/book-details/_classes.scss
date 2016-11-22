@@ -1,0 +1,76 @@
+.class-list{
+}
+.class-list .date-list{
+    margin-bottom: 24px;
+}
+.class-list .date-list:last-child{
+    margin-bottom: 0;
+}
+.class-list .date-list > h5{
+    font-size: $h5;
+    font-weight: 700;
+    color: rgba(51, 50, 50, .9);
+    clear: both;
+    margin-bottom: 14px;
+}
+.class-list .date-list .item{
+    padding: 7px;
+    text-align: center;
+    border: 1px solid #b6b6b6;
+    border-radius: 2px;
+    margin-bottom: 6px;
+}
+.class-list .date-list .item time{
+    margin-top: 4px;
+    font-size: $s14;
+    color: rgba(51, 50, 50, .9);
+}
+.class-list .date-list .item h5{
+    font-size: $s19;
+    color: $black;
+    font-weight: 400;
+    margin-top:1px;
+}
+.class-list .date-list .item p{
+    font-size: $s14;
+    color: rgba(51, 50, 50, .9);
+    margin-top: 2px;
+    font-weight: 700;
+}
+.class-list .date-list .item ul{
+    margin:8px -3px 0;
+    padding:0;
+    list-style: none;
+}
+.class-list .date-list .item ul li{
+    float: left;
+    width: 33.3333%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding:0 3px;
+}
+.class-list .date-list .item ul li:not(:last-child){
+    font-size: $s14;
+    color: rgba(51, 50, 50, .9);
+    line-height: 30px;
+}
+.class-list .date-list .item ul li .btn{
+    width: 100%;
+    font-size: $s15;
+    color: #333232;
+    height: 30px;
+    padding:0;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .class-list .date-list .row{
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+    .class-list .date-list div[class*="col-"]{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}

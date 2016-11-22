@@ -223,12 +223,13 @@
     <div class="site-banner">
         
 
-<div class="slide_feature">
-    <ul id="slide_feature" class="rslides">
-        <li class="banner-massage" style="background-image:url(http://localhost:3000/content/images/ui/pages/home/banner/8.jpg);"></li>
-    </ul>
+<div id="bookCarousel" class="carousel slide book-slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="item active" style="background-image:url(http://localhost:3000/content/images/upload/images/events/3.jpg);">
+        </div>
+    </div>
 </div>
-<div class="caption-section">
+<div class="book-caption">
     <div class="container">
         <header class="section-header clearfix ">
             <div class="avatar" style="background-image:url(http://localhost:3000/content/images/icons/avatar_default.png);"></div>
@@ -240,25 +241,25 @@
                     <span class="vote-icon yellow-star"></span>
                     <span class="vote-icon yellow-star"></span>
                     <span class="vote-icon gray-star"></span>
-                    <span class="total-review">4 customer reviews</span>
+                    <span class="total-review">(4 reviews)</span>
                 </div>
                 <ul class="clearfix">
                     <li>Dance lessons</li>
                     <li>Yoga</li>
                     <li>Pilates</li>
                     <li>Boxing</li>
-                    <li>Birthday parties</li>
+                    <li><a title="" href="">+5 more</a></li>
                 </ul>
             </div>
         </header>
     </div>
     <nav>
         <div class="container">
-            <ul>
-                <li><a title="" href="">Schedule an appointment</a></li>
-                <li><a title="" href="">See customer reviews</a></li>
-                <li><a title="" href="">See packages</a></li>
-                <li><a title="" href="">Photos</a></li>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="li-appointment active"><a href="#appointment" aria-controls="appointment" role="tab" data-toggle="tab">Schedule an appointment</a></li>
+                <li role="presentation" class="li-review"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">See customer reviews</a></li>
+                <li role="presentation" class="li-package"><a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">See packages</a></li>
+                <li role="presentation" class="li-photo"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Photos</a></li>
             </ul>
         </div>
     </nav>
@@ -268,7 +269,637 @@
     </div>
 
     
+<div class="book-detail-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="appointment">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation"><a href="#service" aria-controls="service" role="tab" data-toggle="tab">Services</a></li>
+                            <li role="presentation" class="active"><a href="#class" aria-controls="class" role="tab" data-toggle="tab">Classes</a></li>
+                        </ul>
 
+                        <div class="select-what">
+
+                            <!-- .select-options -->
+                            <div class="dropdown select-options">
+                                <a title="" id="a-what" data-toggle="dropdown" href="#">
+                                    what would you like done?<br />
+                                </a>
+
+                                <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-what">
+                                    <li class="options-title options-title-offer"><span>special offers</span></li>
+                                    <li class="options-item options-item-offer">
+                                        <span class="options-info">
+                                            <span class="options-icon-mobile on-device"></span>
+                                            <span class="options-value">facial</span>
+                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
+                                        </span>
+                                        <span class="options-time">60m</span>
+                                        <span class="options-price"><ins class="hidden-xs">10% off!</ins> <span class="options-new-price">$60</span> <ins class="visible-xs">10% off!</ins> <del>$100</del></span>
+                                        <hr />
+                                    </li>
+                                    <li class="options-item options-item-offer">
+                                        <span class="options-info">
+                                            <span class="options-icon-mobile on-device"></span>
+                                            <span class="options-value">spa package</span>
+                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
+                                        </span>
+                                        <span class="options-time">45m</span>
+                                        <span class="options-price"><ins class="hidden-xs">10% off!</ins> <span class="options-new-price">$45</span> <ins class="visible-xs">10% off!</ins> <del>$100</del></span>
+                                        <hr />
+                                    </li>
+                                    <li class="options-title options-title-regular"><span>regular price</span></li>
+                                    <li class="options-item options-item-regular">
+                                        <span class="options-info">
+                                            <span class="options-icon-mobile on-device"></span>
+                                            <span class="options-value">Brazillian wax with nail service and full spa treatment</span>
+                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
+                                        </span>
+                                        <span class="options-time">90m</span>
+                                        <span class="options-price">$250</span>
+                                        <hr />
+                                    </li>
+                                    <li class="options-item options-item-regular">
+                                        <span class="options-info">
+                                            <span class="options-icon-mobile on-device"></span>
+                                            <span class="options-value">Brazillian wax</span>
+                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
+                                        </span>
+                                        <span class="options-time">30m</span>
+                                        <span class="options-price">$100</span>
+
+
+                                        <hr />
+                                    </li>
+                                    <li class="options-item options-item-regular">
+                                        <span class="options-info">
+                                            <span class="options-icon-mobile on-device"></span>
+                                            <span class="options-value">spin</span>
+                                            <a class="link-class" title="" href="javascript:void(0);" data-toggle="modal" data-target="#classModal">(class details)</a>
+                                        </span>
+                                        <span class="options-time">30m</span>
+                                        <span class="options-price">$100</span>
+                                        <hr />
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.select-options -->
+                        </div>
+                        <div class="select-staff">
+                            <select id="staffSelect">
+                                <option value="">Any staff</option>
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                                <option value="3">c</option>
+                                <option value="4">d</option>
+                            </select>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane" id="service">
+                                <!-- .site-calendar -->
+<div class="site-calendar clearfix">
+    <div class="bg-white-50"></div>
+
+    <!-- .slide-calendar -->
+    <div class="slide-calendar hidden-xs">
+        <a class="rslides_nav rslides1_nav prev" href="#">last<br />week</a>
+        <a class="rslides_nav rslides1_nav next" href="#">next<br />week</a>
+
+        <!-- .table-calendar -->
+        <span class="table-css table-calendar">
+
+            <!-- .table-calendar-header -->
+            <span class="table-row table-calendar-header">
+                <span class="table-cell">
+                    <span class="day">Today</span>
+                    <span class="datetime">Sep 1, 2014</span>
+                </span>
+                <span class="table-cell">
+                    <span class="day">Tuesday</span>
+                    <span class="datetime">Sep 2, 2014</span>
+                </span>
+                <span class="table-cell">
+                    <span class="day">Wednesday</span>
+                    <span class="datetime">Sep 3, 2014</span>
+                </span>
+                <span class="table-cell">
+                    <span class="day">Thursday</span>
+                    <span class="datetime">Sep 4, 2014</span>
+                </span>
+            </span>
+            <!-- /.table-calendar-header -->
+
+            <!-- /.table-calendar-body -->
+            <span class="table-row table-calendar-body">
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+            </span>
+            <!-- /.table-calendar-body -->
+
+        </span>
+        <!-- /.table-calendar -->
+
+    </div>
+    <!-- /.slide-calendar -->
+
+    <!-- .slide-calendar -->
+    <div class="slide-calendar visible-xs">
+        <a class="rslides_nav rslides1_nav prev" href="#">last<br />week</a>
+        <a class="rslides_nav rslides1_nav next" href="#">next<br />week</a>
+
+        <!-- .table-calendar -->
+        <span class="table-css table-calendar">
+
+            <!-- .table-calendar-header -->
+            <span class="table-row table-calendar-header">
+                <span class="table-cell">
+                    <span class="day">Today</span>
+                    <span class="datetime">Sep 1, 2014</span>
+                </span>
+                <span class="table-cell">
+                    <span class="day">Tuesday</span>
+                    <span class="datetime">Sep 2, 2014</span>
+                </span>
+            </span>
+            <!-- /.table-calendar-header -->
+
+            <!-- /.table-calendar-body -->
+            <span class="table-row table-calendar-body">
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+                <!-- .table-cell -->
+                <span class="table-cell">
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                    <span class="session">
+                        <span class="session-item session-service">
+                            <span class="session-time">9:30am</span>
+                            <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-checkout">Book it!</a>
+                        </span>
+                    </span>
+                </span>
+                <!-- /.table-cell -->
+
+            </span>
+            <!-- /.table-calendar-body -->
+
+        </span>
+        <!-- /.table-calendar -->
+
+    </div>
+    <!-- /.slide-calendar -->
+
+</div>
+<!-- /.site-calendar -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane active" id="class">
+                                <div class="class-list">
+    <div id="classList">
+        <div class="scroll-content">
+            <div class="date-list">
+                <h5>Monday July 14th</h5>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="date-list">
+                <h5>Monday July 14th</h5>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="item">
+                            <time>4:00 pm - 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="reviews">
+                        <div class="view-list">
+    <div id="viewList">
+        <div class="scroll-content">
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="packages">
+                        <div class="package-list">
+    <h5>Availabel packages</h5>
+    <div id="packageList">
+        <div class="scroll-content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+
+                    <!-- .package-block -->
+                    <div class="package-block">
+                        <div class="package-img" style="background-image:url(http://localhost:3000/content/images/upload/images/packages/package-1.jpg);"></div>
+                        <div class="package-info">
+                            <h3>5 massage pack</h3>
+                            <div class="package-purchase">
+                                <span class="package-price">$90</span>
+                                <a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                            </div>
+                            <div class="package-service">
+                                $18/massage<br />
+                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#packageModal">4 services</a><br />
+                                expires 1 year after purchase
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.package-block -->
+
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+                    <!-- .package-block -->
+                    <div class="package-block">
+                        <div class="package-img" style="background-image:url(http://localhost:3000/content/images/upload/images/packages/package-1.jpg);"></div>
+                        <div class="package-info">
+                            <h3>5 massage pack</h3>
+                            <div class="package-purchase">
+                                <span class="package-price">$90</span>
+                                <a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                            </div>
+                            <div class="package-service">
+                                $18/massage<br />
+                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#packageModal">4 services</a><br />
+                                expires 1 year after purchase
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.package-block -->
+
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+                    <!-- .package-block -->
+                    <div class="package-block">
+                        <div class="package-img" style="background-image:url(http://localhost:3000/content/images/upload/images/packages/package-1.jpg);"></div>
+                        <div class="package-info">
+                            <h3>5 massage pack</h3>
+                            <div class="package-purchase">
+                                <span class="package-price">$90</span>
+                                <a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                            </div>
+                            <div class="package-service">
+                                $18/massage<br />
+                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#packageModal">4 services</a><br />
+                                expires 1 year after purchase
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.package-block -->
+
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+
+                    <!-- .package-block -->
+                    <div class="package-block">
+                        <div class="package-img" style="background-image:url(http://localhost:3000/content/images/upload/images/packages/package-1.jpg);"></div>
+                        <div class="package-info">
+                            <h3>5 massage pack</h3>
+                            <div class="package-purchase">
+                                <span class="package-price">$90</span>
+                                <a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                            </div>
+                            <div class="package-service">
+                                $18/massage<br />
+                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#packageModal">4 services</a><br />
+                                expires 1 year after purchase
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.package-block -->
+
+                </div>
+                <div class="col-xs-12 col-sm-6">
+
+                    <!-- .package-block -->
+                    <div class="package-block">
+                        <div class="package-img" style="background-image:url(http://localhost:3000/content/images/upload/images/packages/package-1.jpg);"></div>
+                        <div class="package-info">
+                            <h3>5 massage pack</h3>
+                            <div class="package-purchase">
+                                <span class="package-price">$90</span>
+                                <a title="" href="#" class="btn-green btn-purchase">purchase</a>
+                            </div>
+                            <div class="package-service">
+                                $18/massage<br />
+                                applies to: <a title="" href="javascript:void(0);" data-toggle="modal" data-target="#packageModal">4 services</a><br />
+                                expires 1 year after purchase
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.package-block -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="photos">
+                        <div class="photo-list">
+    <h5>Photo gallery</h5>
+    <div id="photoList">
+        <div class="scroll-content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/1.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/2.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/3.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/4.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/5.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/6.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/7.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/8.jpg" /></div>
+                <div class="col-xs-12 col-sm-6"><img alt="" src="http://localhost:3000/content/images/upload/images/events/9.jpg" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="book-aside">
+    <section class="info">
+        <h5>Business info</h5>
+
+        <!-- .map -->
+        <div class="map">
+            <div id="google-map-1" class="google-map"></div>
+        </div>
+        <!-- /.map -->
+
+        <ul>
+            <li class="li-location">
+            1901 Avenue of the Stars, Suite 1900
+            <br />
+            Los Angeles, CA 90067
+            </li>
+            <li class="li-phone"><a title="" href="tel:+1-310-461-1515">(310) 461-1515</a></li>
+            <li class="li-website">
+                <a href="#" title="">Amy'sHairSalon.com</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="opening">
+        <h5>Business hours:</h5>
+        <div class="table-css">
+            <div class="table-row">
+                <div class="table-cell">Sun</div>
+                <div class="table-cell"><strong>CLOSED</strong></div>
+                <div class="table-cell"></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Mon</div>
+                <div class="table-cell">9:00am - 9:00pm</div>
+                <div class="table-cell"><i>open now</i></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Tue</div>
+                <div class="table-cell">9:00am - 9:00pm</div>
+                <div class="table-cell"></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Wed</div>
+                <div class="table-cell">9:00am - 9:00pm</div>
+                <div class="table-cell"></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Thur</div>
+                <div class="table-cell">9:00am - 9:00pm</div>
+                <div class="table-cell"></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Fri</div>
+                <div class="table-cell">9:00am - 9:00pm</div>
+                <div class="table-cell"></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Sat</div>
+                <div class="table-cell"><strong>CLOSED</strong></div>
+                <div class="table-cell"></div>
+            </div>
+        </div>
+    </section>
+    <section class="payment">
+        <h5>Payment options</h5>
+        <ul>
+            <li>Credit card</li>
+            <li>PayPal</li>
+            <li>Pay in person</li>
+        </ul>
+    </section>
+    <section class="policy">
+        <h5>Cancellation policy</h5>
+        <ul>
+            <li>this appointment have a 24-hours cancellation policy. if you modify or cancel 24 hours before this appointment or later, you will be charge 50% of total amount.</li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     <div class="kuyam-footer">
@@ -502,6 +1133,100 @@
 </div>
 <!-- /##signOutModal -->
 
+
+<!-- #classModal -->
+<div id="classModal" class="modal fade" role="dialog" aria-labelledby="classModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-details modal-class">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">class details</h4>
+            </div>
+            <div class="modal-body">
+                <h3>spa:</h3>
+                <p>
+                    Take advantage of our wonderful spa designed to help you leave your hectic life at the door and close yourself in a world of relaxation and well-being.
+                </p>
+            </div>
+            <div class="modal-footer clearfix">
+                <span class="package-price">
+                    <span>60 min</span>
+                    <span>$75</span>
+                </span>
+                <button type="button" class="btn-pink btn-book">book now</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#classModal -->
+<!-- #serviceModal -->
+<div id="serviceModal" class="modal fade" role="dialog" aria-labelledby="serviceModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-details modal-service">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">service details</h4>
+            </div>
+            <div class="modal-body">
+                <h3>5 massage pack</h3>
+                <p>
+                    $18/massage
+                    <br />
+                    expires 1 year after purchase
+                </p>
+                <h4>applies to following services:</h4>
+                <p>
+                    hot stone massage
+                    <br />
+                    deep tissue massage
+                    <br />
+                    swedish massage therapy
+                    <br />
+                    aromatherapy massage
+                </p>
+            </div>
+            <div class="modal-footer clearfix">
+                <span class="package-price"><span>$75</span></span>
+                <button type="button" class="btn-green btn-book">purchase</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#serviceModal -->
+<!-- #packageModal -->
+<div id="packageModal" class="modal fade" role="dialog" aria-labelledby="packageModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-details modal-package">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 id="packageModalLabel" class="modal-title">service details</h4>
+            </div>
+            <div class="modal-body">
+                <h3>5 massage pack</h3>
+                <p>
+                    $18/massage
+                    <br />
+                    expires 1 year after purchase
+                </p>
+                <h4>applies to following services:</h4>
+                <p>
+                    hot stone massage
+                    <br />
+                    deep tissue massage
+                    <br />
+                    swedish massage therapy
+                    <br />
+                    aromatherapy massage
+                </p>
+            </div>
+            <div class="modal-footer clearfix">
+                <span class="package-price"><span>$75</span></span>
+                <button type="button" class="btn-green btn-purchase">purchase</button>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#packageModal -->
 
 
 <!-- #termsModal -->
@@ -1370,7 +2095,8 @@
 
 
 
-<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-blog.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-book-details.js"></script>
 
 </body>
 </html>
