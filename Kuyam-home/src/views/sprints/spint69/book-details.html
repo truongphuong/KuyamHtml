@@ -7,6 +7,10 @@
 <meta name="keywords" content="3" />
 {% endblock %}
 
+{% block css %}
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/tooltipster.css" />
+{% endblock %}
+
 {% block banner %}
 
 {% include "./content/pages/book-details/banner.html" %}
@@ -20,97 +24,25 @@
             <div class="col-xs-12 col-sm-8">
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="appointment">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation"><a href="#service" aria-controls="service" role="tab" data-toggle="tab">Services</a></li>
-                            <li role="presentation" class="active"><a href="#class" aria-controls="class" role="tab" data-toggle="tab">Classes</a></li>
+                        <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
+                            <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
                         </ul>
+                        <div class="book-option clearfix">
+                            {% include "./content/pages/book-details/what.html" %}
 
-                        <div class="select-what">
-
-                            <!-- .select-options -->
-                            <div class="dropdown select-options">
-                                <a title="" id="a-what" data-toggle="dropdown" href="#">
-                                    what would you like done?<br />
-                                </a>
-
-                                <ul class="dropdown-menu options-text" role="menu" aria-labelledby="a-what">
-                                    <li class="options-title options-title-offer"><span>special offers</span></li>
-                                    <li class="options-item options-item-offer">
-                                        <span class="options-info">
-                                            <span class="options-icon-mobile on-device"></span>
-                                            <span class="options-value">facial</span>
-                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
-                                        </span>
-                                        <span class="options-time">60m</span>
-                                        <span class="options-price"><ins class="hidden-xs">10% off!</ins> <span class="options-new-price">$60</span> <ins class="visible-xs">10% off!</ins> <del>$100</del></span>
-                                        <hr />
-                                    </li>
-                                    <li class="options-item options-item-offer">
-                                        <span class="options-info">
-                                            <span class="options-icon-mobile on-device"></span>
-                                            <span class="options-value">spa package</span>
-                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
-                                        </span>
-                                        <span class="options-time">45m</span>
-                                        <span class="options-price"><ins class="hidden-xs">10% off!</ins> <span class="options-new-price">$45</span> <ins class="visible-xs">10% off!</ins> <del>$100</del></span>
-                                        <hr />
-                                    </li>
-                                    <li class="options-title options-title-regular"><span>regular price</span></li>
-                                    <li class="options-item options-item-regular">
-                                        <span class="options-info">
-                                            <span class="options-icon-mobile on-device"></span>
-                                            <span class="options-value">Brazillian wax with nail service and full spa treatment</span>
-                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
-                                        </span>
-                                        <span class="options-time">90m</span>
-                                        <span class="options-price">$250</span>
-                                        <hr />
-                                    </li>
-                                    <li class="options-item options-item-regular">
-                                        <span class="options-info">
-                                            <span class="options-icon-mobile on-device"></span>
-                                            <span class="options-value">Brazillian wax</span>
-                                            <a class="link-service" title="" href="javascript:void(0);" data-toggle="modal" data-target="#serviceModal">(details)</a>
-                                        </span>
-                                        <span class="options-time">30m</span>
-                                        <span class="options-price">$100</span>
-
-
-                                        <hr />
-                                    </li>
-                                    <li class="options-item options-item-regular">
-                                        <span class="options-info">
-                                            <span class="options-icon-mobile on-device"></span>
-                                            <span class="options-value">spin</span>
-                                            <a class="link-class" title="" href="javascript:void(0);" data-toggle="modal" data-target="#classModal">(class details)</a>
-                                        </span>
-                                        <span class="options-time">30m</span>
-                                        <span class="options-price">$100</span>
-                                        <hr />
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- /.select-options -->
-                        </div>
-                        <div class="select-staff">
-                            <select id="staffSelect">
-                                <option value="">Any staff</option>
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                                <option value="3">c</option>
-                                <option value="4">d</option>
-                            </select>
+                            {% include "./content/pages/book-details/who.html" %}
                         </div>
                         <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane" id="service">
+                            <div role="tabpanel" class="tab-pane active" id="services">
                                 {% include "./content/pages/book-details/services.html" %}
                             </div>
-                            <div role="tabpanel" class="tab-pane active" id="class">
+                            <div role="tabpanel" class="tab-pane" id="classes">
                                 {% include "./content/pages/book-details/classes.html" %}
                             </div>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="reviews">
+                    <div role="tabpanel" class="tab-pane" id="views">
                         {% include "./content/pages/book-details/views.html" %}
                     </div>
                     <div role="tabpanel" class="tab-pane" id="packages">
@@ -133,10 +65,12 @@
 {% include "./content/modals/classes.html" %}
 {% include "./content/modals/services.html" %}
 {% include "./content/modals/packages.html" %}
+{% include "./content/modals/checkout.html" %}
 {% endblock %}
 
 {% block script %}
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery.tooltipster.min.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-book-details.js"></script>
 {% endblock %}
 

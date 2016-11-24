@@ -43,15 +43,13 @@
     list-style: none;
 }
 .class-list .date-list .item ul li{
-    float: left;
+    float: right;
     width: 33.3333%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding:0 3px;
 }
 .class-list .date-list .item ul li:not(:last-child){
-    font-size: $s14;
+    float: left;
+    font-size: $s13;
     color: rgba(51, 50, 50, .9);
     line-height: 30px;
 }
@@ -72,5 +70,11 @@
     .class-list .date-list div[class*="col-"]{
         padding-left: 3px;
         padding-right: 3px;
+    }
+    .on-nicescroll .class-list .wrap-dropdown-menu-inner{
+        height: 715px;
+    }
+    .on-nicescroll .class-list .scroll-content{
+        padding-right: 36px;
     }
 }

@@ -1,4 +1,4 @@
-.package-list h5{
+.package-section h5{
     font-size: $s21;
     font-family: $primary;
     color: #333232;
@@ -6,53 +6,48 @@
     margin-bottom: 38px;
 }
 .package-list .package-block {
-    margin: 0 0 10px;
-    min-height: 352px;
-    overflow: hidden;
-    border: 1px solid #999999;
+    margin: 0 0 28px;
+    min-height: 276px;
+    border: 1px solid #b6b6b6;
+    text-align: center;
 }
 .package-list .package-block .package-img {
-    height: 174px;
+    height: 151px;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
     background: center center no-repeat;
     background-size: cover;
 }
 .package-list .package-block .package-info {
-    padding: 10px;
+    padding: 10px 10px 13px;
 }
 .package-list .package-info h3 {
-    font: 22px/30px 'Lato', sans-serif;
-    font-weight: 500;
-    color: #333333;
+    font-size: $s18;
+    font-family: $primary;
+    color: #3d3d3d;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
-.package-list .package-block .package-purchase {
-    padding: 15px 0;
+.package-list .package-info p {
+    font-size: $s11;
+    line-height: 17px;
+    color: #3d3d3d;
+    margin-bottom: 8px;
 }
-.package-list .package-purchase .package-price {
-    font: 22px/36px 'Lato', sans-serif;
-    font-weight: 500;
-    color: #333333;
+.package-list .package-info .btn {
+    font-size: $s15;
+    border-radius: 0;
+    padding:0;
+    color: #333232;
+    height: 29px;
+    width: 116px;
 }
-.package-list .package-purchase .btn-purchase {
-    float: right;
-    display: inline-block;
-    width: 110px;
-    font: 20px/36px 'Lato', sans-serif;
-    font-weight: 500;
-    color: #8ab21e;
-    padding: 0 15px;
-    text-decoration: none;
-}
-.package-list .package-purchase .btn-purchase:hover{
-    width: 110px;
-}
-.package-list .package-block .package-service {
-    font: 20px/28px 'Lato', sans-serif;
-    font-weight: 500;
-    color: #333333;
-}
-.package-list .package-service a {
-    font: 18px/33px 'Lato', sans-serif;
-    font-weight: 500;
-    color: #99cc66;
-    text-decoration: underline;
+@media (min-width: 768px) {
+    .on-nicescroll .package-list .wrap-dropdown-menu-inner{
+        height: 797px;
+    }
+    .on-nicescroll .package-list .scroll-content{
+        padding-right: 36px;
+    }
 }

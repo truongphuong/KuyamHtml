@@ -1,0 +1,64 @@
+.view-section h5{
+    font-size: $s21;
+    font-family: $primary;
+    color: #333232;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 33px;
+}
+.view-section h5 span{
+    color:#9bb54e;
+}
+.view-list .item{
+    padding: 15px 150px 15px 20px;
+    position: relative;
+    border: 1px solid #9c9c9c;
+    border-radius: 2px;
+    margin-bottom: 17px;
+}
+.view-list .item p{
+    font-size: $h6;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgba(51, 50, 50, .9);
+}
+.view-list .item p strong{
+    font-weight: 700;
+}
+.view-list .item .btn{
+    width: 103px;
+    height: 34px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    border-radius: 0;
+}
+.view-list .item .votes{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+.view-list .item .votes .vote-icon{
+    background-size: 19px auto;
+}
+.view-list .item .votes .gray-star{
+    background-image: url(images/ui/pages/book-details/views/icon_star_empty@3x.png);
+}
+.view-list .item .votes .yellow-star{
+    background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png);
+}
+.view-list .item time{
+    font-size: $p;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(51, 50, 50, .9);
+}
+
+@media (min-width: 768px) {
+    .on-nicescroll .view-list .wrap-dropdown-menu-inner{
+        height: 770px;
+    }
+    .on-nicescroll .view-list .scroll-content{
+        padding-right: 36px;
+    }
+}
