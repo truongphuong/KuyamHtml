@@ -22,16 +22,6 @@
     left: 0;
     background: center center no-repeat;
 }
-.book-aside .map{
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 9px 13px 0 rgba(0, 0, 0, 0.11);
-    margin:0;
-    height: 138px;
-}
-.book-aside .google-map{
-    height: 138px;
-}
 .book-aside ul{
     margin:0;
     padding:0;
@@ -47,6 +37,16 @@
 .book-aside .info h5:before{
     background-image: url(images/ui/pages/book-details/info/icon_info@3x.png);
     background-size: 19px auto;
+}
+.book-aside .info .map{
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 9px 13px 0 rgba(0, 0, 0, 0.11);
+    margin:0;
+    height: 138px;
+}
+.book-aside .info .google-map{
+    height: 138px;
 }
 .book-aside .info ul{
     margin-top: 23px;
@@ -148,6 +148,40 @@
 
 @media (max-width: 767px) {
     .book-aside{
+        box-shadow: none;
+        background: $white;
+        border:0 none;
+        padding:0;
+        margin:0;
+    }
+    .book-aside h5{
+        color: #333232;
+        padding-left: 0;
+    }
+    .book-aside h5:before{
+        background-image: none !important;
+    }
+    .book-aside ul li{
+        padding-left:0;
+    }
+    .book-aside .info h5{
         display: none;
+    }
+    .book-aside .info .map{
+        margin-left: -15px;
+        margin-right: -15px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .book-aside .info ul li{
+        width: 50%;
+        float: left;
+        padding-left:29px;
+    }
+    .book-aside .info ul li:nth-child(3){
+        clear: both;
+    }
+    .book-aside .opening .table-css{
+        margin-left: 0;
     }
 }

@@ -42,6 +42,9 @@
                             </div>
                         </div>
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="about">
+                        {% include "./content/pages/book-details/about.html" %}
+                    </div>
                     <div role="tabpanel" class="tab-pane" id="views">
                         {% include "./content/pages/book-details/views.html" %}
                     </div>
@@ -51,9 +54,11 @@
                     <div role="tabpanel" class="tab-pane" id="photos">
                         {% include "./content/pages/book-details/photos.html" %}
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="info">
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div id="infoSidebar" class="col-xs-12 col-sm-4 hidden-xs">
                 {% include "./content/pages/book-details/info.html" %}
             </div>
         </div>

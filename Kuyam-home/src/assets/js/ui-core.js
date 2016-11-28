@@ -166,7 +166,7 @@ $(document).ready(function(){
 
     settingsModal();
 
-    $('.modal').on('show.bs.modal', centerModal);
+    $('.modal').on('shown.bs.modal', centerModal);
 
     monitorResize(function(){
         //alert('asassss');

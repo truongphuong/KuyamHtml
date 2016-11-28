@@ -35,6 +35,15 @@ function loadmap(lat, lon, googleIcon) {
 
     });
 }
+
+function infoContent() {
+    if (!isView.mobile()) {
+        $('.book-aside').appendTo($('#infoSidebar'));
+    } else {
+        $('.book-aside').appendTo($('#info'));
+    }
+}
+
 $(document).ready(function () {
     $(document).on('click', '.votes', function (e) {
         e.preventDefault();
@@ -48,7 +57,7 @@ $(document).ready(function () {
     });
 
     var categoryContent = '';
-    categoryContent += '<div id="categoryList">';
+    categoryContent += '<div id="categoryList" class="category-list">';
     categoryContent += '<div class="content-scroll">';
     categoryContent += '<ul>';
     categoryContent += '<li>Lorem ipsum dolor</li>';
@@ -63,21 +72,22 @@ $(document).ready(function () {
     categoryContent += '<li>Lorem ipsum dolor</li>';
     categoryContent += '</ul>';
     categoryContent += '</div>';
-    categoryContent += '/div>';
+    categoryContent += '</div>';
 
     $('.tooltipster-category').tooltipster({
         contentAsHTML: true,
         content: categoryContent,
-        trigger: 'custom',
-        position: 'right',
+        position: 'bottom',
         theme: 'tooltipster-default tooltipster-category',
-        offsetX: -5,
+        offsetY: 9,
         interactive: true,
         positionTracker: true,
         autoClose: false,
         debug: false,
         functionReady: function functionReady(origin, tooltip) {
-            iscrollContent('#categoryList');
+            setTimeout(function () {
+                iscrollContent('#categoryList');
+            }, 300);
         }
     });
 
@@ -103,37 +113,54 @@ $(document).ready(function () {
     });
 
     if (!isMobile.Windows()) {
-        iscrollContent('#servicesList');
+        var isActive = $(document).find('#bookTabs li.active a').attr('href');
+        var activeListID = isActive + 'List';
+        if (isActive === '#appointment') {
+            isActive = $(document).find('#appointmentTabs li.active a').attr('href');
+            activeListID = isActive + 'List';
+        }
+        iscrollContent(activeListID);
 
-        $(window).resize(function () {
-            refreshNiceScroll('#servicesList');
+        monitorResize(function () {
+            refreshNiceScroll(activeListID);
         });
     }
 
     $('#bookTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var $this = $(e.target);
-        var listID = $this.attr('href') + 'List';
-        if (listID === '') {
-            return;
-        }
+        var hrefVal = $this.attr('href');
+        var listID = hrefVal + 'List';
         if (!isMobile.Windows()) {
             iscrollContent(listID);
 
-            $(window).resize(function () {
+            monitorResize(function () {
                 refreshNiceScroll(listID);
+
+                if (!isView.mobile() && hrefVal === '#info') {
+                    $('#bookTabs a[href="#appointment"]').click();
+                }
             });
         }
     });
 
     $('#appointmentTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var $this = $(e.target);
-        var listID = $this.attr('href') + 'List';
+        var hrefVal = $this.attr('href');
+        var listID = hrefVal + 'List';
         if (!isMobile.Windows()) {
             iscrollContent(listID);
 
-            $(window).resize(function () {
+            monitorResize(function () {
                 refreshNiceScroll(listID);
             });
         }
     });
+
+    //Begin reposition info content when resize screen
+    infoContent();
+
+    monitorResize(function () {
+        infoContent();
+    });
+    //End reposition info content when resize screen
 });

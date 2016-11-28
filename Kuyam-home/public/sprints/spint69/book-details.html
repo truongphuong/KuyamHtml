@@ -259,9 +259,11 @@
         <div class="container">
             <ul id="bookTabs" class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="li-appointment active"><a href="#appointment" aria-controls="appointment" role="tab" data-toggle="tab">Schedule an appointment</a></li>
-                <li role="presentation" class="li-review"><a href="#views" aria-controls="views" role="tab" data-toggle="tab">See customer reviews</a></li>
-                <li role="presentation" class="li-package"><a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">See packages</a></li>
+                <li role="presentation" class="li-about"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About us</a></li>
+                <li role="presentation" class="li-review"><a href="#views" aria-controls="views" role="tab" data-toggle="tab">Customer reviews</a></li>
+                <!--<li role="presentation" class="li-package"><a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">See packages</a></li>-->
                 <li role="presentation" class="li-photo"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Photos</a></li>
+                <li role="presentation" class="li-info visible-xs"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Photos</a></li>
             </ul>
         </div>
     </nav>
@@ -427,7 +429,7 @@
                 <!-- /.table-calendar -->
             </div>
 
-            <div id="servicesList" class="service-list">
+            <div id="servicesList" class="services-list">
                 <div class="scroll-content">
                     <!-- .table-calendar -->
                     <span class="table-css table-calendar">
@@ -988,6 +990,16 @@
                             </div>
                         </div>
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="about">
+                        <div class="photo-section">
+    <h5>About us</h5>
+    <div id="aboutList" class="about-list">
+        <div class="scroll-content">
+
+        </div>
+    </div>
+</div>
+                    </div>
                     <div role="tabpanel" class="tab-pane" id="views">
                         <div class="view-section">
     <h5>See what people are saying about<br /><span>Yoga Temple</span></h5>
@@ -1307,9 +1319,11 @@
     </div>
 </div>
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="info">
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-4">
+            <div id="infoSidebar" class="col-xs-12 col-sm-4 hidden-xs">
                 <div class="book-aside">
     <section class="info">
         <h5>Business info</h5>
@@ -1320,7 +1334,7 @@
         </div>
         <!-- /.map -->
 
-        <ul>
+        <ul class="clearfix">
             <li class="li-location">
             1901 Avenue of the Stars, Suite 1900
             <br />
@@ -1430,7 +1444,7 @@
                         <li><a target="_blank" href="#" title="Comment"><span class="footer_icon_comment off "></span></a></li>
                         <li><a target="_blank" href="https://twitter.com/mykuyam" title="Twitter"><img alt="" src="http://localhost:3000/content/images/icons_2016/footer_icon_facebook.png" /></a></li>
                         <li><a target="_blank" href="https://www.facebook.com/mykuyam" title="Facebook"><img alt="" src="http://localhost:3000/content/images/icons_2016/footer_icon_twitter.png" /></a></li>
-                        <li class="hidden-xs"><a href="javascript:void(0);" title="Terms of use and privacy" data-target="#termsModal" data-toggle="modal"><p>Terms of use and privacy</p></a></li>
+                        <li class="hidden-xs"><p><a class="link-terms" href="#tabTerms" title="">Terms of use</a> and <a class="link-terms" href="#tabPrivacy" title="">privacy</a></p></li>
                     </ul>
                 </div>
             </div>

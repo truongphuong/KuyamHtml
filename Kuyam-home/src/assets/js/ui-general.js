@@ -93,17 +93,28 @@ $(document).ready(function(){
     /* #nav-account */
 
     /* #terms-tabs */
-    $( "#terms-tabs" ).tabs();
-    $(".scroll-bar").niceScroll({
-        touchbehavior:false,
-        cursorcolor:"#8ab21e",
-        cursoropacitymax:.8,
-        cursorwidth:6,
-        cursorborder:"0px solid #8ab21e",
-        railpadding:{top:0,right:0,left:0,bottom:0},
-        cursorborderradius:"8px",
-        background:"transparent",
-        autohidemode:"scroll"
+    var termActive;
+    $('.link-terms').click(function (e) {
+        e.preventDefault();
+        termActive = $(this).attr('href');
+        $('#termsModal').modal('show');
+    });
+
+    $('#termsModal').on('show.bs.modal', function (e) {
+        $('.terms-tabs').tab('show');
+        $('.terms-tabs a[href="' + termActive + '"]').tab('show');
+    });
+
+    $('#termsModal').on('shown.bs.modal', function (e) {
+        iscrollContent('#tabTerms');
+        iscrollContent('#tabPrivacy');
+        iscrollContent('#tabServices');
+    });
+
+    $('.terms-tabs').on('shown.bs.tab', function (e) {
+        refreshNiceScroll('#tabTerms');
+        refreshNiceScroll('#tabPrivacy');
+        refreshNiceScroll('#tabServices');
     });
     /* /#terms-tabs */
 
