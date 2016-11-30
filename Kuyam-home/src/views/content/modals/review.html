@@ -1,26 +1,24 @@
 <!-- #reviewModal -->
 <div id="reviewModal" class="modal fade" role="dialog" aria-labelledby="reviewModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-form modal-review">
+    <div class="modal-dialog modal-review">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h3 id="reviewModalLabel" class="modal-title">Welcome to Kuyam!</h3>
+                <h3 id="reviewModalLabel" class="modal-title">Thanks for booking with Kuyam!</h3>
             </div>
             <div class="modal-body">
-
-
-                <button type="button" class="btn-green btn-form btn-login">Start booking!</button>
-
-                <div class="form-or">
-                    <span>or</span>
+                <p><strong>Wish Salon & Spa</strong><br />Foot massage with George<br />Web. March 15 at 5:00pm</p>
+                <div class="rating-section">
+                    <label for="reviewRating">Please rate this appointment</label>
+                    <input type="hidden" id="reviewRating" value="4"/>
                 </div>
-
-                <button type="button" class="btn-green btn-form btn-login">Login</button>
-
+                <div class="countdown-input">
+                    <textarea cols="" rows="" placeholder="Share your experience with other users" class="form-control"></textarea>
+                    <div class="characters"><span class="num">300</span> characters left</div>
+                </div>
             </div>
             <div class="modal-footer">
-
-
+                <input type="button" class="btn btn-green" value="Submit" data-target="#reviewCompleteModal" data-toggle="modal" />
              </div>
         </div>
     </div>

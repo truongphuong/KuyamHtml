@@ -102,7 +102,7 @@
 .modal-notes .modal-footer{
     padding: 4px 18px 8px;
     background: #f9f9f9;
-    border-radius:0 0 4px 4px;
+    border-radius:0 0 10px 10px;
 }
 .modal-notes .modal-footer .form-notes{
     position: relative;
@@ -129,6 +129,9 @@
 @media(max-width: 767px){
     .modal-notes{
         width: auto;
+    }
+    .modal-notes .modal-content{
+        border-radius: 5px;
     }
     .modal-notes .modal-header{
         padding-top: 12px;
@@ -179,5 +182,11 @@
     }
     .modal-notes .modal-footer .form-control{
         font-size: $s13;
+    }
+}
+
+@media (max-width: 374px) {
+    .modal-notes .modal-content{
+        border-radius: 2px;
     }
 }

@@ -17,6 +17,9 @@
     width: 50%;
     margin-bottom: 36px;
 }
+.photo-list li:last-child{
+    margin-bottom: 0;
+}
 .photo-list li:nth-child(odd){
     float: left;
     clear: left;
@@ -47,6 +50,19 @@
 }
 
 @media (max-width: 767px) {
+    .photo-section{
+        padding-top: 6px;
+    }
+    .photo-section h5{
+        display: none;
+    }
+    .photo-list,
+    .on-nicescroll .photo-list .wrap-dropdown-menu-inner{
+        max-height: 530px;
+    }
+    .on-nicescroll .photo-list .scroll-content{
+        padding-right: 20px;
+    }
     .photo-list ul{
         margin:0;
     }
@@ -54,5 +70,6 @@
         width: 100%;
         float: none;
         padding:0;
+        margin-bottom: 42px;
     }
 }

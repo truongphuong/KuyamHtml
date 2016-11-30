@@ -46,6 +46,7 @@
 
 
 <link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/tooltipster.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/bootstrap-rating.css" />
 
 <link type="text/css" rel="stylesheet" href="http://localhost:3000/content/style.css" />
 </head>
@@ -234,9 +235,9 @@
 <div class="book-caption">
     <div class="container">
         <header class="section-header clearfix ">
-            <div class="avatar" style="background-image:url(http://localhost:3000/content/images/icons/avatar_default.png);"></div>
+            <div class="avatar" style="background-image:url(http://localhost:3000/content/images/icons/avatar_default.png);"><a title="" href="javascript:void(0);" class="votes visible-xs"><span class="vote-icon icon-unlike"></span></a></div>
             <div class="info">
-                <h2>Amy's Hair Salon! <a title="" href="javascript:void(0);" class="votes"><span class="vote-icon icon-unlike"></span></a></h2>
+                <h2><span class="text">Amy's Hair Salon!</span> <a title="" href="javascript:void(0);" class="votes hidden-xs"><span class="vote-icon icon-unlike"></span></a></h2>
                 <div class="votes clearfix">
                     <span class="vote-icon yellow-star"></span>
                     <span class="vote-icon yellow-star"></span>
@@ -255,9 +256,9 @@
             </div>
         </header>
     </div>
-    <nav>
+    <nav class="book-nav">
         <div class="container">
-            <ul id="bookTabs" class="nav nav-tabs" role="tablist">
+            <ul id="bookTabs" class="nav nav-tabs five" role="tablist">
                 <li role="presentation" class="li-appointment active"><a href="#appointment" aria-controls="appointment" role="tab" data-toggle="tab">Schedule an appointment</a></li>
                 <li role="presentation" class="li-about"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About us</a></li>
                 <li role="presentation" class="li-review"><a href="#views" aria-controls="views" role="tab" data-toggle="tab">Customer reviews</a></li>
@@ -276,13 +277,15 @@
 <div class="book-detail-page">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-8">
+            <div class="col-xs-12 col-sm-7 col-md-8">
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="appointment">
-                        <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
-                            <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
-                        </ul>
+                        <nav>
+                            <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
+                                <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
+                            </ul>
+                        </nav>
                         <div class="book-option clearfix">
                             <div id="whatSelect" class="option-select what-select">
 
@@ -307,7 +310,7 @@
                     <li>
                         <span class="table-css">
                             <span class="tr">
-                                <span class="td td-name"><span class="text">Spin class</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#serviceModal">see details</a></span>
+                                <span class="td td-name"><span class="text">Spin class</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#classModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
                                 <span class="td td-price">$210</span>
                             </span>
@@ -385,9 +388,6 @@
         </div>
     </div>
     <!-- /.select-options -->
-
-    <div class="select-text select-who-text">
-    </div>
 </div>
 
                         </div>
@@ -702,79 +702,249 @@
 
         <!-- .slide-calendar -->
         <div class="slide-calendar visible-xs">
-            <a class="rslides_nav rslides1_nav prev" href="#">last<br />week</a>
-            <a class="rslides_nav rslides1_nav next" href="#">next<br />week</a>
+            <div class="table-calendar-header">
+                <a class="rslides_nav rslides1_nav prev" href="#">last<br />week</a>
+                <a class="rslides_nav rslides1_nav next" href="#">next<br />week</a>
 
-            <!-- .table-calendar -->
-            <span class="table-css table-calendar">
-
-                <!-- .table-calendar-header -->
-                <span class="table-row table-calendar-header">
-                    <span class="table-cell">
-                        <span class="day">Today</span>
-                        <span class="datetime">Sep 1, 2014</span>
+                <!-- .table-calendar -->
+                <span class="table-css table-calendar">
+                    <!-- .table-calendar-header -->
+                    <span class="table-row">
+                        <span class="table-cell">
+                            <span class="day">Today</span>
+                            <span class="datetime">Sep 1, 2014</span>
+                        </span>
+                        <span class="table-cell">
+                            <span class="day">Tuesday</span>
+                            <span class="datetime">Sep 2, 2014</span>
+                        </span>
                     </span>
-                    <span class="table-cell">
-                        <span class="day">Tuesday</span>
-                        <span class="datetime">Sep 2, 2014</span>
-                    </span>
+                    <!-- /.table-calendar-header -->
                 </span>
-                <!-- /.table-calendar-header -->
+                <!-- /.table-calendar -->
+            </div>
 
-                <!-- /.table-calendar-body -->
-                <span class="table-row table-calendar-body">
+            <div id="servicesMobileList" class="services-list">
+                <div class="scroll-content">
+                    <!-- .table-calendar -->
+                    <span class="table-css table-calendar">
+                        <!-- .table-calendar-body -->
+                        <span class="table-row table-calendar-body">
 
-                    <!-- .table-cell -->
-                    <span class="table-cell">
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                            <!-- .table-cell -->
+                            <span class="table-cell">
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal"">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
                             </span>
-                        </span>
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                            <!-- /.table-cell -->
+
+                            <!-- .table-cell -->
+                            <span class="table-cell">
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
+                                <span class="session">
+                                    <span class="session-item session-service">
+                                        <span class="session-time">9:30am</span>
+                                        <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
+                                    </span>
+                                </span>
                             </span>
+                            <!-- /.table-cell -->
+
                         </span>
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
-                            </span>
-                        </span>
+                        <!-- /.table-calendar-body -->
                     </span>
-                    <!-- /.table-cell -->
-
-                    <!-- .table-cell -->
-                    <span class="table-cell">
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
-                            </span>
-                        </span>
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
-                            </span>
-                        </span>
-                        <span class="session">
-                            <span class="session-item session-service">
-                                <span class="session-time">9:30am</span>
-                                <a class="btn-green btn-book" title="" href="javascript:void(0);" data-toggle="modal" data-target="#checkoutModal">Book it!</a>
-                            </span>
-                        </span>
-                    </span>
-                    <!-- /.table-cell -->
-
-                </span>
-                <!-- /.table-calendar-body -->
-
-            </span>
-            <!-- /.table-calendar -->
+                    <!-- /.table-calendar -->
+                </div>
+            </div>
 
         </div>
         <!-- /.slide-calendar -->
@@ -991,24 +1161,35 @@
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="about">
-                        <div class="photo-section">
+                        <div class="about-section">
     <h5>About us</h5>
     <div id="aboutList" class="about-list">
         <div class="scroll-content">
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nisi in purus laoreet dictum. Donec lectus mauris, scelerisque ut vestibulum varius, lobortis ut diam. Praesent volutpat quam nibh, id sollicitudin justo bibendum ac. Suspendisse suscipit mi at tellus luctus convallis. Cras auctor porta sapien, et sodales purus sagittis et.</p>
+            <p>Curabitur venenatis sem nec tempus porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque efficitur mollis elit, a pellentesque metus scelerisque in.</p>
+            <p><img alt="" src="http://localhost:3000/content/images/upload/images/about/about.jpg" style="width:100%;" /></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nisi in purus laoreet dictum. Donec lectus mauris, scelerisque ut vestibulum.</p>
+            <p><strong>More info in <a title="" href="">www.superyoga.net</a></strong></p>
         </div>
     </div>
 </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="views">
                         <div class="view-section">
-    <h5>See what people are saying about<br /><span>Yoga Temple</span></h5>
+    <div class="votes clearfix visible-xs">
+        <span class="vote-icon yellow-star"></span>
+        <span class="vote-icon yellow-star"></span>
+        <span class="vote-icon yellow-star"></span>
+        <span class="vote-icon yellow-star"></span>
+        <span class="vote-icon yellow-star"></span>
+    </div>
+    <h5>See what people are saying <span class="hidden-xs">about<br /><span class="text">Yoga Temple</span></span></h5>
     <div id="viewsList" class="view-list">
         <div class="scroll-content">
             <div class="item">
                 <p><strong>Write a review!</strong> you opinion is important to write a review, please book with an visit this business.</p>
-                <input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" />
-                <input type="button" class="btn btn-green hide" value="Review" data-toggle="modal" data-target="#reviewtModal" />
+                <input type="button" class="btn btn-green btn-book hide" value="Book now!" />
+                <input type="button" class="btn btn-green" value="Review" data-toggle="modal" data-target="#reviewModal" />
             </div>
             <div class="item">
                 <p><strong>This is the best place ever, but it has no bathroom.</strong></p>
@@ -1323,7 +1504,7 @@
                     </div>
                 </div>
             </div>
-            <div id="infoSidebar" class="col-xs-12 col-sm-4 hidden-xs">
+            <div id="infoSidebar" class="col-xs-12 col-sm-5 col-md-4 hidden-xs">
                 <div class="book-aside">
     <section class="info">
         <h5>Business info</h5>
@@ -1336,13 +1517,11 @@
 
         <ul class="clearfix">
             <li class="li-location">
-            1901 Avenue of the Stars, Suite 1900
-            <br />
-            Los Angeles, CA 90067
+            1901 Avenue of the Stars, Suite 1900 Los Angeles, CA 90067
             </li>
             <li class="li-phone"><a title="" href="tel:+1-310-461-1515">(310) 461-1515</a></li>
             <li class="li-website">
-                <a href="#" title="">Amy'sHairSalon.com</a>
+                <a href="#" title="" target="_blank">Amy'sHairSalon.com</a>
             </li>
         </ul>
     </section>
@@ -1640,26 +1819,42 @@
 <!-- /##signOutModal -->
 
 
+<div class="tooltip-template">
+    <div id="categoryList" class="category-list">
+        <div class="content-scroll">
+            <ul>
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem ipsum dolor</li>
+                <li>Lorem service</li>
+                <li>Lorem service</li>
+                <li>Service ipsum</li>
+                <li>Service ipsum</li>
+                <li>Service Lorem</li>
+                <li>Service Lorem</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <!-- #classModal -->
 <div id="classModal" class="modal fade" role="dialog" aria-labelledby="classModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-details modal-class">
+    <div class="modal-dialog modal-class">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 class="modal-title">class details</h4>
+                <h6 class="modal-title">Details</h6>
             </div>
             <div class="modal-body">
-                <h3>spa:</h3>
-                <p>
-                    Take advantage of our wonderful spa designed to help you leave your hectic life at the door and close yourself in a world of relaxation and well-being.
+                <center>
+                    <h5>Yoga for adults</h5>
+                    <p>$50.00<!--<br /><del>$100</del>--><br />30 minutes<!--<br /><span>sale off 50%</span>--></p>
+                </center>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
             </div>
             <div class="modal-footer clearfix">
-                <span class="package-price">
-                    <span>60 min</span>
-                    <span>$75</span>
-                </span>
-                <button type="button" class="btn-pink btn-book">book now</button>
+                <input type="button" class="btn btn-green" value="Select this Class" />
             </div>
         </div>
     </div>
@@ -1667,33 +1862,22 @@
 <!-- /#classModal -->
 <!-- #serviceModal -->
 <div id="serviceModal" class="modal fade" role="dialog" aria-labelledby="serviceModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-details modal-service">
+    <div class="modal-dialog modal-service">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 class="modal-title">service details</h4>
+                <h6 class="modal-title">Details</h6>
             </div>
             <div class="modal-body">
-                <h3>5 massage pack</h3>
-                <p>
-                    $18/massage
-                    <br />
-                    expires 1 year after purchase
-                </p>
-                <h4>applies to following services:</h4>
-                <p>
-                    hot stone massage
-                    <br />
-                    deep tissue massage
-                    <br />
-                    swedish massage therapy
-                    <br />
-                    aromatherapy massage
+                <center>
+                    <h5>Yoga for adults</h5>
+                    <p>$50.00<!--<br /><del>$100</del>--><br />30 minutes<!--<br /><span>sale off 50%</span>--></p>
+                </center>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
             </div>
             <div class="modal-footer clearfix">
-                <span class="package-price"><span>$75</span></span>
-                <button type="button" class="btn-green btn-book">purchase</button>
+                <input type="button" class="btn btn-green" value="Select this Service" />
             </div>
         </div>
     </div>
@@ -1739,190 +1923,138 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="checkoutModalLabel" class="modal-title"><span class="checkout-time-complete hidden-xs">time to complete booing <time>09:39</time></span>checkout</h4>
+                <h4 id="checkoutModalLabel" class="modal-title"><span class="checkout-time-complete hidden-xs"><span>Time to complete booing:</span> <time>09:39</time></span>Checkout</h4>
             </div>
             <div class="modal-body">
 
-                <!-- .checkout-fieldset -->
-                <fieldset class="checkout-fieldset clearfix">
-
-                    <!-- .checkout-col -->
-                    <div class="checkout-col">
-
-                        <!-- .checkout-title -->
-                        <div class="checkout-title">
-                            <h3>blow me away</h3>
-                            <address>8223 W 3rd st.<br />Los Angeles, CA 90026</address>
-                        </div>
-                        <!-- /.checkout-title -->
-
-                        <!-- .checkout-info -->
-                        <div class="checkout-info">
-                            <div class="checkout-row">
-                                <h4>blowout</h4>
-                                <div class="checkout-time-date"><time>Tue, Sept 9th</time> at 11:00 am - 11:45 am</div>
-                            </div>
-                            <div class="checkout-row checkout-select">
-                                <select class="selectpicker">
-                                    <option>with George</option>
-                                </select>
-                                <span class="alert-error">invalid</span>
-                            </div>
-                            <div class="checkout-row checkout-select">
-                                <select class="selectpicker">
-                                    <option>for Brett</option>
-                                </select>
-                                <span class="alert-error">invalid</span>
-                            </div>
-                            <div class="checkout-time-left hidden-sm hidden-md hidden-lg">
-                                time left to complete page
-                                <time><span class="icon-time-left"></span> 09:39</time>
-                            </div>
-                            <div class="checkout-row checkout-confirm">
-                                <span class="checkout-confirm-title">confirmation<span class="hidden-xs"> method</span>:</span>
-                                <input class="checkbox" type="checkbox" id="cbEmail" /><label for="cbEmail">email</label>
-                                <input class="checkbox" type="checkbox" id="cbSMS" /><label for="cbSMS">SMS</label>
-                            </div>
-                            <div class="checkout-row checkout-user">
-                                <div class="checkout-user-info">
-                                    <p>kourosh@kuyam.com</p>
-                                    <a class="link-change" title="" href="javascript:void(0);">change</a>
-                                </div>
-                                <div class="checkout-user-input hide">
-                                    <label for="txtEmail">please enter email</label>
-                                    <input class="form-control" id="txtEmail" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
-                                </div>
-                            </div>
-                            <div class="checkout-row checkout-user">
-                                <div class="checkout-user-info">
-                                    <p>(360)191-2821</p>
-                                    <a class="link-change" title="" href="javascript:void(0);">change</a>
-                                </div>
-                                <div class="checkout-user-input hide">
-                                    <label for="txtPhone">please enter phone number</label>
-                                    <input class="form-control" id="txtPhone" type="text" onblur="if (this.value == '') { this.value = 'phone #'; }" onfocus="if (this.value == 'phone #') { this.value = ''; }" value="phone #" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.checkout-info -->
-
+                <!-- .col -->
+                <div class="col">
+                    <div class="appointment">
+                        <h3>Yoga for adults</h3>
+                        <time><strong>Wed, Jul 20th</strong> at 4:00 pm - 4:20 pm</time>
+                        <address><strong>Yoga Temple</strong><br />2-1 E. Delaware Pl. 2nd floor.<br />Los Angeles, CA.</address>
                     </div>
-                    <!-- /.checkout-col -->
 
-                    <!-- .checkout-col -->
-                    <div class="checkout-col">
-
-                        <!-- .checkout-price -->
-                        <div class="checkout-price clearfix">
-                            <div class="table-css">
-                                <div class="table-row">
-                                    <div class="table-cell price-details"><p>total due:</p></div>
-                                    <div class="table-cell price-type"></div>
-                                </div>
-                                <div class="table-row">
-                                    <div class="table-cell price-details"><h3>$75.00</h3></div>
-                                    <div class="table-cell price-type"></div>
-                                </div>
-                                <div class="table-row checkout-discount-promo hide">
-                                    <div class="table-cell price-details"><h3>-$5.00</h3></div>
-                                    <div class="table-cell price-type">promo</div>
-                                </div>
-                                <div class="table-row checkout-discount-giftcard hide">
-                                    <div class="table-cell price-details"><h3>-$30.00</h3></div>
-                                    <div class="table-cell price-type">gift card</div>
-                                </div>
-                                <div class="table-row checkout-total hide">
-                                    <div class="table-cell price-total"><h3><span>$45.00</span></h3></div>
-                                    <div class="table-cell price-type"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.checkout-price -->
-
-                        <!-- .checkout-payment -->
-                        <div id="checkout-step1" class="checkout-payment">
-                            <header>select payment method</header>
-                            <div class="checkout-method method-promo">
-                                <span class="icon-method icon-promo"></span>
-                                <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
-                                <input class="btn-green btn-method btn-promo" type="button" value="apply" />
-                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
-                            </div>
-                            <div class="checkout-method method-gift-card">
-                                <span class="icon-method icon-gift-card"></span>
-                                <input id="btn-gift-card" class="btn-yellow btn-method btn-gift-card" type="button" value="gift card" />
-                            </div>
-                            <div class="checkout-method method-credit">
-                                <span class="icon-method icon-credit"></span>
-                                <input class="btn-blue btn-method btn-credit" type="button" value="PayPal or credit card" data-toggle="modal" data-target="#modal-request" />
-                            </div>
-                            <div class="checkout-method method-cash">
-                                <span class="icon-method icon-cash"></span>
-                                <input class="btn-green btn-method btn-cash" type="button" value="pay in person" />
-                            </div>
-                        </div>
-                        <!-- /.checkout-payment -->
-
-                        <!-- /.checkout-giftcard -->
-                        <div id="checkout-step2" class="checkout-payment checkout-gift-card hide">
-                            <div class="checkout-method">
-                                <input class="form-control txt-giftcard" type="text" value="enter gift card number" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" />
-                                <input class="btn-green btn-method btn-giftcard" type="button" value="redeem" />
-                            </div>
-                            <div class="checkout-balance">
-                                <p>current gift card balance</p>
-                                <h3>$0.00</h3>
-                                <div class="checkout-balance-use">use $30.00 today?</div>
-                            </div>
-                            <div class="checkout-method method-confirm">
-                                <input class="btn-yellow btn-method btn-confirm" type="button" value="confirm" />
-                            </div>
-                            <div class="checkout-back">
-                                <a id="link-back" class="link-back" title="" href="javascript:void(0);"><span class="icon-back"></span> back</a>
-                            </div>
-                        </div>
-                        <!-- /.checkout-giftcard -->
-
-                        <!-- .checkout-payment -->
-                        <div id="checkout-step3" class="checkout-payment checkout-applied hide">
-                            <div class="checkout-method method-promo">
-                                <span class="icon-method icon-promo"></span>
-                                <input class="form-control txt-promo" type="text" value="promo code" onfocus="if (this.value == 'promo code') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'promo code'; }" />
-                                <input class="btn-green btn-method btn-promo" type="button" value="apply" />
-                                <div class="discount-applied promo-applied hide">$5.00 applied</div>
-                            </div>
-                            <div class="checkout-method method-gift-card">
-                                <span class="icon-method icon-gift-card"></span>
-                                <div class="discount-applied giftcard-applied">$30.00 applied</div>
-                            </div>
-                            <div class="checkout-method method-credit">
-                                <span class="icon-method icon-credit"></span>
-                                <input class="btn-blue btn-method btn-credit" type="button" value="PayPal or credit card" data-toggle="modal" data-target="#confirmRequestModal" />
-                            </div>
-                            <div class="checkout-method method-confirm">
-                                <input class="btn-yellow btn-method btn-confirm" type="button" value="confirm" />
-                            </div>
-                        </div>
-                        <!-- /.checkout-payment -->
-
-                        <!-- .checkout-rule -->
-                        <div class="checkout-rule">
-                            <header>cancellation policy:</header>
-                            <p>this appointment have a 24-hours cancellation policy. if you modify or cancel 24 hours before this appointment or later, you will be charge 50% of total amount.</p>
-                        </div>
-                        <!-- .checkout-rule -->
-
+                    <div class="employee">
+                        <label>Width</label>
+                        <p>Kourosh Gohar</p>
+                        <label>For</label>
+                        <p>Alfonso Medeiros</p>
                     </div>
-                    <!-- /.checkout-col -->
 
-                </fieldset>
-                <!-- /.checkout-fieldset -->
+                    <div class="contact">
+                        <label>Confirmation method:</label>
+                    </div>
+
+                </div>
+                <!-- /.col -->
+
+                <!-- .col -->
+                <div class="col">
+
+                    <div class="code">
+                        <div>
+                            <input type="text" class="form-control" placeholder="Promo Code/Gift Card" />
+                            <input type="button" class="btn btn-green" value="Apply" />
+                        </div>
+                        <div class="txt-required">please enter a valid code</div>
+                    </div>
+
+                    <div class="bill">
+                        <h5>Total due</h5>
+                        <div class="table-css">
+                            <div class="tr">
+                                <div class="td td-name"><span>SUMMER</span></div>
+                                <div class="td td-price">-$10.00</div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-name"><span>x6773</span> <small>($0.00 remaining)</small></div>
+                                <div class="td td-price"></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-name"><span>x5561</span> <small>($10.00 remaining)</small></div>
+                                <div class="td td-price">-$9.00</div>
+                            </div>
+                            <div class="tfoot">
+                                <div class="tr">
+                                    <div class="td td-name"></div>
+                                    <div class="td td-price">$0.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="method">
+                        <label>Checkout Method</label>
+                        <input type="button" class="btn btn-green" value="Book Appointment" />
+                        <input type="button" class="btn btn-disagree" value="Credit Card" />
+                        <input type="button" class="btn btn-green" value="Pay in person" />
+                    </div>
+
+                    <!-- .rule -->
+                    <div class="rule">
+                        <header>Cancellation policy:</header>
+                        <p>this appointment have a 24-hours cancellation policy.<br /> if you modify or cancel 24 hours before this appointment<br /> or later, you will be charge 50% of total amount.</p>
+                    </div>
+                    <!-- .rule -->
+
+                </div>
+                <!-- /.col -->
 
             </div>
         </div>
     </div>
 </div>
 <!-- /#checkoutModal -->
+<!-- #reviewModal -->
+<div id="reviewModal" class="modal fade" role="dialog" aria-labelledby="reviewModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-review">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h3 id="reviewModalLabel" class="modal-title">Thanks for booking with Kuyam!</h3>
+            </div>
+            <div class="modal-body">
+                <p><strong>Wish Salon & Spa</strong><br />Foot massage with George<br />Web. March 15 at 5:00pm</p>
+                <div class="rating-section">
+                    <label for="reviewRating">Please rate this appointment</label>
+                    <input type="hidden" id="reviewRating" value="4"/>
+                </div>
+                <div class="countdown-input">
+                    <textarea cols="" rows="" placeholder="Share your experience with other users" class="form-control"></textarea>
+                    <div class="characters"><span class="num">300</span> characters left</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-green" value="Submit" data-target="#reviewCompleteModal" data-toggle="modal" />
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#reviewModal -->
+<!-- #reviewCompleteModal -->
+<div id="reviewCompleteModal" class="modal fade" role="dialog" aria-labelledby="reviewCompleteModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-review-complete">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <img class="img-retina" alt="" src="http://localhost:3000/content/images/ui/modals/review/icon_complete@3x.png">
+                <img class="img-normal" alt="" src="http://localhost:3000/content/images/ui/modals/review/icon_complete.png">
+                <h3 id="reviewModalLabel" class="modal-title">Thanks for your review!</h3>
+            </div>
+            <div class="modal-body">
+                <div class="countdown-input">
+                    <textarea cols="" rows="" placeholder="(Optional If you want to share a private message with Kuyam, feel free to type it here)" class="form-control"></textarea>
+                    <div class="characters"><span class="num">300</span> characters left</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-green" value="Done" />
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#reviewCompleteModal -->
 
 
 <!-- #termsModal -->
@@ -2851,7 +2983,7 @@
 
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/modernizr.custom.js"></script>
 <!-- === SCRIPTS === -->
-<script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery.js"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery-2.2.4.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/css_browser_selector.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery-ui.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/bootstrap.min.js"></script>
@@ -2868,7 +3000,14 @@
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/libs/bootstrap-rating.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-book-details.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#checkoutModal').modal('show');
+    });
+</script>
 
 </body>
 </html>

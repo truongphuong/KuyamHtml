@@ -9,6 +9,7 @@
 
 {% block css %}
 <link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/tooltipster.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/bootstrap-rating.css" />
 {% endblock %}
 
 {% block banner %}
@@ -21,13 +22,15 @@
 <div class="book-detail-page">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-8">
+            <div class="col-xs-12 col-sm-7 col-md-8">
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="appointment">
-                        <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
-                            <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
-                        </ul>
+                        <nav>
+                            <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
+                                <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
+                            </ul>
+                        </nav>
                         <div class="book-option clearfix">
                             {% include "./content/pages/book-details/what.html" %}
 
@@ -58,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div id="infoSidebar" class="col-xs-12 col-sm-4 hidden-xs">
+            <div id="infoSidebar" class="col-xs-12 col-sm-5 col-md-4 hidden-xs">
                 {% include "./content/pages/book-details/info.html" %}
             </div>
         </div>
@@ -67,15 +70,25 @@
 {% endblock %}
 
 {% block modal %}
+{% include "./content/pages/book-details/tooltip-category.html" %}
 {% include "./content/modals/classes.html" %}
 {% include "./content/modals/services.html" %}
 {% include "./content/modals/packages.html" %}
 {% include "./content/modals/checkout.html" %}
+{% include "./content/modals/review.html" %}
+{% include "./content/modals/review-complete.html" %}
 {% endblock %}
 
 {% block script %}
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqVwY4a4mDTyOVzJY0S0nASARDb90i2pk&sensor=true"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/libs/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="http://localhost:3000/content/js/libs/bootstrap-rating.js"></script>
 <script type="text/javascript" src="http://localhost:3000/content/js/pages/ui-book-details.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#checkoutModal').modal('show');
+    });
+</script>
 {% endblock %}
 

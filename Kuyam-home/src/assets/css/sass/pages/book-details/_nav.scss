@@ -1,0 +1,174 @@
+.book-nav .nav-tabs{
+    background: transparent;
+    border:0 none;
+}
+.book-nav .nav-tabs li{
+}
+.book-nav .nav-tabs li a{
+    background-color: transparent;
+    display: block;
+    text-decoration: none;
+    border:0 none;
+    position: relative;
+    margin:0;
+}
+.book-nav .nav-tabs li a:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 32px;
+    height: 100%;
+    background: center center no-repeat;
+}
+.book-nav .nav-tabs > li.active > a,
+.book-nav .nav-tabs > li.active > a:hover,
+.book-nav .nav-tabs > li.active > a:focus{
+    background-color: transparent;
+    border:0 none;
+    font-weight: 800;
+    color: #87b400;
+}
+
+@media (min-width: 992px) {
+    .book-nav .nav-tabs li a{
+        padding:0 60px 0 29px;
+    }
+}
+
+@media (min-width: 768px) {
+    .book-nav{
+        background:rgba(0, 0, 0, .78);
+        border-top: 1px solid rgba(255, 255, 255, .64);
+        //box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.16);
+    }
+    .book-nav .nav-tabs li a{
+        color: $white;
+        line-height: 76px;
+        font-size: $h6;
+        padding:0 35px;
+        height: 77px;
+    }
+    .book-nav .nav-tabs li.li-appointment a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_appointment@3x.png);
+        background-size: 19px auto;
+    }
+    .book-nav .nav-tabs li.li-about a{
+        padding-left: 42px;
+    }
+    .book-nav .nav-tabs li.li-about a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_about@3x.png);
+        background-size: 32px auto;
+    }
+    .book-nav .nav-tabs li.li-review a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_views@3x.png);
+        background-size: 19px auto;
+    }
+    .book-nav .nav-tabs li.li-package a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_packages@3x.png);
+        background-size: 19px auto;
+    }
+    .book-nav .nav-tabs li.li-photo a{
+        padding-left: 33px;
+    }
+    .book-caption nav .nav-tabs li.li-photo a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_photos@3x.png);
+        background-size: 23px auto;
+    }
+    .book-nav .nav-tabs > li.active > a,
+    .book-nav .nav-tabs > li.active > a:hover,
+    .book-nav .nav-tabs > li.active > a:focus{
+        font-weight: 800;
+        color: #87b400;
+    }
+    .book-nav .nav-tabs li.li-appointment.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_appointment_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-about.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_about_active@3x.png);
+    }
+    .book-nav .nav-tabs li.active.li-review a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_views_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-package.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_packages_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-photo.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/icon_photos_active@3x.png);
+    }
+}
+
+@media (max-width: 767px) {
+    .book-nav{
+        background: $white;
+        border-bottom: 1px solid #c2c2c2;
+    }
+    .book-nav .container{
+        padding:0;
+    }
+    .book-nav .nav-tabs.one li{
+        width: 100%;
+    }
+    .book-nav .nav-tabs.two li{
+        width: 50%;
+    }
+    .book-nav .nav-tabs.three li{
+        width: 33.3333%;
+    }
+    .book-nav .nav-tabs.four li{
+        width: 25%;
+    }
+    .book-nav .nav-tabs.five li{
+        width: 20%;
+    }
+    .book-nav .nav-tabs > li > a{
+        font-size: 0;
+        padding:0;
+        height: 68px;
+    }
+    .book-nav .nav-tabs li a:before{
+        width: 100%;
+    }
+    .book-nav .nav-tabs li.li-appointment a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment@3x.png);
+        background-size: 34px auto;
+    }
+    .book-nav .nav-tabs li.li-about a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_about@3x.png);
+        background-size: 34px auto;
+    }
+    .book-nav .nav-tabs li.li-info a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_info@3x.png);
+        background-size: 32px auto;
+    }
+    .book-nav .nav-tabs li.li-review a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_views@3x.png);
+        background-size: 45px auto;
+    }
+    .book-nav .nav-tabs li.li-package a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages@3x.png);
+        background-size: 30px auto;
+    }
+    .book-nav .nav-tabs li.li-photo a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos@3x.png);
+        background-size: 37px auto;
+    }
+    .book-nav .nav-tabs li.li-appointment.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-info.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_info_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-about.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_about_active@3x.png);
+    }
+    .book-nav .nav-tabs li.active.li-review a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_views_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-package.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages_active@3x.png);
+    }
+    .book-nav .nav-tabs li.li-photo.active a:before{
+        background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos_active@3x.png);
+    }
+}

@@ -1,0 +1,27 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Paypal{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block modal %}
+
+{% include "./content/modals/paypal.html" %}
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#paypalModal').modal('show');
+    });
+</script>
+{% endblock %}
+

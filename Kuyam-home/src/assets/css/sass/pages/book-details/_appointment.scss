@@ -1,0 +1,49 @@
+.tab-pane[id="appointment"] .nav-tabs{
+    border:0 none;
+}
+.tab-pane[id="appointment"] .nav-tabs > li{
+    border-left: 1px solid #8c8c8c;
+}
+.tab-pane[id="appointment"] .nav-tabs > li:first-child{
+    border-left: 0 none;
+}
+.tab-pane[id="appointment"] .nav-tabs > li:first-child a,
+.tab-pane[id="appointment"] .nav-tabs > li:first-child a:hover,
+.tab-pane[id="appointment"] .nav-tabs > li:first-child a:focus{
+    padding-left: 0;
+}
+.tab-pane[id="appointment"] .nav-tabs > li > a,
+.tab-pane[id="appointment"] .nav-tabs > li > a:hover,
+.tab-pane[id="appointment"] .nav-tabs > li > a:focus{
+    padding:0 18px;
+    border:0 none;
+    background: transparent;
+    font-size: $h6;
+    line-height: 16px;
+    color:#333232;
+}
+.tab-pane[id="appointment"] .nav-tabs > li.active > a,
+.tab-pane[id="appointment"] .nav-tabs > li.active > a:hover,
+.tab-pane[id="appointment"] .nav-tabs > li.active > a:focus{
+    border:0 none;
+    color: #87b400;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .tab-pane[id="appointment"] nav{
+        text-align: center;
+        margin-bottom: 2px;
+    }
+    .tab-pane[id="appointment"] .nav-tabs{
+        display: inline-block;
+    }
+    .tab-pane[id="appointment"] .nav-tabs > li > a,
+    .tab-pane[id="appointment"] .nav-tabs > li > a:hover,
+    .tab-pane[id="appointment"] .nav-tabs > li > a:focus{
+        font-size: $s18;
+    }
+    .tab-pane[id="appointment"] .tab-content > .tab-pane{
+        padding-top: 10px !important;
+    }
+}

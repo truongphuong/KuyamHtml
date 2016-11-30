@@ -6,7 +6,7 @@
     font-weight: 400;
     margin-bottom: 33px;
 }
-.view-section h5 span{
+.view-section h5 .text{
     color:#9bb54e;
 }
 .view-list .item{
@@ -15,6 +15,9 @@
     border: 1px solid #9c9c9c;
     border-radius: 2px;
     margin-bottom: 17px;
+}
+.view-list .item:last-child{
+    margin-bottom: 0;
 }
 .view-list .item p{
     font-size: $h6;
@@ -28,15 +31,7 @@
 .view-list .item .btn{
     width: 103px;
     height: 34px;
-    position: absolute;
-    top:20px;
-    right: 20px;
     border-radius: 0;
-}
-.view-list .item .votes{
-    position: absolute;
-    top:20px;
-    right: 20px;
 }
 .view-list .item .votes .vote-icon{
     background-size: 19px auto;
@@ -55,10 +50,83 @@
 }
 
 @media (min-width: 768px) {
+    .view-list{
+        height: 770px;
+        overflow-y:auto;
+    }
+    .on-nicescroll .view-list{
+        overflow: hidden;
+    }
     .on-nicescroll .view-list .wrap-dropdown-menu-inner{
         height: 770px;
     }
     .on-nicescroll .view-list .scroll-content{
         padding-right: 36px;
+    }
+    .view-list .item .btn{
+        position: absolute;
+        top:20px;
+        right: 20px;
+    }
+    .view-list .item .votes{
+        position: absolute;
+        top:20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .view-section > .votes{
+        float: right;
+        margin-top: 7px;
+    }
+    .view-section > .votes .vote-icon{
+        width: 17px;
+        height: 19px;
+        background-size: 17px auto;
+    }
+    .view-section h5{
+        font-size:$s18;
+        line-height: 32px;
+        margin-bottom: 13px;
+    }
+    .view-list,
+    .on-nicescroll .view-list .wrap-dropdown-menu-inner{
+        max-height: 530px;
+    }
+    .on-nicescroll .view-list .scroll-content{
+        padding-right: 20px;
+    }
+    .view-list .item{
+        padding:13px 15px 10px;
+        margin-bottom: 15px;
+    }
+    .view-list .item:first-child{
+        padding-top:10px;
+        /*padding-bottom: 26px;*/
+    }
+    .view-list .item:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .view-list .item .btn{
+        /*right: 15px;
+        bottom:8px;*/
+        float: right;
+        color: rgba(51, 50, 50, .9);
+    }
+    .view-list .item p{
+        font-size: $s15;
+        line-height: 20px;
+    }
+    .view-list .item .votes{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .view-list .item .votes .vote-icon{
+        width: 21px;
+        height:23px;
+        background-size: 21px auto;
     }
 }

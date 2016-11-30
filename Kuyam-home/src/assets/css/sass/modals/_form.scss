@@ -1,41 +1,43 @@
 .modal-form {
     width: 430px;
 }
-.modal-form .modal-content {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
 .modal-form .modal-header {
     text-align: center;
     border: 0 none;
     padding: 15px 25px 10px;
 }
 .modal-form .modal-header .modal-title {
-    font: 36px/40px $primary;
-    font-weight: 700;
-    margin: 16px 0 5px;
+    font-size: 30px;
+    line-height:40px;
+    font-family: $primary;
+    color: #232323;
+    font-weight: 300;
+    margin: 15px 0;
 }
 .modal-form .modal-header h4 {
-    font: 26px/30px $primary;
-    font-weight: 500;
+    font-size: 16px;
+    line-height:22px;
+    font-family: $primary;
+    font-weight: 700;
     margin: 0 0 10px;
+    color: #8ab21e;
 }
 .modal-form .modal-header .close {
     width: 33px;
     height: 33px;
     background-image: url(images/icons/btn_close_black.png);
-    top: -16px;
-    right: -16px;
+    background-size: 33px auto;
+    top: 5px;
+    right: 5px;
     z-index: 1;
 }
 .modal-form .modal-header .close span {
     display: none;
 }
 .modal-form .modal-body {
-    padding: 5px 35px 20px;
     font: 16px/20px $primary;
     font-weight: 500;
+    padding: 5px 25px 20px;
 }
 .modal-form .modal-body .btn-facebook,
 .modal-form .modal-body .btn-facebook:hover {
@@ -50,13 +52,14 @@
 }
 .modal-form .modal-body .form-control {
     height: 40px;
-    font: 16px/20px $primary;
     font-weight: 500;
     margin: 0 0 10px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    border: 1px solid #ABABAB;
+    border-radius: 3px;
+    border: 1px solid $border;
+    font-size: 14px;
+    line-height:20px;
+    font-family: $primary;
+    color: #434343;
 }
 .modal-form .modal-body textarea.form-control {
     height: 65px;
@@ -85,11 +88,11 @@
 }
 .modal-form .modal-footer {
     border: 0 none;
-    margin: 0 35px;
-    padding: 15px 0 20px;
     font: 16px/20px $primary;
     font-weight: 500;
     position: relative;
+    padding: 0px 0 20px;
+    margin: 0 15px;
 }
 .modal-form hr {
     border: 0 none;
@@ -103,10 +106,13 @@
 }
 .modal-form .modal-footer .link-form {
     color: #ABABAB;
+    color: #929292;
+    font-size: $p;
 }
 .modal-form .modal-footer .link-form a {
     color: #96be3d;
-    margin: 0 0 0 25px;
+    margin: 0;
+    font-weight:900;
 }
 .modal-form .form-or {
     text-align: center;
@@ -143,51 +149,8 @@
     border-radius: 3px;
     font-weight: 400;
 }
-.modal-form .modal-body .form-control {
-    border-radius: 3px;
-    border: 1px solid $border;
-    font: 14px/20px $primary;
-    color: #434343;
-}
-.modal-form .modal-body {
-    padding: 5px 25px 20px;
-}
-.modal-form .modal-footer .link-form {
-    color: #929292;
-    font-size: 12px;
-}
-.modal-form .modal-footer .link-form a {
-    color: #96be3d;
-    margin: 0;
-    font-weight:900;
-}
-.modal-form .modal-footer {
-    padding: 0px 0 20px;
-    margin: 0 15px;
-}
-.modal-form .modal-content {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-.modal-form .modal-header .close {
-    top: 5px;
-    right: 5px;
-}
-.modal-form .modal-header .modal-title {
-    font-size: 30px !important;
-    color: #232323;
-    font-weight: 300;
-    margin: 15px 0;
-}
 .modal-form .modal-header .join-title {
     margin: 0;
-}
-.modal-form .modal-header h4 {
-    font-size: 16px !important;
-    line-height: 22px;
-    font-weight: 700;
-    color: #8ab21e;
 }
 .modal-form .form-or {
     padding: 15px 0;
