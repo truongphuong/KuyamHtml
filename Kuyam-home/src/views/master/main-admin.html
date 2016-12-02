@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+{% include "./components/meta.html" %}
+
+{% block meta %}{% endblock %}
+
+{% include "./components/favicon.html" %}
+
+{% include "./components/fonts.html" %}
+
+{% include "./components/css.html" %}
+{% block css %}{% endblock %}
+<link type="text/css" rel="stylesheet" href="http://localhost:3000/content/admin/css/style.css" />
+<link type="text/css" rel="stylesheet" href="http://localhost:3000/content/admin/css/kuyam.css" />
+<link type="text/css" rel="stylesheet" href="http://localhost:3000/content/admin/css/style-company-admin.css" />
+<link type="text/css" rel="stylesheet" href="http://localhost:3000/content/style.css" />
+</head>
+<body>
+{% include "./partials/sidebar.html" %}
+
+<div class="wrap {% block namepage %}{% endblock %}">
+{% include "./partials/header.html" %}
+    <div class="site-banner">
+        {% block banner %}{% endblock %}
+    </div>
+    <div class="content">
+        <div class="whitebackground">
+            {% include "./partials/sidenav.html" %}
+            <div class="rightadmin">
+                <div id="contentmainpage">
+                    {% block main %}{% endblock %}
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    {% include "./partials/footer.html" %}
+</div>
+
+{% block modal %}{% endblock %}
+
+{% include "./partials/loading.html" %}
+
+{% include "./components/js.html" %}
+
+{% block script %}{% endblock %}
+</body>
+</html>

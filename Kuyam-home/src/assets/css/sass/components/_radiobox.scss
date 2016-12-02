@@ -14,19 +14,20 @@
     cursor: pointer;
     display: inline-block !important;
     font-size: $h6;
+    color: #333232;
 }
 .radio-mark:checked ~ .radio-label:before {
-    background-image: url(images/boarding/checked.png);
+    background-image: url(images/ui/modals/checkout/icon_checked.png);
 }
 .radio-mark ~ .radio-label:before {
     content: '';
     display: block;
     vertical-align: middle;
     position: absolute;
-    width: 27px;
-    height:29px;
-    background: url(images/boarding/check.png) center center no-repeat;
-    background-size: 27px auto;
+    width: 16px;
+    height:16px;
+    background: url(images/ui/modals/checkout/icon_check.png) center center no-repeat;
+    background-size: 16px auto;
     top: 4px;
     left: 0;
     cursor: pointer;
@@ -47,10 +48,10 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px)
 only screen and (              min-resolution:120dpi)      and (min-width:320px),
 only screen and (               min-resolution:2dppx)      and (min-width:320px){
     .radio-mark:checked ~ .radio-label:before {
-        background-image: url(images/boarding/checked@2x.png);
+        background-image: url(images/boarding/icon_checked@2x.png);
     }
 
     .radio-mark ~ .radio-label:before {
-        background-image: url(images/boarding/check@2x.png) ;
+        background-image: url(images/boarding/icon_check@2x.png) ;
     }
 }

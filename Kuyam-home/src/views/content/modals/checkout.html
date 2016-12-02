@@ -3,85 +3,125 @@
     <div class="modal-dialog modal-checkout">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 id="checkoutModalLabel" class="modal-title"><span class="time-complete"><span>Time to complete booing:</span> <time>09:39</time></span>Checkout</h4>
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="checkoutModalLabel" class="modal-title"><span class="checkout-time-complete hidden-xs"><span>Time to complete booing:</span> <time>09:39</time></span>Checkout</h4>
             </div>
             <div class="modal-body">
-
-                <!-- .col -->
-                <div class="col">
-                    <div class="appointment">
-                        <h3>Yoga for adults</h3>
-                        <time><strong>Wed, Jul 20th</strong> at 4:00 pm - 4:20 pm</time>
-                        <address><strong>Yoga Temple</strong><br />2-1 E. Delaware Pl. 2nd floor.<br />Los Angeles, CA.</address>
-                    </div>
-
-                    <div class="employee">
-                        <label>Width</label>
-                        <p>Kourosh Gohar</p>
-                        <label>For</label>
-                        <p>Alfonso Medeiros</p>
-                    </div>
-
-                    <div class="contact">
-                        <label>Confirmation method:</label>
-                    </div>
-
-                </div>
-                <!-- /.col -->
-
-                <!-- .col -->
-                <div class="col">
-
-                    <div class="code">
-                        <div>
-                            <input type="text" class="form-control" placeholder="Promo Code/Gift Card" />
-                            <input type="button" class="btn btn-green" value="Apply" />
+                <div class="row">
+                    <!-- .col -->
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="appointment">
+                            <h3>Yoga for adults</h3>
+                            <time><strong>Wed, Jul 20th</strong> at 4:00 pm - 4:20 pm</time>
+                            <address><strong>Yoga Temple</strong><br />2-1 E. Delaware Pl. 2nd floor.<br />Los Angeles, CA.</address>
                         </div>
-                        <div class="txt-required">please enter a valid code</div>
-                    </div>
 
-                    <div class="bill">
-                        <h5>Total due</h5>
-                        <div class="table-css">
-                            <div class="tr">
-                                <div class="td td-name"><span>SUMMER</span></div>
-                                <div class="td td-price">-$10.00</div>
+                        <div class="employee">
+                            <label class="form-label">Width</label>
+                            <p>Kourosh Gohar</p>
+                            <label class="form-label">For</label>
+                            <p>Alfonso Medeiros</p>
+                        </div>
+
+                        <div class="contact">
+                            <label class="form-label">Confirmation method:</label>
+                            <div class="radio-custom">
+                                <input id="radioEmail" class="radio-mark" name="radioContact" type="radio">
+                                <label class="radio-label" for="radioEmail">
+                                    <span>Email to</span> <strong>kourosh@gohar.com</strong>
+                                </label>
+                                <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
-                            <div class="tr">
-                                <div class="td td-name"><span>x6773</span> <small>($0.00 remaining)</small></div>
-                                <div class="td td-price"></div>
+                            <div class="radio-custom">
+                                <input id="radioSMS" class="radio-mark" name="radioContact" type="radio">
+                                <label class="radio-label" for="radioSMS">
+                                    <span>SMS to</span> <strong>555 666 777</strong>
+                                </label>
+                                <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
-                            <div class="tr">
-                                <div class="td td-name"><span>x5561</span> <small>($10.00 remaining)</small></div>
-                                <div class="td td-price">-$9.00</div>
+                        </div>
+
+                    </div>
+                    <!-- /.col -->
+
+                    <!-- .col -->
+                    <div class="col-xs-12 col-sm-6">
+
+                        <div class="code">
+                            <div class="group disabled">
+                                <input type="text" class="form-control" placeholder="Promo Code/Gift Card" />
+                                <input type="button" class="btn btn-green" value="Apply" />
                             </div>
-                            <div class="tfoot">
-                                <div class="tr">
-                                    <div class="td td-name"></div>
-                                    <div class="td td-price">$0.00</div>
+                            <div class="txt-required">please enter a valid code</div>
+                        </div>
+
+                        <div class="bill">
+                            <h5>Total due</h5>
+                            <section>
+                                <div class="cols-name">
+                                    <ul>
+                                        <li class="promo" data-tr="1">
+                                            <span class="text">SUMMER</span>
+                                        </li>
+                                        <li class="giftcard" data-tr="2">
+                                            <span class="text"><span class="num">x6773</span> <small>($0.00 remaining)</small></span>
+                                        </li>
+                                        <li class="giftcard" data-tr="3">
+                                            <span class="text"><span class="num">x5561</span> <small>($10.00 remaining)</small></span>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
+                                <div class="cols-price">
+                                    <div class="table-css">
+                                        <div class="tr" data-tr="1">
+                                            <div class="td">
+                                                -$
+                                            </div>
+                                            <div class="td">
+                                                <span>10.00 <a class="link-delete" title="" href="javascript:void(0);"></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="tr" data-tr="2">
+                                            <div class="td">
+                                                -$
+                                            </div>
+                                            <div class="td">
+                                                <span>9.00 <a class="link-delete" title="" href="javascript:void(0);"></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="tr" data-tr="3">
+                                            <div class="td">
+                                                -$
+                                            </div>
+                                            <div class="td">
+                                                <span>9.00 <a class="link-delete" title="" href="javascript:void(0);"></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <footer>
+                                <span>$0.00</span>
+                            </footer>
                         </div>
-                    </div>
 
-                    <div class="method">
-                        <label>Checkout Method</label>
-                        <input type="button" class="btn btn-green" value="Book Appointment" />
-                        <input type="button" class="btn btn-disagree" value="Credit Card" />
-                        <input type="button" class="btn btn-green" value="Pay in person" />
-                    </div>
+                        <div class="method">
+                            <label>Checkout Method</label>
+                            <input type="button" class="btn btn-green" value="Book Appointment" />
+                            <input type="button" class="btn btn-disagree" value="Credit Card" />
+                            <input type="button" class="btn btn-green" value="Pay in person" />
+                        </div>
 
-                    <!-- .rule -->
-                    <div class="rule">
-                        <header>Cancellation policy:</header>
-                        <p>this appointment have a 24-hours cancellation policy.<br /> if you modify or cancel 24 hours before this appointment<br /> or later, you will be charge 50% of total amount.</p>
-                    </div>
-                    <!-- .rule -->
+                        <!-- .rule -->
+                        <div class="rule">
+                            <p>Cancellation policy:<br />this appointment have a 24-hours cancellation policy.<br /> if you modify or cancel 24 hours before this appointment<br /> or later, you will be charge 50% of total amount.</p>
+                        </div>
+                        <!-- .rule -->
 
+                    </div>
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
-
             </div>
         </div>
     </div>

@@ -186,4 +186,11 @@ $(document).ready(function () {
     $('.btn-book').on('click', function () {
         $('#bookTabs a[href="#appointment"]').click();
     });
+
+    $(document).on('click', '#checkoutModal .link-delete', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var deleteVal = $this.closest('.tr').data('tr');
+        $('[data-tr="' + deleteVal + '"]').remove();
+    });
 });

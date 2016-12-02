@@ -1,3 +1,317 @@
 .modal-checkout{
     width: 758px;
 }
+.modal-checkout .modal-header{
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #c5c5c5;
+}
+.modal-checkout .modal-header .modal-title{
+    font-size: $s30;
+    font-weight: 300;
+    line-height: 60px;
+    font-family: $primary;
+    color: #232323;
+    text-align: left;
+    position: relative;
+    padding-left: 41px;
+}
+.modal-checkout .modal-header .modal-title:before{
+    content: '';
+    width: 30px;
+    height:100%;
+    position: absolute;
+    top:2px;
+    left: 0;
+    background:url(images/ui/modals/checkout/icon_card.png) center center no-repeat;
+    background-size: 30px auto;
+}
+.modal-checkout .modal-header button.close{
+    height: 60px;
+}
+.modal-checkout .modal-header .modal-title .time-complete{
+    font-size: 16px;
+    color: #797777;
+    float: right;
+    margin-right: 37px;
+}
+.modal-checkout .modal-header .modal-title .time-complete span{
+    font-size: $s18;
+}
+.modal-checkout .modal-header .modal-title .time-complete time{
+    font-weight: 400;
+    font-size: $s18;
+    display: inline-block;
+}
+.modal-checkout .modal-body{
+    padding:0 28px;
+}
+.modal-checkout .modal-body .appointment{
+    text-align: center;
+    padding-top: 27px;
+    padding-bottom: 29px;
+    height: 216px;
+}
+.modal-checkout .modal-body .appointment h3{
+    font-size: $s23;
+    font-weight: 700;
+    font-family: $primary;
+    color: rgba(0, 0, 0, .9);
+    margin-bottom: 26px;
+}
+.modal-checkout .modal-body .appointment time{
+    font-size:$s17;
+    color: #333232;
+    margin-bottom: 5px;
+}
+.modal-checkout .modal-body .appointment time strong{
+    font-weight: 700;
+}
+.modal-checkout .modal-body .appointment address{
+    line-height: 20px;
+    font-size:$s17;
+    color:#353535;
+    margin:0;
+}
+.modal-checkout .modal-body .appointment address strong{
+    font-weight: 700;
+}
+.modal-checkout .modal-body .employee{
+    text-align: center;
+    padding-bottom:47px;
+}
+.modal-checkout .modal-body .employee .form-label{
+    font-size: $h6;
+    color: rgba(51, 50, 50, .6);
+    line-height: 20px;
+    margin-bottom: 0;
+}
+.modal-checkout .modal-body .employee p{
+    font-size: $s18;
+    color: #333232;
+    line-height: 22px;
+    margin-bottom: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+.modal-checkout .modal-body .contact{
+    padding-bottom: 30px;
+}
+.modal-checkout .modal-body .contact .form-label{
+    font-size: $h6;
+    color: #333232;
+    margin-bottom: 12px;
+}
+.modal-checkout .modal-body .code{
+    width: 227px;
+    margin:14px auto 0;
+    height: 52px;
+}
+.modal-checkout .modal-body .code .group{
+    position: relative;
+    border:1px solid #c6c6c6;
+    border-radius: 2px;
+}
+.modal-checkout .modal-body .code .group.disabled{
+    opacity: .5;
+}
+.modal-checkout .modal-body .code .group.disabled:after{
+    position: absolute;
+    top:0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+.modal-checkout .modal-body .code .group .form-control{
+    border:0 none;
+    box-shadow: none;
+    height: 32px;
+    font-size: $s14;
+    font-weight: 300;
+}
+.modal-checkout .modal-body .code .group .btn{
+    position: absolute;
+    top:0;
+    right: 0;
+    border:0 none;
+    padding:0;
+    height: 32px;
+    width: 47px;
+    font-size: $s11;
+    font-weight: 700;
+    box-shadow: none;
+}
+.modal-checkout .modal-body .code .txt-required{
+    text-align: right;
+    font-size: $p;
+    color: #cf0000;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 18px;
+}
+.modal-checkout .modal-body .bill{
+    height: 182px;
+}
+.modal-checkout .modal-body .bill h5{
+    font-size: $s21;
+    font-family: $primary;
+    color: #333232;
+    margin-bottom: 13px;
+}
+.modal-checkout .modal-body .bill section{
+    width: 100%;
+}
+.modal-checkout .modal-body .bill .cols-name{
+    float: left;
+    width: calc(100% - 100px);
+    color: rgba(119, 119, 119, .9);
+}
+.modal-checkout .modal-body .bill .cols-name ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.modal-checkout .modal-body .bill .cols-name li{
+    line-height: 26px;
+    position: relative;
+    padding: 2px 0;
+}
+.modal-checkout .modal-body .bill .cols-name .num{
+    font-size: $s18;
+    position: relative;
+    display: inline-block;
+}
+.modal-checkout .modal-body .bill .cols-name .text{
+    padding-left: 34px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+.modal-checkout .modal-body .bill .cols-name .text:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width:25px;
+    height: 26px;
+    background: center center no-repeat;
+    background-size: 25px auto;
+}
+.modal-checkout .modal-body .bill .cols-name small{
+    font-size: $s14;
+    display: inline-block;
+}
+.modal-checkout .modal-body .bill .promo .text:before{
+    background-image: url(images/ui/modals/checkout/icon_promo.png);
+}
+.modal-checkout .modal-body .bill .giftcard .text:before{
+    background-image: url(images/ui/modals/checkout/icon_giftcard.png);
+}
+.modal-checkout .modal-body .bill .cols-price{
+    float: left;
+    width: 100px;
+    text-align: right;
+    font-size: $s18;
+    color: rgba(149, 189, 30, .9);
+    padding-left: 10px;
+}
+.modal-checkout .modal-body .bill .cols-price .table-css{
+    float: right;
+}
+.modal-checkout .modal-body .bill .cols-price .td{
+    line-height: 26px;
+    padding: 2px 0;
+}
+.modal-checkout .modal-body .bill .cols-price .td span{
+    position: relative;
+    display: inline-block;
+}
+.modal-checkout .modal-body .bill .cols-price .td:last-child{
+    padding-right: 5px;
+}
+.modal-checkout .modal-body .bill .cols-price .td .link-delete{
+    position: absolute;
+    top:0;
+    right: -28px;
+    width: 28px;
+    height: 26px;
+    display: inline-block;
+    background: url(images/ui/modals/checkout/icon_delete.png) center center no-repeat;
+    background-size: 14px auto;
+}
+.modal-checkout .modal-body .bill footer{
+    text-align: right;
+    margin-top: 12px;
+}
+.modal-checkout .modal-body .bill footer span{
+    display: inline-block;
+    color: rgba(0, 0, 0, .9);
+    font-size: $s29;
+    font-weight: 700;
+    border-top: 2px solid #777;
+    padding: 7px 4px;
+}
+.modal-checkout .modal-body .method{
+    text-align: center;
+    width: 227px;
+    margin:9px auto 18px;
+    height: 153px;
+}
+.modal-checkout .modal-body .method label{
+    font-size: $h6;
+    color: #333232;
+    margin-bottom: 6px;
+}
+.modal-checkout .modal-body .method .btn{
+    font-size: $h6;
+    font-weight: 700;
+    color: #4d4d4d;
+    margin-bottom: 11px;
+    background: $white;
+    width: 100%;
+    padding:0;
+    height: 30px;
+}
+.modal-checkout .modal-body .rule{
+    text-align: center;
+    padding-bottom: 29px;
+}
+.modal-checkout .modal-body .rule p{
+    font-size: $s10;
+    line-height: 15px;
+    color: #333232;
+}
+
+
+@media (min-width: 768px) {
+    .modal-checkout .row{
+        margin-left: -17px;
+        margin-right: -17px;
+    }
+    .modal-checkout div[class*="col-"]{
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    .modal-checkout div[class*="col-"]:last-child{
+        border-left: 1px solid #c5c5c5;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-checkout{
+        width: auto;
+    }
+    .modal-checkout .modal-body .contact{
+        margin-right:-10px;
+        margin-left:-10px;
+    }
+    .modal-checkout .modal-body .employee{
+        border-top:1px solid #c5c5c5;
+        border-bottom:1px solid #c5c5c5;
+    }
+}
