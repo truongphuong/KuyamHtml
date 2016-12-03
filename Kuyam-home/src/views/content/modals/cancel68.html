@@ -1,0 +1,24 @@
+<!-- #modal-cancel -->
+<div id="modal-cancel" class="modal fade" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-form modal-cancel">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">cancel appointment</h4>
+            </div>
+            <div class="modal-body">
+                <h2>Amy's Hair Salon</h2>
+                <h4>Friday, August 16th <time>10:00 am</time></h4>
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'please enter your password'; }" onfocus="if (this.value == 'please enter your password') { this.value = ''; }" value="please enter your password" />
+                    <textarea class="form-control" cols="" rows="" onblur="if (this.value == '') { this.value = 'please enter reason for cancelation...'; }" onfocus="if (this.value == 'please enter reason for cancelation...') { this.value = ''; }">please enter reason for cancelation...</textarea>
+                    <div class="link-form"><a class="info-cancel" title="" href="#"><span class="icon-cancel"></span> cancel anytime</a></div>
+                    <div class="text-center">
+                        <button type="button" class="btn-red btn-form btn-cancel">cancel appointment</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#modal-cancel -->

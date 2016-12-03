@@ -1,0 +1,46 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Register{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+
+<!-- .modal-sign-up -->
+<div class="modal-form modal-sign-up">
+    <div class="modal-header">
+        <h3 class="modal-title">join kuyam free!</h3>
+        <h4>book appointments at home or on the go!</h4>
+    </div>
+    <div class="modal-body">
+        <a title="" href="facebook-login.html" class="btn-blue btn-facebook">sign up with Facebook</a>
+        <div class="form-or">
+            <hr />
+            <span>or</span>
+        </div>
+        <fieldset>
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'first name'; }" onfocus="if (this.value == 'first name') { this.value = ''; }" value="first name" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'last name'; }" onfocus="if (this.value == 'last name') { this.value = ''; }" value="last name" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+            <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
+            <div class="link-form">by signing up, I agree to kuyams <a class="link-term" title="" href="terms.html">terms of use</a> and <a class="link-term" title="" href="terms.html">privacy</a></div>
+            <button type="button" class="btn-green btn-form btn-sign-up">sign up</button>
+            <div class="alert-error">invalid</div>
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+        <hr />
+        <div class="text-right link-form">already have an account? <a class="link-login" title="" href="login.html">login</a></div>
+     </div>
+</div><!-- /.modal -->
+<!-- /.modal-sign-up -->
+
+{% endblock %}
+
+{% block script %}{% endblock %}
+
