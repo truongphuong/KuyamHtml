@@ -45,8 +45,8 @@
 
 
 
-<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/tooltipster.css" />
-<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/bootstrap-rating.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/tooltipster.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/bootstrap-rating.css" />
 
 <link type="text/css" rel="stylesheet" href="http://localhost:3000/content/style.css" />
 </head>
@@ -195,7 +195,7 @@
         <!-- .navbar-collapse -->
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://kuyamqa1.apphb.com" title="lifestyle blog">Lifestyle blog</a></li>
+                <li><a href="http://localhost:3000/sprints/sprint69/blog.html" title="lifestyle blog">Lifestyle blog</a></li>
                 <li class=""><a href="http://localhost:3000/sprints/sprint69/how-it-works.html" title="how it works">How it works</a></li>
                 <li><a class="bg-green" title="login" data-target="#loginModal" data-toggle="modal" href="javascript:void(0);">Login</a></li>
                 <li><a class="bg-green" title="sign up" data-target="#registerModal" data-toggle="modal" href="javascript:void(0);">Sign up</a></li>
@@ -287,6 +287,41 @@
                             </ul>
                         </nav>
                         <div class="book-option clearfix">
+                            <div id="categoriesSelect" class="option-select categories-select">
+    <!-- .select-options -->
+    <div class="dropdown">
+        <a title="" id="categoriesA" data-toggle="dropdown" href="#">
+            <span class="text">Categories</span><span class="icon icon-down"></span>
+        </a>
+        <div id="categoriesList" class="dropdown-menu" role="menu" aria-labelledby="categoriesA">
+            <div class="scroll-content">
+                <ul>
+                    <li class="option-item">
+                        <span class="text">All</span>
+                    </li>
+                    <li class="option-item">
+                        <span class="text">Yogo</span>
+                    </li>
+                    <li class="option-item">
+                        <span class="text">Massage</span>
+                    </li>
+                    <li class="option-item">
+                        <span class="text">Nails</span>
+                    </li>
+                    <li class="option-item">
+                        <span class="text">Valentina Lucas</span>
+                    </li>
+                    <li class="option-item">
+                        <span class="text">Valentina Lucas</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.select-options -->
+</div>
+
+
                             <div id="whatSelect" class="option-select what-select">
 
     <!-- .select-options -->
@@ -296,58 +331,70 @@
         </a>
 
         <div id="whatList" class="dropdown-menu" role="menu" aria-labelledby="whatA">
-            <div class="content-scroll">
+            <div class="scroll-content">
                 <ul>
-                    <li>
+                    <li class="option-header offer">
+                        Special offers
+                    </li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Hair sesion</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">11 min</span>
-                                <span class="td td-price">$111</span>
+                                <span class="td td-off">50% off</span>
+                                <span class="td td-price">$210<del>$420</del></span>
                             </span>
                         </span>
                     </li>
-                    <li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Spin class</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
-                                <span class="td td-price">$210</span>
+                                <span class="td td-off">50% off</span>
+                                <span class="td td-price">$210<del>$420</del></span>
                             </span>
                         </span>
                     </li>
-                    <li>
+                    <li class="option-header">
+                        Regular price
+                    </li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Yoga</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
+                                <span class="td td-off"></span>
                                 <span class="td td-price">$210</span>
                             </span>
                         </span>
                     </li>
-                    <li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Hair sesion</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
+                                <span class="td td-off"></span>
                                 <span class="td td-price">$210</span>
                             </span>
                         </span>
                     </li>
-                    <li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Yoga</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
+                                <span class="td td-off"></span>
                                 <span class="td td-price">$210</span>
                             </span>
                         </span>
                     </li>
-                    <li>
+                    <li class="option-item">
                         <span class="table-css">
                             <span class="tr">
                                 <span class="td td-name"><span class="text">Hair sesion</span> <a href="javascript:void(0);" title="" data-toggle="modal" data-target="#detailsModal">see details</a></span>
                                 <span class="td td-time">21 min</span>
+                                <span class="td td-off"></span>
                                 <span class="td td-price">$210</span>
                             </span>
                         </span>
@@ -362,25 +409,27 @@
                             <div id="whoSelect" class="option-select who-select disabled">
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="whoA" data-toggle="dropdown" href="#">
-            <span class="text">Any staff</span><span class="icon icon-down"></span>
+        <a title="" id="whoA" data-toggle="dropdown" href="#"><span class="text">Any staff</span><span class="icon icon-down"></span>
         </a>
         <div id="whoList" class="dropdown-menu" role="menu" aria-labelledby="whoA">
-            <div class="content-scroll">
+            <div class="scroll-content">
                 <ul>
-                    <li class="options-item">
-                        <span class="text">Any staff</span>
+                    <li class="option-item selected">
+                        <span class="text">All</span>
                     </li>
-                    <li class="options-item">
+                    <li class="option-item">
                         <span class="text">Fatima Dominguez</span>
                     </li>
-                    <li class="options-item">
+                    <li class="option-item">
                         <span class="text">Valentina Lucas</span>
                     </li>
-                    <li class="options-item">
+                    <li class="option-item">
                         <span class="text">Alfonso Mederos</span>
                     </li>
-                    <li class="options-item">
+                    <li class="option-item">
+                        <span class="text">Valentina Lucas</span>
+                    </li>
+                    <li class="option-item">
                         <span class="text">Valentina Lucas</span>
                     </li>
                 </ul>
@@ -1909,7 +1958,7 @@
     <div class="modal-dialog modal-checkout">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 id="checkoutModalLabel" class="modal-title"><span class="time-complete"><span>Time to complete booing:</span> <time>09:39</time></span>Checkout</h4>
+                <h4 id="checkoutModalLabel" class="modal-title">Checkout<span class="time-complete"><span>Time to complete booing:</span> <time>09:39</time></span></h4>
                 <button type="button" class="close" data-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -1931,18 +1980,26 @@
 
                         <div class="contact">
                             <label class="form-label">Confirmation method:</label>
-                            <div class="radio-custom">
+                            <div class="radio-custom contact-radio clearfix">
                                 <input id="radioEmail" class="radio-mark" name="radioContact" type="radio">
                                 <label class="radio-label" for="radioEmail">
                                     <span>Email to</span> <strong>kourosh@gohar.com</strong>
                                 </label>
+                                <div class="group hide">
+                                    <input class="form-control" placeholder="Email" type="text" value="kourosh@gohar.com" />
+                                    <input class="btn btn-green" value="Apccept" type="button" />
+                                </div>
                                 <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
-                            <div class="radio-custom">
+                            <div class="radio-custom contact-radio clearfix">
                                 <input id="radioSMS" class="radio-mark" name="radioContact" type="radio">
                                 <label class="radio-label" for="radioSMS">
                                     <span>SMS to</span> <strong>555 666 777</strong>
                                 </label>
+                                <div class="group hide">
+                                    <input class="form-control" placeholder="Phone" type="text" value="555 666 777" />
+                                    <input class="btn btn-green" value="Apccept" type="button" />
+                                </div>
                                 <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
                         </div>
@@ -1961,9 +2018,9 @@
                             <div class="txt-required">please enter a valid code</div>
                         </div>
 
-                        <div class="bill">
+                        <div class="bill null">
                             <h5>Total due</h5>
-                            <section>
+                            <section class="clearfix">
                                 <div class="cols-name">
                                     <ul>
                                         <li class="promo" data-tr="1">
@@ -2008,7 +2065,7 @@
                             </section>
 
                             <footer>
-                                <span>$0.00</span>
+                                <span class="total"><span>$</span>0.00</span>
                             </footer>
                         </div>
 

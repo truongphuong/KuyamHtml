@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-checkout">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 id="checkoutModalLabel" class="modal-title"><span class="time-complete"><span>Time to complete booing:</span> <time>09:39</time></span>Checkout</h4>
+                <h4 id="checkoutModalLabel" class="modal-title">Checkout<span class="time-complete"><span>Time to complete booing:</span> <time>09:39</time></span></h4>
                 <button type="button" class="close" data-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -25,18 +25,26 @@
 
                         <div class="contact">
                             <label class="form-label">Confirmation method:</label>
-                            <div class="radio-custom">
+                            <div class="radio-custom contact-radio clearfix">
                                 <input id="radioEmail" class="radio-mark" name="radioContact" type="radio">
                                 <label class="radio-label" for="radioEmail">
                                     <span>Email to</span> <strong>kourosh@gohar.com</strong>
                                 </label>
+                                <div class="group hide">
+                                    <input class="form-control" placeholder="Email" type="text" value="kourosh@gohar.com" />
+                                    <input class="btn btn-green" value="Apccept" type="button" />
+                                </div>
                                 <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
-                            <div class="radio-custom">
+                            <div class="radio-custom contact-radio clearfix">
                                 <input id="radioSMS" class="radio-mark" name="radioContact" type="radio">
                                 <label class="radio-label" for="radioSMS">
                                     <span>SMS to</span> <strong>555 666 777</strong>
                                 </label>
+                                <div class="group hide">
+                                    <input class="form-control" placeholder="Phone" type="text" value="555 666 777" />
+                                    <input class="btn btn-green" value="Apccept" type="button" />
+                                </div>
                                 <a class="link-edit" title="" href="javascript:void(0);"></a>
                             </div>
                         </div>
@@ -55,9 +63,9 @@
                             <div class="txt-required">please enter a valid code</div>
                         </div>
 
-                        <div class="bill">
+                        <div class="bill null">
                             <h5>Total due</h5>
-                            <section>
+                            <section class="clearfix">
                                 <div class="cols-name">
                                     <ul>
                                         <li class="promo" data-tr="1">
@@ -102,7 +110,7 @@
                             </section>
 
                             <footer>
-                                <span>$0.00</span>
+                                <span class="total"><span>$</span>0.00</span>
                             </footer>
                         </div>
 

@@ -43,14 +43,6 @@ function infoContent() {
     }
 }
 
-function optionWidth() {
-    if (isView.mobile()) {
-        $('.book-option .dropdown-menu').css({ 'width': $(window).width() });
-    } else {
-        $('.book-option .dropdown-menu').css({ 'width': '' });
-    }
-}
-
 $(document).ready(function () {
     $(document).on('click', '.icon-unlike', function (e) {
         e.preventDefault();
@@ -92,7 +84,11 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.option-select li', function (e) {
+    $(document).on('click', '.option-select .option-header', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.option-select .option-item', function (e) {
         var $this = $(this);
         var selectedVal = $this.find('.text').text();
         $this.closest('.option-select').find('a .text').html(selectedVal);
@@ -168,13 +164,6 @@ $(document).ready(function () {
     });
     //End reposition info content when resize screen
 
-    //Begin set width for option dropdow
-    optionWidth();
-    monitorResize(function () {
-        optionWidth();
-    });
-    //End set width for option dropdow
-
     $('#reviewModal').on('show.bs.modal', function (e) {
         $('#reviewRating').rating();
     });
@@ -192,5 +181,34 @@ $(document).ready(function () {
         var $this = $(this);
         var deleteVal = $this.closest('.tr').data('tr');
         $('[data-tr="' + deleteVal + '"]').remove();
+    });
+
+    $(document).on('click', '.contact .link-edit', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.addClass('hide');
+        $this.closest('.contact-radio').find('strong').addClass('hide');
+        $this.closest('.contact-radio').find('.group').removeClass('hide');
+    });
+
+    $(document).on('click', '.contact .btn', function () {
+        var $this = $(this);
+        var inputVal = $this.closest('.group').find('.form-control').val();
+        $this.closest('.contact-radio').find('strong').html(inputVal);
+        $this.closest('.contact-radio').find('strong').removeClass('hide');
+        $this.closest('.contact-radio').find('.link-edit').removeClass('hide');
+        $this.closest('.group').addClass('hide');
+    });
+
+    $('.option-select .dropdown').on('shown.bs.dropdown', function (e) {
+        var contentID = '#' + $(e.target).find('.dropdown-menu').attr('id');
+        setTimeout(function () {
+            var isScroll = $(contentID).find('.wrap-dropdown-menu-inner').length;
+            if (isScroll) {
+                refreshNiceScroll(contentID);
+            } else {
+                iscrollContent(contentID);
+            }
+        }, 300);
     });
 });

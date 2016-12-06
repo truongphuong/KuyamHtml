@@ -20,16 +20,27 @@
     height: 100%;
     cursor: default;
 }
+.book-option .option-select .dropdown .dropdown-menu{
+    max-height: 175px;
+    overflow-y: auto;
+}
+.on-nicescroll .book-option .option-select .dropdown .dropdown-menu{
+    overflow-y:hidden;
+}
+.on-nicescroll .book-option .option-select .dropdown .dropdown-menu .wrap-dropdown-menu-inner{
+    height: 175px;
+}
 .book-option .option-select .dropdown > a{
     padding: 8px 14px;
     display: block;
     font-size: $s21;
     color:#333232;
     text-decoration: none;
+    position: relative;
 }
 .book-option .option-select .dropdown > a .text{
     display: inline-block;
-    max-width: calc(100% - 31px);
+    max-width: calc(100% - 26px);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -41,7 +52,7 @@
     height: 24px;
     background-image: url(images/ui/pages/book-details/option/icon_down@3x.png);
     background-size: 21px auto;
-    margin-left: 15px;
+    margin-left: 5px;
 }
 .book-option .option-select .dropdown.open > a .icon{
     -webkit-transform: rotate(-180deg);
@@ -71,9 +82,18 @@
     cursor: pointer;
     font-size: $s14;
 }
+.book-option .option-select ul li.selected,
 .book-option .option-select ul li:hover{
     color: #87b400;
     font-weight: 700;
+}
+.book-option .option-select ul li.option-header{
+    color: #87b400;
+    font-weight: 700;
+    cursor: default;
+}
+.book-option .option-select ul li.option-header.offer{
+    color: $negative;
 }
 .book-option .option-select ul li .table-css{
     width: 100%;
@@ -82,9 +102,12 @@
     cursor: pointer;
 }
 .book-option .option-select ul li .td{
-    padding: 0 14px 0 0;
+    padding: 0 0 0 14px;
     text-align: right;
     color: rgba(0, 0, 0, .8);
+}
+.book-option .option-select ul li .td:first-child{
+    padding: 0;
 }
 .book-option .option-select ul li .td-name{
     padding-left: 0;
@@ -96,50 +119,72 @@
     font-style: italic;
 }
 .book-option .option-select ul li .td-time,
+.book-option .option-select ul li .td-off,
 .book-option .option-select ul li .td-price{
     width: 85px;
+}
+.book-option .option-select ul li .td-off{
+    color: $negative;
+}
+.book-option .option-select ul li .td-price del{
+    color: $disabled;
+    display: block;
+    padding-top: 11px;
 }
 
 @media (min-width: 768px) {
     .book-option .option-select .dropdown{
         position: absolute;
+        width: 100%;
     }
     .book-option .option-select .dropdown.open{
         box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
         background: $white;
     }
-    .book-option .option-select .dropdown > a{
-        font-size: $h6;
-    }
     .book-option .option-select .dropdown-menu{
         position: relative;
     }
-    .book-option .what-select{
+    .book-option .categories-select{
         margin-left: -14px;
-        width: 65%;
+        width: 155px;
+        z-index: 3;
+    }
+    .book-option .categories-select .dropdown > a .text{
+        max-width: 101px;
+    }
+    .book-option .what-select{
+        width: 328px;
         z-index: 2;
     }
+    .book-option .what-select .dropdown > a .text{
+        max-width: 274px;
+    }
     .book-option .what-select .dropdown.open{
-        width: 144%;
+        width: 472px;
     }
     .book-option .who-select{
-        width: 35%;
+        width: 140px;
         z-index: 1;
+    }
+    .book-option .who-select .dropdown > a .text{
+        max-width: 86px;
     }
     .book-option .who-select .dropdown.open{
         width: 100%;
     }
 }
 
-@media (min-width: 992px) {
-    .book-option .what-select{
-        width: 58%;
-    }
-    .book-option .who-select{
-        width: 42%;
+@media (max-width: 991px) {
+    .book-option .option-select{
+        width: 100%;
+        text-align: center;
+        margin:0;
     }
     .book-option .option-select .dropdown > a{
-        font-size: $s21;
+        display: inline-block;
+    }
+    .book-option .what-select .dropdown.open{
+        width: 100%;
     }
 }
 
@@ -160,16 +205,5 @@
     }
     .book-option .option-select .dropdown-menu{
         box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
-    }
-    .book-option .what-select{
-        width: 66%;
-    }
-    .book-option .who-select{
-        float: right;
-        max-width: 34%;
-    }
-    .book-option .option-select.who-select .dropdown-menu{
-        left: inherit;
-        right: 0;
     }
 }

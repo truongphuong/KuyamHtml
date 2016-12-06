@@ -8,8 +8,8 @@
 {% endblock %}
 
 {% block css %}
-<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/tooltipster.css" />
-<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/libs/bootstrap-rating.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/tooltipster.css" />
+<link type="text/css" rel="Stylesheet" href="http://localhost:3000/content/bootstrap-rating.css" />
 {% endblock %}
 
 {% block banner %}
@@ -32,6 +32,8 @@
                             </ul>
                         </nav>
                         <div class="book-option clearfix">
+                            {% include "./content/pages/book-details/category.html" %}
+
                             {% include "./content/pages/book-details/what.html" %}
 
                             {% include "./content/pages/book-details/who.html" %}

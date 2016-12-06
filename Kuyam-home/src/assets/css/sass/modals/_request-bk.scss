@@ -10,7 +10,7 @@
 
 .modal-request .modal-header {
     background: #ba337a;
-    color: #ffffff;
+    color: $white;
     padding: 15px;
 }
 
@@ -180,13 +180,9 @@
     font: 18px/20px 'Lato', sans-serif;
     font-weight: 800;
 }
-
-.checkout-select {}
-
 .checkout-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width: 100%;
 }
-
 .checkout-select .bootstrap-select > .btn {
     height: 42px;
     border: 1px solid #333333;
@@ -197,7 +193,6 @@
     font-weight: 500;
     padding-left: 0;
 }
-
 .checkout-select .bootstrap-select.btn-group .btn .filter-option {
     white-space: nowrap;
     overflow: hidden;
@@ -205,7 +200,6 @@
     width: 93%;
     margin-left: 12px;
 }
-
 .checkout-select .bootstrap-select.btn-group .btn .caret {
     width: 23px;
     height: 13px;
@@ -213,95 +207,77 @@
     border: 0 none;
     margin-top: -5px;
 }
-
 .checkout-time-left {
     padding: 25px 0;
     text-align: center;
 }
-
 .checkout-time-left .icon-time-left {
     margin: 0 5px -15px 0;
 }
-
 .checkout-time-left time {
     margin: 5px 0 0;
     font: 26px/41px 'Lato', sans-serif;
     font-weight: 400;
 }
-
 .icon-time-left {
     display: inline-block;
     width: 41px;
     height: 41px;
     background: url(images/icons/icon_clock.png);
 }
-
 .checkout-price {
     min-height: 80px;
     font: 20px/24px 'Lato', sans-serif;
     font-weight: 500;
     padding: 0 40px;
 }
-
 .checkout-price .table-css {
     width: 100%;
 }
-
 .checkout-price .table-cell {
     padding: 0 5px;
 }
-
 .checkout-price .price-details {
     width: 66%;
     text-align: right;
 }
-
 .checkout-price .price-total {
     text-align: right;
 }
-
 .checkout-price .price-total span {
     display: inline-block;
     padding: 0 0 0 10px;
     border-top: 1px solid #ababab;
 }
-
 .checkout-price .price-type {
     width: 34%;
     color: #cccccc;
 }
-
 .checkout-price h3 {
     font: 28px/32px 'Lato', sans-serif;
     font-weight: 800;
 }
-
 .checkout-price p {
     margin: 0 0 10px;
 }
-
 .alert-error {
     color: #ff0000 !important;
 }
-
 .checkout-payment {
     padding: 10px 0 10px 15px;
 }
-
 .checkout-payment header {
     padding: 0 0 0 60px;
     margin: 0 0 5px;
     font: 16px/20px 'Lato', sans-serif;
     font-weight: 500;
 }
-
 .checkout-method {
     padding: 0 0 0 60px;
     height: 44px;
     margin: 0 0 5px;
     position: relative;
 }
-
 .checkout-method .icon-method {
     display: inline-block;
     width: 48px;
@@ -311,23 +287,18 @@
     top: 0;
     left: 0;
 }
-
 .checkout-method .icon-promo {
     background-image: url(images/icons/icon_promo_black.png);
 }
-
 .checkout-method .icon-gift-card {
     background-image: url(images/icons/icon_giftcard_black.png);
 }
-
 .checkout-method .icon-credit {
     background-image: url(images/icons/icon_creditcard.png);
 }
-
 .checkout-method .icon-cash {
     background-image: url(images/icons/icon_payinperson_black.png);
 }
-
 .checkout-method .btn-method,
 .checkout-method .btn-method:hover {
     height: 44px;
@@ -335,11 +306,9 @@
     border-radius: 0;
     box-shadow: none;
 }
-
 .checkout-method .btn-credit {
     background: #4A90E2;
 }
-
 .checkout-method .form-control {
     height: 44px;
     border: 1px solid #ababab;
@@ -349,15 +318,12 @@
     font: 16px/44px 'Lato', sans-serif;
     font-weight: 500;
 }
-
 .checkout-method .txt-promo {
     padding-right: 87px;
 }
-
 .checkout-method .txt-giftcart {
     padding-right: 92px;
 }
-
 .checkout-method .btn-promo,
 .checkout-method .btn-promo:hover{
     width: 75px;
@@ -366,7 +332,6 @@
     right: 0;
     width: 75px;
 }
-
 .checkout-method .btn-giftcard,
 .checkout-method .btn-giftcard:hover {
     width: 80px;
@@ -375,7 +340,6 @@
     right: 0;
     font-size: 16px;
 }
-
 .checkout-method .discount-applied {
     height: 44px;
     line-height: 44px;
@@ -383,96 +347,76 @@
     text-align: center;
     color: #ababab;
 }
-
 .checkout-gift-card {
     padding: 25px 0 10px 15px;
 }
-
 .checkout-gift-card .checkout-method {
     padding: 0;
 }
-
 .method-confirm {
     padding: 0;
 }
-
 .checkout-balance {
     height: 85px;
     text-align: center;
 }
-
 .checkout-balance h3 {
     font: 20px/24px 'Lato', sans-serif;
     font-weight: 400;
 }
-
 .checkout-balance p {
     margin: 5px 0 0;
 }
-
 .checkout-balance-use {
     padding: 10px 0 0;
 }
-
 .checkout-back {
     padding: 10px 0 0;
     text-align: center;
 }
-
 .checkout-back .link-back {
-    color: #000000;
+    color: $black;
 }
-
 .checkout-back .icon-back {
     margin: 0 5px -2px 0;
 }
-
 .checkout-back .link-nothanks {
     color: #96be3d;
 }
-
 .checkout-back .icon-nothanks {
     margin: 0 0 -2px 5px;
 }
-
 .icon-back {
     display: inline-block;
     width: 9px;
     height: 14px;
     background: url(images/icons/icon_goback.png);
 }
-
 .icon-nothanks {
     display: inline-block;
     width: 9px;
     height: 14px;
     background: url(images/icons/icon_nothanks.png);
 }
-
 .checkout-applied {
     padding: 30px 0 10px 15px;
 }
-
 .checkout-applied .icon-gift-card {
     background-image: url(images/icons/icon_giftcard_grey.png);
 }
-
 .checkout-promo-applied .icon-promo {
     background-image: url(images/icons/icon_promo_grey.png);
 }
-
 .checkout-promo-applied .txt-promo,
 .checkout-promo-applied .btn-promo {
     display: none;
 }
-
 .checkout-rule {
     padding: 20px;
     font: 16px/20px 'Lato', sans-serif;
     font-weight: 500;
     color: #969696;
 }
-
 .checkout-rule header {
     color: #F06373;
 }

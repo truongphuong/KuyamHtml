@@ -84,7 +84,7 @@ function centerModal() {
     var offset = ($(this).height() - $dialog.height()) / 2;
     offset = offset > 0 ? offset : 15;
     // Center modal vertically in window
-    $dialog.css("margin-top", offset);
+    $dialog.css({ "margin-top": offset, "margin-bottom": offset });
 }
 
 function refreshNiceScroll(sectionID) {
