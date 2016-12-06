@@ -3508,26 +3508,18 @@ textarea.form-control:focus {
   overflow: hidden;
   position: relative; }
 
-.kuyam-page {
-  display: -webkit-flex;
-  display: flex; }
-
-.kuyam-page > div {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
-@media (max-width: 1023px) {
-  .kuyam-section {
-    overflow: visible; }
-
+@media (min-width: 1024px) {
   .kuyam-page {
-    display: block; }
+    display: -webkit-flex;
+    display: flex; }
 
   .kuyam-page > div {
-    -webkit-flex: inherit;
-    -ms-flex: inherit;
-    flex: inherit; } }
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; } }
+@media (max-width: 1023px) {
+  .kuyam-section {
+    overflow: visible; } }
 @media (min-width: 1024px) {
   .kuyam-main-content {
     display: -webkit-flex;
@@ -3632,8 +3624,7 @@ textarea.form-control:focus {
 @media (max-width: 1023px) {
   .kuyam-content {
     padding: 0 15px;
-    float: none;
-    max-width: 100% !important; }
+    float: none; }
 
   .kuyam-content .kuyam-form {
     padding: 0; }
@@ -7700,6 +7691,69 @@ textarea.form-control:focus {
 
   .company-account footer p {
     font-size: 0.6875em; } }
+.company-about .kuyam-form {
+  width: 670px; }
+
+.company-about .kuyam-form .legend {
+  margin-bottom: 34px; }
+
+.company-about .kuyam-form p {
+  font-size: 1.0625em;
+  color: #9b9b9b; }
+
+.company-about .kuyam-form div[class*="col-"] {
+  margin-bottom: 26px; }
+
+.company-about .kuyam-form footer {
+  padding: 14px 0;
+  text-align: left; }
+
+.company-about .kuyam-form footer .link-view {
+  position: relative;
+  padding-left: 30px;
+  line-height: 40px;
+  color: #242424;
+  text-decoration: none; }
+
+.company-about .kuyam-form footer .link-view:before {
+  content: '';
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/dashboard/company/icon_view.png) center center no-repeat;
+  background-size: 20px auto; }
+
+@media (max-width: 1023px) {
+  .company-about .kuyam-form {
+    width: auto; }
+
+  .company-gallery .kuyam-form p {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 0.8125em;
+    line-height: 20px;
+    color: #242424; }
+
+  .company-about .kuyam-form div[class*="col-"] {
+    margin-bottom: 22px; }
+
+  .company-about .kuyam-form footer {
+    padding-bottom: 0; } }
+@media (max-width: 767px) {
+  .company-about .kuyam-form div[class*="col-"] {
+    margin-bottom: 15px; } }
+@media (max-width: 374px) {
+  .company-gallery .kuyam-form p {
+    font-size: 0.6875em;
+    line-height: 17px; }
+
+  .company-about .kuyam-form div[class*="col-"] {
+    margin-bottom: 12px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .company-about .kuyam-form footer .link-view:before {
+    background-image: url(../images/dashboard/company/icon_view@3x.png); } }
 .manage-staff .subnav-content .add-link-section {
   padding-bottom: 4px; }
 

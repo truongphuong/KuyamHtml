@@ -1,0 +1,81 @@
+.company-about .kuyam-form{
+    width: 670px;
+}
+.company-about .kuyam-form .legend{
+    margin-bottom: 34px;
+}
+.company-about .kuyam-form p{
+    font-size: $s17;
+    color: #9b9b9b;
+}
+.company-about .kuyam-form div[class*="col-"]{
+    margin-bottom: 26px;
+}
+.company-about .kuyam-form footer{
+    padding: 14px 0;
+    text-align: left;
+}
+.company-about .kuyam-form footer .link-view{
+    position: relative;
+    padding-left: 30px;
+    line-height: 40px;
+    color: $base;
+    text-decoration: none;
+}
+.company-about .kuyam-form footer .link-view:before{
+    content: '';
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: url(../images/dashboard/company/icon_view.png) center center no-repeat;
+    background-size: 20px auto;
+}
+
+@media (max-width: 1023px){
+    .company-about .kuyam-form{
+        width: auto;
+    }
+    .company-gallery .kuyam-form p{
+        text-align: center;
+        margin-bottom: 16px;
+        font-size: $s13;
+        line-height: 20px;
+        color:$base;
+    }
+    .company-about .kuyam-form div[class*="col-"]{
+        margin-bottom: 22px;
+    }
+    .company-about .kuyam-form footer{
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .company-about .kuyam-form div[class*="col-"]{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 374px){
+    .company-gallery .kuyam-form p{
+        font-size: $s11;
+        line-height: 17px;
+    }
+    .company-about .kuyam-form div[class*="col-"]{
+        margin-bottom: 12px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .company-about .kuyam-form footer .link-view:before{
+        background-image: url(../images/dashboard/company/icon_view@3x.png);
+    }
+}

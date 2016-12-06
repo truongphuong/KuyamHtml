@@ -3,26 +3,20 @@
     position: relative;
 }
 
-.kuyam-page{
-    display: -webkit-flex;
-    display: flex;
-}
-.kuyam-page > div{
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+@media (min-width:1024px) {
+    .kuyam-page{
+        display: -webkit-flex;
+        display: flex;
+    }
+    .kuyam-page > div{
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
 }
 
 @media (max-width:1023px) {
     .kuyam-section {
         overflow: visible;
-    }
-    .kuyam-page{
-        display: block;
-    }
-    .kuyam-page > div{
-        -webkit-flex: inherit;
-        -ms-flex: inherit;
-        flex: inherit;
     }
 }
