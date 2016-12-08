@@ -211,4 +211,21 @@ $(document).ready(function () {
             }
         }, 300);
     });
+
+    if (isView.mobile()) {
+        var $bookNav = $('.book-nav');
+        var navheight = parseInt($bookNav.height());
+        console.log(navheight);
+        var navPosition = parseInt($bookNav.offset().top - navheight);
+        console.log(navPosition);
+        $(window).scroll(function (e) {
+            var scroll = parseInt($(window).scrollTop());
+            var $wrapper = $('.wrapper');
+            if (scroll > navPosition) {
+                $wrapper.addClass('nav-fixed');
+            } else {
+                $wrapper.removeClass('nav-fixed');
+            }
+        });
+    }
 });

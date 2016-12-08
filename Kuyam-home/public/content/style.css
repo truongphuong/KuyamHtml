@@ -4346,7 +4346,21 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 @media (max-width: 767px) {
   .book-nav {
     background: #fff;
-    border-bottom: 1px solid #c2c2c2; }
+    border-bottom: 1px solid #c2c2c2;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+    -webkit-appearance: none; }
+  .wrapper.nav-fixed {
+    padding-top: 43px; }
+  .wrapper.nav-fixed .book-nav {
+    border-top: 1px solid #c2c2c2;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 43px;
+    z-index: 999; }
+  .wrapper.nav-fixed .book-caption {
+    bottom: 0; }
   .book-nav .container {
     padding: 0; }
   .book-nav .nav-tabs.one li {
