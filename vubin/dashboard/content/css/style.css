@@ -3431,7 +3431,10 @@ textarea.form-control:focus {
     height: 18px;
     background-size: 65px auto;
     padding-top: 19px;
-    padding-bottom: 19px; } }
+    padding-bottom: 19px; }
+
+  .kuyam-header .countdown-free {
+    line-height: 37px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 1.25 / 1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .kuyam-header .navbar-brand {
     background-image: url(../images/dashboard/header_logo_kuyam@2x.png); } }
@@ -3505,10 +3508,12 @@ textarea.form-control:focus {
     font-size: 0.5625em;
     line-height: 9px; } }
 .kuyam-section {
-  overflow: hidden;
   position: relative; }
 
 @media (min-width: 1024px) {
+  .kuyam-section {
+    overflow: hidden; }
+
   .kuyam-page {
     display: -webkit-flex;
     display: flex; }
@@ -3517,9 +3522,6 @@ textarea.form-control:focus {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; } }
-@media (max-width: 1023px) {
-  .kuyam-section {
-    overflow: visible; } }
 @media (min-width: 1024px) {
   .kuyam-main-content {
     display: -webkit-flex;
@@ -3624,7 +3626,8 @@ textarea.form-control:focus {
 @media (max-width: 1023px) {
   .kuyam-content {
     padding: 0 15px;
-    float: none; }
+    float: none;
+    overflow: visible; }
 
   .kuyam-content .kuyam-form {
     padding: 0; }
@@ -10741,3 +10744,4 @@ textarea.form-control:focus {
   .invoices-table .cols-datetime,
   .invoices-table .table > tbody > tr.detail-view table th {
     width: 15%; } }
+

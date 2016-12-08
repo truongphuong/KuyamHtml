@@ -1,9 +1,11 @@
 .kuyam-section {
-    overflow: hidden;
     position: relative;
 }
 
 @media (min-width:1024px) {
+    .kuyam-section {
+        overflow: hidden;
+    }
     .kuyam-page{
         display: -webkit-flex;
         display: flex;
@@ -12,11 +14,5 @@
         -webkit-flex: 1;
         -ms-flex: 1;
         flex: 1;
-    }
-}
-
-@media (max-width:1023px) {
-    .kuyam-section {
-        overflow: visible;
     }
 }
