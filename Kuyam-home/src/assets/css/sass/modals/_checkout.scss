@@ -524,3 +524,27 @@
         color: #363535;
     }
 }
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .modal-checkout .modal-header .modal-title:before{
+        background:url(images/ui/modals/checkout/icon_card@3x.png);
+    }
+    .modal-checkout .modal-body .contact .link-edit{
+        background-image: url(images/ui/modals/checkout/icon_edit@3x.png);
+    }
+    .modal-checkout .modal-body .bill .promo .text:before{
+        background-image: url(images/ui/modals/checkout/icon_promo@3x.png);
+    }
+    .modal-checkout .modal-body .bill .giftcard .text:before{
+        background-image: url(images/ui/modals/checkout/icon_giftcard@3x.png);
+    }
+    .modal-checkout .modal-body .bill .cols-price .td .link-delete{
+        background-image: url(images/ui/modals/checkout/icon_delete@3x.png);
+    }
+}

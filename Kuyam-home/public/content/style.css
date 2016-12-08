@@ -1583,9 +1583,9 @@ button.close:hover {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .radio-mark:checked ~ .radio-label:before {
-    background-image: url(images/boarding/icon_checked@2x.png); }
+    background-image: url(images/ui/modals/checkout/icon_checked@3x.png); }
   .radio-mark ~ .radio-label:before {
-    background-image: url(images/boarding/icon_check@2x.png); } }
+    background-image: url(images/ui/modals/checkout/icon_check@3x.png); } }
 
 /**
  * Partials
@@ -3929,6 +3929,17 @@ button.close:hover {
     margin: 20px 0 60px 35px;
     width: 220px; } }
 
+/*@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .rgba-background {
+        background-image: url(images/ui/pages/home/kuyam_banner_1@3x.jpg);
+    }
+}*/
 .ads-logo .section-header h2 {
   font-weight: 700; }
 
@@ -4110,6 +4121,17 @@ button.close:hover {
   .book-slide .carousel-inner > .item {
     height: 158px; } }
 
+/*@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .book-slide .carousel-inner:after{
+        background-image: url(images/ui/pages/book-details/banner/bg_overlay@3x.png);
+    }
+}*/
 .book-caption {
   position: absolute;
   bottom: 0;
@@ -4151,20 +4173,18 @@ button.close:hover {
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.book-caption .section-header h2 .votes .vote-icon {
+.book-caption .section-header h2 .votes .icon-unlike {
   position: absolute;
   width: 27px;
   height: 24px;
+  background: url(images/ui/pages/book-details/caption/icon_like.png) center top no-repeat;
   background-size: 27px auto;
   top: 13px;
   right: 0;
   margin: 0; }
 
-.book-caption .section-header h2 .votes .icon-unlike {
-  background-image: url(images/ui/pages/book-details/caption/icon_unlike@3x.png); }
-
 .book-caption .section-header h2 .votes .icon-like {
-  background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png); }
+  background-position: center bottom; }
 
 .book-caption .votes {
   clear: both; }
@@ -4173,10 +4193,10 @@ button.close:hover {
   background-size: 19px auto; }
 
 .book-caption .votes .gray-star {
-  background-image: url(images/ui/pages/book-details/caption/icon_star_empty@3x.png); }
+  background-image: url(images/ui/pages/book-details/caption/icon_star_empty.png); }
 
 .book-caption .votes .yellow-star {
-  background-image: url(images/ui/pages/book-details/caption/icon_star_full@3x.png); }
+  background-image: url(images/ui/pages/book-details/caption/icon_star_full.png); }
 
 .book-caption .votes .total-review {
   color: #fff;
@@ -4214,19 +4234,16 @@ button.close:hover {
     height: 143px;
     border-width: 3px;
     bottom: 9px; }
-  .book-caption .avatar .votes .vote-icon {
+  .book-caption .avatar .votes .icon-unlike {
     position: absolute;
     width: 27px;
     height: 24px;
+    background: url(images/ui/pages/book-details/caption/mobile/icon_like.png) center top no-repeat;
     background-size: 27px auto;
     top: inherit;
     bottom: -3px;
     right: 0;
     margin: 0; }
-  .book-caption .avatar .votes .icon-unlike {
-    background-image: url(images/ui/pages/book-details/caption/icon_unlike@3x.png); }
-  .book-caption .avatar .votes .icon-like {
-    background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png); }
   .book-caption .info {
     padding-left: 165px;
     padding-bottom: 9px; }
@@ -4251,6 +4268,18 @@ button.close:hover {
   .book-caption .info {
     padding-left: 95px; } }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .book-caption .avatar .votes .icon-unlike {
+    background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png); }
+  .book-caption .votes .gray-star {
+    background-image: url(images/ui/pages/book-details/caption/icon_star_empty@3x.png); }
+  .book-caption .votes .yellow-star {
+    background-image: url(images/ui/pages/book-details/caption/icon_star_full@3x.png); } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .book-caption .section-header h2 .votes .icon-unlike {
+    background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png); } }
+
 .book-nav .nav-tabs {
   background: transparent;
   border: 0 none; }
@@ -4266,11 +4295,12 @@ button.close:hover {
 .book-nav .nav-tabs li a:before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 25px;
   left: 0;
-  width: 32px;
-  height: 100%;
-  background: center center no-repeat; }
+  width: 22px;
+  height: 22px;
+  background: center bottom no-repeat;
+  background-size: 22px auto; }
 
 .book-nav .nav-tabs > li.active > a,
 .book-nav .nav-tabs > li.active > a:hover,
@@ -4280,9 +4310,12 @@ button.close:hover {
   font-weight: 800;
   color: #87b400; }
 
+.book-nav .nav-tabs li.active a:before {
+  background-position: center top; }
+
 @media (min-width: 992px) {
   .book-nav .nav-tabs li a {
-    padding: 0 60px 0 29px; } }
+    padding: 0 60px 0 32px; } }
 
 @media (min-width: 768px) {
   .book-nav {
@@ -4292,42 +4325,23 @@ button.close:hover {
     color: #fff;
     line-height: 76px;
     font-size: 1em;
-    padding: 0 35px;
+    padding: 0 32px;
     height: 77px; }
   .book-nav .nav-tabs li.li-appointment a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_appointment@3x.png);
-    background-size: 19px auto; }
-  .book-nav .nav-tabs li.li-about a {
-    padding-left: 42px; }
+    background-image: url(images/ui/pages/book-details/caption/icon_appointment.png); }
   .book-nav .nav-tabs li.li-about a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_about@3x.png);
-    background-size: 32px auto; }
+    background-image: url(images/ui/pages/book-details/caption/icon_about.png); }
   .book-nav .nav-tabs li.li-review a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_views@3x.png);
-    background-size: 19px auto; }
+    background-image: url(images/ui/pages/book-details/caption/icon_views.png); }
   .book-nav .nav-tabs li.li-package a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_packages@3x.png);
-    background-size: 19px auto; }
-  .book-nav .nav-tabs li.li-photo a {
-    padding-left: 33px; }
+    background-image: url(images/ui/pages/book-details/caption/icon_packages.png); }
   .book-caption nav .nav-tabs li.li-photo a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_photos@3x.png);
-    background-size: 23px auto; }
+    background-image: url(images/ui/pages/book-details/caption/icon_photos.png); }
   .book-nav .nav-tabs > li.active > a,
   .book-nav .nav-tabs > li.active > a:hover,
   .book-nav .nav-tabs > li.active > a:focus {
     font-weight: 800;
-    color: #87b400; }
-  .book-nav .nav-tabs li.li-appointment.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_appointment_active@3x.png); }
-  .book-nav .nav-tabs li.li-about.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_about_active@3x.png); }
-  .book-nav .nav-tabs li.active.li-review a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_views_active@3x.png); }
-  .book-nav .nav-tabs li.li-package.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_packages_active@3x.png); }
-  .book-nav .nav-tabs li.li-photo.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/icon_photos_active@3x.png); } }
+    color: #87b400; } }
 
 @media (max-width: 767px) {
   .book-nav {
@@ -4350,37 +4364,50 @@ button.close:hover {
     padding: 0;
     height: 68px; }
   .book-nav .nav-tabs li a:before {
-    width: 100%; }
+    width: 100%;
+    height: 34px;
+    background-size: 34px auto;
+    top: 17px; }
+  .book-nav .nav-tabs li.active a:before {
+    background-position: center top; }
   .book-nav .nav-tabs li.li-appointment a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment@3x.png);
-    background-size: 34px auto; }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment.png); }
   .book-nav .nav-tabs li.li-about a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_about@3x.png);
-    background-size: 34px auto; }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_about.png); }
   .book-nav .nav-tabs li.li-info a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_info@3x.png);
-    background-size: 32px auto; }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_info.png); }
   .book-nav .nav-tabs li.li-review a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_views@3x.png);
-    background-size: 45px auto; }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_views.png); }
   .book-nav .nav-tabs li.li-package a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages@3x.png);
-    background-size: 30px auto; }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages.png); }
   .book-nav .nav-tabs li.li-photo a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos@3x.png);
-    background-size: 37px auto; }
-  .book-nav .nav-tabs li.li-appointment.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment_active@3x.png); }
-  .book-nav .nav-tabs li.li-info.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_info_active@3x.png); }
-  .book-nav .nav-tabs li.li-about.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_about_active@3x.png); }
-  .book-nav .nav-tabs li.active.li-review a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_views_active@3x.png); }
-  .book-nav .nav-tabs li.li-package.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages_active@3x.png); }
-  .book-nav .nav-tabs li.li-photo.active a:before {
-    background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos_active@3x.png); } }
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos.png); } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .book-nav .nav-tabs li.li-appointment a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_appointment@3x.png); }
+  .book-nav .nav-tabs li.li-about a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_about@3x.png); }
+  .book-nav .nav-tabs li.li-info a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_info@3x.png); }
+  .book-nav .nav-tabs li.li-review a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_views@3x.png); }
+  .book-nav .nav-tabs li.li-package a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_packages@3x.png); }
+  .book-nav .nav-tabs li.li-photo a:before {
+    background-image: url(images/ui/pages/book-details/caption/mobile/icon_photos@3x.png); } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .book-nav .nav-tabs li.li-appointment a:before {
+    background-image: url(images/ui/pages/book-details/caption/icon_appointment@3x.png); }
+  .book-nav .nav-tabs li.li-about a:before {
+    background-image: url(images/ui/pages/book-details/caption/icon_about@3x.png); }
+  .book-nav .nav-tabs li.li-review a:before {
+    background-image: url(images/ui/pages/book-details/caption/icon_views@3x.png); }
+  .book-nav .nav-tabs li.li-package a:before {
+    background-image: url(images/ui/pages/book-details/caption/icon_packages@3x.png); }
+  .book-caption nav .nav-tabs li.li-photo a:before {
+    background-image: url(images/ui/pages/book-details/caption/icon_photos@3x.png); } }
 
 .category-tooltip {
   border-width: 1px;
@@ -4457,7 +4484,7 @@ button.close:hover {
   margin-bottom: 13px; }
 
 .book-aside .event h5:before {
-  background-image: url(images/ui/pages/book-details/info/icon_event@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_event.png);
   background-size: 19px auto; }
 
 .book-aside .event ul {
@@ -4484,7 +4511,7 @@ button.close:hover {
   background: center center no-repeat; }
 
 .book-aside .event ul li:before {
-  background-image: url(images/ui/pages/book-details/info/icon_arrow@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_arrow.png);
   background-size: 13px auto; }
 
 .book-aside .event ul li a {
@@ -4495,7 +4522,7 @@ button.close:hover {
   margin-bottom: 13px; }
 
 .book-aside .info h5:before {
-  background-image: url(images/ui/pages/book-details/info/icon_info@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_info.png);
   background-size: 19px auto; }
 
 .book-aside .info .map {
@@ -4532,15 +4559,15 @@ button.close:hover {
   background: center center no-repeat; }
 
 .book-aside .info ul li.li-location:before {
-  background-image: url(images/ui/pages/book-details/info/icon_location@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_location.png);
   background-size: 10px auto; }
 
 .book-aside .info ul li.li-phone:before {
-  background-image: url(images/ui/pages/book-details/info/icon_phone@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_phone.png);
   background-size: 13px auto; }
 
 .book-aside .info ul li.li-website:before {
-  background-image: url(images/ui/pages/book-details/info/icon_website@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_website.png);
   background-size: 13px auto; }
 
 .book-aside .opening {
@@ -4550,7 +4577,7 @@ button.close:hover {
   margin-bottom: 9px; }
 
 .book-aside .opening h5:before {
-  background-image: url(images/ui/pages/book-details/info/icon_opening@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_opening.png);
   background-size: 17px auto; }
 
 .book-aside .opening .table-css {
@@ -4584,7 +4611,7 @@ button.close:hover {
   margin-bottom: 6px; }
 
 .book-aside .payment h5:before {
-  background-image: url(images/ui/pages/book-details/info/icon_payment@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_payment.png);
   background-size: 19px auto; }
 
 .book-aside .payment ul li {
@@ -4598,7 +4625,7 @@ button.close:hover {
   margin-bottom: 6px; }
 
 .book-aside .policy h5:before {
-  background-image: url(images/ui/pages/book-details/info/icon_policy@3x.png);
+  background-image: url(images/ui/pages/book-details/info/icon_policy.png);
   background-size: 19px auto; }
 
 .book-aside .policy ul li {
@@ -4673,6 +4700,26 @@ button.close:hover {
     padding-bottom: 20px; }
   .book-aside .policy h5 {
     margin-bottom: 8px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .book-aside .event h5:before {
+    background-image: url(images/ui/pages/book-details/info/icon_event@3x.png); }
+  .book-aside .event ul li:before {
+    background-image: url(images/ui/pages/book-details/info/icon_arrow@3x.png); }
+  .book-aside .info h5:before {
+    background-image: url(images/ui/pages/book-details/info/icon_info@3x.png); }
+  .book-aside .info ul li.li-location:before {
+    background-image: url(images/ui/pages/book-details/info/icon_location@3x.png); }
+  .book-aside .info ul li.li-phone:before {
+    background-image: url(images/ui/pages/book-details/info/icon_phone@3x.png); }
+  .book-aside .info ul li.li-website:before {
+    background-image: url(images/ui/pages/book-details/info/icon_website@3x.png); }
+  .book-aside .opening h5:before {
+    background-image: url(images/ui/pages/book-details/info/icon_opening@3x.png); }
+  .book-aside .payment h5:before {
+    background-image: url(images/ui/pages/book-details/info/icon_payment@3x.png); }
+  .book-aside .policy h5:before {
+    background-image: url(images/ui/pages/book-details/info/icon_policy@3x.png); } }
 
 .tab-pane[id="appointment"] .nav-tabs {
   border: 0 none; }
@@ -4770,7 +4817,7 @@ button.close:hover {
   display: inline-block;
   width: 21px;
   height: 24px;
-  background-image: url(images/ui/pages/book-details/option/icon_down@3x.png);
+  background-image: url(images/ui/pages/book-details/option/icon_down.png);
   background-size: 21px auto;
   margin-left: 5px; }
 
@@ -4804,14 +4851,6 @@ button.close:hover {
   color: #87b400;
   font-weight: 700; }
 
-.book-option .option-select ul li.option-header {
-  color: #87b400;
-  font-weight: 700;
-  cursor: default; }
-
-.book-option .option-select ul li.option-header.offer {
-  color: #ff5050; }
-
 .book-option .option-select ul li .table-css {
   width: 100%; }
 
@@ -4836,12 +4875,26 @@ button.close:hover {
   font-style: italic; }
 
 .book-option .option-select ul li .td-time,
-.book-option .option-select ul li .td-off,
 .book-option .option-select ul li .td-price {
   width: 85px; }
 
 .book-option .option-select ul li .td-off {
-  color: #ff5050; }
+  color: #ff5050;
+  width: 110px; }
+
+.book-option .option-select ul li .td-off span {
+  position: relative;
+  padding-left: 26px; }
+
+.book-option .option-select ul li .td-off span:before {
+  content: '';
+  width: 16px;
+  height: 100%;
+  background: url(images/ui/pages/book-details/option/icon_offer.png) center center no-repeat;
+  background-size: 16px auto;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .book-option .option-select ul li .td-price del {
   color: #dadada;
@@ -4902,6 +4955,12 @@ button.close:hover {
   .book-option .option-select .dropdown-menu {
     box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26); } }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .book-option .option-select .dropdown > a .icon {
+    background-image: url(images/ui/pages/book-details/option/icon_down@3x.png); }
+  .book-option .option-select ul li .td-off span:before {
+    background: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
+
 .site-calendar {
   margin: 0;
   position: relative; }
@@ -4928,7 +4987,7 @@ button.close:hover {
   width: 14px;
   font-size: 0;
   text-decoration: none;
-  background: url(images/ui/pages/book-details/appointment/icon_next@3x.png) left center no-repeat;
+  background: url(images/ui/pages/book-details/appointment/icon_next.png) left center no-repeat;
   background-size: 14px auto; }
 
 .slide-calendar .rslides_nav.disabled {
@@ -5054,6 +5113,10 @@ button.close:hover {
     line-height: 39px;
     height: 41px;
     font-size: 1em; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .slide-calendar .rslides_nav {
+    background-image: url(images/ui/pages/book-details/appointment/icon_next@3x.png); } }
 
 .class-list .date-list {
   margin-bottom: 24px; }
@@ -5290,10 +5353,10 @@ button.close:hover {
   background-size: 19px auto; }
 
 .view-list .item .votes .gray-star {
-  background-image: url(images/ui/pages/book-details/views/icon_star_empty@3x.png); }
+  background-image: url(images/ui/pages/book-details/views/icon_star_empty.png); }
 
 .view-list .item .votes .yellow-star {
-  background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png); }
+  background-image: url(images/ui/pages/book-details/views/icon_star_full.png); }
 
 .view-list .item time {
   font-size: 0.75em;
@@ -5362,6 +5425,12 @@ button.close:hover {
     width: 21px;
     height: 23px;
     background-size: 21px auto; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .view-list .item .votes .gray-star {
+    background-image: url(images/ui/pages/book-details/views/icon_star_empty@3x.png); }
+  .view-list .item .votes .yellow-star {
+    background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png); } }
 
 .about-section h5 {
   font-size: 1.3125em;
@@ -8629,7 +8698,7 @@ button.close:hover {
   right: 0;
   top: 0;
   border: 0 none;
-  background: url(images/ui/modals/notes/icon_send@3x.png) center center no-repeat;
+  background: url(images/ui/modals/notes/icon_send.png) center center no-repeat;
   background-size: 26px auto; }
 
 @media (max-width: 767px) {
@@ -8677,6 +8746,10 @@ button.close:hover {
 @media (max-width: 374px) {
   .modal-notes .modal-content {
     border-radius: 2px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-notes .modal-footer input[type="button"] {
+    background-image: url(images/ui/modals/notes/icon_send@3x.png); } }
 
 .modal-repeat {
   width: 428px; }
@@ -8746,7 +8819,7 @@ button.close:hover {
   right: 0;
   width: 37px;
   height: 100%;
-  background: url(images/ui/modals/repeat/icon_down@3x.png) center center no-repeat;
+  background: url(images/ui/modals/repeat/icon_down.png) center center no-repeat;
   background-size: 17px auto; }
 
 .modal-repeat .panel-title > a[aria-expanded="true"]:after {
@@ -8783,12 +8856,12 @@ button.close:hover {
   margin: 0; }
 
 .modal-repeat .cb-mark:checked ~ .cb-label:before {
-  background-image: url(images/ui/modals/repeat/icon_checked@3x.png); }
+  background-image: url(images/ui/modals/repeat/icon_checked.png); }
 
 .modal-repeat .cb-mark ~ .cb-label:before {
   width: 21px;
   height: 21px;
-  background: url(images/ui/modals/repeat/icon_check@3x.png) center center no-repeat;
+  background: url(images/ui/modals/repeat/icon_check.png) center center no-repeat;
   background-size: 21px auto;
   top: 2px; }
 
@@ -8841,6 +8914,14 @@ button.close:hover {
     height: 30px; }
   .modal-repeat .modal-footer {
     padding-bottom: 5px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-repeat .panel-title > a:after {
+    background-image: url(images/ui/modals/repeat/icon_down@3x.png); }
+  .modal-repeat .cb-mark:checked ~ .cb-label:before {
+    background-image: url(images/ui/modals/repeat/icon_checked@3x.png); }
+  .modal-repeat .cb-mark ~ .cb-label:before {
+    background-image: url(images/ui/modals/repeat/icon_check@3x.png); } }
 
 .modal-review {
   width: 593px; }
@@ -9064,13 +9145,18 @@ button.close:hover {
 .modal-details .modal-body p {
   font-size: 0.75em;
   line-height: 15px;
-  margin-bottom: 14px; }
+  margin-bottom: 14px;
+  color: #282828; }
 
-.modal-details .modal-body p del {
-  color: #dadada; }
+.modal-details .modal-body p small {
+  font-size: 10px;
+  margin: 0 5px; }
 
-.modal-details .modal-body p span {
-  color: #ff5050; }
+.modal-details .modal-body p .off {
+  color: #ff6969; }
+
+.modal-details .modal-body p .price {
+  color: #80bc1f; }
 
 .modal-details .modal-footer {
   padding-top: 7px;
@@ -9100,6 +9186,10 @@ button.close:hover {
   .modal-details .modal-footer .btn {
     height: 42px;
     font-size: 1em; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-details .modal-header button.close {
+    background-image: url(images/ui/modals/details/icon_close@3x.png); } }
 
 .modal-details {
   width: 349px; }
@@ -9135,13 +9225,18 @@ button.close:hover {
 .modal-details .modal-body p {
   font-size: 0.75em;
   line-height: 15px;
-  margin-bottom: 14px; }
+  margin-bottom: 14px;
+  color: #282828; }
 
-.modal-details .modal-body p del {
-  color: #dadada; }
+.modal-details .modal-body p small {
+  font-size: 10px;
+  margin: 0 5px; }
 
-.modal-details .modal-body p span {
-  color: #ff5050; }
+.modal-details .modal-body p .off {
+  color: #ff6969; }
+
+.modal-details .modal-body p .price {
+  color: #80bc1f; }
 
 .modal-details .modal-footer {
   padding-top: 7px;
@@ -9171,6 +9266,10 @@ button.close:hover {
   .modal-details .modal-footer .btn {
     height: 42px;
     font-size: 1em; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-details .modal-header button.close {
+    background-image: url(images/ui/modals/details/icon_close@3x.png); } }
 
 .modal-paypal .modal-header {
   margin-bottom: 4rem;
@@ -9723,6 +9822,18 @@ button.close:hover {
     font-size: 0.6875em;
     line-height: 17px;
     color: #363535; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-checkout .modal-header .modal-title:before {
+    background: url(images/ui/modals/checkout/icon_card@3x.png); }
+  .modal-checkout .modal-body .contact .link-edit {
+    background-image: url(images/ui/modals/checkout/icon_edit@3x.png); }
+  .modal-checkout .modal-body .bill .promo .text:before {
+    background-image: url(images/ui/modals/checkout/icon_promo@3x.png); }
+  .modal-checkout .modal-body .bill .giftcard .text:before {
+    background-image: url(images/ui/modals/checkout/icon_giftcard@3x.png); }
+  .modal-checkout .modal-body .bill .cols-price .td .link-delete {
+    background-image: url(images/ui/modals/checkout/icon_delete@3x.png); } }
 
 .modal-error {
   width: 370px; }

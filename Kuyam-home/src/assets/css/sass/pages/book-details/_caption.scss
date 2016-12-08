@@ -39,20 +39,18 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.book-caption .section-header h2 .votes .vote-icon{
+.book-caption .section-header h2 .votes .icon-unlike{
     position: absolute;
     width: 27px;
     height: 24px;
+    background:url(images/ui/pages/book-details/caption/icon_like.png) center top no-repeat;
     background-size: 27px auto;
     top:13px;
     right: 0;
     margin:0;
 }
-.book-caption .section-header h2 .votes .icon-unlike{
-    background-image: url(images/ui/pages/book-details/caption/icon_unlike@3x.png);
-}
 .book-caption .section-header h2 .votes .icon-like{
-    background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png);
+    background-position: center bottom;
 }
 .book-caption .votes{
     clear: both;
@@ -61,10 +59,10 @@
     background-size: 19px auto;
 }
 .book-caption .votes .gray-star{
-    background-image: url(images/ui/pages/book-details/caption/icon_star_empty@3x.png);
+    background-image: url(images/ui/pages/book-details/caption/icon_star_empty.png);
 }
 .book-caption .votes .yellow-star{
-    background-image: url(images/ui/pages/book-details/caption/icon_star_full@3x.png);
+    background-image: url(images/ui/pages/book-details/caption/icon_star_full.png);
 }
 .book-caption .votes .total-review{
     color: $white;
@@ -104,21 +102,16 @@
         border-width: 3px;
         bottom: 9px;
     }
-    .book-caption .avatar .votes .vote-icon{
+    .book-caption .avatar .votes .icon-unlike{
         position: absolute;
         width: 27px;
         height: 24px;
+        background: url(images/ui/pages/book-details/caption/mobile/icon_like.png) center top no-repeat;
         background-size: 27px auto;
         top:inherit;
         bottom:-3px;
         right: 0;
         margin:0;
-    }
-    .book-caption .avatar .votes .icon-unlike{
-        background-image: url(images/ui/pages/book-details/caption/icon_unlike@3x.png);
-    }
-    .book-caption .avatar .votes .icon-like{
-        background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png);
     }
     .book-caption .info{
         padding-left: 165px;
@@ -150,5 +143,35 @@
     }
     .book-caption .info{
         padding-left: 95px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .book-caption .avatar .votes .icon-unlike{
+        background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png);
+    }
+    .book-caption .votes .gray-star{
+        background-image: url(images/ui/pages/book-details/caption/icon_star_empty@3x.png);
+    }
+    .book-caption .votes .yellow-star{
+        background-image: url(images/ui/pages/book-details/caption/icon_star_full@3x.png);
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+only screen and (              min-resolution:120dpi)      and (min-width:768px),
+only screen and (               min-resolution:2dppx)      and (min-width:768px){
+    .book-caption .section-header h2 .votes .icon-unlike{
+        background-image: url(images/ui/pages/book-details/caption/icon_like@3x.png);
     }
 }

@@ -46,7 +46,7 @@ $(document).ready(function(){
     $(document).on('click', '.icon-unlike', function(e){
         e.preventDefault();
         var $this = $(this);
-        var isFavorited = $this.find('.vote-icon').hasClass('icon-like');
+        var isFavorited = $this.hasClass('icon-like');
         if(isFavorited){
             $this.closest('.site-banner').find('.icon-unlike').removeClass('icon-like');
         }else{

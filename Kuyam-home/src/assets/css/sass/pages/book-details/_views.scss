@@ -37,10 +37,10 @@
     background-size: 19px auto;
 }
 .view-list .item .votes .gray-star{
-    background-image: url(images/ui/pages/book-details/views/icon_star_empty@3x.png);
+    background-image: url(images/ui/pages/book-details/views/icon_star_empty.png);
 }
 .view-list .item .votes .yellow-star{
-    background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png);
+    background-image: url(images/ui/pages/book-details/views/icon_star_full.png);
 }
 .view-list .item time{
     font-size: $p;
@@ -128,5 +128,20 @@
         width: 21px;
         height:23px;
         background-size: 21px auto;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .view-list .item .votes .gray-star{
+        background-image: url(images/ui/pages/book-details/views/icon_star_empty@3x.png);
+    }
+    .view-list .item .votes .yellow-star{
+        background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png);
     }
 }

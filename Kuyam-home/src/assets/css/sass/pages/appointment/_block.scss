@@ -16,7 +16,7 @@
 }
 .appointment-block.confirmed .brand{
     padding-left: 20px;
-    background: url(images/ui/pages/appointment/icon_confirmed@3x.png) left center no-repeat;
+    background: url(images/ui/pages/appointment/icon_confirmed.png) left center no-repeat;
     background-size: 15px auto;
 }
 .appointment-block.confirmed li:nth-child(3) a {
@@ -254,5 +254,17 @@
         position: absolute;
         top: 8px;
         right: 10px;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .appointment-block.confirmed .brand{
+        background-image: url(images/ui/pages/appointment/icon_confirmed@3x.png);
     }
 }
