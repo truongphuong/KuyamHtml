@@ -991,7 +991,8 @@ label {
   background: #ff5050;
   color: #fff;
   font-weight: 700;
-  box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11); }
+  box-shadow: 0 6px 4px 0 rgba(255, 80, 80, 0.11);
+  border-width: 2px; }
 
 .btn-disagree,
 .btn-disagree:focus {
@@ -1004,7 +1005,8 @@ label {
   background: #fff;
   color: #3c579d;
   font-weight: 700;
-  box-shadow: 0px 4px 10px #aaa; }
+  box-shadow: 0px 4px 10px #aaa;
+  border-width: 2px; }
 
 .btn-blue,
 .btn-blue:focus {
@@ -1017,7 +1019,8 @@ label {
   background: #fff;
   color: #8ab21e;
   font-weight: 700;
-  box-shadow: 0px 4px 10px #aaa; }
+  box-shadow: 0px 4px 10px #aaa;
+  border-width: 2px; }
 
 .btn-green,
 .btn-green:focus {
@@ -1029,7 +1032,8 @@ label {
 .btn-pink:hover {
   background: #cccccc;
   color: #fff;
-  border: 1px solid #cccccc; }
+  border: 1px solid #cccccc;
+  border-width: 2px; }
 
 .btn-pink,
 .btn-pink:focus {
@@ -5093,12 +5097,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     margin-right: 36px;
     position: relative; }
   .services-list {
-    height: 907px;
+    height: 730px;
+    /*907px*/
     overflow-y: auto; }
   .on-nicescroll .services-list {
     overflow: hidden; }
   .on-nicescroll .services-list .wrap-dropdown-menu-inner {
-    height: 907px; }
+    height: 730px;
+    /*907px*/ }
   .on-nicescroll .services-list .scroll-content {
     padding-left: 13px;
     padding-right: 36px; }
@@ -5195,7 +5201,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (min-width: 768px) {
   .class-list {
-    height: 955px;
+    height: 778px;
+    /*955px*/
     overflow-y: auto; }
   .class-list .date-list .row {
     margin-left: -3px;
@@ -5206,7 +5213,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .on-nicescroll .class-list {
     overflow: hidden; }
   .on-nicescroll .class-list .wrap-dropdown-menu-inner {
-    height: 955px; }
+    height: 778px;
+    /*955px*/ }
   .on-nicescroll .class-list .scroll-content {
     padding-right: 36px; } }
 
@@ -5257,12 +5265,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (min-width: 768px) {
   .package-list {
-    height: 975px;
+    height: 798px;
+    /*975px*/
     overflow-y: auto; }
   .on-nicescroll .package-list {
     overflow: hidden; }
   .on-nicescroll .package-list .wrap-dropdown-menu-inner {
-    height: 975px; }
+    height: 798px;
+    /*975px*/ }
   .on-nicescroll .package-list .scroll-content {
     padding-right: 36px; } }
 
@@ -5301,12 +5311,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (min-width: 768px) {
   .photo-list {
-    height: 975px;
+    height: 798px;
+    /*975px*/
     overflow-y: auto; }
   .on-nicescroll .photo-list {
     overflow: hidden; }
   .on-nicescroll .photo-list .wrap-dropdown-menu-inner {
-    height: 975px; }
+    height: 798px;
+    /*975px*/ }
   .on-nicescroll .photo-list .scroll-content {
     padding-right: 36px; } }
 
@@ -5380,12 +5392,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (min-width: 768px) {
   .view-list {
-    height: 947px;
+    height: 770px;
+    /*947px*/
     overflow-y: auto; }
   .on-nicescroll .view-list {
     overflow: hidden; }
   .on-nicescroll .view-list .wrap-dropdown-menu-inner {
-    height: 947px; }
+    height: 770px;
+    /*947px*/ }
   .on-nicescroll .view-list .scroll-content {
     padding-right: 36px; }
   .view-list .item .btn {
@@ -5468,12 +5482,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (min-width: 768px) {
   .about-list {
-    height: 975px;
+    height: 798px;
+    /*975px*/
     overflow-y: auto; }
   .on-nicescroll .about-list {
     overflow: hidden; }
   .on-nicescroll .about-list .wrap-dropdown-menu-inner {
-    height: 975px; }
+    height: 798px;
+    /*975px*/ }
   .on-nicescroll .about-list .scroll-content {
     padding-right: 36px; } }
 
@@ -9422,6 +9438,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   color: #333232;
   margin-bottom: 5px; }
 
+.modal-checkout .modal-body .appointment time:before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 15px;
+  background: url(images/ui/modals/checkout/icon_calendar.png) center center no-repeat;
+  background-size: 14px auto;
+  margin-right: 5px; }
+
 .modal-checkout .modal-body .appointment time strong {
   font-weight: 700; }
 
@@ -9433,6 +9458,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .modal-checkout .modal-body .appointment address strong {
   font-weight: 700; }
+
+.modal-checkout .modal-body .appointment address:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 17px;
+  background: url(images/ui/modals/checkout/icon_location.png) center center no-repeat;
+  background-size: 15px auto;
+  margin-right: 5px; }
 
 .modal-checkout .modal-body .employee {
   text-align: center;
@@ -9588,6 +9622,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .modal-checkout .modal-body .bill .cols-name .text {
   padding-left: 34px;
+  font-size: 17px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -9684,7 +9719,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   background: #fff;
   width: 100%;
   padding: 0;
-  height: 30px; }
+  height: 30px;
+  border-width: 1px; }
 
 .modal-checkout .modal-body .rule {
   text-align: center;
@@ -9795,6 +9831,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     color: #363535; }
   .modal-checkout .modal-body .bill .cols-name li {
     line-height: 22px; }
+  .modal-checkout .modal-body .bill .cols-name .text {
+    font-size: 1em; }
   .modal-checkout .modal-body .bill .cols-price {
     font-size: 1em;
     font-weight: 700;
@@ -9842,6 +9880,10 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     background: url(images/ui/modals/checkout/icon_card@3x.png); }
   .modal-checkout .modal-body .contact .link-edit {
     background-image: url(images/ui/modals/checkout/icon_edit@3x.png); }
+  .modal-checkout .modal-body .appointment time:before {
+    background-image: url(images/ui/modals/checkout/icon_calendar@3x.png); }
+  .modal-checkout .modal-body .appointment address:before {
+    background-image: url(images/ui/modals/checkout/icon_location@3x.png); }
   .modal-checkout .modal-body .bill .promo .text:before {
     background-image: url(images/ui/modals/checkout/icon_promo@3x.png); }
   .modal-checkout .modal-body .bill .giftcard .text:before {

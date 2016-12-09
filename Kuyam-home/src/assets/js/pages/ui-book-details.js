@@ -63,7 +63,7 @@ $(document).ready(function(){
         offsetY: 9,
         interactive: true,
         positionTracker: true,
-        autoClose: false,
+        autoClose: true,
         debug: false,
         functionReady: function (origin, tooltip) {
             setTimeout(function(){
@@ -95,9 +95,11 @@ $(document).ready(function(){
         $this.addClass('selected');
 
         var isWhat = $this.closest('#whatSelect').hasClass('what-select');
+        var isWho = $this.closest('#whoSelect').hasClass('who-select');
         if(isWhat){
             $('#whoSelect').removeClass('disabled');
-        }else{
+        }
+        if(isWho){
             $(document).find('.site-calendar .bg-white-50').addClass('hide');
         }
     });
