@@ -46,12 +46,18 @@
         border-top: 1px solid rgba(255, 255, 255, .64);
         //box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.16);
     }
+    .book-nav .nav-tabs li{
+        height: 77px;
+        padding-top: 22px;
+        padding-right: 32px;
+    }
     .book-nav .nav-tabs li a{
         color: $white;
-        line-height: 76px;
         font-size: $h6;
-        padding:0 32px;
-        height: 77px;
+        padding:5px 0 5px 32px;
+    }
+    .book-nav .nav-tabs li a:before{
+        top: 5px;
     }
     .book-nav .nav-tabs li.li-appointment a:before{
         background-image: url(images/ui/pages/book-details/caption/icon_appointment.png);
@@ -73,6 +79,7 @@
     .book-nav .nav-tabs > li.active > a:focus{
         font-weight: 800;
         color: #87b400;
+        border-bottom: 1px solid #87b400;
     }
 }
 

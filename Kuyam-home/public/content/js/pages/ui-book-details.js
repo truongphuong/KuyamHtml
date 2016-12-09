@@ -114,8 +114,16 @@ $(document).ready(function () {
     if (!isMobile.Windows()) {
         var isActive = $(document).find('#bookTabs li.active a').attr('href');
         var activeListID = isActive + 'List';
+        var activeMobileListID = '';
         if (isActive === '#appointment') {
             isActive = $(document).find('#appointmentTabs li.active a').attr('href');
+            if (isActive === '#services') {
+                activeMobileListID = '#servicesMobileList';
+                iscrollContent(activeMobileListID);
+                monitorResize(function () {
+                    refreshNiceScroll(activeMobileListID);
+                });
+            }
             activeListID = isActive + 'List';
         }
 

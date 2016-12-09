@@ -9,7 +9,7 @@
     width: 104px;
     height: 31px;
     display: inline-block;
-    background: url(images/icons_2016/footer_logo_kuyam@2x.png) center center no-repeat;
+    background: url(images/icons_2016/footer_logo_kuyam.png) center center no-repeat;
     background-size: 104px auto;
 }
 .site-contact .logo img{
@@ -37,5 +37,17 @@
 @media (max-width: 767px){
     .site-contact {
         display: none;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .site-contact .logo {
+        background-image: url(images/icons_2016/footer_logo_kuyam.png);
     }
 }

@@ -2623,18 +2623,21 @@ button.close:hover {
   color: #fff; }
 
 .site-footer .footer_icon_comment {
-  background-position: center 0px;
+  background: center center no-repeat;
+  background-size: 17px auto;
   height: 16px;
   width: 18px;
   display: inline-block;
-  background-repeat: no-repeat;
   margin-top: 7px; }
 
-.site-footer .on {
+.site-footer .footer_icon_comment.on {
   background-image: url(images/icons_2016/footer_icon_comment_on.png); }
 
-.site-footer .off {
+.site-footer .footer_icon_comment.off {
   background-image: url(images/icons_2016/footer_icon_comment_off.png); }
+
+.site-footer .link-socials li img {
+  margin-top: 7px; }
 
 @media (max-width: 767px) {
   .site-footer {
@@ -2653,6 +2656,12 @@ button.close:hover {
     margin-top: 12px;
     font-size: 0.625em; } }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .site-footer .footer_icon_comment.on {
+    background-image: url(images/icons_2016/footer_icon_comment_on@2x.png); }
+  .site-footer .footer_icon_comment.off {
+    background-image: url(images/icons_2016/footer_icon_comment_off@2x.png); } }
+
 .site-contact {
   background: #2a2a2a;
   padding: 20px 0 32px;
@@ -2664,7 +2673,7 @@ button.close:hover {
   width: 104px;
   height: 31px;
   display: inline-block;
-  background: url(images/icons_2016/footer_logo_kuyam@2x.png) center center no-repeat;
+  background: url(images/icons_2016/footer_logo_kuyam.png) center center no-repeat;
   background-size: 104px auto; }
 
 .site-contact .logo img {
@@ -2691,6 +2700,10 @@ button.close:hover {
 @media (max-width: 767px) {
   .site-contact {
     display: none; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .site-contact .logo {
+    background-image: url(images/icons_2016/footer_logo_kuyam.png); } }
 
 .site-address ul {
   margin: 0;
@@ -2765,7 +2778,9 @@ button.close:hover {
   width: 25px;
   margin: 0 8px; }
 
-.link-socials li img,
+.link-socials li img {
+  height: 17px; }
+
 .link-socials li a {
   width: auto !important; }
 
@@ -4325,12 +4340,16 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .book-nav {
     background: rgba(0, 0, 0, 0.78);
     border-top: 1px solid rgba(255, 255, 255, 0.64); }
+  .book-nav .nav-tabs li {
+    height: 77px;
+    padding-top: 22px;
+    padding-right: 32px; }
   .book-nav .nav-tabs li a {
     color: #fff;
-    line-height: 76px;
     font-size: 1em;
-    padding: 0 32px;
-    height: 77px; }
+    padding: 5px 0 5px 32px; }
+  .book-nav .nav-tabs li a:before {
+    top: 5px; }
   .book-nav .nav-tabs li.li-appointment a:before {
     background-image: url(images/ui/pages/book-details/caption/icon_appointment.png); }
   .book-nav .nav-tabs li.li-about a:before {
@@ -4345,7 +4364,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .book-nav .nav-tabs > li.active > a:hover,
   .book-nav .nav-tabs > li.active > a:focus {
     font-weight: 800;
-    color: #87b400; } }
+    color: #87b400;
+    border-bottom: 1px solid #87b400; } }
 
 @media (max-width: 767px) {
   .book-nav {
@@ -5121,6 +5141,11 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     font-size: 1.125em; }
   .table-calendar-header .datetime {
     font-size: 1em; }
+  .services-list,
+  .on-nicescroll .services-list .wrap-dropdown-menu-inner {
+    max-height: 530px; }
+  .on-nicescroll .services-list .scroll-content {
+    padding-right: 20px; }
   .session {
     height: 36px;
     margin: 7px 3px; }
@@ -5218,6 +5243,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .on-nicescroll .class-list .scroll-content {
     padding-right: 36px; } }
 
+@media (max-width: 767px) {
+  .class-list .date-list .item time span {
+    margin: 0 3px; }
+  .class-list,
+  .on-nicescroll .class-list .wrap-dropdown-menu-inner {
+    max-height: 530px; }
+  .on-nicescroll .class-list .scroll-content {
+    padding-right: 20px; } }
+
 .package-section h5 {
   font-size: 1.3125em;
   font-family: "Lato", sans-serif;
@@ -5307,7 +5341,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .photo-list img {
   width: 100%;
-  vertical-align: top; }
+  vertical-align: top;
+  box-shadow: 0 11px 18px 0 rgba(0, 0, 0, 0.1); }
 
 @media (min-width: 768px) {
   .photo-list {
