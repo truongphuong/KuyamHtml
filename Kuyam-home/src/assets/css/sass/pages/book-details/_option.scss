@@ -32,11 +32,12 @@
 }
 .book-option .option-select .dropdown > a{
     padding: 8px 14px;
-    display: block;
+    display: inline-block;
     font-size: $s21;
     color:#333232;
     text-decoration: none;
     position: relative;
+    max-width: 100%;
 }
 .book-option .option-select .dropdown > a .text{
     display: inline-block;
@@ -140,10 +141,10 @@
 
 @media (min-width: 768px) {
     .book-option .option-select .dropdown{
-        position: absolute;
         width: 100%;
     }
     .book-option .option-select .dropdown.open{
+        position: absolute;
         box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
         background: $white;
     }
@@ -155,15 +156,9 @@
         width: 155px;
         z-index: 3;
     }
-    .book-option .categories-select .dropdown > a .text{
-        max-width: 101px;
-    }
     .book-option .what-select{
         width: 328px;
         z-index: 2;
-    }
-    .book-option .what-select .dropdown > a .text{
-        max-width: 274px;
     }
     .book-option .what-select .dropdown.open{
         width: 472px;
@@ -171,12 +166,10 @@
     .book-option .who-select{
         width: 140px;
         z-index: 1;
+        float: right;
     }
-    .book-option .who-select .dropdown > a .text{
-        max-width: 86px;
-    }
-    .book-option .who-select .dropdown.open{
-        width: 100%;
+    .book-option .who-select.option-width .dropdown > a{
+        float: right;
     }
 }
 
@@ -185,9 +178,6 @@
         width: 100%;
         text-align: center;
         margin:0;
-    }
-    .book-option .option-select .dropdown > a{
-        display: inline-block;
     }
     .book-option .what-select .dropdown.open{
         width: 100%;
@@ -202,9 +192,6 @@
     }
     .book-option .option-select .dropdown > a{
         font-size: $h6;
-    }
-    .book-option .option-select .dropdown > a .text{
-        max-width: calc(100% - 26px);
     }
     .book-option .option-select .dropdown > a .icon{
         margin-left: 5px;

@@ -55,9 +55,11 @@ $(document).ready(function () {
         }
     });
 
+    var categoryListContent = $('#categoryListContent').html();
+    $('#categoryListContent').remove();
     $('.tooltipster-category').tooltipster({
         contentAsHTML: true,
-        content: $('#categoryList'),
+        content: categoryListContent,
         trigger: 'click',
         position: 'bottom',
         theme: 'tooltipster-default category-tooltip',
@@ -67,14 +69,7 @@ $(document).ready(function () {
         autoClose: true,
         debug: false,
         functionReady: function functionReady(origin, tooltip) {
-            setTimeout(function () {
-                var isScroll = $('.category-tooltip #categoryList').find('.wrap-dropdown-menu-inner').length;
-                if (isScroll) {
-                    refreshNiceScroll('#categoryList');
-                } else {
-                    iscrollContent('#categoryList');
-                }
-            }, 300);
+            iscrollContent('#categoryList');
 
             monitorResize(function () {
                 if (isView.mobile()) {
@@ -94,11 +89,19 @@ $(document).ready(function () {
         $this.closest('.option-select').find('a .text').html(selectedVal);
         $this.closest('.option-select').find('li').removeClass('selected');
         $this.addClass('selected');
-
+        var isCategories = $this.closest('#categoriesSelect').hasClass('categories-select');
         var isWhat = $this.closest('#whatSelect').hasClass('what-select');
         var isWho = $this.closest('#whoSelect').hasClass('who-select');
+        if (isCategories) {
+            $('.option-select').removeClass('option-width');
+            $('#whatSelect').find('a .text').html('What would you like done?');
+            $('#whoSelect').addClass('disabled');
+            $('#whoSelect').find('a .text').html('Any staff');
+        }
         if (isWhat) {
             $('#whoSelect').removeClass('disabled');
+            $('.option-select').addClass('option-width');
+            $('#whoSelect').find('a .text').html('Any staff');
         }
         if (isWho) {
             $(document).find('.site-calendar .bg-white-50').addClass('hide');
