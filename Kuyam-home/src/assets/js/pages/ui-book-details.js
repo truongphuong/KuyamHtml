@@ -42,6 +42,19 @@ function infoContent(){
     }
 }
 
+function autoWidthOption(whatSelect, whoSelect){
+    var whatWidth = $(whatSelect).innerWidth();
+    var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth();
+    $(whatSelect).css({'width': ''});
+    $(whoSelect).css({'width': ''});
+    if(aWidth < whatWidth){
+        var whoWidth = $(whoSelect).innerWidth();
+        var whoWidthNew = whoWidth + whatWidth - aWidth;
+        $(whatSelect).css({'width': aWidth});
+        $(whoSelect).css({'width': whoWidthNew});
+    }
+}
+
 $(document).ready(function(){
     $(document).on('click', '.icon-unlike', function(e){
         e.preventDefault();
@@ -84,26 +97,47 @@ $(document).ready(function(){
 
     $(document).on('click', '.option-select .option-item', function(e){
         var $this = $(this);
+        var optionSelect = '.option-select';
+        var categoriesSelect = '#categoriesSelect';
+        var whatSelect = '#whatSelect';
+        var whoSelect = '#whoSelect';
+        var lightbox = '.site-calendar .bg-white-50';
         var selectedVal = $this.find('.text').text();
-        $this.closest('.option-select').find('a .text').html(selectedVal);
-        $this.closest('.option-select').find('li').removeClass('selected');
+        $this.closest(optionSelect).find('a .text').html(selectedVal);
+        $this.closest(optionSelect).find('li').removeClass('selected');
         $this.addClass('selected');
-        var isCategories = $this.closest('#categoriesSelect').hasClass('categories-select');
-        var isWhat = $this.closest('#whatSelect').hasClass('what-select');
-        var isWho = $this.closest('#whoSelect').hasClass('who-select');
+        var isCategories = $this.closest(categoriesSelect).hasClass('categories-select');
+        var isWhat = $this.closest(whatSelect).hasClass('what-select');
+        var isWho = $this.closest(whoSelect).hasClass('who-select');
         if(isCategories){
-            $('.option-select').removeClass('option-width');
-            $('#whatSelect').find('a .text').html('What would you like done?');
-            $('#whoSelect').addClass('disabled');
-            $('#whoSelect').find('a .text').html('Any staff');
+            $(whatSelect).find('a .text').html('What would you like done?');
+            $(whoSelect).addClass('disabled');
+            $(whoSelect).find('a .text').html('Any staff');
+            $(document).find(lightbox).removeClass('hide');
+            if(isView.desktop()){
+                $(whatSelect).css({'width': ''});
+                $(whoSelect).css({'width': ''});
+            }
         }
         if(isWhat){
-            $('#whoSelect').removeClass('disabled');
-            $('.option-select').addClass('option-width');
-            $('#whoSelect').find('a .text').html('Any staff');
+            $(whoSelect).removeClass('disabled');
+            $(whoSelect).find('a .text').html('Any staff');
+            $(document).find(lightbox).removeClass('hide');
+            if(isView.desktop()){
+                autoWidthOption(whatSelect, whoSelect);
+            }
         }
         if(isWho){
-            $(document).find('.site-calendar .bg-white-50').addClass('hide');
+            $(document).find(lightbox).addClass('hide');
+        }
+    });
+
+    monitorResize(function(){
+        if(isView.desktop()){
+            autoWidthOption('#whatSelect', '#whoSelect');
+        }else{
+            $('#whatSelect').css({'width': ''});
+            $('#whoSelect').css({'width': ''});
         }
     });
 
