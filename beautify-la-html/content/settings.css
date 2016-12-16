@@ -14,3 +14,21 @@ body{overflow-x:auto;}
 .settings-section .modal-offerings{width:760px;}
 .settings-section .modal-crop{width:600px;}
 .settings-section .modal-terms-privacy{width:700px;}
+.settings-section .cb-custom{position:relative;}
+.settings-section .cb-mark{position:absolute;opacity:0;top:0;left:0;}
+.settings-section .cb-mark ~ .cb-label{position:relative;padding-right:25px;cursor:pointer;display:inline-block !important;font-weight:700;}
+.settings-section .cb-mark ~ .cb-label:before{content:'';display:block;width:18px;height:18px;border-radius:4px;vertical-align:middle;position:absolute;border:1px solid #ddd;top:4px;right:0;cursor:pointer;}
+.settings-section .cb-mark:checked ~ .cb-label:before{background:url(images/assets/Check_mark@2x.png) center center no-repeat;background-size:8px auto;}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .settings-section .cb-mark:checked ~ .cb-label:before{
+        background-image:url(images/assets/Check_mark@2x.png);
+    }
+}
