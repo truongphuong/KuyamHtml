@@ -1,0 +1,104 @@
+.newsletter{
+    background: #f4f4f4;
+    padding-top: 41px;
+    padding-bottom: 58px;
+}
+.newsletter h2{
+    font-size: $h2;
+    font-weight: 700;
+    color: #333232;
+    margin:0 0 4px;
+}
+.newsletter p{
+    font-size: $s19;
+    color: #333232;
+    margin: 0 0 40px;
+}
+.newsletter .form-control{
+    font-size: $h6;
+    box-shadow: none;
+    border-color: #c6c6c6;
+    height: 49px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.newsletter .btn{
+    font-size: $s18;
+    color: #4d4d4d;
+    border-color: #87b400;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.09);
+    height: 49px;
+}
+
+@media (min-width: 992px) {
+    .newsletter .row{
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    .newsletter div[class*="col-"]{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .newsletter .col-sm-6{
+        width: 51.3%;
+    }
+    .newsletter .col-sm-3{
+        width: 20%;
+    }
+}
+
+@media (max-width: 767px) {
+    .newsletter{
+        padding-top: 27px;
+        padding-bottom: 25px;
+    }
+    .newsletter .row{
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .newsletter div[class*="col-"]{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .newsletter h2{
+        font-size: $h5;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+    .newsletter p{
+        font-size: $s18;
+        margin-bottom: 15px;
+    }
+    .newsletter .form-control{
+        height: 40px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .newsletter .btn{
+        height: 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    .newsletter{
+        padding-top: 24px;
+        padding-bottom: 22px;
+    }
+    .newsletter h2{
+        font-size: $s15;
+        margin-bottom: 9px;
+    }
+    .newsletter p{
+        font-size: $s15;
+        margin-bottom: 12px;
+    }
+    .newsletter .form-control{
+        height: 37px;
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    .newsletter .btn{
+        height: 37px;
+        font-size: $s15;
+    }
+}
