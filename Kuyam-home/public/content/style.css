@@ -5191,6 +5191,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .session-item.active .btn-book {
   display: block; }
 
+.services-list {
+  overflow-y: auto; }
+
 @media (min-width: 768px) {
   .table-calendar-header {
     margin-left: 13px;
@@ -5198,8 +5201,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     position: relative; }
   .services-list {
     height: 730px;
-    /*907px*/
-    overflow-y: auto; }
+    /*907px*/ }
   .on-nicescroll .services-list {
     overflow: hidden; }
   .on-nicescroll .services-list .wrap-dropdown-menu-inner {
@@ -5304,11 +5306,13 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   padding: 0;
   border-radius: 0; }
 
+.class-list {
+  overflow-y: auto; }
+
 @media (min-width: 768px) {
   .class-list {
     height: 778px;
-    /*955px*/
-    overflow-y: auto; }
+    /*955px*/ }
   .class-list .date-list .row {
     margin-left: -3px;
     margin-right: -3px; }
@@ -5424,11 +5428,13 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   vertical-align: top;
   box-shadow: 0 11px 18px 0 rgba(0, 0, 0, 0.1); }
 
+.photo-list {
+  overflow-y: auto; }
+
 @media (min-width: 768px) {
   .photo-list {
     height: 798px;
-    /*975px*/
-    overflow-y: auto; }
+    /*975px*/ }
   .on-nicescroll .photo-list {
     overflow: hidden; }
   .on-nicescroll .photo-list .wrap-dropdown-menu-inner {
@@ -5465,6 +5471,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .view-section h5 .text {
   color: #9bb54e; }
+
+.view-list {
+  overflow-y: auto; }
 
 .view-list .item {
   padding: 15px 150px 15px 20px;
@@ -5508,8 +5517,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 @media (min-width: 768px) {
   .view-list {
     height: 770px;
-    /*947px*/
-    overflow-y: auto; }
+    /*947px*/ }
   .on-nicescroll .view-list {
     overflow: hidden; }
   .on-nicescroll .view-list .wrap-dropdown-menu-inner {
@@ -5595,11 +5603,13 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   text-decoration: none;
   font-weight: 800; }
 
+.about-list {
+  overflow-y: auto; }
+
 @media (min-width: 768px) {
   .about-list {
     height: 798px;
-    /*975px*/
-    overflow-y: auto; }
+    /*975px*/ }
   .on-nicescroll .about-list {
     overflow: hidden; }
   .on-nicescroll .about-list .wrap-dropdown-menu-inner {
@@ -9165,6 +9175,157 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .modal-review .modal-footer {
     padding: 18px 15px 15px; }
   .modal-review .modal-footer .btn {
+    color: #3d3d3d;
+    font-size: 1em;
+    height: 41px;
+    width: 100%; } }
+
+.modal-review-multi {
+  width: 593px; }
+
+.modal-review-multi .modal-header {
+  padding-top: 28px;
+  padding-bottom: 2px; }
+
+.modal-review-multi .modal-header .modal-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5625em;
+  color: #232323; }
+
+.modal-review-multi .modal-body {
+  text-align: center;
+  padding-left: 29px;
+  padding-right: 29px; }
+
+.modal-review-multi .modal-body .list {
+  max-height: 376px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-review-multi .modal-body .list .scroll-content {
+  border-top: 1px solid #6e6e6e; }
+
+.on-nicescroll .modal-review-multi .modal-body .list .wrap-dropdown-menu-inner {
+  padding-right: 29px;
+  max-height: 376px; }
+
+.modal-review-multi .modal-body .list .item {
+  border-bottom: 1px solid #6e6e6e; }
+
+.modal-review-multi .modal-body .list p {
+  font-size: 1.1875em;
+  line-height: 23px;
+  color: #353535;
+  text-align: left;
+  margin-top: 17px;
+  margin-bottom: 15px;
+  margin-left: 22px; }
+
+.modal-review-multi .modal-body .list p strong {
+  font-weight: 700; }
+
+.modal-review-multi .modal-body .list .rating-section {
+  margin-top: 23px;
+  margin-bottom: 0;
+  height: 51px; }
+
+.modal-review-multi .modal-body .list .rating-section label {
+  display: block;
+  color: #333232;
+  font-size: 0.75em;
+  margin-bottom: 0; }
+
+.modal-review-multi .modal-body .list .rating-symbol .glyphicon {
+  width: 32px;
+  height: 28px;
+  background-size: 32px auto; }
+
+.modal-review-multi .modal-body .list .link-collapse {
+  display: inline-block;
+  color: #95c504;
+  font-size: 0.8125em;
+  text-decoration: underline;
+  margin-bottom: 23px; }
+
+.modal-review-multi .modal-body .list textarea {
+  border-color: #ccc;
+  resize: none;
+  box-shadow: none;
+  height: 150px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 1em; }
+
+.modal-review-multi .modal-body .list .characters {
+  color: rgba(51, 50, 50, 0.4);
+  font-size: 0.875em;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px; }
+
+.modal-review-multi .modal-footer {
+  text-align: center;
+  padding-bottom: 21px;
+  padding-top: 19px; }
+
+.modal-review-multi .modal-footer .btn {
+  color: #4d4d4d;
+  font-weight: 700;
+  font-size: 1.3125em;
+  width: 252px;
+  height: 39px;
+  padding: 0; }
+
+@media (max-width: 767px) {
+  .modal-review-multi {
+    width: auto; }
+  .modal-review-multi .modal-content {
+    border-radius: 0;
+    border: 1px solid #898989; }
+  .modal-review-multi .modal-header {
+    padding-top: 26px;
+    padding-bottom: 12px; }
+  .modal-review-multi .modal-header .modal-title {
+    font-size: 1.1875em;
+    color: #282828; }
+  .modal-review-multi .modal-body {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .on-nicescroll .modal-review-multi .modal-body .list .wrap-dropdown-menu-inner {
+    padding-right: 15px; }
+  .modal-review-multi .modal-body .list p {
+    font-size: 1em;
+    line-height: 19px;
+    color: #383838;
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 0; }
+  .modal-review-multi .modal-body .list .rating-section {
+    margin-bottom: 2px;
+    margin-top: 0;
+    height: inherit; }
+  .modal-review-multi .modal-body .list .rating-section label {
+    font-size: 0.8125em;
+    color: rgba(0, 0, 0, 0.7); }
+  .modal-review-multi .modal-body .list .rating-symbol .glyphicon {
+    width: 44px;
+    height: 44px;
+    background-size: 44px auto; }
+  .modal-review-multi .modal-body .list .link-collapse {
+    font-size: 1em;
+    margin-bottom: 13px; }
+  .modal-review-multi .modal-body .list textarea {
+    height: 134px;
+    font-size: 0.8125em; }
+  .modal-review-multi .modal-body .list .characters {
+    margin-top: 0;
+    color: rgba(54, 53, 53, 0.4);
+    font-size: 0.8125em; }
+  .modal-review-multi .modal-footer {
+    padding: 11px 15px 14px; }
+  .modal-review-multi .modal-footer .btn {
     color: #3d3d3d;
     font-size: 1em;
     height: 41px;

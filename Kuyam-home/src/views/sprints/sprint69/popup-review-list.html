@@ -1,0 +1,57 @@
+{% extends './master/main.html' %}
+
+{% block title %}Kuyam - Review List{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block css %}
+<link type="text/css" rel="Stylesheet" href="../../content/bootstrap-rating.css" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block modal %}
+
+{% include "./content/modals/review-list.html" %}
+
+{% include "./content/modals/review-complete.html" %}
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="../../content/js/libs/bootstrap-rating.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#reviewMultiModal').modal('show');
+
+        $('#reviewMultiModal').on('shown.bs.modal', function () {
+            var $this = $('#reviewMultiModal');
+            $this.find('.review-rating').rating();
+
+            var maxList = $('#reviewList').innerHeight();
+            var heightList = $('#reviewList .scroll-content').innerHeight();
+            if(heightList > maxList){
+                iscrollContent('#reviewList');
+            }
+
+            $('.link-collapse').on('click', function (e) {
+                e.preventDefault();
+                var $this = $(this);
+                $this.text(function(i, old){
+                    return old ==='Share your experience' ?  'See less' : 'Share your experience';
+                });
+
+                setTimeout(function(){
+                    refreshNiceScroll('#reviewList');
+                }, 300);
+            });
+        });
+    });
+</script>
+{% endblock %}
+
