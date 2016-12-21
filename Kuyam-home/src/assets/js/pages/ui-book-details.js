@@ -34,14 +34,6 @@ function loadmap(lat, lon, googleIcon){
     });
 }
 
-function infoContent(){
-    if(!isView.mobile()){
-        $('.book-aside').appendTo($('#infoSidebar'));
-    }else{
-        $('.book-aside').appendTo($('#info'));
-    }
-}
-
 function autoWidthOption(whatSelect, whoSelect){
     var whatWidth = $(whatSelect).innerWidth();
     var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth();
@@ -201,14 +193,6 @@ $(document).ready(function(){
             });
         }
     });
-
-    //Begin reposition info content when resize screen
-    infoContent();
-
-    monitorResize(function(){
-        infoContent();
-    });
-    //End reposition info content when resize screen
 
     $('#reviewModal').on('show.bs.modal', function (e) {
         $('#reviewRating').rating();
