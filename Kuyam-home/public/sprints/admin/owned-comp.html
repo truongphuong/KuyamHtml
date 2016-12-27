@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kuyam - Admin</title>
+<title>Kuyam - Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
@@ -288,31 +288,170 @@
             <div class="rightadmin">
                 <div id="contentmainpage">
                     
-<div class="container">
-    <div class="row">
-        <dl class="col-xs-12">
-            <dd>&nbsp;</dd>
-            <dt>Page</dt>
-            <dd>
-                <a title="" href="" target="_blank"></a>
-            </dd>
-        </dl>
-        <dl class="col-xs-12">
-            <dd>&nbsp;</dd>
-            <dt>Popup</dt>
-            <dd>
-                <a title="" href="" target="_blank"></a>
-            </dd>
-        </dl>
-        <dl class="col-xs-12">
-            <dd>&nbsp;</dd>
-            <dt>mobile page</dt>
-            <dd>
-                <a title="" href="" target="_blank"></a>
-            </dd>
-        </dl>
-    </div>
 
+<div id="ownedAdd" class="owed-comp hide">
+    <h2>add owned company</h2>
+    <div class="boxsearch">
+        <center>
+            <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+                <tr class="odd">
+                    <td>
+                        <label>
+                            page name&nbsp;&nbsp;
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" />
+                    </td>
+                    <td>
+                        <label>
+                            company&nbsp;&nbsp;
+                        </label>
+                    </td>
+                    <td>
+                        <select data-placeholder="Company list" class="chosen-single-select">
+                            <option value="all">Company list</option>
+                            <option value="Admin">admin</option>
+                            <option value="HotelAdmin">hoteladmin</option>
+                            <option value="HotelStaff">hotelstaff</option>
+                            <option value="Guest">guest</option>
+                            <option value="Agent">agent</option>
+                            <option value="Concierge">concierge</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td>
+                        <label>
+                            url&nbsp;&nbsp;
+                        </label>
+                    </td>
+                    <td>
+                        <label class="table-css custom-input" for="txtUrl">
+                            <span class="tr">
+                                <span class="td">https://beautify.us/</span>
+                                <span class="td"><input id="txtUrl" type="text" /></span>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            users&nbsp;&nbsp;
+                        </label>
+                    </td>
+                    <td>
+                        <select data-placeholder="Search and select" class="chosen-select" multiple>
+                            <option value="all">User list</option>
+                            <option value="Admin">admin</option>
+                            <option value="HotelAdmin">hoteladmin</option>
+                            <option value="HotelStaff">hotelstaff</option>
+                            <option value="Guest">guest</option>
+                            <option value="Agent">agent</option>
+                            <option value="Concierge">concierge</option>   
+                        </select>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td colspan="4" style="text-align: center;">
+                        <input class="button" value="add" type="button" />
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <div>
+        <a href="#" id="linkBack">back</a>
+    </div>
+</div>
+<div id="ownedList" class="owed-comp">
+    <h2>owned company <a id="linkAdd" title="" href="" class="pull-right">Add new</a></h2>
+    <div id="listOwned" class="owned-list">  
+        <table border="0" cellpadding="0" cellspacing="0" class="tbldata" id="tblServices">
+            <tr>
+                <th class="col-name">
+                    name
+                </th>
+                <th class="col-company">
+                    company
+                </th>
+                <th class="col-url">
+                    url
+                </th>
+                <th class="col-users">
+                    users
+                </th>
+                <th class="col-action">
+                    action
+                </th>
+            </tr>
+            <tr>
+                <td class="col-name">
+                    CS
+                </td>
+                <td class="col-company">
+                    New Year company
+                </td>
+                <td class="col-url">
+                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                </td>
+                <td class="col-users">
+                    User list, admin, hoteladmin
+                </td>
+                <td class="col-action">
+                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">
+                    CS
+                </td>
+                <td class="col-company">
+                    New Year company
+                </td>
+                <td class="col-url">
+                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                </td>
+                <td class="col-users">
+                    User list, admin, hoteladmin
+                </td>
+                <td class="col-action">
+                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-name">
+                    CS
+                </td>
+                <td class="col-company">
+                    New Year company
+                </td>
+                <td class="col-url">
+                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                </td>
+                <td class="col-users">
+                    User list, admin, hoteladmin
+                </td>
+                <td class="col-action">
+                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                </td>
+            </tr>
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+            <tr class="odd">
+                <td>
+                    <div class="fLeft mt4" style="float: left; padding-left: 0px;">
+                        <span>1 - 5 of </span>
+                        <span><strong>5 results</strong></span>
+                    </div>
+                </td>
+                <td class="paging" style="text-align: right; width: 50%;">
+                    <div class="paging">
+                        <span class="active" title="1">1</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
 
                 </div>
@@ -386,6 +525,32 @@
 <script type="text/javascript" src="../../content/js/ui-core.js"></script>
 <script type="text/javascript" src="../../content/js/ui-general.js"></script>
 
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.chosen-select').chosen();
+        $('.chosen-single-select').chosen({disable_search_threshold: 10});
+        $(document).on('click', '#linkAdd', function(e){
+            e.preventDefault();
+            $('#ownedList').addClass('hide');
+            $('#ownedAdd').find('h2').text('add owned company');
+            $('#ownedAdd').removeClass('hide');
+        });
+        $(document).on('click', '#ownedList .link-edit', function(e){
+            e.preventDefault();
+            $('#ownedList').addClass('hide');
+            $('#ownedAdd').find('h2').text('edit owned company');
+            $('#ownedAdd').removeClass('hide');
+        });
+        $(document).on('click', '#linkBack', function(e){
+            e.preventDefault();
+            $('#ownedList').removeClass('hide');
+            $('#ownedAdd').addClass('hide');
+        });
+    });
+</script>
 
 
 </body>
