@@ -7,14 +7,27 @@
                 <h3 id="reviewModalLabel" class="modal-title">Thanks for booking with Kuyam!</h3>
             </div>
             <div class="modal-body">
-                <p><strong>Wish Salon &amp; Spa</strong><br />Foot massage with George<br />Web. March 15 at 5:00pm</p>
-                <div class="rating-section">
-                    <label for="reviewRating">Please rate this appointment</label>
-                    <input type="hidden" id="reviewRating" value="4"/>
-                </div>
-                <div class="countdown-input">
-                    <textarea cols="" rows="" placeholder="Share your experience with other users" class="form-control"></textarea>
-                    <div class="characters"><span class="num">300</span> characters left</div>
+                <div id="reviewList" class="list single">
+                    <div class="scroll-content">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-7">
+                                    <p><strong>Wish Salon &amp; Spa</strong><br />Foot massage<br /> with George<br />Web. March 15 at 5:00pm</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-5">
+                                    <div class="rating-section">
+                                        <label for="reviewRating">Please rate this appointment</label>
+                                        <input type="hidden" id="reviewRating" class="review-rating" value="4"/>
+                                    </div>
+                                    <a class="link-collapse collapsed" role="button" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">Share your experience</a>
+                                </div>
+                            </div>
+                            <div id="collapse1" class="countdown-input collapse">
+                                <textarea cols="" rows="" placeholder="Share your experience with other users" class="form-control"></textarea>
+                                <div class="characters"><span class="num">300</span> characters left</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

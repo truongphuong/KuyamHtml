@@ -453,7 +453,7 @@
 
 
 <!-- #reviewModal -->
-<div id="reviewMultiModal" class="modal fade" role="dialog" aria-labelledby="reviewMultiModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="reviewModal" class="modal fade" role="dialog" aria-labelledby="reviewMultiModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-review-multi">
         <div class="modal-content">
             <div class="modal-header">
@@ -1517,9 +1517,9 @@
 <script type="text/javascript" src="../../content/js/libs/bootstrap-rating.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#reviewMultiModal').modal('show');
+        $('#reviewModal').modal('show');
 
-        $('#reviewMultiModal').on('shown.bs.modal', function () {
+        $('#reviewModal').on('shown.bs.modal', function () {
             var $this = $('#reviewMultiModal');
             $this.find('.review-rating').rating();
 
