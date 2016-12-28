@@ -5161,7 +5161,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   text-align: center;
   color: rgba(81, 81, 81, 0.8);
   font-size: 0.875em;
-  line-height: 31px;
   font-size: 400; }
 
 .session-item {
@@ -5243,6 +5242,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .session {
     height: 36px;
     margin: 7px 3px; }
+  .session .full-booked {
+    line-height: 34px;
+    font-size: 1em; }
   .session-item .session-time {
     line-height: 36px;
     font-size: 1em; }
@@ -5430,7 +5432,12 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   padding-left: 18px;
   padding-right: 18px;
   width: 50%;
-  margin-bottom: 36px; }
+  margin-bottom: 36px;
+  position: relative; }
+
+.photo-list li .loading,
+.photo-list li .loading > div {
+  position: absolute; }
 
 .photo-list li:last-child {
   margin-bottom: 0; }
