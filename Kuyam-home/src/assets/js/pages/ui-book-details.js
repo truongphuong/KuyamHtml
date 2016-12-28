@@ -198,9 +198,9 @@ $(document).ready(function(){
         $('#reviewRating').rating();
     });
 
-    /*$('.book-caption .votes .total-review').on('click', function(){
+    $('.book-caption .votes .total-review').on('click', function(){
         $('#bookTabs a[href="#views"]').click();
-    });*/
+    });
 
     $('.btn-book').on('click', function(){
         $('#bookTabs a[href="#appointment"]').click();
