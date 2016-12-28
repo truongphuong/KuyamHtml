@@ -5155,6 +5155,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   height: 33px;
   margin: 6px 3px; }
 
+.session .full-booked {
+  display: block;
+  line-height: 33px;
+  text-align: center;
+  color: rgba(81, 81, 81, 0.8);
+  font-size: 0.875em;
+  line-height: 31px;
+  font-size: 400; }
+
 .session-item {
   display: block;
   background: #fff;
@@ -5167,7 +5176,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   border-radius: 2px;
   font-size: 0.875em;
   line-height: 31px;
-  font-weight: 600;
+  font-weight: 400;
   border: 1px solid rgba(135, 135, 135, 0.61);
   color: rgba(51, 50, 50, 0.8); }
 
@@ -5187,8 +5196,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .session-item.active .session-time {
   border-radius: 2px 2px 0 0;
-  color: #333232;
-  height: 35px; }
+  color: #000;
+  height: 35px;
+  font-weight: 700; }
 
 .session-item.active .btn-book {
   display: block; }
@@ -5307,6 +5317,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   height: 30px;
   padding: 0;
   border-radius: 0; }
+
+.class-list .date-list .item ul li .btn:disabled {
+  cursor: default;
+  background: #fff;
+  border: 1px solid #878787;
+  color: #333232;
+  opcity: .5;
+  box-shadow: none; }
 
 .class-list {
   overflow-y: auto; }
