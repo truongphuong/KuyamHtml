@@ -16,6 +16,7 @@
 <link type="text/css" rel="stylesheet" href="../../content/admin/css/kuyam.css" />
 <link type="text/css" rel="stylesheet" href="../../content/admin/css/style-company-admin.css" />
 <link type="text/css" rel="stylesheet" href="../../content/style.css" />
+<link type="text/css" rel="stylesheet" href="../../content/admin.css" />
 </head>
 <body>
 {% include "./partials/sidebar.html" %}
@@ -45,6 +46,9 @@
 
 {% include "./components/js.html" %}
 
+{% block libsscript %}{% endblock %}
+<script type="text/javascript" src="../../content/js/ui-core.js"></script>
+<script type="text/javascript" src="../../content/js/ui-general.js"></script>
 {% block script %}{% endblock %}
 </body>
 </html>

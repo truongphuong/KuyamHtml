@@ -45,10 +45,13 @@
 
 
 
+<link type="text/css" rel="stylesheet" href="../../content/bootstrap-table.css" />
+
 <link type="text/css" rel="stylesheet" href="../../content/admin/css/style.css" />
 <link type="text/css" rel="stylesheet" href="../../content/admin/css/kuyam.css" />
 <link type="text/css" rel="stylesheet" href="../../content/admin/css/style-company-admin.css" />
 <link type="text/css" rel="stylesheet" href="../../content/style.css" />
+<link type="text/css" rel="stylesheet" href="../../content/admin.css" />
 </head>
 <body>
 <div id="ml-menu">
@@ -366,75 +369,79 @@
 <div id="ownedList" class="owed-comp">
     <h2>owned company <a id="linkAdd" title="" href="" class="pull-right">Add new</a></h2>
     <div id="listOwned" class="owned-list">  
-        <table border="0" cellpadding="0" cellspacing="0" class="tbldata" id="tblServices">
-            <tr>
-                <th class="col-name">
-                    name
-                </th>
-                <th class="col-company">
-                    company
-                </th>
-                <th class="col-url">
-                    url
-                </th>
-                <th class="col-users">
-                    users
-                </th>
-                <th class="col-action">
-                    action
-                </th>
-            </tr>
-            <tr>
-                <td class="col-name">
-                    CS
-                </td>
-                <td class="col-company">
-                    New Year company
-                </td>
-                <td class="col-url">
-                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
-                </td>
-                <td class="col-users">
-                    User list, admin, hoteladmin
-                </td>
-                <td class="col-action">
-                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-name">
-                    CS
-                </td>
-                <td class="col-company">
-                    New Year company
-                </td>
-                <td class="col-url">
-                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
-                </td>
-                <td class="col-users">
-                    User list, admin, hoteladmin
-                </td>
-                <td class="col-action">
-                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-name">
-                    CS
-                </td>
-                <td class="col-company">
-                    New Year company
-                </td>
-                <td class="col-url">
-                    <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
-                </td>
-                <td class="col-users">
-                    User list, admin, hoteladmin
-                </td>
-                <td class="col-action">
-                    <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
-                </td>
-            </tr>
+        <table id="tblServices">
+            <thead>
+                <tr>
+                    <th data-field="name" data-sortable="true" class="col-name">
+                        name
+                    </th>
+                    <th data-field="company" data-sortable="true" class="col-company">
+                        company
+                    </th>
+                    <th class="col-url">
+                        url
+                    </th>
+                    <th class="col-users">
+                        users
+                    </th>
+                    <th class="col-action">
+                        action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-name">
+                        CS
+                    </td>
+                    <td class="col-company">
+                        New Year company
+                    </td>
+                    <td class="col-url">
+                        <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                    </td>
+                    <td class="col-users">
+                        User list, admin, hoteladmin
+                    </td>
+                    <td class="col-action">
+                        <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-name">
+                        CS
+                    </td>
+                    <td class="col-company">
+                        New Year company
+                    </td>
+                    <td class="col-url">
+                        <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                    </td>
+                    <td class="col-users">
+                        User list, admin, hoteladmin
+                    </td>
+                    <td class="col-action">
+                        <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-name">
+                        CS
+                    </td>
+                    <td class="col-company">
+                        New Year company
+                    </td>
+                    <td class="col-url">
+                        <a title="" href="#" target="_blank">https://beautify.us/chanhspa/community</a>
+                    </td>
+                    <td class="col-users">
+                        User list, admin, hoteladmin
+                    </td>
+                    <td class="col-action">
+                        <a title="" href="#" class="link-edit">Edit</a> | <a title="" href="#">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
             <tr class="odd">
@@ -522,36 +529,14 @@
 <script type="text/javascript" src="../../content/js/libs/croppie.js"></script>
 <script type="text/javascript" src="../../content/js/libs/chosen.jquery.js"></script>
 
+
+
+<script type="text/javascript" src="../../content/js/libs/bootstrap-table.js"></script>
+
 <script type="text/javascript" src="../../content/js/ui-core.js"></script>
 <script type="text/javascript" src="../../content/js/ui-general.js"></script>
 
-
-
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.chosen-select').chosen();
-        $('.chosen-single-select').chosen({disable_search_threshold: 10});
-        $(document).on('click', '#linkAdd', function(e){
-            e.preventDefault();
-            $('#ownedList').addClass('hide');
-            $('#ownedAdd').find('h2').text('add owned company');
-            $('#ownedAdd').removeClass('hide');
-        });
-        $(document).on('click', '#ownedList .link-edit', function(e){
-            e.preventDefault();
-            $('#ownedList').addClass('hide');
-            $('#ownedAdd').find('h2').text('edit owned company');
-            $('#ownedAdd').removeClass('hide');
-        });
-        $(document).on('click', '#linkBack', function(e){
-            e.preventDefault();
-            $('#ownedList').removeClass('hide');
-            $('#ownedAdd').addClass('hide');
-        });
-    });
-</script>
-
+<script type="text/javascript" src="../../content/js/pages/admin/ui-owned-comp.js"></script>
 
 </body>
 </html>
