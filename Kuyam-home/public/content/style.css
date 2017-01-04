@@ -797,6 +797,28 @@ textarea {
   position: relative;
   -webkit-overflow-scrolling: touch; }
 
+.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  height: 80px;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  background: -webkit-linear-gradient(transparent, rgba(255, 255, 255, 0.5), #fff);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.5), #fff);
+  /* Standard syntax */
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  opacity: 1; }
+
+.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner.end:after {
+  opacity: 0; }
+
 @media (max-width: 1023px) {
   .nicescroll-rails div {
     width: 5px !important;
@@ -5087,7 +5109,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .book-option .option-select .dropdown > a .icon {
     background-image: url(images/ui/pages/book-details/option/icon_down@3x.png); }
   .book-option .option-select ul li .td-off span:before {
-    background: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
+    background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
 
 .site-calendar {
   margin: 0;

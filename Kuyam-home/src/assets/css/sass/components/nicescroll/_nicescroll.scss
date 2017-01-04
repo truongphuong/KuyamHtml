@@ -11,6 +11,29 @@
     position: relative;
     -webkit-overflow-scrolling: touch;
 }
+.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner:after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:calc(100% - 10px);
+    height: 80px;
+    background: $rgba_white;
+    pointer-events: none;
+    background: -webkit-linear-gradient(transparent, $rgba_white, $white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, $rgba_white, $white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, $rgba_white, $white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, $rgba_white, $white); /* Standard syntax */
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    opacity:1;
+}
+.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner.end:after{
+    opacity:0;
+}
 
 @media (max-width: 1023px){
     .nicescroll-rails div{

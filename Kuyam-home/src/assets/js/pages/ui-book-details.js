@@ -35,10 +35,10 @@ function loadmap(lat, lon, googleIcon){
 }
 
 function autoWidthOption(whatSelect, whoSelect){
-    var whatWidth = $(whatSelect).innerWidth();
-    var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth();
     $(whatSelect).css({'width': ''});
     $(whoSelect).css({'width': ''});
+    var whatWidth = $(whatSelect).innerWidth();
+    var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth() + $(whatSelect).find('.icon-down').outerWidth();
     if(aWidth < whatWidth){
         var whoWidth = $(whoSelect).innerWidth();
         var whoWidthNew = whoWidth + whatWidth - aWidth;
