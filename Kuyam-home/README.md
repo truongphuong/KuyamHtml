@@ -35,3 +35,8 @@ You can folk this repository to create own boilerplate and use it with [vns-cli]
 ```
 $ vns init gulp-webapp yourproject
 ```
+
+#Remove all files in node_modules folder
+```
+rm -rf node_modules
+```
