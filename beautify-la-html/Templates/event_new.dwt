@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/4_master_1_new.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=edge" />
@@ -7,388 +7,58 @@
 <meta http-equiv="ScreenOrientation" content="autoRotate:enabled" /> 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
-<!-- InstanceBeginEditable name="doctitle" -->
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>Beautify LA</title>
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<!-- InstanceEndEditable -->
+<!-- TemplateEndEditable -->
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />  
+<link rel="stylesheet" type="text/css" href="content/bootstrap-select.css" />     
 
 <!-- jQuery UI CSS -->
-<link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />       
+<link rel="stylesheet" type="text/css" href="content/jquery-ui.css" />
+
+<link rel="stylesheet" type="text/css" href="content/datepicker3.css" />
 
 <!-- countdown CSS -->
 <link rel="stylesheet" type="text/css" href="content/jquery.countdown.css" />
 
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 
 <link rel="stylesheet" type="text/css" href="content/iscroll.css" />
 
-<link rel="stylesheet" type="text/css" href="content/4_style_1.css" /> 
+<link rel="stylesheet" type="text/css" href="content/4_style_1.css" />  
 
 <script type="text/javascript" src="scripts/modernizr.custom.js"></script>
 
 <!-- === SCRIPTS === -->  
 <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>    	
 <script type="text/javascript" src="scripts/bootstrap.js"></script>
-<script type="text/javascript" src="scripts/bootstrap-select.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-select.js"></script> 
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/bootstrap-datepicker.js"></script>     
 <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
 <script type="text/javascript" src="scripts/jquery.countdown.js"></script>
-<script type="text/javascript" src="scripts/iscroll.js"></script>
+<script type="text/javascript" src="scripts/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.dotdotdot.js"></script>
 <!-- === END SCRIPTS === --> 
 </head>
 <body>
 	<div id="detech-devices" class="wrapper">
-        <div id="site-header" class="site-header bg-black"> 
-            <div class="container">             	
-                <a class="logo" href="home.html" title="">
-                    <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
-                    <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
-                </a>
-                <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>   
-                <span class="welcome-user visible-xs">hi, kourosh!</span>
-                <section class="area-section">
-                	<select id="select-area" class="selectpicker select-area select-scroll">
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>   
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                        <option value="">LA</option>
-                        <option data-subtext="(CA)" value="">OC</option>
-                        <option value="">SD</option>
-                        <option data-subtext="(NJ)" value="">OC</option>
-                    </select>
-                </section>
-                <section class="region-section">
-                	<select id="select-region" class="selectpicker select-region select-scroll"> 
-                        <option value="">Entire region</option>
-                        <option>Australia</option>
-                        <option>Austria</option>
-                        <option>Belgium</option>
-                        <option>Brazil</option>
-                        <option>Canada</option>
-                        <option>Denmark</option>
-                        <option>Finland</option>
-                        <option>France</option>
-                        <option>Germany</option>
-                        <option>Greece</option>
-                        <option>Ireland</option>
-                        <option>Israel</option>
-                        <option>Italy</option>
-                        <option>Japan</option>
-                        <option>Luxembourg</option>
-                        <option>Mexico</option>
-                        <option>Netherlands</option>
-                        <option>Norway</option>
-                        <option>Poland</option>
-                        <option>Portugal</option>
-                        <option>Russia</option>
-                        <option>Spain</option>
-                        <option>Sweden</option>
-                        <option>Switzerland</option>
-                        <option>Turkey</option>
-                        <option>United Kingdom</option>
-                        <option>United States</option>
-                    </select>
-                </section>
-                <script type="text/javascript">
-					var selectScroll,
-						selectAreaScroll,
-						selectRegionScroll,
-						hasContentArea,
-						hasContentRegion;				
-					$(document).ready(function(){	
-						$('#select-area').selectpicker();
-						$('#select-region').selectpicker({
-							liveSearch: true
-						});
-						selectArea();
-						
-						hasContentArea = $('.area-section').find('.dropdown-menu.open').length;
-						if(hasContentArea == 1){
-							$('.area-section .dropdown-menu.open').attr("id", "selectArea");
-							selectAreaScroll = new IScroll('#selectArea', {
-								scrollbars: true,
-								mouseWheel: true,
-								interactiveScrollbars: true,
-								shrinkScrollbars: 'scale',
-								fadeScrollbars: true,
-								click: true 
-							});
-						}
-						
-						hasContentRegion = $('.region-section').find('.dropdown-menu.open').length;
-						if(hasContentRegion == 1){							
-							$('<div id="selectRegion" class="section-scroll"></div>').insertAfter(".region-section .bs-searchbox");
-							$('.region-section .dropdown-menu.inner').appendTo('.region-section .section-scroll');
-							selectRegionScroll = new IScroll('#selectRegion', {
-								scrollbars: true,
-								mouseWheel: true,
-								interactiveScrollbars: true,
-								shrinkScrollbars: 'scale',
-								fadeScrollbars: true,
-								click: true 
-							});	
-						}
-											
-						// custom css expression for a case-insensitive contains()
-					  	jQuery.expr[':'].Contains = function(a,i,m){
-						  	return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;							
-					  	};	
-						listFilter($(".select-region .bs-searchbox"), $(".select-region ul.dropdown-menu"));					  						
-						
-						// hide nav menu when click on select 					
-						$('.region-section, .area-section').click(function(e){
-							if($(window).width()<768){
-								if(temp = 1){
-									$('#bs-navbar-collapse').removeClass("in").css({'height': 1});
-									$( "#site-header" ).css({"height": ""});
-									temp = 0;
-								}
-							}
-						});	
-						
-						$('.region-section').click(function(e){							
-							$('#select-region').selectpicker('refresh');
-						});
-					});	
-					
-					$(window).resize(function(){
-						selectArea();
-						
-						if(hasContentRegion == 1){
-							selectRegionScroll.refresh();
-						}
-						
-						if(hasContentArea == 1){
-							selectAreaScroll.refresh();
-						}
-							
-					});
-					
-					function selectArea(){
-						var areaLeft = $('.area-section').offset().left;
-						if($(window).width() < 768){
-							$('.area-section div.dropdown-menu').css({'margin-left': - areaLeft});
-							$('.area-section ul.dropdown-menu').css({'width': $(window).width()});
-						}else{
-							$('.area-section div.dropdown-menu').css({'margin-left': ''});
-							$('.area-section ul.dropdown-menu').css({'width': ''});
-						}
-					}				
-					
-					function listFilter(header, list) {
-						var $object = $('input.input-block-level'); 
-						var filter = $object.val();
-						$object.change( function (e) {
-							e.preventDefault();
-							filter = $(this).val();
-							if(filter != null) {
-								//highlighted letters in the list when it match key
-								var match = RegExp(this.value, 'gi');
-								$(list).find(".text").html(function(){
-									if (!filter) return $(this).text();
-									return $(this).text().replace(match, '<u>$&</u>');
-								});
-							} 
-							return false;
-						}).keyup( function () {
-							// fire the above change event after every letter									
-							$(this).change();
-							
-							setTimeout(function(){
-								if(hasContentRegion == 1){
-									selectRegionScroll.refresh();  
-								}	
-							}, 100);
-						});
-					}
-				</script>
-                <div class="clear visible-xs visible-sm"></div>
-                
-                <!-- .navbar-collapse --> 
-                 <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right nav-main">
-                    	<li class="li-blog"><a href="lifestyle-blog.html" title="">Blog</a></li>
-                        <li class="li-chat"><a href="#" title="">Chat</a></li>
-                        <!--<li class="li-register"><a href="javascript:void(0);" title="" data-target="#modal-sign-up" data-toggle="modal">SIGN UP</a> / <a href="javascript:void(0);" title="" data-target="#modal-login" data-toggle="modal">LOGIN</a></li>--> 
-                        <li class="li-create"><a href="javascript:void(0);" title="" data-target="#modal-sign-up" data-toggle="modal">CREATE YOUR EVENT</a></li>        
-                        <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi, Kourosh</a>
-                        	<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                            	<li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
-                            </ul>
-                        </li> 
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse --> 
-                <!-- InstanceBeginEditable name="form" -->
-                <!-- InstanceEndEditable --> 
-            </div>            
-        </div>          
-        <!-- InstanceBeginEditable name="banner" --> <div class="relative">
-        <!-- slide-feature -->
-        <div class="slide-feature hidden-xs">
-            <div id="carousel-desktop" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>                    
-                </ol>
-            
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active" style="background-image:url(content/images/assets/slide_nails.jpg);">
-                        <div class="carousel-caption"></div>
-                    </div>                                                      
-                </div>
-            
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-desktop" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-desktop" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+    	<!-- TemplateBeginEditable name="form" -->
+        <!-- TemplateEndEditable -->
+        <div class="back-to-home">
+        	<div class="container">
+        		<a title="" href="home.html">Back to home page</a>
             </div>
-     	</div>
-        <!-- /slide-feature -->
-        
-        <!-- slide-feature -->
-        <div class="slide-feature visible-xs">
-            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>                    
-                </ol>
-            
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item active" style="background-image:url(content/images/assets/mobile/slide_nails.jpg);">
-                        <div class="carousel-caption"></div>
-                    </div>                                                      
-                </div>
-            
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-mobile" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-mobile" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-        <!-- /slide-feature -->        
-            
-        <div class="relative hide">
-        	<!-- register-form -->
-        	<div class="register-section bg-black-50">        	 
-            	<div class="container"> 
-                    <header class="section-header">
-                    	<div class="skip-section on-device">
-                        	<a title="" href="#">skip <span class="icon-skip"></span></a>
-                        </div>
-                        <h2>the best new beauty/fitness events in Los Angeles</h2>
-                        <p><span>sign up for insider updates!</span></p>
-                    </header>
-                    <fieldset class="register-form clearfix">                    	
-                        <div class="form-group">
-                            <div class="input-group">
-                           		<input type="text" class="form-control txt_Email" onblur="if (this.value == '') { this.value = 'enter your email'; }" onfocus="if (this.value == 'enter your email') { this.value = ''; }" value="enter your email" />
-                              	<input type="button" class="input-group-addon btn_Join" value="sign up" data-toggle="modal" data-target="#modal-notify" />
-                            </div>
-                      	</div>
-                        <a title="" href="#" data-target="#modal-alert" data-toggle="modal" class="btn-blue btn-facebook">sign up with Facebook</a>
-                    </fieldset>
-                </div>
-            </div>
-            <!-- /register-form -->
-        </div>        
-        
-    </div>   
-        <!-- InstanceEndEditable -->      
-        <!-- InstanceBeginEditable name="content" -->
-        
-        <center>
-        	<br /><br />
-            <input class="btn" type="button" data-target="#modal-hey" data-toggle="modal" value="Hey popup" />
-            <input class="btn" type="button" data-target="#modal-thank-you" data-toggle="modal" value="Thank you popup" />
-            <br /><br />
-        </center>
-        
-        <!-- .modal-notify -->    
-        <div class="modal fade" id="modal-hey" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
-            <div class="modal-dialog modal-geo-location">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"></button>
-                        <h3 class="modal-title">Hey! It looks like you are in New York.</h3>
-                        <h4>Your area is not supported yet, but we can send you an email as soon as we reach your area.</h4>
-                    </div>
-                    <div class="modal-body">
-                  		<fieldset class="register-form clearfix">                    	
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" value="Enter your email" onfocus="if (this.value == 'Enter your email') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Enter your email'; }" class="form-control txt_Email" />
-                                    <input type="button" value="Send" class="input-group-addon btn_Join" />
-                                </div>
-                            </div>
-                        </fieldset>            
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-        <!-- /.modal-notify --> 
-        
-         <!-- .modal-notify -->    
-        <div class="modal fade" id="modal-thank-you" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
-            <div class="modal-dialog modal-geo-location">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"></button>
-                        <h3 class="modal-title">Thank you!</h3>
-                        <h4>We will now redirect you to the closet area.</h4>
-                    </div>
-                    <div class="modal-body">
-                   		<input type="button" data-dismiss="modal" value="Enter the website" class="btn btn-orange" />          
-                    </div>
-                    <div class="modal-footer">                	
-                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-        <!-- /.modal-notify --> 
-        
-        <!-- InstanceEndEditable --> 
+        </div>         
+        <!-- TemplateBeginEditable name="banner" -->         
+        <!-- TemplateEndEditable -->      
+        <!-- TemplateBeginEditable name="content" -->
+        <!-- TemplateEndEditable --> 
        <!-- .site-contact -->
         <section id="contact" class="site-contact"> 
             <div class="container">
@@ -427,7 +97,7 @@
                                 </div>
                             </div>
                             <a title="" href="#" class="btn-blue btn-facebook">sign up with Facebook</a>
-                        </fieldset>  
+                        </fieldset> 
                         <header class="section-header visible-xs">
                             <h4>join the community</h4>      
                         </header> 
@@ -464,11 +134,7 @@
         </footer>
     </div>
     
-    <div class="loading hide">
-        <div>
-            <div class="loader">Loading...</div>
-        </div>
-    </div>
+    <div class="loading"></div>
     <div class="light-box"></div> 
     
     <!-- .modal-notify -->    
@@ -495,23 +161,6 @@
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
     <!-- /.modal-notify --> 
-    
-    <!-- .modal-alert -->    
-    <div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-  		<div class="modal-dialog modal-alert">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        			<button type="button" class="close" data-dismiss="modal"></button>
-      			</div>
-                <div class="modal-body">
-                	<p>message</p>                                   
-                </div>
-                <div class="modal-footer">                	
-                 </div>
-    		</div><!-- /.modal-content -->
-  		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-    <!-- /.modal-alert --> 
     
     <!-- .modal-ticket -->    
     <div class="modal fade" id="modal-ticket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
@@ -615,7 +264,7 @@
                 
                     <!-- .checkout-title -->
                     <div class="ticket-title">
-                        <h3>your've succesfully purchased tickets to:</h3>
+                        <h3>your've succesfully purchased tickets to:</h3>  
                         <p>
                         	Beautify LA: Montana Ave<br />
                             Thurs, Oct. 2nd<br />
@@ -738,7 +387,7 @@
     <!-- /.modal-sign-up -->
     
     <!-- .modal-forgot-pass -->    
-    <div class="modal fade" id="modal-forgot-pass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  data-keyboard="false" data-backdrop="static">
+    <div class="modal fade" id="modal-forgot-pass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
   		<div class="modal-dialog modal-form modal-forgot-pass">
     		<div class="modal-content">
 				<div class="modal-header">
@@ -769,8 +418,8 @@
     <!-- END HTML --> 
     
     <!-- === SCRIPTS === --> 
-    <!-- InstanceBeginEditable name="script" -->
-	<!-- InstanceEndEditable --> 
+    <!-- TemplateBeginEditable name="script" -->
+	<!-- TemplateEndEditable --> 
     <script type="text/javascript">
 		$(document).ready(function(){				
 			var modalID, modalIDOpen;
@@ -790,7 +439,7 @@
     </script> 
     
     <script type="text/javascript" src="scripts/css_browser_selector.js"></script>
-    <!--<script type="text/javascript" src="scripts/general-ui.js"></script>-->     
+    <script type="text/javascript" src="scripts/general-ui.js"></script>
     <!-- === END SCRIPTS === -->    
 </body>
-<!-- InstanceEnd --></html>
+</html>
