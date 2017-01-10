@@ -1,0 +1,190 @@
+.site-calendar {
+    margin: 0;
+    position: relative;
+}
+.site-calendar .bg-white-50 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+.slide-calendar {
+    position: relative;
+}
+.slide-calendar .rslides {
+    overflow: visible;
+}
+.slide-calendar .rslides_nav {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 48px;
+    width: 14px;
+    font-size: 0;
+    text-decoration: none;
+    background: url(images/ui/pages/book-details/appointment/icon_next.png) left center no-repeat;
+    background-size: 14px auto;
+}
+.slide-calendar .rslides_nav.disabled {
+    opacity: .5;
+    pointer-events: none;
+    cursor: default;
+}
+.slide-calendar .rslides_nav.prev {
+    left: 0;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.slide-calendar .rslides_nav.next {
+    right: 0;
+}
+.slide-calendar .disabled {
+    color: #aaa;
+    cursor: default;
+}
+.table-calendar {
+    width: 100%;
+}
+.table-calendar .table-cell {
+    width: 14.28%;
+    vertical-align: top;
+}
+.table-calendar-header {
+
+}
+.table-calendar-header .table-cell {
+    text-align: center;
+    padding: 5px 0;
+    line-height: 19px;
+}
+.table-calendar-header .day {
+    display: block;
+    font-size: $h6;
+    font-weight: 700;
+    color: rgba(51, 50, 50, .9);
+}
+.table-calendar-header .datetime {
+    display: block;
+    font-size: $s13;
+    color: rgba(51, 50, 50, .9);
+}
+.session {
+    display: block;
+    height: 33px;
+    margin: 6px 3px;
+}
+.session:last-child{
+    margin-bottom: 0;
+}
+.session .full-booked{
+    display: block;
+    line-height: 33px;
+    text-align: center;
+    color:rgba(81, 81, 81, 0.8);
+    font-size: $s14;
+    font-size:400;
+}
+.session-item {
+    display: block;
+    background: $white;
+    text-align: center;
+    cursor: pointer;
+}
+.session-item .session-time {
+    overflow: hidden;
+    display: block;
+    border-radius: 2px;
+    font-size: $s14;
+    line-height:31px;
+    font-weight: 400;
+    border: 1px solid rgba(135, 135, 135, .61);
+    color: rgba(51, 50, 50, .8);
+}
+.session-item .btn-book {
+    display: none;
+    font-weight: 800;
+    font-size: $s14;
+    color: $white;
+    height: 36px;
+    line-height: 34px;
+    position: relative;
+    z-index: 8;
+    text-decoration: none;
+    background: #95c504;
+    border-color: #95c504;
+    border-radius: 0 0 2px 2px;
+}
+.session-item.active .session-time {
+    border-radius: 2px 2px 0 0;
+    color: $black;
+    height: 35px;
+    font-weight: 700;
+}
+.session-item.active .btn-book {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .table-calendar-header {
+        margin-left: 13px;
+        margin-right: 36px;
+        position: relative;
+    }
+    .slide-calendar .rslides_nav.prev{
+        left: -13px;
+    }
+    .slide-calendar .rslides_nav.next{
+        right: -13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .table-calendar-header .table-cell{
+        line-height: 21px;
+        padding-bottom: 6px;
+    }
+    .table-calendar-header .day{
+        font-size: $s18;
+    }
+    .table-calendar-header .datetime{
+        font-size: $h6;
+    }
+    .session{
+        height: 36px;
+        margin: 7px 3px;
+    }
+    .session .full-booked{
+        line-height: 34px;
+        font-size: $h6;
+    }
+    .session-item .session-time{
+        line-height: 36px;
+        font-size: $h6;
+    }
+    .session-item.active .session-time{
+        height: 40px;
+    }
+    .session-item .btn-book{
+        line-height: 39px;
+        height: 41px;
+        font-size: $h6;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .slide-calendar .rslides_nav {
+        background-image: url(images/ui/pages/book-details/appointment/icon_next@3x.png);
+    }
+}
+
