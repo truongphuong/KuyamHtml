@@ -26,6 +26,12 @@ var isMobile = {
     }
 };
 
+function getWindowWidth(){
+    return window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+}
+
 var isView = {
     mobile: function(){
         var sw = getWindowWidth();
