@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-7 col-md-8">
                 <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="appointment">
+                    <div role="tabpanel" class="tab-pane" id="appointment">
                         <nav>
                             <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
@@ -56,8 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="about">
-                        <div class="overlay" style="display: block;"></div>
+                    <div role="tabpanel" class="tab-pane active" id="about">
                         {% include "./content/pages/book-details/about.html" %}
                     </div>
                     <div role="tabpanel" class="tab-pane" id="views">
@@ -83,6 +82,7 @@
 {% endblock %}
 
 {% block modal %}
+<div class="overlay" style="display: block;"></div>
 {% include "./content/pages/book-details/tooltip-category.html" %}
 {% include "./content/modals/details.html" %}
 {% include "./content/modals/packages.html" %}
