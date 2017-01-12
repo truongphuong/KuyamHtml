@@ -37,7 +37,7 @@ function autoWidthOption(whatSelect, whoSelect){
     $(whatSelect).css({'width': ''});
     $(whoSelect).css({'width': ''});
     var whatWidth = $(whatSelect).innerWidth();
-    var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth() + $(whatSelect).find('.icon-down').outerWidth();
+    var aWidth = $(whatSelect).find('a[data-toggle="dropdown"]').innerWidth();
     if(aWidth < whatWidth){
         var whoWidth = $(whoSelect).innerWidth();
         var whoWidthNew = whoWidth + whatWidth - aWidth;

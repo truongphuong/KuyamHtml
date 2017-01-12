@@ -4971,21 +4971,26 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .book-option .option-select .dropdown > a .text {
   display: inline-block;
-  max-width: calc(100% - 26px);
+  max-width: 100%;
+  padding-right: 26px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
+  white-space: nowrap;
+  position: relative; }
 
-.book-option .option-select .dropdown > a .icon {
-  position: relative;
+.book-option .option-select .dropdown > a .text:after {
+  content: '';
+  position: absolute;
   display: inline-block;
+  top: 0;
+  right: 0;
   width: 21px;
   height: 24px;
-  background-image: url(images/ui/pages/book-details/option/icon_down.png);
+  background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
   background-size: 21px auto;
   margin-left: 5px; }
 
-.book-option .option-select .dropdown.open > a .icon {
+.book-option .option-select .dropdown.open > a .text:after {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg); }
 
@@ -5111,14 +5116,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     border-bottom: 1px solid #c2c2c2;
     padding-bottom: 4px; }
   .book-option .option-select .dropdown > a {
-    font-size: 1em; }
+    font-size: 1em;
+    display: block; }
   .book-option .option-select .dropdown > a .icon {
     margin-left: 5px; }
   .book-option .option-select .dropdown-menu {
     box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26); } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .book-option .option-select .dropdown > a .icon {
+  .book-option .option-select .dropdown > a .text:after {
     background-image: url(images/ui/pages/book-details/option/icon_down@3x.png); }
   .book-option .option-select ul li .td-off span:before {
     background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
