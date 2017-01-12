@@ -47,6 +47,7 @@ function autoWidthOption(whatSelect, whoSelect){
 }
 function removeAffix($affix){
     $(window).off('.affix');
+    $(window).css({'top': ''});
     $affix.removeClass("affix affix-top affix-bottom").removeData("bs.affix");
 }
 
@@ -93,8 +94,7 @@ $(document).ready(function(){
     monitorResize(function(){
         setTimeout(function(){
             activeAffix();
-        }, 1000);
-
+        }, 500);
     });
 
     $(document).on('click', '.icon-unlike', function(e){
