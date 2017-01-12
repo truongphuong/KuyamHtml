@@ -810,7 +810,6 @@ textarea {
     background: -o-linear-gradient(transparent, $rgba_white, $white);
     background: -moz-linear-gradient(transparent, $rgba_white, $white);
     background: linear-gradient(transparent, $rgba_white, $white);
-    -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     -ms-transition: all 0.4s ease-in-out 0s;
     -o-transition: all 0.4s ease-in-out 0s;
@@ -5195,6 +5194,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   height: 33px;
   margin: 6px 3px; }
 
+.session:last-child {
+  margin-bottom: 0; }
+
 .session .full-booked {
   display: block;
   line-height: 33px;
@@ -5242,25 +5244,11 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .session-item.active .btn-book {
   display: block; }
 
-.services-list {
-  overflow-y: auto; }
-
 @media (min-width: 768px) {
   .table-calendar-header {
     margin-left: 13px;
     margin-right: 36px;
     position: relative; }
-  .services-list {
-    max-height: 730px;
-    /*907px*/ }
-  .on-nicescroll .services-list {
-    overflow: hidden; }
-  .on-nicescroll .services-list .wrap-dropdown-menu-inner {
-    max-height: 730px;
-    /*907px*/ }
-  .on-nicescroll .services-list .scroll-content {
-    padding-left: 13px;
-    padding-right: 36px; }
   .slide-calendar .rslides_nav.prev {
     left: -13px; }
   .slide-calendar .rslides_nav.next {
@@ -5274,11 +5262,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     font-size: 1.125em; }
   .table-calendar-header .datetime {
     font-size: 1em; }
-  .services-list,
-  .on-nicescroll .services-list .wrap-dropdown-menu-inner {
-    max-height: 530px; }
-  .on-nicescroll .services-list .scroll-content {
-    padding-right: 20px; }
   .session {
     height: 36px;
     margin: 7px 3px; }
@@ -5372,31 +5355,16 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   overflow-y: auto; }
 
 @media (min-width: 768px) {
-  .class-list {
-    max-height: 778px;
-    /*955px*/ }
   .class-list .date-list .row {
     margin-left: -3px;
     margin-right: -3px; }
   .class-list .date-list div[class*="col-"] {
     padding-left: 3px;
-    padding-right: 3px; }
-  .on-nicescroll .class-list {
-    overflow: hidden; }
-  .on-nicescroll .class-list .wrap-dropdown-menu-inner {
-    max-height: 778px;
-    /*955px*/ }
-  .on-nicescroll .class-list .scroll-content {
-    padding-right: 36px; } }
+    padding-right: 3px; } }
 
 @media (max-width: 767px) {
   .class-list .date-list .item time span {
-    margin: 0 3px; }
-  .class-list,
-  .on-nicescroll .class-list .wrap-dropdown-menu-inner {
-    max-height: 530px; }
-  .on-nicescroll .class-list .scroll-content {
-    padding-right: 20px; } }
+    margin: 0 3px; } }
 
 .package-section h5 {
   font-size: 1.3125em;
@@ -5443,19 +5411,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   height: 29px;
   width: 116px; }
 
-@media (min-width: 768px) {
-  .package-list {
-    max-height: 798px;
-    /*975px*/
-    overflow-y: auto; }
-  .on-nicescroll .package-list {
-    overflow: hidden; }
-  .on-nicescroll .package-list .wrap-dropdown-menu-inner {
-    max-height: 798px;
-    /*975px*/ }
-  .on-nicescroll .package-list .scroll-content {
-    padding-right: 36px; } }
-
 .photo-section h5 {
   font-size: 1.3125em;
   font-weight: 400;
@@ -5472,15 +5427,16 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   padding-left: 18px;
   padding-right: 18px;
   width: 50%;
-  margin-bottom: 36px;
+  margin-top: 36px;
   position: relative; }
 
 .photo-list li .loading,
 .photo-list li .loading > div {
   position: absolute; }
 
-.photo-list li:last-child {
-  margin-bottom: 0; }
+.photo-list li:first-child,
+.photo-list li:nth-child(2) {
+  margin-top: 0; }
 
 .photo-list li:nth-child(odd) {
   float: left;
@@ -5495,38 +5451,20 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   vertical-align: top;
   box-shadow: 0 11px 18px 0 rgba(0, 0, 0, 0.1); }
 
-.photo-list {
-  overflow-y: auto; }
-
-@media (min-width: 768px) {
-  .photo-list {
-    max-height: 798px;
-    /*975px*/ }
-  .on-nicescroll .photo-list {
-    overflow: hidden; }
-  .on-nicescroll .photo-list .wrap-dropdown-menu-inner {
-    max-height: 798px;
-    /*975px*/ }
-  .on-nicescroll .photo-list .scroll-content {
-    padding-right: 36px; } }
-
 @media (max-width: 767px) {
   .photo-section {
     padding-top: 6px; }
   .photo-section h5 {
     display: none; }
-  .photo-list,
-  .on-nicescroll .photo-list .wrap-dropdown-menu-inner {
-    max-height: 530px; }
-  .on-nicescroll .photo-list .scroll-content {
-    padding-right: 20px; }
   .photo-list ul {
     margin: 0; }
   .photo-list li {
     width: 100%;
     float: none;
     padding: 0;
-    margin-bottom: 42px; } }
+    margin-top: 42px; }
+  .photo-list li:nth-child(2) {
+    margin-top: 42px; } }
 
 .view-section h5 {
   font-size: 1.3125em;
@@ -5582,16 +5520,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   color: rgba(51, 50, 50, 0.9); }
 
 @media (min-width: 768px) {
-  .view-list {
-    max-height: 770px;
-    /*947px*/ }
-  .on-nicescroll .view-list {
-    overflow: hidden; }
-  .on-nicescroll .view-list .wrap-dropdown-menu-inner {
-    max-height: 770px;
-    /*947px*/ }
-  .on-nicescroll .view-list .scroll-content {
-    padding-right: 36px; }
   .view-list .item .btn {
     position: absolute;
     top: 20px;
@@ -5613,11 +5541,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     font-size: 1.125em;
     line-height: 32px;
     margin-bottom: 13px; }
-  .view-list,
-  .on-nicescroll .view-list .wrap-dropdown-menu-inner {
-    max-height: 530px; }
-  .on-nicescroll .view-list .scroll-content {
-    padding-right: 20px; }
   .view-list .item {
     padding: 13px 15px 10px;
     margin-bottom: 15px; }
@@ -5678,38 +5601,60 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   overflow-y: auto; }
 
 @media (min-width: 768px) {
-  .about-list {
-    max-height: 798px;
-    /*975px*/ }
-  .on-nicescroll .about-list {
-    overflow: hidden; }
-  .on-nicescroll .about-list .wrap-dropdown-menu-inner {
-    max-height: 798px;
-    /*975px*/ }
-  .on-nicescroll .about-list .scroll-content {
-    padding-right: 36px; } }
+  /*.about-list{
+        max-height: 798px;
+    }
+    .on-nicescroll .about-list{
+        overflow: hidden;
+    }
+    .on-nicescroll .about-list .wrap-dropdown-menu-inner{
+        max-height: 798px;
+    }
+    .on-nicescroll .about-list .scroll-content{
+        padding-right: 36px;
+    }*/ }
 
 @media (max-width: 767px) {
   .about-section h5 {
     margin-bottom: 17px; }
-  .about-list,
-  .on-nicescroll .about-list .wrap-dropdown-menu-inner {
-    max-height: 530px; }
-  .on-nicescroll .about-list .scroll-content {
-    padding-right: 20px; } }
+  /*.about-list,
+    .on-nicescroll .about-list .wrap-dropdown-menu-inner{
+        max-height: 530px;
+    }
+    .on-nicescroll .about-list .scroll-content{
+        padding-right: 20px;
+    }*/ }
 
 @media (max-width: 767px) {
   .tab-pane[id="info"] {
     padding-top: 0 !important; } }
 
 .book-detail-page {
-  padding: 40px 0 59px; }
+  padding: 40px 0 0; }
 
 @media (min-width: 768px) {
   .book-detail-page > .container > .row > .col-sm-8 {
     width: 67.6667%; }
   .book-detail-page > .container > .row > .col-sm-4 {
-    width: 32.3333%; } }
+    width: 32.3333%; }
+  .main-affix {
+    width: 610px; }
+  .main-affix .tab-content {
+    margin-bottom: 59px; }
+  .main-affix.affix {
+    position: fixed;
+    top: 15px; }
+  .main-affix.affix-bottom {
+    position: absolute; }
+  .nav-affix {
+    width: 290px; }
+  .nav-affix .book-aside {
+    margin-bottom: 59px; }
+  .nav-affix.affix {
+    position: fixed;
+    top: 15px; }
+  .nav-affix.affix-bottom {
+    position: absolute; } }
 
 @media (max-width: 767px) {
   .book-detail-page {

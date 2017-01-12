@@ -78,6 +78,9 @@
     height: 33px;
     margin: 6px 3px;
 }
+.session:last-child{
+    margin-bottom: 0;
+}
 .session .full-booked{
     display: block;
     line-height: 33px;
@@ -125,28 +128,12 @@
 .session-item.active .btn-book {
     display: block;
 }
-.services-list{
-    overflow-y: auto;
-}
 
 @media (min-width: 768px) {
     .table-calendar-header {
         margin-left: 13px;
         margin-right: 36px;
         position: relative;
-    }
-    .services-list{
-        max-height: 730px; /*907px*/
-    }
-    .on-nicescroll .services-list{
-        overflow: hidden;
-    }
-    .on-nicescroll .services-list .wrap-dropdown-menu-inner{
-        max-height: 730px; /*907px*/
-    }
-    .on-nicescroll .services-list .scroll-content{
-        padding-left: 13px;
-        padding-right: 36px;
     }
     .slide-calendar .rslides_nav.prev{
         left: -13px;
@@ -166,13 +153,6 @@
     }
     .table-calendar-header .datetime{
         font-size: $h6;
-    }
-    .services-list,
-    .on-nicescroll .services-list .wrap-dropdown-menu-inner{
-        max-height: 530px;
-    }
-    .on-nicescroll .services-list .scroll-content{
-        padding-right: 20px;
     }
     .session{
         height: 36px;

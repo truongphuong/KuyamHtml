@@ -16,7 +16,6 @@ function initialize(){
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
 function loadmap(lat, lon, googleIcon){
     var myLatlng = new google.maps.LatLng(lat, lon);
     var myOptions ={
@@ -46,8 +45,58 @@ function autoWidthOption(whatSelect, whoSelect){
         $(whoSelect).css({'width': whoWidthNew});
     }
 }
+function removeAffix($affix){
+    $(window).off('.affix');
+    $affix.removeClass("affix affix-top affix-bottom").removeData("bs.affix");
+}
+
+function activeAffix(){
+    var $mainAffix = $('.main-affix');
+    var $navAffix = $('.nav-affix');
+
+    $mainAffix.width($mainAffix.parent().width());
+    $navAffix.width($navAffix.parent().width());
+
+    removeAffix($mainAffix);
+    removeAffix($navAffix);
+
+    if(isView.mobile()){
+        return;
+    }
+
+    var $activeAffix;
+
+    var mainHeight = $mainAffix.load().height();
+    var navHeight = $navAffix.load().height();
+
+    if(mainHeight === navHeight){
+        return;
+    }else if(mainHeight > navHeight){
+        $activeAffix = $navAffix;
+    }else{
+        $activeAffix = $mainAffix;
+    }
+
+    $activeAffix.affix({
+        offset: {
+            top: $('.main-content').offset().top,
+            bottom: function () {
+                return (this.bottom = $('#contact').outerHeight(true) + $('.site-footer').outerHeight(true))
+            }
+        }
+    });
+}
 
 $(document).ready(function(){
+    activeAffix();
+
+    monitorResize(function(){
+        setTimeout(function(){
+            activeAffix();
+        }, 1000);
+
+    });
+
     $(document).on('click', '.icon-unlike', function(e){
         e.preventDefault();
         var $this = $(this);
@@ -139,59 +188,8 @@ $(document).ready(function(){
         $(this).removeClass("active");
     });
 
-    if(!isMobile.Windows()){
-        var isActive = $(document).find('#bookTabs li.active a').attr('href');
-        var activeListID = isActive + 'List';
-        var activeMobileListID = '';
-        if(isActive === '#appointment'){
-            isActive = $(document).find('#appointmentTabs li.active a').attr('href');
-            if(isActive ==='#services'){
-                activeMobileListID = '#servicesMobileList';
-                iscrollContent(activeMobileListID);
-                monitorResize(function(){
-                    refreshNiceScroll(activeMobileListID);
-                });
-            }
-            activeListID = isActive + 'List';
-        }
-
-        iscrollContent(activeListID);
-
-        monitorResize(function(){
-            refreshNiceScroll(activeListID);
-        });
-    }
-
     $('#bookTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        var $this = $(e.target);
-        var hrefVal = $this.attr('href');
-        var listID = hrefVal + 'List';
-
-        if(!isMobile.Windows()){
-            iscrollContent(listID);
-
-            monitorResize(function(){
-                refreshNiceScroll(listID);
-
-                if(!isView.mobile() && hrefVal === '#info'){
-                    $('#bookTabs a[href="#appointment"]').click();
-                }
-            });
-        }
-    });
-
-    $('#appointmentTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        var $this = $(e.target);
-        var hrefVal = $this.attr('href');
-        var listID = hrefVal + 'List';
-
-        if(!isMobile.Windows()){
-            iscrollContent(listID);
-
-            monitorResize(function(){
-                refreshNiceScroll(listID);
-            });
-        }
+        activeAffix();
     });
 
     $('#reviewModal').on('show.bs.modal', function (e) {

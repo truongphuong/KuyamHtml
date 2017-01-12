@@ -49,6 +49,12 @@ var isView = {
     }
 };
 
+// Begin - For browsers that support history.scrollRestoration, the auto scroll behavior can be turned off
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+// End - For browsers that support history.scrollRestoration, the auto scroll behavior can be turned off
+
 function monitorResize (callbackfnc){
     callbackfnc.sw = getWindowWidth();
     var $window = $(window);
