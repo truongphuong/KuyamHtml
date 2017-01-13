@@ -1325,15 +1325,6 @@ button.close:hover {
   right: 0;
   bottom: 0; }
 
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1031; }
-
 .bg-black-50 {
   background: rgba(0, 0, 0, 0.5); }
 
@@ -5579,12 +5570,18 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .view-list .item .votes .yellow-star {
     background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png); } }
 
+.about-section {
+  overflow-x: auto; }
+
 .about-section h5 {
   font-size: 1.3125em;
   font-weight: 400;
   color: #333232;
   margin-bottom: 38px;
   font-family: "Lato", sans-serif; }
+
+.about-section img {
+  max-width: 100%; }
 
 .about-section p {
   margin-bottom: 17px;
@@ -5598,6 +5595,28 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   color: #3891ff;
   text-decoration: none;
   font-weight: 800; }
+
+.about-view .site-header .container,
+.about-view .site-banner,
+.about-view .kuyam-footer,
+.about-view .book-nav,
+.about-view .book-aside {
+  position: relative;
+  z-index: 1; }
+
+.about-view .site-header .container:after,
+.about-view .site-banner:after,
+.about-view .kuyam-footer:after,
+.about-view .book-nav:after,
+.about-view .book-aside:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
 
 @media (min-width: 768px) {
   /*.about-list{

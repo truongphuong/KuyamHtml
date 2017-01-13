@@ -19,62 +19,66 @@
 {% endblock %}
 
 {% block main %}
-<div class="book-detail-page">
+<div class="main-content book-detail-page">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-7 col-md-8">
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane" id="appointment">
-                        <nav>
-                            <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
-                                <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
-                            </ul>
-                        </nav>
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="services">
-                                <div class="book-option clearfix">
-                                    {% include "./content/pages/book-details/category.html" %}
+                <div class="main-affix">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane" id="appointment">
+                            <nav>
+                                <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
+                                    <li role="presentation"><a href="#classes" aria-controls="classes" role="tab" data-toggle="tab">Classes</a></li>
+                                </ul>
+                            </nav>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="services">
+                                    <div class="book-option clearfix">
+                                        {% include "./content/pages/book-details/category.html" %}
 
-                                    {% include "./content/pages/book-details/what.html" %}
+                                        {% include "./content/pages/book-details/what.html" %}
 
-                                    {% include "./content/pages/book-details/who.html" %}
+                                        {% include "./content/pages/book-details/who.html" %}
+                                    </div>
+
+                                    {% include "./content/pages/book-details/services.html" %}
                                 </div>
+                                <div role="tabpanel" class="tab-pane" id="classes">
+                                    <div class="book-option clearfix">
+                                        {% include "./content/pages/book-details/category.html" %}
 
-                                {% include "./content/pages/book-details/services.html" %}
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="classes">
-                                <div class="book-option clearfix">
-                                    {% include "./content/pages/book-details/category.html" %}
+                                        {% include "./content/pages/book-details/what.html" %}
 
-                                    {% include "./content/pages/book-details/what.html" %}
+                                        {% include "./content/pages/book-details/who.html" %}
+                                    </div>
 
-                                    {% include "./content/pages/book-details/who.html" %}
+                                    {% include "./content/pages/book-details/classes.html" %}
                                 </div>
-
-                                {% include "./content/pages/book-details/classes.html" %}
                             </div>
                         </div>
+                        <div role="tabpanel" class="tab-pane active" id="about">
+                            {% include "./content/pages/book-details/about.html" %}
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="views">
+                            {% include "./content/pages/book-details/views.html" %}
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="packages">
+                            {% include "./content/pages/book-details/packages.html" %}
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="photos">
+                            {% include "./content/pages/book-details/photos.html" %}
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="info">
+                            {% include "./content/pages/book-details/info.html" %}
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane active" id="about">
-                        {% include "./content/pages/book-details/about.html" %}
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="views">
-                        {% include "./content/pages/book-details/views.html" %}
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="packages">
-                        {% include "./content/pages/book-details/packages.html" %}
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="photos">
-                        {% include "./content/pages/book-details/photos.html" %}
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="info">
-                        {% include "./content/pages/book-details/info.html" %}
-                    </div>
-                </div>
             </div>
             <div class="col-xs-12 col-sm-5 col-md-4 hidden-xs">
-                {% include "./content/pages/book-details/info.html" %}
+                <div class="nav-affix">
+                    {% include "./content/pages/book-details/info.html" %}
+                </div>
             </div>
         </div>
     </div>
@@ -82,7 +86,6 @@
 {% endblock %}
 
 {% block modal %}
-<div class="overlay" style="display: block;"></div>
 {% include "./content/pages/book-details/tooltip-category.html" %}
 {% include "./content/modals/details.html" %}
 {% include "./content/modals/packages.html" %}
@@ -98,9 +101,9 @@
 <script type="text/javascript" src="../../content/js/pages/ui-book-details.js"></script>
 
 <script type="text/javascript">
-    //$(document).ready(function(){
-        //$('#checkoutModal').modal('show');
-    //});
+    $(document).ready(function(){
+        $('html').addClass('about-view');
+    });
 </script>
 {% endblock %}
 

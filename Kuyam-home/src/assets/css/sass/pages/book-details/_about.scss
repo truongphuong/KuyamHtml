@@ -1,9 +1,15 @@
+.about-section{
+    overflow-x: auto;
+}
 .about-section h5{
     font-size: $s21;
     font-weight: 400;
     color: #333232;
     margin-bottom: 38px;
     font-family: $primary;
+}
+.about-section img{
+    max-width: 100%;
 }
 .about-section p{
     margin-bottom: 17px;
@@ -17,6 +23,29 @@
     color: $positive;
     text-decoration: none;
     font-weight: 800;
+}
+
+.about-view .site-header .container,
+.about-view .site-banner,
+.about-view .kuyam-footer,
+.about-view .book-nav,
+.about-view .book-aside{
+    position: relative;
+    z-index: 1;
+}
+.about-view .site-header .container:after,
+.about-view .site-banner:after,
+.about-view .kuyam-footer:after,
+.about-view .book-nav:after,
+.about-view .book-aside:after{
+    display: block;
+    content: '';
+    position: absolute;;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 @media (min-width: 768px) {
