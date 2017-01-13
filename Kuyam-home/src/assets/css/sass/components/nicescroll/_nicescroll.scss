@@ -1,8 +1,8 @@
-.nicescroll-rails{
+.iscroll-vertical .nicescroll-rails{
     width: 1px !important;
     right: 3px !important;
 }
-.nicescroll-rails div{
+.iscroll-vertical .nicescroll-rails div{
     right: -3px !important;
 }
 
@@ -34,9 +34,21 @@
     opacity:0;
 }*/
 
+.iscroll-horizontal .nicescroll-rails{
+    height: 1px !important;
+    bottom: 3px !important;
+}
+.iscroll-horizontal .nicescroll-rails div{
+    top: -3px !important;
+}
+
 @media (max-width: 1023px){
-    .nicescroll-rails div{
+    .iscroll-vertical .nicescroll-rails div{
         width: 5px !important;
         right: -2px !important;
+    }
+    .iscroll-horizontal .nicescroll-rails div{
+        height: 5px !important;
+        top:-2px !important;
     }
 }

@@ -260,8 +260,8 @@
     <nav class="book-nav">
         <div class="container">
             <ul id="bookTabs" class="nav nav-tabs five" role="tablist">
-                <li role="presentation" class="li-appointment active"><a href="#appointment" aria-controls="appointment" role="tab" data-toggle="tab">Schedule an appointment</a></li>
-                <li role="presentation" class="li-about"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About us</a></li>
+                <li role="presentation" class="li-appointment"><a href="#appointment" aria-controls="appointment" role="tab" data-toggle="tab">Schedule an appointment</a></li>
+                <li role="presentation" class="li-about active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About us</a></li>
                 <li role="presentation" class="li-review"><a href="#views" aria-controls="views" role="tab" data-toggle="tab">Customer reviews</a></li>
                 <!--<li role="presentation" class="li-package"><a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">See packages</a></li>-->
                 <li role="presentation" class="li-photo"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Photos</a></li>
@@ -270,6 +270,7 @@
         </div>
     </nav>
 </div>
+
 
 
     </div>
@@ -281,7 +282,7 @@
             <div class="col-xs-12 col-sm-7 col-md-8">
                 <div class="main-affix">
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="appointment">
+                        <div role="tabpanel" class="tab-pane" id="appointment">
                             <nav>
                                 <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
@@ -291,13 +292,13 @@
                             <div id="mainAffix" class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="services">
                                     <div class="book-option clearfix">
-                                        <div id="categoriesSelect" class="option-select categories-select">
+                                        <div id="categoriesServiceSelect" class="option-select categories-select">
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="categoriesA" data-toggle="dropdown" href="#">
+        <a title="" id="categoriesServiceA" data-toggle="dropdown" href="#">
             <span class="text">Category</span>
         </a>
-        <div id="categoriesList" class="dropdown-menu" role="menu" aria-labelledby="categoriesA">
+        <div id="categoriesServiceList" class="dropdown-menu" role="menu" aria-labelledby="categoriesA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item">
@@ -326,15 +327,15 @@
 </div>
 
 
-                                        <div id="whatSelect" class="option-select what-select">
+                                        <div id="whatServiceSelect" class="option-select what-select">
 
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="whatA" data-toggle="dropdown" href="#">
+        <a title="" id="whatServiceA" data-toggle="dropdown" href="#">
             <span class="text">What would you like done?</span>
         </a>
 
-        <div id="whatList" class="dropdown-menu" role="menu" aria-labelledby="whatA">
+        <div id="whatServiceList" class="dropdown-menu" role="menu" aria-labelledby="whatA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item">
@@ -405,13 +406,13 @@
 </div>
 
 
-                                        <div id="whoSelect" class="option-select who-select disabled">
+                                        <div id="whoServiceSelect" class="option-select who-select disabled">
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="whoA" data-toggle="dropdown" href="#">
+        <a title="" id="whoServiceA" data-toggle="dropdown" href="#">
             <span class="text">Any staff</span>
         </a>
-        <div id="whoList" class="dropdown-menu" role="menu" aria-labelledby="whoA">
+        <div id="whoServiceList" class="dropdown-menu" role="menu" aria-labelledby="whoA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item selected">
@@ -1007,13 +1008,13 @@
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="classes">
                                     <div class="book-option clearfix">
-                                        <div id="categoriesSelect" class="option-select categories-select">
+                                        <div id="categoriesClassSelect" class="option-select categories-select">
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="categoriesA" data-toggle="dropdown" href="#">
+        <a title="" id="categoriesClassA" data-toggle="dropdown" href="#">
             <span class="text">Category</span>
         </a>
-        <div id="categoriesList" class="dropdown-menu" role="menu" aria-labelledby="categoriesA">
+        <div id="categoriesClassList" class="dropdown-menu" role="menu" aria-labelledby="categoriesA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item">
@@ -1042,15 +1043,15 @@
 </div>
 
 
-                                        <div id="whatSelect" class="option-select what-select">
+                                        <div id="whatClassSelect" class="option-select what-select">
 
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="whatA" data-toggle="dropdown" href="#">
+        <a title="" id="whatClassA" data-toggle="dropdown" href="#">
             <span class="text">What would you like done?</span>
         </a>
 
-        <div id="whatList" class="dropdown-menu" role="menu" aria-labelledby="whatA">
+        <div id="whatClassList" class="dropdown-menu" role="menu" aria-labelledby="whatA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item">
@@ -1121,13 +1122,13 @@
 </div>
 
 
-                                        <div id="whoSelect" class="option-select who-select disabled">
+                                        <div id="whoClassSelect" class="option-select who-select disabled">
     <!-- .select-options -->
     <div class="dropdown">
-        <a title="" id="whoA" data-toggle="dropdown" href="#">
+        <a title="" id="whoClassA" data-toggle="dropdown" href="#">
             <span class="text">Any staff</span>
         </a>
-        <div id="whoList" class="dropdown-menu" role="menu" aria-labelledby="whoA">
+        <div id="whoClassList" class="dropdown-menu" role="menu" aria-labelledby="whoA">
             <div class="scroll-content">
                 <ul>
                     <li class="option-item selected">
@@ -1163,7 +1164,7 @@
             <div class="date-list">
                 <h5>Monday July 14th</h5>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1174,7 +1175,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1191,7 +1192,7 @@
             <div class="date-list">
                 <h5>Monday July 14th</h5>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1203,36 +1204,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="item">
-                            <time>4:00 pm <span>-</span> 5:00 pm</time>
-                            <h5>Eternal yoga</h5>
-                            <p>with Kourosh</p>
-                            <ul class="clearfix">
-                                <li>5 spots leff</li>
-                                <li>$20 per class</li>
-                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="date-list">
-                <h5>Monday July 14th</h5>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="item">
-                            <time>4:00 pm <span>-</span> 5:00 pm</time>
-                            <h5>Eternal yoga</h5>
-                            <p>with Kourosh</p>
-                            <ul class="clearfix">
-                                <li>5 spots leff</li>
-                                <li>$20 per class</li>
-                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1249,7 +1221,7 @@
             <div class="date-list">
                 <h5>Monday July 14th</h5>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1261,36 +1233,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="item">
-                            <time>4:00 pm <span>-</span> 5:00 pm</time>
-                            <h5>Eternal yoga</h5>
-                            <p>with Kourosh</p>
-                            <ul class="clearfix">
-                                <li>5 spots leff</li>
-                                <li>$20 per class</li>
-                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="date-list">
-                <h5>Monday July 14th</h5>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="item">
-                            <time>4:00 pm <span>-</span> 5:00 pm</time>
-                            <h5>Eternal yoga</h5>
-                            <p>with Kourosh</p>
-                            <ul class="clearfix">
-                                <li>5 spots leff</li>
-                                <li>$20 per class</li>
-                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1307,7 +1250,7 @@
             <div class="date-list">
                 <h5>Monday July 14th</h5>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1319,7 +1262,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1331,7 +1274,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                </div>
+            </div>
+            <div class="date-list">
+                <h5>Monday July 14th</h5>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1343,7 +1291,60 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="item">
+                            <time>4:00 pm <span>-</span> 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="date-list">
+                <h5>Monday July 14th</h5>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="item">
+                            <time>4:00 pm <span>-</span> 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="item">
+                            <time>4:00 pm <span>-</span> 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="item">
+                            <time>4:00 pm <span>-</span> 5:00 pm</time>
+                            <h5>Eternal yoga</h5>
+                            <p>with Kourosh</p>
+                            <ul class="clearfix">
+                                <li>5 spots leff</li>
+                                <li>$20 per class</li>
+                                <li><input type="button" class="btn btn-green" value="Book now!" data-toggle="modal" data-target="#checkoutModal" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
                         <div class="item">
                             <time>4:00 pm <span>-</span> 5:00 pm</time>
                             <h5>Eternal yoga</h5>
@@ -1360,17 +1361,25 @@
         </div>
     </div>
 </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="about">
+                        <div role="tabpanel" class="tab-pane active" id="about">
                             <div class="about-section">
     <h5>About us</h5>
     <div id="aboutList" class="about-list">
-        <div class="scroll-content">
+        <div class="scroll-content" style="width: 5000px;">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nisi in purus laoreet dictum. Donec lectus mauris, scelerisque ut vestibulum varius, lobortis ut diam. Praesent volutpat quam nibh, id sollicitudin justo bibendum ac. Suspendisse suscipit mi at tellus luctus convallis. Cras auctor porta sapien, et sodales purus sagittis et.</p>
             <p>Curabitur venenatis sem nec tempus porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque efficitur mollis elit, a pellentesque metus scelerisque in.</p>
-            <p><img alt="" src="../../content/images/upload/images/about/about.jpg" style="width:100%;" /></p>
+            <table>
+                <tr>
+                    <td><img alt="" src="../../content/images/upload/images/about/about.jpg" /></td>
+                    <td><img alt="" src="../../content/images/upload/images/about/about.jpg" /></td>
+                    <td><img alt="" src="../../content/images/upload/images/about/about.jpg" /></td>
+                    <td><img alt="" src="../../content/images/upload/images/about/about.jpg" /></td>
+                </tr>
+            </table>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nisi in purus laoreet dictum. Donec lectus mauris, scelerisque ut vestibulum.</p>
             <p><strong>More info in <a title="" href="">www.superyoga.net</a></strong></p>
         </div>

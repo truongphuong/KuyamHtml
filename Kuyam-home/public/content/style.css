@@ -785,11 +785,11 @@ textarea {
   .croppie-container .cr-slider-wrap .croppie-zoom-out {
     background-image: url(images/boarding/icon-plus@2x.png); } }
 
-.nicescroll-rails {
+.iscroll-vertical .nicescroll-rails {
   width: 1px !important;
   right: 3px !important; }
 
-.nicescroll-rails div {
+.iscroll-vertical .nicescroll-rails div {
   right: -3px !important; }
 
 .on-nicescroll .wrap-dropdown-menu-inner {
@@ -819,10 +819,20 @@ textarea {
 .on-nicescroll .book-detail-page .wrap-dropdown-menu-inner.end:after{
     opacity:0;
 }*/
+.iscroll-horizontal .nicescroll-rails {
+  height: 1px !important;
+  bottom: 3px !important; }
+
+.iscroll-horizontal .nicescroll-rails div {
+  top: -3px !important; }
+
 @media (max-width: 1023px) {
-  .nicescroll-rails div {
+  .iscroll-vertical .nicescroll-rails div {
     width: 5px !important;
-    right: -2px !important; } }
+    right: -2px !important; }
+  .iscroll-horizontal .nicescroll-rails div {
+    height: 5px !important;
+    top: -2px !important; } }
 
 .tooltipster-default {
   border-width: 2px;
@@ -5570,9 +5580,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   .view-list .item .votes .yellow-star {
     background-image: url(images/ui/pages/book-details/views/icon_star_full@3x.png); } }
 
-.about-section {
-  overflow-x: auto; }
-
 .about-section h5 {
   font-size: 1.3125em;
   font-weight: 400;
@@ -5592,6 +5599,17 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   color: #3891ff;
   text-decoration: none;
   font-weight: 800; }
+
+.about-list {
+  overflow-x: auto;
+  max-width: 100%; }
+
+.on-nicescroll .about-list {
+  overflow: inherit; }
+
+.on-nicescroll .wrap-dropdown-menu-inner {
+  width: 100%;
+  padding-bottom: 10px; }
 
 .about-view .site-header .container,
 .about-view .site-banner,

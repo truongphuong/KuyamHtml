@@ -99,7 +99,6 @@ function refreshNiceScroll(sectionID){
     $(sectionID + " .wrap-dropdown-menu-inner").getNiceScroll().resize();
 }
 
-
 function iscrollSelect(sectionID, scrollName) {
     var $sectionID = $('#' + sectionID),
         scrollID = '#' + scrollName;
@@ -119,7 +118,7 @@ function iscrollSelect(sectionID, scrollName) {
         });
 
         if (!isMobile.Windows()) {
-            $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+            $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner iscroll-vertical'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
             $('#' + sectionID + ' select').on('shown.bs.select', function (e) {
                 var heightOfUL = $('#' + sectionID + ' ul.inner').height();
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
@@ -144,6 +143,30 @@ function existSelect(sectionClass) {
     }
 }
 
+function iscrollHorizontalContent(sectionID) {
+    if (!isMobile.Windows()) {
+        if($(sectionID).find('.wrap-dropdown-menu-inner').length){
+            refreshNiceScroll(sectionID);
+            return;
+        }
+
+        $(sectionID).find('.scroll-content').wrap("<div class='wrap-dropdown-menu-inner iscroll-horizontal'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+        var widthOfDiv = $(sectionID + ' .scroll-content').width();
+        $(sectionID + ' .wrap-dropdown-menu-inner-content').width(widthOfDiv);
+        $(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content',
+        {
+            bouncescroll: false,
+            autohidemode: false,
+            cursorcolor: "#99bd25",
+            cursorborder: "1px solid transparent",
+            cursorborderradius: "5px",
+            cursorwidth: "7px",
+            background: "#8B8B8B",
+            preservenativescrolling: false
+        });
+    }
+}
+
 function iscrollContent(sectionID) {
     if (!isMobile.Windows()) {
         if($(sectionID).find('.wrap-dropdown-menu-inner').length){
@@ -151,7 +174,7 @@ function iscrollContent(sectionID) {
             return;
         }
 
-        $(sectionID).find('.scroll-content').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+        $(sectionID).find('.scroll-content').wrap("<div class='wrap-dropdown-menu-inner iscroll-vertical'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
         var heightOfDiv = $(sectionID + ' .scroll-content').height();
         $(sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfDiv);
         $(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content',

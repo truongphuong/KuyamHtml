@@ -25,7 +25,7 @@
             <div class="col-xs-12 col-sm-7 col-md-8">
                 <div class="main-affix">
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="appointment">
+                        <div role="tabpanel" class="tab-pane" id="appointment">
                             <nav>
                                 <ul id="appointmentTabs" class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="active"><a href="#services" aria-controls="services" role="tab" data-toggle="tab">Services</a></li>
@@ -35,29 +35,29 @@
                             <div id="mainAffix" class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="services">
                                     <div class="book-option clearfix">
-                                        {% include "./content/pages/book-details/category.html" %}
+                                        {% include "./content/pages/book-details/category-service.html" %}
 
-                                        {% include "./content/pages/book-details/what.html" %}
+                                        {% include "./content/pages/book-details/what-service.html" %}
 
-                                        {% include "./content/pages/book-details/who.html" %}
+                                        {% include "./content/pages/book-details/who-service.html" %}
                                     </div>
 
                                     {% include "./content/pages/book-details/services.html" %}
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="classes">
                                     <div class="book-option clearfix">
-                                        {% include "./content/pages/book-details/category.html" %}
+                                        {% include "./content/pages/book-details/category-class.html" %}
 
-                                        {% include "./content/pages/book-details/what.html" %}
+                                        {% include "./content/pages/book-details/what-class.html" %}
 
-                                        {% include "./content/pages/book-details/who.html" %}
+                                        {% include "./content/pages/book-details/who-class.html" %}
                                     </div>
 
                                     {% include "./content/pages/book-details/classes.html" %}
                                 </div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="about">
+                        <div role="tabpanel" class="tab-pane active" id="about">
                             {% include "./content/pages/book-details/about.html" %}
                         </div>
                         <div role="tabpanel" class="tab-pane" id="views">

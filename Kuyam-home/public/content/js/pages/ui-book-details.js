@@ -47,6 +47,71 @@ function autoWidthOption(whatSelect, whoSelect) {
         $(whoSelect).css({ 'width': whoWidthNew });
     }
 }
+
+function optionSelect(tabID) {
+    $(document).on('click', tabID + ' .option-select .option-header', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', tabID + ' .option-select .option-item', function (e) {
+        var $this = $(this);
+        var optionSelect = '.option-select';
+        var categoriesSelect = tabID + ' .categories-select';
+        var whatSelect = tabID + ' .what-select';
+        var whoSelect = tabID + ' .who-select';
+        var lightbox = '.site-calendar .bg-white-50';
+        var selectedVal = $this.find('.text').text();
+        $this.closest(optionSelect).find('a .text').html(selectedVal);
+        $this.closest(optionSelect).find('li').removeClass('selected');
+        $this.addClass('selected');
+        var isCategories = $this.closest(categoriesSelect).hasClass('categories-select');
+        var isWhat = $this.closest(whatSelect).hasClass('what-select');
+        var isWho = $this.closest(whoSelect).hasClass('who-select');
+        if (isCategories) {
+            $(whatSelect).find('a .text').html('What would you like done?');
+            $(whoSelect).addClass('disabled');
+            $(whoSelect).find('a .text').html('Any staff');
+            $(document).find(lightbox).removeClass('hide');
+            if (isView.desktop()) {
+                $(whatSelect).css({ 'width': '' });
+                $(whoSelect).css({ 'width': '' });
+            }
+        }
+        if (isWhat) {
+            $(whoSelect).removeClass('disabled');
+            $(whoSelect).find('a .text').html('Any staff');
+            $(document).find(lightbox).removeClass('hide');
+            if (isView.desktop()) {
+                autoWidthOption(whatSelect, whoSelect);
+            }
+        }
+        if (isWho) {
+            $(document).find(lightbox).addClass('hide');
+        }
+    });
+
+    monitorResize(function () {
+        if (isView.desktop()) {
+            autoWidthOption(tabID + ' #whatSelect', tabID + ' #whoSelect');
+        } else {
+            $(tabID + ' #whatSelect').css({ 'width': '' });
+            $(tabID + ' #whoSelect').css({ 'width': '' });
+        }
+    });
+
+    $(tabID + ' .option-select .dropdown').on('shown.bs.dropdown', function (e) {
+        var contentID = '#' + $(e.target).find('.dropdown-menu').attr('id');
+        setTimeout(function () {
+            var isScroll = $(contentID).find('.wrap-dropdown-menu-inner').length;
+            if (isScroll) {
+                refreshNiceScroll(contentID);
+            } else {
+                iscrollContent(contentID);
+            }
+        }, 300);
+    });
+}
+
 function removeAffix($affix) {
     $(window).off('.affix');
     $(window).css({ 'top': '' });
@@ -134,55 +199,9 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.option-select .option-header', function (e) {
-        e.stopPropagation();
-    });
+    optionSelect('#services');
 
-    $(document).on('click', '.option-select .option-item', function (e) {
-        var $this = $(this);
-        var optionSelect = '.option-select';
-        var categoriesSelect = '#categoriesSelect';
-        var whatSelect = '#whatSelect';
-        var whoSelect = '#whoSelect';
-        var lightbox = '.site-calendar .bg-white-50';
-        var selectedVal = $this.find('.text').text();
-        $this.closest(optionSelect).find('a .text').html(selectedVal);
-        $this.closest(optionSelect).find('li').removeClass('selected');
-        $this.addClass('selected');
-        var isCategories = $this.closest(categoriesSelect).hasClass('categories-select');
-        var isWhat = $this.closest(whatSelect).hasClass('what-select');
-        var isWho = $this.closest(whoSelect).hasClass('who-select');
-        if (isCategories) {
-            $(whatSelect).find('a .text').html('What would you like done?');
-            $(whoSelect).addClass('disabled');
-            $(whoSelect).find('a .text').html('Any staff');
-            $(document).find(lightbox).removeClass('hide');
-            if (isView.desktop()) {
-                $(whatSelect).css({ 'width': '' });
-                $(whoSelect).css({ 'width': '' });
-            }
-        }
-        if (isWhat) {
-            $(whoSelect).removeClass('disabled');
-            $(whoSelect).find('a .text').html('Any staff');
-            $(document).find(lightbox).removeClass('hide');
-            if (isView.desktop()) {
-                autoWidthOption(whatSelect, whoSelect);
-            }
-        }
-        if (isWho) {
-            $(document).find(lightbox).addClass('hide');
-        }
-    });
-
-    monitorResize(function () {
-        if (isView.desktop()) {
-            autoWidthOption('#whatSelect', '#whoSelect');
-        } else {
-            $('#whatSelect').css({ 'width': '' });
-            $('#whoSelect').css({ 'width': '' });
-        }
-    });
+    optionSelect('#classes');
 
     $('.session-item').hover(function () {
         $(this).addClass("active");
@@ -190,7 +209,45 @@ $(document).ready(function () {
         $(this).removeClass("active");
     });
 
+    if (!isMobile.Windows()) {
+        var isActive = $(document).find('#bookTabs li.active a').attr('href');
+        console.log('1: ' + isActive);
+
+        if (isActive !== '#about') {
+            return;
+        }
+
+        var activeListID = isActive + 'List';
+
+        iscrollHorizontalContent(activeListID);
+
+        monitorResize(function () {
+            refreshNiceScroll(activeListID);
+        });
+    }
+
     $('#bookTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var $this = $(e.target);
+        var isActive = $this.attr('href');
+        console.log('2: ' + isActive);
+
+        if (isActive !== '#about') {
+            return;
+        }
+
+        var activeListID = isActive + 'List';
+
+        if (!isMobile.Windows()) {
+            iscrollHorizontalContent(activeListID);
+
+            monitorResize(function () {
+                refreshNiceScroll(listID);
+            });
+        }
+    });
+
+    $('#bookTabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        console.log('3');
         activeAffix();
     });
 
@@ -228,18 +285,6 @@ $(document).ready(function () {
         $this.closest('.contact-radio').find('strong').removeClass('hide');
         $this.closest('.contact-radio').find('.link-edit').removeClass('hide');
         $this.closest('.group').addClass('hide');
-    });
-
-    $('.option-select .dropdown').on('shown.bs.dropdown', function (e) {
-        var contentID = '#' + $(e.target).find('.dropdown-menu').attr('id');
-        setTimeout(function () {
-            var isScroll = $(contentID).find('.wrap-dropdown-menu-inner').length;
-            if (isScroll) {
-                refreshNiceScroll(contentID);
-            } else {
-                iscrollContent(contentID);
-            }
-        }, 300);
     });
 
     if (isView.mobile()) {
