@@ -307,7 +307,7 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .social-icons{float:right;margin:13px 0;padding:0;text-align:right;}
 .social-icons dt{padding:10px 0;color:#fff;font:26px/30px ralewaysemibold, sans-serif;}
 .social-icons dd{display:inline-block;margin:0 0 0 7px;}
-.social-icons dd img{width:auto;width: 35px;}
+.social-icons dd img{width: 35px;}
 
 .site-footer{background:#575757;padding:0 0 7px;}
 .site-footer p{margin:15px 0 0;font:12px/14px ralewaymedium, sans-serif;color:#c0c0c0;}
@@ -3667,7 +3667,25 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .company-list-page .new-spot:first-child{
 	margin-top:0;
 }
-
+@media (min-width: 992px){
+	.company-list-page .site-footer .col-md-5-5{
+		width: 45.8333%;
+	}
+	.company-list-page .site-footer .col-md-6-5{
+		width: 54.1667%;
+	}
+	.company-list-page .site-footer{
+		background:#262626;
+		padding:23px 0;
+	}
+	.company-list-page .site-footer p{
+		margin:0;
+		line-height: 18px;
+	}
+	.company-list-page .site-footer .powered p{
+		font-size:16px;
+	}
+}
 @media (max-width: 767px){
     .company-list-page #carousel-mobile .carousel-inner > .item{
         height: 230px;
