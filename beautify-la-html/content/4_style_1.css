@@ -332,6 +332,13 @@ body{margin:0;padding:0;font:20px/24px ralewaymedium, sans-serif;color:#000;over
 .site-contact .register-form .btn_Join{padding:0;}
 .site-contact .register-form .form-control{background:transparent;border-top:1px solid #777;border-bottom:1px solid #777;border-left:1px solid #777;color:#777;z-index:inherit;}
 .site-contact .register-form .btn-facebook{width:100%;padding:0;}
+.site-contact .link-socials li a img{width:35px;}
+.site-contact .link-socials li:last-child{
+	float:left;
+}
+.site-contact .link-socials li:nth-child(5){
+	float:right;
+}
 
 .site-contact .site-address{}
 .site-address ul{margin:0 0 20px;padding:0;list-style:none;}
@@ -4197,10 +4204,15 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 @media (max-width:767px){
 	.wrapper .region-section{
-		float:none;
 		margin:0 -15px;
-		clear:both;
+		width:calc(100% - 66px);
 	}  	
+	.wrapper .area-section{
+		margin:0 12px 0 -12px;
+	}
+	.wrapper .area-section .bootstrap-select.btn-group .dropdown-menu.open{
+		width:auto;
+	}
 	.wrapper .area-section .bootstrap-select.open,
 	.wrapper .area-section .btn-default:active, 
 	.wrapper .area-section .btn-default.active, 

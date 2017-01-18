@@ -58,6 +58,7 @@
                     <span class="icon-bar"></span>
                 </button>   
                 <span class="welcome-user visible-xs">hi, kourosh!</span>
+                <div class="clear visible-xs"></div>
                 <section class="area-section">
                 	<select id="select-area" class="selectpicker select-area select-scroll">
                         <option value="">LA</option>
@@ -134,6 +135,7 @@
 							liveSearch: true
 						});
 						selectArea();
+						selectRegion();
 						
 						hasContentArea = $('.area-section').find('.dropdown-menu.open').length;
 						if(hasContentArea == 1){
@@ -186,6 +188,7 @@
 					
 					$(window).resize(function(){
 						selectArea();
+						selectRegion();
 						
 						if(hasContentRegion == 1){
 							selectRegionScroll.refresh();
@@ -206,7 +209,18 @@
 							$('.area-section div.dropdown-menu').css({'margin-left': ''});
 							$('.area-section ul.dropdown-menu').css({'width': ''});
 						}
-					}				
+					}	
+
+					function selectRegion(){
+						var areaLeft = $('.region-section').offset().left;
+						if($(window).width() < 768){
+							$('.region-section div.dropdown-menu').css({'margin-left': - areaLeft});
+							$('.region-section ul.dropdown-menu').css({'width': $(window).width()});
+						}else{
+							$('.region-section div.dropdown-menu').css({'margin-left': ''});
+							$('.region-section ul.dropdown-menu').css({'width': ''});
+						}
+					}						
 					
 					function listFilter(header, list) {
 						var $object = $('input.input-block-level'); 
