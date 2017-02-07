@@ -22,4 +22,13 @@ $(document).ready(function () {
         $('#ownedList').removeClass('hide');
         $('#ownedAdd').addClass('hide');
     });
+    $(document).on('click', '#headerImgList .close', function () {
+        var $this = $(this);
+        $this.parent().remove();
+
+        var $list = $('#headerImgList');
+        if ($list.find('li').length === 0) {
+            $list.closest('tr').hide();
+        }
+    });
 });
