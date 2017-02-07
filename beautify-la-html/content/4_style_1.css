@@ -1507,6 +1507,10 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .settings-page .btn-settings .icon-delete{margin-top:5px;}
 .settings-page .hour-to{line-height:32px;color:#999;font-weight:bold;}
 .settings-page .form-control{box-shadow:none;font:20px/24px ralewaymedium, sans-serif;color:#000;}
+.settings-page textarea.form-control{height:100px;}
+.settings-page textarea.txt-l{
+	max-width:600px;
+}
 .settings-page .txt-100{width:100%;}
 .settings-page .txt-xs{width:100px;}
 .settings-page .txt-s{width:200px;background:#fff;}
@@ -3659,14 +3663,16 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 	top:0;
 	left:0;
 }
+.company-list-page .slide-feature .carousel-indicators{
+	left:0;
+	right:0;
+	text-align: center;
+}
 .company-list-page .main-content{
 	padding-top: 20px;
 }
 .company-list-page .event-section .section-header{
 	margin-bottom:20px;
-}
-.company-list-page .new-spot:first-child{
-	margin-top:0;
 }
 
 @media (min-width: 992px){
@@ -3692,9 +3698,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 @media (max-width: 767px){
     .company-list-page #carousel-mobile .carousel-inner > .item{
         height: 230px;
-    }
-    .company-list-page .new-spot:first-child{
-        margin-top: 0;
     }
 }
 /* End company list*/
@@ -4267,3 +4270,87 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 	}
 }
 /* End new header*/
+
+/* Begin .tags-section*/
+.tags-section a{
+	color: #F3472D;
+	text-decoration: none;
+}
+.tags-section a:hover{
+	text-decoration: underline;
+}
+.tags-section .tag-list{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.tags-section .tag-list ul{
+	margin: 0;
+	padding: 5px 0;	
+	list-style: none;	
+}
+.tags-section .tag-list li{
+	position: relative;
+	padding: 5px 10px;
+}
+.tags-section .tag-list li .close{
+	opacity: 1;
+    position: absolute;
+    margin-top: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: url(images/ui/modals/icon-close.png) center center no-repeat;
+    background-size: 14px auto;
+    color: transparent;
+    width: 33px;
+    height: 33px;
+}
+
+.table-css.custom-input{
+	display:table;
+	width:100%;
+	border: 1px solid #ccc;
+	font-size: 20px;
+	border-radius:4px;
+	font-weight: normal;
+	overflow:hidden;
+}
+.table-css.custom-input .tr{
+	display:table-row;	
+}
+.table-css.custom-input .td{
+	display:table-cell;
+}
+.table-css.custom-input .td:first-child{
+	padding-left:12px;
+	word-break:keep-all;
+	color:#999;
+	width:197px;
+	line-height: 31px;
+}
+.table-css.custom-input input[type="text"]{
+	height: 31px;
+	border: 0 none;
+	padding:0 12px 0 0;
+	color:#000;
+	width:100%;
+}
+.settings-page .table-css.custom-input{
+	width: 600px;
+}
+.event-edit .table-css.custom-input{
+	width:100%;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+	.tags-section .tag-list li .close{
+		background-image: url(images/ui/modals/icon-close@2x.png);
+	}
+}
+/* End .tags-section*/

@@ -152,11 +152,11 @@
                         <!-- tabs -->
                         <div id="tab-settings" class="tabbable">
                           	<ul class="nav nav-tabs">
-                                <li class="active"><a href="#tab-settings-1" data-toggle="tab">events</a></li>
-                                <li><a href="#tab-settings-2" data-toggle="tab">settings</a></li>
+                                <li><a href="#tab-settings-1" data-toggle="tab">events</a></li>
+                                <li class="active"><a href="#tab-settings-2" data-toggle="tab">settings</a></li>
                           	</ul>
                           	<div class="tab-content">
-                            	<div class="tab-pane active" id="tab-settings-1">  
+                            	<div class="tab-pane" id="tab-settings-1">  
                                 	
                                     <!-- .events-content -->
                                   	<div class="events-content clearfix">
@@ -246,7 +246,7 @@
                                         <!-- /#event-1 -->
                                         
                                         <!-- #event-2 -->
-                                        <div id="event-2" class="available-section event-guest">   
+                                        <div id="event-2" class="available-section event-guest hide">   
                                         	<div class="event-header">
                                                 <h2>guest list</h2>
                                             </div>                                     
@@ -722,7 +722,7 @@
                                                 <fieldset id="event-type-2">
                                                 
                                                 	<!-- #special-detail-section -->
-                                               		<div id="special-detail-section">
+                                               		<div id="special-detail-section" class="hide">
                                                         <div class="table-css table-steps">
                                                             <div class="table-row">
                                                                 <div class="table-cell col-img">
@@ -843,7 +843,7 @@
                                                     <!-- /#special-detail-section -->
                                                     
                                                     <!-- #rsvp-detail-section -->
-                                               		<div id="rsvp-detail-section" class="hide">
+                                               		<div id="rsvp-detail-section">
                                                     	<div class="table-css table-steps">
                                                             <div class="table-row">
                                                                 <div class="table-cell col-img">
@@ -937,7 +937,24 @@
                                                                     <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: get 30% off all services or products in store!"></textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                    
+                                                        </div>   
+														<div class="section-row tags-section">												
+                                                            <div class="row form-row">																
+                                                                <div class="col-xs-12">
+                                                                    <label>Tags</label><br />
+                                                                    <textarea cols="" rows="" class="form-control txt-l" placeholder=""></textarea>
+																	<p>separate each tag with a comma or <a title="" role="button" data-toggle="collapse" href="#tagsList" aria-expanded="false" aria-controls="tagsList">Choose from existing tags</a></p>
+																	<div id="tagsList" class="collapse tag-list">
+																		<ul>
+																			<li>Click a tag: <button class="close" data-toggle="collapse" href="#tagsList" aria-expanded="false" aria-controls="tagsList"></button></li>
+																			<li class="clearfix">
+																				<a title="" href="">chanh</a> <a title="" href="">vinasource</a>
+																			</li>
+																		</ul>
+																	</div>
+                                                                </div>
+															</div>
+														</div>															
                                                         <footer class="footer-type">
                                                         	<h3>confirm your event so it can go live!</h3>
                                                             <p>by confirming the event, you are agreeing to the <a title="" href="#" data-target="#modal-terms-privacy" data-toggle="modal">terms of use and privacy</a>. your event will go live after you confirm the event.</p>
@@ -1071,7 +1088,7 @@
                                     <!-- /.events-content -->                                 
                                      
                             	</div>
-                            	<div class="tab-pane" id="tab-settings-2">
+                            	<div class="tab-pane active" id="tab-settings-2">
                                 	
                                     <!-- .settings-content -->
                                   	<div class="settings-content clearfix">
@@ -1092,7 +1109,7 @@
                                     	<div class="col-right">
                                         
                                         	<!-- #setting-1 -->
-                                     		<fieldset id="setting-1" class="hide">
+                                     		<fieldset id="setting-1">
                                             	<div class="table-css table-steps">
                                                     <div class="table-row">
                                                         <div class="table-cell col-img">
@@ -1149,10 +1166,65 @@
                                                         <input type="text" class="form-control txt-s" />
                                                     </div>
                                                 </div>
+												<div class="section-row section-upload">
+													<div class="row form-row">
+														<div class="col-xs-12">
+															<label>company logo</label>
+															<label class="btn btn-primary btn-upload btn-orange" for="inputRSVPEventImage" title="Upload image file">
+																<input id="inputRSVPEventImage" name="file" type="file" onchange="angular.element(this).scope().uploadRSVPEventImage(this.files[0])" class="sr-only" accept="image/*">
+																<span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+																	<span class="icon icon-upload">upload image</span>
+																</span>
+															</label>
+															<p>3mb max file size</p>
+														</div>
+													</div>
+													<div class="row form-row">
+														<div class="col-xs-12">
+															<label>company images</label>
+															<ul id="headerImgList" class="row header-image-list">
+																<li class="col-xs-4"><img alt="" src="content/images/assets/asset_placeholder_image.png" /><button class="close"></button></li>
+																<li class="col-xs-4"><img alt="" src="content/images/assets/asset_placeholder_image.png" /><button class="close"></button></li>
+																<li class="col-xs-4"><img alt="" src="content/images/assets/asset_placeholder_image.png" /><button class="close"></button></li>
+															</ul>
+															<label class="btn btn-primary btn-upload btn-orange" for="inputRSVPEventImage" title="Upload image file">
+																<input id="inputRSVPEventImage" name="file" type="file" onchange="angular.element(this).scope().uploadRSVPEventImage(this.files[0])" class="sr-only" accept="image/*">
+																<span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+																	<span class="icon icon-upload">upload image</span>
+																</span>
+															</label>
+															<p>3mb max file size</p>
+														</div>
+													</div>
+												</div>
                                                 <div class="row form-row">
                                                     <div class="col-xs-12">
                                                         <label>company website</label>
-                                                        <input type="text" class="form-control txt-l" />
+                                                        <!--<input type="text" class="form-control txt-l" />-->
+														<label class="table-css custom-input" for="txtWeb">
+															<span class="tr">
+																<span class="td">https://beautify.us/</span>
+																<span class="td"><input id="txtWeb" type="text"></span>
+															</span>
+														</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>specific company URL</label>
+                                                        <!--<input type="text" class="form-control txt-l" />-->
+														<label class="table-css custom-input" for="txtUrl">
+															<span class="tr">
+																<span class="td">https://beautify.us/</span>
+																<span class="td"><input id="txtUrl" type="text"></span>
+															</span>
+														</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>tweets scripts <span class="error">*</span></label>
+                                                        <textarea style="height:100px;" cols="" rows="" class="form-control txt-l"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="row form-row">
@@ -1502,7 +1574,7 @@
                                             <!-- /#setting-3 -->
                                             
                                             <!-- #setting-4 -->
-                                            <fieldset id="setting-4" class="offering-fieldset">
+                                            <fieldset id="setting-4" class="offering-fieldset hide">
                                             	<header class="clearfix">
                                                     <h3>edit your company offerings</h3>
                                                     <p>add/edit your services or classes, employees/instructors and scheduled hours</p>
@@ -3735,6 +3807,11 @@ email the message<span class="icon icon-next"></span>
                     listYourServices.refresh();
                 }, 300);
             });
+			
+			$(document).on('click', '#headerImgList .close', function(){
+				var $this = $(this);
+				$this.parent().remove();
+			});
         });		
     </script>  
 	<!-- InstanceEndEditable --> 

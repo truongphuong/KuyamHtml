@@ -30,8 +30,8 @@ function stateScroll() {
 }
 
 function getValue() { 	
-    offsetContact = $('.site-contact').offset().top,
-	heightHeader = $('.main-content').offset().top,	
+    offsetContact = ($('.site-contact').length) ? $('.site-contact').offset().top : 0,
+	heightHeader = ($('.main-content')) ? $('.main-content').offset().top : 0,	
 
     rightCol.css("min-height", getHeightSolution),
     rightHeight = rightCol.load().height(),

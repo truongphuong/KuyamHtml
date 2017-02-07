@@ -19,6 +19,40 @@ body{overflow-x:auto;}
 .settings-section .cb-mark ~ .cb-label{position:relative;padding-right:25px;cursor:pointer;display:inline-block !important;font-weight:700;}
 .settings-section .cb-mark ~ .cb-label:before{content:'';display:block;width:18px;height:18px;border-radius:4px;vertical-align:middle;position:absolute;border:1px solid #ddd;top:4px;right:0;cursor:pointer;}
 .settings-section .cb-mark:checked ~ .cb-label:before{background:url(images/assets/Check_mark@2x.png) center center no-repeat;background-size:8px auto;}
+
+.settings-section ul.header-image-list{  
+    margin-top: 0;
+	margin-bottom:0;
+    padding: 0;
+    list-style: none;
+}
+.settings-section ul.header-image-list li{
+    position: relative;
+}
+.settings-section ul.header-image-list li img{
+    width: 100%;
+}
+.settings-section ul.header-image-list li .close{
+	float:right;
+    opacity: 1;
+    margin-top: 0;
+    z-index: 1;
+    background: url(images/ui/modals/icon-close.png) center center no-repeat;
+    background-size: 14px auto;
+    color: transparent;
+    width: 33px;
+    height: 33px;
+}
+
+.settings-section .btn-stripe{
+	font-size:16px;
+	width:150px;
+	height:33px;
+	line-height:32px;
+}
+
+.settings-section .span-stripe{
+	font-size:14px;
 }
 
 @media
@@ -31,4 +65,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     .settings-section .cb-mark:checked ~ .cb-label:before{
         background-image:url(images/assets/Check_mark@2x.png);
     }
+	.settings-section ul.header-image-list li .close{
+		background-image: url(images/ui/modals/icon-close@2x.png);
+	}
 }

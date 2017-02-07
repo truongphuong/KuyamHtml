@@ -582,7 +582,7 @@
                                                 </div>
                                                 
                                                 <!-- #event-type-1 -->
-                                                <fieldset id="event-type-1" class="hide">
+                                                <fieldset id="event-type-1">
                                                     <div class="table-css table-steps">
                                                         <div class="table-row">
                                                             <div class="table-cell col-img">
@@ -637,7 +637,20 @@
                                                                     <input type="text" class="form-control txt-l" />
                                                                 </div>
                                                             </div>
-                                                        </div>                                              
+                                                        </div>      
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event URL: <span class="error">*</span></label><br />
+                                                                    <label class="table-css custom-input" for="txtURL2">
+																		<span class="tr">
+																			<span class="td">https://beautify.us/</span>
+																			<span class="td"><input id="txtURL2" type="text"></span>
+																		</span>
+																	</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                             
                                                         <div class="section-row">												
                                                             <div class="row form-row">
                                                                 <div class="col-xs-12">
@@ -646,8 +659,104 @@
                                                                     <textarea cols="" rows="" class="form-control txt-l"></textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                    
-                                                        <footer>
+                                                        </div>  
+														<div class="section-row section-upload">
+															<div class="row form-row">
+																<div class="col-xs-12">
+																	<label>event image:</label>
+
+																	<div id="viewImageRSVPContainer" class="img-upload hide">
+																		<!-- ngIf: EventModel.KalturaId -->
+
+																	</div>
+
+																	<div id="cropImageRSVPContainer" class="img-upload hide">
+																		<!-- ngIf: dataRSVPEventUrl -->
+																	</div>
+
+																	<label class="btn btn-primary btn-upload btn-orange" for="inputRSVPEventImage" title="Upload image file">
+																		<input id="inputRSVPEventImage" name="file" type="file" onchange="angular.element(this).scope().uploadRSVPEventImage(this.files[0])" class="sr-only" accept="image/*">
+																		<span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+																			<span class="icon icon-upload">upload image</span>
+																		</span>
+																	</label>
+																	<p>3mb max file size</p>
+																</div>
+															</div>
+														</div>
+														<!--<div class="section-row">
+															<div class="row form-row">
+																<div class="col-xs-12">
+																	<span class="cb-custom">
+																		<input class="cb-mark ng-pristine ng-valid" type="checkbox" id="cbPrivate" ng-model="EventModel.IsPrivate">
+																		<label class="cb-label" for="cbPrivate">private event:</label>
+																	</span>
+																</div>
+															</div>
+														</div>-->														
+                                                        <div class="section-row">
+															<div class="row form-row">
+																<div class="col-xs-12">
+                                                                    <label>select your region: <span class="error">*</span></label>
+                                                                </div>
+																<div class="col-xs-6">
+																	<select id="select-area-event" class="select-settings select-100">
+																		<option value="">Select area</option>
+																		<option value="">LA</option>
+																		<option value="">OC</option>
+																		<option value="">SD</option>
+																	</select>
+																</div>
+																<div class="col-xs-6">
+																	<select id="select-region-event" class="select-settings select-100">
+																		<option value="">Entire region</option>
+																		<option>Australia</option>
+																		<option>Austria</option>
+																		<option>Belgium</option>
+																		<option>Brazil</option>
+																		<option>Canada</option>
+																		<option>Denmark</option>
+																		<option>Finland</option>
+																		<option>France</option>
+																		<option>Germany</option>
+																		<option>Greece</option>
+																		<option>Ireland</option>
+																		<option>Israel</option>
+																		<option>Italy</option>
+																		<option>Japan</option>
+																		<option>Luxembourg</option>
+																		<option>Mexico</option>
+																		<option>Netherlands</option>
+																		<option>Norway</option>
+																		<option>Poland</option>
+																		<option>Portugal</option>
+																		<option>Russia</option>
+																		<option>Spain</option>
+																		<option>Sweden</option>
+																		<option>Switzerland</option>
+																		<option>Turkey</option>
+																		<option>United Kingdom</option>
+																		<option>United States</option>
+																	</select>
+																</div>
+															</div>
+                                                        </div>   
+														<div class="section-row">
+															<div class="row form-row">
+																<div class="col-xs-12">
+                                                                    <label>event city</label>
+                                                                </div>
+																<div class="col-xs-6">
+																	<select id="select-area-event" class="select-settings select-100">
+																		<option value="">Bell</option>
+																		<option value="">LA</option>
+																		<option value="">OC</option>
+																		<option value="">SD</option>
+																	</select>
+																</div>
+															</div>
+                                                        </div>   
+														<footer>
                                                             <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
                                                         </footer>
                                                     </div>
@@ -699,6 +808,19 @@
                                                                     <input type="text" class="form-control txt-l" />
                                                                 </div>
                                                             </div>
+                                                        </div>      
+                                                        <div class="section-row">												
+                                                            <div class="row form-row">
+                                                                <div class="col-xs-12">
+                                                                    <label>event URL: <span class="error">*</span></label><br />
+                                                                    <label class="table-css custom-input" for="txtURL1">
+																		<span class="tr">
+																			<span class="td">https://beautify.us/</span>
+																			<span class="td"><input id="txtURL1" type="text"></span>
+																		</span>
+																	</label>
+                                                                </div>
+                                                            </div>
                                                         </div>                                             
                                                         <div class="section-row">												
                                                             <div class="row form-row">
@@ -719,10 +841,10 @@
                                                 <!-- /#event-type-1 -->
                                                 
                                                 <!-- #event-type-2 -->
-                                                <fieldset id="event-type-2">
+                                                <fieldset id="event-type-2" class="hide">
                                                 
                                                 	<!-- #special-detail-section -->
-                                               		<div id="special-detail-section" class="hide">
+                                               		<div id="special-detail-section">
                                                         <div class="table-css table-steps">
                                                             <div class="table-row">
                                                                 <div class="table-cell col-img">
@@ -843,7 +965,7 @@
                                                     <!-- /#special-detail-section -->
                                                     
                                                     <!-- #rsvp-detail-section -->
-                                               		<div id="rsvp-detail-section">
+                                               		<div id="rsvp-detail-section" class="hide">
                                                     	<div class="table-css table-steps">
                                                             <div class="table-row">
                                                                 <div class="table-cell col-img">
@@ -937,7 +1059,24 @@
                                                                     <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: get 30% off all services or products in store!"></textarea>
                                                                 </div>
                                                             </div>
-                                                        </div>                                                    
+                                                        </div>   
+														<div class="section-row tags-section">												
+                                                            <div class="row form-row">																
+                                                                <div class="col-xs-12">
+                                                                    <label>Tags</label><br />
+                                                                    <textarea cols="" rows="" class="form-control txt-l" placeholder=""></textarea>
+																	<p>separate each tag with a comma or <a title="" role="button" data-toggle="collapse" href="#tagsList" aria-expanded="false" aria-controls="tagsList">Choose from existing tags</a></p>
+																	<div id="tagsList" class="collapse tag-list">
+																		<ul>
+																			<li>Click a tag: <button class="close" data-toggle="collapse" href="#tagsList" aria-expanded="false" aria-controls="tagsList"></button></li>
+																			<li class="clearfix">
+																				<a title="" href="">chanh</a> <a title="" href="">vinasource</a>
+																			</li>
+																		</ul>
+																	</div>
+                                                                </div>
+															</div>
+														</div>															
                                                         <footer class="footer-type">
                                                         	<h3>confirm your event so it can go live!</h3>
                                                             <p>by confirming the event, you are agreeing to the <a title="" href="#" data-target="#modal-terms-privacy" data-toggle="modal">terms of use and privacy</a>. your event will go live after you confirm the event.</p>
@@ -1092,7 +1231,7 @@
                                     	<div class="col-right">
                                         
                                         	<!-- #setting-1 -->
-                                     		<fieldset id="setting-1" class="hide">
+                                     		<fieldset id="setting-1">
                                             	<div class="table-css table-steps">
                                                     <div class="table-row">
                                                         <div class="table-cell col-img">
@@ -1149,6 +1288,32 @@
                                                         <input type="text" class="form-control txt-s" />
                                                     </div>
                                                 </div>
+												<div class="section-row section-upload">
+													<div class="row form-row">
+														<div class="col-xs-12">
+															<label>company logo</label>
+															<label class="btn btn-primary btn-upload btn-orange" for="inputRSVPEventImage" title="Upload image file">
+																<input id="inputRSVPEventImage" name="file" type="file" onchange="angular.element(this).scope().uploadRSVPEventImage(this.files[0])" class="sr-only" accept="image/*">
+																<span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+																	<span class="icon icon-upload">upload image</span>
+																</span>
+															</label>
+															<p>3mb max file size</p>
+														</div>
+													</div>
+													<div class="row form-row">
+														<div class="col-xs-12">
+															<label>company images</label>
+															<label class="btn btn-primary btn-upload btn-orange" for="inputRSVPEventImage" title="Upload image file">
+																<input id="inputRSVPEventImage" name="file" type="file" onchange="angular.element(this).scope().uploadRSVPEventImage(this.files[0])" class="sr-only" accept="image/*">
+																<span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+																	<span class="icon icon-upload">upload image</span>
+																</span>
+															</label>
+															<p>3mb max file size</p>
+														</div>
+													</div>
+												</div>
                                                 <div class="row form-row">
                                                     <div class="col-xs-12">
                                                         <label>company website</label>
@@ -1502,7 +1667,7 @@
                                             <!-- /#setting-3 -->
                                             
                                             <!-- #setting-4 -->
-                                            <fieldset id="setting-4" class="offering-fieldset">
+                                            <fieldset id="setting-4" class="offering-fieldset hide">
                                             	<header class="clearfix">
                                                     <h3>edit your company offerings</h3>
                                                     <p>add/edit your services or classes, employees/instructors and scheduled hours</p>

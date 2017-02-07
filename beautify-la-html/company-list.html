@@ -74,18 +74,20 @@
        
 		<div class="relative">
 			<!-- slide-feature -->
-			<div class="slide-feature hidden-xs">
+			<div class="slide-feature slide-feature-blog hidden-xs">
 				<div id="carousel-desktop" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>                    
+						<li data-target="#carousel-desktop" data-slide-to="1"></li>   
+						<li data-target="#carousel-desktop" data-slide-to="2"></li>   
 					</ol>
 				
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
-						<div class="item active" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);">
-							<div class="carousel-caption"></div>
-						</div>                                                      
+						<div class="item active" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div>                                                      
+						<div class="item" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div> 
+						<div class="item" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div> 
 					</div>
 				
 					<!-- Controls -->
@@ -99,18 +101,20 @@
 			</div>
 			<!-- /slide-feature -->
 
-			<div class="slide-feature visible-xs">
+			<div class="slide-feature slide-feature-blog visible-xs">
 	            <div id="carousel-mobile" class="carousel slide" data-ride="carousel">
 	                <!-- Indicators -->
 	                <ol class="carousel-indicators">
-	                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li>                    
+	                    <li data-target="#carousel-mobile" data-slide-to="0" class="active"></li> 
+	                    <li data-target="#carousel-mobile" data-slide-to="1" class="active"></li> 
+	                    <li data-target="#carousel-mobile" data-slide-to="2" class="active"></li>                    
 	                </ol>
 	            
 	                <!-- Wrapper for slides -->
 	                <div class="carousel-inner">
-	                    <div class="item active" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);">
-	                        <div class="carousel-caption"></div>
-	                    </div>                                                      
+	                    <div class="item active" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div>
+						<div class="item" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div>
+						<div class="item" style="background-image:url(https://cdnsecakmi.kaltura.com/p/801372/thumbnail/entry_id/1_qjwg4zdi/width/0/height/0);"></div>						
 	                </div>
 	            
 	                <!-- Controls -->
@@ -138,6 +142,33 @@
 									<h2>find out what's happening near you!</h2>
 								</header>
 								<!-- /.section-header -->
+								
+								<div class="filter-setion clearfix"> 
+									<select id="select-category" class="selectpicker select-category select-full">
+										<option value="">select tags</option>
+										<option value="">drills</option>
+										<option value="">strategy classes</option>
+										<option value="">special events</option>
+										<option value="">d</option>
+										<option value="">e</option>
+										<option value="">f</option>
+										<option value="">g</option>
+										<option value="">h</option>
+										<option value="">e</option>
+									</select>  
+									<!--<select id="select-city" class="selectpicker select-city">
+										<option value="">select location</option>
+										<option value="">Los Angeles</option>
+										<option value="">US</option>
+										<option value="">Canadar</option>
+									</select>-->
+									<script type="text/javascript">
+										$(document).ready(function(){	
+											//$('#select-category, #select-city').selectpicker();
+											$('#select-category').selectpicker();
+										});
+									</script>    	
+								</div>  
 								
 								<!-- .event-new-list -->
 								<div class="event-new-list clearfix">
