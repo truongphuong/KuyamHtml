@@ -1,0 +1,129 @@
+.modal-review{
+    width: 593px;
+}
+.modal-review .modal-header{
+    padding-top: 28px;
+    padding-bottom: 2px;
+}
+.modal-review .modal-header .modal-title{
+    font-family: $primary;
+    font-weight: 300;
+    font-size: $s25;
+    color:#232323;
+}
+.modal-review .modal-body{
+    text-align: center;
+    padding-left: 47px;
+    padding-right: 42px;
+}
+.modal-review div[class*="col-"]{
+    width:100%;
+}
+.modal-review .modal-body p{
+    font-size: $s19;
+    line-height: 23px;
+    color: #353535;
+}
+.modal-review .modal-body p strong{
+    font-weight: 700;
+}
+.modal-review .modal-body .rating-section{
+    margin:28px 0 31px;
+}
+.modal-review .modal-body .rating-section label{
+    display: block;
+    font-size: $h6;
+    color:#333232;
+    margin-bottom: 8px;
+}
+.modal-review .link-collapse{
+    display: none;
+}
+.modal-review .countdown-input{
+    display: block;
+}
+.modal-review .modal-body textarea{
+    resize: none;
+    box-shadow: none;
+    height: 150px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: $h6;
+	border-radius:4px;
+    border-color: #ccc;
+}
+.modal-review .modal-body textarea:focus{
+    border-color: #ccc;
+}
+.modal-review .modal-body .characters{
+    color: rgba(51, 50, 50, .4);
+    font-size: $s14;
+    text-align: right;
+    margin-top: 5px;
+}
+.modal-review .modal-footer{
+    text-align: center;
+    padding-bottom: 28px;
+    padding-top: 23px;
+}
+.modal-review .modal-footer .btn{
+    color: #4d4d4d;
+    font-weight: 700;
+    font-size: $s21;
+    width: 252px;
+    height: 39px;
+    padding:0;
+}
+
+@media (max-width: 767px) {
+    .modal-review{
+        width: auto;
+    }
+    .modal-review .modal-content{
+        border-radius: 0;
+        border:1px solid #898989;
+    }
+    .modal-review .modal-header{
+        padding-top: 26px;
+        padding-bottom: 12px;
+    }
+    .modal-review .modal-header .modal-title{
+        font-size: $s19;
+        color: #282828;
+    }
+    .modal-review .modal-body{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .modal-review .modal-body p{
+        font-size: $h6;
+        line-height: 19px;
+        color: #383838;
+    }
+    .modal-review .modal-body .rating-section{
+        margin-top: 32px;
+        margin-bottom: 66px;
+    }
+    .modal-review .modal-body .rating-section label{
+        font-size: $s13;
+        color:rgba(0, 0, 0, .7);
+    }
+    .modal-review .modal-body textarea{
+        height: 97px;
+        font-size: $s13;
+    }
+    .modal-review .modal-body .characters{
+        margin-top: 0;
+        color: rgba(54, 53, 53, .4);
+        font-size: $s13;
+    }
+    .modal-review .modal-footer{
+        padding: 18px 15px 15px;
+    }
+    .modal-review .modal-footer .btn{
+        color: #3d3d3d;
+        font-size: $h6;
+        height: 41px;
+        width: 100%;
+    }
+}
