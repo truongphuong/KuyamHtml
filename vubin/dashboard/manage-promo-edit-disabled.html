@@ -1970,6 +1970,44 @@
 	</div><!-- /#signOutModal -->
      
     <!-- InstanceBeginEditable name="modal" -->
+	<div id="serviceListContent" class="tooltip-template">
+		<div id="serviceList" class="choosen-list service-list">
+			<div class="scroll-content">
+				<ul>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem service</li>
+					<li>Lorem service</li>
+					<li>Service ipsum</li>
+					<li>Service ipsum</li>
+					<li>Service Lorem</li>
+					<li>Service Lorem</li>
+					<li>Service Lorem</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="servicePromoListContent" class="tooltip-template">
+		<div id="servicePromoList" class="choosen-list service-list">
+			<div class="scroll-content">
+				<ul>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem ipsum dolor</li>
+					<li>Lorem service</li>
+					<li>Lorem service</li>
+					<li>Service ipsum</li>
+					<li>Service ipsum</li>
+					<li>Service Lorem</li>
+					<li>Service Lorem</li>
+					<li>Service Lorem</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<!-- #editCategoryModal -->
 	<div id="editCategoryModal" class="modal fade modal-m" role="dialog" aria-labelledby="editCategoryModalLabel" data-keyboard="false" data-backdrop="static">
 		<div class="modal-dialog modal-edit-category">
@@ -2976,6 +3014,56 @@
                 $('#infoForm').removeClass('hide');
                 $('#discountForm').addClass('hide');
             });
+			
+			var serviceListContent = $('#serviceListContent').html();
+			$('#serviceListContent').remove();
+			$('#chosenServicePromo_chosen').tooltipster({
+				contentAsHTML: true,
+				content: serviceListContent,
+				trigger: 'click',
+				position: 'bottom',
+				theme: 'tooltipster-default choosen-tooltip service-tooltip',
+				offsetY: -12,
+				interactive: true,
+				positionTracker: true,
+				autoClose: true,
+				debug: false,
+				functionReady: function (origin, tooltip) {
+					iscrollContent('#serviceList');
+					tooltip.css({'width': origin.width(), left: origin.offset().left});
+					
+					monitorResize(function(){
+						if(isView.mobile()){
+							$('#chosenServicePromo_chosen').tooltipster('hide');
+						}
+					});
+				}
+			});
+			
+			var servicePromoListContent = $('#servicePromoListContent').html();
+			$('#servicePromoListContent').remove();
+			$('#divChosenServicePromo').tooltipster({
+				contentAsHTML: true,
+				content: servicePromoListContent,
+				trigger: 'click',
+				position: 'bottom',
+				theme: 'tooltipster-default choosen-tooltip service-tooltip',
+				offsetY: -12,
+				interactive: true,
+				positionTracker: true,
+				autoClose: true,
+				debug: false,
+				functionReady: function (origin, tooltip) {
+					iscrollContent('#servicePromoList');
+					tooltip.css({'width': origin.width(), left: origin.offset().left});
+					
+					monitorResize(function(){
+						if(isView.mobile()){
+							$('#divChosenServicePromo').tooltipster('hide');
+						}
+					});
+				}
+			});
         });
 	</script>
     <!-- InstanceEndEditable -->

@@ -20,9 +20,51 @@ var isMobile = {
 },
 wScreen = window.innerWidth;
 
+var isView = {
+    mobile: function(){
+        var sw = getWindowWidth();
+        if (sw < 768) {
+            return true;
+        };
+        return false;
+    },
+    tablet: function(){
+        var sw = getWindowWidth();
+        if (sw < 992 && sw > 767) {
+            return true;
+        };
+        return false;
+    },
+    desktop: function(){
+        var sw = getWindowWidth();
+        if (sw > 991) {
+            return true;
+        };
+        return false;
+    }
+};
+
 if (!isMobile.any()) {
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
+
+function getWindowWidth(){
+    return window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+}
+
+function monitorResize (callbackfnc){
+    callbackfnc.sw = getWindowWidth();
+    var $window = $(window);
+    $window.on('resize', function(){
+        var nw = getWindowWidth();
+        if(nw !== callbackfnc.sw){
+            callbackfnc.sw = nw;
+            callbackfnc();
+        }
+    });
+};
 
 function modalOpen(){
     if (typeof window.verifyScrollbarWidth == "undefined") {
