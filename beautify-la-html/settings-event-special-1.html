@@ -755,8 +755,67 @@
 																	</select>
 																</div>
 															</div>
-                                                        </div>   
-														<footer>
+                                                        </div>
+														<div class="section-row where-event">
+															<div class="row form-row">
+																<div class="col-xs-12">
+                                                                    <label>Where is this event?</label>
+                                                                </div>
+															</div>
+															<div class="row form-row">
+																<div class="col-xs-12">
+																	<span class="radio-custom">
+																		<input class="radio-mark" checked type="radio" id="radioD" name="whereEvent" value="0" />
+																		<label class="radio-label" for="radioD">1564 Loem ipsum default address</label>
+																	</span>
+																</div>
+															</div>
+															<div class="row form-row">
+																<div class="col-xs-12">
+																	<span class="radio-custom">
+																		<input class="radio-mark" type="radio" id="radioA" name="whereEvent" value="1" />
+																		<label class="radio-label" for="radioA">Alternative address</label>
+																	</span>
+																</div>
+															</div>
+															<div id="alternativeSection" class="alternative-form disable">
+																<div class="row form-row">
+																	<div class="col-xs-12">		
+																		<div class="placeholder-custom">
+																			<div class="placeholder">Facility name <span class="optional">optional</span></div>
+																			<input type="text" class="form-control txt-l" value="Happy landing">
+																		</div>
+																	</div>
+																</div>
+																<div class="row form-row">
+																	<div class="col-xs-12">																
+																		<input placeholder="Address line 1" type="text" class="form-control txt-l">
+																	</div>
+																</div>
+																<div class="row form-row">
+																	<div class="col-xs-12">																	
+																		<input placeholder="Address line 2" type="text" class="form-control txt-l">
+																	</div>
+																</div>
+																<div class="row form-row">
+																	<div class="col-xs-6">																	
+																		<input placeholder="City" type="text" class="form-control txt-100">
+																	</div>
+																	<div class="col-xs-3">
+																		<select id="select-event-state" class="select-settings select-100">
+																			<option value="">State</option>
+																			<option value="">LA</option>
+																			<option value="">OC</option>
+																			<option value="">SD</option>
+																		</select>
+																	</div>
+																	<div class="col-xs-3">
+																		<input placeholder="Zip" type="text" class="form-control txt-100">
+																	</div>
+																</div>
+															</div>
+														</div>														
+                                                        <footer>
                                                             <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
                                                         </footer>
                                                     </div>
@@ -3900,7 +3959,37 @@ email the message<span class="icon icon-next"></span>
                     listYourServices.refresh();
                 }, 300);
             });
-        });		
+        });	
+		
+		function placeholderCustom($obj){
+			var inputVal = $obj.val();
+			if(inputVal !== ''){
+				$obj.addClass('has-value');
+			}else{
+				$obj.removeClass('has-value');
+			}
+		}
+        
+        $( document ).ready(function() {
+			$('.placeholder-custom .form-control').each(function(){
+				var $this = $(this);
+				placeholderCustom($this);
+			}).on('keyup', function(){
+				var $this = $(this);
+				placeholderCustom($this);
+			});
+			
+			$('input[name="whereEvent"]').on('change', function(){
+				var $radioChecked = $('input[name="whereEvent"]:checked');
+				var inputVal = parseInt($radioChecked.val());
+				var $section = $('#alternativeSection');
+				if(inputVal === 1){
+					$section.removeClass('disable');
+				}else{
+					$section.addClass('disable');
+				}
+			});
+		});			
     </script>  
 	<!-- InstanceEndEditable --> 
     
