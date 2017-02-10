@@ -3015,6 +3015,7 @@
                 $('#discountForm').addClass('hide');
             });
 			
+			var serviceListContentWidth = $('#chosenServicePromo_chosen').width();
 			var serviceListContent = $('#serviceListContent').html();
 			$('#serviceListContent').remove();
 			$('#chosenServicePromo_chosen').tooltipster({
@@ -3028,18 +3029,20 @@
 				positionTracker: true,
 				autoClose: true,
 				debug: false,
+				minWidth: serviceListContentWidth,
+				maxWidth:  serviceListContentWidth,
 				functionReady: function (origin, tooltip) {
 					iscrollContent('#serviceList');
-					tooltip.css({'width': origin.width(), left: origin.offset().left});
+					//tooltip.css({'width': origin.width(), left: origin.offset().left});
 					
 					monitorResize(function(){
-						if(isView.mobile()){
-							$('#chosenServicePromo_chosen').tooltipster('hide');
-						}
+						$('#chosenServicePromo_chosen').tooltipster('hide');
+						serviceListContentWidth = $('#chosenServicePromo_chosen').width();
 					});
 				}
 			});
 			
+			var servicePromoListContentWidth = $('#divChosenServicePromo').width();
 			var servicePromoListContent = $('#servicePromoListContent').html();
 			$('#servicePromoListContent').remove();
 			$('#divChosenServicePromo').tooltipster({
@@ -3053,14 +3056,15 @@
 				positionTracker: true,
 				autoClose: true,
 				debug: false,
+				minWidth: servicePromoListContentWidth,
+				maxWidth:  servicePromoListContentWidth,
 				functionReady: function (origin, tooltip) {
 					iscrollContent('#servicePromoList');
-					tooltip.css({'width': origin.width(), left: origin.offset().left});
+					//tooltip.css({'width': origin.width(), left: origin.offset().left});
 					
 					monitorResize(function(){
-						if(isView.mobile()){
-							$('#divChosenServicePromo').tooltipster('hide');
-						}
+						$('#divChosenServicePromo').tooltipster('hide');
+						servicePromoListContentWidth = $('#divChosenServicePromo').width();
 					});
 				}
 			});
