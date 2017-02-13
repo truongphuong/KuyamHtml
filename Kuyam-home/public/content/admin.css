@@ -626,6 +626,46 @@ textarea {
 .owed-comp ul.header-image-list li img {
   width: 100%; }
 
+.tags-section a,
+.tags-section .span-collapse {
+  color: #29abe2;
+  text-decoration: none;
+  cursor: pointer; }
+
+.tags-section a:hover,
+.tags-section .span-collapse:hover {
+  text-decoration: underline; }
+
+.tags-section .tag-list {
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+.tags-section .tag-list ul {
+  margin: 0;
+  padding: 5px 0;
+  list-style: none; }
+
+.tags-section .tag-list li {
+  position: relative;
+  padding: 5px 10px; }
+
+.tags-section .tag-list li .close {
+  opacity: 1;
+  position: absolute;
+  margin-top: 0;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: url(images/dashboard/icon-close.png) center center no-repeat;
+  background-size: 14px auto;
+  color: transparent;
+  width: 33px;
+  height: 33px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .tags-section .tag-list li .close {
+    background-image: url(images/dashboard/icon-close@2x.png); } }
+
 /**
  * Modals
  */
