@@ -7162,6 +7162,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   body.modal-open.boarding-open {
     padding-right: 0 !important;
     overflow-y: auto; }
+  body.modal-open .modal-boarding {
+    overflow-y: hidden; }
   .boarding-open .wrapper {
     position: fixed;
     top: 0;
@@ -8601,7 +8603,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   text-align: left; }
 
 .modal-terms button.close {
-  z-index: 2; }
+  z-index: 2;
+  background-image: url(images/dashboard/icon-close-white.png); }
 
 .modal-terms .nav-tabs {
   padding: 0;
@@ -8720,6 +8723,8 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     border: 0 none; } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .modal-terms button.close {
+    background-image: url(images/dashboard/icon-close-white@2x.png); }
   .modal-terms .nav-tabs > li > a .icon-term {
     background-image: url(images/ui/modals/terms/header_icon_terms@2x.png); }
   .modal-terms .nav-tabs > li > a .icon-privacy {
