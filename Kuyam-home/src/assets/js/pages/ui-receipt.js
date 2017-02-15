@@ -13,8 +13,6 @@ $(document).ready(function(){
                 $this.css({"bottom": -($this.parents(".item").height() - 50) + "px"});
             }
         }
-
-
     });
 
     $('.date-from').datepicker({
