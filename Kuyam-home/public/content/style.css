@@ -12448,6 +12448,8 @@ td ul {
     display: block;
     padding: 7px 0.5cm;
     border-bottom: 1px solid #bebebe; }
+  .receipt-list .receipt-header {
+    display: block !important; }
   .receipt-list {
     padding: 15px 0.5cm; }
   .receipt-list .receipt-col {
@@ -12459,8 +12461,16 @@ td ul {
   .receipt-list .receipt-time {
     width: 90px;
     text-align: right; }
+  .receipt-list .receipt-time.hidden-xs {
+    display: block !important; }
+  .receipt-list .receipt-time.visible-xs {
+    display: none !important; }
   .receipt-list .receipt-category {
     width: 150px; }
+  .receipt-list .receipt-time.hidden-xs {
+    display: block !important; }
+  .receipt-list .receipt-category.visible-xs {
+    display: none !important; }
   .receipt-list .receipt-company-name {
     width: 300px; }
   .receipt-list .receipt-payment {
@@ -12472,6 +12482,8 @@ td ul {
     border-top: solid 1px #c7c7c7; }
   .receipt-list .receipt-details {
     display: block; }
+  .receipt-list .receipt-details > .row > div[class*="col-"] {
+    width: 50%; }
   .receipt-list .receipt-details-left .receipt-col-1 {
     width: 175px; }
   .receipt-list .receipt-details-left .receipt-col-2 {
@@ -12483,4 +12495,6 @@ td ul {
     width: 185px; }
   .receipt-list .receipt-details-right .receipt-col-4 {
     float: left;
-    width: 90px; } }
+    width: 90px; }
+  .receipt-list .receipt-review {
+    display: none; } }
