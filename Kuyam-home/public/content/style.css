@@ -1633,6 +1633,9 @@ button.close:hover {
 .print {
   display: none !important; }
 
+.page-break {
+  display: none; }
+
 @media print {
   * {
     background: transparent !important;
@@ -1673,7 +1676,10 @@ button.close:hover {
   h2, h3 {
     page-break-after: avoid; }
   .print {
-    display: block !important; } }
+    display: block !important; }
+  .page-break {
+    display: block;
+    page-break-before: always; } }
 
 /**
  * Partials
@@ -12449,9 +12455,10 @@ td ul {
     padding: 7px 0.5cm;
     border-bottom: 1px solid #bebebe; }
   .receipt-list .receipt-header {
-    display: block !important; }
+    display: block !important;
+    padding-top: 0.5cm; }
   .receipt-list {
-    padding: 15px 0.5cm; }
+    padding: 0 0.5cm; }
   .receipt-list .receipt-col {
     float: left;
     padding: 5px 7px; }
