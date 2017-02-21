@@ -799,10 +799,20 @@ textarea {
 .chosen-select .nicescroll-rails div {
   right: -3px !important; }
 
+.bootstrap-select .nicescroll-rails {
+  width: 1px !important;
+  right: 3px !important; }
+
+.bootstrap-select .nicescroll-rails div {
+  right: -3px !important; }
+
 .on-nicescroll .wrap-dropdown-menu-inner {
   overflow: hidden;
   position: relative;
   -webkit-overflow-scrolling: touch; }
+
+.on-nicescroll .wrap-dropdown-menu-inner-content {
+  overflow-y: auto; }
 
 /*.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner:after{
     content:'';
@@ -5667,7 +5677,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .on-nicescroll .about-list {
   overflow: inherit; }
 
-.on-nicescroll .wrap-dropdown-menu-inner {
+.on-nicescroll .wrap-dropdown-menu-inner.iscroll-horizontal {
   width: 100%;
   padding-bottom: 10px; }
 
@@ -7104,8 +7114,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   overflow: hidden;
   margin-right: 18px;
   margin-top: 5px;
-  margin-bottom: 5px;
-  width: auto; }
+  margin-bottom: 5px; }
 
 .modal-boarding .form-select .bootstrap-select > .btn,
 .modal-boarding .form-select .bootstrap-select > .btn:focus,

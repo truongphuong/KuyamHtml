@@ -124,11 +124,13 @@ function iscrollSelect(sectionID, scrollName) {
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', {
                     bouncescroll: false,
-                    cursorcolor: "#99bd25",
+                    autohidemode: false,
+                    cursorcolor: "#278CFE",
                     cursorborder: "1px solid transparent",
                     cursorborderradius: "5px",
                     cursorwidth: "7px",
-                    background: "#8B8B8B"
+                    background: "#8B8B8B",
+                    mousescrollstep: 10
                 });
             });
         }
