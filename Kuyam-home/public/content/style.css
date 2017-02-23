@@ -636,6 +636,9 @@ textarea {
   .rating-symbol .filled-stars {
     background-image: url("images/ui/general/rating_active@3x.png"); } }
 
+.on-nicescroll .bootstrap-select .wrap-dropdown-menu-inner-content {
+  overflow-y: auto; }
+
 .croppie-container {
   width: 321px;
   margin: 0 auto;
@@ -812,7 +815,7 @@ textarea {
   -webkit-overflow-scrolling: touch; }
 
 .on-nicescroll .wrap-dropdown-menu-inner-content {
-  overflow-y: auto; }
+  overflow-y: hidden; }
 
 /*.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner:after{
     content:'';
@@ -5140,7 +5143,19 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .book-option .option-select ul li .td-off span {
   position: relative;
-  padding-left: 26px; }
+  display: inline-block;
+  padding-left: 26px;
+  margin-bottom: 12px; }
+
+.book-option .option-select ul li .td-off small {
+  display: block;
+  color: rgba(0, 0, 0, 0.8);
+  width: 115px;
+  position: absolute;
+  left: 26px;
+  top: 100%;
+  line-height: 12px;
+  text-align: left; }
 
 .book-option .option-select ul li .td-off span:before {
   content: '';
@@ -9609,6 +9624,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   margin-bottom: 14px;
   color: #282828; }
 
+.modal-details .modal-body p span + small {
+  margin: 0; }
+
 .modal-details .modal-body p small {
   font-size: 10px;
   margin: 0 5px; }
@@ -9688,6 +9706,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   line-height: 15px;
   margin-bottom: 14px;
   color: #282828; }
+
+.modal-details .modal-body p span + small {
+  margin: 0; }
 
 .modal-details .modal-body p small {
   font-size: 10px;
