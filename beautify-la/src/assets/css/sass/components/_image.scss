@@ -1,0 +1,21 @@
+.img-normal{
+    display:block;
+}
+.img-retina{
+    display:none;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+    .img-normal{
+        display:none;
+    }
+    .img-retina{
+        display:block;
+    }
+}

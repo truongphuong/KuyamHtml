@@ -1,0 +1,40 @@
+@media (min-width: 1230px){
+    .company-list-page,
+    .home-page {
+        .container{
+            width:1230px;
+        }
+        .main-content > .container > .row{
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+        .main-content > .container > .row > div[class*="col-"]{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .main-content > .container > .row > .col-lg-9{
+            width: calc(100% - 270px);
+        }
+        .main-content > .container > .row > .col-lg-3{
+            width: 270px;
+        }
+    }
+}
+
+@media (min-width:980px){
+    .container{
+        width:960px;
+    }
+    .main-content > .container > .row > .col-sm-8{
+        width: calc(100% - 290px);
+    }
+    .main-content > .container > .row > .col-sm-4{
+        width: 290px;
+    }
+}
+
+@media (max-width:1029px) {
+    .container {
+        width: 100%;
+    }
+}

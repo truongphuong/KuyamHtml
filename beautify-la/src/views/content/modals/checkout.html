@@ -1,0 +1,229 @@
+<!-- #modal-checkout -->
+<div class="modal fade" id="modal-checkout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-checkout">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">checkout</h4>
+            </div>
+            <section class="checkout-content-info">
+                <div class="checkout-info">
+                    <div class="checkout-valid hidden-xs">valid for Sept 26 - Sept 30</div>
+                    <h3>Amy's Hair Salon</h3>
+                    <p><strong>beauty tips with Laura</strong> <time class="hidden-xs">60 min</time></p>
+                    <ul class="menu-price">
+                        <li class="hidden-xs">regular price <del>$100</del></li>
+                        <li>new price <strong>$90.00</strong></li>
+                        <li>savings <strong>19%</strong></li>
+                    </ul>
+                    <p class="hidden-xs">Tuesday Sept 26th at 10:00 am <time class="visible-xs">60 min</time></p>
+                </div>
+            </section>
+            <div class="modal-body">
+                <div class="table-steps visible-xs">
+                    <hr />
+                    <div class="table-css">
+                        <div class="table-row">
+                            <div class="table-cell text-left active">
+                                <span class="num">1</span>
+                            </div>
+                            <div class="table-cell text-center">
+                                <span class="num">2</span>
+                            </div>
+                            <div class="table-cell text-right">
+                                <span class="num">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="checkout-service-1" class="checkout-content">
+                    <fieldset>
+                        <div class="checkout-step">
+                            <header>
+                                <img class="hidden-xs" alt="" src="content/images/assets/image_step1.png" />
+                                <h4>please add or confirm you contact info</h4>
+                                <p>we may need to confirm an appointment with you or contact you in regards to the event.</p>
+                            </header>
+                            <div class="checkout-input-info">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label>cell number: <span class="error">*</span></label>
+                                        <input type="tel" class="form-control txt-cell" />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <label>email: <span class="error">*</span></label>
+                                        <input type="email" class="form-control txt-email" />
+                                    </div>
+                                </div>
+                                <div class="option-section sms-section">
+                                    send me appointment reminders via SMS
+                                    <span class="hidden-xs">
+                                        <input type="checkbox" class="cb-style" id="cb-yes">
+                                        <label for="cb-yes" class="label-style">yes</label>
+                                    </span>
+                                    <div class="visible-xs">
+                                        <select class="selectpicker">
+                                            <option>yes</option>
+                                            <option>no</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer>
+                            <button slidenext="checkout-service-2" slidecurrent="checkout-service-1" class="btn-orange btn-settings">next <span class="icon icon-next"></span></button>
+                        </footer>
+                    </fieldset>
+                 </section>
+                 <section id="checkout-service-2" class="checkout-content hide">
+                    <fieldset>
+                        <div class="checkout-step">
+                            <header>
+                                <img class="hidden-xs" alt="" src="content/images/assets/image_step2.png" />
+                                <h4>would you like us to schedule your appointment?</h4>
+                                <p>we'll ask you for available times after your purchase is complete, or you can schedule on your own.</p>
+                            </header>
+                            <div class="checkout-input-info">
+                                <div class="option-section schedule-section">
+                                    <span>
+                                        <input type="radio" name="schedule" class="cb-style" id="r-general" />
+                                        <label for="r-general" class="label-style">schedule through Beautify LA</label>
+                                    </span>
+                                    <span>
+                                        <input type="radio" name="schedule" class="cb-style" id="r-personally" />
+                                        <label for="r-personally" class="label-style">schedule personally</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <footer>
+                            <button slidenext="checkout-service-1" slidecurrent="checkout-service-2" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                            <button slidenext="checkout-service-3" slidecurrent="checkout-service-2" class="btn-orange btn-settings">next <span class="icon icon-next"></span></button>
+                        </footer>
+                    </fieldset>
+                 </section>
+                 <section id="checkout-service-3" class="checkout-content hide">
+                    <fieldset>
+                        <div class="checkout-step">
+                            <header>
+                                <img class="hidden-xs" alt="" src="content/images/assets/image_step3.png" />
+                                <h4>payment</h4>
+                                <p>add a tip for your service professional and apply any gift card amount or promo code.</p>
+                            </header>
+                            <div class="checkout-input">
+                                <div class="checkout-payment checkout-tip">
+                                    <header>add a tip amount</header>
+                                    <div class="checkout-method method-tip">
+                                    <input type="text" onblur="if (this.value == '') { this.value = 'tip'; }" onfocus="if (this.value == 'tip') { this.value = ''; }" value="tip" class="form-control txt-tip" />
+                                        <input type="button" value="add" class="btn-orange btn-method btn-tip" />
+                                    </div>
+                                </div>
+
+                                <!-- .checkout-price -->
+                                <div class="checkout-price clearfix">
+                                    <div class="table-css">
+                                        <div class="table-row">
+                                            <div class="table-cell price-details"><p>total due:</p></div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell price-details"><h3>$75.00</h3></div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                        <div class="table-row checkout-discount-promo hide">
+                                            <div class="table-cell price-details"><h3>-$5.00</h3></div>
+                                            <div class="table-cell price-type">promo</div>
+                                        </div>
+                                        <div class="table-row checkout-discount-giftcard hide">
+                                            <div class="table-cell price-details"><h3>-$30.00</h3></div>
+                                            <div class="table-cell price-type">gift card</div>
+                                        </div>
+                                        <div class="table-row checkout-total hide">
+                                            <div class="table-cell price-total"><h3><span>$45.00</span></h3></div>
+                                            <div class="table-cell price-type"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.checkout-price -->
+
+                                <!-- .checkout-payment -->
+                                <div class="checkout-payment" id="checkout-step1">
+                                    <header>select payment method</header>
+                                    <div class="checkout-method method-promo">
+                                        <span class="icon-method icon-promo"></span>
+                                        <input type="text" onblur="if (this.value == '') { this.value = 'promo code'; }" onfocus="if (this.value == 'promo code') { this.value = ''; }" value="promo code" class="form-control txt-promo" />
+                                        <input type="button" value="apply" class="btn-orange btn-method btn-promo" />
+                                        <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                                    </div>
+                                    <div class="checkout-method method-gift-card">
+                                        <span class="icon-method icon-gift-card"></span>
+                                        <input type="button" value="gift card" class="btn-orange btn-method btn-gift-card" id="btn-gift-card" />
+                                    </div>
+                                    <div class="checkout-method method-credit">
+                                        <span class="icon-method icon-credit"></span>
+                                        <input type="button" value="PayPal or credit card" class="btn-orange btn-method btn-credit" />
+                                    </div>
+                                    <div class="checkout-method">
+                                        <input data-toggle="modal" data-target="#modal-confirm" id="btn-confirm" class="btn-orange btn-method btn-confirm" type="button" value="confirm" />
+                                    </div>
+                                </div>
+                                <!-- /.checkout-payment -->
+
+                                <!-- /.checkout-giftcard -->
+                                <div class="checkout-payment checkout-gift-card hide" id="checkout-step2">
+                                    <div class="checkout-method">
+                                        <input type="text" onblur="if (this.value == '') { this.value = 'enter gift card number'; }" onfocus="if (this.value == 'enter gift card number') { this.value = ''; }" value="enter gift card number" class="form-control txt-giftcard" />
+                                        <input type="button" value="redeem" class="btn-orange btn-method btn-giftcard" />
+                                    </div>
+                                    <div class="checkout-balance">
+                                        <p>current gift card balance</p>
+                                        <h3>$0.00</h3>
+                                        <div class="checkout-balance-use">use $30.00 today?</div>
+                                    </div>
+                                    <div class="checkout-method method-confirm">
+                                        <input data-toggle="modal" data-target="#modal-confirm" type="button" value="confirm" class="btn-orange btn-method btn-confirm" />
+                                    </div>
+                                    <div class="checkout-back">
+                                        <a href="javascript:void(0);" title="" class="link-back" id="link-back"><span class="icon-goback"></span> back</a>
+                                    </div>
+                                </div>
+                                <!-- /.checkout-giftcard -->
+
+                                <!-- .checkout-payment -->
+                                <div class="checkout-payment checkout-applied hide" id="checkout-step3">
+                                    <div class="checkout-method method-promo">
+                                        <span class="icon-method icon-promo"></span>
+                                        <input type="text" onblur="if (this.value == '') { this.value = 'promo code'; }" onfocus="if (this.value == 'promo code') { this.value = ''; }" value="promo code" class="form-control txt-promo" />
+                                        <input type="button" value="apply" class="btn-orange btn-method btn-promo" />
+                                        <div class="discount-applied promo-applied hide">$5.00 applied</div>
+                                    </div>
+                                    <div class="checkout-method method-gift-card">
+                                        <span class="icon-method icon-gift-card"></span>
+                                        <div class="discount-applied giftcard-applied">$30.00 applied</div>
+                                    </div>
+                                    <div class="checkout-method method-credit">
+                                        <span class="icon-method icon-credit"></span>
+                                        <input type="button" value="PayPal or credit card" class="btn-orange btn-method btn-credit" />
+                                    </div>
+                                    <div class="checkout-method method-confirm">
+                                        <input data-toggle="modal" data-target="#modal-confirm" type="button" value="confirm" class="btn-orange btn-method btn-confirm" />
+                                    </div>
+                                </div>
+                                <!-- /.checkout-payment -->
+
+                                <div class="checkout-policy">
+                                    view cancellation and refund policy <a title="" href="#">here</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <footer>
+                            <button data-toggle="modal" data-target="#modal-checkout-term" slidenext="checkout-service-2" slidecurrent="checkout-service-3" class="btn-orange btn-settings"><span class="icon icon-back"></span> back</button>
+                        </footer>
+                    </fieldset>
+                 </section>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /#modal-checkout -->

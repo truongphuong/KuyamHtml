@@ -1,0 +1,1012 @@
+{% extends 'master/main-new.html' %}
+
+{% block title %}Beautify LA - Company Dashboard{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block namepage %}settings-section{% endblock %}
+
+{% block banner %}
+{% include "content/pages/company/dashboard/banner.html" %}
+{% endblock %}
+
+{% block main %}
+<!-- .main-content -->
+<div class="main-content settings-page clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <!-- tabs -->
+                <div id="tab-settings" class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-settings-1" data-toggle="tab">events</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-settings-1">
+
+                            <!-- .events-content -->
+                            <div class="events-content clearfix">
+
+                                <!-- #event-1 -->
+                                <div id="event-1" class="event-dashboard hide">
+                                    <div class="event-header">
+                                        <h2>events dashboard</h2>
+                                        <div class="text-right clearfix">
+                                            <a class="btn-orange btn-create" title="" href="javascript:void(0);"><span class="icon-add"></span> create new event</a>
+                                            2 event(s) awaiting edit and confirmation <span class="icon-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="available-section upcoming-section">
+                                        <h3>upcoming events:</h3>
+                                        <div class="list">
+                                            <div class="item">
+                                                <div class="clearfix">
+                                                    <h3>Amy's Hair Salon special offer event! <span class="event-date">Sunday, Nov. 16th</span></h3>
+                                                </div>
+                                                <div class="status clearfix">
+                                                    <ul>
+                                                        <li>pending confirmation</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="controls clearfix">
+                                                    <a class="btn-white-black btn-control" data-target="#modal-delete" data-toggle="modal" title="" href="javascript:void(0);">delete event</a>
+                                                    <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
+                                                    <a class="btn-white-black btn-control btn-disable" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                    <a class="btn-orange btn-control btn-edit" title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="available-section current-section">
+                                        <h3>current events:</h3>
+                                        <div class="list">
+                                            <div class="item">
+                                                <div class="clearfix">
+                                                    <h3>Amy's Hair Salon special offer event! <span class="event-date">Sunday, Nov. 16th</span></h3>
+                                                </div>
+                                                <div class="status clearfix">
+                                                    <ul>
+                                                        <li>event live</li>
+                                                        <li><span>45 attending</span></li>
+                                                    </ul>
+
+                                                    <!-- .social-icons -->
+                                                    <dl class="social-icons clearfix">
+                                                        <dt>share event</dt>
+                                                        <dd><a title="" href="https://twitter.com/beautifyla"><img alt="" src="content/images/assets/icons_social/Twitter.png" /></a></dd>
+                                                        <dd><a title="" href="https://www.facebook.com/BeautifyLA"><img alt="" src="content/images/assets/icons_social/Facebook.png" /></a></dd>
+                                                        <dd><a title="" href="https://plus.google.com/b/110749984355670134973/110749984355670134973/posts"><img alt="" src="content/images/assets/icons_social/Google_Plus.png" /></a></dd>
+                                                        <dd><a title="" href="#"><img alt="" src="content/images/assets/icons_social/Github_Shape_2.png" /></a></dd>
+                                                    </dl>
+                                                    <!-- /.social-icons -->
+
+                                                </div>
+                                                <div class="controls clearfix">
+                                                    <a class="btn-white-black btn-control" data-target="#modal-delete" data-toggle="modal" title="" href="javascript:void(0);">leave event</a>
+                                                    <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-message"></span> add message</a>
+                                                    <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                    <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-view"></span> view event</a>
+                                                    <a class="btn-orange btn-control btn-edit" title="" href="javascript:void(0);"><span class="icon icon-edit"></span>edit event</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="available-section past-section">
+                                        <h3>past events <span class="icon icon-up"></span></h3>
+                                        <div class="list">
+                                            <div class="item">
+                                                <div class="clearfix">
+                                                    <h3>Amy's Hair Salon special offer event! <span class="event-date">Sunday, Nov. 16th</span></h3>
+                                                </div>
+                                                <div class="controls clearfix">
+                                                    <a class="btn-white-black btn-control" title="" href="javascript:void(0);"><span class="icon icon-guest"></span> guest list</a>
+                                                    <ul>
+                                                        <li>150 invited</li>
+                                                        <li>45 attended</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /#event-1 -->
+
+                                <!-- #event-2 -->
+                                <div id="event-2" class="available-section event-guest">
+                                    <div class="event-header">
+                                        <h2>guest list</h2>
+                                    </div>
+                                    <div class="list">
+                                        <div class="item">
+                                            <div class="clearfix">
+                                                <h3><span class="title-company">Amy's Hair Salon opening event!</span> <span class="event-date">Nov. 7th</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="controls clearfix">
+                                        <input class="btn-orange btn-confirm" type="submit" value="45 guests confirmed" />
+                                        <h4>
+                                            these are the guests who are attending your event!
+                                            <a class="btn-print" title="" href="#"><span class="icon icon-print"></span>print all</a>
+                                        </h4>
+                                    </div>
+
+                                    <!-- .list-guest -->
+                                    <div class="list list-guest">
+                                        <div id="list-guest" class="scroller-wrapper">
+                                            <div class="scroll-bar">
+                                                <div class="table-css">
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            <strong>first name</strong>
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            <strong>last name</strong>
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            <strong>email</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            1
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            2
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            3
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            4
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            5
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            6
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            7
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            8
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            9
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            10
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            1
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            2
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            3
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            4
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            5
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            6
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            7
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            8
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+
+                                                        <div class="table-cell col-order">
+                                                            9
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-order">
+                                                            10
+                                                        </div>
+                                                        <div class="table-cell col-firt-name">
+                                                            Kouroush
+                                                        </div>
+                                                        <div class="table-cell col-last-name">
+                                                            Gohar
+                                                        </div>
+                                                        <div class="table-cell col-email">
+                                                            kourosh@gmail.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.list-guest -->
+
+                                </div>
+                                <!-- /#event-2 -->
+
+                                <!-- #event-3 -->
+                                <div id="event-3" class="event-edit hide">
+                                    <div class="col-xs-8">
+                                        <div class="event-header">
+                                            <h2>edit your event</h2>
+                                            <p>complete the following steps to prepare your event</p>
+                                        </div>
+
+                                        <!-- #event-type-1 -->
+                                        <fieldset id="event-type-1" class="hide">
+                                            <div class="table-css table-steps">
+                                                <div class="table-row">
+                                                    <div class="table-cell col-img">
+                                                        <img alt="" src="content/images/assets/image_step1.png" />
+                                                    </div>
+                                                    <div class="table-cell col-text">
+                                                        <h2>event type</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="section-row section-row-first">
+                                                <div class="row form-row">
+                                                    <div class="col-xs-12">
+                                                        <label>What type of event you want to host? <span class="error">*</span></label><br />
+                                                        <select class="selectpicker-settings select-l">
+                                                            <option>Free RSVP or Ticket Sales</option>
+                                                            <option>Special pricing</option>
+                                                        </select>
+                                                        <p>RSVP events are typically for bussinesses who want to offer an experience and Special pricing events are for businesses who have a special price on a service.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- #special-section -->
+                                            <div id="special-section">
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>how long is your event</label>
+                                                            <div class="available-date clear-fix">
+                                                                <div class="start-date">
+                                                                    <label>start date <span class="error">*</span></label><br />
+                                                                    <input type="number" class="form-control txt-date" placeholder="dd" />
+                                                                    <input type="number" class="form-control txt-month" placeholder="mm" />
+                                                                    <input type="number" class="form-control txt-year" placeholder="yyyy" />
+                                                                </div>
+                                                                <div class="div-to">to</div>
+                                                                <div class="end-date">
+                                                                    <label>end date <span class="error">*</span></label><br />
+                                                                    <input type="number" class="form-control txt-date" placeholder="dd" />
+                                                                    <input type="number" class="form-control txt-month" placeholder="mm" />
+                                                                    <input type="number" class="form-control txt-year" placeholder="yyyy" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>event name: <span class="error">*</span></label>
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>event page description: <span class="error">*</span></label>
+                                                            <label class="label-note">add a 300 words description for your event here.</label>
+                                                            <textarea cols="" rows="" class="form-control txt-l"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <span class="cb-custom">
+                                                                <input class="cb-mark" type="checkbox" id="cbPrivate" />
+                                                                <label class="cb-label" for="cbPrivate">private event:</label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>select your region: <span class="error">*</span></label>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <select id="county-select" class="selectpicker-settings select-100">
+                                                                <option value="" class="">--Select Area--</option>
+                                                                <option value="799">EC (NV)</option>
+                                                                <option value="1424">KC (WA)</option>
+                                                                <option value="75">LA (CA)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <select id="city-select" class="selectpicker-settings select-100">
+                                                                <option value="" class="">--Select City--</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <footer>
+                                                    <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                </footer>
+                                            </div>
+                                            <!-- /#special-section -->
+
+                                            <!-- #rsvp-section -->
+                                            <div id="rsvp-section" class="hide">
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>when is your event?</label>
+                                                            <div class="available-date clear-fix">
+                                                                <div class="start-date">
+                                                                    <label>date <span class="error">*</span></label><br />
+                                                                    <input type="number" class="form-control txt-date" placeholder="dd" />
+                                                                    <input type="number" class="form-control txt-month" placeholder="mm" />
+                                                                    <input type="number" class="form-control txt-year" placeholder="yyyy" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <div class="hour-row">
+                                                                <label>time <span class="error">*</span></label><br />
+                                                                <select class="selectpicker-settings select-m">
+                                                                    <option>9:30</option>
+                                                                </select>
+                                                                <select class="selectpicker-settings select-s">
+                                                                    <option>am</option>
+                                                                    <option>pm</option>
+                                                                </select>
+                                                                <span class="hour-to">to</span>
+                                                                <select class="selectpicker-settings select-m">
+                                                                    <option>9:30</option>
+                                                                </select>
+                                                                <select class="selectpicker-settings select-s">
+                                                                    <option>am</option>
+                                                                    <option>pm</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>event name: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-l" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>event page description: <span class="error">*</span></label>
+                                                            <label class="label-note">add a 300 words description for your event here.</label>
+                                                            <textarea cols="" rows="" class="form-control txt-l"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <footer>
+                                                    <a slideCurrent="event-type-1" slideNext="event-type-2" class="btn-orange btn-settings" title="" href="javascript:void(0);">next <span class="icon icon-next"></span></a>
+                                                </footer>
+                                            </div>
+                                            <!-- /#rsvp-section -->
+
+                                        </fieldset>
+                                        <!-- /#event-type-1 -->
+
+                                        <!-- #event-type-2 -->
+                                        <fieldset id="event-type-2">
+
+                                            <!-- #special-detail-section -->
+                                            <div id="special-detail-section">
+                                                <div class="table-css table-steps">
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-img">
+                                                            <img alt="" src="content/images/assets/image_step2.png" />
+                                                        </div>
+                                                        <div class="table-cell col-text">
+                                                            <h2>event pricing</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row section-row-first">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-6">
+                                                            <select id="select-area-event" class="select-settings select-100">
+                                                                <option value="">Select area</option>
+                                                                <option value="">LA</option>
+                                                                <option value="">OC</option>
+                                                                <option value="">SD</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <select id="select-region-event" class="select-settings select-100">
+                                                                <option value="">Entire region</option>
+                                                                <option>Australia</option>
+                                                                <option>Austria</option>
+                                                                <option>Belgium</option>
+                                                                <option>Brazil</option>
+                                                                <option>Canada</option>
+                                                                <option>Denmark</option>
+                                                                <option>Finland</option>
+                                                                <option>France</option>
+                                                                <option>Germany</option>
+                                                                <option>Greece</option>
+                                                                <option>Ireland</option>
+                                                                <option>Israel</option>
+                                                                <option>Italy</option>
+                                                                <option>Japan</option>
+                                                                <option>Luxembourg</option>
+                                                                <option>Mexico</option>
+                                                                <option>Netherlands</option>
+                                                                <option>Norway</option>
+                                                                <option>Poland</option>
+                                                                <option>Portugal</option>
+                                                                <option>Russia</option>
+                                                                <option>Spain</option>
+                                                                <option>Sweden</option>
+                                                                <option>Switzerland</option>
+                                                                <option>Turkey</option>
+                                                                <option>United Kingdom</option>
+                                                                <option>United States</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label class="label-title">service 1:</label>
+                                                            <label>choose appointment type: <span class="error">*</span></label>
+                                                            <select class="selectpicker-settings select-100">
+                                                                <option>select service type</option>
+                                                                <option>class</option>
+                                                                <option>service</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>new event price: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-s" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label class="label-title">service 2:</label>
+                                                            <label>choose service or class: <span class="error">*</span></label>
+                                                            <select class="selectpicker-settings select-100">
+                                                                <option>dance, 1 hour, $50, 10 people</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>new event price: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-s" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label class="label-title">service 3:</label>
+                                                            <label>choose service or class: <span class="error">*</span></label>
+                                                            <select class="selectpicker-settings select-100">
+                                                                <option>dance, 1 hour, $50, 10 people</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>new event price: <span class="error">*</span></label>
+                                                            <input type="text" class="form-control txt-s" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <footer>
+                                                    <a title="" href="javascript:void(0);" class="btn-orange btn-settings btn-dashboard" data-toggle="modal" data-target="#modal-change-services"><span class="icon icon-edit"></span> add or edit services</a>
+                                                </footer>
+
+                                                <footer>
+                                                    <h3>confirm your event so it can go live!</h3>
+                                                    <p>by confirming the event, you are agreeing to the <a title="" href="#" data-target="#modal-terms-privacy" data-toggle="modal">terms of use and privacy</a>. your event will go live after you confirm the event.</p>
+                                                    <a  slideCurrent="event-type-2" slideNext="event-type-1"  class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                    <a class="btn-orange btn-settings btn-dashboard" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-confirmed"><span class="icon icon-confirm"></span> confirm event</a>
+                                                </footer>
+                                            </div>
+                                            <!-- /#special-detail-section -->
+
+                                            <!-- #rsvp-detail-section -->
+                                            <div id="rsvp-detail-section" class="hide">
+                                                <div class="table-css table-steps">
+                                                    <div class="table-row">
+                                                        <div class="table-cell col-img">
+                                                            <img alt="" src="content/images/assets/image_step2.png" />
+                                                        </div>
+                                                        <div class="table-cell col-text">
+                                                            <h2>event PSVP details</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row section-row-first">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-6">
+                                                            <select id="select-area-PSVP" class="select-settings select-100">
+                                                                <option value="">Select area</option>
+                                                                <option value="">LA</option>
+                                                                <option value="">OC</option>
+                                                                <option value="">SD</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <select id="select-region-PSVP" class="select-settings select-100">
+                                                                <option value="">Entire region</option>
+                                                                <option>Australia</option>
+                                                                <option>Austria</option>
+                                                                <option>Belgium</option>
+                                                                <option>Brazil</option>
+                                                                <option>Canada</option>
+                                                                <option>Denmark</option>
+                                                                <option>Finland</option>
+                                                                <option>France</option>
+                                                                <option>Germany</option>
+                                                                <option>Greece</option>
+                                                                <option>Ireland</option>
+                                                                <option>Israel</option>
+                                                                <option>Italy</option>
+                                                                <option>Japan</option>
+                                                                <option>Luxembourg</option>
+                                                                <option>Mexico</option>
+                                                                <option>Netherlands</option>
+                                                                <option>Norway</option>
+                                                                <option>Poland</option>
+                                                                <option>Portugal</option>
+                                                                <option>Russia</option>
+                                                                <option>Spain</option>
+                                                                <option>Sweden</option>
+                                                                <option>Switzerland</option>
+                                                                <option>Turkey</option>
+                                                                <option>United Kingdom</option>
+                                                                <option>United States</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>maximum RSVP spots available: <span class="error">*</span></label><br />
+                                                            <input type="text" class="form-control txt-xs" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>attendee goat reward number: <span class="error">*</span></label>
+                                                            <label class="label-note">how many attendees must RSVP to event to recieve goal reward.</label>
+                                                            <input type="text" class="form-control txt-xs" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>goal reward: <span class="error">*</span></label>
+                                                            <label class="label-note">what are you offering as the RSVP goal reward? this reward must be available to all attendees who RSVP</label>
+                                                            <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: free product gift bag!"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>early bird reward</label>
+                                                            <label class="label-note">to give attendees more of an incentive to RSVP first and invite their friends, we like to reward the early birds.</label>
+                                                            <label>number of RSVP available for early bird reward</label><br />
+                                                            <input type="text" class="form-control txt-xs" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>early bird reward:</label><br />
+                                                            <textarea cols="" rows="" class="form-control txt-l" placeholder="ex: get 30% off all services or products in store!"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-row tags-section">
+                                                    <div class="row form-row">
+                                                        <div class="col-xs-12">
+                                                            <label>Tags</label><br />
+                                                            <textarea cols="" rows="" class="form-control txt-l" placeholder=""></textarea>
+                                                            <p>separate each tag with a comma or <a title="" role="button" data-toggle="collapse" href="#tagsList" aria-expanded="false" aria-controls="tagsList">Choose from existing tags</a></p>
+                                                            <dl id="tagsList" class="collapse tag-list">
+                                                                <dt>Click a tag: <button class="close"></button></dt>
+                                                                <dd>
+                                                                    <a title="" href="">chanh</a> <a title="" href="">vinasource</a>
+                                                                </dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <footer class="footer-type">
+                                                    <h3>confirm your event so it can go live!</h3>
+                                                    <p>by confirming the event, you are agreeing to the <a title="" href="#" data-target="#modal-terms-privacy" data-toggle="modal">terms of use and privacy</a>. your event will go live after you confirm the event.</p>
+                                                    <a  slideCurrent="event-type-2" slideNext="event-type-1"  class="btn-orange btn-settings" title="" href="javascript:void(0);"><span class="icon icon-back"></span> back</a>
+                                                    <a class="btn-orange btn-settings btn-dashboard" title="" href="javascript:void(0);" data-toggle="modal" data-target="#modal-confirmed"><span class="icon icon-confirm"></span> confirm event</a>
+                                                </footer>
+                                            </div>
+                                            <!-- /#rsvp-detail-section -->
+
+                                        </fieldset>
+                                        <!-- /#event-type-2 -->
+
+                                    </div>
+                                    <div class="col-xs-4 col-right-edit">
+                                        <div class="event-header clearfix">
+                                            <h2><span class="event-date">No. 7th</span></h2>
+                                        </div>
+
+                                        <!-- .social-icons -->
+                                        <dl class="social-icons clearfix">
+                                            <dt>follow business</dt>
+                                            <dd>
+                                                <img src="content/images/assets/icons_social/Twitter_default.png" alt="" />
+                                            </dd>
+                                            <dd>
+                                                <img src="content/images/assets/icons_social/Facebook_default.png" alt="" />
+                                            </dd>
+                                            <dd>
+                                                <img src="content/images/assets/icons_social/Google_Plus_default.png" alt="" />
+                                            </dd>
+                                            <dd>
+                                                <img src="content/images/assets/icons_social/Pinterest_default.png" alt="" />
+                                            </dd>
+                                            <dd>
+                                                <img src="content/images/assets/icons_social/Instagram_default.png" alt="" />
+                                            </dd>
+                                            <dt><a title=""  href="javascript:void(0);" data-toggle="modal" data-target="#modal-social">add social media</a></dt>
+                                        </dl>
+                                        <!-- /.social-icons -->
+
+                                        <!-- .social-icons -->
+                                        <dl class="social-icons clearfix hide">
+                                            <dt>follow business</dt>
+                                            <dd>
+                                                <a href="#" title="">
+                                                    <img src="content/images/assets/icons_social/Twitter.png" alt="" />
+                                                </a>
+                                            </dd>
+                                            <dd>
+                                                <a href="#" title="">
+                                                    <img src="content/images/assets/icons_social/Facebook.png" alt="" />
+                                                </a>
+                                            </dd>
+                                            <dd>
+                                                <a href="#" title="">
+                                                    <img src="content/images/assets/icons_social/Google_Plus.png" alt="" />
+                                                </a>
+                                            </dd>
+                                            <dd>
+                                                <a href="#" title="">
+                                                    <img src="content/images/assets/icons_social/Pinterest.png" alt="" />
+                                                </a>
+                                            </dd>
+                                            <dd>
+                                                <a href="#" title="">
+                                                    <img src="content/images/assets/icons_social/Instagram.png" alt="">
+                                                </a>
+                                            </dd>
+                                            <dt><a title=""  href="javascript:void(0);" data-toggle="modal" data-target="#modal-social">add social media</a></dt>
+                                        </dl>
+                                        <!-- /.social-icons -->
+
+                                        <!-- .coming-section -->
+                                        <div class="coming-section">
+                                            <header class="section-header section-header-white">
+                                                <h4>bulletin:</h4>
+                                            </header>
+
+                                            <!-- .bulletin-list -->
+                                            <div class="bulletin-list">
+                                                <div class="bulletin-guide">
+                                                    <p>your event bulletin posts will show up here. the bulletin is used to write quick updates about your event.</p>
+                                                    <input type="button" data-toggle="modal" data-target="#modal-bulletin" class="btn-orange btn-create" value="post a message" />
+                                                </div>
+
+                                                <!-- .bulletin-block -->
+                                                <div class="bulletin-block">
+                                                    <div class="bulletin-header">
+                                                        <div class="bulletin-title">
+                                                            <span class="bulletin-icon"></span>we made an update!
+                                                        </div>
+                                                    </div>
+                                                    <div class="bulletin-content">
+                                                        here is an update made by the busines. they should be allowed to modify updates after they're already posted.
+                                                    </div>
+                                                    <div class="bulletin-footer clearfix">
+                                                        <input type="button" class="btn-orange btn-edit" data-toggle="modal" data-target="#modal-bulletin" value="edit" />
+                                                        <time>posted on:<br /> 11/3/14</time>
+                                                    </div>
+                                                </div>
+                                                <!-- /.bulletin-block -->
+
+                                                <!-- .bulletin-block -->
+                                                <div class="bulletin-block">
+                                                    <div class="bulletin-header">
+                                                        <div class="bulletin-title">
+                                                            <span class="bulletin-icon"></span>we made an update!
+                                                        </div>
+                                                    </div>
+                                                    <div class="bulletin-content">
+                                                        here is an update made by the busines. they should be allowed to modify updates after they're already posted.
+                                                    </div>
+                                                    <div class="bulletin-footer clearfix">
+                                                        <input type="button" class="btn-orange btn-edit" data-toggle="modal" data-target="#modal-bulletin" value="edit" />
+                                                        <time>posted on:<br /> 11/3/14</time>
+                                                    </div>
+                                                </div>
+                                                <!-- /.bulletin-block -->
+
+                                            </div>
+                                            <!-- /.bulletin-list -->
+
+                                        </div>
+                                        <!-- /.coming-section -->
+                                    </div>
+
+                                </div>
+                                <!-- /#event-3 -->
+
+                            </div>
+                            <!-- /.events-content -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /tabs -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.main-content -->
+{% endblock %}
+
+{% block modal %}
+{% include "content/modals/access.html" %}
+{% endblock %}
+
+{% block scriptLibs %}{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="content/js/pages/ui-company-dashboard.js"></script>
+{% endblock %}
+

@@ -1,0 +1,42 @@
+{% extends 'master/main-blog.html' %}
+
+{% block title %}Beautify LA - Confirm{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<div class="main-content confirm-page clearfix" style="background-image:url(content/images/assets/Dollarphotoclub_69565956.jpg);">
+    <div class="container">
+        <!-- .modal-login -->
+        <div class="modal-form modal-login">
+            <div class="modal-header">
+                <h3 class="modal-title">welcome to Beautify LA events!</h3>
+                <p>if you have been approved you will be sent an email with a 6 digit code and login info. you can manage and modify your event details from your events dashboard.</p>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'enter authentication code'; }" onfocus="if (this.value == 'enter authentication code') { this.value = ''; }" value="enter authentication code" />
+                    <button type="button" class="btn-orange btn-form btn-confirm">&nbsp;</button>
+                    <div class="alert-error">invalid</div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <hr />
+                <div class="text-right link-form">don't have an code? <a class="link-create" title="" href="#">request event now</a></div>
+             </div>
+        </div><!-- /.modal -->
+        <!-- /.modal-login -->
+    </div>
+</div>
+{% endblock %}
+
+{% block scriptLibs %}{% endblock %}
+
+{% block script %}{% endblock %}
+
+

@@ -1,0 +1,63 @@
+{% extends './master/main-company-2.html' %}
+
+{% block title %}Beautify LA - Company List{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block namepage %}company-page company-list-page{% endblock %}
+
+{% block banner %}
+{% include "content/pages/company/list/banner.html" %}
+{% endblock %}
+
+{% block main %}
+<div class="main-content home-page clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
+                <div id="main-affix">
+                    <div class="affix-content event-section">
+                        <!-- .section-header -->
+                        <header class="section-header on-desktop">
+                            <h2>Find out what's happening on Kourosh Soccer Club!</h2>
+                        </header>
+                        <!-- /.section-header -->
+
+                        {% include "content/pages/company/list/filter.html" %}
+
+                        <p>Athletics ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed consequat massa.  Nulla ornare nibh vitae magna ullamcorper fringilla. Pellentesque porta viverra odio, eget vulputate diam faucibus quis.</p>
+
+                        {% include "content/pages/company/list/event.html" %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-3 hidden-xs">
+                <div id="nav-affix">
+                    <div class="affix-content">
+                        {% include "content/pages/company/list/socials.html" %}
+
+                        {% include "content/pages/company/list/tweets.html" %}
+
+                        {% include "content/pages/company/list/partners.html" %}
+
+                        {% include "content/pages/company/list/past-event.html" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block modal %}
+{% include "content/modals/access.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="../../content/js/pages/ui-company-list.js"></script>
+<script type="text/javascript" src="../../content/js/pages/ui-company.js"></script>
+{% endblock %}
+

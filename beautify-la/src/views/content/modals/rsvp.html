@@ -1,0 +1,269 @@
+<!-- .modal-rsvp -->
+<div class="modal fade" id="modal-rsvp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-rsvp">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- .timer-form -->
+                <div id="timer-form1" class="timer-form">
+                    <header class="section-header timer-form-header">
+                        <h3>confirm your spot <span class="icon-down"></span></h3>
+                        <h2>10:00</h2>
+                        <p>time to complete RSVP</p>
+                    </header>
+                    <header class="section-header timer-form-header rsvp-header">
+                        <h4>early bird reward</h4>
+                        <div class="rsvp-voucher">
+                            <strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                        </div>
+                        <h4>contact info</h4>
+                    </header>
+                    <fieldset>
+                        <div class="clearfix">
+                            <div class="col-timer col-first-name">
+                                <label for="txtFirstName1">
+                                    first name: <span class="alert-error">*</span>
+                                </label>
+                                <input id="txtFirstName1" class="form-control" type="text">
+                            </div>
+                            <div class="col-timer col-last-name">
+                                <label for="txtLastName1">
+                                    first name: <span class="alert-error">*</span>
+                                </label>
+                                <input id="txtLastName1" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <header class="section-header timer-guest">
+                            <div class="col-timer col-email">
+                                <label for="txtEmail1">email:</label>
+                                <input id="txtEmail1" class="form-control" type="text" />
+                            </div>
+                        </header>
+
+                        <header class="section-header timer-guest">
+                            <div class="col-timer">
+                                <label for="select-guest">additional guests?</label>
+                                <select id="select-guest" class="selectpicker select-guest">
+                                    <option>2</option>
+                                </select>
+                                <span class="ticket-price visible-xs">$15 per ticket</span>
+                            </div>
+                        </header>
+                        <div class="btn-controls">
+                            <input slideCurrent="timer-form1" slideNext="timer-form2" class="btn-orange btn-timer" type="button" value="next" /> <span class="ticket-price hidden-xs">$15 per ticket</span>
+                        </div>
+                        <div class="timer-error alert-error">
+                            <p>please enter required information before proceeding</p>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- /.timer-form -->
+
+                <!-- .timer-form -->
+                <div id="timer-form2" class="timer-form hide">
+                    <header class="section-header timer-form-header">
+                        <h3>confirm your spot <span class="icon-down"></span></h3>
+                        <h2>10:00</h2>
+                        <p>time to complete RSVP</p>
+                    </header>
+                    <header class="section-header timer-form-header rsvp-header">
+                        <h4>early bird reward</h4>
+                        <div class="rsvp-voucher">
+                            <strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                        </div>
+                        <h4>guest info</h4>
+                    </header>
+                    <fieldset>
+                        <header class="section-header timer-guest clear-fix">
+                            <h4>guest #1</h4>
+                            <div class="col-timer col-email disabled">
+                                John Doe
+                            </div>
+                            <div class="col-timer col-email disabled">
+                                billybob@gmail.com
+                            </div>
+                        </header>
+
+                        <header class="section-header timer-guest clear-fix">
+                            <h4>guest #2</h4>
+                            <div class="clearfix">
+                                <div class="col-timer col-first-name">
+                                    <label for="txtFirstName2">first name:<span class="alert-error">*</span></label>
+                                    <input id="txtFirstName2" class="form-control" type="text" />
+                                </div>
+                                <div class="col-timer col-last-name">
+                                    <label for="txtLastName2">first name:<span class="alert-error">*</span></label>
+                                    <input id="txtLastName2" class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-timer col-email">
+                                <label for="txtEmail2">email:</label>
+                                <input id="txtEmail2" class="form-control" type="text" />
+                            </div>
+                        </header>
+
+                        <div class="btn-controls">
+                            <a title="" href="javascript:void(0);" slideCurrent="timer-form2" slideNext="timer-form1" class="btn-orange btn-timer"><span class="icon-back"></span> back</a>
+                            <input slideCurrent="timer-form2" slideNext="timer-form4" class="btn-orange btn-timer" type="button" value="next" />
+                        </div>
+                        <div class="timer-error alert-error">
+                            <p>please enter required information before proceeding</p>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- /.timer-form -->
+
+                <!-- .timer-form -->
+                <div id="timer-form3" class="timer-form hide">
+                    <header class="section-header timer-form-header">
+                        <h3>RSVP complete!</h3>
+                        <p>you're going to the event! we will send you a confirmation<br class="visible-lg" /> email with the event details.</p>
+                    </header>
+                    <header class="section-header timer-form-header rsvp-header">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> 60% </div>
+                        </div>
+                        <strong>invite your friends for event more rewards</strong> - if the attendee goal is reached, everyone who attends will recieve a gift bag sponsored by Beauty Works LA
+
+                    </header>
+                    <!-- .ticket-calendar -->
+                    <div class="ticket-calendar">
+                        <div class="ticket-back">
+                            <h4>share this event</h4>
+                        </div>
+                        <ul class="link-share clearfix">
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Email_share.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Share_link.png" /></a></li>
+                        </ul>
+                        <div class="ticket-back">
+                            <h4>add to my...</h4>
+                        </div>
+                        <div class="ticket-method ticket-method-calendar">
+                           <a title="" href="#" class="btn-dark-green btn-method1 btn-google-calendar">Google calendar</a>
+                        </div>
+                        <div class="ticket-method ticket-method-calendar">
+                            <a title="" href="#" class="btn-brown btn-method1 btn-apple-calendar">Apple calendar</a>
+                        </div>
+                        <div class="ticket-method ticket-method-calendar">
+                            <a title="" href="#" class="btn-light-blue btn-method1 btn-facebook-calendar">Facebook calendar</a>
+                        </div>
+                    </div>
+                    <!-- /.ticket-calendar -->
+
+                    <div class="text-center">
+                        <input class="btn-orange btn-timer" type="button" value="done" data-dismiss="modal" />
+                    </div>
+
+                </div>
+                <!-- /.timer-form -->
+
+                <!-- .timer-form -->
+                <div id="timer-form4" class="timer-form hide">
+                    <header class="section-header timer-form-header">
+                        <h3>confirm your spot <span class="icon-down"></span></h3>
+                        <h2>10:00</h2>
+                        <p>time to complete RSVP</p>
+                    </header>
+                    <header class="section-header timer-form-header rsvp-header">
+                        <h4>early bird reward</h4>
+                        <div class="rsvp-voucher">
+                            <strong>buy now</strong> and get 30% off in-store purchase<br /> <strong>10 spots left for reward</strong>
+                        </div>
+                        <h4>checkout</h4>
+                    </header>
+                    <fieldset class="ticket-fieldset">
+                        <div class="table-border">
+                            <div class="table-css table-ticket">
+                                <div class="table-row">
+                                    <div class="table-cell td-info">
+                                        John <span>Doe</span> <span class="hidden-xs"><br />johndoe@gmail.com</span>
+                                    </div>
+                                    <div class="table-cell td-price">
+                                        $15
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="td-email visible-xs">
+                                johndoe@gmail.com
+                            </div>
+                        </div>
+                        <div class="table-border">
+                            <div class="table-css table-ticket">
+                                <div class="table-row">
+                                    <div class="table-cell td-info">
+                                        Lisa<span> Johnson</span><span class="hidden-xs"><br />lisajohnson@gmail.com</span>
+                                    </div>
+                                    <div class="table-cell td-price">
+                                        $15
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="td-email visible-xs">
+                                lisajohnson@gmail.com
+                            </div>
+                        </div>
+
+                        <div class="table-css table-total">
+                            <div class="table-row">
+                                <div class="table-cell td-info">
+                                    total due:
+                                </div>
+                                <div class="table-cell td-price">
+                                    $15
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-controls btn-control-paypal">
+                            <a title="" href="javascript:void(0);" slideCurrent="timer-form4" slideNext="timer-form2" class="btn-orange btn-timer"><span class="icon-back"></span> back</a>
+                            <button slideCurrent="timer-form4" slideNext="timer-form5" class="btn-orange btn-timer btn-paypal"><span class="icon-paypal"></span> PayPal or credit card</button>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- /.timer-form -->
+
+                <!-- .timer-form -->
+                <div id="timer-form5" class="timer-form hide">
+                    <header class="section-header timer-form-header">
+                        <h3>purchase complete!</h3>
+                        <p>you're going to the event! we will send you a confirmation<br class="visible-lg" /> email with the event details.</p>
+                    </header>
+                    <hr  />
+                    <header class="section-header timer-form-header rsvp-header hide">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> 60% </div>
+                        </div>
+                        <strong>invite your friends for event more rewards</strong> - if the attendee goal is reached, everyone who attends will recieve a gift bag sponsored by Beauty Works LA
+
+                    </header>
+                    <!-- .ticket-calendar -->
+                    <div class="ticket-calendar">
+                        <div class="ticket-back">
+                            <h4>share this event</h4>
+                        </div>
+                        <ul class="link-share clearfix">
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Twitter_2.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Facebook_2.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Email_share.png" /></a></li>
+                            <li><a target="_blank" href="#" title=""><img alt="" src="content/images/assets/icons_social/Share_link.png" /></a></li>
+                        </ul>
+
+                        <div class="addtocalendar"></div>
+                    </div>
+                    <!-- /.ticket-calendar -->
+
+                    <div class="text-center">
+                        <input class="btn-orange btn-timer" type="button" value="done" data-dismiss="modal" /><br /><br />
+                    </div>
+
+                </div>
+                <!-- /.timer-form -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /.modal-rsvp -->

@@ -1,0 +1,67 @@
+.booking-page{
+    font-size: 24px;
+}
+.wrapper .back-to-home{
+    background: $black;
+}
+.wrapper .back-to-home a{
+    display: inline-block;
+    position: relative;
+    font-size:  $h6;
+    line-height: 46px;
+    font-family: ralewaylight,sans-serif;;
+    color: $white;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.wrapper .back-to-home a:before{
+    content: '';
+    width: 21px;
+    height: 21px;
+    background: url(images/ui/master/header/icons.png) center -84px no-repeat;
+    background-size: 21px auto;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+.new-spot-event .bar-btn .btn-orange{display:block;font:24px/51px bebas_neueregular, sans-serif;text-decoration:none;margin-bottom:15px;}
+.new-spot-event .spot-content h2{font-size:36px;}
+.new-spot-event .spot-content p{font-size:16px;}
+.new-spot-event .spot-bar{background:#f1f6f9;height:57px;}
+.new-spot-event .spot-bar .progress{height:10px;background:#CCDAE3;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+.new-spot-event .spot-bar .spot-guests{background-image:url(images/assets/Guests_icon.png);}
+.new-spot-event .timer-section > .section-header{margin:15px 0;}
+.new-spot-event .address-block{padding:20px;background:#f1f6f9;}
+.new-spot-event .timer-section .address-block .section-header{margin-bottom:15px;}
+.new-spot-event .timer-section .address-block .section-header h4{margin:0;font:19px/150% ralewaybold, sans-serif;}
+.new-spot-event .timer-section .address-block .section-header p{margin:0;font:16px/150% ralewaymedium, sans-serif;}
+
+.timer-section{}
+.timer-section .timer-map #google-map{height:300px;}
+.timer-section .address-block .section-header h4{font-family:ralewaybold, sans-serif;}
+.btn-RSVP{width:200px;margin:25px 0;font:20px/44px ralewaymedium, sans-serif;border:0 none;}
+.btn-ticket{width:200px;margin:25px 0;font:20px/44px ralewaybold, sans-serif;border:0 none;}
+
+@media (max-width: 767px){
+    .new-spot-event .address-block{padding:10px;}
+    .new-spot-event .spot-content h2{font-size:22px;line-height:26px;}
+    .new-spot-event .timer-section .address-block .section-header h5,
+    .new-spot-event .timer-section .address-block .section-header p{font-size:12px;}
+
+    .timer-section{padding:0 15px;}
+
+    .btn-RSVP{display:block;margin:25px auto;}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .wrapper .back-to-home a:before{
+        background-image: url(images/ui/master/header/icons@3x.png);
+    }
+}

@@ -1,0 +1,63 @@
+.radio-custom{
+    position: relative;
+}
+.radio-mark {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.radio-mark ~ .radio-label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block !important;
+    font-size: $h6;
+    color: #333232;
+}
+.radio-mark:checked ~ .radio-label:before {
+    background-image: url(images/ui/modals/checkout/icon_checked.png);
+}
+.radio-mark ~ .radio-label:before {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    width: 16px;
+    height:16px;
+    background: url(images/ui/modals/checkout/icon_check.png) center center no-repeat;
+    background-size: 16px auto;
+    top: 4px;
+    left: 0;
+    cursor: pointer;
+}
+.radio-mark:disabled ~ .radio-label {
+    opacity: .5;
+    cursor: default !important;
+}
+.radio-mark:disabled ~ .radio-label:before{
+    cursor: default !important;
+}
+
+@media (max-width: 767px) {
+    .radio-mark ~ .radio-label{
+        font-size: $s15;
+        color: #363535;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .radio-mark:checked ~ .radio-label:before {
+        background-image: url(images/ui/modals/checkout/icon_checked@3x.png);
+    }
+    .radio-mark ~ .radio-label:before {
+        background-image: url(images/ui/modals/checkout/icon_check@3x.png);
+    }
+}
