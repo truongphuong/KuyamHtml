@@ -45,31 +45,31 @@ $(document).ready(function(){
 		dropdownCalendar();		
 		
 	});
-            
-	function dropdownCalendar() {
-		var tempId, currentId;
-	
-		$(document).click(function () {
-			 tempId = "";
-			$(".add-to-calendar ul").hide();
-		});
-	
-		$('.add-to-calendar').on('click', function (e) {
-			e.stopPropagation();
-			currentId = $(this).attr('id');
-			if (currentId != null) {
-	
-				if (currentId != tempId) {
-					$('.add-to-calendar').find('ul').hide();
-					$(this).find('ul').show();
-					tempId = currentId;
-				}
-				else {
-					tempId = "";
-					$('.add-to-calendar').find('ul').hide();
-				}
-			}
-		});
-	}
+    
+});  
+      
+function dropdownCalendar() {
+	var tempId, currentId;
 
-});
+	$(document).click(function () {
+		 tempId = "";
+		$(".add-to-calendar ul").hide();
+	});
+
+	$('.add-to-calendar').on('click', function (e) {
+		e.stopPropagation();
+		currentId = $(this).attr('id');
+		if (currentId != null) {
+
+			if (currentId != tempId) {
+				$('.add-to-calendar').find('ul').hide();
+				$(this).find('ul').show();
+				tempId = currentId;
+			}
+			else {
+				tempId = "";
+				$('.add-to-calendar').find('ul').hide();
+			}
+		}
+	});
+}
