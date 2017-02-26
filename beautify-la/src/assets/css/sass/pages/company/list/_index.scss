@@ -1,26 +1,64 @@
-.company-list-page .main-content{
-    padding-top:28px;
-}
-.company-list-page .event-section .section-header{
-    margin-bottom: 0;
-}
-.company-list-page .event-section .section-header h2{
-    font-size: $s40;
-    line-height: 50px;
-    font-family: 'lato', sans-serif;
-    color:#3f3f3f;
-    margin:0;
-}
-.company-list-page .event-section > p{
-    font-size: $h5;
-    line-height: 26px;
-    font-family: 'lato', sans-serif;
-    color:#333;
-    margin:21px 0 0;
-}
-.company-list-page .filter-setion{
-    margin-top: 28px;
-}
-.company-list-page .new-spot:first-child{
-    margin-top: 22px;
+.company-list-page {
+    .site-header {
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        h1{
+            color: $white;
+            font-size: $h1;
+            font-family: $primary;
+            line-height: 100%;
+            margin: 24px 0 0;
+            float: left;
+        }
+    }
+
+    .main-content {
+        padding-top:28px;
+
+        @media (max-width: 767px){
+            background: #f5f5f5;
+            padding-top: 12px;
+        }
+    }
+
+    .event-section {
+        .section-header {
+            margin-bottom: 0;
+
+            h2 {
+                font-size: $s40;
+                line-height: 50px;
+                font-family: $primary;
+                color:#3f3f3f;
+                margin:0;
+
+                @media (max-width: 767px){
+                    font-size: 21px;
+                    color: #ff4527;
+                    line-height: 23px;
+                }
+            }
+        }
+
+        > p {
+            font-size: $h5;
+            line-height: 26px;
+            font-family: $primary;
+            color:#333;
+            margin:21px 0 0;
+
+            @media (max-width: 767px){
+                line-height: 18px;
+                font-size: $s15;
+                margin-top:14px;
+            }
+        }
+    }
+
+    .social_twitter {
+        margin-top: 0;
+    }
 }

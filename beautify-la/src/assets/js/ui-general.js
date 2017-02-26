@@ -95,4 +95,22 @@ $(document).ready(function(){
             selectAreaScroll.refresh();
         }
     });
+
+    placeholderCustom();
+
+    $(document).on('change', 'select', function(){
+        var $this = $(this);
+
+        if($this.siblings('.bootstrap-select').length === 0){
+            return;
+        }
+
+        if($this.val().trim() !== ''){
+            $this.addClass('active');
+            $this.siblings('.bootstrap-select').addClass('active');
+        } else {
+            $this.removeClass('active');
+            $this.siblings('.bootstrap-select').removeClass('active');
+        }
+    });
 });

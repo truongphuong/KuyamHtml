@@ -51,7 +51,7 @@ $(document).ready(function(){
 	
 		$(document).click(function () {
 			 tempId = "";
-			$(".add-to-calendar ul").hide();
+			$('.add-to-calendar ul').hide();
 		});
 	
 		$('.add-to-calendar').on('click', function (e) {

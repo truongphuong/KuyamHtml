@@ -4,6 +4,11 @@
 #nav-affix{
     width: 290px;
     padding-left: 60px;
+
+    @media (max-width: 1269px){
+        width: calc(290px - 60px);
+        padding-left: 0;
+    }
 }
 #main-affix.affix,
 #nav-affix.affix{
@@ -16,8 +21,7 @@
 }
 .home-page,
 .company-page{
-    @media (min-width: 1230px){
-
+    @media (min-width: 1270px){
         #main-affix{
             width: 930px;
         }
@@ -26,28 +30,21 @@
             padding-left: 0;
         }
     }
-
-    @media (max-width: 1029px){
-        #main-affix{
-            width: 930px;
-        }
-        #nav-affix{
-            width: 240px;
-        }
-    }
 }
-
 @media (max-width: 979px){
     #main-affix{
         width: 470px;
     }
     #nav-affix{
         width: 220px;
-        padding: 0;
     }
 }
 
 @media (max-width: 767px){
+    .home-page,
+    .company-page{
+        font-size: 16px;
+    }
     #main-affix,
     #nav-affix{
         width: 100%;

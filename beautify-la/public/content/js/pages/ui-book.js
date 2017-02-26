@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 $(document).ready(function () {
-	$("#tabs").tabs({
+	$('#tabs').tabs({
 		create: function create(event, ui) {
 			//resetScroll();
 		},
@@ -11,8 +11,8 @@ $(document).ready(function () {
 	});
 
 	$('.select-options').click(function (e) {
-		$(".options-icon").removeClass("z-index-12");
-		$(this).find(".options-icon").addClass("z-index-12");
+		$('.options-icon').removeClass("z-index-12");
+		$(this).find('.options-icon').addClass("z-index-12");
 	});
 
 	$('.options-text li.options-item').click(function (e) {

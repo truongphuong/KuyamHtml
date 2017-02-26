@@ -135,7 +135,8 @@ body{overflow-x:auto;}
 .settings-section #carousel-desktop,
 .settings-section #carousel-desktop .carousel-inner > .item{height:449px;}
 .settings-section .company-profile-info{padding:0 0 20px 280px;}
-.settings-section .site-footer p{text-align:left;}
+.settings-section .site-footer .powered p{font-weight: 400;font-size: 16px;}
+.settings-section .site-footer p{text-align:left;font-size: 12px;}
 .settings-section .site-contact .section-header h4{font-size:24px;line-height:28px;}
 .settings-section .modal-offerings{width:760px;}
 .settings-section .modal-crop{width:600px;}
@@ -172,7 +173,7 @@ body{overflow-x:auto;}
     opacity: 1;
     margin-top: 0;
     z-index: 1;
-    background: url(images/ui/modals/icon-close.png) center center no-repeat;
+    background: url(images/ui/modals/icon_close.png) center center no-repeat;
     background-size: 14px auto;
     color: transparent;
     width: 33px;
@@ -204,7 +205,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
         background-image:url(images/assets/Check_mark@2x.png);
     }
     .settings-section ul.header-image-list li .close{
-        background-image: url(images/ui/modals/icon-close@2x.png);
+        background-image: url(images/ui/modals/icon_close@3x.png);
     }
 }
 
@@ -214,6 +215,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     color: #F3472D;
     text-decoration: none;
     cursor:pointer;
+    -webkit-appearance: inherit;
 }
 .tags-section a:hover,
 .tags-section .span-collapse:hover{
@@ -239,7 +241,7 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     z-index: 1;
     top: 0;
     right: 0;
-    background: url(images/ui/modals/icon-close.png) center center no-repeat;
+    background: url(images/ui/modals/icon_close.png) center center no-repeat;
     background-size: 14px auto;
     color: transparent;
     width: 33px;
@@ -290,37 +292,10 @@ only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px)
 only screen and (              min-resolution:120dpi)      and (min-width:320px),
 only screen and (               min-resolution:2dppx)      and (min-width:320px){
     .tags-section .tag-list li .close{
-        background-image: url(images/ui/modals/icon-close@2x.png);
+        background-image: url(images/ui/modals/icon_close@3x.png);
     }
 }
 /* End .tags-section*/
-
-/* Begin .placeholder-custom */
-.placeholder-custom{
-    position:relative;
-    border:1px solid #ccc;
-    border-radius:4px;
-}
-.placeholder-custom .placeholder{
-    position:absolute;
-    width:100%;
-    height:100%;
-    line-height:34px;
-    padding:0 12px;
-    color:#999;
-}
-.placeholder-custom .placeholder .optional{
-    font-size:12px;
-}
-.placeholder-custom .form-control{
-    border:0 none;
-    position: relative;
-    background: transparent;
-}
-.placeholder-custom .form-control.has-value{
-    background: #fff;
-}
-/* End .placeholder-custom */
 
 .alternative-form.disable{
     position:relative;

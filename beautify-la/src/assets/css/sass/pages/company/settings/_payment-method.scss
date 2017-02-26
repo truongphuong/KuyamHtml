@@ -1,0 +1,103 @@
+.company-settings-page {
+    .payment-method{
+        .method-section {
+            .method{
+                margin-bottom: 36px;
+
+                &:last-child{
+                    margin: 0;
+                }
+
+                label{
+                    margin-bottom: 2px;
+                }
+
+                .section{
+                    .btn{
+                        display: block;
+                        width: 262px;
+                        height: 46px;
+                        background: center center no-repeat;
+                        background-size: 262px auto;
+
+                        &.btn-stripe-connect{
+                            background-image: url(images/ui/pages/company/settings/btn_stripe_connect.png);
+                            margin-top: 1px;
+                        }
+
+                        &.btn-stripe-connected{
+                            background-image: url(images/ui/pages/company/settings/btn_stripe_connected.png);
+                        }
+                    }
+
+                    ul{
+                        margin:0;
+                        padding:0;
+                        list-style: none;
+
+                        li{
+                            float: left;
+                            color: #ff5454;
+                            font-size: $h5;
+                            font-family: $primary;
+                            line-height: 40px;
+                            margin-left: 24px;
+
+                            &:first-child{
+                                margin-left: 0;
+                            }
+
+                            .btn-reconnect{
+                                width: 126px;
+                                height: 38px;
+                                font-size: $s15;
+                                font-family: $primary;
+
+                                &:before{
+                                    content: '';
+                                    display: inline-block;
+                                    width: 14px;
+                                    height:12px;
+                                    background: url(images/ui/pages/company/settings/icon_reconnect.png) center center no-repeat;
+                                    background-size: 14px auto;
+                                    position: relative;
+                                    top:0;
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .placeholder-custom{
+                        width: 444px;
+                        margin-top:8px;
+                        margin-bottom: 17px;
+                    }
+
+                    &.disabled{
+                        .btn-stripe-connect,
+                        .btn-stripe-connected,
+                        ul{
+                            opacity: .5;
+                        }
+
+                        .placeholder-custom{
+                            border-color: $disabled;
+
+                            &:after{
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

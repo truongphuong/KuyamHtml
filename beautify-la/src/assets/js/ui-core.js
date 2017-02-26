@@ -248,3 +248,25 @@ function listFilter(header, list) {
         }, 100);
     });
 }
+
+function placeholderCustom(){
+    var input = '.placeholder-custom .form-control';
+    $(document).find(input).each(function(){
+        var $this = $(this);
+        placholderCheck($this);
+    });
+
+    $(document).on('keyup', input, function(){
+        var $this = $(this);
+        placholderCheck($this);
+    });
+}
+
+function placholderCheck($obj){
+    var inputVal = $obj.val();
+    if(inputVal !== ''){
+        $obj.addClass('has-value');
+    }else{
+        $obj.removeClass('has-value');
+    }
+}

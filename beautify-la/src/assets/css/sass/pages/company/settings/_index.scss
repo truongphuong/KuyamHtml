@@ -1,0 +1,145 @@
+.company-settings-page {
+    .site-header {
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        h1{
+            color: $white;
+            font-size: $h1;
+            line-height: 100%;
+            margin: 24px 0 0;
+            float: left;
+        }
+    }
+
+    .main-content{
+        padding:0;
+    }
+
+    .content{
+        width: calc(100% - 131px);
+        float: left;
+        padding:14px 38px 20px;
+        border-left: 1px solid rgba(0, 0, 0, .3);
+
+        @media (max-width: 767px){
+            border-left: 0 none;
+            float: none;
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        header{
+            h3{
+                font-size: $s27;
+                line-height: 34px;
+                font-family: $primary;
+                color: #f2472d;
+                margin:0 0 17px;
+
+                small{
+                    font-style: italic;
+                    font-size: 14px;
+                    color: $base;
+                }
+            }
+            p{
+                font-size: $h5;
+                font-family: $primary;
+                color: rgba(51, 51, 51, .6);
+                position: relative;
+                top: -4px;
+                margin:0 0 16px;
+            }
+        }
+
+        section{
+            padding-bottom: 5px;
+        }
+
+        .row{
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+        div[class*="col-"]{
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-bottom: 18px;
+        }
+
+        .bootstrap-select {
+            > .btn,
+            > .btn:focus,
+            > .btn:active,
+            > .btn:hover,
+            > .btn:visited,
+            &.open > .btn,
+            &.open > .btn:focus,
+            &.open > .btn:active,
+            &.open > .btn:hover,
+            &.open > .btn:visited{
+                font-size: $h5;
+                min-height: 38px;
+                height: 38px;
+                padding-left: 15px;
+                padding-right: 50px;
+                border-color: $border;
+
+               /*@media (max-width:767px){
+                    padding-left: 10px;
+                    padding-right: 35px;
+                }*/
+            }
+
+            &.btn-group {
+                .btn {
+                    .caret {
+                        width:21px;
+                        height:15px;
+                        background-image: url(images/ui/pages/company/settings/icon_select.png);
+                        background-size: 21px auto;
+                        margin-top: -7px;
+                        right: 15px;
+
+                        /*@media (max-width:767px){
+                            width:15px;
+                            background-size: 15px auto;
+                            right: 10px;
+                        }*/
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                > li {
+                    font-size: $h5;
+
+                    > a {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+
+        .label-form{
+            display: block;
+            font-family: $primary;
+            font-size: $h5;
+            line-height: 25px;
+            color: $base;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        footer{
+            .btn {
+                width: 146px;
+            }
+        }
+    }
+}

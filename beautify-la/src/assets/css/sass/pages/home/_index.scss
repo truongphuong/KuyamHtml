@@ -1,56 +1,74 @@
-.home-page .main-content {
-    padding-top:28px;
-}
-.home-page .event-section .section-header {
-    margin-bottom: 0;
-}
-.home-page .event-section .section-header h2 {
-    font-size: $s40;
-    line-height: 50px;
-    font-family: 'lato', sans-serif;
-    color:#3f3f3f;
-    margin:0;
-}
-.home-page .event-section > p {
-    font-size: $h5;
-    line-height: 26px;
-    font-family: 'lato', sans-serif;
-    color:#333;
-    margin:21px 0 0;
-}
-.home-page .filter-setion{
-    margin-top: 28px;
-}
-.home-page .new-spot:first-child {
-    margin-top: 22px;
-}
+.home-page {
+    .main-content {
+        padding-top:28px;
 
-.happen-date {
-    height:78px;
-    text-align:right;
-    position:relative;
-}
-.happen-date .section-header {
-    width:290px;
-    position:absolute;
-    right:0;
-}
-.happen-date .section-header h2 {
-    color:#F3472D !important;
-    font:36px/40px ralewaybold, sans-serif;
-}
-
-.home-page .social_twitter {
-    margin-top: 0;
-}
-
-@media (max-width: 979px){
-    .happen-date .section-header h2{
-        font-size:30px;
-        line-height:34px;
+        @media (max-width: 767px){
+            background: #f5f5f5;
+            padding-top: 12px;
+        }
     }
-}
 
-@media (max-width: 767px){
-    .happen-date .section-header{padding:0 0 20px;}
+    .event-section {
+        .section-header {
+            margin-bottom: 0;
+
+            h2 {
+                font-size: $s40;
+                line-height: 50px;
+                font-family: 'lato', sans-serif;
+                color:#3f3f3f;
+                margin:0;
+
+                @media (max-width: 767px){
+                    font-size: 21px;
+                    color: #ff4527;
+                    line-height: 23px;
+                }
+            }
+        }
+
+        > p {
+            font-size: $h5;
+            line-height: 26px;
+            font-family: 'lato', sans-serif;
+            color:#333;
+            margin:21px 0 0;
+
+            @media (max-width: 767px){
+                line-height: 18px;
+                font-size: $s15;
+                margin-top:14px;
+            }
+        }
+    }
+
+    .social_twitter {
+        margin-top: 0;
+    }
+
+    .happen-date {
+        height:78px;
+        text-align:right;
+        position:relative;
+
+        .section-header {
+            width:290px;
+            position:absolute;
+            right:0;
+
+            @media (max-width: 767px){
+                padding:0 0 20px;
+            }
+
+            h2 {
+                color:#F3472D !important;
+                font:36px/40px ralewaybold, sans-serif;
+
+                @media (max-width: 979px){
+                    font-size:30px;
+                    line-height:34px;
+                }
+            }
+        }
+    }
 }

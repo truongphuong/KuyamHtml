@@ -12,29 +12,37 @@
         &:first-child{
             margin-left: 0;
         }
+
+        @media (min-width: 980px){
+            margin-left: 3.1%;
+        }
+
+        @media (max-width:979px) {
+            margin-left: 2%;
+        }
     }
 
     .icon{
         display: inline-block;
         width: 37px;
         height: 37px;
-        background: center center no-repeat;
+        background: url(images/ui/pages/company/list/icon_socials.png) no-repeat;
         background-size: 37px;
 
         &.icon-facebook{
-            background-image: url(images/ui/pages/company/list/icon_facebook.png);
+            background-position: 0 0;
         }
         &.icon-twitter{
-            background-image: url(images/ui/pages/company/list/icon_twitter.png);
+            background-position: 0 -37px;
         }
         &.icon-linkedin{
-            background-image: url(images/ui/pages/company/list/icon_linkedin.png);
+            background-position: 0 -74px;
         }
         &.icon-instagram{
-            background-image: url(images/ui/pages/company/list/icon_instagram.png);
+            background-position: 0 -111px;
         }
         &.icon-pinterest{
-            background-image: url(images/ui/pages/company/list/icon_pinterest.png);
+            background-position: 0 -148px;
         }
     }
 }

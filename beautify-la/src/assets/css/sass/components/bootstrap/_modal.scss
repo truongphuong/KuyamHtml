@@ -3,29 +3,28 @@
 .modal{background-color:rgba(0, 0, 0, 0.5);}
 .modal-backdrop{display:none;}
 
-.modal-header{position:relative;}
-.modal-header .close{
-    opacity: 1;
-    position: absolute;
-    margin-top:0;
-    z-index: 1;
-    top: 5px;
-    right: 5px;
-    background: url(images/ui/modals/icon-close.png) center center no-repeat;
-    background-size: 14px auto;
-    color: transparent;
-    width: 33px;
-    height: 33px;
-}
+.modal-header{position:relative;
+    .close{
+        opacity: 1;
+        position: absolute;
+        margin-top:0;
+        z-index: 1;
+        top: 5px;
+        right: 5px;
+        background: url(images/ui/modals/icon_close.png) center center no-repeat;
+        background-size: 15px auto;
+        color: transparent;
+        width: 33px;
+        height: 33px;
 
-@media
-only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
-only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (              min-resolution:120dpi)      and (min-width:320px),
-only screen and (               min-resolution:2dppx)      and (min-width:320px){
-    .modal-header .close{
-        background-image: url(images/ui/modals/icon-close@2x.png);
+        @media
+        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+            background-image: url(images/ui/modals/icon_close@3x.png);
+        }
     }
 }

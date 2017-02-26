@@ -143,7 +143,9 @@
                 <li class="li-create"><a href="#" title="" data-target="#modal-sign-up" data-toggle="modal">CREATE YOUR EVENT</a></li>
                 <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi, Kourosh</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
+                        <li><a href="#" title="Dashboard" class="link-sign-out">Dashboard</a></li>
+                        <li><a href="#" title="Settings" class="link-sign-out">Settings</a></li>
+                        <li><a href="#" title="Log out" class="link-sign-out">Log out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -253,20 +255,21 @@
                         </header>
                         <!-- /.section-header -->
 
-                        <div class="filter-setion clearfix"> 
-    <select id="select-category" class="selectpicker select-category select-full">
-        <option value="">select category</option>
-        <option value="">a</option>
-        <option value="">b</option>
-        <option value="">c</option>
-        <option value="">d</option>
-        <option value="">e</option>
-        <option value="">f</option>
-        <option value="">g</option>
-        <option value="">h</option>
-        <option value="">e</option>
-    </select>     
-</div>  
+                        <div class="filter-setion">
+    <select id="categorySelect" class="select-full">
+        <option value="" selected>Select category</option>
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+        <option value="4">D</option>
+        <option value="5">E</option>
+        <option value="6">F</option>
+        <option value="7">G</option>
+        <option value="8">H</option>
+        <option value="9">I</option>
+    </select>
+</div>
+
 
                         <!-- .event-new-list -->
 <div class="event-new-list clearfix">
@@ -320,7 +323,7 @@
                 </div>
                 <div class="spot-footer">
                     <a title="" href="book-special.html" class="spot-text">
-                        <span class="color-orange">from</span> 10:00am <span class="color-orange">to</span> 8:00pm
+                        <span class="color-orange">From</span> 10:00am <span class="color-orange">to</span> 8:00pm
                     </a>
                     <a title="" href="#" class="btn-orange">check it out</a>
                 </div>
@@ -362,7 +365,7 @@
                 </a>
                 <div class="spot-footer">
                     <a title="" href="book-ticket.html" class="spot-text">
-                        <span class="color-orange">from</span> 10:00am <span class="color-orange">to</span> 8:00pm
+                        <span class="color-orange">From</span> 10:00am <span class="color-orange">to</span> 8:00pm
                     </a>
                     <a title="" href="#" class="btn-orange">buy tickets</a>
                 </div>
@@ -408,7 +411,7 @@
                 </a>
                 <div class="spot-footer">
                     <a title="" href="book-rsvp.html" class="spot-text">
-                        <span class="color-orange">from</span> 10:00am <span class="color-orange">to</span> 10:00pm
+                        <span class="color-orange">From</span> 10:00am <span class="color-orange">to</span> 10:00pm
                     </a>
                     <a title="" href="#" class="btn-orange">RSVP</a>
                 </div>
@@ -795,7 +798,7 @@
 <script type="text/javascript" src="content/js/libs/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="content/js/libs/css_browser_selector.js"></script>
 <script type="text/javascript" src="content/js/libs/jquery-ui.js"></script>
-<script type="text/javascript" src="content/js/libs/bootstrap.js"></script>
+<script type="text/javascript" src="content/js/libs/bootstrap.min.js"></script>
 <script type="text/javascript" src="content/js/libs/bootstrap-select.js"></script>
 <script type="text/javascript" src="content/js/libs/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="content/js/libs/iscroll.js"></script>

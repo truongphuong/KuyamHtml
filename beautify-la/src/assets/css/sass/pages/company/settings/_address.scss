@@ -1,0 +1,50 @@
+.company-settings-page {
+    address {
+        margin:0;
+
+        ul{
+            margin: 0;
+            padding:0;
+            list-style: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+            li{
+                float: left;
+                padding: 17px 0 15px 30px;
+                font-size: $h5;
+                line-height: 25px;
+                font-family: $primary;
+                position: relative;
+
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 19px;
+                    height: 19px;
+                    position: absolute;
+                    top:20px;
+                    left: 0;
+                    background: url(images/ui/pages/company/settings/icon_address.png) no-repeat;
+                    background-size: 19px;
+                }
+
+
+                &.street{
+                    &:before{
+                        background-position: left top;
+                    }
+                }
+
+                &.city{
+                    &:before{
+                        background-position: left bottom;
+                    }
+                }
+
+                + li{
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+}

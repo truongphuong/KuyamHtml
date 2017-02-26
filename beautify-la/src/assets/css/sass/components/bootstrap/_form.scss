@@ -1,0 +1,32 @@
+.btn{
+    border-radius: 0;
+    height: 44px;
+}
+
+.form-control{
+    height: 38px;
+    border: 1px solid $border;
+    border-radius: 2px;
+    font-size: $h5;
+    color: #313432;
+    padding:0 15px;
+    box-shadow: none;
+
+    &:hover,
+    &:focus{
+        border: 1px solid $border;
+        box-shadow: none;
+    }
+
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus{
+        border-color: $disabled;
+        cursor: default;
+    }
+}
+
+textarea.form-control{
+    height: 110px;
+    resize: none;
+}

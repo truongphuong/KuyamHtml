@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-				$('#select-category').selectpicker();
+				$('#categorySelect').selectpicker();
 
 				var austDay = new Date();
 				austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);

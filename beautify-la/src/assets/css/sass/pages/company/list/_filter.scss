@@ -1,33 +1,79 @@
 .filter-setion{
+    margin-top: 28px;
+
+    @media (max-width:767px){
+        margin-top: 14px;
+    }
+
     .bootstrap-select{
         float:left;
         width:308px !important;
         margin:0 0 0 7px !important;
+
+        @media (max-width:979px){
+            float:none;
+            width:100% !important;
+        }
+
+        > .btn,
+        > .btn:focus,
+        > .btn:active,
+        > .btn:hover,
+        > .btn:visited,
+        &.open > .btn,
+        &.open > .btn:focus,
+        &.open > .btn:active,
+        &.open > .btn:hover,
+        &.open > .btn:visited{
+            font-size: $s25;
+            min-height: 56px;
+            padding-left: 20px;
+            padding-right: 67px;
+
+            @media (max-width:767px){
+                font-size: $s15;
+                min-height: 38px;
+                padding-left: 10px;
+                padding-right: 35px;
+            }
+        }
+
+        &.btn-group {
+            .btn {
+                .caret {
+                    width:27px;
+                    height:17px;
+                    background-image: url(images/ui/pages/company/list/icon_select.png);
+                    background-size: 27px auto;
+                    margin-top: -8px;
+                    right: 20px;
+
+                    @media (max-width:767px){
+                        width:15px;
+                        background-size: 15px auto;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu {
+            > li{
+                font-size: $s25;
+
+                @media (max-width:767px){
+                    font-size: $s15;
+                }
+            }
+        }
     }
+
     .select-category{
         margin-left:0 !important;
     }
+
     .select-full{
         width:100% !important;
         margin-left:0 !important;
     }
-    .bootstrap-select > .btn,
-    .bootstrap-select > .btn:focus,
-    .bootstrap-select > .btn:active,
-    .bootstrap-select > .btn:hover,
-    .bootstrap-select > .btn:visited,
-    .bootstrap-select.open > .btn,
-    .bootstrap-select.open > .btn:focus,
-    .bootstrap-select.open > .btn:active,
-    .bootstrap-select.open > .btn:hover,
-    .bootstrap-select.open > .btn:visited{
-        font-size: $s25;
-        height: 56px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-@media (max-width:979px){
-    .filter-setion .bootstrap-select{float:none;width:100% !important;margin:10px 0 0 0 !important;}
 }

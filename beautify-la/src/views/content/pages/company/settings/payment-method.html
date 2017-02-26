@@ -1,0 +1,38 @@
+<div id="company3" class="content payment-method hide">
+    <header>
+        <h3>How do you want to get paid?</h3>
+    </header>
+    <section class="method-section">
+        <div class="method">
+            <div class="radio-custom">
+                <input class="radio-mark" id="radioStripe" type="radio" name="payment" value="1" />
+                <label class="radio-label" for="radioStripe">Strip</label>
+            </div>
+            <div class="section disabled">
+                <button class="btn btn-stripe-connect hide"></button>
+                <button class="btn btn-stripe-connected hide"></button>
+                <ul class="clearfix">
+                    <li>Stripe not connected</li>
+                    <li>
+                        <button class="btn btn-negative btn-reconnect">reconnect</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="method">
+            <div class="radio-custom">
+                <input class="radio-mark" id="radioPaypal" type="radio" name="payment" value="1" />
+                <label class="radio-label" for="radioPaypal">Paypal</label>
+            </div>
+            <div class="section disabled">
+                <div class="placeholder-custom">
+                    <div class="placeholder">Paypal email<span class="required">&lowast;</span></div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button data-pre="company2" class="btn btn-negative">Save</button>
+    </footer>
+</div>
