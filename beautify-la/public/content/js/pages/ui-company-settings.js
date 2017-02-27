@@ -1,5 +1,5 @@
 'use strict';
 
 $(document).ready(function () {
-    $('#caterogySelect, #stateSelect, #caterogySelect').selectpicker();
+    $('#sectionSelect, #caterogySelect, #stateSelect, #caterogySelect').selectpicker();
 });

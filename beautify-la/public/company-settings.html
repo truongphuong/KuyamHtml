@@ -109,8 +109,15 @@
     </ul>
 </div>
 
+<select id="sectionSelect" class="section-select">
+    <option>Company info</option>
+    <option>Your info</option>
+    <option>How do you want to get paid</option>
+    <option>Share your events</option>
+</select>
 
-            <div id="company1" class="content company-info hide">
+
+            <div id="company1" class="content company-info">
     <header>
         <h3>Company info</h3>
     </header>
@@ -120,6 +127,7 @@
                 <div class="placeholder-custom">
                     <div class="placeholder">Name<span class="required">&lowast;</span></div>
                     <input type="text" class="form-control" />
+                    <span class="error">Invalid</span>
                 </div>
             </div>
             <div class="col-xs-12">
@@ -127,15 +135,16 @@
                     <div class="placeholder">Events homepage URL<span class="required">&lowast;</span></div>
                     <input type="text" class="form-control" value="hello" />
                     <a title="" href="#">copy</a>
+                    <span class="error">This URL is already taken</span>
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Website" />
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Phone number" />
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-12 col-md-6">
                 <select id="caterogySelect" class="select-full">
                     <option value="" selected>Category</option>
                     <option value="1">Yoga</option>
@@ -178,14 +187,14 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="row">
-                    <div class="col-xs-6 col-md-4-5">
+                    <div class="col-xs-12 col-sm-4-5">
                         <select id="stateSelect" class="select-full">
                             <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
                             <option value="1">Yoga</option>
                             <option value="2">Swimming</option>
                         </select>
                     </div>
-                    <div class="col-xs-6 col-md-7-5">
+                    <div class="col-xs-12 col-sm-7-5">
                         <div class="placeholder-custom">
                             <div class="placeholder">ZIP code<span class="required">&lowast;</span></div>
                             <input type="text" class="form-control">
@@ -230,7 +239,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             </div>
         </div>
     </section>
-    <footer><button data-next="company2" class="btn btn-negative">Save</button></footer>
+    <footer>
+        <button data-next="company2" class="btn btn-positive">save</button>
+    </footer>
 </div>
 
 
@@ -240,19 +251,19 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     </header>
     <section class="private-section">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="placeholder-custom">
                     <div class="placeholder">First name<span class="required">&lowast;</span></div>
                     <input type="text" class="form-control">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="placeholder-custom">
                     <div class="placeholder">Last name<span class="required">&lowast;</span></div>
                     <input type="text" class="form-control" value="helllo">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="row">
                     <div class="col-xs-12">
                         <input type="text" placeholder="Cellphone" class="form-control">
@@ -269,7 +280,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
     </section>
     <footer>
-        <button data-pre="company1" class="btn btn-negative">Save</button>
+        <button data-pre="company2" class="btn btn-negative">back</button>
+        <button data-next="company4" class="btn btn-positive">Save</button>
     </footer>
 </div>
 
@@ -281,10 +293,10 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     <section class="method-section">
         <div class="method">
             <div class="radio-custom">
-                <input class="radio-mark" id="radioStripe" type="radio" name="payment" value="1" />
+                <input class="radio-mark" id="radioStripe" type="radio" name="payment" value="1" checked />
                 <label class="radio-label" for="radioStripe">Strip</label>
             </div>
-            <div class="section disabled">
+            <div class="section">
                 <button class="btn btn-stripe-connect hide"></button>
                 <button class="btn btn-stripe-connected hide"></button>
                 <ul class="clearfix">
@@ -304,6 +316,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <div class="placeholder-custom">
                     <div class="placeholder">Paypal email<span class="required">&lowast;</span></div>
                     <input type="text" class="form-control">
+                    <span class="icon icon-check"></span>
                 </div>
             </div>
         </div>
@@ -314,7 +327,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 </div>
 
 
-            <div id="company4" class="content company-connect">
+            <div id="company4" class="content company-connect hide">
     <header>
         <h3>Share your events</h3>
     </header>
@@ -367,7 +380,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button class="btn btn-negative">Done</button>
+        <button data-pre="company3" class="btn btn-negative">back</button>
+        <button data-next="company3" class="btn btn-positive">Done</button>
     </footer>
 </div>
 
