@@ -57,7 +57,7 @@
 .settings-page .btn-popover{width:auto;}
 .settings-page .btn-settings .icon-delete{margin-top:5px;}
 .settings-page .hour-to{line-height:32px;color:#999;font-weight:bold;}
-.settings-page .form-control{box-shadow:none;font:20px/24px ralewaymedium, sans-serif;color:#000;border-color:#ccc;}
+.settings-page .form-control{box-shadow:none;font:20px/24px ralewaymedium, sans-serif;color:#000;border-color:$border;padding:0 12px;}
 .settings-page textarea.form-control{height:100px;}
 .settings-page textarea.txt-l{
     max-width:600px;
@@ -67,7 +67,7 @@
 .settings-page .txt-s{width:200px;background:#fff;}
 .settings-page .txt-m{width:250px;}
 .settings-page .txt-l{width:600px;}
-.settings-page .bootstrap-select .selectpicker{border:1px solid #ddd;min-height:36px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding-top:4px;padding-bottom:4px;}
+.settings-page .bootstrap-select .selectpicker{border:1px solid $border;min-height:36px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;padding-top:4px;padding-bottom:4px;font-size: 20px;}
 .settings-page .select-s{width:95px;}
 .settings-page .select-s:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){width:91px;}
 .settings-page .select-m{width:100px;}
@@ -144,7 +144,7 @@ body{overflow-x:auto;}
 .settings-section .cb-custom{position:relative;}
 .settings-section .cb-mark{position:absolute;opacity:0;top:0;left:0;}
 .settings-section .cb-mark ~ .cb-label{position:relative;padding-right:25px;cursor:pointer;display:inline-block !important;font-weight:700;}
-.settings-section .cb-mark ~ .cb-label:before{content:'';display:block;width:18px;height:18px;border-radius:4px;vertical-align:middle;position:absolute;border:1px solid #ddd;top:4px;right:0;cursor:pointer;}
+.settings-section .cb-mark ~ .cb-label:before{background:none;content:'';display:block;width:18px;height:18px;border-radius:4px;vertical-align:middle;position:absolute;border:1px solid #ddd;top:4px;right:0;cursor:pointer;}
 .settings-section .cb-mark:checked ~ .cb-label:before{background:url(images/assets/Check_mark@2x.png) center center no-repeat;background-size:8px auto;}
 .settings-section .cb-custom.left .cb-mark ~ .cb-label{padding-left:25px;}
 .settings-section .cb-custom.left .cb-mark ~ .cb-label:before{left:0;}
@@ -152,7 +152,7 @@ body{overflow-x:auto;}
 .settings-section .radio-custom{position:relative;}
 .settings-section .radio-mark{position:absolute;opacity:0;top:0;left:0;}
 .settings-section .radio-mark ~ .radio-label{position:relative;padding-left:25px;cursor:pointer;display:inline-block !important;font-weight:700;}
-.settings-section .radio-mark ~ .radio-label:before{content:'';display:block;width:14px;height:14px;border-radius:100%;vertical-align:middle;position:absolute;border:4px solid #fff;top:5px;left:2px;cursor:pointer;}
+.settings-section .radio-mark ~ .radio-label:before{background:none;content:'';display:block;width:14px;height:14px;border-radius:100%;vertical-align:middle;position:absolute;border:4px solid #fff;top:5px;left:2px;cursor:pointer;}
 .settings-section .radio-mark ~ .radio-label:after{content:'';display:block;width:18px;height:18px;border-radius:100%;vertical-align:middle;position:absolute;border:2px solid #ddd;top:3px;left:0;cursor:pointer;}
 .settings-section .radio-mark:checked ~ .radio-label:before{background:#F3472D;}
 
@@ -246,36 +246,6 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
     color: transparent;
     width: 33px;
     height: 33px;
-}
-
-.table-css.custom-input{
-    display:table;
-    width:100%;
-    border: 1px solid #ccc;
-    font-size: 20px;
-    border-radius:4px;
-    font-weight: normal;
-    overflow:hidden;
-}
-.table-css.custom-input .tr{
-    display:table-row;
-}
-.table-css.custom-input .td{
-    display:table-cell;
-}
-.table-css.custom-input .td:first-child{
-    padding-left:12px;
-    word-break:keep-all;
-    color:#999;
-    width:197px;
-    line-height: 31px;
-}
-.table-css.custom-input input[type="text"]{
-    height: 31px;
-    border: 0 none;
-    padding:0 12px 0 0;
-    color:#000;
-    width:100%;
 }
 .settings-page .table-css.custom-input{
     width: 600px;
