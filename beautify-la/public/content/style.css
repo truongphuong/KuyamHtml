@@ -381,7 +381,8 @@ textarea {
   position: fixed; }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.25em; }
 
 .modal-backdrop {
   display: none; }
@@ -1153,8 +1154,7 @@ input[type=number] {
   background: #f3472d;
   color: #fff;
   font-weight: 700;
-  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
-  padding: 0; }
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
 
 .btn-positive,
 .btn-positive:focus {
@@ -1167,8 +1167,7 @@ input[type=number] {
   background: #fff;
   color: #323232;
   font-weight: 700;
-  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
-  padding: 0; }
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
 
 .btn-neutral,
 .btn-neutral:focus {
@@ -1181,8 +1180,7 @@ input[type=number] {
   background: #fff;
   color: #f3472d;
   font-weight: 700;
-  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11);
-  padding: 0; }
+  box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.11); }
 
 .btn-negative,
 .btn-negative:focus {
@@ -1266,6 +1264,11 @@ input[type=number] {
 
 .alert-error {
   color: #ff0000; }
+
+.required {
+  color: #f3472d;
+  position: relative;
+  top: -5px; }
 
 .table-css.custom-input {
   width: 100%;
@@ -1436,10 +1439,6 @@ input[type=number] {
     font-family: "Lato", sans-serif; }
     .placeholder-custom .placeholder .optional {
       font-size: 12px; }
-    .placeholder-custom .placeholder .required {
-      color: #f3472d;
-      position: relative;
-      top: -8px; }
   .placeholder-custom a {
     display: block;
     position: absolute;
@@ -3563,15 +3562,15 @@ input[type=number] {
     background: url(images/ui/pages/company/list/icon_socials.png) no-repeat;
     background-size: 37px; }
     .link-social .icon.icon-facebook {
-      background-position: 0 0; }
+      background-position: center 0; }
     .link-social .icon.icon-twitter {
-      background-position: 0 -37px; }
+      background-position: center -37px; }
     .link-social .icon.icon-linkedin {
-      background-position: 0 -74px; }
+      background-position: center -74px; }
     .link-social .icon.icon-instagram {
-      background-position: 0 -111px; }
+      background-position: center -111px; }
     .link-social .icon.icon-pinterest {
-      background-position: 0 -148px; }
+      background-position: center -148px; }
 
 .social_twitter {
   margin: 24px 0 30px;
@@ -4535,6 +4534,9 @@ input[type=number] {
 
 .company-settings-page address {
   margin: 0; }
+  @media (max-width: 767px) {
+    .company-settings-page address {
+      display: none; } }
   .company-settings-page address ul {
     margin: 0;
     padding: 0;
@@ -4621,7 +4623,7 @@ input[type=number] {
         .company-settings-page .company-info section.socials-section ul li .icon.icon-pinterest {
           background-position: center -220px; }
         .company-settings-page .company-info section.socials-section ul li .icon.icon-google-plus {
-          background-position: center 222px; }
+          background-position: center -264px; }
   .company-settings-page .company-info section.address-section {
     margin-top: 20px; }
     .company-settings-page .company-info section.address-section .col-md-4-5 {
@@ -4762,8 +4764,45 @@ input[type=number] {
       top: 0;
       left: 0; }
 
-.company-settings-page .share-section .share {
+.company-settings-page .company-connect p {
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  color: rgba(51, 51, 51, 0.6);
+  position: relative;
+  top: -4px;
+  margin: 0 0 16px; }
+
+.company-settings-page .company-connect .share-section .share {
   margin-bottom: 14px; }
+  .company-settings-page .company-connect .share-section .share .btn {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.8125em;
+    color: #323232;
+    border-radius: 4px;
+    position: relative;
+    padding-left: 56px;
+    padding-right: 33px; }
+    .company-settings-page .company-connect .share-section .share .btn:before {
+      content: '';
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: url(images/ui/pages/company/settings/icon_share.png) no-repeat;
+      background-size: 26px auto;
+      position: absolute;
+      top: 6px;
+      left: 14px; }
+    .company-settings-page .company-connect .share-section .share .btn.btn-facebook:before {
+      background-position: center 0; }
+    .company-settings-page .company-connect .share-section .share .btn.btn-twitter:before {
+      background-position: center -26px; }
+    .company-settings-page .company-connect .share-section .share .btn.btn-linkedin:before {
+      background-position: center -52px; }
+    .company-settings-page .company-connect .share-section .share .btn.btn-mailchimp:before {
+      background-position: center -78px; }
+    .company-settings-page .company-connect .share-section .share .btn.btn-constant:before {
+      background-position: center -104px; }
 
 .company-settings-page .site-header {
   background: transparent;
@@ -4792,6 +4831,9 @@ input[type=number] {
       width: 100%;
       padding-right: 0;
       padding-left: 0; } }
+  @media (max-width: 767px) {
+    .company-settings-page .content header {
+      display: none; } }
   .company-settings-page .content header h3 {
     font-size: 1.6875em;
     line-height: 34px;
@@ -4802,13 +4844,6 @@ input[type=number] {
       font-style: italic;
       font-size: 14px;
       color: #333; }
-  .company-settings-page .content header p {
-    font-size: 1.25em;
-    font-family: "Lato", sans-serif;
-    color: rgba(51, 51, 51, 0.6);
-    position: relative;
-    top: -4px;
-    margin: 0 0 16px; }
   .company-settings-page .content section {
     padding-bottom: 5px; }
   .company-settings-page .content .row {
@@ -9426,32 +9461,77 @@ input[type=number] {
   .modal-settings .modal-header .icon-bulletin {
     display: none; } }
 
-.modal-social .modal-body .txt-socials {
-  margin-top: 10px;
-  padding-left: 35px;
-  background: left center no-repeat;
-  background-size: auto 24px; }
-
-.modal-social .modal-body .txt-twitter {
-  background-image: url(images/assets/icons_social/Twitter.png); }
-
-.modal-social .modal-body .txt-facebook {
-  background-image: url(images/assets/icons_social/facebook.png); }
-
-.modal-social .modal-body .txt-google-plus {
-  background-image: url(images/assets/icons_social/Google_Plus.png); }
-
-.modal-social .modal-body .txt-email-share {
-  background-image: url(images/assets/icons_social/Github_Shape_2.png); }
-
-.modal-social .modal-body .txt-instagram {
-  background-image: url(images/assets/icons_social/Instagram.png); }
-
-.modal-social .modal-body .txt-pinterest {
-  background-image: url(images/assets/icons_social/Pinterest.png); }
-
-.modal-social .modal-body .txt-youtube {
-  background-image: url(images/assets/icons_social/youtube.png); }
+.modal-social {
+  width: 575px;
+  font-size: 16px; }
+  @media (max-width: 767px) {
+    .modal-social {
+      width: auto; } }
+  .modal-social .modal-content {
+    box-shadow: none;
+    border-radius: 0; }
+  .modal-social .modal-header {
+    text-align: center;
+    border: 0 none;
+    padding-top: 47px;
+    padding-bottom: 1px;
+    position: relative; }
+    .modal-social .modal-header .modal-title {
+      font-size: 1.25em;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      padding-bottom: 0;
+      color: #333; }
+    .modal-social .modal-header .close {
+      margin-top: 0;
+      position: absolute;
+      top: 18px;
+      right: 24px; }
+  .modal-social .modal-body {
+    padding: 15px 68px 30px 48px; }
+    @media (max-width: 767px) {
+      .modal-social .modal-body {
+        padding-left: 15px;
+        padding-right: 15px; } }
+    .modal-social .modal-body ul {
+      margin: 0 0 29px;
+      padding: 0;
+      list-style: none; }
+      .modal-social .modal-body ul li {
+        position: relative;
+        padding-left: 52px;
+        margin-bottom: 12px; }
+        .modal-social .modal-body ul li:before {
+          content: '';
+          height: 37px;
+          width: 37px;
+          background: url(images/ui/modals/socials/icon_socials.png) no-repeat;
+          background-size: 37px auto;
+          position: absolute;
+          top: 1px;
+          left: 0;
+          opacity: .5; }
+        .modal-social .modal-body ul li.active:before {
+          opacity: 1; }
+        .modal-social .modal-body ul li.li-facebook:before {
+          background-position: center 0; }
+        .modal-social .modal-body ul li.li-twitter:before {
+          background-position: center -37px; }
+        .modal-social .modal-body ul li.li-linkedin:before {
+          background-position: center -74px; }
+        .modal-social .modal-body ul li.li-instagram:before {
+          background-position: center -111px; }
+        .modal-social .modal-body ul li.li-pinterest:before {
+          background-position: center -148px; }
+        .modal-social .modal-body ul li.li-google-plus:before {
+          background-position: center -185px; }
+        .modal-social .modal-body ul li .table-css.custom-input {
+          font-size: 16px; }
+    .modal-social .modal-body .btn {
+      width: 127px;
+      height: 44px;
+      display: block;
+      margin: 0 auto; }
 
 .modal-confirmed .modal-header h4 time {
   font-family: ralewaybold, sans-serif;
@@ -10163,6 +10243,7 @@ input[type=number] {
 
 .modal-booked .bootstrap-select .selectpicker {
   min-height: 40px;
+  height: 40px;
   border-radius: 4px;
   border: 1px solid #999; }
 
@@ -10849,6 +10930,108 @@ input[type=number] {
 @media (max-width: 767px) {
   .modal-geo-location {
     width: auto; } }
+
+.modal-change-password {
+  font-size: 16px; }
+  .modal-change-password .modal-content {
+    box-shadow: none;
+    border-radius: 0; }
+  .modal-change-password .modal-header {
+    text-align: center;
+    border: 0 none;
+    padding-top: 25px;
+    padding-bottom: 0;
+    position: relative; }
+    .modal-change-password .modal-header .modal-title {
+      font-size: 1.1875em;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      padding-bottom: 0; }
+    .modal-change-password .modal-header .close {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .modal-change-password .modal-body {
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 140%; }
+    @media (min-width: 1024px) {
+      .modal-change-password .modal-body {
+        padding-left: 25px;
+        padding-right: 25px; } }
+    .modal-change-password .modal-body div[class*="col-"] {
+      margin-bottom: 25px; }
+    .modal-change-password .modal-body p {
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      color: #242424; }
+    .modal-change-password .modal-body .btn {
+      width: 100%;
+      font-size: 1em;
+      font-family: "Raleway", sans-serif; }
+
+.modal-create-category {
+  font-size: 16px;
+  width: 575px; }
+  @media (max-width: 767px) {
+    .modal-create-category {
+      width: auto; } }
+  .modal-create-category .modal-content {
+    box-shadow: none;
+    border-radius: 0; }
+  .modal-create-category .modal-header {
+    text-align: center;
+    border: 0 none;
+    padding-top: 34px;
+    padding-bottom: 21px;
+    position: relative; }
+    .modal-create-category .modal-header .modal-title {
+      font-size: 1.25em;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      padding-bottom: 0;
+      color: #333; }
+    .modal-create-category .modal-header .close {
+      margin-top: 0;
+      position: absolute;
+      top: 18px;
+      right: 23px; }
+  .modal-create-category .modal-body {
+    padding-bottom: 26px;
+    font-size: 16px;
+    line-height: 140%; }
+    @media (min-width: 1024px) {
+      .modal-create-category .modal-body {
+        padding-left: 25px;
+        padding-right: 25px; } }
+    .modal-create-category .modal-body div[class*="col-"] {
+      margin-bottom: 25px; }
+    .modal-create-category .modal-body .btn {
+      width: 146px;
+      height: 44px;
+      font-size: 1em;
+      font-family: "Raleway", sans-serif; }
+  .modal-create-category .modal-footer {
+    padding-bottom: 31px;
+    text-align: center;
+    border: 0 none; }
+    @media (max-width: 767px) {
+      .modal-create-category .modal-footer {
+        margin: 0 -10px; }
+        .modal-create-category .modal-footer:after {
+          content: '';
+          display: block;
+          clear: both; } }
+    .modal-create-category .modal-footer .btn {
+      margin: 0 7px;
+      width: 146px;
+      height: 44px; }
+      @media (max-width: 767px) {
+        .modal-create-category .modal-footer .btn {
+          float: left;
+          width: calc(50% - 20px);
+          margin: 0 10px; } }
 
 .event-new {
   height: 212px;

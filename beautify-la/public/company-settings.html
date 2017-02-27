@@ -146,7 +146,7 @@
     </section>
     <section class="socials-section">
         <span class="label-form">Social media links</span>
-        <ul class="clearfix">
+        <ul class="clearfix" data-target="#modal-social" data-toggle="modal">
             <li><span class="icon icon-facebook"></span></li>
             <li><span class="icon icon-twitter"></span></li>
             <li><span class="icon icon-linkedin"></span></li>
@@ -206,7 +206,7 @@
                 </select>
             </div>
             <div class="col-xs-12 col-md-4">
-                <button class="btn btn-negative btn-tag">create a new tag</button>
+                <button class="btn btn-negative btn-tag" data-target="#modal-create-category" data-toggle="modal">create a new tag</button>
             </div>
             <div class="col-xs-12">
                 <div class="placeholder-custom">
@@ -266,7 +266,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 </div>
             </div>
         </div>
-        <a title="" href="#">Change password</a>
+        <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
     </section>
     <footer>
         <button data-pre="company1" class="btn btn-negative">Save</button>
@@ -317,12 +317,12 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             <div id="company4" class="content company-connect">
     <header>
         <h3>Share your events</h3>
-        <p>To broadcast / promote your events, connect as many platforms as possible.</p>
     </header>
+    <p>To broadcast / promote your events, connect as many platforms as possible.</p>
     <section class="share-section">
         <div class="share">
             <div class="cb-custom">
-                <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" />
+                <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
                 <label class="cb-label" for="cbFacebook">Facebook</label>
             </div>
             <div class="section">
@@ -335,7 +335,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbTwitter">Twitter</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-twitter"></button>
+                <button class="btn btn-neutral btn-twitter">Connect Twitter</button>
             </div>
         </div>
         <div class="share">
@@ -344,7 +344,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-linkedin"></button>
+                <button class="btn btn-neutral btn-linkedin">Connect LinkedIn</button>
             </div>
         </div>
         <div class="share">
@@ -353,7 +353,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbMailchimp">Mailchimp</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-mailchimp"></button>
+                <button class="btn btn-neutral btn-mailchimp">Connect Mailchimp</button>
             </div>
         </div>
         <div class="share">
@@ -362,7 +362,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbConstant">Constant Contact</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-constant"></button>
+                <button class="btn btn-neutral btn-constant">Connect Constant Contact</button>
             </div>
         </div>
     </section>
@@ -391,6 +391,160 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 </footer>
 
 </div>
+
+
+<div id="modal-change-password" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-change-password">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="changePassModalLabel" class="modal-title">Change password</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="placeholder-custom">
+                                <div class="placeholder">New password<span class="required">&lowast;</span></div>
+                                <input type="password" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="placeholder-custom">
+                                <div class="placeholder">Re-enter password<span class="required">&lowast;</span></div>
+                                <input type="password" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <p>* Password minumum 6 characters</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-positive">change password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<!-- .modal-social -->
+<div id="modal-social" class="modal fade" role="dialog" aria-labelledby="socialsModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-social">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="socialsModalLabel" class="modal-title">Add / Edit your social media links</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li class="li-facebook active">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.facebook.com/</span>
+                                <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-twitter">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.twitter.com/</span>
+                                <span class="td"><input id="txtURL2" type="text"></span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-linkedin">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.linkedin.com/</span>
+                                <span class="td"><input id="txtURL3" type="text"></span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-instagram">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.instagram.com/</span>
+                                <span class="td"><input id="txtURL4" type="text"></span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-pinterest">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.pinterest.com/</span>
+                                <span class="td"><input id="txtURL5" type="text"></span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-google-plus">
+                        <label class="table-css custom-input" for="txtURL1">
+                            <span class="tr">
+                                <span class="td">https://www.pinterest.com/</span>
+                                <span class="td"><input id="txtURL6" type="text"></span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+                <input type="button" value="save" class="btn btn-positive" />
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /.modal-social -->
+
+<div id="modal-create-category" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-create-category">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="createCategoryModalLabel" class="modal-title">Create a new category</h4>
+            </div>
+            <div class="modal-body">
+               <input type="password" class="form-control" placeholder="New category" />
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-form btn-negative">cancel</button>
+                <button class="btn btn-form btn-positive">create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<!-- .modal-banner -->
+<div id="modal-banner" class="modal fade" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-settings modal-crop modal-banner">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">add background image</h4>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <legend>event background image:</legend>
+                    <p>upload up to 10 images to create your photo gallery.</p>
+                    <div class="settings-image">
+                        <div class="col-right">
+                            <input type="button" value="upload image" class="btn-orange btn-upload" />
+                            <p>recommended image<br />size: 2560 x 1440<br />max file size: 3mb</p>
+                            <p><a title="" href="#">remove image</a></p>
+                        </div>
+                        <div class="col-left">
+                            <div class="crop-section"></div>
+                            <input type="button" value="done" class="btn-orange btn-done" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /.modal-banner -->
 
 
 
