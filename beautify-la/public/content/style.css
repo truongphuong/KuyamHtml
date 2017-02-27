@@ -1412,14 +1412,19 @@ input[type=number] {
   color: #7c7c7c;
   opacity: 1; }
 
-.placeholder-custom {
+label.placeholder-custom,
+div.placeholder-custom {
+  display: block;
+  margin: 0;
   position: relative;
   border: 1px solid #797979;
   border-radius: 2px;
   overflow: hidden; }
-  .placeholder-custom.disabled {
+  label.placeholder-custom.disabled,
+  div.placeholder-custom.disabled {
     border-color: rgba(67, 67, 67, 0.4); }
-    .placeholder-custom.disabled:after {
+    label.placeholder-custom.disabled:after,
+    div.placeholder-custom.disabled:after {
       content: '';
       display: block;
       width: 100%;
@@ -1427,7 +1432,8 @@ input[type=number] {
       position: absolute;
       top: 0;
       left: 0; }
-  .placeholder-custom .placeholder {
+  label.placeholder-custom .placeholder,
+  div.placeholder-custom .placeholder {
     position: absolute;
     top: 0;
     left: 0;
@@ -1438,9 +1444,11 @@ input[type=number] {
     font-size: 1.25em;
     line-height: 38px;
     font-family: "Lato", sans-serif; }
-    .placeholder-custom .placeholder .optional {
+    label.placeholder-custom .placeholder .optional,
+    div.placeholder-custom .placeholder .optional {
       font-size: 12px; }
-  .placeholder-custom a {
+  label.placeholder-custom a,
+  div.placeholder-custom a {
     display: block;
     position: absolute;
     top: 0;
@@ -1452,7 +1460,8 @@ input[type=number] {
     line-height: 38px;
     font-family: "Lato", sans-serif;
     background: #fff; }
-  .placeholder-custom .error {
+  label.placeholder-custom .error,
+  div.placeholder-custom .error {
     display: block;
     position: absolute;
     top: 0;
@@ -1464,7 +1473,8 @@ input[type=number] {
     line-height: 38px;
     font-family: "Lato", sans-serif;
     background: #fff; }
-    .placeholder-custom .error:before {
+    label.placeholder-custom .error:before,
+    div.placeholder-custom .error:before {
       content: '';
       display: inline-block;
       width: 13px;
@@ -1472,7 +1482,8 @@ input[type=number] {
       background: #fff url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
       background-size: 13px auto;
       margin-right: 5px; }
-  .placeholder-custom .icon-check {
+  label.placeholder-custom .icon-check,
+  div.placeholder-custom .icon-check {
     position: absolute;
     top: 0;
     right: 0;
@@ -1481,11 +1492,13 @@ input[type=number] {
     height: 100%;
     background: #fff url(images/ui/pages/company/settings/icon_check.png) center center no-repeat;
     background-size: 21px auto; }
-  .placeholder-custom .form-control {
+  label.placeholder-custom .form-control,
+  div.placeholder-custom .form-control {
     border: 0 none;
     position: relative;
     background: transparent; }
-    .placeholder-custom .form-control.has-value {
+    label.placeholder-custom .form-control.has-value,
+    div.placeholder-custom .form-control.has-value {
       background: #fff; }
 
 .table-css {
