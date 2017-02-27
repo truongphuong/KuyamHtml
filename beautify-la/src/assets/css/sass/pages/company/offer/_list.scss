@@ -16,7 +16,6 @@
     background: center center no-repeat;
     background-size: cover;
     border: 1px solid #d5d9dc;
-    border-bottom: 0;
 }
 .offer-spot .spot-right{
     float: left;
@@ -51,7 +50,10 @@
     text-overflow: ellipsis;
 }
 .offer-spot .spot-content p{
+    font-size: 14px;
+    font-family: ralewayregular, sans-serif;
     margin-bottom: 15px;
+    line-height: 19px;
 }
 .offer-spot .spot-content small{
     font-size: 13px;
@@ -63,7 +65,6 @@
     text-transform: uppercase;
     font-weight: normal;
 }
-.offer-spot .spot-right-content{padding: 0;}
 .offer-spot .spot-right-content .spot-content{padding-top: 0;}
 .offer-spot .spot-right .social-icons{display:none;}
 .offer-spot .social-icons{text-align:left;padding:3px 20px;margin:0;float:none;}
@@ -88,6 +89,7 @@
     .offer-spot .spot-right-content{
         float:none;
         clear:both;
+        width: 100%;
     }
     .offer-spot .spot-content{
         padding-left:10px;
@@ -125,7 +127,6 @@
 }
 
 @media (max-width: 767px){
-    .offer-spot{background: $white;}
     .offer-spot .spot-content h2,
     .offer-spot .spot-content h2 a{color:#000;font-size:18px;line-height:22px;}
     .offer-spot .spot-content small strong{font-size:10px;}
