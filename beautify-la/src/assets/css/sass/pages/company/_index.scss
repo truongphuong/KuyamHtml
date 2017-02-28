@@ -1,0 +1,35 @@
+.company-page {
+    .site-header {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        h1{
+            color: $white;
+            font-size: $h1;
+            font-family: $primary;
+            line-height: 100%;
+            margin: 24px 0 0;
+            float: left;
+            cursor: text;
+        }
+    }
+
+    .carousel {
+        height: 338px;
+
+        @media (max-width:767px){
+            height:320px;
+        }
+    }
+
+    .carousel-inner{
+         > .item {
+            height: 338px;
+
+            @media (max-width:767px){
+                height:320px;
+            }
+        }
+    }
+}

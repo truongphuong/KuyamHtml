@@ -306,6 +306,7 @@
     .wrapper .site-header .navbar-collapse li a{
         font:20px/40px ralewaylight, sans-serif;
         color:#fff;
+        background: transparent;
     }
     .wrapper .site-header .navbar-collapse .li-blog a,
     .wrapper .site-header .navbar-collapse .li-chat a{
@@ -364,7 +365,7 @@
         font-family:bebas_neueregular, sans-serif;
     }
     .wrapper .site-header .li-create a:hover{
-        color:#fff;
+        color:$white;
     }
     .wrapper .site-header .navbar-collapse .li-account > a,
     .wrapper .site-header .navbar-collapse .li-account > a:hover,
@@ -373,7 +374,7 @@
         font-size:20px;
         line-height:40px;
         padding:0 34px;
-        color:#fff;
+        color:$white;
     }
     .wrapper .site-header .navbar-collapse .li-account > a:before,
     .wrapper .site-header .navbar-collapse .li-account > a:after{
@@ -432,14 +433,17 @@
         -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
         filter:alpha(opacity=100);
     }
-    .wrapper .site-header .navbar-collapse .li-account .dropdown-menu a{
+    .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li a{
         color:#fff;
         text-align: right;
         padding:0 34px;
     }
-    .wrapper .site-header .navbar-collapse .li-account .dropdown-menu a:hover{
+    .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li a:hover{
         color:#F3472D;
         background:transparent;
+    }
+    .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li.active a{
+        color: $positive;
     }
 }
 @media (min-width:992px){

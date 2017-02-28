@@ -1,3 +1,5 @@
+document.getElementById('dashboardNav').className = "active";
+
 $(document).ready(function(){
 	$('.select-settings').selectpicker();
 	$('.selectpicker-settings').selectpicker();

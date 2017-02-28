@@ -19,9 +19,13 @@
 </head>
 <body>
 <div class="wrapper {% block namepage %}{% endblock %}">
-	{% include "./partials/header-company-settings.html" %}
+    <div class="header-banner">
+	{% include "./partials/header-company-logged.html" %}
 
     {% block banner %}{% endblock %}
+
+    {% block upload %}{% endblock %}
+    </div>
 
     {% block main %}{% endblock %}
 

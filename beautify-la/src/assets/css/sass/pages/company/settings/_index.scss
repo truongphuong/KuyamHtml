@@ -1,16 +1,78 @@
 .company-settings-page {
-    .site-header {
-        background: transparent;
-        position: absolute;
-        width: 100%;
-        z-index: 2;
+    .header-banner{
+        position: relative;
+        cursor: pointer;
 
-        h1{
+        &:hover{
+            .upload{
+                font-weight: 700;
+            }
+        }
+
+        .upload,
+        .control{
+            height: 51px;
+            font-size: $s15;
+            font-family: $primary;
             color: $white;
-            font-size: $h1;
-            line-height: 100%;
-            margin: 24px 0 0;
-            float: left;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            border: 1px solid rgba(255, 255, 255, .31);
+            background: rgba(0, 0, 0, .24);
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+            text-align: center;
+            z-index: 3;
+        }
+
+        .upload{
+            width: 217px;
+            line-height: 49px;
+            margin-left: -108px;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 14px;
+                background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                background-size: 16px auto;
+                margin-right: 5px;
+                position: relative;
+                bottom: -2px;
+            }
+        }
+
+        .control {
+            width: 167px;
+            margin:-25px 0 0 -83px;
+            padding:0;
+            list-style: none;
+
+            li{
+                float: left;
+                width: 50%;
+                height: 49px;
+                cursor: pointer;
+
+                &:first-child {
+                    span {
+                        border-right: 1px solid rgba(255, 255, 255, .5);
+                    }
+                }
+
+                &:hover{
+                    font-weight: 700;
+                }
+
+                span{
+                    display: block;
+                    margin:15px 0;
+                    line-height: 19px;
+                }
+            }
         }
     }
 

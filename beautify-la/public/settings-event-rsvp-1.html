@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Beautify LA - Company Dashboard</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,12 +39,14 @@
 <meta name="keywords" content="3" />
 
 
-<link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
-<link type="text/css" rel="stylesheet" href="content/bootstrap-select.css" />
-<link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
-<link type="text/css" rel="stylesheet" href="content/jquery.countdown.css" />
-<link type="text/css" rel="stylesheet" href="content/iscroll.css" />
-<link type="text/css" rel="stylesheet" href="content/addtocalendar.css" />
+<link rel="stylesheet" type="text/css" href="content/css/libs/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/bootstrap-select.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/bootstrap-datetimepicker.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/jquery.countdown.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/iscroll.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/addtocalendar.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/croppie.css" />
 
 
 
@@ -54,28 +55,20 @@
 <link type="text/css" rel="stylesheet" href="content/style.css" />
 </head>
 <body>
-<div id="detech-devices" class="wrapper settings-section">
+<div class="wrapper company-page settings-section">
 	<div id="site-header" class="site-header bg-black">
     <div class="container">
-        <a class="logo" href="home.html" title="">
-            <img class="hidden-xs" src="content/images/assets/bla-logo_registered_trademark_header.png" alt="" />
-            <img class="visible-xs" src="content/images/assets/mobile/Mobile_bla-logo_registered_trademark_header.png" alt="" />
-        </a>
-        <button class="navbar-toggle collapsed" data-target="#bs-navbar-collapse" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <span class="welcome-user visible-xs">hi, kourosh!</span>
+        <h1 class="company-name">Kourosh Soccer Club</h1>
         <div class="clear visible-xs visible-sm"></div>
 
         <!-- .navbar-collapse -->
-        <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
+         <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
             <ul class="nav navbar-nav navbar-right nav-main">
-                <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi, Kourosh</a>
+                <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi Kourosh</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li><a href="#" title="sign out" class="link-sign-out">sign out</a></li>
+                        <li id="dashboardNav"><a href="#" title="Dashboard">Dashboard</a></li>
+                        <li id="settingsNav"><a href="#" title="Settings">Settings</a></li>
+                        <li><a href="#" title="Log out" class="link-sign-out">Log out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -1325,17 +1318,19 @@
 </div>
 
 <script type="text/javascript" src="content/js/libs/modernizr.custom.js"></script>
-<script type="text/javascript" src="content/js/libs/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery-2.2.4.js"></script>
 <script type="text/javascript" src="content/js/libs/css_browser_selector.js"></script>
+<script type="text/javascript" src="content/js/libs/moment.js"></script>
 <script type="text/javascript" src="content/js/libs/jquery-ui.js"></script>
 <script type="text/javascript" src="content/js/libs/bootstrap.min.js"></script>
 <script type="text/javascript" src="content/js/libs/bootstrap-select.js"></script>
-<script type="text/javascript" src="content/js/libs/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="content/js/libs/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="content/js/libs/iscroll.js"></script>
 <script type="text/javascript" src="content/js/libs/jquery.plugin.js"></script>
 <script type="text/javascript" src="content/js/libs/jquery.countdown.js"></script>
 <script type="text/javascript" src="content/js/libs/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="content/js/libs/addtocalendar.js"></script>
+<script type="text/javascript" src="content/js/libs/croppie.js"></script>
 
 
 
