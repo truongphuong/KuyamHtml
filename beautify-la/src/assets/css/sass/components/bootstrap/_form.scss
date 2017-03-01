@@ -7,7 +7,7 @@
     height: 38px;
     border: 1px solid $border;
     border-radius: 2px;
-    font-size: $h5;
+    font-size: 20px;
     color: #313432;
     padding:0 15px;
     box-shadow: none;
@@ -18,10 +18,14 @@
         box-shadow: none;
     }
 
-    &[disabled],
-    &[disabled]:hover,
-    &[disabled]:focus{
+    &[disabled]{
+        background: $white;
         border-color: $disabled;
+        cursor: default;
+    }
+
+    &[readonly]{
+        background: $white;
         cursor: default;
     }
 }

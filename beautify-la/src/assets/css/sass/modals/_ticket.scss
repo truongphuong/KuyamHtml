@@ -20,7 +20,43 @@
 .ticket-form .ticket-deal{color:#979797;line-height:44px;}
 .ticket-form label{margin:0;line-height:44px;}
 .ticket-form label .error{font-size:20px;}
-.ticket-form .form-control{height:44px;border:1px solid #333;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.ticket-form {
+    .form-control{height:44px;border:1px solid #333;border-radius:0;}
+    .bootstrap-select {
+        > .btn,
+        > .btn:focus,
+        > .btn:active,
+        > .btn:hover,
+        > .btn:visited,
+        &.open > .btn,
+        &.open > .btn:focus,
+        &.open > .btn:active,
+        &.open > .btn:hover,
+        &.open > .btn:visited{
+            border-radius:0;
+        }
+
+        &.btn-group.open {
+            > .btn{
+                border-radius: 0;
+            }
+
+            .dropdown-menu{
+                border-radius: 0;
+            }
+        }
+
+        &.dropup {
+            .btn{
+                border-radius: 0;
+            }
+
+            .dropdown-menu{
+                border-radius: 0;
+            }
+        }
+    }
+}
 
 .ticket-price{min-height:80px;font:20px/24px ralewaymedium, sans-serif;padding:0 40px;}
 .ticket-price .table-css{width:100%;}

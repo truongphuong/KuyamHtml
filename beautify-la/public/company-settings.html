@@ -88,7 +88,7 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-        <div class="item active" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
+        <div id="companyBanner" class="item active" data-image="content/images/assets/slide_nails.jpg" style="background-image:url(content/images/assets/slide_nails.jpg);"></div>
     </div>
 
     <!-- Controls -->
@@ -103,8 +103,8 @@
 
 
     
-<div class="upload">Upload banner image</div>
-<ul class="control hide">
+<div class="upload hide">Upload banner image</div>
+<ul class="control">
     <li class="change"><span>Change</span></li>
     <li class="delete"><span>Delete</span></li>
 </ul>
@@ -178,6 +178,27 @@
                 </select>
             </div>
         </div>
+    </section>
+    <section class="logo-section">
+        <span class="label-form">Page logo</span>
+        <div class="frame">
+            <div class="upload">Upload logo</div>
+            <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
+            <ul class="control">
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+        </div>
+
+        <div class="frame no-photo">
+            <div class="upload">Upload logo</div>
+            <div class="page-logo" style="background-image: url();"></div>
+            <ul class="control">
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+        </div>
+        <input type="file" id="fileLogo" class="hide" />
     </section>
     <section class="socials-section">
         <span class="label-form">Social media links</span>
@@ -420,10 +441,10 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     <footer class="site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-5-5 pull-right">
-                <p>Copyright © 2017 Beautify. Inc. All rights reserved. Patent pending.</p>
+            <div class="col-xs-6 col-md-7 pull-right text-right">
+                <p>Copyright © 2017 Beautify. Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
             </div>
-            <div class="col-xs-12 col-md-6-5 powered">
+            <div class="col-xs-6 col-md-5 powered">
                 <p>Powered by Beautify.us</p>
             </div>
         </div>
@@ -559,15 +580,14 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 <!-- .modal -->
 <div id="cropBannerModal" class="modal fade" role="dialog" aria-labelledby="cropBannerModalLabel"
     data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-crop-banner">
+    <div class="modal-dialog modal-crop-banner">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span></button>
-                <h4 id="cropBannerModalLabel" class="modal-title">Social banner</h4>
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="cropBannerModalLabel" class="modal-title">Company banner</h4>
                 <p>
-                    <a id="uploadBanner" class="link-upload" title="" href=""><span>Upload</span></a><span id="sectionDdeletePhoto" class="hide"> | <a id="linkDeleteBanner" class="link-delete" title="" href=""><span>Delete</span></a></span><input
-                        type="file" id="fileBanner" class="hide" /></p>
+                    <a id="uploadBanner" class="link-upload" title="" href=""><span>Change</span></a><span class="delete-section hide"> | <a id="linkDeleteBanner" class="link-delete" title="" href=""><span>Delete</span></a></span><input
+                        type="file" id="fileBanner2" class="hide" /></p>
             </div>
             <div class="modal-body">
                 <div id="croppieBanner">
@@ -576,12 +596,10 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             <div class="modal-footer">
                 <div class="row">
                     <div class="col-xs-6">
-                        <button class="btn btn-default" data-dismiss="modal" type="button">
-                            Cancel</button>
+                        <button class="btn btn-negative" data-dismiss="modal" type="button">cancel</button>
                     </div>
                     <div class="col-xs-6">
-                        <button class="btn btn-default btn-crop" data-dismiss="modal" type="button">
-                            Crop and Save</button>
+                        <button class="btn btn-positive" data-dismiss="modal" type="button">save</button>
                     </div>
                 </div>
             </div>
@@ -626,6 +644,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 
 <script type="text/javascript" src="content/js/pages/ui-company-settings.js"></script>
 <script type="text/javascript" src="content/js/pages/ui-company.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
 
 </body>
 </html>
