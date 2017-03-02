@@ -1,3 +1,5 @@
+'use strict';
+
 $( document ).ready(function() {
 	$( '#tabs' ).tabs({
 		create: function( event, ui ) {

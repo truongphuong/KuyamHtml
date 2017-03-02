@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
     $('.session-item').hover(function(){
         $(this).addClass("active");

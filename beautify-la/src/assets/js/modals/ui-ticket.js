@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
 	$('#select-guest, #select-glass, #select-gender1, #select-gender2, #select-kid, #select-food').selectpicker();
 	$('.btn-timer').click(function(e){

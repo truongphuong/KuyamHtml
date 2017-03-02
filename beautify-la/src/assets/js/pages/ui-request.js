@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){   
     $("#business-content li").click(function(e){
 		var className = $(e.target).attr('id');

@@ -255,7 +255,7 @@
     <section class="tags-section">
         <label class="label-form">Filter events by tags</label>
         <div class="row">
-            <div class="col-xs-12 col-md-8">
+            <div id="categorySection" class="col-xs-12 col-md-8 hide">
                 <select id="caterogySelect" class="select-full">
                     <option value="" selected>Category</option>
                     <option value="1">Yoga</option>
@@ -584,8 +584,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                <input type="password" class="form-control" placeholder="New category" />
             </div>
             <div class="modal-footer">
-                <button class="btn btn-form btn-negative">cancel</button>
-                <button class="btn btn-form btn-positive">create</button>
+                <button class="btn btn-negative" data-dismiss="modal">cancel</button>
+                <button class="btn btn-positive">create</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -660,6 +660,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 <script type="text/javascript" src="content/js/pages/ui-company-settings.js"></script>
 <script type="text/javascript" src="content/js/pages/ui-company.js"></script>
 <script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-create-category.js"></script>
 
 </body>
 </html>

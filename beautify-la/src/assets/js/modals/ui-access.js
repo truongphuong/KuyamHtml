@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
 	$('#modal-access').on('show.bs.modal', function(){
 		var austDay = new Date();

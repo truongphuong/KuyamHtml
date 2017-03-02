@@ -1,3 +1,5 @@
+'use strict';
+
 document.getElementById('dashboardNav').className = "active";
 
 $(document).ready(function(){

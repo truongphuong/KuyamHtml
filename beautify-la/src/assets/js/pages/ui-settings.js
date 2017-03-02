@@ -1,4 +1,6 @@
- $(document).ready(function(){
+'use strict';
+
+$(document).ready(function(){
     $('.select-settings').selectpicker();
     $('.selectpicker-settings').selectpicker();
     $('.btn-settings').click(function(e){
