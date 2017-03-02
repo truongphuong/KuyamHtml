@@ -1,8 +1,14 @@
+.container{
+    @media (min-width:979px){
+        width:960px;
+    }
+}
+
 .home-page,
-.company-list-page,
-.company-settings-page {
+.company-list-page {
     font-size: 16px;
     line-height: 150%;
+    font-family: $primary;
 
     .container{
         @media (min-width: 1270px){
@@ -35,33 +41,6 @@
                     @media (min-width: 1270px){
                         width: 270px;
                     }
-                }
-            }
-        }
-    }
-}
-
-.container{
-    @media (min-width:979px){
-        width:960px;
-    }
-}
-
-.main-content {
-    > .container {
-        > .row{
-
-            > .col-lg-9{
-
-                @media (min-width:979px){
-                    width: calc(100% - 290px);
-                }
-            }
-
-            > .col-lg-3{
-
-                @media (min-width:979px){
-                    width: 290px;
                 }
             }
         }

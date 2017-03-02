@@ -13,6 +13,8 @@
                 }
 
                 .section{
+                    position: relative;
+
                     .btn{
                         display: block;
                         width: 262px;
@@ -75,6 +77,16 @@
                     }
 
                     &.disabled{
+                        &:after{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
                         .btn-stripe-connect,
                         .btn-stripe-connected,
                         ul{
@@ -83,16 +95,6 @@
 
                         .placeholder-custom{
                             border-color: $disabled;
-
-                            &:after{
-                                content: '';
-                                display: block;
-                                width: 100%;
-                                height: 100%;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                            }
                         }
 
                     }

@@ -1,90 +1,21 @@
 .company-settings-page {
-    .header-banner{
-        position: relative;
-        cursor: pointer;
-
-        &:hover{
-            .upload{
-                font-weight: 700;
-            }
-        }
-
-        .upload,
-        .control{
-            height: 51px;
-            font-size: $s15;
-            font-family: $primary;
-            color: $white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -25px;
-            border: 1px solid rgba(255, 255, 255, .31);
-            background: rgba(0, 0, 0, .24);
-            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-            text-align: center;
-            z-index: 3;
-        }
-
-        .upload{
-            width: 217px;
-            line-height: 49px;
-            margin-left: -108px;
-            cursor: pointer;
-
-            &:before {
-                content: '';
-                display: inline-block;
-                width: 16px;
-                height: 14px;
-                background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-                background-size: 16px auto;
-                margin-right: 5px;
-                position: relative;
-                bottom: -2px;
-            }
-        }
-
-        .control {
-            width: 167px;
-            margin:-25px 0 0 -83px;
-            padding:0;
-            list-style: none;
-
-            li{
-                float: left;
-                width: 50%;
-                height: 49px;
-                cursor: pointer;
-
-                &:first-child {
-                    span {
-                        border-right: 1px solid rgba(255, 255, 255, .5);
-                    }
-                }
-
-                &:hover{
-                    font-weight: 700;
-                }
-
-                span{
-                    display: block;
-                    margin:15px 0;
-                    line-height: 19px;
-                }
-            }
-        }
-    }
+    font-size: 16px;
+    line-height: 150%;
+    font-family: $primary;
 
     .main-content{
         padding:0;
     }
 
     .content{
-        width: calc(100% - 131px);
+        width: 715px;
         float: left;
         padding:14px 38px 20px;
         border-left: 1px solid rgba(0, 0, 0, .3);
+
+        @media (max-width: 1269px) {
+            width: calc(100% - 131px);
+        }
 
         @media (max-width: 767px){
             border-left: 0 none;
@@ -214,7 +145,11 @@
 
             .btn {
                 width: 146px;
+                height: 44px;
+                border-radius: 0;
                 margin-right: 16px;
+                font-family: $primary;
+                font-size: $h5;
 
                 @media (max-width: 767px){
                     float: left;

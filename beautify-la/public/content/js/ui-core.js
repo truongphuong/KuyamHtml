@@ -64,7 +64,7 @@ function monitorResize(callbackfnc) {
 function settingsModal() {
     if (typeof window.verifyScrollbarWidth == "undefined") {
         window.verifyScrollbarWidth = window.innerWidth - $(window).width() + 'px';
-        window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}.modal-open .site-header, .modal-open .nav-account{padding-right:' + window.verifyScrollbarWidth + '}</style>';
+        window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
         $(window.verifyScrollbarWidth).appendTo($('head'));
     }
 
@@ -256,6 +256,10 @@ function placeholderCustom() {
     $(document).on('keyup', input, function () {
         var $this = $(this);
         placholderCheck($this);
+    }).on('focus', input, function () {
+        var $this = $(this);
+        var $parent = $this.closest('.placeholder-custom');
+        $parent.removeClass('validate');
     });
 }
 
@@ -266,4 +270,13 @@ function placholderCheck($obj) {
     } else {
         $obj.removeClass('has-value');
     }
+}
+
+function inputCustom() {
+    var input = '.input-custom input[type="text"]';
+    $(document).on('focus', input, function () {
+        var $this = $(this);
+        var $parent = $this.closest('.input-custom');
+        $parent.removeClass('validate');
+    });
 }

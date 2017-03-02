@@ -96,6 +96,8 @@ $(document).ready(function () {
 
     placeholderCustom();
 
+    inputCustom();
+
     $(document).on('change', 'select', function () {
         var $this = $(this);
 

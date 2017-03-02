@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beautify LA - Company Settings</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="author" content="" />
+
+<!-- http://www.favicon-generator.org/ -->
+<link rel="apple-touch-icon" sizes="57x57" href="content/favicon/apple-icon-57x57.png?v2" />
+<link rel="apple-touch-icon" sizes="60x60" href="content/favicon/apple-icon-60x60.png?v2" />
+<link rel="apple-touch-icon" sizes="72x72" href="content/favicon/apple-icon-72x72.png?v2" />
+<link rel="apple-touch-icon" sizes="76x76" href="content/favicon/apple-icon-76x76.png?v2" />
+<link rel="apple-touch-icon" sizes="114x114" href="content/favicon/apple-icon-114x114.png?v2" />
+<link rel="apple-touch-icon" sizes="120x120" href="content/favicon/apple-icon-120x120.png?v2" />
+<link rel="apple-touch-icon" sizes="144x144" href="content/favicon/apple-icon-144x144.png?v2" />
+<link rel="apple-touch-icon" sizes="152x152" href="content/favicon/apple-icon-152x152.png?v2" />
+<link rel="apple-touch-icon" sizes="180x180" href="content/favicon/apple-icon-180x180.png?v2" />
+<link rel="icon" type="image/png" sizes="192x192" href="content/favicon/android-icon-192x192.png?v2" />
+<link rel="icon" type="image/png" sizes="32x32" href="content/favicon/favicon-32x32.png?v2" />
+<link rel="icon" type="image/png" sizes="96x96" href="content/favicon/favicon-96x96.png?v2" />
+<link rel="icon" type="image/png" sizes="16x16" href="content/favicon/favicon-16x16.png?v2" />
+<link rel="manifest" href="favicon/manifest.json" />
+<meta name="msapplication-TileColor" content="transparent" />
+<meta name="msapplication-TileImage" content="content/favicon/ms-icon-144x144.png?v2" />
+<meta name="theme-color" content="transparent" />
+<meta name="msapplication-config" content="content/favicon/browserconfig.xml" />
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,900,700italic,700,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+
+
+
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+
+
+<link rel="stylesheet" type="text/css" href="content/css/libs/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/bootstrap-select.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/bootstrap-datetimepicker.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/jquery.countdown.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/iscroll.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/addtocalendar.css" />
+<link type="text/css" rel="stylesheet" href="content/css/libs/croppie.css" />
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="content/style.css" />
+</head>
+<body>
+<div class="wrapper company-page company-event-page">
+    
+<div class="back-section">
+    <div class="container">
+        <a title="" href="#">Back to home page</a>
+    </div>
+</div>
+
+<div class="main-content clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
+
+                <!-- #main-affix -->
+                <div id="main-affix">
+                    <div class="affix-content">
+                        <div class="event-content clearfix">
+
+                            <div class="sidebar active">
+    <ul>
+        <li class="setting-1 active"><a title="" href="#">Type</a></li>
+        <li class="setting-2"><a title="" href="#">Details</a></li>
+        <li class="setting-3"><a title="" href="#">Options</a></li>
+        <li class="setting-4"><a title="" href="#">Share</a></li>
+    </ul>
+</div>
+
+
+                            <div id="event1" class="content type">
+    <header>
+        <h3>What type of event do you want to host?</h3>
+    </header>
+    <div class="type-form">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7">
+                <select id="typeSelect" class="select-full">
+                    <option value="1" selected>Class</option>
+                    <option value="2">Donation</option>
+                    <option value="3">RSVP</option>
+                    <option value="3">Tickets Sales</option>
+                </select>
+            </div>
+        </div>
+        <div class="type-class">
+            <section>
+                <p>Class events are for one or more days with limited spots.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select id="classSelect" class="select-full select-default">
+                            <option value="" selected>Duplicate a previous class?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                        <label for="txtClassNum" class="placeholder-custom ">
+                            <div class="placeholder">Max. number of slots<span class="required">&lowast;</span></div>
+                            <input id="txtClassNum" type="text" class="form-control" />
+                        </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <label for="txtClassPrice" class="placeholder-custom">
+                            <div class="placeholder">Class price<span class="required">&lowast;</span></div>
+                            <input id="txtClassPrice" type="text" class="form-control" />
+                        </label>
+                        <a class="icon icon-help" title="" href="#"></a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <span class="label-form">Page logo</span>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <button data-pre="company2" class="btn btn-positive">Save</button>
+    </footer>
+</div>
+
+
+                            <div id="company1" class="content details hide">
+    <header>
+        <h3>Company info</h3>
+    </header>
+    <section class="info-section">
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="txtName" class="placeholder-custom validate">
+                    <div class="placeholder">Name<span class="required">&lowast;</span></div>
+                    <input id="txtName" type="text" class="form-control" />
+                    <span class="error">Invalid</span>
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <!--<label for="txtURl" class="placeholder-custom">
+                    <div class="placeholder">Events homepage URL<span class="required">&lowast;</span></div>
+                    <input id="txtURl" type="text" class="form-control" value="hello" />
+                    <a title="" href="#">copy</a>
+                    <span class="error">This URL is already taken</span>
+                </label>-->
+                <label class="input-custom validate" for="txtURL1">
+                    <span class="table-css">
+                        <span class="tr">
+                            <span class="td">https://www.facebook.com/</span>
+                            <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                        </span>
+                    </span>
+                    <a title="" href="#">copy</a>
+                    <span class="error">This URL is already taken</span>
+                </label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Website" />
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Phone number" />
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <select id="caterogySelect" class="select-full">
+                    <option value="" selected>Category</option>
+                    <option value="1">Yoga</option>
+                    <option value="2">Swimming</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <section class="logo-section">
+        <span class="label-form">Page logo</span>
+        <div class="frame">
+            <div class="upload">Upload logo</div>
+            <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
+            <ul class="control">
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+        </div>
+
+        <div class="frame no-photo">
+            <div class="upload">Upload logo</div>
+            <div class="page-logo" style="background-image: url();"></div>
+            <ul class="control">
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+        </div>
+        <input type="file" id="fileLogo" class="hide" />
+    </section>
+    <section class="socials-section">
+        <span class="label-form">Social media links</span>
+        <ul class="clearfix" data-target="#modal-social" data-toggle="modal">
+            <li><span class="icon icon-facebook"></span></li>
+            <li><span class="icon icon-twitter"></span></li>
+            <li><span class="icon icon-linkedin"></span></li>
+            <li><span class="icon icon-instagram"></span></li>
+            <li><span class="icon icon-pinterest"></span></li>
+            <li><span class="icon icon-google-plus"></span></li>
+            <li><span class="icon icon-add"></span></li>
+        </ul>
+    </section>
+    <section class="address-section">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="placeholder-custom">
+                    <div class="placeholder">Facility / Location name <span class="optional">optional</span></div>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <label for="txtStreet" class="placeholder-custom">
+                    <div class="placeholder">Address<span class="required">&lowast;</span></div>
+                    <input id="txtStreet" type="text" class="form-control" value="hello" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label for="txtCity" class="placeholder-custom">
+                    <div class="placeholder">City<span class="required">&lowast;</span></div>
+                    <input id="txtCity" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4-5">
+                        <select id="stateSelect" class="select-full">
+                            <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
+                            <option value="1">Yoga</option>
+                            <option value="2">Swimming</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-7-5">
+                        <label for="txtZip" class="placeholder-custom">
+                            <div class="placeholder">ZIP code<span class="required">&lowast;</span></div>
+                            <input id="txtZip" type="text" class="form-control">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tags-section">
+        <label class="label-form">Filter events by tags</label>
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <select id="caterogySelect" class="select-full">
+                    <option value="" selected>Category</option>
+                    <option value="1">Yoga</option>
+                    <option value="2">Swimming</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <button class="btn btn-negative btn-tag" data-target="#modal-create-category" data-toggle="modal">create a new tag</button>
+            </div>
+            <div class="col-xs-12">
+                <div class="placeholder-custom">
+                    <div class="placeholder">Facility name <span class="optional">optional</span></div>
+                    <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
+
+Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển xanh 7 chỗ và 16 chỗ đậu trước một nhà hàng. Những người trên xe ăn uống trong quán nhưng không ra làm việc. Ông Hải yêu cầu niêm phong, kéo xe về trụ sở công an phường xử lý.</textarea>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tweets-section">
+        <label class="label-form">Tweets script</label>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="placeholder-custom">
+                    <div class="placeholder">&lt;a class="twitter-timeline" href="https://twitter.com/dimonqu</div>
+                    <input type="text" class="form-control" />
+                    <a title="" href="#">help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button data-next="company2" class="btn btn-positive">save</button>
+    </footer>
+</div>
+
+
+                            <div id="company2" class="content options hide">
+    <header>
+        <h3>Your info <small>Private data</small></h3>
+    </header>
+    <section class="private-section">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="placeholder-custom">
+                    <div class="placeholder">First name<span class="required">&lowast;</span></div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="placeholder-custom">
+                    <div class="placeholder">Last name<span class="required">&lowast;</span></div>
+                    <input type="text" class="form-control" value="helllo">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" placeholder="Cellphone" class="form-control">
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="placeholder-custom">
+                            <div class="placeholder">Login email<span class="required">&lowast;</span></div>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
+    </section>
+    <footer>
+        <button data-pre="company2" class="btn btn-negative">back</button>
+        <button data-next="company4" class="btn btn-positive">Save</button>
+    </footer>
+</div>
+
+
+                            <div id="company4" class="content share hide">
+    <header>
+        <h3>Share your events</h3>
+    </header>
+    <p>To broadcast / promote your events, connect as many platforms as possible.</p>
+    <section class="share-section">
+        <div class="share">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
+                <label class="cb-label" for="cbFacebook">Facebook</label>
+            </div>
+            <div class="section">
+                <button class="btn btn-neutral btn-facebook">Connect Facebook</button>
+            </div>
+        </div>
+        <div class="share">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" />
+                <label class="cb-label" for="cbTwitter">Twitter</label>
+            </div>
+            <div class="section hide">
+                <button class="btn btn-neutral btn-twitter">Connect Twitter</button>
+            </div>
+        </div>
+        <div class="share">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbLinkedIn" type="checkbox" name="share" value="1" />
+                <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
+            </div>
+            <div class="section hide">
+                <button class="btn btn-neutral btn-linkedin">Connect LinkedIn</button>
+            </div>
+        </div>
+        <div class="share">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbMailchimp" type="checkbox" name="share" value="1" />
+                <label class="cb-label" for="cbMailchimp">Mailchimp</label>
+            </div>
+            <div class="section hide">
+                <button class="btn btn-neutral btn-mailchimp">Connect Mailchimp</button>
+            </div>
+        </div>
+        <div class="share">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbConstant" type="checkbox" name="share" value="1" />
+                <label class="cb-label" for="cbConstant">Constant Contact</label>
+            </div>
+            <div class="section hide">
+                <button class="btn btn-neutral btn-constant">Connect Constant Contact</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button data-pre="company3" class="btn btn-negative">back</button>
+        <button data-next="company3" class="btn btn-positive">Done</button>
+    </footer>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-3 hidden-xs">
+                <div id="nav-affix">
+                    <div class="affix-content">
+                        <ul class="link-social clearfix">
+    <li><a title="" href="" class="icon icon-facebook"></a></li>
+    <li><a title="" href="" class="icon icon-twitter"></a></li>
+    <li><a title="" href="" class="icon icon-linkedin"></a></li>
+    <li><a title="" href="" class="icon icon-instagram"></a></li>
+    <li><a title="" href="" class="icon icon-pinterest"></a></li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-7 pull-right text-right">
+                <p>Copyright © 2017 Beautify. Inc.<br class="visible-xs" /> All rights reserved. Patent pending.</p>
+            </div>
+            <div class="col-xs-6 col-md-5 powered">
+                <p>Powered by Beautify.us</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<div id="modal-change-password" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-change-password">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="changePassModalLabel" class="modal-title">Change password</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="placeholder-custom">
+                                <div class="placeholder">New password<span class="required">&lowast;</span></div>
+                                <input type="password" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="placeholder-custom">
+                                <div class="placeholder">Re-enter password<span class="required">&lowast;</span></div>
+                                <input type="password" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <p>* Password minumum 6 characters</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-positive">change password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<!-- .modal-social -->
+<div id="modal-social" class="modal fade" role="dialog" aria-labelledby="socialsModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-social">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="socialsModalLabel" class="modal-title">Add / Edit your social media links</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li class="li-facebook active">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.facebook.com/</span>
+                                    <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-twitter">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.twitter.com/</span>
+                                    <span class="td"><input id="txtURL2" type="text"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-linkedin">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.linkedin.com/</span>
+                                    <span class="td"><input id="txtURL3" type="text"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-instagram">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.instagram.com/</span>
+                                    <span class="td"><input id="txtURL4" type="text"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-pinterest">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.pinterest.com/</span>
+                                    <span class="td"><input id="txtURL5" type="text"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="li-google-plus">
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.pinterest.com/</span>
+                                    <span class="td"><input id="txtURL6" type="text"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+                <input type="button" value="save" class="btn btn-positive" />
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /.modal-social -->
+
+<div id="modal-create-category" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-create-category">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="createCategoryModalLabel" class="modal-title">Create a new category</h4>
+            </div>
+            <div class="modal-body">
+               <input type="password" class="form-control" placeholder="New category" />
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-form btn-negative">cancel</button>
+                <button class="btn btn-form btn-positive">create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<!-- .modal -->
+<div id="cropBannerModal" class="modal fade" role="dialog" aria-labelledby="cropBannerModalLabel"
+    data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-crop-banner">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="cropBannerModalLabel" class="modal-title">Company banner</h4>
+                <p>
+                    <a class="change" title="" href=""><span>Change</span></a>
+                    <input type="file" class="hide" />
+                </p>
+            </div>
+            <div class="modal-body">
+                <div id="croppieBanner">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button class="btn btn-negative" data-dismiss="modal" type="button">cancel</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-positive" data-dismiss="modal" type="button">save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+
+<div class="lightbox"></div>
+
+<div class="loading">
+	<div>
+	    <div class="loader">Loading...</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="content/js/libs/modernizr.custom.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="content/js/libs/css_browser_selector.js"></script>
+<script type="text/javascript" src="content/js/libs/moment.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery-ui.js"></script>
+<script type="text/javascript" src="content/js/libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="content/js/libs/bootstrap-select.js"></script>
+<script type="text/javascript" src="content/js/libs/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="content/js/libs/iscroll.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery.plugin.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery.countdown.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="content/js/libs/addtocalendar.js"></script>
+<script type="text/javascript" src="content/js/libs/croppie.js"></script>
+
+
+
+
+<script type="text/javascript" src="content/js/ui-core.js"></script>
+<script type="text/javascript" src="content/js/ui-general.js"></script>
+
+
+<script type="text/javascript" src="content/js/pages/ui-company-event.js"></script>
+<script type="text/javascript" src="content/js/pages/ui-company.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
+
+</body>
+</html>

@@ -135,7 +135,7 @@
 
         .spot-img{
             display: block;
-            height: 345px;
+            height: 346px;
             background: center center no-repeat;
             background-size: cover;
             border-bottom: 0;
@@ -222,7 +222,6 @@
         float: left;
         width: 71%;
         position: relative;
-        line-height: 23px;
         color:#303030;
         font-family: 'lato', sans-serif;
 
@@ -238,7 +237,7 @@
         }
 
         .spot-content {
-            padding: 20px 20px 0;
+            padding: 13px 20px 0;
             height: 222px;
 
             @media (max-width:979px) {
@@ -259,15 +258,17 @@
                 line-height: 46px;
                 font-family: 'lato', sans-serif;
                 color: #f3472d;
-                margin-bottom: 10px;
+                margin-bottom: 4px;
 
                 @media (min-width: 980px) and (max-width: 1269px){
-                    font-size:24px;line-height: 24px;
+                    font-size:24px;
+                    line-height: 24px;
                 }
 
                 @media (max-width:767px) {
                     font-size:$h5;
                     line-height: 21px;
+                    margin-bottom: 2px;
                 }
 
                 a{
@@ -289,34 +290,42 @@
             }
 
             p{
-                margin-bottom: 15px;
-
-                @media (min-width: 980px) and (max-width: 1269px){
-                    font-size:14px;
-                }
+                margin-bottom: 16px;
+                line-height: 23px;
 
                 @media (max-width:767px) {
-                    font-size:$s13;
+                    line-height: 16px;
+                    margin-bottom: 3px;
                 }
 
                 small{
-                    font-size: $s18;
+                    font-size: 18px;
                     line-height: 23px;
-                    font-family: 'lato', sans-serif;
                     color:#2c2c2c;
+                    display: inline-block;
+                    margin-bottom: 6px;
 
                     @media (min-width: 980px) and (max-width: 1269px){
                         font-size:13px;
                         line-height:150%;
                     }
 
+                    @media (max-width:767px) {
+                        font-size: 15px;
+                        margin-bottom: 8px;
+                    }
+
                     strong{
-                        font-size: $s19;
+                        font-size: 19px;
                         line-height: 25px;
                         font-weight: 700;
 
                         @media (min-width: 980px) and (max-width: 1269px){
                             font-size:12px;
+                        }
+
+                        @media (max-width:767px) {
+                            font-size: 15px;
                         }
                     }
                 }
@@ -327,6 +336,7 @@
                 overflow: hidden;
                 margin-bottom: 15px;
                 font-size: $s18;
+                line-height: 23px;
 
                 @media (max-width:979px) {
                     height: auto;
@@ -334,11 +344,25 @@
 
                 @media (max-width:767px) {
                     font-size: $s15;
-                    line-height: 18px;
+                    line-height: 16px;
+
+                    @media (max-width: 767px){
+                        margin-bottom: 22px;
+                    }
                 }
 
-                p{
+                p {
                     margin: 0 !important;
+                }
+
+                + p {
+                    @media (min-width:1230px) {
+                        margin-top: 20px;
+                    }
+
+                    @media (max-width: 767px){
+                        margin-bottom: 22px;
+                    }
                 }
             }
         }
@@ -569,6 +593,7 @@
                 @media (max-width:979px) {
                     float: none;
                     width: 100%;
+                    line-height: 54px;
                 }
 
                 @media (max-width:767px) {
@@ -584,6 +609,18 @@
     }
 
     &.multi-spot{
+        .spot-content{
+            h2{
+                @media (min-width: 768px) {
+                    margin-bottom: 32px;
+                }
+
+                @media (max-width:767px) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
         .spot-footer {
             .spot-text{
                 color: #2c2c2c;
@@ -591,11 +628,13 @@
 
                 @media (max-width:979px) {
                     text-align: center;
+                    height:54px;
+                    line-height:54px;
                 }
 
                 @media (max-width:767px) {
-                    height:50px;
-                    line-height:50px;
+                    height:38px;
+                    line-height:38px;
                     padding:0;
                     font-size: 15px;
                 }
@@ -626,14 +665,14 @@
             }
 
             .section-ellipsis{
-                height: 115px;
+                max-height: 115px;
 
                 @media (max-width:979px) {
                     max-height: 205px;
                 }
 
                 @media (max-width:767px) {
-                    height: 108px;
+                    max-height: 108px;
                 }
             }
         }
@@ -646,6 +685,10 @@
 
             @media (max-width:979px) {
                 max-height: 71px;
+            }
+
+            @media (max-width:767px) {
+                max-height: 67px;
             }
         }
     }

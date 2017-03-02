@@ -11,30 +11,111 @@
     top: -5px;
 }
 
-.table-css.custom-input {
-    width: 100%;
+.input-custom{
     border: 1px solid $border;
-    font-size: 20px;
-    border-radius: 2px;
-    font-weight: normal;
     overflow: hidden;
+    border-radius: 2px;
+    display: block;
+    position: relative;
 
-    .td {
+    .table-css {
+        width: 100%;
+        font-size: 20px;
+        font-weight: normal;
 
-       &:first-child {
-            padding-left: 15px;
-            word-break: keep-all;
-            color: #999;
-            width: 197px;
-            line-height: 38px;
+        .td {
+
+           &:first-child {
+                padding-left: 15px;
+                word-break: keep-all;
+                color: #999;
+                width: 197px;
+                line-height: 38px;
+            }
+        }
+
+        input[type="text"] {
+            height: 37px;
+            border: 0 none;
+            padding: 0 15px 0 0;
+            color: #000;
+            width: 100%;
+            position: relative;
+            left: -1px;
         }
     }
 
-    input[type="text"] {
-        height: 38px;
-        border: 0 none;
-        padding: 0 15px 0 0;
-        color: #000;
+    a {
+        display: block;
+        position: absolute;
+        top:0;
+        right: 0;
+        padding:0 15px;
+        color: $positive;
+        text-decoration: none;
+        font-size: $s15;
+        line-height: 38px;
+        font-family: $primary;
+        background: $white;
+    }
+
+    .error {
+        position: absolute;
+        top:0;
+        left: 100%;
+        padding:0 15px;
+        color: $positive;
+        text-decoration: none;
+        font-size: $s15;
+        line-height: 38px;
+        font-family: $primary;
+        background: $white;
+
+        &:before{
+            content:'';
+            display: inline-block;
+            width: 13px;
+            height: 11px;
+            background: $white url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
+            background-size: 13px auto;
+            margin-right: 5px;
+        }
+    }
+
+    &.validate{
+        .error{
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+
+.custom-input {
+    &.table-css{
         width: 100%;
+        border: 1px solid $border;
+        font-size: 20px;
+        border-radius: 2px;
+        font-weight: normal;
+        overflow: hidden;
+
+        .td {
+
+           &:first-child {
+                padding-left: 15px;
+                word-break: keep-all;
+                color: #999;
+                width: 197px;
+                line-height: 38px;
+            }
+        }
+
+        input[type="text"] {
+            height: 38px;
+            border: 0 none;
+            padding: 0 15px 0 0;
+            color: #000;
+            width: 100%;
+        }
     }
 }

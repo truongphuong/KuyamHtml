@@ -1,0 +1,62 @@
+{% extends './master/main-company-event.html' %}
+
+{% block title %}Beautify LA - Company Settings{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block namepage %}company-page company-event-page{% endblock %}
+
+{% block main %}
+{% include "content/pages/company/event/back.html" %}
+<div class="main-content clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
+
+                <!-- #main-affix -->
+                <div id="main-affix">
+                    <div class="affix-content">
+                        <div class="event-content clearfix">
+
+                            {% include "content/pages/company/event/sidebar.html" %}
+
+                            {% include "content/pages/company/event/type.html" %}
+
+                            {% include "content/pages/company/event/details.html" %}
+
+                            {% include "content/pages/company/event/options.html" %}
+
+                            {% include "content/pages/company/event/share.html" %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-3 hidden-xs">
+                <div id="nav-affix">
+                    <div class="affix-content">
+                        {% include "content/pages/company/list/socials.html" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block modal %}
+{% include "content/modals/change-password.html" %}
+{% include "content/modals/socials.html" %}
+{% include "content/modals/create-category.html" %}
+{% include "content/modals/crop-banner.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="content/js/pages/ui-company-event.js"></script>
+<script type="text/javascript" src="content/js/pages/ui-company.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
+{% endblock %}
+

@@ -56,7 +56,7 @@
 </head>
 <body>
 <div class="wrapper company-page company-settings-page">
-    <div class="header-banner">
+    <div class="header-banner default">
 	<div id="site-header" class="site-header bg-black">
     <div class="container">
         <h1 class="company-name">Kourosh Soccer Club</h1>
@@ -103,7 +103,7 @@
 
 
     
-<div class="upload hide">Upload banner image</div>
+<div class="upload">Upload banner image</div>
 <ul class="control">
     <li class="change"><span>Change</span></li>
     <li class="delete"><span>Delete</span></li>
@@ -126,20 +126,20 @@
 
         <div class="settings-content clearfix">
 
-            <div class="sidebar active">
+            <div class="sidebar">
     <ul>
-        <li class="setting-1 active"><a title="" href="#">Company</a></li>
-        <li class="setting-2"><a title="" href="#">Contact</a></li>
-        <li class="setting-3"><a title="" href="#">Payment</a></li>
-        <li class="setting-4"><a title="" href="#">Connect</a></li>
+        <li class="setting-1 active" data-section="company1"><a title="" href="#">Company</a></li>
+        <li class="setting-2" data-section="company2"><a title="" href="#">Contact</a></li>
+        <li class="setting-3" data-section="company3"><a title="" href="#">Payment</a></li>
+        <li class="setting-4" data-section="company4"><a title="" href="#">Connect</a></li>
     </ul>
 </div>
 
 <select id="sectionSelect" class="section-select">
-    <option>Company info</option>
-    <option>Your info</option>
-    <option>How do you want to get paid</option>
-    <option>Share your events</option>
+    <option value="company1">Company info</option>
+    <option value="company2">Your info</option>
+    <option value="company3">How do you want to get paid</option>
+    <option value="company4">Share your events</option>
 </select>
 
 
@@ -150,16 +150,26 @@
     <section class="info-section">
         <div class="row">
             <div class="col-xs-12">
-                <label for="txtName" class="placeholder-custom">
+                <label for="txtName" class="placeholder-custom validate">
                     <div class="placeholder">Name<span class="required">&lowast;</span></div>
                     <input id="txtName" type="text" class="form-control" />
                     <span class="error">Invalid</span>
                 </label>
             </div>
             <div class="col-xs-12">
-                <label for="txtURl" class="placeholder-custom">
+                <!--<label for="txtURl" class="placeholder-custom">
                     <div class="placeholder">Events homepage URL<span class="required">&lowast;</span></div>
                     <input id="txtURl" type="text" class="form-control" value="hello" />
+                    <a title="" href="#">copy</a>
+                    <span class="error">This URL is already taken</span>
+                </label>-->
+                <label class="input-custom validate" for="txtURL1">
+                    <span class="table-css">
+                        <span class="tr">
+                            <span class="td">https://www.facebook.com/</span>
+                            <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                        </span>
+                    </span>
                     <a title="" href="#">copy</a>
                     <span class="error">This URL is already taken</span>
                 </label>
@@ -181,18 +191,9 @@
     </section>
     <section class="logo-section">
         <span class="label-form">Page logo</span>
-        <div class="frame">
+        <div class="frame default">
             <div class="upload">Upload logo</div>
             <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
-            <ul class="control">
-                <li class="change"><span>Change</span></li>
-                <li class="delete"><span>Delete</span></li>
-            </ul>
-        </div>
-
-        <div class="frame no-photo">
-            <div class="upload">Upload logo</div>
-            <div class="page-logo" style="background-image: url();"></div>
             <ul class="control">
                 <li class="change"><span>Change</span></li>
                 <li class="delete"><span>Delete</span></li>
@@ -287,7 +288,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button data-next="company2" class="btn btn-positive">save</button>
+        <button data-section="company2" class="btn btn-positive">save</button>
     </footer>
 </div>
 
@@ -327,8 +328,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
     </section>
     <footer>
-        <button data-pre="company2" class="btn btn-negative">back</button>
-        <button data-next="company4" class="btn btn-positive">Save</button>
+        <button data-section="company1" class="btn btn-negative">back</button>
+        <button data-section="company3" class="btn btn-positive">Save</button>
     </footer>
 </div>
 
@@ -344,9 +345,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="radio-label" for="radioStripe">Strip</label>
             </div>
             <div class="section">
-                <button class="btn btn-stripe-connect hide"></button>
+                <button class="btn btn-stripe-connect"></button>
                 <button class="btn btn-stripe-connected hide"></button>
-                <ul class="clearfix">
+                <ul class="reconnect-section clearfix hide">
                     <li>Stripe not connected</li>
                     <li>
                         <button class="btn btn-negative btn-reconnect">reconnect</button>
@@ -369,7 +370,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button data-pre="company2" class="btn btn-negative">Save</button>
+        <button data-section="company2" class="btn btn-negative">back</button>
+        <button data-section="company4" class="btn btn-positive">Save</button>
     </footer>
 </div>
 
@@ -427,8 +429,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button data-pre="company3" class="btn btn-negative">back</button>
-        <button data-next="company3" class="btn btn-positive">Done</button>
+        <button data-section="company3" class="btn btn-negative">back</button>
+        <button data-section="" class="btn btn-positive">Done</button>
     </footer>
 </div>
 
@@ -504,50 +506,62 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             <div class="modal-body">
                 <ul>
                     <li class="li-facebook active">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.facebook.com/</span>
-                                <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.facebook.com/</span>
+                                    <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
                     <li class="li-twitter">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.twitter.com/</span>
-                                <span class="td"><input id="txtURL2" type="text"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.twitter.com/</span>
+                                    <span class="td"><input id="txtURL2" type="text"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
                     <li class="li-linkedin">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.linkedin.com/</span>
-                                <span class="td"><input id="txtURL3" type="text"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.linkedin.com/</span>
+                                    <span class="td"><input id="txtURL3" type="text"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
                     <li class="li-instagram">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.instagram.com/</span>
-                                <span class="td"><input id="txtURL4" type="text"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.instagram.com/</span>
+                                    <span class="td"><input id="txtURL4" type="text"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
                     <li class="li-pinterest">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.pinterest.com/</span>
-                                <span class="td"><input id="txtURL5" type="text"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.pinterest.com/</span>
+                                    <span class="td"><input id="txtURL5" type="text"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
                     <li class="li-google-plus">
-                        <label class="table-css custom-input" for="txtURL1">
-                            <span class="tr">
-                                <span class="td">https://www.pinterest.com/</span>
-                                <span class="td"><input id="txtURL6" type="text"></span>
+                        <label class="input-custom" for="txtURL1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">https://www.pinterest.com/</span>
+                                    <span class="td"><input id="txtURL6" type="text"></span>
+                                </span>
                             </span>
                         </label>
                     </li>
@@ -586,8 +600,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <button type="button" class="close" data-dismiss="modal"></button>
                 <h4 id="cropBannerModalLabel" class="modal-title">Company banner</h4>
                 <p>
-                    <a id="uploadBanner" class="link-upload" title="" href=""><span>Change</span></a><span class="delete-section hide"> | <a id="linkDeleteBanner" class="link-delete" title="" href=""><span>Delete</span></a></span><input
-                        type="file" id="fileBanner2" class="hide" /></p>
+                    <a class="change" title="" href=""><span>Change</span></a>
+                    <input type="file" class="hide" />
+                </p>
             </div>
             <div class="modal-body">
                 <div id="croppieBanner">
@@ -644,7 +659,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 
 <script type="text/javascript" src="content/js/pages/ui-company-settings.js"></script>
 <script type="text/javascript" src="content/js/pages/ui-company.js"></script>
-<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
 
 </body>
 </html>

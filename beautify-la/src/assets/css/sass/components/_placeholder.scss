@@ -71,10 +71,9 @@ div {
         }
 
         .error {
-            display: block;
             position: absolute;
             top:0;
-            right: 0;
+            left: 100%;
             padding:0 15px;
             color: $positive;
             text-decoration: none;
@@ -91,6 +90,13 @@ div {
                 background: $white url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
                 background-size: 13px auto;
                 margin-right: 5px;
+            }
+        }
+
+        &.validate{
+            .error{
+                left: inherit;
+                right: 0;
             }
         }
 

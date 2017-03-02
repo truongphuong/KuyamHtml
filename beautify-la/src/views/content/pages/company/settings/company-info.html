@@ -5,16 +5,26 @@
     <section class="info-section">
         <div class="row">
             <div class="col-xs-12">
-                <label for="txtName" class="placeholder-custom">
+                <label for="txtName" class="placeholder-custom validate">
                     <div class="placeholder">Name<span class="required">&lowast;</span></div>
                     <input id="txtName" type="text" class="form-control" />
                     <span class="error">Invalid</span>
                 </label>
             </div>
             <div class="col-xs-12">
-                <label for="txtURl" class="placeholder-custom">
+                <!--<label for="txtURl" class="placeholder-custom">
                     <div class="placeholder">Events homepage URL<span class="required">&lowast;</span></div>
                     <input id="txtURl" type="text" class="form-control" value="hello" />
+                    <a title="" href="#">copy</a>
+                    <span class="error">This URL is already taken</span>
+                </label>-->
+                <label class="input-custom validate" for="txtURL1">
+                    <span class="table-css">
+                        <span class="tr">
+                            <span class="td">https://www.facebook.com/</span>
+                            <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                        </span>
+                    </span>
                     <a title="" href="#">copy</a>
                     <span class="error">This URL is already taken</span>
                 </label>
@@ -36,18 +46,9 @@
     </section>
     <section class="logo-section">
         <span class="label-form">Page logo</span>
-        <div class="frame">
+        <div class="frame default">
             <div class="upload">Upload logo</div>
             <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
-            <ul class="control">
-                <li class="change"><span>Change</span></li>
-                <li class="delete"><span>Delete</span></li>
-            </ul>
-        </div>
-
-        <div class="frame no-photo">
-            <div class="upload">Upload logo</div>
-            <div class="page-logo" style="background-image: url();"></div>
             <ul class="control">
                 <li class="change"><span>Change</span></li>
                 <li class="delete"><span>Delete</span></li>
@@ -142,6 +143,6 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button data-next="company2" class="btn btn-positive">save</button>
+        <button data-section="company2" class="btn btn-positive">save</button>
     </footer>
 </div>

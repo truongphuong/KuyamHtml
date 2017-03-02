@@ -1,0 +1,62 @@
+.company-event-page {
+    .share{
+        p{
+            font-size: $h5;
+            font-family: $primary;
+            color: rgba(51, 51, 51, .6);
+            position: relative;
+            top: -4px;
+            margin:0 0 16px;
+        }
+
+        .share-section{
+
+            .share{
+                margin-bottom: 14px;
+
+                .btn{
+                    font-family: $four;
+                    font-weight: 600;
+                    font-size: $s13;
+                    color: #323232;
+                    border-radius: 4px;
+                    position: relative;
+                    padding-left: 56px;
+                    padding-right: 33px;
+
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        width: 26px;
+                        height: 26px;
+                        background: url(images/ui/pages/company/settings/icon_share.png) no-repeat;
+                        background-size: 26px auto;
+                        position: absolute;
+                        top:6px;
+                        left:14px;
+                    }
+
+                    &.btn-facebook:before{
+                        background-position: center 0;
+                    }
+
+                    &.btn-twitter:before{
+                        background-position: center -26px;
+                    }
+
+                    &.btn-linkedin:before{
+                        background-position: center -52px;
+                    }
+
+                    &.btn-mailchimp:before{
+                        background-position: center -78px;
+                    }
+
+                    &.btn-constant:before{
+                        background-position: center -104px;
+                    }
+                }
+            }
+        }
+    }
+}
