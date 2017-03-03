@@ -95,17 +95,49 @@
 }
 .book-option .option-select ul li .table-css{
     width: 100%;
+
+    @media (max-width: 374px) {
+        display: block;
+    }
 }
 .book-option .option-select ul li .tr{
     cursor: pointer;
+
+    @media (max-width: 374px) {
+        display: block;
+    }
+
+    &:after{
+        @media (max-width: 374px) {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
 }
 .book-option .option-select ul li .td{
     padding: 0 0 0 14px;
     text-align: right;
     color: rgba(0, 0, 0, .8);
+
+    @media (max-width: 767px) {
+        padding-left: 5px;
+    }
+
+    @media (max-width: 374px) {
+        display: block;
+        float: left;
+        width: 33.3333% !important;
+        min-height: 1px;
+    }
 }
 .book-option .option-select ul li .td:first-child{
     padding: 0;
+
+    @media (max-width: 374px) {
+        float: none;
+        width: 100% !important;
+    }
 }
 .book-option .option-select ul li .td-name{
     padding-left: 0;
@@ -119,10 +151,18 @@
 .book-option .option-select ul li .td-time,
 .book-option .option-select ul li .td-price{
     width: 85px;
+
+    @media (max-width: 767px){
+        width: 70px;
+    }
 }
 .book-option .option-select ul li .td-off{
     color: $negative;
     width: 110px;
+
+    @media (max-width: 767px){
+        width: 90px;
+    }
 }
 .book-option .option-select ul li .td-off span{
     position: relative;

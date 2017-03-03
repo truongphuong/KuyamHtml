@@ -5110,17 +5110,41 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 
 .book-option .option-select ul li .table-css {
   width: 100%; }
+  @media (max-width: 374px) {
+    .book-option .option-select ul li .table-css {
+      display: block; } }
 
 .book-option .option-select ul li .tr {
   cursor: pointer; }
+  @media (max-width: 374px) {
+    .book-option .option-select ul li .tr {
+      display: block; } }
+  @media (max-width: 374px) {
+    .book-option .option-select ul li .tr:after {
+      content: '';
+      display: block;
+      clear: both; } }
 
 .book-option .option-select ul li .td {
   padding: 0 0 0 14px;
   text-align: right;
   color: rgba(0, 0, 0, 0.8); }
+  @media (max-width: 767px) {
+    .book-option .option-select ul li .td {
+      padding-left: 5px; } }
+  @media (max-width: 374px) {
+    .book-option .option-select ul li .td {
+      display: block;
+      float: left;
+      width: 33.3333% !important;
+      min-height: 1px; } }
 
 .book-option .option-select ul li .td:first-child {
   padding: 0; }
+  @media (max-width: 374px) {
+    .book-option .option-select ul li .td:first-child {
+      float: none;
+      width: 100% !important; } }
 
 .book-option .option-select ul li .td-name {
   padding-left: 0;
@@ -5134,10 +5158,17 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .book-option .option-select ul li .td-time,
 .book-option .option-select ul li .td-price {
   width: 85px; }
+  @media (max-width: 767px) {
+    .book-option .option-select ul li .td-time,
+    .book-option .option-select ul li .td-price {
+      width: 70px; } }
 
 .book-option .option-select ul li .td-off {
   color: #ff5050;
   width: 110px; }
+  @media (max-width: 767px) {
+    .book-option .option-select ul li .td-off {
+      width: 90px; } }
 
 .book-option .option-select ul li .td-off span {
   position: relative;
