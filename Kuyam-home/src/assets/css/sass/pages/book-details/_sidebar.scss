@@ -138,6 +138,19 @@
 .book-aside .opening .table-cell{
     font-size: $s13;
     color: rgba(51, 50, 50, .9);
+
+    span{
+        display: inline-block;
+        text-align: right;
+
+        &.fix-width{
+            width: 52px;
+
+            @media (max-width: 767px){
+                width: 56px;
+            }
+        }
+    }
 }
 .book-aside .opening .table-cell:first-child{
     padding-right: 18px;

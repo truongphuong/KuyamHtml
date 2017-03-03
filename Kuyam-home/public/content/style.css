@@ -4838,6 +4838,14 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
 .book-aside .opening .table-cell {
   font-size: 0.8125em;
   color: rgba(51, 50, 50, 0.9); }
+  .book-aside .opening .table-cell span {
+    display: inline-block;
+    text-align: right; }
+    .book-aside .opening .table-cell span.fix-width {
+      width: 52px; }
+      @media (max-width: 767px) {
+        .book-aside .opening .table-cell span.fix-width {
+          width: 56px; } }
 
 .book-aside .opening .table-cell:first-child {
   padding-right: 18px; }
