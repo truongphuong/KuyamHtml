@@ -1,77 +1,98 @@
 <div id="event2" class="content details-event hide">
     <header>
-        <h3>Company info</h3>
+        <h3>Tell us about your class</h3>
     </header>
     <section class="section info-section">
         <div class="row">
             <div class="col-xs-12">
-                <label for="txtName" class="placeholder-custom validate">
-                    <div class="placeholder">Name<span class="required">&lowast;</span></div>
+                <label for="txtName" class="placeholder-custom">
+                    <div class="placeholder">Class name<span class="required">&lowast;</span></div>
                     <input id="txtName" type="text" class="form-control" />
-                    <span class="error">Invalid</span>
                 </label>
             </div>
             <div class="col-xs-12">
-                <label class="input-custom validate" for="txtURL1">
-                    <span class="table-css">
-                        <span class="tr">
-                            <span class="td">https://www.facebook.com/</span>
-                            <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
-                            <span class="td"><a title="" href="#">copy</a></span>
-                        </span>
-                    </span>
-                    <span class="error">This URL is already taken</span>
+                 <label for="txtName" class="placeholder-custom">
+                    <div class="placeholder">Staff <small>optional</small></div>
+                    <input id="txtName" type="text" class="form-control" />
                 </label>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <input type="text" class="form-control" placeholder="Website" />
+        </div>
+    </section>
+    <section class="section time-section">
+        <span class="label-form">When is this class?<span class="required">&lowast;</span></span>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+            <span class="label-form">Date</span>
+                <input id="txtDateStart" type="text" class="form-control" />
             </div>
-            <div class="col-xs-12 col-md-6">
-                <input type="text" class="form-control" placeholder="Phone number" />
+            <div class="col-xs-12 col-sm-4">
+                <div class="relative">
+                    <span class="label-form">From</span>
+                    <div class="hour-custom">
+                        <input id="txtFrom" type="text" class="form-control" value="8:00" />
+                        <select id="fromSectlect">
+                            <option selected value="1">AM</option>
+                            <option selected value="1">PM</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <select id="caterogySelect" class="select-full">
-                    <option value="" selected>Category</option>
-                    <option value="1">Yoga</option>
-                    <option value="2">Swimming</option>
-                </select>
+            <div class="col-xs-12 col-sm-4">
+                <div class="relative">
+                    <span class="label-form">To</span>
+                    <div class="hour-custom">
+                        <input id="txtTo" type="text" class="form-control" value="8:00" />
+                        <select id="toSelect">
+                            <option selected value="1">AM</option>
+                            <option selected value="1">PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="cb-custom">
+                    <input class="cb-mark" id="cbRepeat" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbRepeat">Repeat class?</label>
+                </div>
+            </div>
+            <div id="weekList" class="col-xs-12 col-sm-8 hide">
+                <ul class="week-list">
+                    <li>M</li>
+                    <li>T</li>
+                    <li>W</li>
+                    <li>T</li>
+                    <li>F</li>
+                    <li>S</li>
+                    <li>S</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <span class="label-form">End date</span>
+                <input id="txtDateEnd" type="text" class="form-control" />
             </div>
         </div>
     </section>
-    <section class="section logo-section">
-        <span class="label-form">Page logo</span>
-        <div class="frame">
-            <div class="upload">Upload logo</div>
-            <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
-            <ul class="control">
-                <li class="change"><span>Change</span></li>
-                <li class="delete"><span>Delete</span></li>
-            </ul>
+    <section class="section description-section">
+        <div class="placeholder-custom input-countdown inner">
+            <div class="placeholder">Class page description<span class="required">&lowast;</span></div>
+            <textarea class="form-control" cols="" rows=""></textarea>
+            <span class="text"><span class="num">300</span> characters</span>
         </div>
-
-        <div class="frame no-photo">
-            <div class="upload">Upload logo</div>
-            <div class="page-logo" style="background-image: url();"></div>
-            <ul class="control">
-                <li class="change"><span>Change</span></li>
-                <li class="delete"><span>Delete</span></li>
-            </ul>
-        </div>
-        <input type="file" id="fileLogo" class="hide" />
-    </section>
-    <section class="section socials-section">
-        <span class="label-form">Social media links</span>
-        <ul class="clearfix" data-target="#modal-social" data-toggle="modal">
-            <li><span class="icon icon-facebook"></span></li>
-            <li><span class="icon icon-twitter"></span></li>
-            <li><span class="icon icon-linkedin"></span></li>
-            <li><span class="icon icon-instagram"></span></li>
-            <li><span class="icon icon-pinterest"></span></li>
-            <li><span class="icon icon-google-plus"></span></li>
-            <li><span class="icon icon-add"></span></li>
-        </ul>
     </section>
     <section class="section address-section">
+        <span class="label-form">Where is this class?<span class="required">&lowast;</span></span>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioAddress1" type="radio" name="address" value="0" />
+            <label class="radio-label" for="radioAddress1">1564 Lorem ipsum default address</label>
+        </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioAddress2" type="radio" name="address" value="1" />
+            <label class="radio-label" for="radioAddress2">Alternative Address</label>
+        </div>
         <div class="row">
             <div class="col-xs-12">
                 <div class="placeholder-custom">
@@ -93,54 +114,19 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4-5">
+                    <div class="col-xs-12 col-sm-6">
                         <select id="stateSelect" class="select-full">
                             <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
                             <option value="1">Yoga</option>
                             <option value="2">Swimming</option>
                         </select>
                     </div>
-                    <div class="col-xs-12 col-sm-7-5">
+                    <div class="col-xs-12 col-sm-6">
                         <label for="txtZip" class="placeholder-custom">
                             <div class="placeholder">ZIP code<span class="required">&lowast;</span></div>
                             <input id="txtZip" type="text" class="form-control">
                         </label>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section tags-section">
-        <label class="label-form">Filter events by tags</label>
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
-                <select id="caterogySelect" class="select-full">
-                    <option value="" selected>Category</option>
-                    <option value="1">Yoga</option>
-                    <option value="2">Swimming</option>
-                </select>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <button class="btn btn-negative btn-tag" data-target="#modal-create-category" data-toggle="modal">create a new tag</button>
-            </div>
-            <div class="col-xs-12">
-                <div class="placeholder-custom">
-                    <div class="placeholder">Facility name <span class="optional">optional</span></div>
-                    <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
-
-Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển xanh 7 chỗ và 16 chỗ đậu trước một nhà hàng. Những người trên xe ăn uống trong quán nhưng không ra làm việc. Ông Hải yêu cầu niêm phong, kéo xe về trụ sở công an phường xử lý.</textarea>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section tweets-section">
-        <label class="label-form">Tweets script</label>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="placeholder-custom">
-                    <div class="placeholder">&lt;a class="twitter-timeline" href="https://twitter.com/dimonqu</div>
-                    <input type="text" class="form-control" />
-                    <a title="" href="#">help</a>
                 </div>
             </div>
         </div>

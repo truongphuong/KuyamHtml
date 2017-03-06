@@ -28,6 +28,10 @@
                 p{
                     width: calc(110%);
                     margin-bottom: 0;
+
+                    @media (max-width: 767px){
+                        width: 100%;
+                    }
                 }
 
                 .incentive{
@@ -36,6 +40,78 @@
 
                     .cb-custom{
                         margin-bottom: 5px;
+                    }
+
+                    .form {
+                        .label-form{
+                            margin-top:8px;
+                            margin-bottom: 10px;
+                        }
+
+                        .row{
+                            margin:0 -8px;
+                        }
+
+                        div[class*="col-"]{
+                            margin-bottom: 20px;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                        }
+
+                        ul{
+                            margin:0 -8px;
+                            padding:0;
+                            list-style: none;
+
+                            &:after{
+                                content: '';
+                                display: block;
+                                clear: both;
+                            }
+
+                            li{
+                                width: 50%;
+                                float: left;
+                                padding:0 8px;
+
+                                .radio-custom{
+                                    width: 32px;
+                                    float: left;
+
+                                    .radio-mark ~ .radio-label:before{
+                                        top: 9px;
+                                    }
+                                }
+
+                                .input-custom{
+                                    width: calc(100% - 32px);
+                                    float: left;
+                                }
+                            }
+                        }
+                    }
+
+                    &.promo-incentive{
+
+                        .form {
+                            margin-top:8px;
+
+                            .label-form{
+
+                            }
+
+                            div[class*="col-"]{
+                                margin-bottom: 0;
+                            }
+
+                            .row {
+                                &:first-child{
+                                    div[class*="col-"]{
+                                        margin-bottom: 12px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

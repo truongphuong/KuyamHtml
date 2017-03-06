@@ -1,4 +1,76 @@
 .company-event-page {
     .details-event{
+        div[class*="col-"]{
+            margin-bottom: 17px;
+        }
+
+        .info-section{
+            div[class*="col-"]:last-child{
+                margin-bottom: 12px;
+            }
+        }
+
+        .time-section{
+            .label-form{
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            > .label-form{
+                margin-top:24px;
+                margin-bottom: 16px;
+            }
+
+            .cb-custom{
+                padding-top: 7px;
+                height: 40px;
+            }
+
+            .week-list{
+                margin: 0;
+                padding:0;
+                list-style: none;
+                border: 1px solid $border;
+                float: left;
+                border-radius: 2px;
+
+                li{
+                    float: left;
+                    color: $placeholder;
+                    line-height: 38px;
+                    width: 33px;
+                    font-size: $h5;
+                    font-family: $primary;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &.active{
+                        color: $positive;
+                        font-weight: 700;
+                    }
+
+                    + li{
+                        border-left: 1px solid $border;
+                    }
+                }
+            }
+        }
+
+        .description-section{
+            padding-top:26px;
+            padding-bottom: 13px;
+        }
+
+        .address-section{
+            .label-form{
+                margin-top: 22px;
+                margin-bottom: 0;
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
     }
 }

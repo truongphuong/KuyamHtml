@@ -147,3 +147,38 @@
         }
     }
 }
+
+.hour-custom{
+    position: relative;
+    padding-left: calc(100% - 82px);
+
+    .form-control{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 67px);
+        border-right: 0 none;
+        border-radius: 2px 0 0 2px;
+        text-align: center;
+    }
+
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+        width: 82px;
+    }
+
+    .bootstrap-select {
+        > .btn,
+        > .btn:focus,
+        > .btn:active,
+        > .btn:hover,
+        > .btn:visited,
+        &.open > .btn,
+        &.open > .btn:focus,
+        &.open > .btn:active,
+        &.open > .btn:hover,
+        &.open > .btn:visited{
+            border-left: 0 none;
+            border-radius:0 2px 2px 0;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-<div id="event3" class="content options-event">
+<div id="event3" class="content options-event hide">
     <header>
         <h3>We're almost done!</h3>
     </header>
@@ -26,13 +26,13 @@
     </section>
     <section class="section incentives-section">
         <label class="label-form">Incentives <small>optional</small></label>
-        <div class="incentive">
+        <div class="incentive early-incentive">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbEarlyBird" type="checkbox" name="incentives" value="1" />
                 <label class="cb-label" for="cbEarlyBird">Early bird</label>
             </div>
             <p>The first guests to sign up will receive the reward you describe</p>
-            <div class="form">
+            <div class="form hide">
                 <label class="label-form">Number of RSVP available for early bird reward</label>
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
@@ -47,13 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="incentive">
+        <div class="incentive goal-incentive">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbGoalReward" type="checkbox" name="incentives" value="1" />
                 <label class="cb-label" for="cbGoalReward">Goal reward</label>
             </div>
             <p>All guests will receive your reward if the goal is achieved</p>
-            <div class="form">
+            <div class="form hide">
                 <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
@@ -68,17 +68,16 @@
                 </div>
             </div>
         </div>
-        <div class="incentive">
+        <div class="incentive promo-incentive">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbPromoCode" type="checkbox" name="incentives" value="1" />
                 <label class="cb-label" for="cbPromoCode">Promo code</label>
             </div>
             <p>A limited-time discount will be applied at checkout</p>
-            <div class="form">
-                <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
+            <div class="form hide">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" placeholder="Promo code" />
                     </div>
                 </div>
                 <div class="row">
@@ -88,7 +87,7 @@
                             <li>
                                 <div class="radio-custom">
                                     <input class="radio-mark" id="radioCash" type="radio" name="Discount" value="1" />
-                                    <label class="radio-label" for="radioCash"></label>
+                                    <label class="radio-label" for="radioCash">&nbsp;</label>
                                 </div>
                                 <label class="input-custom" for="txtURL1">
                                     <span class="table-css">
@@ -102,7 +101,7 @@
                             <li>
                                 <div class="radio-custom">
                                     <input class="radio-mark" id="radioPercent" type="radio" name="Discount" value="1" />
-                                    <label class="radio-label" for="radioPercent"></label>
+                                    <label class="radio-label" for="radioPercent">&nbsp;</label>
                                 </div>
                                 <label class="input-custom" for="txtURL1">
                                     <span class="table-css">
