@@ -1,5 +1,59 @@
 .company-event-page {
-    .options{
+    .options-event{
+        p{
+            font-size: $h5;
+            font-family: $primary;
+            color: rgba(51, 51, 51, .6);
+            position: relative;
+            top: -4px;
+            margin:0 0 16px;
+        }
 
+        .section{
+            &.options-section{
+                p{
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+                }
+
+                .radio-custom{
+                    margin-top: 22px;
+                }
+            }
+
+            &.incentives-section{
+                margin-top: 31px;
+                padding-top: 7px;
+
+                p{
+                    width: calc(110%);
+                    margin-bottom: 0;
+                }
+
+                .incentive{
+                    padding-top:11px;
+                    padding-bottom: 6px;
+
+                    .cb-custom{
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            &.miscelaneous-section{
+                margin-top: 22px;
+                margin-bottom: 18px;
+                padding-top: 18px;
+
+                .label-form{
+                    margin-top: 9px;
+                    margin-bottom: 9px;
+                }
+
+                div[class*="col-"]{
+                    margin-bottom: 7px;
+                }
+            }
+        }
     }
 }

@@ -485,7 +485,7 @@ textarea.form-control {
 .bootstrap-select.open > .btn:hover,
 .bootstrap-select.open > .btn:visited {
   font-family: ralewaysemibold, sans-serif;
-  color: #7c7c7c;
+  color: rgba(124, 124, 124, 0.85);
   border-color: #797979;
   border-radius: 2px;
   background: transparent;
@@ -1346,10 +1346,9 @@ input[type=number] {
       left: -1px; }
   .input-custom a {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 15px;
+    word-wrap: normal;
+    word-break: normal;
+    padding: 0 15px 0 0;
     color: #f3472d;
     text-decoration: none;
     font-size: 0.9375em;
@@ -1398,6 +1397,28 @@ input[type=number] {
     padding: 0 15px 0 0;
     color: #000;
     width: 100%; }
+
+.input-countdown.inner {
+  position: relative;
+  border: 1px solid #797979;
+  border-radius: 2px;
+  overflow: hidden;
+  height: 105px; }
+  .input-countdown.inner .form-control {
+    height: 85px;
+    padding: 5px 14px;
+    border: 0 none; }
+  .input-countdown.inner .text {
+    display: inline-block;
+    padding: 0 14px 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: rgba(51, 51, 51, 0.2);
+    text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
+    font-size: 0.875em;
+    line-height: 100%;
+    font-family: "Lato", sans-serif; }
 
 .icon {
   display: inline-block;
@@ -1548,8 +1569,8 @@ div.placeholder-custom {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0 15px;
-    color: #7c7c7c;
+    padding: 0 0 0 15px;
+    color: rgba(124, 124, 124, 0.85);
     font-size: 1.25em;
     line-height: 38px;
     font-family: "Lato", sans-serif; }
@@ -5258,6 +5279,8 @@ div.placeholder-custom {
         width: 100%;
         padding-right: 0;
         padding-left: 0; } }
+    .company-settings-page .content.company-connect {
+      width: calc(100% - 131px); }
     @media (max-width: 767px) {
       .company-settings-page .content header {
         display: none; } }
@@ -5271,7 +5294,7 @@ div.placeholder-custom {
         font-style: italic;
         font-size: 14px;
         color: #333; }
-    .company-settings-page .content section {
+    .company-settings-page .content .section {
       padding-bottom: 5px; }
     .company-settings-page .content .row {
       margin-left: -8px;
@@ -5298,7 +5321,7 @@ div.placeholder-custom {
         min-height: 38px;
         height: 38px;
         padding-left: 15px;
-        padding-right: 50px;
+        padding-right: 35px;
         border-color: #797979;
         /*@media (max-width:767px){
                     padding-left: 10px;
@@ -5310,7 +5333,7 @@ div.placeholder-custom {
         background-image: url(images/ui/pages/company/settings/icon_select.png);
         background-size: 21px auto;
         margin-top: -7px;
-        right: 15px;
+        right: 10px;
         /*@media (max-width:767px){
                             width:15px;
                             background-size: 15px auto;
@@ -5530,9 +5553,9 @@ div.placeholder-custom {
         padding-right: 0;
         line-height: 40px; }
 
-.company-settings-page .company-info section {
+.company-settings-page .company-info .section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .company-settings-page .company-info section.logo-section .frame {
+  .company-settings-page .company-info .section.logo-section .frame {
     width: 220px;
     height: 110px;
     border: 1px dashed #797979;
@@ -5540,18 +5563,18 @@ div.placeholder-custom {
     background: #666;
     margin-bottom: 15px;
     cursor: pointer; }
-    .company-settings-page .company-info section.logo-section .frame:hover .control {
+    .company-settings-page .company-info .section.logo-section .frame:hover .control {
       display: block; }
-    .company-settings-page .company-info section.logo-section .frame.default .page-logo {
+    .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
       display: none;
       background-image: none !important; }
-    .company-settings-page .company-info section.logo-section .frame.default .control {
+    .company-settings-page .company-info .section.logo-section .frame.default .control {
       display: none; }
-    .company-settings-page .company-info section.logo-section .frame.default:hover .upload {
+    .company-settings-page .company-info .section.logo-section .frame.default:hover .upload {
       display: block; }
-    .company-settings-page .company-info section.logo-section .frame.default:hover .control {
+    .company-settings-page .company-info .section.logo-section .frame.default:hover .control {
       display: none; }
-    .company-settings-page .company-info section.logo-section .frame .page-logo {
+    .company-settings-page .company-info .section.logo-section .frame .page-logo {
       position: absolute;
       top: -1px;
       left: -1px;
@@ -5560,8 +5583,8 @@ div.placeholder-custom {
       background: center center no-repeat;
       background-size: auto 55px;
       display: block; }
-    .company-settings-page .company-info section.logo-section .frame .upload,
-    .company-settings-page .company-info section.logo-section .frame .control {
+    .company-settings-page .company-info .section.logo-section .frame .upload,
+    .company-settings-page .company-info .section.logo-section .frame .control {
       height: 51px;
       font-size: 0.9375em;
       font-family: "Lato", sans-serif;
@@ -5576,13 +5599,13 @@ div.placeholder-custom {
       text-align: center;
       z-index: 3;
       display: none; }
-    .company-settings-page .company-info section.logo-section .frame .upload {
+    .company-settings-page .company-info .section.logo-section .frame .upload {
       width: 167px;
       line-height: 49px;
       margin-left: -83px;
       cursor: pointer;
       display: none; }
-      .company-settings-page .company-info section.logo-section .frame .upload:before {
+      .company-settings-page .company-info .section.logo-section .frame .upload:before {
         content: '';
         display: inline-block;
         width: 16px;
@@ -5592,87 +5615,80 @@ div.placeholder-custom {
         margin-right: 5px;
         position: relative;
         bottom: -2px; }
-    .company-settings-page .company-info section.logo-section .frame .control {
+    .company-settings-page .company-info .section.logo-section .frame .control {
       width: 167px;
       margin: -25px 0 0 -83px;
       padding: 0;
       list-style: none; }
-      .company-settings-page .company-info section.logo-section .frame .control li {
+      .company-settings-page .company-info .section.logo-section .frame .control li {
         float: left;
         width: 50%;
         height: 49px;
         cursor: pointer; }
-        .company-settings-page .company-info section.logo-section .frame .control li:first-child span {
+        .company-settings-page .company-info .section.logo-section .frame .control li:first-child span {
           border-right: 1px solid rgba(255, 255, 255, 0.5); }
-        .company-settings-page .company-info section.logo-section .frame .control li:hover {
+        .company-settings-page .company-info .section.logo-section .frame .control li:hover {
           font-weight: 700; }
-        .company-settings-page .company-info section.logo-section .frame .control li span {
+        .company-settings-page .company-info .section.logo-section .frame .control li span {
           display: block;
           margin: 15px 0;
           line-height: 19px; }
-  .company-settings-page .company-info section.socials-section ul {
+  .company-settings-page .company-info .section.socials-section ul {
     padding: 0;
     margin: 0 0 11px;
     list-style: none;
     cursor: pointer; }
-    .company-settings-page .company-info section.socials-section ul li {
+    .company-settings-page .company-info .section.socials-section ul li {
       float: left;
       margin-left: 10px;
       line-height: 0; }
-      .company-settings-page .company-info section.socials-section ul li:first-child {
+      .company-settings-page .company-info .section.socials-section ul li:first-child {
         margin-left: 0; }
-      .company-settings-page .company-info section.socials-section ul li .icon {
+      .company-settings-page .company-info .section.socials-section ul li .icon {
         width: 44px;
         height: 44px;
         background: url(images/ui/pages/company/settings/icon_socials.png) no-repeat;
         background-size: 44px auto; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-add {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-add {
           background-position: center top; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-facebook {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
           background-position: center -44px; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-twitter {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
           background-position: center -88px; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-linkedin {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
           background-position: center -132px; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-instagram {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
           background-position: center -176px; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-pinterest {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
           background-position: center -220px; }
-        .company-settings-page .company-info section.socials-section ul li .icon.icon-google-plus {
+        .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
           background-position: center -264px; }
-  .company-settings-page .company-info section.address-section {
+  .company-settings-page .company-info .section.address-section {
     margin-top: 20px; }
-    .company-settings-page .company-info section.address-section .col-sm-4-5 {
+    .company-settings-page .company-info .section.address-section .col-sm-4-5 {
       margin-bottom: 0; }
       @media (min-width: 992px) {
-        .company-settings-page .company-info section.address-section .col-sm-4-5 {
-          width: 37.5%; } }
+        .company-settings-page .company-info .section.address-section .col-sm-4-5 {
+          width: 39.2%; } }
       @media (max-width: 991px) {
-        .company-settings-page .company-info section.address-section .col-sm-4-5 {
+        .company-settings-page .company-info .section.address-section .col-sm-4-5 {
           margin-bottom: 18px; } }
-    .company-settings-page .company-info section.address-section .col-sm-7-5 {
-      margin-bottom: 0; }
-      @media (min-width: 992px) {
-        .company-settings-page .company-info section.address-section .col-sm-7-5 {
-          width: 62.5%; } }
-  .company-settings-page .company-info section.tags-section .label-form {
-    font-family: "Lato", sans-serif;
-    font-size: 1.25em;
-    line-height: 25px;
-    color: #7c7c7c;
-    margin-top: 18px; }
+    @media (min-width: 992px) {
+      .company-settings-page .company-info .section.address-section .col-sm-7-5 {
+        width: 60.8%; } }
   @media (min-width: 992px) {
-    .company-settings-page .company-info section.tags-section .col-md-4 {
+    .company-settings-page .company-info .section.tags-section .col-md-4 {
       width: 31%; }
-    .company-settings-page .company-info section.tags-section .col-md-8 {
+    .company-settings-page .company-info .section.tags-section .col-md-8 {
       width: 69%; } }
-  .company-settings-page .company-info section.tags-section .btn-tag {
+  .company-settings-page .company-info .section.tags-section .btn-tag {
     width: 100%;
     height: 38px;
     font-size: 0.9375em;
+    border-radius: 0;
     font-family: "Lato", sans-serif;
     color: #f3472d; }
-    .company-settings-page .company-info section.tags-section .btn-tag:before {
+    .company-settings-page .company-info .section.tags-section .btn-tag:before {
       content: '';
       display: inline-block;
       width: 15px;
@@ -5682,9 +5698,9 @@ div.placeholder-custom {
       position: relative;
       top: 3px;
       margin-right: 5px; }
-  .company-settings-page .company-info section.tweets-section {
+  .company-settings-page .company-info .section.tweets-section {
     border-bottom: 0 none; }
-    .company-settings-page .company-info section.tweets-section .placeholder-custom .placeholder:after {
+    .company-settings-page .company-info .section.tweets-section .placeholder-custom .placeholder:after {
       content: '';
       display: block;
       width: 100%;
@@ -5704,7 +5720,7 @@ div.placeholder-custom {
       /* Opera 11.10+ */
       background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff); }
   @media (max-width: 767px) {
-    .company-settings-page .company-info section footer {
+    .company-settings-page .company-info .section footer {
       width: calc(100% - 20px); } }
 
 .company-settings-page .primary-contact .private-section {
@@ -5856,21 +5872,24 @@ div.placeholder-custom {
       font-family: "Lato", sans-serif;
       color: #f2472d;
       margin: 0 0 21px; }
+    .company-event-page .content p {
+      font-size: 1.25em;
+      line-height: 25px;
+      font-family: "Lato", sans-serif;
+      color: rgba(51, 51, 51, 0.3);
+      text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+      margin: 0 0 19px; }
     .company-event-page .content .row {
       margin-left: -12px;
       margin-right: -12px; }
     .company-event-page .content div[class*="col-"] {
       padding-left: 12px;
       padding-right: 12px; }
-    .company-event-page .content p {
-      font-size: 1.25em;
-      line-height: 25px;
-      font-family: "Lato", sans-serif;
-      color: rgba(51, 51, 51, 0.3);
-      text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3); }
-    .company-event-page .content section {
-      margin-top: 10px;
-      border-bottom: rgba(50, 50, 50, 0.1); }
+    .company-event-page .content .section {
+      margin-top: 16px;
+      border-top: 1px solid rgba(50, 50, 50, 0.1); }
+      .company-event-page .content .section:first-child {
+        border-top: 0 none; }
     .company-event-page .content .bootstrap-select {
       font-size: 16px;
       font-family: 'lato', sans-serif; }
@@ -5886,10 +5905,10 @@ div.placeholder-custom {
       .company-event-page .content .bootstrap-select.open > .btn:visited {
         font-family: 'lato', sans-serif;
         font-size: 1.25em;
-        min-height: 38px;
-        height: 38px;
+        min-height: 40px;
+        height: 40px;
         padding-left: 15px;
-        padding-right: 50px;
+        padding-right: 35px;
         border-color: #797979;
         /*@media (max-width:767px){
                     padding-left: 10px;
@@ -5901,7 +5920,7 @@ div.placeholder-custom {
         background-image: url(images/ui/pages/company/settings/icon_select.png);
         background-size: 21px auto;
         margin-top: -7px;
-        right: 15px;
+        right: 10px;
         /*@media (max-width:767px){
                             width:15px;
                             background-size: 15px auto;
@@ -5922,6 +5941,18 @@ div.placeholder-custom {
       color: #333;
       margin-top: 18px;
       margin-bottom: 6px; }
+      .company-event-page .content .label-form small {
+        font-style: italic;
+        color: #9b9b9b; }
+    .company-event-page .content .form-control {
+      height: 40px; }
+    .company-event-page .content .input-countdown.inner .form-control {
+      height: 85px; }
+    .company-event-page .content label.placeholder-custom .form-control,
+    .company-event-page .content div.placeholder-custom .form-control {
+      height: 38px; }
+    .company-event-page .content .input-custom .table-css input[type="text"] {
+      height: 37px; }
     @media (max-width: 767px) {
       .company-event-page .content footer {
         margin: 0 -10px; }
@@ -5934,7 +5965,8 @@ div.placeholder-custom {
       height: 44px;
       margin-right: 16px;
       font-size: 1.25em;
-      font-family: "Lato", sans-serif; }
+      font-family: "Lato", sans-serif;
+      border-radius: 0; }
       .company-event-page .content footer .btn.btn-positive:after {
         content: ''; }
       .company-event-page .content footer .btn.btn-negative:before {
@@ -6044,7 +6076,146 @@ div.placeholder-custom {
         padding-right: 0;
         line-height: 40px; }
 
-.company-event-page .share p {
+.company-event-page .type-event p {
+  font-size: 1.25em;
+  line-height: 25px;
+  font-family: "Lato", sans-serif;
+  color: rgba(51, 51, 51, 0.3);
+  text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+  margin: 0 0 19px; }
+
+.company-event-page .type-event .section-photo {
+  margin-top: 31px;
+  margin-bottom: 21px; }
+  .company-event-page .type-event .section-photo .label-form {
+    margin-top: 27px;
+    margin-bottom: 12px; }
+  .company-event-page .type-event .section-photo ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 232px;
+    height: 306px;
+    border: 1px dashed rgba(50, 50, 50, 0.2);
+    background: #f7f7f7; }
+    .company-event-page .type-event .section-photo ul li {
+      border-top: 1px solid rgba(50, 50, 50, 0.2);
+      position: relative; }
+      .company-event-page .type-event .section-photo ul li:first-child {
+        border-top: 0 none; }
+      .company-event-page .type-event .section-photo ul li .or {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: -14px;
+        left: 0;
+        font-size: 1.0625em;
+        line-height: 24px;
+        font-family: "Lato", sans-serif;
+        color: rgba(0, 0, 0, 0.25);
+        text-align: center; }
+        .company-event-page .type-event .section-photo ul li .or span {
+          display: inline-block;
+          background: #f7f7f7;
+          padding: 0 8px;
+          text-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
+      .company-event-page .type-event .section-photo ul li .caption {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        color: #f3472d;
+        text-shadow: 0 0 1px #f3472d;
+        line-height: 100%;
+        position: absolute;
+        left: 0; }
+        .company-event-page .type-event .section-photo ul li .caption span {
+          display: block;
+          font-size: 1.0625em; }
+        .company-event-page .type-event .section-photo ul li .caption small {
+          display: block;
+          font-size: 0.75em; }
+    .company-event-page .type-event .section-photo ul.two li {
+      height: 155px; }
+      .company-event-page .type-event .section-photo ul.two li.upload .caption {
+        bottom: 28px; }
+      .company-event-page .type-event .section-photo ul.two li.purchase .caption {
+        top: 28px; }
+      .company-event-page .type-event .section-photo ul.two li.purchased {
+        display: none; }
+
+.company-event-page .type-event .icon-help {
+  width: 17px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  background: url(images/ui/pages/company/event/icon_help.png) center center no-repeat;
+  background-size: 17px auto;
+  cursor: pointer; }
+
+.company-event-page .type-event .type-class .section.section-class p {
+  margin: 0 0 19px; }
+
+.company-event-page .type-event .type-class .section.section-num {
+  margin-top: 28px;
+  padding-top: 29px; }
+
+.company-event-page .type-event .type-donation .section.section-donation p {
+  margin: 0 0 21px; }
+
+.company-event-page .type-event .type-donation .section.section-num {
+  margin-top: 31px; }
+  .company-event-page .type-event .type-donation .section.section-num .label-form {
+    margin-top: 21px;
+    margin-bottom: 7px; }
+  .company-event-page .type-event .type-donation .section.section-num .btn-negative {
+    border-radius: 0;
+    width: 100%;
+    height: 40px;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9375em; }
+
+.company-event-page .type-event .type-rsvp .section.section-class p {
+  margin: 0 0 19px; }
+
+.company-event-page .type-event .type-rsvp .section.section-num {
+  margin-top: 28px;
+  padding-top: 29px; }
+  @media (min-width: 768px) {
+    .company-event-page .type-event .type-rsvp .section.section-num .placeholder-custom {
+      width: 232px; } }
+
+.company-event-page .type-event .type-tickets .section.section-num p {
+  margin-top: 19px;
+  margin-bottom: 10px; }
+
+.company-event-page .type-event .type-tickets .section.section-num div[class*="col-"] {
+  margin-bottom: 15px; }
+
+.company-event-page .type-event .type-tickets .section.section-num .tier-list .item {
+  margin-top: 29px; }
+  .company-event-page .type-event .type-tickets .section.section-num .tier-list .item:first-child {
+    margin-top: 0; }
+
+.company-event-page .type-event .type-tickets .section.section-num .btn {
+  border-radius: 0;
+  width: 176px;
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9375em; }
+  .company-event-page .type-event .type-tickets .section.section-num .btn:before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(images/ui/pages/company/event/icon_tier.png) center center no-repeat;
+    background-size: 15px auto;
+    position: relative;
+    top: 1px;
+    margin-right: 5px; }
+
+.company-event-page .options-event p {
   font-size: 1.25em;
   font-family: "Lato", sans-serif;
   color: rgba(51, 51, 51, 0.6);
@@ -6052,37 +6223,46 @@ div.placeholder-custom {
   top: -4px;
   margin: 0 0 16px; }
 
-.company-event-page .share .share-section .share {
+.company-event-page .options-event .section.options-section p {
+  margin-top: 24px;
+  margin-bottom: 24px; }
+
+.company-event-page .options-event .section.options-section .radio-custom {
+  margin-top: 22px; }
+
+.company-event-page .options-event .section.incentives-section {
+  margin-top: 31px;
+  padding-top: 7px; }
+  .company-event-page .options-event .section.incentives-section p {
+    width: calc(110%);
+    margin-bottom: 0; }
+  .company-event-page .options-event .section.incentives-section .incentive {
+    padding-top: 11px;
+    padding-bottom: 6px; }
+    .company-event-page .options-event .section.incentives-section .incentive .cb-custom {
+      margin-bottom: 5px; }
+
+.company-event-page .options-event .section.miscelaneous-section {
+  margin-top: 22px;
+  margin-bottom: 18px;
+  padding-top: 18px; }
+  .company-event-page .options-event .section.miscelaneous-section .label-form {
+    margin-top: 9px;
+    margin-bottom: 9px; }
+  .company-event-page .options-event .section.miscelaneous-section div[class*="col-"] {
+    margin-bottom: 7px; }
+
+.company-event-page .share-event p {
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  color: rgba(51, 51, 51, 0.6);
+  position: relative;
+  top: -4px;
+  margin: 0 0 16px; }
+
+.company-event-page .share-event .share-section .share {
+  width: 422px;
   margin-bottom: 14px; }
-  .company-event-page .share .share-section .share .btn {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 0.8125em;
-    color: #323232;
-    border-radius: 4px;
-    position: relative;
-    padding-left: 56px;
-    padding-right: 33px; }
-    .company-event-page .share .share-section .share .btn:before {
-      content: '';
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      background: url(images/ui/pages/company/settings/icon_share.png) no-repeat;
-      background-size: 26px auto;
-      position: absolute;
-      top: 6px;
-      left: 14px; }
-    .company-event-page .share .share-section .share .btn.btn-facebook:before {
-      background-position: center 0; }
-    .company-event-page .share .share-section .share .btn.btn-twitter:before {
-      background-position: center -26px; }
-    .company-event-page .share .share-section .share .btn.btn-linkedin:before {
-      background-position: center -52px; }
-    .company-event-page .share .share-section .share .btn.btn-mailchimp:before {
-      background-position: center -78px; }
-    .company-event-page .share .share-section .share .btn.btn-constant:before {
-      background-position: center -104px; }
 
 .booking-page .happen-date {
   height: 78px;

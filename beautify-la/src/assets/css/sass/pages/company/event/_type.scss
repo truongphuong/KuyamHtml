@@ -1,4 +1,230 @@
 .company-event-page {
-    .type{
+    .type-event{
+        p{
+            font-size: $h5;
+            line-height: 25px;
+            font-family: $primary;
+            color: rgba(51, 51, 51, .3);
+            text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+            margin:0 0 19px;
+        }
+
+        .section-photo{
+            margin-top: 31px;
+            margin-bottom: 21px;
+
+            .label-form{
+                margin-top: 27px;
+                margin-bottom: 12px;
+            }
+
+            ul{
+                margin:0;
+                padding: 0;
+                list-style: none;
+                width: 232px;
+                height: 306px;
+                border: 1px dashed rgba(50, 50, 50, .2);
+                background: #f7f7f7;
+
+                li{
+                    border-top: 1px solid rgba(50, 50, 50, .2);
+                    position: relative;
+
+                    &:first-child{
+                        border-top: 0 none;
+                    }
+
+                    .or {
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        top: -14px;
+                        left: 0;
+                        font-size: $s17;
+                        line-height: 24px;
+                        font-family: $primary;
+                        color: rgba(0, 0, 0, .25);
+                        text-align: center;
+
+                        span{
+                            display: inline-block;
+                            background: #f7f7f7;
+                            padding:0 8px;
+                            text-shadow: 0 0 1px rgba(0, 0, 0, .25);
+                        }
+                    }
+
+                    .caption {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        font-family: $primary;
+                        color: $positive;
+                        text-shadow: 0 0 1px $positive;
+                        line-height: 100%;
+                        position: absolute;
+                        left: 0;
+
+                        span{
+                            display: block;
+                            font-size: $s17;
+                        }
+
+                        small{
+                            display: block;
+                            font-size: $p;
+                        }
+                    }
+                }
+
+                &.two{
+                    li{
+                        height: 155px;
+
+                        &.upload {
+                            .caption{
+                                bottom: 28px;
+                            }
+                        }
+
+                        &.purchase {
+                            .caption{
+                                top: 28px;
+                            }
+                        }
+
+                        &.purchased{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .icon-help {
+            width: 17px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -12px;
+            background: url(images/ui/pages/company/event/icon_help.png) center center no-repeat;
+            background-size: 17px auto;
+            cursor: pointer;
+        }
+
+        .type-class{
+            .section{
+                &.section-class {
+                    p{
+                        margin:0 0 19px;
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 28px;
+                    padding-top: 29px;
+
+                    .icon-help {
+                    }
+                }
+            }
+        }
+
+        .type-donation{
+            .section{
+                &.section-donation {
+                    p{
+                        margin:0 0 21px;
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 31px;
+
+                    .label-form{
+                        margin-top: 21px;
+                        margin-bottom: 7px;
+                    }
+
+                    .btn-negative {
+                        border-radius: 0;
+                        width: 100%;
+                        height: 40px;
+                        font-family: $primary;
+                        font-size: $s15;
+                    }
+
+                    .icon-help {
+                    }
+                }
+            }
+        }
+
+        .type-rsvp{
+            .section{
+                &.section-class {
+                    p{
+                        margin:0 0 19px;
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 28px;
+                    padding-top: 29px;
+
+                    .placeholder-custom{
+                        @media (min-width: 768px){
+                            width: 232px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-tickets{
+            .section{
+                &.section-num {
+                    p{
+                        margin-top: 19px;
+                        margin-bottom: 10px;
+                    }
+
+                    div[class*="col-"] {
+                        margin-bottom: 15px;
+                    }
+
+                    .tier-list{
+                        .item{
+                            margin-top: 29px;
+
+                            &:first-child{
+                                margin-top: 0;
+                            }
+                        }
+                    }
+
+                    .btn{
+                        border-radius: 0;
+                        width: 176px;
+                        height: 40px;
+                        font-family: $primary;
+                        font-size: $s15;
+
+                        &:before{
+                            content: '';
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            background: url(images/ui/pages/company/event/icon_tier.png) center center no-repeat;
+                            background-size: 15px auto;
+                            position: relative;
+                            top:1px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

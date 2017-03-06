@@ -39,6 +39,15 @@
             }
         }
 
+        p{
+            font-size: $h5;
+            line-height: 25px;
+            font-family: $primary;
+            color: rgba(51, 51, 51, .3);
+            text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+            margin:0 0 19px;
+        }
+
         .row{
             margin-left: -12px;
             margin-right: -12px;
@@ -49,17 +58,13 @@
             padding-right: 12px;
         }
 
-        p{
-            font-size: $h5;
-            line-height: 25px;
-            font-family: $primary;
-            color: rgba(51, 51, 51, .3);
-            text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
-        }
+        .section{
+            margin-top: 16px;
+            border-top: 1px solid rgba(50, 50, 50, .1);
 
-        section{
-            margin-top:10px;
-            border-bottom: rgba(50, 50, 50, .1);
+            &:first-child{
+                border-top: 0 none;
+            }
         }
 
         .bootstrap-select {
@@ -78,10 +83,10 @@
             &.open > .btn:visited{
                 font-family: 'lato', sans-serif;
                 font-size: $h5;
-                min-height: 38px;
-                height: 38px;
+                min-height: 40px;
+                height: 40px;
                 padding-left: 15px;
-                padding-right: 50px;
+                padding-right: 35px;
                 border-color: $border;
 
                /*@media (max-width:767px){
@@ -98,7 +103,7 @@
                         background-image: url(images/ui/pages/company/settings/icon_select.png);
                         background-size: 21px auto;
                         margin-top: -7px;
-                        right: 15px;
+                        right: 10px;
 
                         /*@media (max-width:767px){
                             width:15px;
@@ -131,6 +136,27 @@
             color: $base;
             margin-top: 18px;
             margin-bottom: 6px;
+
+            small {
+                font-style: italic;
+                color:#9b9b9b;
+            }
+        }
+
+        .form-control{
+            height: 40px;
+        }
+
+        .input-countdown.inner .form-control{
+            height: 85px;
+        }
+
+        label.placeholder-custom .form-control,
+        div.placeholder-custom .form-control{
+            height: 38px;
+        }
+        .input-custom .table-css input[type="text"]{
+            height: 37px;
         }
 
         footer{
@@ -151,6 +177,7 @@
                 margin-right: 16px;
                 font-size: $h5;
                 font-family: $primary;
+                border-radius: 0;
 
                 &.btn-positive{
                     &:after{

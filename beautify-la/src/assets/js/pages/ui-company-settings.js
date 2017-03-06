@@ -14,9 +14,11 @@ $(document).ready(function(){
 			$('.company-settings-page .sidebar').addClass('active');
 			return;
 		}
-		$('.company-settings-page .content').addClass('hide');
+		
 		$('.company-settings-page .sidebar li').removeClass('active');  
 		$('.company-settings-page .sidebar li[data-section="' + section + '"]').addClass('active');
+		
+		$('.company-settings-page .content').addClass('hide');
 		$section.removeClass('hide');
 		$('#sectionSelect').val(section).trigger('change');
 	});
@@ -26,9 +28,11 @@ $(document).ready(function(){
 		var $this = $(this);
 		var $li = $this.closest('li');
 		var section = $li.data('section');
-		var $section = $('#' + section);   
+		var $section = $('#' + section); 
+		
 		$('.company-settings-page .sidebar li').removeClass('active');
 		$li.addClass('active');  
+		
 		$('.company-settings-page .content').addClass('hide');
 		$section.removeClass('hide');  
 		$('#sectionSelect').val(section).trigger('change'); 
@@ -38,10 +42,12 @@ $(document).ready(function(){
 		var $this = $(this);
 		var section = $this.val();
 		var $section = $('#' + section);
+		
 		$('.company-settings-page .content').addClass('hide');
+		$section.removeClass('hide'); 
+		
 		$('.company-settings-page .sidebar li').removeClass('active');  
 		$('.company-settings-page .sidebar li[data-section="' + section + '"]').addClass('active');
-		$section.removeClass('hide'); 
 	});
 	// End active item sidebar and show form follow step by step
 	

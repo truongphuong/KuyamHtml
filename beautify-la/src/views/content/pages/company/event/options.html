@@ -1,39 +1,156 @@
-<div id="company2" class="content options hide">
+<div id="event3" class="content options-event">
     <header>
-        <h3>Your info <small>Private data</small></h3>
+        <h3>We're almost done!</h3>
     </header>
-    <section class="private-section">
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <div class="placeholder-custom">
-                    <div class="placeholder">First name<span class="required">&lowast;</span></div>
-                    <input type="text" class="form-control">
-                </div>
+    <section class="section options-section">
+        <label class="label-form">Is this a public or private event?<span class="required">&lowast;</span></label>
+        <p>Private events are only accessible to people who have the link.</p>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioPublic" type="radio" name="options" value="0" />
+            <label class="radio-label" for="radioPublic">Public</label>
+        </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioPrivate" type="radio" name="options" value="1" />
+            <label class="radio-label" for="radioPrivate">Private</label>
+        </div>
+        <label class="label-form">Event URL</label>
+        <label class="input-custom" for="txtURL1">
+            <span class="table-css">
+                <span class="tr">
+                    <span class="td">http://beautify.us/kourosh/</span>
+                    <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                    <span class="td"><a title="" href="#">copy</a></span>
+                </span>
+            </span>
+        </label>
+    </section>
+    <section class="section incentives-section">
+        <label class="label-form">Incentives <small>optional</small></label>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbEarlyBird" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbEarlyBird">Early bird</label>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="placeholder-custom">
-                    <div class="placeholder">Last name<span class="required">&lowast;</span></div>
-                    <input type="text" class="form-control" value="helllo">
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
+            <p>The first guests to sign up will receive the reward you describe</p>
+            <div class="form">
+                <label class="label-form">Number of RSVP available for early bird reward</label>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <input type="text" placeholder="Cellphone" class="form-control">
+                    <div class="col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" />
                     </div>
                     <div class="col-xs-12">
-                        <div class="placeholder-custom">
-                            <div class="placeholder">Login email<span class="required">&lowast;</span></div>
-                            <input type="text" class="form-control">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Early bird reward"></textarea>
+                            <span class="text"><span class="num">140</span> characters</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbGoalReward" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbGoalReward">Goal reward</label>
+            </div>
+            <p>All guests will receive your reward if the goal is achieved</p>
+            <div class="form">
+                <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Reward"></textarea>
+                            <span class="text"><span class="num">140</span> characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbPromoCode" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbPromoCode">Promo code</label>
+            </div>
+            <p>A limited-time discount will be applied at checkout</p>
+            <div class="form">
+                <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="label-form">Discount amount</label>
+                        <ul>
+                            <li>
+                                <div class="radio-custom">
+                                    <input class="radio-mark" id="radioCash" type="radio" name="Discount" value="1" />
+                                    <label class="radio-label" for="radioCash"></label>
+                                </div>
+                                <label class="input-custom" for="txtURL1">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td">$</span>
+                                            <span class="td"><input id="txtURL1" type="text"></span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <div class="radio-custom">
+                                    <input class="radio-mark" id="radioPercent" type="radio" name="Discount" value="1" />
+                                    <label class="radio-label" for="radioPercent"></label>
+                                </div>
+                                <label class="input-custom" for="txtURL1">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td">%</span>
+                                            <span class="td"><input id="txtURL1" type="text"></span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="label-form">Quantity</label>
+                        <input type="text" class="form-control" placeholder="Quantity of promo codes" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section miscelaneous-section">
+        <label class="label-form">Miscelaneous <small>optional</small></label>
+        <div class="row">
+            <div class="col-xs-12">
+                <label class="label-form">Parking</label>
+                <input type="text" class="form-control" placeholder="Business casual, formal, black tie..." />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Dress attire</label>
+                <input type="text" class="form-control" placeholder="None, valet or street parking..." />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Video</label>
+                <p>This video will show the first time someone goes to your event page</p>
+                <input type="text" class="form-control" placeholder="Paste Vimeo or Youtube URL here" />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Checkout message</label>
+                <p>Write a personalized message for your guests when they finish checkout.</p>
+                <div class="input-countdown inner">
+                    <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                    <span class="text"><span class="num">140</span> characters</span>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-        <button data-pre="company2" class="btn btn-negative">back</button>
-        <button data-next="company4" class="btn btn-positive">Save</button>
+        <button data-section="event2" class="btn btn-negative">back</button>
+        <button data-section="event4" class="btn btn-positive">go live</button>
     </footer>
 </div>

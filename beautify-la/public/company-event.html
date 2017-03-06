@@ -75,15 +75,15 @@
 
                             <div class="sidebar active">
     <ul>
-        <li class="setting-1 active"><a title="" href="#">Type</a></li>
-        <li class="setting-2"><a title="" href="#">Details</a></li>
-        <li class="setting-3"><a title="" href="#">Options</a></li>
-        <li class="setting-4"><a title="" href="#">Share</a></li>
+        <li class="active" data-section="event1"><a title="" href="#">Type</a></li>
+        <li data-section="event2"><a title="" href="#">Details</a></li>
+        <li data-section="event3"><a title="" href="#">Options</a></li>
+        <li data-section="event4"><a title="" href="#">Share</a></li>
     </ul>
 </div>
 
 
-                            <div id="event1" class="content type">
+                            <div id="event1" class="content type-event hide">
     <header>
         <h3>What type of event do you want to host?</h3>
     </header>
@@ -91,20 +91,20 @@
         <div class="row">
             <div class="col-xs-12 col-sm-7">
                 <select id="typeSelect" class="select-full">
-                    <option value="1" selected>Class</option>
-                    <option value="2">Donation</option>
-                    <option value="3">RSVP</option>
-                    <option value="3">Tickets Sales</option>
+                    <option value="type1" selected>Class</option>
+                    <option value="type2">Donation</option>
+                    <option value="type3">RSVP</option>
+                    <option value="type4">Tickets Sales</option>
                 </select>
             </div>
         </div>
-        <div class="type-class">
-            <section>
+        <div id="type1" class="type-section type-class">
+            <section class="section section-class">
                 <p>Class events are for one or more days with limited spots.</p>
                 <div class="row">
                     <div class="col-xs-12">
-                        <select id="classSelect" class="select-full select-default">
-                            <option value="" selected>Duplicate a previous class?</option>
+                        <select id="classSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous class? <small>optional</small>'>Duplicate a previous class?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
                             <option value="3">Tickets Sales</option>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="section section-num">
                 <div class="row">
                     <div class="col-xs-12 col-sm-7">
                         <label for="txtClassNum" class="placeholder-custom ">
@@ -120,7 +120,7 @@
                             <input id="txtClassNum" type="text" class="form-control" />
                         </label>
                     </div>
-                    <div class="col-xs-12 col-sm-5">
+                    <div class="col-xs-12 col-sm-5 relative">
                         <label for="txtClassPrice" class="placeholder-custom">
                             <div class="placeholder">Class price<span class="required">&lowast;</span></div>
                             <input id="txtClassPrice" type="text" class="form-control" />
@@ -129,27 +129,280 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <span class="label-form">Page logo</span>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+            <section class="section section-photo">
+                <span class="label-form">Class image <span class="required">&lowast;</span></span>
+                <ul class="photo two default">
+                    <li class="upload">
+                        <span class="caption">
+                            <span>Upload images</span>
+                            <small>3mb max file size</small>
+                        </span>
+                    </li>
+                    <li class="purchase">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Purchase images</span>
+                            <small>$0.99 each</small>
+                        </span>
+                    </li>
+                    <li class="purchased">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Your purchases</span>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="type2" class="type-section type-donation hide">
+            <section class="section section-donation">
+                <p>Donation events allow your guests to donate an amount of their choice upon checkout.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select id="classSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <span class="label-form">Suggested donations at checkout <small>(leave blank for no max.)</small></span>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum1" type="text" value="pijons"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum2">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum2" type="text" value="pijons"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum3">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum4" type="text" value="pijons"></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3 relative">
+                        <input type="button" class="btn btn-negative" value="or other" />
+                        <a class="icon icon-help" title="" href="#"></a>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <ul class="photo two default">
+                    <li class="upload">
+                        <span class="caption">
+                            <span>Upload images</span>
+                            <small>3mb max file size</small>
+                        </span>
+                    </li>
+                    <li class="purchase">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Purchase images</span>
+                            <small>$0.99 each</small>
+                        </span>
+                    </li>
+                    <li class="purchased">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Your purchases</span>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="type3" class="type-section type-rsvp hide">
+            <section class="section section-rsvp">
+                <p>RSVP events are free events with limited spots.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select id="classSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                        <label for="txtRSVPNum" class="placeholder-custom">
+                            <div class="placeholder">Max. number of slots<span class="required">&lowast;</span></div>
+                            <input id="txtRSVPNum" type="text" class="form-control" />
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <ul class="photo two default">
+                    <li class="upload">
+                        <span class="caption">
+                            <span>Upload images</span>
+                            <small>3mb max file size</small>
+                        </span>
+                    </li>
+                    <li class="purchase">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Purchase images</span>
+                            <small>$0.99 each</small>
+                        </span>
+                    </li>
+                    <li class="purchased">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Your purchases</span>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="type4" class="type-section type-tickets hide">
+            <section class="section section-ticket">
+                <p>Ticket events require guests to purchase tickets at the price you set.</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <select id="classSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <p>Tickets</p>
+                <div id="tierList" class="tier-list">
+                    <div class="row item">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" placeholder="Ticket name / title" />
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                            <label for="txtTicketNum" class="placeholder-custom">
+                                <div class="placeholder">Max. number of tickets<span class="required">&lowast;</span></div>
+                                <input id="txtTicketNum" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <label for="txtTicketPrice" class="placeholder-custom">
+                                <div class="placeholder">Ticket price<span class="required">&lowast;</span></div>
+                                <input id="txtTicketPrice" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="input-countdown inner">
+                                <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                                <span class="text"><span class="num">140</span> characters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" placeholder="Ticket name / title" />
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                            <label for="txtTicketNum" class="placeholder-custom">
+                                <div class="placeholder">Max. number of tickets<span class="required">&lowast;</span></div>
+                                <input id="txtTicketNum" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-5">
+                            <label for="txtTicketPrice" class="placeholder-custom">
+                                <div class="placeholder">Ticket price<span class="required">&lowast;</span></div>
+                                <input id="txtTicketPrice" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="input-countdown inner">
+                                <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                                <span class="text"><span class="num">140</span> characters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-negative">Add another tier</button>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <ul class="photo two default">
+                    <li class="upload">
+                        <span class="caption">
+                            <span>Upload images</span>
+                            <small>3mb max file size</small>
+                        </span>
+                    </li>
+                    <li class="purchase">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Purchase images</span>
+                            <small>$0.99 each</small>
+                        </span>
+                    </li>
+                    <li class="purchased">
+                        <span class="or">
+                            <span>or</span>
+                        </span>
+                        <span class="caption">
+                            <span>Your purchases</span>
+                        </span>
+                    </li>
                 </ul>
             </section>
         </div>
     </div>
     <footer>
-        <button data-pre="company2" class="btn btn-positive">Save</button>
+        <button data-section="event2" class="btn btn-positive">Save</button>
     </footer>
 </div>
 
 
-                            <div id="company1" class="content details hide">
+                            <div id="event2" class="content details-event hide">
     <header>
         <h3>Company info</h3>
     </header>
-    <section class="info-section">
+    <section class="section info-section">
         <div class="row">
             <div class="col-xs-12">
                 <label for="txtName" class="placeholder-custom validate">
@@ -159,20 +412,14 @@
                 </label>
             </div>
             <div class="col-xs-12">
-                <!--<label for="txtURl" class="placeholder-custom">
-                    <div class="placeholder">Events homepage URL<span class="required">&lowast;</span></div>
-                    <input id="txtURl" type="text" class="form-control" value="hello" />
-                    <a title="" href="#">copy</a>
-                    <span class="error">This URL is already taken</span>
-                </label>-->
                 <label class="input-custom validate" for="txtURL1">
                     <span class="table-css">
                         <span class="tr">
                             <span class="td">https://www.facebook.com/</span>
                             <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                            <span class="td"><a title="" href="#">copy</a></span>
                         </span>
                     </span>
-                    <a title="" href="#">copy</a>
                     <span class="error">This URL is already taken</span>
                 </label>
             </div>
@@ -191,7 +438,7 @@
             </div>
         </div>
     </section>
-    <section class="logo-section">
+    <section class="section logo-section">
         <span class="label-form">Page logo</span>
         <div class="frame">
             <div class="upload">Upload logo</div>
@@ -212,7 +459,7 @@
         </div>
         <input type="file" id="fileLogo" class="hide" />
     </section>
-    <section class="socials-section">
+    <section class="section socials-section">
         <span class="label-form">Social media links</span>
         <ul class="clearfix" data-target="#modal-social" data-toggle="modal">
             <li><span class="icon icon-facebook"></span></li>
@@ -224,7 +471,7 @@
             <li><span class="icon icon-add"></span></li>
         </ul>
     </section>
-    <section class="address-section">
+    <section class="section address-section">
         <div class="row">
             <div class="col-xs-12">
                 <div class="placeholder-custom">
@@ -263,7 +510,7 @@
             </div>
         </div>
     </section>
-    <section class="tags-section">
+    <section class="section tags-section">
         <label class="label-form">Filter events by tags</label>
         <div class="row">
             <div class="col-xs-12 col-md-8">
@@ -286,7 +533,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             </div>
         </div>
     </section>
-    <section class="tweets-section">
+    <section class="section tweets-section">
         <label class="label-form">Tweets script</label>
         <div class="row">
             <div class="col-xs-12">
@@ -299,65 +546,180 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
     </section>
     <footer>
-        <button data-next="company2" class="btn btn-positive">save</button>
+        <button data-section="event1" class="btn btn-negative">back</button>
+        <button data-section="event3" class="btn btn-positive">Save</button>
     </footer>
 </div>
 
 
-                            <div id="company2" class="content options hide">
+                            <div id="event3" class="content options-event">
     <header>
-        <h3>Your info <small>Private data</small></h3>
+        <h3>We're almost done!</h3>
     </header>
-    <section class="private-section">
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <div class="placeholder-custom">
-                    <div class="placeholder">First name<span class="required">&lowast;</span></div>
-                    <input type="text" class="form-control">
-                </div>
+    <section class="section options-section">
+        <label class="label-form">Is this a public or private event?<span class="required">&lowast;</span></label>
+        <p>Private events are only accessible to people who have the link.</p>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioPublic" type="radio" name="options" value="0" />
+            <label class="radio-label" for="radioPublic">Public</label>
+        </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioPrivate" type="radio" name="options" value="1" />
+            <label class="radio-label" for="radioPrivate">Private</label>
+        </div>
+        <label class="label-form">Event URL</label>
+        <label class="input-custom" for="txtURL1">
+            <span class="table-css">
+                <span class="tr">
+                    <span class="td">http://beautify.us/kourosh/</span>
+                    <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
+                    <span class="td"><a title="" href="#">copy</a></span>
+                </span>
+            </span>
+        </label>
+    </section>
+    <section class="section incentives-section">
+        <label class="label-form">Incentives <small>optional</small></label>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbEarlyBird" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbEarlyBird">Early bird</label>
             </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="placeholder-custom">
-                    <div class="placeholder">Last name<span class="required">&lowast;</span></div>
-                    <input type="text" class="form-control" value="helllo">
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
+            <p>The first guests to sign up will receive the reward you describe</p>
+            <div class="form">
+                <label class="label-form">Number of RSVP available for early bird reward</label>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <input type="text" placeholder="Cellphone" class="form-control">
+                    <div class="col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" />
                     </div>
                     <div class="col-xs-12">
-                        <div class="placeholder-custom">
-                            <div class="placeholder">Login email<span class="required">&lowast;</span></div>
-                            <input type="text" class="form-control">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Early bird reward"></textarea>
+                            <span class="text"><span class="num">140</span> characters</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbGoalReward" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbGoalReward">Goal reward</label>
+            </div>
+            <p>All guests will receive your reward if the goal is achieved</p>
+            <div class="form">
+                <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Reward"></textarea>
+                            <span class="text"><span class="num">140</span> characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="incentive">
+            <div class="cb-custom">
+                <input class="cb-mark" id="cbPromoCode" type="checkbox" name="incentives" value="1" />
+                <label class="cb-label" for="cbPromoCode">Promo code</label>
+            </div>
+            <p>A limited-time discount will be applied at checkout</p>
+            <div class="form">
+                <label class="label-form">How many guests must RSVP to event to receive goal reward</label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="label-form">Discount amount</label>
+                        <ul>
+                            <li>
+                                <div class="radio-custom">
+                                    <input class="radio-mark" id="radioCash" type="radio" name="Discount" value="1" />
+                                    <label class="radio-label" for="radioCash"></label>
+                                </div>
+                                <label class="input-custom" for="txtURL1">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td">$</span>
+                                            <span class="td"><input id="txtURL1" type="text"></span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <div class="radio-custom">
+                                    <input class="radio-mark" id="radioPercent" type="radio" name="Discount" value="1" />
+                                    <label class="radio-label" for="radioPercent"></label>
+                                </div>
+                                <label class="input-custom" for="txtURL1">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td">%</span>
+                                            <span class="td"><input id="txtURL1" type="text"></span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label class="label-form">Quantity</label>
+                        <input type="text" class="form-control" placeholder="Quantity of promo codes" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section miscelaneous-section">
+        <label class="label-form">Miscelaneous <small>optional</small></label>
+        <div class="row">
+            <div class="col-xs-12">
+                <label class="label-form">Parking</label>
+                <input type="text" class="form-control" placeholder="Business casual, formal, black tie..." />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Dress attire</label>
+                <input type="text" class="form-control" placeholder="None, valet or street parking..." />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Video</label>
+                <p>This video will show the first time someone goes to your event page</p>
+                <input type="text" class="form-control" placeholder="Paste Vimeo or Youtube URL here" />
+            </div>
+            <div class="col-xs-12">
+                <label class="label-form">Checkout message</label>
+                <p>Write a personalized message for your guests when they finish checkout.</p>
+                <div class="input-countdown inner">
+                    <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                    <span class="text"><span class="num">140</span> characters</span>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-        <button data-pre="company2" class="btn btn-negative">back</button>
-        <button data-next="company4" class="btn btn-positive">Save</button>
+        <button data-section="event2" class="btn btn-negative">back</button>
+        <button data-section="event4" class="btn btn-positive">go live</button>
     </footer>
 </div>
 
 
-                            <div id="company4" class="content share hide">
+                            <div id="event4" class="content share-event hide">
     <header>
-        <h3>Share your events</h3>
+        <h3>Now that you're live, let's share it!</h3>
     </header>
-    <p>To broadcast / promote your events, connect as many platforms as possible.</p>
-    <section class="share-section">
+    <p>Lorem ipsum dolor sit amet conseditur palesque</p>
+    <section class="section share-section">
         <div class="share">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
                 <label class="cb-label" for="cbFacebook">Facebook</label>
-            </div>
-            <div class="section">
-                <button class="btn btn-neutral btn-facebook">Connect Facebook</button>
             </div>
         </div>
         <div class="share">
@@ -365,17 +727,11 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" />
                 <label class="cb-label" for="cbTwitter">Twitter</label>
             </div>
-            <div class="section hide">
-                <button class="btn btn-neutral btn-twitter">Connect Twitter</button>
-            </div>
         </div>
         <div class="share">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbLinkedIn" type="checkbox" name="share" value="1" />
                 <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
-            </div>
-            <div class="section hide">
-                <button class="btn btn-neutral btn-linkedin">Connect LinkedIn</button>
             </div>
         </div>
         <div class="share">
@@ -384,7 +740,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbMailchimp">Mailchimp</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-mailchimp">Connect Mailchimp</button>
+                <select id="mailchimpSelect" class="select-full default">
+                    <option value="">Select a campaign</option>
+                </select>
             </div>
         </div>
         <div class="share">
@@ -393,13 +751,15 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="cb-label" for="cbConstant">Constant Contact</label>
             </div>
             <div class="section hide">
-                <button class="btn btn-neutral btn-constant">Connect Constant Contact</button>
+                <select id="constantContactSelect" class="select-full default">
+                    <option value="">Select a campaign</option>
+                </select>
             </div>
         </div>
     </section>
     <footer>
-        <button data-pre="company3" class="btn btn-negative">back</button>
-        <button data-next="company3" class="btn btn-positive">Done</button>
+        <button data-section="event3" class="btn btn-negative">back</button>
+        <button data-section="" class="btn btn-positive">Done</button>
     </footer>
 </div>
 
@@ -418,6 +778,58 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     <li><a title="" href="" class="icon icon-instagram"></a></li>
     <li><a title="" href="" class="icon icon-pinterest"></a></li>
 </ul>
+
+
+                        <div class="coming-section">
+    <header class="section-header section-header-white">
+        <h4>bulletin:</h4>
+    </header>
+
+    <!-- .bulletin-list -->
+    <div class="bulletin-list">
+        <div class="bulletin-guide">
+            <p>your event bulletin posts will show up here. the bulletin is used to write quick updates about your event.</p>
+            <input type="button" data-toggle="modal" data-target="#modal-bulletin" class="btn-orange btn-create" value="post a message">
+        </div>
+
+        <!-- .bulletin-block -->
+        <div class="bulletin-block">
+            <div class="bulletin-header">
+                <div class="bulletin-title">
+                    <span class="bulletin-icon"></span>we made an update!
+                </div>
+            </div>
+            <div class="bulletin-content">
+                here is an update made by the busines. they should be allowed to modify updates after they're already posted.
+            </div>
+            <div class="bulletin-footer clearfix">
+                <input type="button" class="btn-orange btn-edit" data-toggle="modal" data-target="#modal-bulletin" value="edit">
+                <time>posted on:<br> 11/3/14</time>
+            </div>
+        </div>
+        <!-- /.bulletin-block -->
+
+        <!-- .bulletin-block -->
+        <div class="bulletin-block">
+            <div class="bulletin-header">
+                <div class="bulletin-title">
+                    <span class="bulletin-icon"></span>we made an update!
+                </div>
+            </div>
+            <div class="bulletin-content">
+                here is an update made by the busines. they should be allowed to modify updates after they're already posted.
+            </div>
+            <div class="bulletin-footer clearfix">
+                <input type="button" class="btn-orange btn-edit" data-toggle="modal" data-target="#modal-bulletin" value="edit">
+                <time>posted on:<br> 11/3/14</time>
+            </div>
+        </div>
+        <!-- /.bulletin-block -->
+
+    </div>
+    <!-- /.bulletin-list -->
+
+</div>
 
                     </div>
                 </div>
@@ -442,141 +854,6 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 
 </div>
 
-
-<div id="modal-change-password" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-change-password">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="changePassModalLabel" class="modal-title">Change password</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="placeholder-custom">
-                                <div class="placeholder">New password<span class="required">&lowast;</span></div>
-                                <input type="password" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="placeholder-custom">
-                                <div class="placeholder">Re-enter password<span class="required">&lowast;</span></div>
-                                <input type="password" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 text-center">
-                            <p>* Password minumum 6 characters</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <button class="btn btn-positive">change password</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /#changePassModal -->
-
-<!-- .modal-social -->
-<div id="modal-social" class="modal fade" role="dialog" aria-labelledby="socialsModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-social">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="socialsModalLabel" class="modal-title">Add / Edit your social media links</h4>
-            </div>
-            <div class="modal-body">
-                <ul>
-                    <li class="li-facebook active">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.facebook.com/</span>
-                                    <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="li-twitter">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.twitter.com/</span>
-                                    <span class="td"><input id="txtURL2" type="text"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="li-linkedin">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.linkedin.com/</span>
-                                    <span class="td"><input id="txtURL3" type="text"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="li-instagram">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.instagram.com/</span>
-                                    <span class="td"><input id="txtURL4" type="text"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="li-pinterest">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.pinterest.com/</span>
-                                    <span class="td"><input id="txtURL5" type="text"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="li-google-plus">
-                        <label class="input-custom" for="txtURL1">
-                            <span class="table-css">
-                                <span class="tr">
-                                    <span class="td">https://www.pinterest.com/</span>
-                                    <span class="td"><input id="txtURL6" type="text"></span>
-                                </span>
-                            </span>
-                        </label>
-                    </li>
-                </ul>
-                <input type="button" value="save" class="btn btn-positive" />
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!-- /.modal-social -->
-
-<div id="modal-create-category" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-create-category">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new category</h4>
-            </div>
-            <div class="modal-body">
-               <input type="password" class="form-control" placeholder="New category" />
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-negative" data-dismiss="modal">cancel</button>
-                <button class="btn btn-positive">create</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /#changePassModal -->
 
 <!-- .modal -->
 <div id="cropBannerModal" class="modal fade" role="dialog" aria-labelledby="cropBannerModalLabel"
@@ -646,7 +923,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 
 <script type="text/javascript" src="content/js/pages/ui-company-event.js"></script>
 <script type="text/javascript" src="content/js/pages/ui-company.js"></script>
-<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-crop-photo.js"></script>
 
 </body>
 </html>
