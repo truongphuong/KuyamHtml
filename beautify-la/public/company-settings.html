@@ -174,11 +174,25 @@
             <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Phone number" />
             </div>
-            <div class="col-xs-12 col-md-6">
+            <div id="divCategorySelect" class="col-xs-12 col-md-6 select-readonly">
                 <select id="caterogySelect" class="select-full">
                     <option value="" selected>Category</option>
                     <option value="1">Yoga</option>
                     <option value="2">Swimming</option>
+                    <option value="3">Yoga</option>
+                    <option value="4">Swimming</option>
+                    <option value="5">Yoga</option>
+                    <option value="6">Swimming</option>
+                    <option value="7">Yoga</option>
+                    <option value="8">Swimming</option>
+                    <option value="9">Yoga</option>
+                    <option value="10">Swimming</option>
+                    <option value="11">Yoga</option>
+                    <option value="12">Swimming</option>
+                    <option value="13">Yoga</option>
+                    <option value="14">Swimming</option>
+                    <option value="15">Yoga</option>
+                    <option value="16">Swimming</option>
                 </select>
             </div>
         </div>
@@ -229,11 +243,28 @@
             </div>
             <div class="col-xs-12 col-sm-4-5">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <select id="stateSelect" class="select-full">
+                    <div id="divStateSelect" class="col-xs-12 col-sm-6 select-readonly">
+                        <select id="stateSelect" class="select-full select-state default">
                             <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
-                            <option value="1">Yoga</option>
-                            <option value="2">Swimming</option>
+                            <option value="1" title="AL">Alabama</option>
+                            <option value="2" title="AK">Alaska</option>
+                            <option value="3" title="AZ">Arizona</option>
+                            <option value="4" title="AR">Arkansas</option>
+                            <option value="5" title="CA">California</option>
+                            <option value="6" title="CO">Colorado</option>
+                            <option value="7" title="CT">Connecticut</option>
+                            <option value="8" title="DE">Delaware</option>
+                            <option value="9" title="FL">Florida</option>
+                            <option value="10" title="GA">Georgia</option>
+                            <option value="11" title="HI">Hawaii</option>
+                            <option value="12" title="ID">Idaho</option>
+                            <option value="13" title="IL">Illinois</option>
+                            <option value="14" title="IN">Indiana</option>
+                            <option value="15" title="IA">Iowa</option>
+                            <option value="16" title="KS">Kansas</option>
+                            <option value="17" title="KY">Kentucky</option>
+                            <option value="18" title="LA">Louisiana</option>
+                            <option value="19" title="ME">Maine</option>
                         </select>
                     </div>
                     <div class="col-xs-12 col-sm-6">
@@ -249,17 +280,21 @@
     <section class="section tags-section">
         <label class="label-form">Filter events by tags</label>
         <div class="row">
-            <div id="categorySection" class="col-xs-12 col-md-8 hide">
-                <select id="caterogySelect" class="select-full">
-                    <option value="" selected>Category</option>
-                    <option value="1">Yoga</option>
-                    <option value="2">Swimming</option>
+            <div id="divTagesSelect" class="col-xs-12 col-md-8 hide select-readonly">
+                <select id="tagesSelect" class="select-full default">
+                    <option data-content='Category' value="" selected>Category</option>
+                    <option data-content='Yoga <span class="close" onClick="deleteTag(this);"></span>' value="1">Yoga</option>
+                    <option data-content='Swimming <span class="close" onClick="deleteTag(this);"></span>' value="2">Swimming</option>
+                    <option data-content='jogging <span class="close" onClick="deleteTag(this);"></span>' value="3">jogging</option>
+                    <option data-content='running <span class="close" onClick="deleteTag(this);"></span>' value="4">running</option>
+                    <option data-content='singing <span class="close" onClick="deleteTag(this);"></span>' value="5">singing</option>
+                    <option data-content='tennis <span class="close" onClick="deleteTag(this);"></span>' value="6">tennis</option>
                 </select>
             </div>
             <div class="col-xs-12 col-md-4 hidden-xs">
-                <button class="btn btn-negative btn-tag" data-target="#modal-create-category" data-toggle="modal">create a new tag</button>
+                <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
             </div>
-            <div id="categoryDescription" class="col-xs-12 hide">
+            <div id="tagsDescription" class="col-xs-12 hide">
                 <div class="placeholder-custom">
                     <div class="placeholder">Facility name <span class="optional">optional</span></div>
                     <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
@@ -268,7 +303,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 visible-xs">
-                <button class="btn btn-negative btn-tag" data-target="#modal-create-category" data-toggle="modal">create a new tag</button>
+                <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
             </div>
         </div>
     </section>
@@ -279,13 +314,13 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <div class="placeholder-custom">
                     <div class="placeholder">&lt;a class="twitter-timeline" href="https://twitter.com/dimonqu</div>
                     <input type="text" class="form-control" />
-                    <a title="" href="#">help</a>
+                    <a title="" href="https://support.twitter.com/articles/20170071">help</a>
                 </div>
             </div>
         </div>
     </section>
     <footer>
-        <button data-section="company2" class="btn btn-positive">save</button>
+        <button data-section="company2" class="btn btn-positive" disabled>next</button>
     </footer>
 </div>
 
@@ -322,11 +357,11 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 </div>
             </div>
         </div>
-        <a title="" href="#" data-target="#modal-change-password" data-toggle="modal">Change password</a>
+        <a title="" href="#" data-target="#changePassModal" data-toggle="modal">Change password</a>
     </section>
     <footer>
         <button data-section="company1" class="btn btn-negative">back</button>
-        <button data-section="company3" class="btn btn-positive">Save</button>
+        <button data-section="company3" class="btn btn-positive">next</button>
     </footer>
 </div>
 
@@ -368,7 +403,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     </section>
     <footer>
         <button data-section="company2" class="btn btn-negative">back</button>
-        <button data-section="company4" class="btn btn-positive">Save</button>
+        <button data-section="company4" class="btn btn-positive">next</button>
     </footer>
 </div>
 
@@ -382,7 +417,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         <div class="share">
             <div class="cb-custom">
                 <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
-                <label class="cb-label" for="cbFacebook">Facebook</label>
+                <label class="cb-label" for="cbFacebook">Facebook <small>connected</small></label>
             </div>
             <div class="section">
                 <button class="btn btn-neutral btn-facebook">Connect Facebook</button>
@@ -453,7 +488,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 </div>
 
 
-<div id="modal-change-password" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="changePassModal" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-change-password">
         <div class="modal-content">
             <div class="modal-header">
@@ -570,19 +605,29 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 </div><!-- /.modal -->
 <!-- /.modal-social -->
 
-<div id="modal-create-category" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-create-category">
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-tags">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new category</h4>
+                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
             </div>
             <div class="modal-body">
-               <input type="password" class="form-control" placeholder="New category" />
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" placeholder="Tag name" />
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Tag description"></textarea>
+                            <span class="text"><span class="num">300</span> characters</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-negative" data-dismiss="modal">cancel</button>
-                <button class="btn btn-positive">create</button>
+                <button class="btn btn-positive">save</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -646,18 +691,20 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 <script type="text/javascript" src="content/js/libs/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="content/js/libs/addtocalendar.js"></script>
 <script type="text/javascript" src="content/js/libs/croppie.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery.nicescroll.js"></script>
 
 
 
 
-<script type="text/javascript" src="content/js/ui-core.js"></script>
+<script type="text/javascript" src="content/js/ui-variables.js"></script>
+<script type="text/javascript" src="content/js/ui-function.js"></script>
 <script type="text/javascript" src="content/js/ui-general.js"></script>
 
 
 <script type="text/javascript" src="content/js/pages/ui-company-settings.js"></script>
 <script type="text/javascript" src="content/js/pages/ui-company.js"></script>
 <script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
-<script type="text/javascript" src="content/js/modals/ui-create-category.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-tags.js"></script>
 
 </body>
 </html>

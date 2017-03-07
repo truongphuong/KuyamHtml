@@ -2,8 +2,23 @@
 
 document.getElementById('settingsNav').className = "active";
 
+function deleteTag($this) {
+	var liTag = $this.parentElement.parentElement;
+	var liIndex = parseInt(liTag.attributes.getNamedItem('data-original-index').value) + 1;
+	liTag.remove();
+
+	$('#tagesSelect option:nth-child(' + liIndex + ')').remove();
+
+	$('#tagesSelect').selectpicker('refresh');
+}
+
 $(document).ready(function () {
-	$('#sectionSelect, #caterogySelect, #stateSelect, #caterogySelect').selectpicker();
+
+	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
+	iscrollSelect('divStateSelect', 'iscrollStateSelect');
+	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
+	iscrollSelect('divTagesSelect', 'iscrollTagesSelect');
+	$('#sectionSelect').selectpicker();
 
 	// Begin active item sidebar/select and show form follow step by step
 	$('.company-settings-page .content footer .btn').on('click', function () {
@@ -107,5 +122,5 @@ $(document).ready(function () {
 	$('.logo-section .delete').on('click', function () {
 		$sectionLogo.addClass('default');
 	});
-	// Begin upload logo
+	// Begin upload logo                 
 });

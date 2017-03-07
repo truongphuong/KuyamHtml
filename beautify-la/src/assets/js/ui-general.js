@@ -72,7 +72,11 @@ $(document).ready(function(){
 
     if (isMobile.any()) {
         $('#detech-devices').addClass("detech-devices");
-        $('body').addClass("on-devices");
+        $('html').addClass("on-devices");
+    }
+
+    if (!isMobile.Windows()) {
+        $('html').addClass("on-nicescroll");
     }
 
     if(!isView.mobile()){

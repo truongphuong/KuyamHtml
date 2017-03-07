@@ -33,9 +33,6 @@
                             .upload{
                                 display: block;
                             }
-                            .control{
-                                display: none;
-                            }
                         }
                     }
 
@@ -227,6 +224,28 @@
                         margin-right: 5px;
                     }
                 }
+
+                .bootstrap-select{
+                    .dropdown-menu {
+                        > li {
+                            > a {
+                                position: relative;
+
+                                .close{
+                                    display: inline-block;
+                                    width: 45px;
+                                    height: 34px;
+                                    position: absolute;
+                                    top:0;
+                                    right: 0;
+                                    background: url(images/ui/modals/icon_close.png) center center no-repeat;
+                                    background-size: 15px auto;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             &.tweets-section{
@@ -268,6 +287,33 @@
                     width: calc(100% - 20px);
                 }
             }
+        }
+    }
+}
+
+.on-devices{
+    .company-settings-page {
+        .company-info {
+            .section {
+                &.logo-section {
+                    .frame {
+                        .control{
+                            display: block;
+                        }
+
+                        &.default{
+                            .upload{
+                                display: block;
+                            }
+
+                            .control{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

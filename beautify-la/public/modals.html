@@ -289,13 +289,19 @@
                 <a href="#" title="" data-target="#modal-welcome" data-toggle="modal">welcome</a>
             </dd>
             <dd>
-                <a href="#" title="" data-target="#modal-change-password" data-toggle="modal">change password</a>
+                <a href="#" title="" data-target="#changePassModal" data-toggle="modal">change password</a>
             </dd>
             <dd>
-                <a href="#" title="" data-target="#modal-create-category" data-toggle="modal">create category</a>
+                <a href="#" title="" data-target="#tagsModal" data-toggle="modal">create category</a>
             </dd>
             <dd>
                 <a href="#" title="" data-target="#cropBannerModal" data-toggle="modal">crop banner</a>
+            </dd>
+            <dd>
+                <a href="#" title="" data-target="#categoryModal" data-toggle="modal">category</a>
+            </dd>
+            <dd>
+                <a href="#" title="" data-target="#tagsModal" data-toggle="modal">tags</a>
             </dd>
         </dl>
     </div>
@@ -4283,7 +4289,7 @@ email the message<span class="icon icon-next"></span>
 </div><!-- /.modal -->
 <!-- /.modal-welcome -->
 
-<div id="modal-change-password" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="changePassModal" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-change-password">
         <div class="modal-content">
             <div class="modal-header">
@@ -4322,19 +4328,29 @@ email the message<span class="icon icon-next"></span>
     </div><!-- /.modal-dialog -->
 </div><!-- /#changePassModal -->
 
-<div id="modal-create-category" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog modal-create-category">
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-tags">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new category</h4>
+                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
             </div>
             <div class="modal-body">
-               <input type="password" class="form-control" placeholder="New category" />
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" placeholder="Tag name" />
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Tag description"></textarea>
+                            <span class="text"><span class="num">300</span> characters</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-negative" data-dismiss="modal">cancel</button>
-                <button class="btn btn-positive">create</button>
+                <button class="btn btn-positive">save</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -4374,6 +4390,55 @@ email the message<span class="icon icon-next"></span>
 </div>
 <!-- /.modal -->
 
+<div id="categoryModal" class="modal fade" role="dialog" aria-labelledby="categoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-category">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="categoryModalLabel" class="modal-title">Create a new category</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-countdown inner">
+                    <textarea class="form-control" cols="" rows="" placeholder="New category"></textarea>
+                    <span class="text"><span class="num">300</span> characters</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-negative" data-dismiss="modal">cancel</button>
+                <button class="btn btn-positive">save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-tags">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" placeholder="Tag name" />
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="input-countdown inner">
+                            <textarea class="form-control" cols="" rows="" placeholder="Tag description"></textarea>
+                            <span class="text"><span class="num">300</span> characters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-negative" data-dismiss="modal">cancel</button>
+                <button class="btn btn-positive">save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
 
 
 <div class="lightbox"></div>
@@ -4398,11 +4463,13 @@ email the message<span class="icon icon-next"></span>
 <script type="text/javascript" src="content/js/libs/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="content/js/libs/addtocalendar.js"></script>
 <script type="text/javascript" src="content/js/libs/croppie.js"></script>
+<script type="text/javascript" src="content/js/libs/jquery.nicescroll.js"></script>
 
 
 
 
-<script type="text/javascript" src="content/js/ui-core.js"></script>
+<script type="text/javascript" src="content/js/ui-variables.js"></script>
+<script type="text/javascript" src="content/js/ui-function.js"></script>
 <script type="text/javascript" src="content/js/ui-general.js"></script>
 
 

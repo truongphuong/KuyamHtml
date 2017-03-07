@@ -133,13 +133,19 @@
                 <a href="#" title="" data-target="#modal-welcome" data-toggle="modal">welcome</a>
             </dd>
             <dd>
-                <a href="#" title="" data-target="#modal-change-password" data-toggle="modal">change password</a>
+                <a href="#" title="" data-target="#changePassModal" data-toggle="modal">change password</a>
             </dd>
             <dd>
-                <a href="#" title="" data-target="#modal-create-category" data-toggle="modal">create category</a>
+                <a href="#" title="" data-target="#tagsModal" data-toggle="modal">create category</a>
             </dd>
             <dd>
                 <a href="#" title="" data-target="#cropBannerModal" data-toggle="modal">crop banner</a>
+            </dd>
+            <dd>
+                <a href="#" title="" data-target="#categoryModal" data-toggle="modal">category</a>
+            </dd>
+            <dd>
+                <a href="#" title="" data-target="#tagsModal" data-toggle="modal">tags</a>
             </dd>
         </dl>
     </div>
@@ -186,8 +192,10 @@
 {% include "content/modals/upcoming.html" %}
 {% include "content/modals/welcome.html" %}
 {% include "content/modals/change-password.html" %}
-{% include "content/modals/create-category.html" %}
+{% include "content/modals/tags.html" %}
 {% include "content/modals/crop-banner.html" %}
+{% include "content/modals/category.html" %}
+{% include "content/modals/tags.html" %}
 {% endblock %}
 
 {% block scriptLibs %}{% endblock %}
