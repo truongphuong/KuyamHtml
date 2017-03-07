@@ -2,286 +2,373 @@
     margin: 12px 0 10px;
     position: relative;
     z-index: 10;
-}
-.book-option .option-select{
-    height: 44px;
-    float: left;
-    position: relative;
-}
-.book-option .option-select.disabled{
-    opacity: .5;
-}
-.book-option .option-select.disabled:after{
-    content: '';
-    position:absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: default;
-}
-.book-option .option-select .dropdown .dropdown-menu{
-    max-height: 175px;
-    overflow-y: auto;
-}
-.on-nicescroll .book-option .option-select .dropdown .dropdown-menu{
-    overflow-y:hidden;
-}
-.on-nicescroll .book-option .option-select .dropdown .dropdown-menu .wrap-dropdown-menu-inner{
-    max-height: 175px;
-}
-.book-option .option-select .dropdown > a{
-    padding: 8px 14px;
-    display: inline-block;
-    font-size: $s21;
-    color:#333232;
-    text-decoration: none;
-    position: relative;
-    max-width: 100%;
-}
-.book-option .option-select .dropdown > a .text{
-    display: inline-block;
-    max-width: 100%;
-    padding-right: 26px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    position: relative;
-}
-.book-option .option-select .dropdown > a .text:after{
-    content: '';
-    position: absolute;
-    display: inline-block;
-    top:0;
-    right: 0;
-    width: 21px;
-    height: 24px;
-    background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
-    background-size: 21px auto;
-    margin-left: 5px;
-}
-.book-option .option-select .dropdown.open > a .text:after{
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-}
-.book-option .option-select .dropdown-menu{
-    width: 100%;
-    padding: 0;
-    border:0 none;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
-    font-size: 16px;
-    min-width: inherit;
-}
-.book-option .option-select ul{
-    margin:0;
-    padding: 0;
-    list-style: none;
-}
-.book-option .option-select ul li{
-    padding: 5px 14px;
-    border-top:1px solid #e3e3e3;
-    cursor: pointer;
-    font-size: $s14;
-}
-.book-option .option-select ul li.selected,
-.book-option .option-select ul li:hover{
-    color: #87b400;
-    font-weight: 700;
-}
-.book-option .option-select ul li .table-css{
-    width: 100%;
-
-    @media (max-width: 374px) {
-        display: block;
-    }
-}
-.book-option .option-select ul li .tr{
-    cursor: pointer;
-
-    @media (max-width: 374px) {
-        display: block;
-    }
-
-    &:after{
-        @media (max-width: 374px) {
-            content: '';
-            display: block;
-            clear: both;
-        }
-    }
-}
-.book-option .option-select ul li .td{
-    padding: 0 0 0 14px;
-    text-align: right;
-    color: rgba(0, 0, 0, .8);
 
     @media (max-width: 767px) {
-        padding-left: 5px;
-    }
-
-    @media (max-width: 374px) {
-        display: block;
-        float: left;
-        width: 33.3333% !important;
-        min-height: 1px;
-    }
-}
-.book-option .option-select ul li .td:first-child{
-    padding: 0;
-
-    @media (max-width: 374px) {
-        float: none;
-        width: 100% !important;
-    }
-}
-.book-option .option-select ul li .td-name{
-    padding-left: 0;
-    text-align: left;
-}
-.book-option .option-select ul li .td-name a{
-    color: #87b400;
-    text-decoration: none;
-    font-style: italic;
-}
-.book-option .option-select ul li .td-time,
-.book-option .option-select ul li .td-price{
-    width: 85px;
-
-    @media (max-width: 767px){
-        width: 70px;
-    }
-}
-.book-option .option-select ul li .td-off{
-    color: $negative;
-    width: 110px;
-
-    @media (max-width: 767px){
-        width: 90px;
-    }
-}
-.book-option .option-select ul li .td-off span{
-    position: relative;
-    display: inline-block;
-    padding-left: 26px;
-    margin-bottom: 12px;
-}
-.book-option .option-select ul li .td-off small{
-    display: block;
-    color: rgba(0, 0, 0, 0.8);
-    width: 115px;
-    position: absolute;
-    left: 26px;
-    top: 100%;
-    line-height: 12px;
-    text-align: left;
-}
-.book-option .option-select ul li .td-off span:before{
-    content:'';
-    width:16px;
-    height: 100%;
-    background: url(images/ui/pages/book-details/option/icon_offer.png) center center no-repeat;
-    background-size: 16px auto;
-    position: absolute;
-    top:0;
-    left: 0;
-}
-.book-option .option-select ul li .td-price del{
-    color: $disabled;
-    display: block;
-    padding-top: 11px;
-}
-.book-option .option-select.categories-select ul li.selected,
-.book-option .option-select.who-select ul li.selected{
-    display:none;
-}
-
-@media (min-width: 768px) {
-    .book-option .option-select .dropdown{
-        width: 100%;
-    }
-    .book-option .option-select .dropdown.open{
-        position: absolute;
-        box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
-        background: $white;
-    }
-    .book-option .option-select .dropdown-menu{
-        position: relative;
-    }
-    .book-option .categories-select{
-        margin-left: -14px;
-        width: 155px;
-        z-index: 3;
-    }
-    .book-option .categories-select.default{
-        width: 300px;
-    }
-    .book-option .what-select{
-        width: 328px;
-        z-index: 2;
-    }
-    .book-option .what-select .dropdown.open{
-        width: 472px;
-    }
-    .book-option .who-select{
-        width: 140px;
-        z-index: 1;
-    }
-}
-
-@media (min-width: 992px) {
-    .book-option .who-select{
-        float: right;
-    }
-    .book-option .who-select .dropdown > a{
-        float: right;
-    }
-}
-
-@media (max-width: 991px) {
-    .book-option .option-select{
-        width: 100% !important;
-        text-align: center;
-        margin:0;
-    }
-    .book-option .what-select .dropdown.open{
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    .book-option{
         margin:0 -15px 10px;
         border-bottom: 1px solid #c2c2c2;
         padding-bottom: 4px;
     }
-    .book-option .option-select .dropdown > a{
-        font-size: $h6;
-        display: block;
+
+    .option-select{
+        height: 44px;
+        float: left;
+        position: relative;
+
+        @media (max-width: 991px) {
+            width: 100% !important;
+            text-align: center;
+            margin:0;
+        }
+
+        &.disabled{
+            opacity: .5;
+
+            &:after{
+                content: '';
+                position:absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                cursor: default;
+            }
+
+             .dropdown {
+                > a {
+                    .text{
+                        padding-right: 0;
+
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown{
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+
+            .dropdown-menu{
+                max-height: 175px;
+                overflow-y: auto;
+                width: 100%;
+                padding: 0;
+                border:0 none;
+                border-radius: 0;
+                box-shadow: none;
+                margin: 0;
+                font-size: 16px;
+                min-width: inherit;
+
+                @media (min-width: 768px) {
+                    position: relative;
+                }
+
+                @media (max-width: 767px) {
+                    box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
+                }
+            }
+
+            > a{
+                padding: 8px 14px;
+                display: inline-block;
+                font-size: $s21;
+                color:#333232;
+                text-decoration: none;
+                position: relative;
+                max-width: 100%;
+
+                @media (max-width: 767px) {
+                    font-size: $h6;
+                    display: block;
+                }
+
+                .text{
+                    display: inline-block;
+                    max-width: 100%;
+                    padding-right: 26px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    position: relative;
+
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        display: inline-block;
+                        top:0;
+                        right: 0;
+                        width: 21px;
+                        height: 24px;
+                        background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
+                        background-size: 21px auto;
+                        margin-left: 5px;
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/book-details/option/icon_down@3x.png);
+                        }
+                    }
+                }
+
+                .icon{
+                    @media (max-width: 767px) {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            &.open{
+                @media (min-width: 768px) {
+                    position: absolute;
+                    box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
+                    background: $white;
+                }
+
+                > a {
+                    .text {
+                        &:after {
+                            -webkit-transform: rotate(-180deg);
+                            -moz-transform: rotate(-180deg);
+                            -ms-transform: rotate(-180deg);
+                            -o-transform: rotate(-180deg);
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        ul{
+            margin:0;
+            padding: 0;
+            list-style: none;
+
+            li{
+                padding: 5px 14px;
+                border-top:1px solid #e3e3e3;
+                cursor: pointer;
+                font-size: $s14;
+
+                &.selected,
+                &:hover{
+                    color: #87b400;
+                    font-weight: 700;
+                }
+
+                .table-css{
+                    width: 100%;
+
+                    @media (max-width: 374px) {
+                        display: block;
+                    }
+                }
+
+                .tr{
+                    cursor: pointer;
+
+                    @media (max-width: 374px) {
+                        display: block;
+                    }
+
+                    &:after{
+                        @media (max-width: 374px) {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                    }
+                }
+
+                .td{
+                    padding: 0 0 0 14px;
+                    text-align: right;
+                    color: rgba(0, 0, 0, .8);
+
+                    @media (max-width: 767px) {
+                        padding-left: 5px;
+                    }
+
+                    @media (max-width: 374px) {
+                        display: block;
+                        float: left;
+                        width: 33.3333% !important;
+                        min-height: 1px;
+                    }
+
+                    &:first-child{
+                        padding: 0;
+
+                        @media (max-width: 374px) {
+                            float: none;
+                            width: 100% !important;
+                        }
+                    }
+                }
+
+                .td-name{
+                    padding-left: 0;
+                    text-align: left;
+
+                    a{
+                        color: #87b400;
+                        text-decoration: none;
+                        font-style: italic;
+                    }
+                }
+
+                .td-time,
+                .td-price{
+                    width: 85px;
+
+                    @media (max-width: 767px){
+                        width: 70px;
+                    }
+                }
+
+                .td-off{
+                    color: $negative;
+                    width: 110px;
+
+                    @media (max-width: 767px){
+                        width: 90px;
+                    }
+
+                    span{
+                        position: relative;
+                        display: inline-block;
+                        padding-left: 26px;
+                        margin-bottom: 12px;
+
+                        &:before{
+                            content:'';
+                            width:16px;
+                            height: 100%;
+                            background: url(images/ui/pages/book-details/option/icon_offer.png) center center no-repeat;
+                            background-size: 16px auto;
+                            position: absolute;
+                            top:0;
+                            left: 0;
+
+                            @media
+                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png);
+                            }
+                        }
+                    }
+
+                    small{
+                        display: block;
+                        color: rgba(0, 0, 0, 0.8);
+                        width: 115px;
+                        position: absolute;
+                        left: 26px;
+                        top: 100%;
+                        line-height: 12px;
+                        text-align: left;
+                    }
+                }
+
+                .td-price {
+                    del{
+                        color: $disabled;
+                        display: block;
+                        padding-top: 11px;
+                    }
+                }
+            }
+        }
+
+        &.categories-select,
+        &.who-select{
+            ul{
+                li{
+                    &.selected{
+
+                        display:none;
+                    }
+                }
+            }
+        }
     }
-    .book-option .option-select .dropdown > a .icon{
-        margin-left: 5px;
+
+
+    .categories-select{
+        @media (min-width: 768px) {
+            margin-left: -14px;
+            width: 155px;
+            z-index: 3;
+        }
+
+        &.default{
+            @media (min-width: 768px) {
+                width: 300px;
+            }
+        }
     }
-    .book-option .option-select .dropdown-menu{
-        box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
+
+    .what-select{
+        @media (min-width: 768px) {
+            width: 328px;
+            z-index: 2;
+        }
+
+        .dropdown.open{
+            @media (min-width: 768px) {
+                width: 472px;
+            }
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .who-select{
+        @media (min-width: 768px) {
+            width: 140px;
+            z-index: 1;
+        }
+
+        @media (min-width: 992px) {
+            float: right;
+        }
+
+        .dropdown {
+            > a{
+                @media (min-width: 992px) {
+                    float: right;
+                }
+            }
+        }
     }
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
-only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (              min-resolution:120dpi)      and (min-width:320px),
-only screen and (               min-resolution:2dppx)      and (min-width:320px){
-    .book-option .option-select .dropdown > a .text:after{
-        background-image: url(images/ui/pages/book-details/option/icon_down@3x.png);
-    }
-    .book-option .option-select ul li .td-off span:before{
-        background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png);
+.on-nicescroll {
+    .book-option {
+        .option-select .{
+            dropdown {
+                .dropdown-menu{
+                    overflow-y:hidden;
+
+                    .wrap-dropdown-menu-inner{
+                        max-height: 175px;
+                    }
+                }
+            }
+        }
     }
 }

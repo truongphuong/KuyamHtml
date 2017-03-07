@@ -5031,190 +5031,166 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   margin: 12px 0 10px;
   position: relative;
   z-index: 10; }
-
-.book-option .option-select {
-  height: 44px;
-  float: left;
-  position: relative; }
-
-.book-option .option-select.disabled {
-  opacity: .5; }
-
-.book-option .option-select.disabled:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: default; }
-
-.book-option .option-select .dropdown .dropdown-menu {
-  max-height: 175px;
-  overflow-y: auto; }
+  .book-option .option-select {
+    height: 44px;
+    float: left;
+    position: relative; }
+    .book-option .option-select.disabled {
+      opacity: .5; }
+      .book-option .option-select.disabled:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: default; }
+      .book-option .option-select.disabled .dropdown > a .text {
+        padding-right: 0; }
+        .book-option .option-select.disabled .dropdown > a .text:after {
+          display: none; }
+    .book-option .option-select .dropdown .dropdown-menu {
+      max-height: 175px;
+      overflow-y: auto;
+      width: 100%;
+      padding: 0;
+      border: 0 none;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      font-size: 16px;
+      min-width: inherit; }
+    .book-option .option-select .dropdown > a {
+      padding: 8px 14px;
+      display: inline-block;
+      font-size: 1.3125em;
+      color: #333232;
+      text-decoration: none;
+      position: relative;
+      max-width: 100%; }
+      .book-option .option-select .dropdown > a .text {
+        display: inline-block;
+        max-width: 100%;
+        padding-right: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative; }
+        .book-option .option-select .dropdown > a .text:after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          top: 0;
+          right: 0;
+          width: 21px;
+          height: 24px;
+          background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
+          background-size: 21px auto;
+          margin-left: 5px; }
+    .book-option .option-select .dropdown.open > a .text:after {
+      -webkit-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
+    .book-option .option-select ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .book-option .option-select ul li {
+        padding: 5px 14px;
+        border-top: 1px solid #e3e3e3;
+        cursor: pointer;
+        font-size: 0.875em; }
+        .book-option .option-select ul li.selected, .book-option .option-select ul li:hover {
+          color: #87b400;
+          font-weight: 700; }
+        .book-option .option-select ul li .table-css {
+          width: 100%; }
+          @media (max-width: 374px) {
+            .book-option .option-select ul li .table-css {
+              display: block; } }
+        .book-option .option-select ul li .tr {
+          cursor: pointer; }
+          @media (max-width: 374px) {
+            .book-option .option-select ul li .tr {
+              display: block; } }
+          @media (max-width: 374px) {
+            .book-option .option-select ul li .tr:after {
+              content: '';
+              display: block;
+              clear: both; } }
+        .book-option .option-select ul li .td {
+          padding: 0 0 0 14px;
+          text-align: right;
+          color: rgba(0, 0, 0, 0.8); }
+          @media (max-width: 767px) {
+            .book-option .option-select ul li .td {
+              padding-left: 5px; } }
+          @media (max-width: 374px) {
+            .book-option .option-select ul li .td {
+              display: block;
+              float: left;
+              width: 33.3333% !important;
+              min-height: 1px; } }
+          .book-option .option-select ul li .td:first-child {
+            padding: 0; }
+            @media (max-width: 374px) {
+              .book-option .option-select ul li .td:first-child {
+                float: none;
+                width: 100% !important; } }
+        .book-option .option-select ul li .td-name {
+          padding-left: 0;
+          text-align: left; }
+          .book-option .option-select ul li .td-name a {
+            color: #87b400;
+            text-decoration: none;
+            font-style: italic; }
+        .book-option .option-select ul li .td-time,
+        .book-option .option-select ul li .td-price {
+          width: 85px; }
+          @media (max-width: 767px) {
+            .book-option .option-select ul li .td-time,
+            .book-option .option-select ul li .td-price {
+              width: 70px; } }
+        .book-option .option-select ul li .td-off {
+          color: #ff5050;
+          width: 110px; }
+          @media (max-width: 767px) {
+            .book-option .option-select ul li .td-off {
+              width: 90px; } }
+          .book-option .option-select ul li .td-off span {
+            position: relative;
+            display: inline-block;
+            padding-left: 26px;
+            margin-bottom: 12px; }
+            .book-option .option-select ul li .td-off span:before {
+              content: '';
+              width: 16px;
+              height: 100%;
+              background: url(images/ui/pages/book-details/option/icon_offer.png) center center no-repeat;
+              background-size: 16px auto;
+              position: absolute;
+              top: 0;
+              left: 0; }
+          .book-option .option-select ul li .td-off small {
+            display: block;
+            color: rgba(0, 0, 0, 0.8);
+            width: 115px;
+            position: absolute;
+            left: 26px;
+            top: 100%;
+            line-height: 12px;
+            text-align: left; }
+        .book-option .option-select ul li .td-price del {
+          color: #dadada;
+          display: block;
+          padding-top: 11px; }
+    .book-option .option-select.categories-select ul li.selected, .book-option .option-select.who-select ul li.selected {
+      display: none; }
 
 .on-nicescroll .book-option .option-select .dropdown .dropdown-menu {
   overflow-y: hidden; }
 
 .on-nicescroll .book-option .option-select .dropdown .dropdown-menu .wrap-dropdown-menu-inner {
   max-height: 175px; }
-
-.book-option .option-select .dropdown > a {
-  padding: 8px 14px;
-  display: inline-block;
-  font-size: 1.3125em;
-  color: #333232;
-  text-decoration: none;
-  position: relative;
-  max-width: 100%; }
-
-.book-option .option-select .dropdown > a .text {
-  display: inline-block;
-  max-width: 100%;
-  padding-right: 26px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  position: relative; }
-
-.book-option .option-select .dropdown > a .text:after {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  right: 0;
-  width: 21px;
-  height: 24px;
-  background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
-  background-size: 21px auto;
-  margin-left: 5px; }
-
-.book-option .option-select .dropdown.open > a .text:after {
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg); }
-
-.book-option .option-select .dropdown-menu {
-  width: 100%;
-  padding: 0;
-  border: 0 none;
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0;
-  font-size: 16px;
-  min-width: inherit; }
-
-.book-option .option-select ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.book-option .option-select ul li {
-  padding: 5px 14px;
-  border-top: 1px solid #e3e3e3;
-  cursor: pointer;
-  font-size: 0.875em; }
-
-.book-option .option-select ul li.selected,
-.book-option .option-select ul li:hover {
-  color: #87b400;
-  font-weight: 700; }
-
-.book-option .option-select ul li .table-css {
-  width: 100%; }
-  @media (max-width: 374px) {
-    .book-option .option-select ul li .table-css {
-      display: block; } }
-
-.book-option .option-select ul li .tr {
-  cursor: pointer; }
-  @media (max-width: 374px) {
-    .book-option .option-select ul li .tr {
-      display: block; } }
-  @media (max-width: 374px) {
-    .book-option .option-select ul li .tr:after {
-      content: '';
-      display: block;
-      clear: both; } }
-
-.book-option .option-select ul li .td {
-  padding: 0 0 0 14px;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.8); }
-  @media (max-width: 767px) {
-    .book-option .option-select ul li .td {
-      padding-left: 5px; } }
-  @media (max-width: 374px) {
-    .book-option .option-select ul li .td {
-      display: block;
-      float: left;
-      width: 33.3333% !important;
-      min-height: 1px; } }
-
-.book-option .option-select ul li .td:first-child {
-  padding: 0; }
-  @media (max-width: 374px) {
-    .book-option .option-select ul li .td:first-child {
-      float: none;
-      width: 100% !important; } }
-
-.book-option .option-select ul li .td-name {
-  padding-left: 0;
-  text-align: left; }
-
-.book-option .option-select ul li .td-name a {
-  color: #87b400;
-  text-decoration: none;
-  font-style: italic; }
-
-.book-option .option-select ul li .td-time,
-.book-option .option-select ul li .td-price {
-  width: 85px; }
-  @media (max-width: 767px) {
-    .book-option .option-select ul li .td-time,
-    .book-option .option-select ul li .td-price {
-      width: 70px; } }
-
-.book-option .option-select ul li .td-off {
-  color: #ff5050;
-  width: 110px; }
-  @media (max-width: 767px) {
-    .book-option .option-select ul li .td-off {
-      width: 90px; } }
-
-.book-option .option-select ul li .td-off span {
-  position: relative;
-  display: inline-block;
-  padding-left: 26px;
-  margin-bottom: 12px; }
-
-.book-option .option-select ul li .td-off small {
-  display: block;
-  color: rgba(0, 0, 0, 0.8);
-  width: 115px;
-  position: absolute;
-  left: 26px;
-  top: 100%;
-  line-height: 12px;
-  text-align: left; }
-
-.book-option .option-select ul li .td-off span:before {
-  content: '';
-  width: 16px;
-  height: 100%;
-  background: url(images/ui/pages/book-details/option/icon_offer.png) center center no-repeat;
-  background-size: 16px auto;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.book-option .option-select ul li .td-price del {
-  color: #dadada;
-  display: block;
-  padding-top: 11px; }
-
-.book-option .option-select.categories-select ul li.selected,
-.book-option .option-select.who-select ul li.selected {
-  display: none; }
 
 @media (min-width: 768px) {
   .book-option .option-select .dropdown {
