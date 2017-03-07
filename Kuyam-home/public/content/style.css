@@ -5031,10 +5031,20 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
   margin: 12px 0 10px;
   position: relative;
   z-index: 10; }
+  @media (max-width: 767px) {
+    .book-option {
+      margin: 0 -15px 10px;
+      border-bottom: 1px solid #c2c2c2;
+      padding-bottom: 4px; } }
   .book-option .option-select {
     height: 44px;
     float: left;
     position: relative; }
+    @media (max-width: 991px) {
+      .book-option .option-select {
+        width: 100% !important;
+        text-align: center;
+        margin: 0; } }
     .book-option .option-select.disabled {
       opacity: .5; }
       .book-option .option-select.disabled:after {
@@ -5049,6 +5059,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
         padding-right: 0; }
         .book-option .option-select.disabled .dropdown > a .text:after {
           display: none; }
+    @media (min-width: 768px) {
+      .book-option .option-select .dropdown {
+        width: 100%; } }
     .book-option .option-select .dropdown .dropdown-menu {
       max-height: 175px;
       overflow-y: auto;
@@ -5060,6 +5073,12 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
       margin: 0;
       font-size: 16px;
       min-width: inherit; }
+      @media (min-width: 768px) {
+        .book-option .option-select .dropdown .dropdown-menu {
+          position: relative; } }
+      @media (max-width: 767px) {
+        .book-option .option-select .dropdown .dropdown-menu {
+          box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26); } }
     .book-option .option-select .dropdown > a {
       padding: 8px 14px;
       display: inline-block;
@@ -5068,6 +5087,10 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
       text-decoration: none;
       position: relative;
       max-width: 100%; }
+      @media (max-width: 767px) {
+        .book-option .option-select .dropdown > a {
+          font-size: 1em;
+          display: block; } }
       .book-option .option-select .dropdown > a .text {
         display: inline-block;
         max-width: 100%;
@@ -5087,6 +5110,17 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
           background: url(images/ui/pages/book-details/option/icon_down.png) center center no-repeat;
           background-size: 21px auto;
           margin-left: 5px; }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+            .book-option .option-select .dropdown > a .text:after {
+              background-image: url(images/ui/pages/book-details/option/icon_down@3x.png); } }
+      @media (max-width: 767px) {
+        .book-option .option-select .dropdown > a .icon {
+          margin-left: 5px; } }
+    @media (min-width: 768px) {
+      .book-option .option-select .dropdown.open {
+        position: absolute;
+        box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
+        background: #fff; } }
     .book-option .option-select .dropdown.open > a .text:after {
       -webkit-transform: rotate(-180deg);
       transform: rotate(-180deg); }
@@ -5170,6 +5204,9 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
               position: absolute;
               top: 0;
               left: 0; }
+              @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+                .book-option .option-select ul li .td-off span:before {
+                  background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
           .book-option .option-select ul li .td-off small {
             display: block;
             color: rgba(0, 0, 0, 0.8);
@@ -5185,69 +5222,39 @@ only screen and (               min-resolution:2dppx)      and (min-width:320px)
           padding-top: 11px; }
     .book-option .option-select.categories-select ul li.selected, .book-option .option-select.who-select ul li.selected {
       display: none; }
+  @media (min-width: 768px) {
+    .book-option .categories-select {
+      margin-left: -14px;
+      width: 155px;
+      z-index: 3; } }
+  @media (min-width: 768px) {
+    .book-option .categories-select.default {
+      width: 300px; } }
+  @media (min-width: 768px) {
+    .book-option .what-select {
+      width: 328px;
+      z-index: 2; } }
+  @media (min-width: 768px) {
+    .book-option .what-select .dropdown.open {
+      width: 472px; } }
+  @media (max-width: 991px) {
+    .book-option .what-select .dropdown.open {
+      width: 100%; } }
+  @media (min-width: 768px) {
+    .book-option .who-select {
+      width: 140px;
+      z-index: 1; } }
+  @media (min-width: 992px) {
+    .book-option .who-select {
+      float: right; } }
+  @media (min-width: 992px) {
+    .book-option .who-select .dropdown > a {
+      float: right; } }
 
 .on-nicescroll .book-option .option-select .dropdown .dropdown-menu {
   overflow-y: hidden; }
-
-.on-nicescroll .book-option .option-select .dropdown .dropdown-menu .wrap-dropdown-menu-inner {
-  max-height: 175px; }
-
-@media (min-width: 768px) {
-  .book-option .option-select .dropdown {
-    width: 100%; }
-  .book-option .option-select .dropdown.open {
-    position: absolute;
-    box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26);
-    background: #fff; }
-  .book-option .option-select .dropdown-menu {
-    position: relative; }
-  .book-option .categories-select {
-    margin-left: -14px;
-    width: 155px;
-    z-index: 3; }
-  .book-option .categories-select.default {
-    width: 300px; }
-  .book-option .what-select {
-    width: 328px;
-    z-index: 2; }
-  .book-option .what-select .dropdown.open {
-    width: 472px; }
-  .book-option .who-select {
-    width: 140px;
-    z-index: 1; } }
-
-@media (min-width: 992px) {
-  .book-option .who-select {
-    float: right; }
-  .book-option .who-select .dropdown > a {
-    float: right; } }
-
-@media (max-width: 991px) {
-  .book-option .option-select {
-    width: 100% !important;
-    text-align: center;
-    margin: 0; }
-  .book-option .what-select .dropdown.open {
-    width: 100%; } }
-
-@media (max-width: 767px) {
-  .book-option {
-    margin: 0 -15px 10px;
-    border-bottom: 1px solid #c2c2c2;
-    padding-bottom: 4px; }
-  .book-option .option-select .dropdown > a {
-    font-size: 1em;
-    display: block; }
-  .book-option .option-select .dropdown > a .icon {
-    margin-left: 5px; }
-  .book-option .option-select .dropdown-menu {
-    box-shadow: 0 11px 24px 0 rgba(0, 0, 0, 0.26); } }
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .book-option .option-select .dropdown > a .text:after {
-    background-image: url(images/ui/pages/book-details/option/icon_down@3x.png); }
-  .book-option .option-select ul li .td-off span:before {
-    background-image: url(images/ui/pages/book-details/option/icon_offer@3x.png); } }
+  .on-nicescroll .book-option .option-select .dropdown .dropdown-menu .wrap-dropdown-menu-inner {
+    max-height: 175px; }
 
 .site-calendar {
   margin: 0;
