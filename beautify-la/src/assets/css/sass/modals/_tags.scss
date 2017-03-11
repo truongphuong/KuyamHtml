@@ -20,12 +20,21 @@
         padding-bottom: 20px;
         position: relative;
 
+        @media (max-width: 767px){
+            padding-top: 11px;
+            padding-bottom: 5px;
+        }
+
         .modal-title{
             font-size: $h5;
             font-family: $primary;
             font-weight: 700;
             padding-bottom: 0;
             color: $base;
+
+            @media (max-width: 767px){
+                font-size: $h6;
+            }
         }
 
         .close {
@@ -33,6 +42,11 @@
             position: absolute;
             top: 18px;
             right: 23px;
+
+            @media (max-width: 767px){
+                top: 7px;
+                right: 5px;
+            }
         }
     }
 
@@ -41,6 +55,10 @@
         font-size: 16px;
         line-height: 140%;
 
+        @media (max-width: 767px){
+            padding-bottom: 10px;
+        }
+
         @media (min-width: 1024px){
             padding-left: 25px;
             padding-right: 25px;
@@ -48,17 +66,14 @@
 
         div[class*="col-"]{
             margin-bottom: 25px;
-        }
 
-        .form-control{
-            height: 39px;
-        }
+            @media (max-width: 767px){
+                margin-bottom: 15px;
+            }
 
-        .btn{
-            width: 146px;
-            height: 44px;
-            font-size: $h6;
-            font-family: $second;
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -69,6 +84,7 @@
 
         @media (max-width: 767px){
             margin:0 -10px;
+            padding-bottom: 13px;
 
             &:after{
                 content:'';
@@ -84,11 +100,14 @@
             border-radius: 0;
             font-size: $h5;
             font-family: $primary;
+            padding:0;
 
             @media (max-width: 767px){
                 float: left;
                 width: calc(50% - 20px);
                 margin:0 10px;
+                height: 32px;
+                font-size: $h6;
             }
         }
     }

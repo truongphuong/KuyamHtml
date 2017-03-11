@@ -13,6 +13,10 @@
                     margin-bottom: 15px;
                     cursor: pointer;
 
+                    @media (max-width: 767px){
+                        margin-bottom: 18px;
+                    }
+
                     &:hover{
                         .control{
                             display: block;
@@ -23,6 +27,55 @@
                         .page-logo{
                             display: none;
                             background-image: none !important;
+                        }
+
+                        .upload{
+                            height: 51px;
+                            font-size: $s15;
+                            font-family: $primary;
+                            color: $white;
+                            top: 50%;
+                            left: 50%;
+                            margin-top: -25px;
+                            border: 1px solid rgba(255, 255, 255, .31);
+                            background: rgba(0, 0, 0, .24);
+                            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+                            text-align: center;
+                            z-index: 3;
+                            width: 167px;
+                            line-height: 49px;
+                            margin-left: -83px;
+
+                            @media (max-width: 767px){
+                                height: 55px;
+                                line-height: 55px;
+                            }
+
+                            &:before {
+                                content: '';
+                                display: inline-block;
+                                width: 16px;
+                                height: 14px;
+                                background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                                background-size: 16px auto;
+                                margin-right: 5px;
+                                position: relative;
+                                bottom: -2px;
+
+                                @media
+                                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                    background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
+                                }
+                            }
+
+                            &:hover{
+                                font-weight: 700;
+                            }
                         }
 
                         .control{
@@ -47,8 +100,40 @@
                         display: block;
                     }
 
-                    .upload,
-                    .control{
+                    .upload{
+                        cursor: pointer;
+                        display: none;
+                        position: absolute;
+
+                        @media (max-width: 767px){
+                            width: 21px;
+                            height: 21px;
+                            background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+                            background-size: 21px auto;
+                            font-size: 0;
+                            right: 12px;
+                            bottom: 6px;
+                            display: block;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (              min-resolution:120dpi)      and (max-width:767px),
+                        only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                            background-image: url(images/ui/pages/company/settings/icon_camera@3x.png);
+                        }
+
+                        &:before {
+                            @media (max-width: 767px){
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .control {
                         height: 51px;
                         font-size: $s15;
                         font-family: $primary;
@@ -56,36 +141,12 @@
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        margin-top: -25px;
                         border: 1px solid rgba(255, 255, 255, .31);
                         background: rgba(0, 0, 0, .24);
                         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
                         text-align: center;
                         z-index: 3;
                         display: none;
-                    }
-
-                    .upload{
-                        width: 167px;
-                        line-height: 49px;
-                        margin-left: -83px;
-                        cursor: pointer;
-                        display: none;
-
-                        &:before {
-                            content: '';
-                            display: inline-block;
-                            width: 16px;
-                            height: 14px;
-                            background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-                            background-size: 16px auto;
-                            margin-right: 5px;
-                            position: relative;
-                            bottom: -2px;
-                        }
-                    }
-
-                    .control {
                         width: 167px;
                         margin:-25px 0 0 -83px;
                         padding:0;
@@ -111,6 +172,49 @@
                                 display: block;
                                 margin:15px 0;
                                 line-height: 19px;
+
+                                @media (max-width: 767px){
+                                    font-size: 0;
+                                    margin-top:15px;
+                                    line-height: 0;
+                                }
+
+                                &:before{
+                                    @media (max-width: 767px){
+                                        content: '';
+                                        display: inline-block;
+                                        width: 23px;
+                                        height: 23px;
+                                        background: url(images/ui/pages/company/settings/icon_photo.png) no-repeat;
+                                        background-size: 23px auto;
+                                    }
+
+                                    @media
+                                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+                                    only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (              min-resolution:120dpi)      and (max-width:767px),
+                                    only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                                        background-image: url(images/ui/pages/company/settings/icon_photo@3x.png);
+                                    }
+                                }
+                            }
+
+                            &.change{
+                                span{
+                                    &:before{
+                                        background-position: 0 0;
+                                    }
+                                }
+                            }
+
+                            &.delete{
+                                span{
+                                    &:before{
+                                        background-position: 0 -23px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -123,6 +227,10 @@
                     margin: 0 0 11px;
                     list-style: none;
                     cursor: pointer;
+
+                    @media (max-width: 767px){
+                        margin-bottom: 18px;
+                    }
 
                     li{
                         float: left;
@@ -138,32 +246,102 @@
                             background: url(images/ui/pages/company/settings/icon_socials.png) no-repeat;
                             background-size: 44px auto;
 
+                            @media (max-width: 767px){
+                                width: 33px;
+                                height: 33px;
+                                background-size: 33px auto;
+                            }
+
+                            @media (max-width: 359px){
+                                width: 28px;
+                                height: 28px;
+                                background-size: 28px auto;
+                            }
+
+                            @media
+                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                background-image: url(images/ui/pages/company/settings/icon_socials@3x.png);
+                            }
+
                             &.icon-add{
                                 background-position: center top;
                             }
 
                             &.icon-facebook{
                                 background-position: center -44px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -33px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -28px;
+                                }
                             }
 
                             &.icon-twitter{
                                 background-position: center -88px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -66px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -56px;
+                                }
                             }
 
                             &.icon-linkedin{
                                 background-position: center -132px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -99px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -84px;
+                                }
                             }
 
                             &.icon-instagram{
                                 background-position: center -176px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -132px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -112px;
+                                }
                             }
 
                             &.icon-pinterest{
                                 background-position: center -220px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -165px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -140px;
+                                }
                             }
 
                             &.icon-google-plus{
                                 background-position: center -264px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -198px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -168px;
+                                }
                             }
                         }
 
@@ -173,6 +351,10 @@
 
             &.address-section{
                 margin-top: 20px;
+
+                @media (max-width: 767px){
+                    margin-top: 24px;
+                }
 
                 .col-sm-4-5{
                     margin-bottom: 0;
@@ -191,6 +373,13 @@
                         width: 60.8%;
                     }
                 }
+                > .row {
+                    > div[class*="col-"]{
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
 
             &.tags-section{
@@ -204,13 +393,30 @@
                     }
                 }
 
+                .label-form{
+                    @media (max-width: 767px){
+                        margin-bottom: 15px;
+                    }
+                }
+
                 .btn-tag{
                     width: 100%;
-                    height: 38px;
+                    height: 40px;
+                    padding:0;
                     font-size: $s15;
                     border-radius: 0;
                     font-family: $primary;
                     color: $positive;
+
+                    @media (max-width: 767px){
+                        height: 38px;
+                        font-size: $s21;
+                    }
+
+                    @media (max-width:359px){
+                        height: 33px;
+                        font-size: $s17;
+                    }
 
                     &:before{
                         content: '';
@@ -222,6 +428,24 @@
                         position: relative;
                         top:3px;
                         margin-right: 5px;
+
+                        @media (max-width: 767px){
+                            top:1px;
+                        }
+
+                        @media (max-width: 359px){
+                            top:2px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/settings/icon_tag@3x.png);
+                        }
                     }
                 }
 
@@ -241,6 +465,16 @@
                                     background: url(images/ui/modals/icon_close.png) center center no-repeat;
                                     background-size: 15px auto;
                                     opacity: 1;
+
+                                    @media
+                                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                        background-image: url(images/ui/modals/icon_close@3x.png);
+                                    }
                                 }
                             }
                         }
@@ -250,6 +484,12 @@
 
             &.tweets-section{
                 border-bottom: 0 none;
+
+                .label-form{
+                    @media (max-width: 767px){
+                        margin-bottom: 11px;
+                    }
+                }
 
                 .placeholder-custom{
                     .placeholder:after{
@@ -281,8 +521,9 @@
                     }
                 }
             }
-
-            footer{
+        }
+        footer{
+            .btn {
                 @media (max-width: 767px){
                     width: calc(100% - 20px);
                 }

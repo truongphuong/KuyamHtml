@@ -51,7 +51,7 @@ function crop(section, file, modal, croppie, type) {
         }
     });
 
-    $modal.on('show.bs.modal', function () {
+    $modal.on('shown.bs.modal', function () {
         var viewportH = 0;
         var boundaryH = 0;
         var boundaryW = 0;

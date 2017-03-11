@@ -7,18 +7,69 @@
             position: relative;
             top: -4px;
             margin:0 0 16px;
+            width: 110%;
+
+            @media (max-width: 767px){
+                width: inherit;
+                font-size: $s15;
+                line-height: 19px;
+                margin-bottom: 18px;
+                color: rgba(51, 51, 51, .3);
+                text-shadow: 0 1px 0 rgba(51, 51, 51, .3);
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+                line-height: 16px;
+                margin-bottom: 10px;
+            }
         }
 
         .share-section{
 
             .share{
-                margin-bottom: 14px;
+                margin-bottom: 16px;
+
+                @media (max-width: 359px){
+                    margin-bottom: 10px;
+                }
 
                 .cb-mark ~ .cb-label{
+                    margin-bottom: 0;
+
+                    @media (max-width: 767px){
+                        font-size: $s15;
+                        text-shadow: 0 1px 0 $base;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $s13;
+                    }
+
                     small{
                         font-size: 14px;
                         text-shadow: 0 1px 0 rgba(51, 51, 51, .3);
                         color: rgba(51, 51, 51, .3);
+
+                        @media (max-width: 767px){
+                            font-size: 12px;
+                        }
+
+                        @media (max-width: 359px){
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .section{
+                    padding-top: 4px;
+
+                    @media (max-width: 767px){
+                        padding-top: 16px;
+                    }
+
+                    @media (max-width: 359px){
+                        padding-top: 12px;
                     }
                 }
 
@@ -29,9 +80,19 @@
                     color: #323232;
                     border-radius: 4px;
                     position: relative;
-                    padding-left: 56px;
-                    padding-right: 33px;
+                    padding: 0 33px 0 56px;
                     height: 46px;
+
+                    @media (max-width: 767px){
+                        height: 58px;
+                        padding:0 0 10px;
+                        width: 100%;
+                    }
+
+                    @media (max-width: 359px){
+                        height: 48px;
+                        padding:0 0 10px;
+                    }
 
                     &:before{
                         content: '';
@@ -43,6 +104,29 @@
                         position: absolute;
                         top:10px;
                         left:14px;
+
+                        @media (max-width: 767px){
+                            position: relative;
+                            top: 6px;
+                            left: inherit;
+                            margin-right: 5px;
+                        }
+
+                        @media (max-width: 359px){
+                            width: 21px;
+                            height: 21px;
+                            background-size: 21px auto;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/settings/icon_share@3x.png);
+                        }
                     }
 
                     &.btn-facebook:before{
@@ -51,20 +135,42 @@
 
                     &.btn-twitter:before{
                         background-position: center -26px;
+
+                        @media (max-width: 359px){
+                            background-position: center -21px;
+                        }
                     }
 
                     &.btn-linkedin:before{
                         background-position: center -52px;
+
+                        @media (max-width: 359px){
+                            background-position: center -42px;
+                        }
                     }
 
                     &.btn-mailchimp:before{
                         background-position: center -78px;
+
+                        @media (max-width: 359px){
+                            background-position: center -63px;
+                        }
                     }
 
                     &.btn-constant:before{
                         background-position: center -104px;
+
+                        @media (max-width: 359px){
+                            background-position: center -84px;
+                        }
                     }
                 }
+            }
+        }
+
+        footer{
+            @media (max-width: 359px){
+                padding-top:9px;
             }
         }
     }

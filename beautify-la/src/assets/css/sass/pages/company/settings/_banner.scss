@@ -1,4 +1,43 @@
 .company-settings-page {
+    .carousel {
+        height: 338px;
+
+        @media (max-width:767px){
+            height:220px;
+        }
+
+        @media (max-width:359px){
+            height:186px;
+        }
+    }
+
+    .carousel-inner{
+         > .item {
+            height: 338px;
+
+            @media (max-width:767px){
+                height:220px;
+            }
+
+            @media (max-width:359px){
+                height:186px;
+            }
+        }
+
+        &:after{
+            @media (max-width: 767px){
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 48px;
+                background: url(images/ui/pages/company/settings/banner-img-bottom.png) center bottom repeat-x;
+                background-size: auto 48px;
+            }
+        }
+    }
+
     .header-banner{
         position: relative;
         cursor: pointer;
@@ -15,6 +54,61 @@
             .carousel-inner{
                 > .item {
                     background-image: none !important;
+                }
+
+                &:after{
+                    display: none;
+                }
+            }
+
+            .upload{
+                width: 217px;
+                height: 51px;
+                font-size: $s15;
+                line-height: 49px;
+                margin-left: -108px;
+                bottom: inherit;
+                right: inherit;
+                font-family: $primary;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -25px;
+                border: 1px solid rgba(255, 255, 255, .31);
+                background: rgba(0, 0, 0, .24) none;
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+                text-align: center;
+
+                @media (max-width: 767px){
+                    height: 55px;
+                    line-height: 55px;
+                }
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 14px;
+                    background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                    background-size: 16px auto;
+                    margin-right: 5px;
+                    position: relative;
+                    bottom: -2px;
+
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
+                    }
+                }
+
+                &:hover{
+                    font-weight: 700;
                 }
             }
 
@@ -33,8 +127,45 @@
             }
         }
 
-        .upload,
-        .control{
+        .upload{
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            z-index: 3;
+
+            @media (max-width: 767px){
+                width: 21px;
+                height: 21px;
+                background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+                background-size: 21px auto;
+                font-size: 0;
+                right: 12px;
+                bottom: 6px;
+                display: block;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (              min-resolution:120dpi)      and (max-width:767px),
+            only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                background-image: url(images/ui/pages/company/settings/icon_camera@3x.png);
+            }
+
+            &:before {
+                @media (max-width: 767px){
+                    display: none;
+                }
+            }
+        }
+
+        .control {
+            width: 167px;
+            margin:-25px 0 0 -83px;
+            padding:0;
+            list-style: none;
             display: none;
             height: 51px;
             font-size: $s15;
@@ -49,42 +180,20 @@
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
             text-align: center;
             z-index: 3;
-        }
 
-        .upload{
-            width: 217px;
-            line-height: 49px;
-            margin-left: -108px;
-            cursor: pointer;
-
-            &:before {
-                content: '';
-                display: inline-block;
-                width: 16px;
-                height: 14px;
-                background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-                background-size: 16px auto;
-                margin-right: 5px;
-                position: relative;
-                bottom: -2px;
+            @media (max-width: 767px){
+                height: 55px;
             }
-
-            &:hover{
-                font-weight: 700;
-            }
-        }
-
-        .control {
-            width: 167px;
-            margin:-25px 0 0 -83px;
-            padding:0;
-            list-style: none;
 
             li{
                 float: left;
                 width: 50%;
                 height: 49px;
                 cursor: pointer;
+
+                @media (max-width: 767px){
+                    height: 53px;
+                }
 
                 &:first-child {
                     span {
@@ -100,6 +209,49 @@
                     display: block;
                     margin:15px 0;
                     line-height: 19px;
+
+                    @media (max-width: 767px){
+                        font-size: 0;
+                        margin-top:15px;
+                        line-height: 0;
+                    }
+
+                    &:before{
+                        @media (max-width: 767px){
+                            content: '';
+                            display: inline-block;
+                            width: 23px;
+                            height: 23px;
+                            background: url(images/ui/pages/company/settings/icon_photo.png) no-repeat;
+                            background-size: 23px auto;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (              min-resolution:120dpi)      and (max-width:767px),
+                        only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                            background-image: url(images/ui/pages/company/settings/icon_photo@3x.png);
+                        }
+                    }
+                }
+
+                &.change{
+                    span{
+                        &:before{
+                            background-position: 0 0;
+                        }
+                    }
+                }
+
+                &.delete{
+                    span{
+                        &:before{
+                            background-position: 0 -23px;
+                        }
+                    }
                 }
             }
         }

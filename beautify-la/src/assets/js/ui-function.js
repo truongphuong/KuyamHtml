@@ -226,9 +226,45 @@ function placholderCheck($obj){
 
 function inputCustom(){
     var input = '.input-custom input[type="text"]';
+	$(document).find(input).each(function(){
+        var $this = $(this);
+		var $parent = $this.closest('.input-custom');
+		var isUrl = $parent.data('url');
+		if(isUrl){
+			inputCheck($this);
+		}
+    });
+	
     $(document).on('focus', input, function(){
         var $this = $(this);
         var $parent = $this.closest('.input-custom');
         $parent.removeClass('validate');
-    });
+		
+		var $parent = $this.closest('.input-custom');		
+		var isUrl = $parent.data('url');
+		if(isUrl){
+			inputCheck($this);
+		}
+    }).on('keyup', input, function(){
+        var $this = $(this);
+		var $parent = $this.closest('.input-custom');		
+		var isUrl = $parent.data('url');
+		if(isUrl){
+			inputCheck($this);
+		}
+	});
+}
+
+function inputCheck($obj){	
+    var inputVal = $obj.val();
+	var $parent = $obj.closest('.input-custom');
+	var tdFirstW = $parent.find('.table-css .td:first-child').innerWidth();
+	var inputW = $obj.innerWidth() + tdFirstW;
+    if(inputVal !== ''){
+        $parent.find('.table-css').css({'margin-left': - tdFirstW});
+		$obj.css({'width': inputW});
+    }else{
+        $parent.find('.table-css').css({'margin-left': ''});
+		$obj.css({'width': ''});
+    }	
 }

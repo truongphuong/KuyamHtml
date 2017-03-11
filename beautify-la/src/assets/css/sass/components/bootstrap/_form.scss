@@ -7,6 +7,18 @@
     padding:0 15px;
     box-shadow: none;
 
+    @media (max-width: 767px){
+        font-size: 15px;
+        height: 36px;
+        padding:0 8px;
+    }
+
+    @media (max-width: 359px){
+        font-size: 13px;
+        height: 31px;
+        padding:0 5px;
+    }
+
     &:hover,
     &:focus{
         border: 1px solid $border;
@@ -21,6 +33,12 @@
 
     &[readonly]{
         background: $white;
+        cursor: default;
+    }
+}
+
+.btn{
+    &[disabled]{
         cursor: default;
     }
 }
