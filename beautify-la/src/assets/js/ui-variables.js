@@ -20,6 +20,20 @@ var isMobile = {
 };
 
 var isView = {
+	xxs: function(){
+        var sw = getWindowWidth();
+        if (sw < 359) {
+            return true;
+        };
+        return false;
+    },
+	xs: function(){
+        var sw = getWindowWidth();
+        if (sw < 3767 && sw > 359) {
+            return true;
+        };
+        return false;
+    },
     mobile: function(){
         var sw = getWindowWidth();
         if (sw < 768) {

@@ -62,20 +62,20 @@ function iscrollSelect(sectionID, scrollName) {
 
         if (!isMobile.Windows()) {
             $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
-            //$('#' + sectionID + ' select').on('shown.bs.select', function (e) {
-            var heightOfUL = $('#' + sectionID + ' ul.inner').height();
-            $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
-            $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', {
-                bouncescroll: false,
-                autohidemode: false,
-                cursorcolor: "#f3472d",
-                cursorborder: "1px solid transparent",
-                cursorborderradius: "5px",
-                cursorwidth: "7px",
-                background: "#8B8B8B",
-                mousescrollstep: 10
+            $('#' + sectionID + ' select').on('show.bs.select', function (e) {
+                var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', {
+                    bouncescroll: false,
+                    autohidemode: false,
+                    cursorcolor: "#f3472d",
+                    cursorborder: "1px solid transparent",
+                    cursorborderradius: "5px",
+                    cursorwidth: "7px",
+                    background: "#8B8B8B",
+                    mousescrollstep: 10
+                });
             });
-            //});
         }
     }
 }
@@ -227,43 +227,70 @@ function inputCustom() {
     var input = '.input-custom input[type="text"]';
     $(document).find(input).each(function () {
         var $this = $(this);
-        var $parent = $this.closest('.input-custom');
-        var isUrl = $parent.data('url');
-        if (isUrl) {
-            inputCheck($this);
-        }
+        inputCheck($this);
     });
 
     $(document).on('focus', input, function () {
         var $this = $(this);
-        var $parent = $this.closest('.input-custom');
-        $parent.removeClass('validate');
+        inputCheck($this);
 
         var $parent = $this.closest('.input-custom');
-        var isUrl = $parent.data('url');
-        if (isUrl) {
-            inputCheck($this);
-        }
+        $parent.removeClass('validate');
     }).on('keyup', input, function () {
         var $this = $(this);
-        var $parent = $this.closest('.input-custom');
-        var isUrl = $parent.data('url');
-        if (isUrl) {
-            inputCheck($this);
-        }
+        inputCheck($this);
     });
 }
 
 function inputCheck($obj) {
-    var inputVal = $obj.val();
     var $parent = $obj.closest('.input-custom');
-    var tdFirstW = $parent.find('.table-css .td:first-child').innerWidth();
-    var inputW = $obj.innerWidth() + tdFirstW;
-    if (inputVal !== '') {
-        $parent.find('.table-css').css({ 'margin-left': -tdFirstW });
-        $obj.css({ 'width': inputW });
+    if (isView.mobile()) {
+        if ($parent.hasClass('input-url')) {
+            var isUrl = $parent.data('url');
+            var inputVal = $obj.val();
+            var $parent = $obj.closest('.input-custom');
+
+            var temp = 0;
+            if (isView.xxs()) {
+                temp = 36;
+            } else if (isView.xs()) {
+                temp = 42;
+            }
+            var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
+            var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
+            var inputW = parseInt($obj.innerWidth()) + tdFirstW - aWidth - temp;
+
+            if (inputVal !== '') {
+                if (isUrl === false) {
+                    $parent.find('.table-css').css({ 'margin-left': -tdFirstW });
+                    $obj.css({ 'width': inputW });
+                    $parent.data('url', true);
+                }
+            } else {
+                $parent.find('.table-css').css({ 'margin-left': '' });
+                $obj.css({ 'width': '' });
+                $parent.data('url', false);
+            }
+        }
     } else {
-        $parent.find('.table-css').css({ 'margin-left': '' });
-        $obj.css({ 'width': '' });
+        if ($parent.hasClass('input-url')) {
+            $parent.find('.table-css').css({ 'margin-left': '' });
+            $obj.css({ 'width': '' });
+            $parent.data('url', false);
+        }
     }
+}
+
+function inputCustomResize() {
+    var input = '.input-custom input[type="text"]';
+    $(document).find(input).each(function () {
+        var $this = $(this);
+        var $parent = $this.closest('.input-custom');
+        if ($parent.hasClass('input-url')) {
+            $parent.find('.table-css').css({ 'margin-left': '' });
+            $this.css({ 'width': '' });
+            $parent.data('url', false);
+            inputCheck($this);
+        }
+    });
 }

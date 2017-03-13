@@ -85,20 +85,6 @@ $(document).ready(function () {
 
     $('.modal').on('shown.bs.modal', centerModal);
 
-    monitorResize(function () {
-        $('.modal:visible').each(centerModal);
-
-        selectArea();
-
-        if (hasContentRegion == 1) {
-            selectRegionScroll.refresh();
-        }
-
-        if (hasContentArea == 1) {
-            selectAreaScroll.refresh();
-        }
-    });
-
     placeholderCustom();
 
     inputCustom();
@@ -117,5 +103,21 @@ $(document).ready(function () {
             $this.removeClass('active');
             $this.siblings('.bootstrap-select').removeClass('active');
         }
+    });
+
+    monitorResize(function () {
+        $('.modal:visible').each(centerModal);
+
+        selectArea();
+
+        if (hasContentRegion == 1) {
+            selectRegionScroll.refresh();
+        }
+
+        if (hasContentArea == 1) {
+            selectAreaScroll.refresh();
+        }
+
+        inputCustomResize();
     });
 });

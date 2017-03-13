@@ -2,23 +2,31 @@
 
 document.getElementById('settingsNav').className = "active";
 
-function deleteTag($this) {	  
-    var liTag = $this.parentElement.parentElement;
-	var liIndex = parseInt(liTag.attributes.getNamedItem('data-original-index').value) + 1;
-    liTag.remove();   
-
-	$('#tagesSelect option:nth-child(' + liIndex + ')').remove();
-	
-	$('#tagesSelect').selectpicker('refresh');     
-}
-
 $(document).ready(function(){
 	
 	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
 	iscrollSelect('divStateSelect', 'iscrollStateSelect');
 	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
 	iscrollSelect('divTagesSelect', 'iscrollTagesSelect');   
-    $('#sectionSelect').selectpicker();   
+    $('#sectionSelect').selectpicker();
+	
+	$(document).on('click', '#divTagesSelect .close', function (e) {   
+        e.stopPropagation();
+		var $this = $(this);
+		var $li = $this.closest('li');
+		var liIndex = parseInt($li.data('original-index')) + 1;
+		$li.remove();
+		var $parent = $('#divTagesSelect');
+		$parent.find('select').val('');   
+		console.log($parent.length);
+		$parent.find('select option:nth-child(' + liIndex + ')').remove();
+		$parent.find('select').selectpicker('refresh');
+		if($parent.find('li').length === 1){  
+			$parent.addClass('hide');
+			return;
+		}
+		refreshNiceScroll('#divTagesSelect');   
+    });
 	
 	// Begin active item sidebar/select and show form follow step by step
 	$('.company-settings-page .content footer .btn').on('click', function(){

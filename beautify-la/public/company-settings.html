@@ -157,14 +157,14 @@
                 </label>
             </div>
             <div class="col-xs-12">
-                <label class="input-custom validate" for="txtURL1" data-url="true">
+                <label class="input-custom input-url validate" for="txtURL1" data-url="false">
                     <span class="table-css">
                         <span class="tr">
                             <span class="td">https://www.facebook.com/</span>
                             <span class="td"><input id="txtURL1" type="text" value="pijons"></span>
-                            <span class="td"><a title="" href="#">copy</a></span>
                         </span>
                     </span>
+                    <a title="" href="#">copy</a>
                     <span class="error">This URL is already taken</span>
                 </label>
             </div>
@@ -280,15 +280,15 @@
     <section class="section tags-section">
         <label class="label-form">Filter events by tags</label>
         <div class="row">
-            <div id="divTagesSelect" class="col-xs-12 col-md-8 hide select-readonly">
+            <div id="divTagesSelect" class="col-xs-12 col-md-8 select-readonly">
                 <select id="tagesSelect" class="select-full default">
                     <option data-content='Category' value="" selected>Category</option>
-                    <option data-content='Yoga <span class="close" onClick="deleteTag(this);"></span>' value="1">Yoga</option>
-                    <option data-content='Swimming <span class="close" onClick="deleteTag(this);"></span>' value="2">Swimming</option>
-                    <option data-content='jogging <span class="close" onClick="deleteTag(this);"></span>' value="3">jogging</option>
-                    <option data-content='running <span class="close" onClick="deleteTag(this);"></span>' value="4">running</option>
-                    <option data-content='singing <span class="close" onClick="deleteTag(this);"></span>' value="5">singing</option>
-                    <option data-content='tennis <span class="close" onClick="deleteTag(this);"></span>' value="6">tennis</option>
+                    <option data-content='Yoga <button class="close"></button>' value="1">Yoga</option>
+                    <option data-content='Swimming <button class="close"></button>' value="2">Swimming</option>
+                    <option data-content='jogging <button class="close"></button>' value="3">jogging</option>
+                    <option data-content='running <button class="close"></button>' value="4">running</option>
+                    <option data-content='singing <button class="close"></button>' value="5">singing</option>
+                    <option data-content='tennis <button class="close"></button>' value="6">tennis</option>
                 </select>
             </div>
             <div class="col-xs-12 col-md-4 hidden-xs">
@@ -538,7 +538,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
             <div class="modal-body">
                 <ul>
                     <li class="li-facebook active">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.facebook.com/</span>
@@ -548,7 +548,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         </label>
                     </li>
                     <li class="li-twitter">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.twitter.com/</span>
@@ -558,7 +558,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         </label>
                     </li>
                     <li class="li-linkedin">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.linkedin.com/</span>
@@ -568,7 +568,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         </label>
                     </li>
                     <li class="li-instagram">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.instagram.com/</span>
@@ -578,7 +578,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         </label>
                     </li>
                     <li class="li-pinterest">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.pinterest.com/</span>
@@ -588,7 +588,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         </label>
                     </li>
                     <li class="li-google-plus">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.pinterest.com/</span>
@@ -605,12 +605,12 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
 </div><!-- /.modal -->
 <!-- /.modal-social -->
 
-<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="tagsModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-tags">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
+                <h4 id="tagsModalLabel" class="modal-title">Create a new tag</h4>
             </div>
             <div class="modal-body">
                 <div class="row">

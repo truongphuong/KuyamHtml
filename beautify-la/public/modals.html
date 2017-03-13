@@ -303,6 +303,12 @@
             <dd>
                 <a href="#" title="" data-target="#tagsModal" data-toggle="modal">tags</a>
             </dd>
+            <dd>
+                <a href="#" title="" data-target="#updateModal" data-toggle="modal">update</a>
+            </dd>
+            <dd>
+                <a href="#" title="" data-target="#deleteModal" data-toggle="modal">delete 2</a>
+            </dd>
         </dl>
     </div>
 </div>
@@ -3071,7 +3077,7 @@ email the message<span class="icon icon-next"></span>
             <div class="modal-body">
                 <ul>
                     <li class="li-facebook active">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.facebook.com/</span>
@@ -3081,7 +3087,7 @@ email the message<span class="icon icon-next"></span>
                         </label>
                     </li>
                     <li class="li-twitter">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.twitter.com/</span>
@@ -3091,7 +3097,7 @@ email the message<span class="icon icon-next"></span>
                         </label>
                     </li>
                     <li class="li-linkedin">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.linkedin.com/</span>
@@ -3101,7 +3107,7 @@ email the message<span class="icon icon-next"></span>
                         </label>
                     </li>
                     <li class="li-instagram">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.instagram.com/</span>
@@ -3111,7 +3117,7 @@ email the message<span class="icon icon-next"></span>
                         </label>
                     </li>
                     <li class="li-pinterest">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.pinterest.com/</span>
@@ -3121,7 +3127,7 @@ email the message<span class="icon icon-next"></span>
                         </label>
                     </li>
                     <li class="li-google-plus">
-                        <label class="input-custom" for="txtURL1" data-url="true">
+                        <label class="input-custom input-url" for="txtURL1" data-url="false">
                             <span class="table-css">
                                 <span class="tr">
                                     <span class="td">https://www.pinterest.com/</span>
@@ -4328,12 +4334,12 @@ email the message<span class="icon icon-next"></span>
     </div><!-- /.modal-dialog -->
 </div><!-- /#changePassModal -->
 
-<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="tagsModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-tags">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
+                <h4 id="tagsModalLabel" class="modal-title">Create a new tag</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -4411,12 +4417,12 @@ email the message<span class="icon icon-next"></span>
     </div><!-- /.modal-dialog -->
 </div><!-- /#changePassModal -->
 
-<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="createCategoryModalLabel" data-keyboard="false" data-backdrop="static">
+<div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="tagsModalLabel" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-tags">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"></button>
-                <h4 id="createCategoryModalLabel" class="modal-title">Create a new tag</h4>
+                <h4 id="tagsModalLabel" class="modal-title">Create a new tag</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -4434,6 +4440,42 @@ email the message<span class="icon icon-next"></span>
             <div class="modal-footer">
                 <button class="btn btn-negative" data-dismiss="modal">cancel</button>
                 <button class="btn btn-positive">save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<div id="updateModal" class="modal fade modal-m" role="dialog" aria-labelledby="updateModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-update">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <!--<h4 id="updateModalLabel" class="modal-title">Do you want to save the changes?</h4>-->
+            </div>
+            <div class="modal-body">
+                <p>Do you want to save the changes?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-negative" data-dismiss="modal">no</button>
+                <button class="btn btn-positive">yes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /#changePassModal -->
+
+<div id="deleteModal" class="modal fade modal-m" role="dialog" aria-labelledby="deleteModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-update">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <!--<h4 id="deleteModalLabel" class="modal-title">Do you want to save the changes?</h4>-->
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this tier?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-negative" data-dismiss="modal">no</button>
+                <button class="btn btn-positive">yes</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -4483,7 +4525,7 @@ email the message<span class="icon icon-next"></span>
 <script type="text/javascript" src="content/js/modals/ui-create.js"></script>
 <script type="text/javascript" src="content/js/modals/ui-offerings.js"></script>
 <script type="text/javascript" src="content/js/modals/ui-terms.js"></script>
-<script type="text/javascript" src="content/js/modals/ui-banner.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
 
 </body>
 </html>
