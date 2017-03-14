@@ -107,7 +107,7 @@
         }
 
         .control {
-            margin:-25px 0 0 -120px;
+            margin:-25px 0 0 -121px;
             padding:0;
             list-style: none;
             height: 51px;
@@ -128,6 +128,7 @@
             @media (max-width: 767px){
                 height: 55px;
                 display: block;
+                margin-left: -81px;
             }
 
             li{
@@ -142,6 +143,12 @@
 
                 &:hover{
                     font-weight: 700;
+                }
+
+                + li{
+                    span {
+                        border-left: 1px solid rgba(255, 255, 255, .5);
+                    }
                 }
 
                 span{
@@ -182,6 +189,10 @@
                     width: 100%;
                     line-height: 49px;
 
+                    @media (max-width: 767px){
+                        line-height: 53px;
+                    }
+
                     &:before {
                         content: '';
                         display: inline-block;
@@ -202,13 +213,6 @@
                         only screen and (               min-resolution:2dppx)      and (min-width:320px){
                             background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
                         }
-                    }
-                }
-
-
-                + li{
-                    span {
-                        border-left: 1px solid rgba(255, 255, 255, .5);
                     }
                 }
 

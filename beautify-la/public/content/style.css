@@ -377,8 +377,12 @@ textarea {
 /**
  * Components
  */
-.modal-open .detech-devices {
-  position: fixed; }
+.modal-open .detech-devices,
+.modal-open #detech-devices {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.5); }
@@ -5853,7 +5857,7 @@ div.placeholder-custom {
       .company-settings-page .header-banner .camera {
         background-image: url(images/ui/pages/company/settings/icon_camera@3x.png); } }
   .company-settings-page .header-banner .control {
-    margin: -25px 0 0 -120px;
+    margin: -25px 0 0 -121px;
     padding: 0;
     list-style: none;
     height: 51px;
@@ -5873,7 +5877,8 @@ div.placeholder-custom {
     @media (max-width: 767px) {
       .company-settings-page .header-banner .control {
         height: 55px;
-        display: block; } }
+        display: block;
+        margin-left: -81px; } }
     .company-settings-page .header-banner .control li {
       float: left;
       width: 80px;
@@ -5884,6 +5889,8 @@ div.placeholder-custom {
           height: 53px; } }
       .company-settings-page .header-banner .control li:hover {
         font-weight: 700; }
+      .company-settings-page .header-banner .control li + li span {
+        border-left: 1px solid rgba(255, 255, 255, 0.5); }
       .company-settings-page .header-banner .control li span {
         display: block;
         margin: 15px 0;
@@ -5908,6 +5915,9 @@ div.placeholder-custom {
         display: none;
         width: 100%;
         line-height: 49px; }
+        @media (max-width: 767px) {
+          .company-settings-page .header-banner .control li.upload {
+            line-height: 53px; } }
         .company-settings-page .header-banner .control li.upload:before {
           content: '';
           display: inline-block;
@@ -5921,8 +5931,6 @@ div.placeholder-custom {
           @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
             .company-settings-page .header-banner .control li.upload:before {
               background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
-      .company-settings-page .header-banner .control li + li span {
-        border-left: 1px solid rgba(255, 255, 255, 0.5); }
       .company-settings-page .header-banner .control li.edit span {
         border-left: 0 none; }
       @media (max-width: 767px) {
@@ -6111,45 +6119,13 @@ div.placeholder-custom {
     .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
       display: none;
       background-image: none !important; }
-    .company-settings-page .company-info .section.logo-section .frame.default .upload {
-      height: 51px;
-      font-size: 0.9375em;
-      font-family: "Lato", sans-serif;
-      color: #fff;
-      top: 50%;
-      left: 50%;
-      margin-top: -25px;
-      border: 1px solid rgba(255, 255, 255, 0.31);
-      background: rgba(0, 0, 0, 0.24);
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-      text-align: center;
-      z-index: 3;
-      width: 167px;
-      line-height: 49px;
-      margin-left: -83px; }
-      @media (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame.default .upload {
-          height: 55px;
-          line-height: 55px; } }
-      .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 14px;
-        background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-        background-size: 16px auto;
-        margin-right: 5px;
-        position: relative;
-        bottom: -2px; }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-          .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-            background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
-      .company-settings-page .company-info .section.logo-section .frame.default .upload:hover {
-        font-weight: 700; }
     .company-settings-page .company-info .section.logo-section .frame.default .control {
-      display: none; }
-    .company-settings-page .company-info .section.logo-section .frame.default:hover .upload {
-      display: block; }
+      width: 167px;
+      margin-left: -83px; }
+      .company-settings-page .company-info .section.logo-section .frame.default .control li {
+        display: none; }
+        .company-settings-page .company-info .section.logo-section .frame.default .control li.upload {
+          display: block; }
     .company-settings-page .company-info .section.logo-section .frame .page-logo {
       position: absolute;
       top: -1px;
@@ -6159,12 +6135,12 @@ div.placeholder-custom {
       background: center center no-repeat;
       background-size: auto 55px;
       display: block; }
-    .company-settings-page .company-info .section.logo-section .frame .upload {
+    .company-settings-page .company-info .section.logo-section .frame .camera {
       cursor: pointer;
       display: none;
       position: absolute; }
       @media (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame .upload {
+        .company-settings-page .company-info .section.logo-section .frame .camera {
           width: 21px;
           height: 21px;
           background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
@@ -6174,10 +6150,10 @@ div.placeholder-custom {
           bottom: 6px;
           display: block; } }
       @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame .upload {
+        .company-settings-page .company-info .section.logo-section .frame .camera {
           background-image: url(images/ui/pages/company/settings/icon_camera@3x.png); } }
       @media (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame .upload:before {
+        .company-settings-page .company-info .section.logo-section .frame .camera:before {
           display: none; } }
     .company-settings-page .company-info .section.logo-section .frame .control {
       height: 51px;
@@ -6193,19 +6169,22 @@ div.placeholder-custom {
       text-align: center;
       z-index: 3;
       display: none;
-      width: 167px;
-      margin: -25px 0 0 -83px;
+      width: 182px;
+      margin: -25px 0 0 -91px;
       padding: 0;
       list-style: none; }
       .company-settings-page .company-info .section.logo-section .frame .control li {
         float: left;
-        width: 50%;
+        width: 60px;
         height: 49px;
         cursor: pointer; }
-        .company-settings-page .company-info .section.logo-section .frame .control li:first-child span {
-          border-right: 1px solid rgba(255, 255, 255, 0.5); }
+        @media (max-width: 767px) {
+          .company-settings-page .company-info .section.logo-section .frame .control li {
+            width: 50%; } }
         .company-settings-page .company-info .section.logo-section .frame .control li:hover {
           font-weight: 700; }
+        .company-settings-page .company-info .section.logo-section .frame .control li + li span {
+          border-left: 1px solid rgba(255, 255, 255, 0.5); }
         .company-settings-page .company-info .section.logo-section .frame .control li span {
           display: block;
           margin: 15px 0;
@@ -6226,8 +6205,35 @@ div.placeholder-custom {
           @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
             .company-settings-page .company-info .section.logo-section .frame .control li span:before {
               background-image: url(images/ui/pages/company/settings/icon_photo@3x.png); } }
+        .company-settings-page .company-info .section.logo-section .frame .control li.upload {
+          width: 100%;
+          line-height: 49px;
+          display: none; }
+          .company-settings-page .company-info .section.logo-section .frame .control li.upload:before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 14px;
+            background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+            background-size: 16px auto;
+            margin-right: 5px;
+            position: relative;
+            bottom: -2px; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+              .company-settings-page .company-info .section.logo-section .frame .control li.upload:before {
+                background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
+        .company-settings-page .company-info .section.logo-section .frame .control li.edit span {
+          border-left: 0 none; }
+          .company-settings-page .company-info .section.logo-section .frame .control li.edit span:before {
+            background-position: 0 0; }
+        @media (max-width: 767px) {
+          .company-settings-page .company-info .section.logo-section .frame .control li.edit {
+            display: none; } }
         .company-settings-page .company-info .section.logo-section .frame .control li.change span:before {
           background-position: 0 0; }
+        @media (max-width: 767px) {
+          .company-settings-page .company-info .section.logo-section .frame .control li.change span {
+            border-left: 0 none; } }
         .company-settings-page .company-info .section.logo-section .frame .control li.delete span:before {
           background-position: 0 -23px; }
   .company-settings-page .company-info .section.socials-section ul {
