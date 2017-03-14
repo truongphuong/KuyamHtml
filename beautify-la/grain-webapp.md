@@ -7,7 +7,6 @@ webapp
     |- src
         |- assets
             |- css
-                |- libs (These are third party)
 				|- sass
 					|- base (These are mixins folder and element styles)
                         |- settings
@@ -36,6 +35,11 @@ webapp
 						|- prints (Define style for print file)
             |- images
             |- js
+				|- modals
+				|- pages
+				ui-function.js
+				ui-general.js
+				ui-variables.js
 			|- fonts
 			|- favicon
         |- views
@@ -56,7 +60,6 @@ webapp
 				|- partials (This include inherit sections of page)
 				|- modals (These are content of popups)
 				|- pages (This include special section of page)
-			|- sprints (Separate page follow sprint of process)
 			index.html
 ```
 

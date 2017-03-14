@@ -5816,8 +5816,7 @@ div.placeholder-custom {
     background-size: auto 48px; } }
 
 .company-settings-page .header-banner {
-  position: relative;
-  cursor: pointer; }
+  position: relative; }
   .company-settings-page .header-banner:hover .control {
     display: block; }
   .company-settings-page .header-banner.default {
@@ -5826,76 +5825,36 @@ div.placeholder-custom {
       background-image: none !important; }
     .company-settings-page .header-banner.default .carousel-inner:after {
       display: none; }
-    .company-settings-page .header-banner.default .upload {
-      width: 217px;
-      height: 51px;
-      font-size: 0.9375em;
-      line-height: 49px;
-      margin-left: -108px;
-      bottom: inherit;
-      right: inherit;
-      font-family: "Lato", sans-serif;
-      color: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -25px;
-      border: 1px solid rgba(255, 255, 255, 0.31);
-      background: rgba(0, 0, 0, 0.24) none;
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-      text-align: center; }
-      @media (max-width: 767px) {
-        .company-settings-page .header-banner.default .upload {
-          height: 55px;
-          line-height: 55px; } }
-      .company-settings-page .header-banner.default .upload:before {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 14px;
-        background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-        background-size: 16px auto;
-        margin-right: 5px;
-        position: relative;
-        bottom: -2px; }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-          .company-settings-page .header-banner.default .upload:before {
-            background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
-      .company-settings-page .header-banner.default .upload:hover {
-        font-weight: 700; }
     .company-settings-page .header-banner.default .control {
+      width: 217px; }
+      .company-settings-page .header-banner.default .control li {
+        display: none; }
+        .company-settings-page .header-banner.default .control li.upload {
+          display: block; }
+    .company-settings-page .header-banner.default .camera {
       display: none; }
-    .company-settings-page .header-banner.default:hover .upload {
-      display: block; }
-    .company-settings-page .header-banner.default:hover .control {
-      display: none; }
-  .company-settings-page .header-banner .upload {
-    display: none;
+  .company-settings-page .header-banner .camera {
     position: absolute;
     cursor: pointer;
-    z-index: 3; }
+    z-index: 3;
+    display: none;
+    width: 45px;
+    height: 33px;
+    background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+    background-size: 21px auto;
+    font-size: 0;
+    right: 0;
+    bottom: 0; }
     @media (max-width: 767px) {
-      .company-settings-page .header-banner .upload {
-        width: 21px;
-        height: 21px;
-        background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
-        background-size: 21px auto;
-        font-size: 0;
-        right: 12px;
-        bottom: 6px;
+      .company-settings-page .header-banner .camera {
         display: block; } }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
-      .company-settings-page .header-banner .upload {
+      .company-settings-page .header-banner .camera {
         background-image: url(images/ui/pages/company/settings/icon_camera@3x.png); } }
-    @media (max-width: 767px) {
-      .company-settings-page .header-banner .upload:before {
-        display: none; } }
   .company-settings-page .header-banner .control {
-    width: 167px;
     margin: -25px 0 0 -83px;
     padding: 0;
     list-style: none;
-    display: none;
     height: 51px;
     font-size: 0.9375em;
     font-family: "Lato", sans-serif;
@@ -5908,20 +5867,20 @@ div.placeholder-custom {
     background: rgba(0, 0, 0, 0.24);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
     text-align: center;
-    z-index: 3; }
+    z-index: 3;
+    display: none; }
     @media (max-width: 767px) {
       .company-settings-page .header-banner .control {
-        height: 55px; } }
+        height: 55px;
+        display: block; } }
     .company-settings-page .header-banner .control li {
       float: left;
-      width: 50%;
+      width: 80px;
       height: 49px;
       cursor: pointer; }
       @media (max-width: 767px) {
         .company-settings-page .header-banner .control li {
           height: 53px; } }
-      .company-settings-page .header-banner .control li:first-child span {
-        border-right: 1px solid rgba(255, 255, 255, 0.5); }
       .company-settings-page .header-banner .control li:hover {
         font-weight: 700; }
       .company-settings-page .header-banner .control li span {
@@ -5944,8 +5903,35 @@ div.placeholder-custom {
         @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
           .company-settings-page .header-banner .control li span:before {
             background-image: url(images/ui/pages/company/settings/icon_photo@3x.png); } }
+      .company-settings-page .header-banner .control li.upload {
+        display: none;
+        width: 100%;
+        line-height: 49px; }
+        .company-settings-page .header-banner .control li.upload:before {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 14px;
+          background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+          background-size: 16px auto;
+          margin-right: 5px;
+          position: relative;
+          bottom: -2px; }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+            .company-settings-page .header-banner .control li.upload:before {
+              background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
+      .company-settings-page .header-banner .control li + li span {
+        border-left: 1px solid rgba(255, 255, 255, 0.5); }
+      .company-settings-page .header-banner .control li.edit span {
+        border-left: 0 none; }
+      @media (max-width: 767px) {
+        .company-settings-page .header-banner .control li.edit {
+          display: none; } }
       .company-settings-page .header-banner .control li.change span:before {
         background-position: 0 0; }
+      @media (max-width: 767px) {
+        .company-settings-page .header-banner .control li.change span {
+          border-left: 0 none; } }
       .company-settings-page .header-banner .control li.delete span:before {
         background-position: 0 -23px; }
 

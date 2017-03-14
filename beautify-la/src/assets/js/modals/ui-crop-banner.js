@@ -137,7 +137,7 @@ $(document).ready(function(){
 	var $modalBanner = $('#cropBannerModal'); 
 	var $croppieBanner = $('#croppieBanner');
 	
-    $(document).on('click', '.header-banner:not(.default)', function(e){
+    /*$(document).on('click', '.header-banner:not(.default)', function(e){
         var $this = $(this);
         var $target = $(e.target);
         var obj = $target.attr('class');
@@ -147,6 +147,10 @@ $(document).ready(function(){
             $fileBanner.click();
         }
     }).on('click', '.header-banner .upload', function(e){
+        $fileBanner.click();
+    });*/
+	
+	$(document).on('click', '.header-banner .upload, .header-banner .camera', function(e){
         $fileBanner.click();
     });
 

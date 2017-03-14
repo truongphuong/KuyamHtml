@@ -11,8 +11,8 @@
         }
     }
 
-    .carousel-inner{
-         > .item {
+    .carousel-inner {
+        > .item {
             height: 338px;
 
             @media (max-width:767px){
@@ -40,7 +40,6 @@
 
     .header-banner{
         position: relative;
-        cursor: pointer;
 
         &:hover{
             .control{
@@ -61,86 +60,37 @@
                 }
             }
 
-            .upload{
+            .control{
                 width: 217px;
-                height: 51px;
-                font-size: $s15;
-                line-height: 49px;
-                margin-left: -108px;
-                bottom: inherit;
-                right: inherit;
-                font-family: $primary;
-                color: $white;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -25px;
-                border: 1px solid rgba(255, 255, 255, .31);
-                background: rgba(0, 0, 0, .24) none;
-                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-                text-align: center;
 
-                @media (max-width: 767px){
-                    height: 55px;
-                    line-height: 55px;
-                }
+                li{
+                    display: none;
 
-                &:before {
-                    content: '';
-                    display: inline-block;
-                    width: 16px;
-                    height: 14px;
-                    background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-                    background-size: 16px auto;
-                    margin-right: 5px;
-                    position: relative;
-                    bottom: -2px;
-
-                    @media
-                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
-                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
-                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
-                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
-                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
-                        background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
+                    &.upload{
+                        display: block;
                     }
                 }
-
-                &:hover{
-                    font-weight: 700;
-                }
             }
 
-            .control{
+            .camera{
                 display: none;
-            }
-
-            &:hover{
-                .upload{
-                    display: block;
-                }
-
-                .control{
-                    display: none;
-                }
             }
         }
 
-        .upload{
-            display: none;
+        .camera{
             position: absolute;
             cursor: pointer;
             z-index: 3;
+            display: none;
+            width: 45px;
+            height: 33px;
+            background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+            background-size: 21px auto;
+            font-size: 0;
+            right: 0;
+            bottom: 0;
 
             @media (max-width: 767px){
-                width: 21px;
-                height: 21px;
-                background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
-                background-size: 21px auto;
-                font-size: 0;
-                right: 12px;
-                bottom: 6px;
                 display: block;
             }
 
@@ -153,20 +103,12 @@
             only screen and (               min-resolution:2dppx)      and (max-width:767px){
                 background-image: url(images/ui/pages/company/settings/icon_camera@3x.png);
             }
-
-            &:before {
-                @media (max-width: 767px){
-                    display: none;
-                }
-            }
         }
 
         .control {
-            width: 167px;
             margin:-25px 0 0 -83px;
             padding:0;
             list-style: none;
-            display: none;
             height: 51px;
             font-size: $s15;
             font-family: $primary;
@@ -180,25 +122,21 @@
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
             text-align: center;
             z-index: 3;
+            display: none;
 
             @media (max-width: 767px){
                 height: 55px;
+                display: block;
             }
 
             li{
                 float: left;
-                width: 50%;
+                width: 80px;
                 height: 49px;
                 cursor: pointer;
 
                 @media (max-width: 767px){
                     height: 53px;
-                }
-
-                &:first-child {
-                    span {
-                        border-right: 1px solid rgba(255, 255, 255, .5);
-                    }
                 }
 
                 &:hover{
@@ -238,10 +176,59 @@
                     }
                 }
 
+                &.upload{
+                    display: none;
+                    width: 100%;
+                    line-height: 49px;
+
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        width: 16px;
+                        height: 14px;
+                        background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                        background-size: 16px auto;
+                        margin-right: 5px;
+                        position: relative;
+                        bottom: -2px;
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
+                        }
+                    }
+                }
+
+
+                + li{
+                    span {
+                        border-left: 1px solid rgba(255, 255, 255, .5);
+                    }
+                }
+
+                &.edit{
+                    span{
+                        border-left: 0 none;
+                    }
+
+                    @media (max-width: 767px){
+                        display: none;
+                    }
+                }
+
                 &.change{
                     span{
                         &:before{
                             background-position: 0 0;
+                        }
+
+                        @media (max-width: 767px){
+                            border-left: 0 none;
                         }
                     }
                 }

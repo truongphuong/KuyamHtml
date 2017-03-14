@@ -135,16 +135,20 @@ $(document).ready(function () {
     var $modalBanner = $('#cropBannerModal');
     var $croppieBanner = $('#croppieBanner');
 
-    $(document).on('click', '.header-banner:not(.default)', function (e) {
+    /*$(document).on('click', '.header-banner:not(.default)', function(e){
         var $this = $(this);
         var $target = $(e.target);
         var obj = $target.attr('class');
-        if (obj === 'logo' || $target.parents('.logo').length || obj === 'company-name' || obj === 'dropdown-toggle' || $target.parents('.li-account').length || obj === 'control' || $target.parents('.control').length) {
+        if(obj === 'logo' || $target.parents('.logo').length || obj === 'company-name' || obj === 'dropdown-toggle' || $target.parents('.li-account').length || obj === 'control' || $target.parents('.control').length){
             return;
-        } else {
+        } else{
             $fileBanner.click();
         }
-    }).on('click', '.header-banner .upload', function (e) {
+    }).on('click', '.header-banner .upload', function(e){
+        $fileBanner.click();
+    });*/
+
+    $(document).on('click', '.header-banner .upload, .header-banner .camera', function (e) {
         $fileBanner.click();
     });
 

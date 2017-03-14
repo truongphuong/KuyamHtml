@@ -5,7 +5,7 @@ import autoprefixer from 'gulp-autoprefixer'
 import browserSync from 'browser-sync'
 
 gulp.task('styles', () => {
-    return gulp.src('./src/assets/css/sass/**/*.scss')
+    return gulp.src('./src/assets/css/sass/**/*.scss')  
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
