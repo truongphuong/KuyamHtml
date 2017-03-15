@@ -155,4 +155,15 @@ $(document).ready(function(){
         owl.trigger('owl.prev');
     });
     // End owl
+
+    $('.address-section input[name="address"]').on('change', function(){
+        var $radioChecked = $('input[name="address"]:checked');
+        var inputVal = parseInt($radioChecked.val());
+        var $section = $('#alternativeSection');
+        if(inputVal === 1){
+            $section.removeClass('hide');
+        }else{
+            $section.addClass('hide');
+        }
+    });
 });

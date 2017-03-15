@@ -39,14 +39,14 @@
 <meta name="keywords" content="3" />
 
 
-<link rel="stylesheet" type="text/css" href="content/bootstrap.css" />
-<link type="text/css" rel="stylesheet" href="content/bootstrap-select.css" />
-<link type="text/css" rel="stylesheet" href="content/bootstrap-datetimepicker.css" />
-<link type="text/css" rel="stylesheet" href="content/jquery-ui.css" />
-<link type="text/css" rel="stylesheet" href="content/jquery.countdown.css" />
-<link type="text/css" rel="stylesheet" href="content/iscroll.css" />
-<link type="text/css" rel="stylesheet" href="content/addtocalendar.css" />
-<link type="text/css" rel="stylesheet" href="content/croppie.css" />
+<link rel="stylesheet" type="text/css" href="content/css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="content/css/bootstrap-select.css" />
+<link type="text/css" rel="stylesheet" href="content/css/bootstrap-datetimepicker.css" />
+<link type="text/css" rel="stylesheet" href="content/css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="content/css/jquery.countdown.css" />
+<link type="text/css" rel="stylesheet" href="content/css/iscroll.css" />
+<link type="text/css" rel="stylesheet" href="content/css/addtocalendar.css" />
+<link type="text/css" rel="stylesheet" href="content/css/croppie.css" />
 
 
 
@@ -55,7 +55,7 @@
 <link type="text/css" rel="stylesheet" href="content/owl.theme.css" />
 
 
-<link type="text/css" rel="stylesheet" href="content/style.css" />
+<link type="text/css" rel="stylesheet" href="content/css/style.css" />
 </head>
 <body>
 <div class="wrapper company-page company-event-page">
@@ -923,14 +923,14 @@
     <section class="section address-section">
         <span class="label-form">Where is this class?<span class="required">&lowast;</span></span>
         <div class="radio-custom">
-            <input class="radio-mark" id="radioAddress1" type="radio" name="address" value="0" />
+            <input class="radio-mark" id="radioAddress1" type="radio" name="address" value="0" checked />
             <label class="radio-label" for="radioAddress1">1564 Lorem ipsum default address</label>
         </div>
         <div class="radio-custom">
             <input class="radio-mark" id="radioAddress2" type="radio" name="address" value="1" />
             <label class="radio-label" for="radioAddress2">Alternative Address</label>
         </div>
-        <div class="row">
+        <div id="alternativeSection" class="row hide">
             <div class="col-xs-12">
                 <div class="placeholder-custom">
                     <div class="placeholder">Facility / Location name <span class="optional">optional</span></div>
