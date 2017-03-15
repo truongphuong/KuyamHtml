@@ -19,7 +19,7 @@ function monitorResize(callbackfnc) {
 function settingsModal() {
     if (typeof window.verifyScrollbarWidth == "undefined") {
         window.verifyScrollbarWidth = window.innerWidth - $(window).width() + 'px';
-        window.verifyScrollbarWidth = '<style type="text/css">.modal-open{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
+        window.verifyScrollbarWidth = '<style type="text/css">.modal-open, .modal-open .wrapper{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
         $(window.verifyScrollbarWidth).appendTo($('head'));
     }
 

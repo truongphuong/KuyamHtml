@@ -43,7 +43,8 @@
 
         &:hover{
             .control{
-                display: block;
+                visibility:visible;
+                opacity:1;
             }
         }
 
@@ -61,48 +62,55 @@
             }
 
             .control{
+                visibility:hidden;
+                opacity:0;
+            }
+
+            .upload{
                 width: 217px;
-                margin-left: -108px;
+                height: 51px;
+                top: 50%;
+                left: 50%;
+                border: 1px solid rgba(255, 255, 255, .31);
+                background: rgba(0, 0, 0, .24) none;
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+                text-align: center;
+                margin:-25px 0 0 -108px;
+                line-height: 49px;
+                font-size: $s15;
+                font-family: $primary;
+                color: $white;
+                visibility:hidden;
+                opacity:0;
 
-                li{
-                    display: none;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 14px;
+                    background: url(../images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                    background-size: 16px auto;
+                    margin-right: 5px;
+                    position: relative;
+                    bottom: -2px;
 
-                    &.upload{
-                        display: block;
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        background-image: url(../images/ui/pages/company/settings/icon_upload@3x.png);
                     }
                 }
             }
 
-            .camera{
-                display: none;
-            }
-        }
-
-        .camera{
-            position: absolute;
-            cursor: pointer;
-            z-index: 3;
-            display: none;
-            width: 45px;
-            height: 33px;
-            background: url(../images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
-            background-size: 21px auto;
-            font-size: 0;
-            right: 0;
-            bottom: 0;
-
-            @media (max-width: 767px){
-                display: block;
-            }
-
-            @media
-            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
-            only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
-            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
-            only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
-            only screen and (              min-resolution:120dpi)      and (max-width:767px),
-            only screen and (               min-resolution:2dppx)      and (max-width:767px){
-                background-image: url(../images/ui/pages/company/settings/icon_camera@3x.png);
+            &:hover{
+                .upload{
+                    visibility:visible;
+                    opacity:1;
+                }
             }
         }
 
@@ -117,13 +125,14 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-top: -25px;
             border: 1px solid rgba(255, 255, 255, .31);
             background: rgba(0, 0, 0, .24);
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
             text-align: center;
             z-index: 3;
-            display: none;
+            visibility:hidden;
+            opacity:0;
+            transition:visibility 2s, opacity 2s;
 
             @media (max-width: 767px){
                 height: 55px;
@@ -184,41 +193,11 @@
                     }
                 }
 
-                &.upload{
-                    display: none;
-                    width: 100%;
-                    line-height: 49px;
-
-                    @media (max-width: 767px){
-                        line-height: 53px;
-                    }
-
-                    &:before {
-                        content: '';
-                        display: inline-block;
-                        width: 16px;
-                        height: 14px;
-                        background: url(../images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-                        background-size: 16px auto;
-                        margin-right: 5px;
-                        position: relative;
-                        bottom: -2px;
-
-                        @media
-                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
-                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
-                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
-                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
-                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
-                            background-image: url(../images/ui/pages/company/settings/icon_upload@3x.png);
-                        }
-                    }
-                }
-
                 &.edit{
                     span{
-                        border-left: 0 none;
+                        &:before{
+                            background-position: 0 0;
+                        }
                     }
 
                     @media (max-width: 767px){
@@ -247,10 +226,49 @@
                 }
             }
         }
+
+        .upload{
+            position: absolute;
+            z-index: 3;
+            visibility:hidden;
+            opacity:0;
+            transition:visibility 2s, opacity 2s;
+
+            &:hover{
+                font-weight: 700;
+            }
+
+            @media (max-width: 767px){
+                line-height: 0;
+                font-size: 0;
+                visibility:visible;
+                opacity:1;
+                width: 45px;
+                height: 33px;
+                background: url(../images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+                background-size: 21px auto;
+                top:inherit;
+                left: inherit;
+                right: 0;
+                bottom: 0;
+                border:0 none;
+                box-shadow: none;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+            only screen and (              min-resolution:120dpi)      and (max-width:767px),
+            only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                background-image: url(../images/ui/pages/company/settings/icon_camera@3x.png);
+            }
+        }
     }
 }
 
-.on-devices{
+/*.on-devices{
     .company-settings-page {
         .header-banner {
             .control{
@@ -267,4 +285,4 @@
             }
         }
     }
-}
+}*/
