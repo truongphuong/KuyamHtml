@@ -7,6 +7,11 @@
 <meta name="keywords" content="3" />
 {% endblock %}
 
+{% block css %}
+<link type="text/css" rel="stylesheet" href="content/owl.carousel.css" />
+<link type="text/css" rel="stylesheet" href="content/owl.theme.css" />
+{% endblock %}
+
 {% block namepage %}company-page company-event-page{% endblock %}
 
 {% block main %}
@@ -51,6 +56,10 @@
 
 {% block modal %}
 {% include "content/modals/crop-photo.html" %}
+{% endblock %}
+
+{% block scriptLibs %}
+<script type="text/javascript" src="content/js/libs/owl.carousel.js"></script>
 {% endblock %}
 
 {% block script %}

@@ -22,12 +22,32 @@
                 margin:0;
                 padding: 0;
                 list-style: none;
-                width: 232px;
-                height: 306px;
+                width: 271px; //232px;
+                height: 348px; //306px;
                 border: 1px dashed rgba(50, 50, 50, .2);
                 background: #f7f7f7 center center no-repeat;
                 background-size: cover;
                 overflow: hidden;
+
+                &:hover{
+                    li{
+                        background: $rgba-black;
+
+                        .or {
+                            color: #ccc;
+
+                            .td{
+                                .line{
+                                    border-bottom: 1px solid #ccc;
+                                }
+
+                                .text{
+                                    text-shadow: 0 0 1px #ccc;
+                                }
+                            }
+                        }
+                    }
+                }
 
                 li{
                     position: relative;
@@ -57,7 +77,7 @@
                             .line{
                                 display: inline-block;
                                 border-bottom: 1px solid rgba(50, 50, 50, .2);
-                                width: 100px;
+                                width: 118px; //100px;
                             }
 
                             .text{
@@ -93,13 +113,27 @@
                 }
 
                 &.default{
-                    &.two{
-                        &:hover{
-                            li{
-                                background: transparent;
+                    &:hover{
+                        li{
+                            background: transparent;
+
+                            .or {
+                                color: rgba(0, 0, 0, .25);
+
+                                .td{
+                                    .line{
+                                        border-bottom: 1px solid rgba(50, 50, 50, .2);
+                                    }
+
+                                    .text{
+                                        text-shadow: 0 0 1px rgba(0, 0, 0, .25);
+                                    }
+                                }
                             }
                         }
+                    }
 
+                    &.two{
                         li{
                             &.upload,
                             &.purchase {
@@ -109,11 +143,6 @@
                     }
 
                     &.three{
-                        &:hover{
-                            li{
-                                background: transparent;
-                            }
-                        }
                         li{
                             display: block;
                         }
@@ -123,8 +152,6 @@
                 &.two{
                     &:hover{
                         li{
-                            background: $rgba-black;
-
                             &.upload,
                             &.purchase {
                                 display: block;
@@ -133,7 +160,7 @@
                     }
 
                     li{
-                        height: 152px;
+                        height: 174px; //152px;
 
                         &.upload {
                             .caption{
@@ -156,13 +183,12 @@
                 &.three{
                     &:hover{
                         li{
-                            background: $rgba-black;
                             display: block;
                         }
                     }
 
                     li{
-                        height: 102px;
+                        height: 115px; //102px;
 
                         &.upload {
                             .caption{
