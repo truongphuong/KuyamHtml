@@ -132,7 +132,7 @@ $(document).ready(function(){
 	});
 	// Begin upload logo
 
-    $('.input-url a').tooltipster({
+    $('.input-url .copy').tooltipster({
         contentAsHTML: true,
         content: '<span class="copied">Link copied</span>',
         trigger: 'click',
