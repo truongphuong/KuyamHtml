@@ -21,8 +21,14 @@
             border-left: 0 none;
             float: none;
             width: 100%;
+            padding-top: 23px;
             padding-right: 0;
             padding-left: 0;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 359px){
+            padding-top: 19px;
         }
 
         header{
@@ -32,6 +38,18 @@
                 font-family: $primary;
                 color: #f2472d;
                 margin:0 0 21px;
+
+                @media (max-width: 767px){
+                    font-size: $h5;
+                    line-height: 27px;
+                    margin-bottom: 18px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $s17;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+                }
             }
         }
 
@@ -42,21 +60,48 @@
             color: rgba(51, 51, 51, .3);
             text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
             margin:0 0 19px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 359px){
+                margin-bottom: 15px;
+            }
         }
 
         .row{
             margin-left: -12px;
             margin-right: -12px;
+
+            @media (max-width: 767px){
+                margin-left: -8px;
+                margin-right: -8px;
+            }
         }
 
         div[class*="col-"]{
             padding-left: 12px;
             padding-right: 12px;
+
+            @media (max-width: 767px){
+                padding-left: 8px;
+                padding-right: 8px;
+            }
         }
 
         .section{
             margin-top: 16px;
             border-top: 1px solid rgba(50, 50, 50, .1);
+
+            @media (max-width: 359px){
+                margin-top: 18px;
+            }
+
+            @media (max-width: 359px){
+                margin-top: 15px;
+            }
 
             &:first-child{
                 border-top: 0 none;
@@ -85,10 +130,19 @@
                 padding-right: 35px;
                 border-color: $border;
 
-               /*@media (max-width:767px){
-                    padding-left: 10px;
-                    padding-right: 35px;
-                }*/
+                @media (max-width: 767px){
+                    min-height: 36px;
+                    height: 36px;
+                    font-size: $s15;
+                    padding-left: 8px;
+                }
+
+                @media (max-width: 359px){
+                    min-height: 31px;
+                    height: 31px;
+                    font-size: $s13;
+                    padding-left: 5px;
+                }
             }
 
             &.btn-group {
@@ -101,11 +155,15 @@
                         margin-top: -7px;
                         right: 10px;
 
-                        /*@media (max-width:767px){
-                            width:15px;
-                            background-size: 15px auto;
-                            right: 10px;
-                        }*/
+                        @media (max-width:767px){
+                            width:18px;
+                            background-size: 18px auto;
+                        }
+
+                        @media (max-width:359px){
+                            width:16px;
+                            background-size: 16px auto;
+                        }
                     }
                 }
             }
@@ -116,9 +174,25 @@
                 > li {
                     font-size: $h5;
 
+                    @media (max-width: 767px){
+                        font-size: $s15;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $s13;
+                    }
+
                     > a {
                         padding-left: 15px;
                         padding-right: 15px;
+
+                        @media (max-width: 767px){
+                            padding: 5px 8px;
+                        }
+
+                        @media (max-width: 359px){
+                            padding: 6px 5px;
+                        }
                     }
                 }
             }
@@ -133,6 +207,13 @@
             margin-top: 18px;
             margin-bottom: 6px;
 
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-top: 10px;
+                margin-bottom: 6px;
+                text-shadow: 0 1px 0 $base;
+            }
+
             small {
                 font-style: italic;
                 color:#9b9b9b;
@@ -141,6 +222,14 @@
 
         .form-control{
             height: 40px;
+
+            @media (max-width: 767px){
+                height: 36px;
+            }
+
+            @media (max-width: 359px){
+                height: 31px;
+            }
         }
 
         .input-countdown.inner .form-control{
@@ -150,13 +239,28 @@
         label.placeholder-custom .form-control,
         div.placeholder-custom .form-control{
             height: 38px;
+
+            @media (max-width: 767px){
+                height: 36px;
+            }
+
+            @media (max-width: 359px){
+                height: 31px;
+            }
         }
         .input-custom .table-css input[type="text"]{
             height: 37px;
+
+            @media (max-width: 767px){
+                height: 34px;
+            }
+
+            @media (max-width: 359px){
+                height: 29px;
+            }
         }
 
         footer{
-
             @media (max-width: 767px){
                 margin:0 -10px;
 
@@ -174,6 +278,7 @@
                 font-size: $h5;
                 font-family: $primary;
                 border-radius: 0;
+                padding:0;
 
                 &.btn-positive{
                     &:after{
@@ -191,6 +296,12 @@
                     float: left;
                     width: calc(50% - 20px);
                     margin:0 10px;
+                    height: 38px;
+                }
+
+                @media (max-width: 359px){
+                    height: 32px;
+                    font-size: $s17;
                 }
             }
         }

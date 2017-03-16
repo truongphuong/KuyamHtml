@@ -7,17 +7,53 @@
             position: relative;
             top: -4px;
             margin:0 0 16px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                line-height: 19px;
+            }
         }
 
         .section{
             &.options-section{
+                border-top:0 none;
+
                 p{
                     margin-top: 24px;
                     margin-bottom: 24px;
+
+                    @media (max-width: 767px){
+                        font-size: $s15;
+                        margin-top: 18px;
+                        margin-bottom: 18px;
+                    }
+
+                    @media (max-width: 359px){
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .radio-mark {
+                    ~ .radio-label{
+                        @media (max-width: 767px){
+                            margin:0;
+                            font-size: $s15;
+                        }
+                    }
                 }
 
                 .radio-custom{
                     margin-top: 22px;
+
+                    @media (max-width: 767px){
+                        margin-top: 0;
+                        margin-bottom: 18px;
+                    }
+
+                    @media (max-width: 359px){
+                        margin-bottom: 15px;
+                    }
                 }
             }
 
@@ -25,18 +61,45 @@
                 margin-top: 31px;
                 padding-top: 7px;
 
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                }
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+
                 p{
                     width: calc(110%);
                     margin-bottom: 0;
 
                     @media (max-width: 767px){
                         width: 100%;
+                        font-size: $s15;
                     }
                 }
 
                 .incentive{
                     padding-top:11px;
                     padding-bottom: 6px;
+
+                    @media (max-width: 767px){
+                        padding-top:18px;
+                        padding-bottom: 0
+                    }
+
+                    @media (max-width: 357px){
+                        padding-top: 15px;
+                    }
+
+                    .cb-mark {
+                        ~ .cb-label{
+                            @media (max-width: 767px){
+                                margin:0;
+                                font-size: $s15;
+                            }
+                        }
+                    }
 
                     .cb-custom{
                         margin-bottom: 5px;
@@ -78,8 +141,24 @@
                                     width: 32px;
                                     float: left;
 
-                                    .radio-mark ~ .radio-label:before{
-                                        top: 9px;
+                                    .radio-mark {
+                                        ~ .radio-label{
+                                            @media (max-width: 767px){
+                                                margin:0;
+                                            }
+
+                                            &:before{
+                                                top: 9px;
+
+                                                @media (max-width: 767px){
+                                                    top: 7px;
+                                                }
+
+                                                @media (max-width: 359px){
+                                                    top: 5px;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
 
@@ -120,6 +199,16 @@
                 margin-top: 22px;
                 margin-bottom: 18px;
                 padding-top: 18px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    padding-top: 9px;
+                }
+
+                @media (max-width: 357px){
+                    margin-top: 15px;
+                    padding-top: 6px;
+                }
 
                 .label-form{
                     margin-top: 9px;

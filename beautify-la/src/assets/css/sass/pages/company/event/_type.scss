@@ -7,32 +7,67 @@
             color: rgba(51, 51, 51, .3);
             text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
             margin:0 0 19px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-bottom: 16px;
+            }
         }
 
         .section-photo{
             margin-top: 31px;
             margin-bottom: 21px;
 
+            @media (max-width:767px){
+                margin-top: 18px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width:359px){
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
             .label-form{
                 margin-top: 27px;
                 margin-bottom: 12px;
+
+                @media (max-width:767px){
+                    margin-top: 18px;
+                    margin-bottom: 6px;
+                }
+
+                @media (max-width:359px){
+                    margin-top: 15px;
+                }
             }
 
-            ul{
-                margin:0;
-                padding: 0;
-                list-style: none;
-                width: 271px; //232px;
-                height: 348px; //306px;
-                border: 1px dashed rgba(50, 50, 50, .2);
+            .photo{
+                width: 271px;
                 background: #f7f7f7 center center no-repeat;
                 background-size: cover;
-                overflow: hidden;
+                border: 1px dashed rgba(50, 50, 50, .2);
+
+                ul{
+                    margin:0;
+                    padding: 0;
+                    list-style: none;
+                    width: 100%; //232px;
+                    height: 346px; //306px;
+                    overflow: hidden;
+                    visibility:hidden;
+                    opacity:0;
+                    transition:visibility 2s, opacity 2s;
+                }
 
                 &:hover{
-                    li{
+                    ul{
                         background: $rgba-black;
+                        visibility:visible;
+                        opacity:1;
+                    }
 
+                    li{
                         .or {
                             color: #ccc;
 
@@ -51,7 +86,6 @@
 
                 li{
                     position: relative;
-                    display: none;
                     cursor: pointer;
 
                     .or {
@@ -114,9 +148,11 @@
 
                 &.default{
                     &:hover{
-                        li{
+                        ul{
                             background: transparent;
+                        }
 
+                        li{
                             .or {
                                 color: rgba(0, 0, 0, .25);
 
@@ -133,38 +169,23 @@
                         }
                     }
 
-                    &.two{
-                        li{
-                            &.upload,
-                            &.purchase {
-                                display: block;
-                            }
-                        }
-                    }
-
-                    &.three{
-                        li{
-                            display: block;
-                        }
+                    ul{
+                        visibility:visible;
+                        opacity:1;
                     }
                 }
 
                 &.two{
-                    &:hover{
-                        li{
-                            &.upload,
-                            &.purchase {
-                                display: block;
-                            }
-                        }
-                    }
-
                     li{
                         height: 174px; //152px;
 
                         &.upload {
                             .caption{
                                 bottom: 28px;
+                            }
+
+                            .or{
+                                display: none;
                             }
                         }
 
@@ -174,6 +195,7 @@
                             }
                         }
 
+                        &.edit,
                         &.purchased{
                             display: none;
                         }
@@ -181,14 +203,46 @@
                 }
 
                 &.three{
-                    &:hover{
-                        li{
-                            display: block;
-                        }
-                    }
-
                     li{
                         height: 115px; //102px;
+
+                        &.edit {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.upload {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.purchase {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.purchased{
+                            display: none;
+                        }
+                    }
+                }
+
+                &.four{
+                    li{
+                        height: 87px; //102px;
+
+                        &.edit {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
 
                         &.upload {
                             .caption{
@@ -224,6 +278,10 @@
             background: url(../images/ui/pages/company/event/icon_help.png) center center no-repeat;
             background-size: 17px auto;
             cursor: pointer;
+
+            @media (max-width: 767px){
+                right: -20px;
+            }
         }
 
         .type-class{
@@ -238,7 +296,30 @@
                     margin-top: 28px;
                     padding-top: 29px;
 
-                    .icon-help {
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                        padding-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                        padding-top: 15px;
+                    }
+
+
+                    .row{
+                        @media (max-width: 767px){
+                            width: calc(100% - 16px);
+                            margin-left: -5px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    div[class*="col-"]{
+                        @media (max-width: 767px){
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
                     }
                 }
             }
@@ -249,15 +330,73 @@
                 &.section-donation {
                     p{
                         margin:0 0 21px;
+
+                        @media (max-width:767px){
+                            margin-bottom: 18px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-bottom: 15px;
+                        }
                     }
                 }
 
                 &.section-num {
                     margin-top: 31px;
 
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                    }
+
+                    .row{
+                        @media (max-width: 767px){
+                            width: calc(100% - 16px);
+                            margin-left: -5px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    div[class*="col-"]{
+                        @media (max-width: 767px){
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+
                     .label-form{
                         margin-top: 21px;
                         margin-bottom: 7px;
+
+                        @media (max-width:767px){
+                            margin-top: 18px;
+                            margin-bottom: 6px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .btn-negative {
@@ -266,6 +405,17 @@
                         height: 40px;
                         font-family: $primary;
                         font-size: $s15;
+
+                        @media (max-width: 767px){
+                            height: 36px;
+                        }
+
+                        @media (max-width: 359px){
+                            height: 33px;
+                            font-size: $p;
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
                     }
 
                     .icon-help {
@@ -279,12 +429,31 @@
                 &.section-class {
                     p{
                         margin:0 0 19px;
+
+                        @media (max-width:767px){
+                            margin-bottom: 18px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-bottom: 15px;
+                        }
                     }
                 }
 
                 &.section-num {
                     margin-top: 28px;
                     padding-top: 29px;
+
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                        padding-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                        padding-top: 15px;
+                    }
+
 
                     .placeholder-custom{
                         @media (min-width: 768px){
@@ -301,6 +470,15 @@
                     p{
                         margin-top: 19px;
                         margin-bottom: 10px;
+
+                        @media (max-width:767px){
+                            margin-top: 18px;
+                            margin-bottom: 6px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-top: 15px;
+                        }
                     }
 
                     div[class*="col-"] {

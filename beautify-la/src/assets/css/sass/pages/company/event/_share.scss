@@ -7,6 +7,10 @@
             position: relative;
             top: -4px;
             margin:0 0 16px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+            }
         }
 
         .share-section{
@@ -18,6 +22,15 @@
 
                 @media (max-width: 767px){
                     width: 100%;
+                }
+
+                .cb-mark {
+                    ~ .cb-label{
+                        @media (max-width: 767px){
+                            margin:0;
+                            font-size: $s15;
+                        }
+                    }
                 }
             }
         }

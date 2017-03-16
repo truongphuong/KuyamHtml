@@ -114,6 +114,7 @@ $(document).ready(function () {
 	});
 	// End owl
 
+	// Begin show/hide .address-section
 	$('.address-section input[name="address"]').on('change', function () {
 		var $radioChecked = $('input[name="address"]:checked');
 		var inputVal = parseInt($radioChecked.val());
@@ -124,4 +125,36 @@ $(document).ready(function () {
 			$section.addClass('hide');
 		}
 	});
+	// End show/hide .address-section
+
+	// Begin all tooltip
+	var $sectionCopyTooltip = $('.input-url .copy');
+	var contentCopyTooltip = '<span class="copied">Link copied</span>';
+	var classCopyTooltip = 'tooltipster-default tooltipster-copied';
+
+	tooltipResize($sectionCopyTooltip, contentCopyTooltip, classCopyTooltip);
+
+	var $sectionHelpClassTooltip = $('.type-class .section-num .icon-help');
+	var contentHelpClassTooltip = '<span class="help">Global price for all classes</span>';
+	var classHelpClassTooltip = 'tooltipster-default tooltipster-help';
+
+	tooltipResize($sectionHelpClassTooltip, contentHelpClassTooltip, classHelpClassTooltip);
+
+	var $sectionHelpDonationTooltip = $('.type-donation .section-num .icon-help');
+	var contentHelpDonationTooltip = '<span class="help">Global price for all dominations</span>';
+	var classHelpDonationTooltip = 'tooltipster-default tooltipster-help';
+
+	tooltipResize($sectionHelpDonationTooltip, contentHelpDonationTooltip, classHelpDonationTooltip);
+
+	monitorResize(function () {
+		$sectionCopyTooltip.tooltipster('destroy');
+		tooltipResize($sectionCopyTooltip, contentCopyTooltip, classCopyTooltip);
+
+		$sectionHelpClassTooltip.tooltipster('destroy');
+		tooltipResize($sectionHelpClassTooltip, contentHelpClassTooltip, classHelpClassTooltip);
+
+		$sectionHelpDonationTooltip.tooltipster('destroy');
+		tooltipResize($sectionHelpDonationTooltip, contentHelpDonationTooltip, classHelpDonationTooltip);
+	});
+	// End all tooltip
 });

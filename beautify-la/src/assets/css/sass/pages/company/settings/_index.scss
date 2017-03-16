@@ -141,13 +141,21 @@
                         font-size: $s15;
                     }
 
-                    @media (max-width: 767px){
+                    @media (max-width: 359px){
                         font-size: $s13;
                     }
 
                     > a {
                         padding-left: 15px;
                         padding-right: 15px;
+
+                        @media (max-width: 767px){
+                            padding: 5px 8px;
+                        }
+
+                        @media (max-width: 359px){
+                            padding: 6px 5px;
+                        }
                     }
                 }
             }
@@ -175,7 +183,6 @@
         }
 
         footer{
-
             @media (max-width: 767px){
                 margin:0 -10px;
 

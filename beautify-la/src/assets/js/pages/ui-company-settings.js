@@ -132,13 +132,16 @@ $(document).ready(function(){
 	});
 	// Begin upload logo
 
-    $('.input-url .copy').tooltipster({
-        contentAsHTML: true,
-        content: '<span class="copied">Link copied</span>',
-        trigger: 'click',
-        position: 'bottom',
-        theme: 'tooltipster-default tooltipster-copied',
-        offsetX: -7,
-        offsetY: -14
+    // Begin coppied tooltip
+    var $sectionCopyTooltip = $('.input-url .copy');
+    var contentCopyTooltip = '<span class="copied">Link copied</span>';
+    var classCopyTooltip = 'tooltipster-default tooltipster-copied';
+
+    tooltipResize($sectionCopyTooltip, contentCopyTooltip, classCopyTooltip);
+
+    monitorResize(function(){
+        $sectionCopyTooltip.tooltipster('destroy');
+        tooltipResize($sectionCopyTooltip, contentCopyTooltip, classCopyTooltip);
     });
+    // End coppied tooltip
 });
