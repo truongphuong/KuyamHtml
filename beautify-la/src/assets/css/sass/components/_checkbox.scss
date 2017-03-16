@@ -1,55 +1,62 @@
 .cb-custom{
     position: relative;
 }
+
 .cb-mark {
     position: absolute;
     opacity: 0;
     top: 0;
     left: 0;
     display: none;
-}
-.cb-mark ~ .cb-label {
-    position: relative;
-    padding-left: 31px;
-    cursor: pointer;
-    display: inline-block !important;
-    font-size: $h5;
-    font-family: $primary;
-    color: $base;
-    font-family: $primary;
-}
-.cb-mark:checked ~ .cb-label:before {
-    background-position: center bottom;
-}
-.cb-mark ~ .cb-label:before {
-    content: '';
-    display: block;
-    vertical-align: middle;
-    position: absolute;
-    width: 21px;
-    height:21px;
-    background: url(../images/ui/pages/company/settings/icon_checkbox.png) center top no-repeat;
-    background-size: 21px auto;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-}
-.cb-mark:disabled ~ .cb-label{
-    opacity: .5;
-    cursor: default;
-}
-.cb-mark:disabled ~ .radio-label::before{
-    cursor: default;
-}
 
-@media
-only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
-only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
-only screen and (              min-resolution:120dpi)      and (min-width:320px),
-only screen and (               min-resolution:2dppx)      and (min-width:320px){
-    .cb-mark ~ .cb-label:before {
-        background-image: url(../images/ui/pages/company/settings/icon_checkbox@3x.png);
+    ~ .cb-label {
+        position: relative;
+        padding-left: 31px;
+        cursor: pointer;
+        display: inline-block !important;
+        font-size: $h5;
+        font-family: $primary;
+        color: $base;
+        font-family: $primary;
+
+        &:before {
+            content: '';
+            display: block;
+            vertical-align: middle;
+            position: absolute;
+            width: 21px;
+            height:21px;
+            background: url(../images/ui/pages/company/settings/icon_checkbox.png) center top no-repeat;
+            background-size: 21px auto;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                background-image: url(../images/ui/pages/company/settings/icon_checkbox@3x.png);
+            }
+        }
+    }
+
+    &:checked {
+        ~ .cb-label:before {
+            background-position: center bottom;
+        }
+    }
+
+    &:disabled ~ .cb-label{
+        opacity: .5;
+        cursor: default;
+
+        &:before{
+            cursor: default;
+        }
     }
 }
+

@@ -294,3 +294,29 @@ function inputCustomResize() {
         }
     });
 }
+
+function datetimepickerDate($txtDate, $section) {
+    $txtDate.datetimepicker({
+        format: 'dddd, MMM Do',
+        sideBySide: true,
+        minDate: now,
+        useCurrent: false,
+        focusOnShow: false,
+        ignoreReadonly: true,
+        locale: moment.locale('en-gb')
+    }).on('dp.change', function () {}).on('dp.show', function () {
+        var $this = $(this);
+        var $parent = $this.closest('.date-custom');
+        var $datetimepicker = $parent.find('.bootstrap-datetimepicker-widget');
+        if ($datetimepicker.hasClass('top')) {
+            console.log('top');
+            $section.addClass('open top');
+        } else if ($datetimepicker.hasClass('bottom')) {
+            console.log('bottom');
+            $section.addClass('open bottom');
+        }
+        //$('.bootstrap-datetimepicker-widget').clone().appendTo('#sectionDateEnd');
+    }).on('dp.hide', function () {
+        $section.removeClass('open top bottom');
+    });
+}

@@ -3,57 +3,16 @@
 $(document).ready(function(){
     $('#typeSelect, #classSelect, #mailchimpSelect, #constantContactSelect, #stateSelect, #fromSectlect, #toSelect, #tagsSelect').selectpicker();
 
-	var nowTemp = new Date();
-    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-    $('#txtDateStart').datetimepicker({
-        format: 'dddd, MMM Do',
-        sideBySide: true,
-        minDate: now,
-        useCurrent: false,
-        focusOnShow: false,
-        ignoreReadonly: true
-    }).on('dp.change', function() {
-        /*var inputVal = $(this).val();
 
-        $btnDate.val(inputVal);
+    var $txtDateStart = $('#txtDateStart');
+    var $sectionDateStart = $('#sectionDateStart');
+    var $btnDateStart =  $('#btnDateStart');
+    datetimepickerDate($txtDateStart, $sectionDateStart);
 
-        if($btnDate.val() !== ''){
-            $btnDate.css({'background': '#fff'});
-        }else{
-            $btnDate.css({'background': 'transparent'});
-        }*/
-    }).on('dp.show', function() {
-        //$section.addClass('open');
-		//$('.select-time.open select').click();
-        $('.bootstrap-datetimepicker-widget').clone().appendTo('.time-section');
-    }).on('dp.hide', function() {
-        //$section.removeClass('open');
-    });
-
-	$('#txtDateEnd').datetimepicker({
-        format: 'dddd, MMM Do',
-        sideBySide: true,
-        minDate: now,
-        useCurrent: false,
-        focusOnShow: false,
-        ignoreReadonly: true
-    }).on('dp.change', function() {
-        /*var inputVal = $(this).val();
-
-        $btnDate.val(inputVal);
-
-        if($btnDate.val() !== ''){
-            $btnDate.css({'background': '#fff'});
-        }else{
-            $btnDate.css({'background': 'transparent'});
-        }*/
-    }).on('dp.show', function() {
-        //$section.addClass('open');
-		//$('.select-time.open select').click();
-        $('.bootstrap-datetimepicker-widget').clone().appendTo('.time-section');
-    }).on('dp.hide', function() {
-        //$section.removeClass('open');
-    });
+    var $txtDateEnd = $('#txtDateEnd');
+    var $sectionDateEnd = $('#sectionDateEnd');
+    var $btnDateEnd =  $('#btnDateEnd');
+    datetimepickerDate($txtDateEnd, $sectionDateEnd);
 
 	// Begin active item sidebar/select and show form follow step by step
 	$('.company-event-page .content footer .btn').on('click', function(){

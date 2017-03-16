@@ -130,5 +130,15 @@ $(document).ready(function () {
 	$('.logo-section .delete').on('click', function () {
 		$sectionLogo.addClass('default');
 	});
-	// Begin upload logo                 
+	// Begin upload logo
+
+	$('.input-url a').tooltipster({
+		contentAsHTML: true,
+		content: '<span class="copied">Link copied</span>',
+		trigger: 'click',
+		position: 'bottom',
+		theme: 'tooltipster-default tooltipster-copied',
+		offsetX: -7,
+		offsetY: -14
+	});
 });

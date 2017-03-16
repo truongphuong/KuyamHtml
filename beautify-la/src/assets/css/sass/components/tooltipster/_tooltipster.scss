@@ -1,12 +1,12 @@
 .tooltipster-default {
-    border-width: 2px;
-    border-color: #737373;
+    border-width: 1px;
+    border-color: rgba(67, 67, 67, .22);
     border-radius: 0 ;
     -webkit-border-radius: 0 ;
     -moz-border-radius: 0 ;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none ;
-    box-shadow: none ;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(32, 41, 47, 0.15);
+    -moz-box-shadow: 0 4px 10px 0 rgba(32, 41, 47, 0.15);
+    box-shadow: 0 4px 10px 0 rgba(32, 41, 47, 0.15);
 }
 
 .tooltipster-default .modal-header {
@@ -19,7 +19,7 @@
     border-right-width: 16px;
     border-top-width: 16px !important;
     left: -16px;
-    margin-top: -16px;
+    margin-top: -17px;
 }
 
 .tooltipster-arrow-right .tooltipster-arrow-border {
@@ -35,7 +35,7 @@
     border-left-width: 16px;
     border-top-width: 16px !important;
     right: -16px;
-    margin-top: -16px;
+    margin-top: -17px;
 }
 
 .tooltipster-arrow-left .tooltipster-arrow-border {
@@ -46,4 +46,40 @@
 }
 .tooltip-template{
     display: none;
+}
+
+.tooltipster-copied {
+    font-size: 16px;
+
+    .tooltipster-content{
+        padding:12px 17px;
+    }
+
+    .copied{
+        font-size: $h5;
+        font-family: $primary;
+        color: $base;
+
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background: url(../images/ui/pages/company/event/icon_copied.png) center center no-repeat;
+            background-size: 21px auto;
+            margin-right: 9px;
+            position: relative;
+            bottom: -3px;
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                background-image: url(../images/ui/pages/company/event/icon_copied@3x.png);
+            }
+        }
+    }
 }
