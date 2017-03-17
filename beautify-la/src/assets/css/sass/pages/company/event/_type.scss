@@ -202,41 +202,9 @@
                     }
                 }
 
-                &.three{
-                    li{
-                        height: 115px; //102px;
-
-                        &.edit {
-                            .caption{
-                                top: 50%;
-                                margin-top: -16px;
-                            }
-                        }
-
-                        &.upload {
-                            .caption{
-                                top: 50%;
-                                margin-top: -16px;
-                            }
-                        }
-
-                        &.purchase {
-                            .caption{
-                                top: 50%;
-                                margin-top: -16px;
-                            }
-                        }
-
-                        &.purchased{
-                            display: none;
-                        }
-                    }
-                }
-
+                &.three,
                 &.four{
                     li{
-                        height: 87px; //102px;
-
                         &.edit {
                             .caption{
                                 top: 50%;
@@ -264,6 +232,40 @@
                                 margin-top: -8px;
                             }
                         }
+                    }
+                }
+
+                &.three{
+                    li{
+                        height: 115px;
+                    }
+
+                    &.photo-uploaded{
+                        li{
+                            &.purchased{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.photo-purchased{
+                        li{
+                            &.edit{
+                                display: none;
+                            }
+
+                            &.upload {
+                                .or{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.four{
+                    li{
+                        height: 87px; //102px;
                     }
                 }
             }
