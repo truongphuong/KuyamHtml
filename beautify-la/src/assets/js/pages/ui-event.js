@@ -1,12 +1,6 @@
 'use strict';
 
 $(document).ready(function(){
-    $('.session-item').hover(function(){
-        $(this).addClass("active");
-    }, function(){
-        $(this).removeClass("active");
-    });
-	
 	var map;
     function initialize(){
         var myLatlng = new google.maps.LatLng(34.0906351, -118.374025);
@@ -23,9 +17,9 @@ $(document).ready(function(){
               map: map
           });
     }
-    google.maps.event.addDomListener(window, 'load', initialize); 
-    
-    
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+
     function loadmap(lat, lon, googleIcon){
         var myLatlng = new google.maps.LatLng(lat, lon);
         var myOptions ={
@@ -40,8 +34,8 @@ $(document).ready(function(){
         position: myLatLng,
         map: map,
         icon: googleIcon
-    
-    
+
+
         });
     }
 });

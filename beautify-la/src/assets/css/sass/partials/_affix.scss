@@ -1,53 +1,60 @@
-#main-affix{
+#main-affix {
     width: 630px;
+
+    @media (max-width: 979px) {
+        width: 470px;
+    }
 }
-#nav-affix{
+
+#nav-affix {
     width: 290px;
     padding-left: 60px;
 
-    @media (max-width: 1269px){
+    @media (max-width: 1269px) {
         width: calc(290px - 60px);
         padding-left: 0;
     }
-}
-#main-affix.affix,
-#nav-affix.affix{
-    position: fixed;
-    top: 15px;
-}
-#main-affix.affix-bottom,
-#nav-affix.affix-bottom{
-    position: absolute;
-}
-.home-page,
-.company-page{
-    @media (min-width: 1270px){
-        #main-affix{
-            width: 930px;
-        }
-        #nav-affix{
-            width: 240px;
-            padding-left: 0;
-        }
-    }
-}
-@media (max-width: 979px){
-    #main-affix{
-        width: 470px;
-    }
-    #nav-affix{
+
+    @media (max-width: 979px) {
         width: 220px;
     }
 }
 
-@media (max-width: 767px){
-    .home-page,
-    .company-page{
+#main-affix.affix,
+#nav-affix.affix {
+    position: fixed;
+    top: 15px;
+}
+
+#main-affix.affix-bottom,
+#nav-affix.affix-bottom {
+    position: absolute;
+}
+
+.home-page,
+.company-page {
+    @media (max-width: 767px) {
         font-size: 16px;
     }
-    #main-affix,
-    #nav-affix{
-        width: 100%;
+    #main-affix {
+        @media (min-width: 1270px) {
+            width: 930px;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    #nav-affix {
+        @media (min-width: 1270px) {
+            width: 240px;
+            padding-left: 0;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
 }
 

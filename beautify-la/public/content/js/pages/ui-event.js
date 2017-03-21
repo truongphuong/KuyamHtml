@@ -1,12 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-    $('.session-item').hover(function () {
-        $(this).addClass("active");
-    }, function () {
-        $(this).removeClass("active");
-    });
-
     var map;
     function initialize() {
         var myLatlng = new google.maps.LatLng(34.0906351, -118.374025);

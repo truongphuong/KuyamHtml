@@ -2,12 +2,12 @@
     .carousel {
         height: 338px;
 
-        @media (max-width:767px){
-            height:220px;
+        @media (max-width:767px) {
+            height: 220px;
         }
 
-        @media (max-width:359px){
-            height:186px;
+        @media (max-width:359px) {
+            height: 186px;
         }
     }
 
@@ -15,17 +15,17 @@
         > .item {
             height: 338px;
 
-            @media (max-width:767px){
-                height:220px;
+            @media (max-width:767px) {
+                height: 220px;
             }
 
-            @media (max-width:359px){
-                height:186px;
+            @media (max-width:359px) {
+                height: 186px;
             }
         }
 
-        &:after{
-            @media (max-width: 767px){
+        &:after {
+            @media (max-width: 767px) {
                 content: '';
                 position: absolute;
                 left: 0;
@@ -38,35 +38,45 @@
         }
     }
 
-    .header-banner{
+    .header-banner {
         position: relative;
+        height: 338px;
+        background: #666;
 
-        &:hover{
-            .control{
-                visibility:visible;
-                opacity:1;
+        @media (max-width:767px) {
+            height: 220px;
+        }
+
+        @media (max-width:359px) {
+            height: 186px;
+        }
+
+        &:hover {
+            .control {
+                visibility: visible;
+                opacity: 1;
             }
         }
 
-        &.default{
+        &.default {
             cursor: default;
 
-            .carousel-inner{
+            .carousel-inner {
                 > .item {
                     background-image: none !important;
                 }
 
-                &:after{
+                &:after {
                     display: none;
                 }
             }
 
-            .control{
-                visibility:hidden;
-                opacity:0;
+            .control {
+                visibility: hidden;
+                opacity: 0;
             }
 
-            .upload{
+            .upload {
                 width: 217px;
                 height: 51px;
                 top: 50%;
@@ -80,8 +90,8 @@
                 font-size: $s15;
                 font-family: $primary;
                 color: $white;
-                visibility:hidden;
-                opacity:0;
+                visibility: hidden;
+                opacity: 0;
 
                 &:before {
                     content: '';
@@ -106,17 +116,17 @@
                 }
             }
 
-            &:hover{
-                .upload{
-                    visibility:visible;
-                    opacity:1;
+            &:hover {
+                .upload {
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
         }
 
         .control {
-            margin:-25px 0 0 -121px;
-            padding:0;
+            margin: -25px 0 0 -121px;
+            padding: 0;
             list-style: none;
             height: 51px;
             font-size: $s15;
@@ -130,49 +140,49 @@
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
             text-align: center;
             z-index: 3;
-            visibility:hidden;
-            opacity:0;
-            transition:visibility 2s, opacity 2s;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 2s, opacity 2s;
 
-            @media (max-width: 767px){
+            @media (max-width: 767px) {
                 height: 55px;
                 display: block;
                 margin-left: -81px;
             }
 
-            li{
+            li {
                 float: left;
                 width: 80px;
                 height: 49px;
                 cursor: pointer;
 
-                @media (max-width: 767px){
+                @media (max-width: 767px) {
                     height: 53px;
                 }
 
-                &:hover{
+                &:hover {
                     font-weight: 700;
                 }
 
-                + li{
+                + li {
                     span {
                         border-left: 1px solid rgba(255, 255, 255, .5);
                     }
                 }
 
-                span{
+                span {
                     display: block;
-                    margin:15px 0;
+                    margin: 15px 0;
                     line-height: 19px;
 
-                    @media (max-width: 767px){
+                    @media (max-width: 767px) {
                         font-size: 0;
                         margin-top:15px;
                         line-height: 0;
                     }
 
-                    &:before{
-                        @media (max-width: 767px){
+                    &:before {
+                        @media (max-width: 767px) {
                             content: '';
                             display: inline-block;
                             width: 23px;
@@ -187,39 +197,39 @@
                         only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
                         only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
                         only screen and (              min-resolution:120dpi)      and (max-width:767px),
-                        only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                        only screen and (               min-resolution:2dppx)      and (max-width:767px) {
                             background-image: url(../images/ui/pages/company/settings/icon_photo@3x.png);
                         }
                     }
                 }
 
-                &.edit{
-                    span{
-                        &:before{
+                &.edit {
+                    span {
+                        &:before {
                             background-position: 0 0;
                         }
                     }
 
-                    @media (max-width: 767px){
+                    @media (max-width: 767px) {
                         display: none;
                     }
                 }
 
-                &.change{
-                    span{
-                        &:before{
+                &.change {
+                    span {
+                        &:before {
                             background-position: 0 0;
                         }
 
-                        @media (max-width: 767px){
+                        @media (max-width: 767px) {
                             border-left: 0 none;
                         }
                     }
                 }
 
-                &.delete{
-                    span{
-                        &:before{
+                &.delete {
+                    span {
+                        &:before {
                             background-position: 0 -23px;
                         }
                     }
@@ -227,31 +237,31 @@
             }
         }
 
-        .upload{
+        .upload {
             position: absolute;
             z-index: 3;
-            visibility:hidden;
-            opacity:0;
-            transition:visibility 2s, opacity 2s;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 2s, opacity 2s;
 
-            &:hover{
+            &:hover {
                 font-weight: 700;
             }
 
-            @media (max-width: 767px){
+            @media (max-width: 767px) {
                 line-height: 0;
                 font-size: 0;
-                visibility:visible;
-                opacity:1;
+                visibility: visible;
+                opacity: 1;
                 width: 45px;
                 height: 33px;
                 background: url(../images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
                 background-size: 21px auto;
-                top:inherit;
+                top: inherit;
                 left: inherit;
                 right: 0;
                 bottom: 0;
-                border:0 none;
+                border: 0 none;
                 box-shadow: none;
             }
 
@@ -261,28 +271,9 @@
             only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
             only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
             only screen and (              min-resolution:120dpi)      and (max-width:767px),
-            only screen and (               min-resolution:2dppx)      and (max-width:767px){
+            only screen and (               min-resolution:2dppx)      and (max-width:767px) {
                 background-image: url(../images/ui/pages/company/settings/icon_camera@3x.png);
             }
         }
     }
 }
-
-/*.on-devices{
-    .company-settings-page {
-        .header-banner {
-            .control{
-                display: block;
-            }
-
-            &.default {
-                .upload{
-                    display: block;
-                }
-                .control{
-                    display: none;
-                }
-            }
-        }
-    }
-}*/

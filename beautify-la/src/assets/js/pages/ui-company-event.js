@@ -1,7 +1,17 @@
 'use strict';
 
 $(document).ready(function(){
-    $('#typeSelect, #classSelect, #mailchimpSelect, #constantContactSelect, #stateSelect, #fromSectlect, #toSelect, #tagsSelect').selectpicker();
+    $('#typeSelect, #fromSectlect, #toSelect').selectpicker();
+
+    iscrollSelect('divClassSelect', 'iscrollClassSelect');
+    iscrollSelect('divDonationSelect', 'iscrollDonationSelect');
+    iscrollSelect('divRSVPSelect', 'iscrollRSVPSelect');
+    iscrollSelect('divTicketSelect', 'iscrollTicketSelect');
+
+    iscrollSelect('divMailchimpSelect', 'iscrollMailchimpSelect');
+    iscrollSelect('divConstantContactSelect', 'iscrollConstantContactSelect');
+    iscrollSelect('divStateSelect', 'iscrollStateSelect');
+    iscrollSelect('divTagsSelect', 'iscrollTagsSelect');
 
 
     var $txtDateStart = $('#txtDateStart');

@@ -1,49 +1,49 @@
 .bootstrap-datetimepicker-widget {
-    &.dropdown-menu{
+    &.dropdown-menu {
         box-shadow: none;
         color: var(--base);
         border-color: #ccc;
         font-family: var(--second);
         font-size: var(--s14);
-        margin:0;
+        margin: 0;
         width: 404px;
 
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             font-size: var(--h6);
             font-weight: 700;
             width: 100%;
         }
 
-        @medai (max-width: 359px){
+        @medai (max-width: 359px) {
             font-size: var(--h6);
             font-weight: 700;
         }
 
-        &.top{
+        &.top {
             border-radius: 2px 2px 0 0;
             top: inherit;
             bottom: 40px !important;
         }
 
-        &.bottom{
+        &.bottom {
             border-radius: 0 0 2px 2px;
         }
 
         &:after,
-        &:before{
+        &:before {
             border-color: transparent !important;
         }
     }
 
-    table{
+    table {
         width: 100%;
 
-        tr{
+        tr {
 
             &:first-child {
-                th{
-                    &.next{
-                        background:transparent url(../images/ui/pages/company/event/arrow-left.png) center center no-repeat;
+                th {
+                    &.next {
+                        background: transparent url(../images/ui/pages/company/event/arrow-left.png) center center no-repeat;
                         background-size: 9px auto;
                         color: transparent;
 
@@ -57,11 +57,11 @@
                         only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
                         only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
                         only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px) {
                             background-image: url(../images/ui/pages/company/event/arrow-left@2x.png);
                         }
 
-                        &:hover{
+                        &:hover {
                             background:transparent url(../images/ui/pages/company/event/arrow-left.png) center center no-repeat;
                             background-size: 9px auto;
                             color: transparent;
@@ -72,23 +72,23 @@
                             only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
                             only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
                             only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px) {
                                 background-image: url(../images/ui/pages/company/event/arrow-left@2x.png);
                             }
                         }
 
-                        .glyphicon{
+                        .glyphicon {
                             display: none;
                         }
                     }
 
-                    &.prev{
+                    &.prev {
                         background:transparent url(../images/ui/pages/company/event/arrow-left.png) center center no-repeat;
                         background-size: 9px auto;
                         color: transparent;
                         transform: rotate(180deg);
 
-                        @media (max-width: 767px){
+                        @media (max-width: 767px) {
                             background-size: 12px auto;
                         }
 
@@ -98,11 +98,11 @@
                         only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
                         only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
                         only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px) {
                             background-image: url(../images/ui/pages/company/event/arrow-left@2x.png);
                         }
 
-                        &:hover{
+                        &:hover {
                             background:transparent url(../images/ui/pages/company/event/arrow-left.png) center center no-repeat;
                             background-size: 9px auto;
                             color: transparent;
@@ -114,56 +114,56 @@
                             only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
                             only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
                             only screen and (              min-resolution:120dpi)      and (min-width:320px),
-                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px) {
                                 background-image: url(../images/ui/pages/company/event/arrow-left@2x.png);
                             }
                         }
 
-                        .glyphicon{
+                        .glyphicon {
                             display: none;
                         }
                     }
                 }
             }
 
-            td{
+            td {
                 border-color: transparent;
 
-                @media (max-width: 767px){
+                @media (max-width: 767px) {
                     padding: 2px 5px;
                     height: 26px;
                 }
 
-                @media (max-width: 359px){
+                @media (max-width: 359px) {
                     padding: 2px 5px;
                     height: 26px;
                 }
 
-                &.today{
+                &.today {
                     color: var(--default);
                     background-color: transparent !important;
 
-                    &:hover{
+                    &:hover {
                         color: var(--default) !important;
                         background-color: var(--disabled) !important;
                     }
 
-                    &:before{
+                    &:before {
                         border-color: transparent;
                     }
                 }
 
-                &:hover{
+                &:hover {
                     color: var(--default);
                     background-color: var(--disabled);
                 }
 
-                &.disabled{
+                &.disabled {
                     color: var(--disabled);
                     background-color: transparent !important;
                     cursor: text;
 
-                    &:hover{
+                    &:hover {
                         color: var(--disabled);
                         background-color: transparent !important;
                         cursor: text;
@@ -172,27 +172,27 @@
                 }
             }
 
-            th{
-                @media (max-width: 767px){
+            th {
+                @media (max-width: 767px) {
                     padding: 7px 5px;
                     height: 26px;
                 }
 
-                @media (max-width: 359px){
+                @media (max-width: 359px) {
                     padding: 7px 5px;
                     height: 26px;
                 }
 
-                &.datepicker-switch{
+                &.datepicker-switch {
                     font-size: var(--h6);
                     font-weight: 700;
                     font-family: var(--second);
 
-                    @media (max-width: 767px){
+                    @media (max-width: 767px) {
                         font-size: var(--s18);
                     }
 
-                    @media (max-width: 359px){
+                    @media (max-width: 359px) {
                         font-size: var(--s18);
                     }
                 }
@@ -200,36 +200,42 @@
         }
     }
 
-    > div{
+    > div {
         padding: 7px 0;
 
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             padding: 5px 0;
         }
 
-        @media (max-width: 359px){
+        @media (max-width: 359px) {
             padding: 5px 0;
         }
     }
 }
 
-@media (max-width: 359px){
-    .bootstrap-datetimepicker-widget.dropdown-menu.top{
+@media (max-width: 359px) {
+    .bootstrap-datetimepicker-widget.dropdown-menu.top {
     }
-    .bootstrap-datetimepicker-widget > div{
+
+    .bootstrap-datetimepicker-widget > div {
     }
-    .bootstrap-datetimepicker-widget.dropdown-menu th{
+
+    .bootstrap-datetimepicker-widget.dropdown-menu th {
     }
-    .bootstrap-datetimepicker-widget.dropdown-menu td{
+
+    .bootstrap-datetimepicker-widget.dropdown-menu td {
     }
-    .bootstrap-datetimepicker-widget th.datepicker-switch{
+
+    .bootstrap-datetimepicker-widget th.datepicker-switch {
     }
-    .bootstrap-datetimepicker-widget.dropdown-menu{
+
+    .bootstrap-datetimepicker-widget.dropdown-menu {
     }
+
     .bootstrap-datetimepicker-widget.dropdown-menu table th.prev,
     .bootstrap-datetimepicker-widget.dropdown-menu table thead tr:first-child th.prev:hover,
     .bootstrap-datetimepicker-widget.dropdown-menu table th.next,
-    .bootstrap-datetimepicker-widget.dropdown-menu table thead tr:first-child th.next:hover{
+    .bootstrap-datetimepicker-widget.dropdown-menu table thead tr:first-child th.next:hover {
     }
 }
 

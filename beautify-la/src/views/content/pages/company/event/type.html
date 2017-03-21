@@ -17,7 +17,7 @@
             <section class="section section-class">
                 <p>Class events are for one or more days with limited spots.</p>
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div id="divClassSelect" class="col-xs-12 select-readonly">
                         <select id="classSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous class? <small>optional</small>'>Duplicate a previous class?</option>
                             <option value="1">Donation</option>
@@ -545,8 +545,8 @@
             <section class="section section-donation">
                 <p>Donation events allow your guests to donate an amount of their choice upon checkout.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divDonationSelect" class="col-xs-12 select-readonly">
+                        <select id="donationSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
@@ -657,8 +657,8 @@
             <section class="section section-rsvp">
                 <p>RSVP events are free events with limited spots.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divRSVPSelect" class="col-xs-12 select-readonly">
+                        <select id="rsvpSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
@@ -740,8 +740,8 @@
             <section class="section section-ticket">
                 <p>Ticket events require guests to purchase tickets at the price you set.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divTicketSelect" class="col-xs-12 select-readonly">
+                        <select id="ticketSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>

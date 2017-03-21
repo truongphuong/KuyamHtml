@@ -108,7 +108,7 @@
             <section class="section section-class">
                 <p>Class events are for one or more days with limited spots.</p>
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div id="divClassSelect" class="col-xs-12 select-readonly">
                         <select id="classSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous class? <small>optional</small>'>Duplicate a previous class?</option>
                             <option value="1">Donation</option>
@@ -636,8 +636,8 @@
             <section class="section section-donation">
                 <p>Donation events allow your guests to donate an amount of their choice upon checkout.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divDonationSelect" class="col-xs-12 select-readonly">
+                        <select id="donationSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
@@ -748,8 +748,8 @@
             <section class="section section-rsvp">
                 <p>RSVP events are free events with limited spots.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divRSVPSelect" class="col-xs-12 select-readonly">
+                        <select id="rsvpSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
@@ -831,8 +831,8 @@
             <section class="section section-ticket">
                 <p>Ticket events require guests to purchase tickets at the price you set.</p>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <select id="classSelect" class="select-full default">
+                    <div id="divTicketSelect" class="col-xs-12 select-readonly">
+                        <select id="ticketSelect" class="select-full default">
                             <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
                             <option value="1">Donation</option>
                             <option value="2">RSVP</option>
@@ -1078,11 +1078,28 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <select id="stateSelect" class="select-full">
+                    <div id="divStateSelect" class="col-xs-12 col-sm-6 select-readonly">
+                        <select id="stateSelect" class="select-full select-state default">
                             <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
-                            <option value="1">Yoga</option>
-                            <option value="2">Swimming</option>
+                            <option value="1" title="AL">Alabama</option>
+                            <option value="2" title="AK">Alaska</option>
+                            <option value="3" title="AZ">Arizona</option>
+                            <option value="4" title="AR">Arkansas</option>
+                            <option value="5" title="CA">California</option>
+                            <option value="6" title="CO">Colorado</option>
+                            <option value="7" title="CT">Connecticut</option>
+                            <option value="8" title="DE">Delaware</option>
+                            <option value="9" title="FL">Florida</option>
+                            <option value="10" title="GA">Georgia</option>
+                            <option value="11" title="HI">Hawaii</option>
+                            <option value="12" title="ID">Idaho</option>
+                            <option value="13" title="IL">Illinois</option>
+                            <option value="14" title="IN">Indiana</option>
+                            <option value="15" title="IA">Iowa</option>
+                            <option value="16" title="KS">Kansas</option>
+                            <option value="17" title="KY">Kentucky</option>
+                            <option value="18" title="LA">Louisiana</option>
+                            <option value="19" title="ME">Maine</option>
                         </select>
                     </div>
                     <div class="col-xs-12 col-sm-6">
@@ -1130,10 +1147,12 @@
     </section>
     <section class="section tags-section">
         <label class="label-form">Tags</label>
-        <select id="tagsSelect">
-            <option value="1">Yoga</option>
-            <option value="2">Swimming</option>
-        </select>
+        <div id="divTagsSelect" class="select-readonly">
+            <select id="tagsSelect">
+                <option value="1">Yoga</option>
+                <option value="2">Swimming</option>
+            </select>
+        </div>
     </section>
     <section class="section incentives-section">
         <label class="label-form">Incentives <small>optional</small></label>
@@ -1295,7 +1314,7 @@
                 <input class="cb-mark" id="cbMailchimp" type="checkbox" name="share" value="1" />
                 <label class="cb-label" for="cbMailchimp">Mailchimp</label>
             </div>
-            <div class="section hide">
+            <div id="divMailchimpSelect" class="section select-readonly hide">
                 <select id="mailchimpSelect" class="select-full default">
                     <option value="">Select a campaign</option>
                 </select>
@@ -1306,7 +1325,7 @@
                 <input class="cb-mark" id="cbConstant" type="checkbox" name="share" value="1" />
                 <label class="cb-label" for="cbConstant">Constant Contact</label>
             </div>
-            <div class="section hide">
+            <div id="divConstantContactSelect" class="section select-readonly hide">
                 <select id="constantContactSelect" class="select-full default">
                     <option value="">Select a campaign</option>
                 </select>
