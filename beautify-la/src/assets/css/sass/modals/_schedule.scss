@@ -1,0 +1,111 @@
+.modal-schedule {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: $primary;
+    width: 523px;
+
+    @media (max-width: 767px){
+        width: auto;
+    }
+
+    .modal-content{
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .modal-header {
+        text-align: center;
+        border: 0 none;
+        padding-top: 27px;
+        padding-bottom: 20px;
+        position: relative;
+
+        @media (max-width: 767px){
+            padding-top: 11px;
+            padding-bottom: 5px;
+        }
+
+        .modal-title{
+            font-size: $h5;
+            font-family: $primary;
+            font-weight: 700;
+            padding-bottom: 0;
+            color: $base;
+
+            @media (max-width: 767px){
+                font-size: $h6;
+            }
+        }
+
+        .close {
+            margin-top: 0;
+            position: absolute;
+            top: 18px;
+            right: 23px;
+
+            @media (max-width: 767px){
+                top: 7px;
+                right: 5px;
+            }
+        }
+    }
+
+    .modal-body {
+        padding-bottom: 8px;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+
+        @media (max-width: 767px){
+            padding-bottom: 10px;
+        }
+
+        p{
+            font-size: $s23;
+            color: #313432;
+
+            @media (max-width: 767px){
+                font-size: $h6;
+            }
+
+            @media (max-width: 359px){
+                font-size: $p;
+            }
+        }
+    }
+
+    .modal-footer {
+        padding-bottom: 60px;
+        text-align: center;
+        border:0 none;
+
+        @media (max-width: 767px){
+            margin:0 -10px;
+            padding-bottom: 13px;
+
+            &:after{
+                content:'';
+                display: block;
+                clear:both;
+            }
+        }
+
+        .btn{
+            margin:0 7px;
+            width: 146px;
+            height: 44px;
+            border-radius: 0;
+            font-size: $h5;
+            font-family: $primary;
+            padding:0;
+
+            @media (max-width: 767px){
+                float: left;
+                width: calc(50% - 20px);
+                margin:0 10px;
+                height: 32px;
+                font-size: $h6;
+            }
+        }
+    }
+}
