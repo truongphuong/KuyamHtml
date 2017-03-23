@@ -33,7 +33,6 @@
 
             @media (max-width: 767px){
                 font-size: 21px;
-                color: #ff4527;
                 line-height: 23px;
             }
         }
@@ -44,11 +43,15 @@
     }
 
     #main-affix{
-        width: 672px;
+        @media (min-width: 1270px){
+            width: 672px;
+        }
     }
 
     #nav-affix{
-        padding-left: 86px;
+        @media (min-width: 1270px){
+            padding-left: 86px;
+        }
     }
 
     .social_twitter {

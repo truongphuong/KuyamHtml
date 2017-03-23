@@ -33,7 +33,12 @@ $(document).ready(function () {
             position: myLatLng,
             map: map,
             icon: googleIcon
-
         });
     }
+
+    $(document).on('click', '.video.default', function () {
+        var $this = $(this);
+        $this.removeClass('default');
+        $this.closest('.video').find('iframe')[0].src += "?autoplay=1";
+    });
 });

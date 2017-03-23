@@ -1,24 +1,44 @@
 .event-page {
     .event-section {
-        .checkout{
+        .checkout {
             border-top: 0 none;
             margin-top: 0;
 
-            div.placeholder-custom{
+            div.placeholder-custom {
                 width: 220px;
                 border-top: 0 none;
                 border-left: 0 none;
                 border-right: 0 none;
                 float: left;
 
+                @media (max-width: 767px) {
+                    width: 100%;
+                    float: none;
+                    margin-bottom: 10px;
+                }
+
                 .form-control {
                     padding: 0 55px 0 0;
                     height: 31px;
                 }
 
-                a {
+                .btn {
                     padding: 0;
-                    line-height: 31px;
+                    height: 31px;
+                    border: 0 none;
+                    background: $white;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: $positive;
+                    font-size: $s15;
+                    font-family: $primary;
+                    margin: 0;
+                    width: auto;
+
+                    &[disabled] {
+                        background: transparent;
+                    }
                 }
             }
 
@@ -36,10 +56,10 @@
                     font-family: $primary;
                     color: $base;
 
-                    + li{
+                    + li {
                         border-left: 1px solid rgba(44, 44, 46, .3);
 
-                        span{
+                        span {
                             color: $positive;
                             font-weight: 700;
                         }
@@ -47,7 +67,7 @@
                 }
             }
 
-            .btn{
+            .btn {
                 width: 100%;
                 font-size: $h5;
                 font-weight: 700;
