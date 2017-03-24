@@ -168,8 +168,23 @@ $(document).ready(function () {
   });
   // End all tooltip
 
+  // Begin remove spot of ticket
   $(document).on('click', '.type-tickets .item .close', function () {
     var $this = $(this);
     $this.closest('.item').remove();
   });
+  // End remove spot of ticket
+
+  // Begin show/hide new organizer
+  $('.organizer-section input[name="organizer"]').on('change', function () {
+    var $radioChecked = $('input[name="organizer"]:checked');
+    var inputVal = parseInt($radioChecked.val());
+    var $section = $('#labelOrganizer');
+    if (inputVal === 1) {
+      $section.removeClass('hide');
+    } else {
+      $section.addClass('hide');
+    }
+  });
+  // End show/hide new organizer
 });

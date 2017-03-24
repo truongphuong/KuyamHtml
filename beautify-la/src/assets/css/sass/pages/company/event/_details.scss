@@ -4,6 +4,32 @@
             margin-bottom: 17px;
         }
 
+        .organizer-section{
+            .radio-mark {
+                ~ .radio-label{
+                    @media (max-width: 767px){
+                        margin:0;
+                        font-size: $s15;
+                    }
+                }
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+            }
+        }
+
         .info-section{
             div[class*="col-"]:last-child{
                 margin-bottom: 12px;

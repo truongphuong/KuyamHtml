@@ -42,6 +42,7 @@
     <link type="text/css" rel="stylesheet" href="content/css/addtocalendar.css" />
     <link type="text/css" rel="stylesheet" href="content/css/croppie.css" />
     <link type="text/css" rel="stylesheet" href="content/css/tooltipster.css" />
+    <link type="text/css" rel="stylesheet" href="content/css/chosen.css" />
     <link type="text/css" rel="stylesheet" href="content/css/owl.carousel.css" />
     <link type="text/css" rel="stylesheet" href="content/css/owl.theme.css" />
     <link type="text/css" rel="stylesheet" href="content/css/style.css" />
@@ -937,28 +938,27 @@
                                         <header>
         <h3>Tell us about your class</h3>
     </header>
-                                        <section class="section info-section">
-        <div class="row">
-            <div class="col-xs-12">
-                <label for="txtEventName" class="placeholder-custom">
-                    <div class="placeholder">Event name<span class="required">&lowast;</span></div>
-                    <input id="txtEventName" type="text" class="form-control" />
-                </label>
-            </div>
-            <div class="col-xs-12">
-                <span class="label-form">Organized by<span class="required">&lowast;</span></span>
-                <div class="radio-custom">
-                    <input class="radio-mark" id="radioOrganized1" type="radio" name="address" value="0" checked="" />
-                    <label class="radio-label" for="radioOrganized1">Kourosh Soccer Club</label>
-                </div>
-                <div class="radio-custom">
-                    <input class="radio-mark" id="radioOrganized2" type="radio" name="address" value="1"/>
-                    <label class="radio-label" for="radioOrganized2">New organizer</label>
-                </div>
-            </div>
+                                        <section class="section organizer-section">
+        <label for="txtEventName" class="placeholder-custom">
+            <div class="placeholder">Event name<span class="required">&lowast;</span></div>
+            <input id="txtEventName" type="text" class="form-control" />
+        </label>
+        <span class="label-form">Organized by<span class="required">&lowast;</span></span>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioOrganized1" type="radio" name="organizer" value="0" checked="" />
+            <label class="radio-label" for="radioOrganized1">Kourosh Soccer Club</label>
         </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioOrganized2" type="radio" name="organizer" value="1"/>
+            <label class="radio-label" for="radioOrganized2">New organizer</label>
+        </div>
+        <label id="labelOrganizer" for="txtOrganizer" class="placeholder-custom hide">
+            <div class="placeholder">New organizer<span class="required">&lowast;</span></div>
+            <input id="txtOrganizer" type="text" class="form-control" />
+        </label>
     </section>
-                                        <section class="section info-section">
+                                        <!-- Begin Class type -->
+                                        <!--<section class="section info-section">
         <div class="row">
             <div class="col-xs-12">
                 <label for="txtName" class="placeholder-custom">
@@ -973,7 +973,8 @@
                 </label>
             </div>
         </div>
-    </section>
+    </section>-->
+                                        <!-- End Class type -->
                                         <section class="section time-section">
         <span class="label-form">When is this class?<span class="required">&lowast;</span></span>
         <div class="row">
@@ -1474,6 +1475,7 @@
     <script type="text/javascript" src="content/js/libs/croppie.js"></script>
     <script type="text/javascript" src="content/js/libs/jquery.nicescroll.js"></script>
     <script type="text/javascript" src="content/js/libs/jquery.tooltipster.min.js"></script>
+    <script type="text/javascript" src="content/js/libs/chosen.jquery.js"></script>
     <script type="text/javascript" src="content/js/libs/owl.carousel.js"></script>
     <script type="text/javascript" src="content/js/ui-variables.js"></script>
     <script type="text/javascript" src="content/js/ui-function.js"></script>
