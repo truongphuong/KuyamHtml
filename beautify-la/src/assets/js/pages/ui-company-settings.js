@@ -4,10 +4,10 @@ document.getElementById('settingsNav').className = "active";
 
 $(document).ready(function(){
 
-	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
-	iscrollSelect('divStateSelect', 'iscrollStateSelect');
-	iscrollSelect('divCategorySelect', 'iscrollCategorySelect');
-	iscrollSelect('divTagesSelect', 'iscrollTagesSelect');
+	iscrollSelect('divCategorySelect');
+	iscrollSelect('divStateSelect');
+	iscrollSelect('divCategorySelect');
+	iscrollSelect('divTagesSelect');
     $('#sectionSelect').selectpicker();
 
 	$(document).on('click', '#divTagesSelect .close', function (e) {
@@ -35,6 +35,8 @@ $(document).ready(function(){
 		var $section = $('#' + section);
 		if(section === ''){
 			$('.company-settings-page .sidebar').addClass('active');
+            $('#sectionSelect').prop('disabled', false);
+            $('#sectionSelect').selectpicker('refresh');
 			return;
 		}
 

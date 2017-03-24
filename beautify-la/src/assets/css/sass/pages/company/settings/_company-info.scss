@@ -17,12 +17,12 @@
                         margin-bottom: 18px;
                     }
 
-                    &:hover{
+                    /*&:hover{
                         .control{
                             visibility:visible;
                             opacity:1;
                         }
-                    }
+                    }*/
 
                     &.default{
                         .page-logo{
@@ -30,8 +30,9 @@
                         }
 
                         .control{
-                            visibility:hidden;
-                            opacity:0;
+                            /*visibility:hidden;
+                            opacity:0;*/
+                            display: none;
                         }
 
                         .upload{
@@ -48,8 +49,9 @@
                             margin:-25px 0 0 -83px;
                             top: 50%;
                             left: 50%;
-                            visibility:hidden;
-                            opacity:0;
+                            /*visibility:hidden;
+                            opacity:0;*/
+                            display: block;
 
                             &:before {
                                 content: '';
@@ -74,12 +76,12 @@
                             }
                         }
 
-                        &:hover{
+                        /*&:hover{
                             .upload{
                                 visibility:visible;
                                 opacity:1;
                             }
-                        }
+                        }*/
                     }
 
                     .page-logo{
@@ -110,9 +112,9 @@
                         margin:-25px 0 0 -91px;
                         padding:0;
                         list-style: none;
-                        visibility:hidden;
+                        /*visibility:hidden;
                         opacity:0;
-                        transition:visibility 2s, opacity 2s;
+                        transition:visibility 2s, opacity 2s;*/
 
                         li{
                             float: left;
@@ -204,9 +206,10 @@
                     .upload{
                         position: absolute;
                         z-index: 3;
-                        visibility:hidden;
+                        /*visibility:hidden;
                         opacity:0;
-                        transition:visibility 2s, opacity 2s;
+                        transition:visibility 2s, opacity 2s;*/
+                        display: none;
 
                         @media (max-width: 767px){
                             width: 21px;

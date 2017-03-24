@@ -45,8 +45,6 @@
                     }
 
                     &.header{
-                        margin-bottom: 12px;
-
                         li {
                             font-size: $h5;
                             font-family: $primary;
@@ -179,9 +177,18 @@
                     overflow: inherit;
                     border-radius: 0;
                     margin-bottom: 30px;
+                    margin-top: 12px;
 
                     @media (max-width:767px) {
                         height: 2px;
+                    }
+
+                    &.default {
+                        .text {
+                            text-align: left;
+                            left: 0;
+                            right: inherit;
+                        }
                     }
 
                     .progress-bar {
@@ -199,7 +206,6 @@
                             background: $white;
                             box-shadow: 0 2px 3px 0 rgba(32, 41, 47, 0.43);
                             position: absolute;
-                            right: 0;
                             top: -5px;
 
                             @media (max-width:767px) {
@@ -216,7 +222,8 @@
                         position: absolute;
                         top: 6px;
                         right: 0;
-                        text-align: left;
+                        text-align: right;
+                        white-space: nowrap;
 
                         b {
                             font-weight: 800;

@@ -112,7 +112,7 @@
                             <li data-section="company4"><a title="" href="#">Connect</a></li>
                         </ul>
                     </div>
-                    <select id="sectionSelect" class="section-select">
+                    <select id="sectionSelect" class="section-select" disabled>
                         <option value="company1">Company info</option>
                         <option value="company2">Your info</option>
                         <option value="company3">How do you want to get paid</option>
@@ -271,12 +271,9 @@
                 <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
             </div>
             <div id="tagsDescription" class="col-xs-12 hide">
-                <div class="placeholder-custom">
-                    <div class="placeholder">Facility name <span class="optional">optional</span></div>
-                    <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
+                <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
 
 Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển xanh 7 chỗ và 16 chỗ đậu trước một nhà hàng. Những người trên xe ăn uống trong quán nhưng không ra làm việc. Ông Hải yêu cầu niêm phong, kéo xe về trụ sở công an phường xử lý.</textarea>
-                </div>
             </div>
             <div class="col-xs-12 col-md-4 visible-xs">
                 <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
@@ -365,11 +362,28 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                 <label class="radio-label" for="radioPaypal">Paypal</label>
             </div>
             <div class="section disabled">
-                <label for="txtEmail" class="placeholder-custom">
-                    <div class="placeholder">Paypal email<span class="required">&lowast;</span></div>
-                    <input id="txtEmail" type="email" class="form-control">
-                    <span class="icon icon-check"></span>
-                </label>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtFirstName" class="placeholder-custom">
+                            <div class="placeholder">First name<span class="required">&lowast;</span></div>
+                            <input id="txtFirstName" type="tẽt" class="form-control">
+                        </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtLastName" class="placeholder-custom">
+                            <div class="placeholder">Last name<span class="required">&lowast;</span></div>
+                            <input id="txtLastName" type="email" class="form-control">
+                        </label>
+                    </div>
+                    <div class="col-xs-12">
+                        <label for="txtEmail" class="placeholder-custom validate">
+                            <div class="placeholder">Paypal email<span class="required">&lowast;</span></div>
+                            <input id="txtEmail" type="email" class="form-control">
+                            <span class="icon icon-check"></span>
+                            <span class="error">Invalid</span>
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -396,8 +410,8 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
         </div>
         <div class="share">
             <div class="cb-custom">
-                <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" />
-                <label class="cb-label" for="cbTwitter">Twitter <small class="hide">connected</small></label>
+                <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" checked />
+                <label class="cb-label" for="cbTwitter">Twitter <small class="unconnected">unconnected</small></label>
             </div>
             <div class="section hide">
                 <button class="btn btn-neutral btn-twitter">Connect Twitter</button>
@@ -452,6 +466,7 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
     </div>
 </footer>
     </div>
+    <!-- #changePassModal -->
     <div id="changePassModal" class="modal fade modal-m" role="dialog" aria-labelledby="changePassModalLabel"
         data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-change-password">
@@ -495,12 +510,10 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                     </form>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
     <!-- /#changePassModal -->
-    <!-- .modal-social -->
+    <!-- #modal-social -->
     <div id="modal-social" class="modal fade" role="dialog" aria-labelledby="socialsModalLabel"
         data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-social">
@@ -559,12 +572,10 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                     <input type="button" value="save" class="btn btn-positive" />
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
-    <!-- /.modal-social -->
+    <!-- /#modal-social -->
+    <!-- #tagsModal -->
     <div id="tagsModal" class="modal fade modal-m" role="dialog" aria-labelledby="tagsModalLabel"
         data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-tags">
@@ -595,12 +606,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                         save</button>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
-    <!-- /#changePassModal -->
-    <!-- .modal -->
+    <!-- #cropBannerModal -->
     <div id="cropBannerModal" class="modal fade" role="dialog" aria-labelledby="cropBannerModalLabel"
         data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-crop-banner">
@@ -632,11 +640,9 @@ Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển
                     </div>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+    <!-- /#cropBannerModal -->
     <div class="lightbox">
     </div>
     <div class="loading">

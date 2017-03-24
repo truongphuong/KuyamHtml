@@ -3,15 +3,15 @@
 $(document).ready(function(){
     $('#typeSelect, #fromSectlect, #toSelect').selectpicker();
 
-    iscrollSelect('divClassSelect', 'iscrollClassSelect');
-    iscrollSelect('divDonationSelect', 'iscrollDonationSelect');
-    iscrollSelect('divRSVPSelect', 'iscrollRSVPSelect');
-    iscrollSelect('divTicketSelect', 'iscrollTicketSelect');
+    iscrollSelect('divClassSelect');
+    iscrollSelect('divDonationSelect');
+    iscrollSelect('divRSVPSelect');
+    iscrollSelect('divTicketSelect');
 
-    iscrollSelect('divMailchimpSelect', 'iscrollMailchimpSelect');
-    iscrollSelect('divConstantContactSelect', 'iscrollConstantContactSelect');
-    iscrollSelect('divStateSelect', 'iscrollStateSelect');
-    iscrollSelect('divTagsSelect', 'iscrollTagsSelect');
+    iscrollSelect('divMailchimpSelect');
+    iscrollSelect('divConstantContactSelect');
+    iscrollSelect('divStateSelect');
+    iscrollSelect('divTagsSelect');
 
 
     var $txtDateStart = $('#txtDateStart');
@@ -168,4 +168,9 @@ $(document).ready(function(){
         tooltipResize($sectionHelpDonationTooltip, contentHelpDonationTooltip, classHelpDonationTooltip);
     });
     // End all tooltip
+
+    $(document).on('click', '.type-tickets .item .close', function(){
+        var $this = $(this);
+        $this.closest('.item').remove();
+    });
 });

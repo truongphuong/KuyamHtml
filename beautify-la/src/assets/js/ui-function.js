@@ -49,7 +49,7 @@ function refreshNiceScroll(sectionID){
 }
 
 
-function iscrollSelect(sectionID, scrollName) {
+function iscrollSelect(sectionID) {
     var $sectionID = $('#' + sectionID);
     if ($sectionID.length === 0) {
         return;
@@ -101,7 +101,7 @@ function iscrollContent(sectionID) {
         $(sectionID + ' .wrap-dropdown-menu-inner').niceScroll(sectionID + ' .wrap-dropdown-menu-inner-content', {
             bouncescroll: false,
             autohidemode: false,
-            cursorcolor: "#99bd25",
+            cursorcolor: "#f3472d",
             cursorborder: "1px solid transparent",
             cursorborderradius: "5px",
             cursorwidth: "7px",

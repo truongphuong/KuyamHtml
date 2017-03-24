@@ -3,6 +3,160 @@
     line-height: 150%;
     font-family: $primary;
 
+    .site-header {
+        .clear {
+            @media (max-width: 767px) {
+                display: none !important;
+            }
+        }
+
+        .navbar-collapse {
+            @media (max-width: 767px) {
+                background: transparent;
+                display: block;
+            }
+
+            .navbar-nav{
+                @media (max-width: 767px) {
+                    float: right;
+                }
+            }
+
+            .dropdown-menu {
+                @media (max-width: 767px) {
+                    background: transparent;
+                    border:0 none;
+                    -moz-box-shadow:none;
+                    -webkit-box-shadow:none;
+                    display: block;
+                    background-clip:padding-box;
+                    opacity:.3;
+                    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+                    filter:alpha(opacity=30);
+
+                    -ms-transform-origin:top;
+                    -moz-transform-origin:top;
+                    -webkit-transform-origin:top;
+                    transform-origin:top;
+
+                    -webkit-animation-fill-mode:forwards;
+                    animation-fill-mode:forwards;
+
+                    -webkit-transform:scale(1, 0);
+                    -moz-transform:scale(1, 0);
+                    -ms-transform:scale(1, 0);
+                    transform:scale(1, 0);
+
+                    -webkit-transition:all 0.2s linear;
+                    -moz-transition:all 0.2s linear;
+                    -o-transition:all 0.2s linear;
+                    transition:all 0.2s linear;
+
+                    right: 0;
+                    left: inherit;
+                }
+
+                li {
+                    a {
+                        @media (max-width: 767px) {
+                            display: block;
+                            text-align: right;
+                            padding-left: 34px;
+                            padding-right: 34px;
+                        }
+                    }
+                }
+            }
+
+            li {
+                @media (max-width: 767px) {
+                    width: auto;
+                    padding: 0;
+                    margin: 0;
+                    float: none;
+                    text-align: right;
+                }
+
+                &.active {
+                    a {
+                        @media (max-width: 767px) {
+                            color: $positive;
+                        }
+                    }
+                }
+
+                a {
+                    @media (max-width: 767px) {
+                        color: $white;
+                        margin: 0;
+                        display: inline-block;
+                    }
+                }
+
+
+                &.li-account {
+                    @media (max-width: 767px) {
+                        display: block !important;
+                    }
+
+                    &.open {
+                        .dropdown-menu {
+                            @media (max-width: 767px) {
+                                -webkit-transform:scale(1, 1);
+                                -moz-transform:scale(1, 1);
+                                -ms-transform:scale(1, 1);
+                                transform:scale(1, 1);
+                                opacity:1;
+                                -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                                filter:alpha(opacity=100);
+                            }
+                        }
+                    }
+
+                    > a {
+                        @media (max-width: 767px) {
+                            padding: 12px 34px;
+                        }
+
+                        &:before,
+                        &:after {
+                            @media (max-width: 767px) {
+                                content: '';
+                                width: 25px;
+                                height: 25px;
+                                background: url(../images/ui/master/header/account.png) no-repeat;
+                                background-size: 25px auto;
+                                position: absolute;
+                                top: 7px;
+                            }
+                        }
+
+                        &:before {
+                            @media (max-width: 767px) {
+                                left: 0;
+                                background-position: center 0;
+                            }
+                        }
+
+                        &:after {
+                            @media (max-width: 767px) {
+                                right: 0;
+                                background-position: center -25px;
+                            }
+                        }
+                    }
+                }
+
+                a {
+                    @media (max-width: 767px) {
+                        background: transparent;
+                        border: 0 none;
+                    }
+                }
+            }
+        }
+    }
+
     .main-content{
         padding:0;
     }

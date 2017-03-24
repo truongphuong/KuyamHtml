@@ -582,7 +582,7 @@
     <!-- #scheduleModal -->
     <div id="scheduleModal" class="modal fade" role="dialog" aria-labelledby="scheduleModalLabel"
         data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog modal-reminder">
+        <div class="modal-dialog modal-schedule">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">
@@ -594,48 +594,108 @@
                     <header>
                     <div class="table-css">
                         <div class="tr">
-                            <div class="th">Date</div>
-                            <div class="th">From</div>
-                            <div class="th">To</div>
+                            <div class="th td-date">Date</div>
+                            <div class="th td-from"><span>From</span></div>
+                            <div class="th td-to"><span>To</span></div>
                         </div>
                     </div>
                 </header>
-                    <section>
-                    <div class="table-css">
-                        <div class="tr">
-                            <div class="td">Wednesday, February 3rd</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
-                        </div>
-                        <div class="tr">
-                            <div class="td">Thursday, February 4th</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
-                        </div>
-                        <div class="tr">
-                            <div class="td">Friday, February 5th</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
-                        </div>
-                        <div class="tr">
-                            <div class="td">Saturday, February 6th</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
-                        </div>
-                        <div class="tr">
-                            <div class="td">Sunday, February 7th</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
-                        </div>
-                        <div class="tr">
-                            <div class="td">Monday, February 8th</div>
-                            <div class="td">10:00am</div>
-                            <div class="td">11:00am</div>
+                    <section id="scheduleList">
+                    <div class="scroll-content">
+                        <div class="table-css">
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
                         </div>
                     </div>
                 </section>
-                </div>
-                <div class="modal-footer">
                 </div>
             </div>
         </div>
@@ -670,5 +730,6 @@
     <script type="text/javascript" src="content/js/ui-function.js"></script>
     <script type="text/javascript" src="content/js/ui-general.js"></script>
     <script type="text/javascript" src="content/js/pages/ui-event.js"></script>
+    <script type="text/javascript" src="content/js/modals/ui-schedule.js"></script>
 </body>
 </html>

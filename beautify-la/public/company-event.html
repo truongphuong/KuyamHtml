@@ -846,6 +846,7 @@
                     <div class="row item">
                         <div class="col-xs-12">
                             <input type="text" class="form-control" placeholder="Ticket name / title" />
+                            <button class="close"></button>
                         </div>
                         <div class="col-xs-7">
                             <label for="txtTicketNum" class="placeholder-custom">
@@ -939,13 +940,34 @@
                                         <section class="section info-section">
         <div class="row">
             <div class="col-xs-12">
+                <label for="txtEventName" class="placeholder-custom">
+                    <div class="placeholder">Event name<span class="required">&lowast;</span></div>
+                    <input id="txtEventName" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <span class="label-form">Organized by<span class="required">&lowast;</span></span>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioOrganized1" type="radio" name="address" value="0" checked="" />
+                    <label class="radio-label" for="radioOrganized1">Kourosh Soccer Club</label>
+                </div>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioOrganized2" type="radio" name="address" value="1"/>
+                    <label class="radio-label" for="radioOrganized2">New organizer</label>
+                </div>
+            </div>
+        </div>
+    </section>
+                                        <section class="section info-section">
+        <div class="row">
+            <div class="col-xs-12">
                 <label for="txtName" class="placeholder-custom">
                     <div class="placeholder">Class name<span class="required">&lowast;</span></div>
                     <input id="txtName" type="text" class="form-control" />
                 </label>
             </div>
             <div class="col-xs-12">
-                 <label for="txtName" class="placeholder-custom">
+                <label for="txtName" class="placeholder-custom">
                     <div class="placeholder">Staff <small>optional</small></div>
                     <input id="txtName" type="text" class="form-control" />
                 </label>
@@ -958,7 +980,7 @@
             <div class="col-xs-12 col-sm-4">
                 <span class="label-form">Date</span>
                 <div id="sectionDateStart" class="date-custom">
-                    <input id="txtDateStart" type="text" class="form-control" />
+                    <input id="txtDateStart" type="text" class="form-control txt-date" />
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4">
@@ -1009,7 +1031,7 @@
             <div class="col-xs-12 col-sm-4">
                 <span class="label-form">End date</span>
                 <div id="sectionDateEnd" class="date-custom">
-                    <input id="txtDateEnd" type="text" class="form-control" />
+                    <input id="txtDateEnd" type="text" class="form-control txt-date" />
                 </div>
             </div>
         </div>
@@ -1393,7 +1415,7 @@
     </div>
 </footer>
     </div>
-    <!-- .modal -->
+    <!-- #cropPhotoModal -->
     <div id="cropPhotoModal" class="modal fade" role="dialog" aria-labelledby="cropPhotoModalLabel"
         data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-crop-photo">
@@ -1425,11 +1447,9 @@
                     </div>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+    <!-- /#cropPhotoModal -->
     <div class="lightbox">
     </div>
     <div class="loading">

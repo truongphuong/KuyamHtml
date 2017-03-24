@@ -1,20 +1,21 @@
-.nicescroll-rails{
+.nicescroll-rails {
     width: 1px !important;
     right: 3px !important;
-}
-.nicescroll-rails div{
-    right: -3px !important;
+
+    div {
+        right: -3px !important;
+
+        @media (max-width: 1023px){
+            width: 5px !important;
+            right: -2px !important;
+        }
+    }
 }
 
-.on-nicescroll .wrap-dropdown-menu-inner{
-    overflow: hidden;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: 1023px){
-    .nicescroll-rails div{
-        width: 5px !important;
-        right: -2px !important;
+.on-nicescroll {
+    .wrap-dropdown-menu-inner {
+        overflow: hidden;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
     }
 }

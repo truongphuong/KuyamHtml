@@ -51,12 +51,12 @@
             height: 186px;
         }
 
-        &:hover {
+        /*&:hover {
             .control {
                 visibility: visible;
                 opacity: 1;
             }
-        }
+        }*/
 
         &.default {
             cursor: default;
@@ -72,8 +72,9 @@
             }
 
             .control {
-                visibility: hidden;
-                opacity: 0;
+                /*visibility: hidden;
+                opacity: 0;*/
+                display: none;
             }
 
             .upload {
@@ -90,8 +91,9 @@
                 font-size: $s15;
                 font-family: $primary;
                 color: $white;
-                visibility: hidden;
-                opacity: 0;
+                /*visibility: hidden;
+                opacity: 0;*/
+                display: block;
 
                 &:before {
                     content: '';
@@ -116,12 +118,12 @@
                 }
             }
 
-            &:hover {
+            /*&:hover {
                 .upload {
                     visibility: visible;
                     opacity: 1;
                 }
-            }
+            }*/
         }
 
         .control {
@@ -140,9 +142,9 @@
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
             text-align: center;
             z-index: 3;
-            visibility: hidden;
+            /*visibility: hidden;
             opacity: 0;
-            transition: visibility 2s, opacity 2s;
+            transition: visibility 2s, opacity 2s;*/
 
             @media (max-width: 767px) {
                 height: 55px;
@@ -240,9 +242,10 @@
         .upload {
             position: absolute;
             z-index: 3;
-            visibility: hidden;
+            /*visibility: hidden;
             opacity: 0;
-            transition: visibility 2s, opacity 2s;
+            transition: visibility 2s, opacity 2s;*/
+            display: none;
 
             &:hover {
                 font-weight: 700;
@@ -251,8 +254,8 @@
             @media (max-width: 767px) {
                 line-height: 0;
                 font-size: 0;
-                visibility: visible;
-                opacity: 1;
+                /*visibility: visible;
+                opacity: 1;*/
                 width: 45px;
                 height: 33px;
                 background: url(../images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
@@ -263,6 +266,7 @@
                 bottom: 0;
                 border: 0 none;
                 box-shadow: none;
+                display: block;
             }
 
             @media

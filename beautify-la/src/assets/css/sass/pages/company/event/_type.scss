@@ -504,6 +504,39 @@
                             &:first-child{
                                 margin-top: 0;
                             }
+
+                            + .item {
+                                div[class*="col-"] {
+                                    &:first-child {
+                                        position: relative;
+
+                                        .form-control {
+                                            width: calc(100% - 40px);
+                                        }
+
+                                        .close {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 15px;
+                                            height: 100%;
+                                            width: 23px;
+                                            background: url(../images/ui/pages/company/event/icon_delete.png) center center no-repeat;
+                                            background-size: 23px auto;
+                                            opacity: 1;
+
+                                            @media
+                                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                                background-image: url(../images/ui/pages/company/event/icon_delete@3x.png);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 

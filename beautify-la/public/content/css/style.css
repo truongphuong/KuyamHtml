@@ -529,6 +529,11 @@ textarea.form-control {
 .bootstrap-select.active.open > .btn:visited {
   color: #333; }
 
+.bootstrap-select.btn-group .btn .filter-option {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 .bootstrap-select.btn-group .btn .caret {
   width: 19px;
   height: 11px;
@@ -1023,19 +1028,17 @@ textarea.form-control {
 .nicescroll-rails {
   width: 1px !important;
   right: 3px !important; }
-
-.nicescroll-rails div {
-  right: -3px !important; }
+  .nicescroll-rails div {
+    right: -3px !important; }
+    @media (max-width: 1023px) {
+      .nicescroll-rails div {
+        width: 5px !important;
+        right: -2px !important; } }
 
 .on-nicescroll .wrap-dropdown-menu-inner {
   overflow: hidden;
   position: relative;
   -webkit-overflow-scrolling: touch; }
-
-@media (max-width: 1023px) {
-  .nicescroll-rails div {
-    width: 5px !important;
-    right: -2px !important; } }
 
 .tooltipster-default {
   border-width: 1px;
@@ -5812,6 +5815,92 @@ div.placeholder-custom {
   font-size: 16px;
   line-height: 150%;
   font-family: "Lato", sans-serif; }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .clear {
+      display: none !important; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse {
+      background: transparent;
+      display: block; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse .navbar-nav {
+      float: right; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse .dropdown-menu {
+      background: transparent;
+      border: 0 none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      display: block;
+      background-clip: padding-box;
+      opacity: .3;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      filter: alpha(opacity=30);
+      -webkit-transform-origin: top;
+      transform-origin: top;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-transform: scale(1, 0);
+      transform: scale(1, 0);
+      -webkit-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      right: 0;
+      left: inherit; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse .dropdown-menu li a {
+      display: block;
+      text-align: right;
+      padding-left: 34px;
+      padding-right: 34px; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li {
+      width: auto;
+      padding: 0;
+      margin: 0;
+      float: none;
+      text-align: right; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.active a {
+      color: #f3472d; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li a {
+      color: #fff;
+      margin: 0;
+      display: inline-block; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account {
+      display: block !important; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account.open .dropdown-menu {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100); } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account > a {
+      padding: 12px 34px; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account > a:before, .company-settings-page .site-header .navbar-collapse li.li-account > a:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      background: url(../images/ui/master/header/account.png) no-repeat;
+      background-size: 25px auto;
+      position: absolute;
+      top: 7px; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account > a:before {
+      left: 0;
+      background-position: center 0; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li.li-account > a:after {
+      right: 0;
+      background-position: center -25px; } }
+  @media (max-width: 767px) {
+    .company-settings-page .site-header .navbar-collapse li a {
+      background: transparent;
+      border: 0 none; } }
   .company-settings-page .main-content {
     padding: 0; }
   .company-settings-page .content {
@@ -6018,25 +6107,35 @@ div.placeholder-custom {
 .company-settings-page .header-banner {
   position: relative;
   height: 338px;
-  background: #666; }
+  background: #666;
+  /*&:hover {
+            .control {
+                visibility: visible;
+                opacity: 1;
+            }
+        }*/ }
   @media (max-width: 767px) {
     .company-settings-page .header-banner {
       height: 220px; } }
   @media (max-width: 359px) {
     .company-settings-page .header-banner {
       height: 186px; } }
-  .company-settings-page .header-banner:hover .control {
-    visibility: visible;
-    opacity: 1; }
   .company-settings-page .header-banner.default {
-    cursor: default; }
+    cursor: default;
+    /*&:hover {
+                .upload {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }*/ }
     .company-settings-page .header-banner.default .carousel-inner > .item {
       background-image: none !important; }
     .company-settings-page .header-banner.default .carousel-inner:after {
       display: none; }
     .company-settings-page .header-banner.default .control {
-      visibility: hidden;
-      opacity: 0; }
+      /*visibility: hidden;
+                opacity: 0;*/
+      display: none; }
     .company-settings-page .header-banner.default .upload {
       width: 217px;
       height: 51px;
@@ -6051,8 +6150,9 @@ div.placeholder-custom {
       font-size: 0.9375em;
       font-family: "Lato", sans-serif;
       color: #fff;
-      visibility: hidden;
-      opacity: 0; }
+      /*visibility: hidden;
+                opacity: 0;*/
+      display: block; }
       .company-settings-page .header-banner.default .upload:before {
         content: '';
         display: inline-block;
@@ -6066,9 +6166,6 @@ div.placeholder-custom {
         @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
           .company-settings-page .header-banner.default .upload:before {
             background-image: url(../images/ui/pages/company/settings/icon_upload@3x.png); } }
-    .company-settings-page .header-banner.default:hover .upload {
-      visibility: visible;
-      opacity: 1; }
   .company-settings-page .header-banner .control {
     margin: -25px 0 0 -121px;
     padding: 0;
@@ -6085,10 +6182,9 @@ div.placeholder-custom {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
     text-align: center;
     z-index: 3;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: visibility 2s, opacity 2s;
-    transition: visibility 2s, opacity 2s; }
+    /*visibility: hidden;
+            opacity: 0;
+            transition: visibility 2s, opacity 2s;*/ }
     @media (max-width: 767px) {
       .company-settings-page .header-banner .control {
         height: 55px;
@@ -6141,18 +6237,18 @@ div.placeholder-custom {
   .company-settings-page .header-banner .upload {
     position: absolute;
     z-index: 3;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: visibility 2s, opacity 2s;
-    transition: visibility 2s, opacity 2s; }
+    /*visibility: hidden;
+            opacity: 0;
+            transition: visibility 2s, opacity 2s;*/
+    display: none; }
     .company-settings-page .header-banner .upload:hover {
       font-weight: 700; }
     @media (max-width: 767px) {
       .company-settings-page .header-banner .upload {
         line-height: 0;
         font-size: 0;
-        visibility: visible;
-        opacity: 1;
+        /*visibility: visible;
+                opacity: 1;*/
         width: 45px;
         height: 33px;
         background: url(../images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
@@ -6162,7 +6258,8 @@ div.placeholder-custom {
         right: 0;
         bottom: 0;
         border: 0 none;
-        box-shadow: none; } }
+        box-shadow: none;
+        display: block; } }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
       .company-settings-page .header-banner .upload {
         background-image: url(../images/ui/pages/company/settings/icon_camera@3x.png); } }
@@ -6324,50 +6421,59 @@ div.placeholder-custom {
     position: relative;
     background: #666;
     margin-bottom: 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    /*&:hover{
+                        .control{
+                            visibility:visible;
+                            opacity:1;
+                        }
+                    }*/ }
     @media (max-width: 767px) {
       .company-settings-page .company-info .section.logo-section .frame {
         margin-bottom: 18px; } }
-    .company-settings-page .company-info .section.logo-section .frame:hover .control {
-      visibility: visible;
-      opacity: 1; }
-    .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
-      background-image: none !important; }
-    .company-settings-page .company-info .section.logo-section .frame.default .control {
-      visibility: hidden;
-      opacity: 0; }
-    .company-settings-page .company-info .section.logo-section .frame.default .upload {
-      width: 167px;
-      height: 51px;
-      line-height: 49px;
-      font-size: 0.9375em;
-      font-family: "Lato", sans-serif;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.31);
-      background: rgba(0, 0, 0, 0.24) none;
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-      text-align: center;
-      margin: -25px 0 0 -83px;
-      top: 50%;
-      left: 50%;
-      visibility: hidden;
-      opacity: 0; }
-      .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 14px;
-        background: url(../images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-        background-size: 16px auto;
-        margin-right: 5px;
-        position: relative;
-        bottom: -2px; }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-          .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-            background-image: url(../images/ui/pages/company/settings/icon_upload@3x.png); } }
-    .company-settings-page .company-info .section.logo-section .frame.default:hover .upload {
-      visibility: visible;
-      opacity: 1; }
+    .company-settings-page .company-info .section.logo-section .frame.default {
+      /*&:hover{
+                            .upload{
+                                visibility:visible;
+                                opacity:1;
+                            }
+                        }*/ }
+      .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
+        background-image: none !important; }
+      .company-settings-page .company-info .section.logo-section .frame.default .control {
+        /*visibility:hidden;
+                            opacity:0;*/
+        display: none; }
+      .company-settings-page .company-info .section.logo-section .frame.default .upload {
+        width: 167px;
+        height: 51px;
+        line-height: 49px;
+        font-size: 0.9375em;
+        font-family: "Lato", sans-serif;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.31);
+        background: rgba(0, 0, 0, 0.24) none;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+        text-align: center;
+        margin: -25px 0 0 -83px;
+        top: 50%;
+        left: 50%;
+        /*visibility:hidden;
+                            opacity:0;*/
+        display: block; }
+        .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 14px;
+          background: url(../images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+          background-size: 16px auto;
+          margin-right: 5px;
+          position: relative;
+          bottom: -2px; }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+            .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
+              background-image: url(../images/ui/pages/company/settings/icon_upload@3x.png); } }
     .company-settings-page .company-info .section.logo-section .frame .page-logo {
       position: absolute;
       top: -1px;
@@ -6394,10 +6500,9 @@ div.placeholder-custom {
       margin: -25px 0 0 -91px;
       padding: 0;
       list-style: none;
-      visibility: hidden;
-      opacity: 0;
-      -webkit-transition: visibility 2s, opacity 2s;
-      transition: visibility 2s, opacity 2s; }
+      /*visibility:hidden;
+                        opacity:0;
+                        transition:visibility 2s, opacity 2s;*/ }
       .company-settings-page .company-info .section.logo-section .frame .control li {
         float: left;
         width: 60px;
@@ -6445,10 +6550,10 @@ div.placeholder-custom {
     .company-settings-page .company-info .section.logo-section .frame .upload {
       position: absolute;
       z-index: 3;
-      visibility: hidden;
-      opacity: 0;
-      -webkit-transition: visibility 2s, opacity 2s;
-      transition: visibility 2s, opacity 2s; }
+      /*visibility:hidden;
+                        opacity:0;
+                        transition:visibility 2s, opacity 2s;*/
+      display: none; }
       @media (max-width: 767px) {
         .company-settings-page .company-info .section.logo-section .frame .upload {
           width: 21px;
@@ -6798,14 +6903,11 @@ div.placeholder-custom {
             @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
               .company-settings-page .payment-method .method-section .method .section ul li .btn-reconnect:before {
                 background-image: url(../images/ui/pages/company/settings/icon_reconnect@3x.png); } }
-    .company-settings-page .payment-method .method-section .method .section .placeholder-custom {
-      width: 444px;
-      margin-top: 8px;
-      margin-bottom: 17px; }
+    .company-settings-page .payment-method .method-section .method .section .row {
+      margin-top: 8px; }
       @media (max-width: 359px) {
-        .company-settings-page .payment-method .method-section .method .section .placeholder-custom {
-          margin-top: 11px;
-          margin-bottom: 20px; } }
+        .company-settings-page .payment-method .method-section .method .section .row {
+          margin-top: 11px; } }
     .company-settings-page .payment-method .method-section .method .section.disabled:after {
       content: '';
       display: block;
@@ -6868,6 +6970,9 @@ div.placeholder-custom {
       @media (max-width: 359px) {
         .company-settings-page .company-connect .share-section .share .cb-mark ~ .cb-label small {
           font-size: 10px; } }
+      .company-settings-page .company-connect .share-section .share .cb-mark ~ .cb-label small.unconnected {
+        color: #f3472d;
+        text-shadow: 0 1px 0 rgba(243, 71, 45, 0.3); }
   .company-settings-page .company-connect .share-section .share .section {
     padding-top: 4px; }
     @media (max-width: 767px) {
@@ -7529,6 +7634,22 @@ div.placeholder-custom {
   margin-top: 29px; }
   .company-event-page .type-event .type-tickets .section.section-num .tier-list .item:first-child {
     margin-top: 0; }
+  .company-event-page .type-event .type-tickets .section.section-num .tier-list .item + .item div[class*="col-"]:first-child {
+    position: relative; }
+    .company-event-page .type-event .type-tickets .section.section-num .tier-list .item + .item div[class*="col-"]:first-child .form-control {
+      width: calc(100% - 40px); }
+    .company-event-page .type-event .type-tickets .section.section-num .tier-list .item + .item div[class*="col-"]:first-child .close {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      height: 100%;
+      width: 23px;
+      background: url(../images/ui/pages/company/event/icon_delete.png) center center no-repeat;
+      background-size: 23px auto;
+      opacity: 1; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+        .company-event-page .type-event .type-tickets .section.section-num .tier-list .item + .item div[class*="col-"]:first-child .close {
+          background-image: url(../images/ui/pages/company/event/icon_delete@3x.png); } }
 
 .company-event-page .type-event .type-tickets .section.section-num .btn {
   border-radius: 0;
@@ -7578,6 +7699,13 @@ div.placeholder-custom {
   @media (max-width: 359px) {
     .company-event-page .details-event .time-section > .label-form {
       margin-top: 15px; } }
+
+.company-event-page .details-event .time-section .txt-date {
+  background: url(../images/ui/pages/company/event/icon_date.png) calc(100% - 12px) center no-repeat;
+  background-size: 13px auto; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+    .company-event-page .details-event .time-section .txt-date {
+      background-image: url(../images/ui/pages/company/event/icon_date@3x.png); } }
 
 .company-event-page .details-event .time-section .cb-custom {
   padding-top: 7px;
@@ -10141,6 +10269,10 @@ div.placeholder-custom {
     @media (max-width: 767px) {
       .event-page .event-section .rewards .item .progress {
         height: 2px; } }
+    .event-page .event-section .rewards .item .progress.default .text {
+      text-align: left;
+      left: 0;
+      right: inherit; }
     .event-page .event-section .rewards .item .progress .progress-bar {
       color: transparent;
       min-width: inherit;
@@ -10167,8 +10299,8 @@ div.placeholder-custom {
       font-weight: 700;
       position: absolute;
       top: 6px;
-      right: 0;
-      text-align: left; }
+      text-align: right;
+      white-space: nowrap; }
       .event-page .event-section .rewards .item .progress .text b {
         font-weight: 800;
         font-size: 14px; }
@@ -10212,18 +10344,16 @@ div.placeholder-custom {
       clear: both; }
     .event-page .event-section .grab .item ul li {
       float: left; }
-    .event-page .event-section .grab .item ul.header {
-      margin-bottom: 12px; }
-      .event-page .event-section .grab .item ul.header li {
-        font-size: 1.25em;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        color: #333; }
-        .event-page .event-section .grab .item ul.header li:first-child {
-          max-width: 150px; }
-        .event-page .event-section .grab .item ul.header li + li {
-          padding-left: 20px;
-          width: calc(100% - 150px); }
+    .event-page .event-section .grab .item ul.header li {
+      font-size: 1.25em;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      color: #333; }
+      .event-page .event-section .grab .item ul.header li:first-child {
+        max-width: 150px; }
+      .event-page .event-section .grab .item ul.header li + li {
+        padding-left: 20px;
+        width: calc(100% - 150px); }
     .event-page .event-section .grab .item ul.footer {
       display: inline-block; }
       @media (max-width: 767px) {
@@ -10294,10 +10424,15 @@ div.placeholder-custom {
     box-shadow: none;
     overflow: inherit;
     border-radius: 0;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-top: 12px; }
     @media (max-width: 767px) {
       .event-page .event-section .grab .item .progress {
         height: 2px; } }
+    .event-page .event-section .grab .item .progress.default .text {
+      text-align: left;
+      left: 0;
+      right: inherit; }
     .event-page .event-section .grab .item .progress .progress-bar {
       color: transparent;
       min-width: inherit;
@@ -10312,7 +10447,6 @@ div.placeholder-custom {
         background: #fff;
         box-shadow: 0 2px 3px 0 rgba(32, 41, 47, 0.43);
         position: absolute;
-        right: 0;
         top: -5px; }
         @media (max-width: 767px) {
           .event-page .event-section .grab .item .progress .progress-bar .control {
@@ -10325,7 +10459,8 @@ div.placeholder-custom {
       position: absolute;
       top: 6px;
       right: 0;
-      text-align: left; }
+      text-align: right;
+      white-space: nowrap; }
       .event-page .event-section .grab .item .progress .text b {
         font-weight: 800;
         font-size: 14px; }
@@ -15236,12 +15371,14 @@ div.placeholder-custom {
       width: auto; } }
   .modal-schedule .modal-content {
     box-shadow: none;
-    border-radius: 0; }
+    border-radius: 0;
+    border-color: #979797;
+    box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.35); }
   .modal-schedule .modal-header {
     text-align: center;
-    border: 0 none;
-    padding-top: 27px;
-    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-top: 17px;
+    padding-bottom: 17px;
     position: relative; }
     @media (max-width: 767px) {
       .modal-schedule .modal-header {
@@ -15259,56 +15396,59 @@ div.placeholder-custom {
     .modal-schedule .modal-header .close {
       margin-top: 0;
       position: absolute;
-      top: 18px;
-      right: 23px; }
+      top: 16px;
+      right: 20px; }
       @media (max-width: 767px) {
         .modal-schedule .modal-header .close {
           top: 7px;
           right: 5px; } }
   .modal-schedule .modal-body {
-    padding-bottom: 8px;
+    padding: 6px 30px;
     font-size: 16px;
     line-height: 140%;
     text-align: center; }
     @media (max-width: 767px) {
       .modal-schedule .modal-body {
         padding-bottom: 10px; } }
-    .modal-schedule .modal-body p {
-      font-size: 1.4375em;
-      color: #313432; }
-      @media (max-width: 767px) {
-        .modal-schedule .modal-body p {
-          font-size: 1em; } }
-      @media (max-width: 359px) {
-        .modal-schedule .modal-body p {
-          font-size: 0.75em; } }
-  .modal-schedule .modal-footer {
-    padding-bottom: 60px;
-    text-align: center;
-    border: 0 none; }
-    @media (max-width: 767px) {
-      .modal-schedule .modal-footer {
-        margin: 0 -10px;
-        padding-bottom: 13px; }
-        .modal-schedule .modal-footer:after {
-          content: '';
-          display: block;
-          clear: both; } }
-    .modal-schedule .modal-footer .btn {
-      margin: 0 7px;
-      width: 146px;
-      height: 44px;
-      border-radius: 0;
-      font-size: 1.25em;
+    .modal-schedule .modal-body .table-css {
+      width: 100%; }
+    .modal-schedule .modal-body .th {
+      text-align: left;
+      font-size: 0.9375em;
       font-family: "Lato", sans-serif;
-      padding: 0; }
-      @media (max-width: 767px) {
-        .modal-schedule .modal-footer .btn {
-          float: left;
-          width: calc(50% - 20px);
-          margin: 0 10px;
-          height: 32px;
-          font-size: 1em; } }
+      font-weight: 700; }
+      .modal-schedule .modal-body .th span {
+        text-align: left; }
+    .modal-schedule .modal-body .td {
+      text-align: left;
+      font-size: 0.9375em;
+      line-height: 24px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400; }
+      .modal-schedule .modal-body .td span {
+        text-align: right; }
+    .modal-schedule .modal-body .td-date {
+      width: calc(100% - 200px); }
+    .modal-schedule .modal-body .td-from,
+    .modal-schedule .modal-body .td-to {
+      width: 100px; }
+      .modal-schedule .modal-body .td-from span,
+      .modal-schedule .modal-body .td-to span {
+        width: 60px;
+        margin-left: 40px;
+        display: inline-block;
+        float: left; }
+    .modal-schedule .modal-body section {
+      max-height: 240px;
+      overflow-y: auto; }
+
+.on-nicescroll .modal-schedule .modal-body section {
+  overflow-y: hidden; }
+
+.on-nicescroll .modal-schedule .modal-body .wrap-dropdown-menu-inner {
+  max-height: 240px;
+  margin-right: 16px;
+  position: relative; }
 
 .modal-bill {
   font-size: 16px;
@@ -15408,8 +15548,8 @@ div.placeholder-custom {
   .modal-reminder .modal-header {
     text-align: center;
     border: 0 none;
-    padding-top: 27px;
-    padding-bottom: 20px;
+    padding-top: 17px;
+    padding-bottom: 5px;
     position: relative; }
     @media (max-width: 767px) {
       .modal-reminder .modal-header {
@@ -15427,7 +15567,7 @@ div.placeholder-custom {
     .modal-reminder .modal-header .close {
       margin-top: 0;
       position: absolute;
-      top: 18px;
+      top: 10px;
       right: 23px; }
       @media (max-width: 767px) {
         .modal-reminder .modal-header .close {
