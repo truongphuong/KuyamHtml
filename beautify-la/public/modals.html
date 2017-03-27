@@ -299,6 +299,9 @@
                         <a href="#" title="" data-target="#cropBannerModal" data-toggle="modal">crop banner</a>
                     </dd>
                     <dd>
+                        <a href="#" title="" data-target="#cropPhotoModal" data-toggle="modal">crop photo</a>
+                    </dd>
+                    <dd>
                         <a href="#" title="" data-target="#categoryModal" data-toggle="modal">category</a>
                     </dd>
                     <dd>
@@ -2978,13 +2981,13 @@
                                     <label for="txtFirstName1">
                                         first name: <span class="alert-error">*</span>
                                     </label>
-                                    <input id="txtFirstName1" class="form-control" type="text">
+                                    <input id="txtFirstName1" class="form-control" type="text" />
                                 </div>
                                 <div class="col-timer col-last-name">
                                     <label for="txtLastName1">
                                         first name: <span class="alert-error">*</span>
                                     </label>
-                                    <input id="txtLastName1" class="form-control" type="text">
+                                    <input id="txtLastName1" class="form-control" type="text" />
                                 </div>
                             </div>
                             <header class="section-header timer-guest">
@@ -3415,13 +3418,13 @@
                                     <label for="txtFirstName1">
                                         first name: <span class="alert-error">*</span>
                                     </label>
-                                    <input id="txtFirstName1" class="form-control" type="text">
+                                    <input id="txtFirstName1" class="form-control" type="text" />
                                 </div>
                                 <div class="col-timer col-last-name">
                                     <label for="txtLastName1">
                                         first name: <span class="alert-error">*</span>
                                     </label>
-                                    <input id="txtLastName1" class="form-control" type="text">
+                                    <input id="txtLastName1" class="form-control" type="text" />
                                 </div>
                             </div>
                             <header class="section-header timer-guest">
@@ -4739,6 +4742,41 @@
         </div>
     </div>
     <!-- /#cropBannerModal -->
+    <!-- #cropPhotoModal -->
+    <div id="cropPhotoModal" class="modal fade" role="dialog" aria-labelledby="cropPhotoModalLabel"
+        data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-crop-photo">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
+                    <h4 id="cropPhotoModalLabel" class="modal-title">
+                        Event image</h4>
+                    <!--<p>
+                    <a class="change" title="" href=""><span>Change</span></a>
+                    <input type="file" class="hide" />
+                </p>-->
+                </div>
+                <div class="modal-body">
+                    <div id="croppiePhoto" class="croppie-section">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <button class="btn btn-negative" data-dismiss="modal" type="button">
+                                cancel</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn btn-positive" data-dismiss="modal" type="button">
+                                save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#cropPhotoModal -->
     <!-- #categoryModal -->
     <div id="categoryModal" class="modal fade" role="dialog" aria-labelledby="categoryModalLabel"
         data-keyboard="false" data-backdrop="static">
@@ -4982,31 +5020,49 @@
                 </div>
                 <div class="modal-body">
                     <section class="info">
-                    <label>Contact info</label>
+                    <label class="label-form">Contact info</label>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6"></div>
-                        <div class="col-xs-12 col-sm-6"></div>
-                        <div class="col-xs-12 col-sm-6"></div>
-                        <div class="col-xs-12 col-sm-6"></div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtFirstName" class="placeholder-custom validate">
+                                <div class="placeholder">First Name<span class="required">∗</span></div>
+                                <input id="txtFirstName" type="text" class="form-control" />
+                                <span class="error">Invalid</span>
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtLastName" class="placeholder-custom">
+                                <div class="placeholder">Last Name<span class="required">∗</span></div>
+                                <input id="txtLastName" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <input id="txtCellPhone" type="text" class="form-control" placeholder="Cell Phone" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtEmail" class="placeholder-custom">
+                                <div class="placeholder">Email<span class="required">∗</span></div>
+                                <input id="txtEmail" type="text" class="form-control" />
+                            </label>
+                        </div>
                     </div>
                 </section>
                     <section class="bill">
-                    <label>Contact info</label>
+                    <label class="label-form">Contact info</label>
                     <div class="table-css">
                         <div class="tr">
-                            <div class="td td-name"><span>Adults really long ticket name oh super long ($50) x2<span><hr /></div>
+                            <div class="td td-name"><hr /><span>Adults really long ticket name oh super long ($50) x2</span></div>
                             <div class="td td-price">$100.00</div>
                         </div>
                         <div class="tr">
-                            <div class="td td-name"><span>Kids tickets ($25) x3<span><hr /></div>
+                            <div class="td td-name"><hr /><span>Kids tickets ($25) x3</span></div>
                             <div class="td td-price">$75.00</div>
                         </div>
                         <div class="tr">
-                            <div class="td td-name"><span>Dogs tickets ($10) x1<span><hr /></div>
+                            <div class="td td-name"><hr /><span>Dogs tickets ($10) x1</span></div>
                             <div class="td td-price">$10.00</div>
                         </div>
                     </div>
-                    <ul>
+                    <ul class="clearfix">
                         <li>Total due:</li>
                         <li>$185.00</li>
                     </ul>
@@ -5087,6 +5143,7 @@
     <script type="text/javascript" src="content/js/modals/ui-offerings.js"></script>
     <script type="text/javascript" src="content/js/modals/ui-terms.js"></script>
     <script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
+    <script type="text/javascript" src="content/js/modals/ui-crop-photo.js"></script>
     <script type="text/javascript" src="content/js/modals/ui-schedule.js"></script>
 </body>
 </html>

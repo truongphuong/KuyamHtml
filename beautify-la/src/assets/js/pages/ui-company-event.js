@@ -11,8 +11,11 @@ $(document).ready(function(){
     iscrollSelect('divMailchimpSelect');
     iscrollSelect('divConstantContactSelect');
     iscrollSelect('divStateSelect');
-    iscrollSelect('divTagsSelect');
 
+    $('#chosenTags').chosen();
+    $('#chosenTags1').chosen({
+        isShowDropDown: true
+    });
 
     var $txtDateStart = $('#txtDateStart');
     var $sectionDateStart = $('#sectionDateStart');

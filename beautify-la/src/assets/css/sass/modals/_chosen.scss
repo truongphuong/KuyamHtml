@@ -1,0 +1,58 @@
+.modal-chosen{
+    .modal-dialog{
+        margin-top: 25px !important;
+
+        @media (max-width: 767px) {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 25px !important;
+        }
+    }
+
+    .chosen-container{
+        &.chosen-with-drop {
+            .chosen-drop{
+                position: relative;
+            }
+        }
+    }
+
+    .btn-ready,
+    .btn-ready:focus,
+    .btn-ready:hover {
+        width: 45%;
+        height: 33px;
+        background: $positive;
+        color:$white;
+        display:block;
+        margin:25px auto;
+        padding:0;
+    }
+
+    .icon-ready {
+        width: 10px;
+        height: 7px;
+        background:url(../images/ui/modals/chosen/icon-ready.png) center center no-repeat;
+        background-size: 10px auto;
+        position: relative;
+        bottom: 2px;
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+            background-image:url(../images/ui/modals/chosen/icon-ready@2x.png);
+        }
+    }
+}
+
+.on-nicescroll {
+    .chosen-container {
+        .wrap-nicescroll.div-results {
+            max-height: 125px;
+        }
+    }
+}

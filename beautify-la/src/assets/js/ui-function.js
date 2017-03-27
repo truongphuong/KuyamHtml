@@ -377,11 +377,13 @@ function crop(section, file, modal, croppie, type){
     });
 
     $modal.on('shown.bs.modal', function (){
+        var viewportW = 0;
         var viewportH = 0;
         var boundaryH = 0;
         var boundaryW = 0;
         // type = 1 --> scrop banner
         if(type === 1){
+            viewportW = '100%';
             if (!isView.mobile()) {
                 viewportH = 218;
                 boundaryH = 297;
@@ -396,9 +398,15 @@ function crop(section, file, modal, croppie, type){
         // type = 2 --> scrop event's photo
         if(type === 2){
             if (!isView.mobile()) {
+                viewportW = 269;
+                viewportH = 346;
                 boundaryW = 624;
+                boundaryH = 430;
             } else {
+                viewportW = 200;
+                viewportH = 257;
                 boundaryW = $croppie.width();
+                boundaryH = 341;
             }
         }
 
@@ -406,13 +414,13 @@ function crop(section, file, modal, croppie, type){
 
         $croppie.croppie({
             viewport: {
-                width: 269,
-                height: 346,
+                width: viewportW,
+                height: viewportH,
                 type: 'square' //default 'square'
             },
             boundary: {
                 width: boundaryW,
-                height: 430
+                height: boundaryH
             },
             customClass: ''
             //enableExif: true
