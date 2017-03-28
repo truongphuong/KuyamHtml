@@ -85,7 +85,7 @@ $(document).ready(function(){
 
     settingsModal();
 
-    $('.modal').on('shown.bs.modal', centerModal);	
+    $('.modal').on('shown.bs.modal', centerModal);
 
     placeholderCustom();
 
@@ -107,6 +107,14 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on('click', '#site-header .navbar-toggle', function(){
+        $('html').addClass('sidebar-open');
+    });
+
+    $(document).on('click', '#sidebar .close', function(){
+        $('html').removeClass('sidebar-open');
+    });
+
     monitorResize(function(){
         $('.modal:visible').each(centerModal);
 
@@ -119,7 +127,11 @@ $(document).ready(function(){
         if(hasContentArea == 1){
             selectAreaScroll.refresh();
         }
-		
+
 		inputCustomResize();
+
+        if(!isView.mobile()){
+            $('html').removeClass('sidebar-open');
+        }
     });
 });

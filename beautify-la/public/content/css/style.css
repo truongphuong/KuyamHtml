@@ -1188,7 +1188,8 @@ body {
   font: 20px/24px ralewaymedium, sans-serif;
   color: #000;
   overflow-x: hidden;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  position: relative; }
   @media (max-width: 767px) {
     body {
       font-size: 14px;
@@ -3623,6 +3624,78 @@ div.placeholder-custom {
   .company-page #nav-affix {
     width: 240px;
     padding-left: 0; } }
+
+html {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s; }
+
+.sidebar {
+  width: 80%;
+  position: absolute;
+  left: -80%;
+  height: 100%;
+  background: #fff; }
+  .sidebar div {
+    position: relative;
+    padding: 54px 45px; }
+  .sidebar .close {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    background: url(../images/ui/master/sidebar/icon_close.png) center center no-repeat;
+    background-size: 19px auto;
+    position: absolute;
+    right: 3px;
+    top: 6px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+      .sidebar .close {
+        background-image: url(../images/ui/master/sidebar/icon_close@3x.png); } }
+  .sidebar dt {
+    font-size: 1.1875em;
+    line-height: 43px;
+    font-family: "Lato", sans-serif;
+    color: #f3472d;
+    font-weight: 400; }
+    .sidebar dt strong {
+      font-weight: 700; }
+  .sidebar dd {
+    font-size: 1.1875em;
+    line-height: 43px;
+    font-family: "Lato", sans-serif;
+    color: #333;
+    font-weight: 400; }
+    .sidebar dd a {
+      color: #333;
+      text-decoration: none; }
+    .sidebar dd.active a {
+      color: #f3472d;
+      pointer-events: none; }
+
+.sidebar-open {
+  -webkit-transform: translate3d(80%, 0, 0);
+          transform: translate3d(80%, 0, 0); }
+  .sidebar-open body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  .sidebar-open .wrapper {
+    position: relative;
+    z-index: 1; }
+    .sidebar-open .wrapper:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 13; }
 
 /**
  * Pages

@@ -47,54 +47,75 @@
     <link type="text/css" rel="stylesheet" href="content/css/settings.css" />
 </head>
 <body>
-    <div class="wrapper company-page company-dashboard-page settings-section">
-        <div id="site-header" class="site-header bg-black">
-            <div class="container">
-                <h1 class="company-name">
-                    Kourosh Soccer Club</h1>
-                <div class="clear visible-xs visible-sm">
-                </div>
-                <!-- .navbar-collapse -->
-                <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right nav-main">
-                        <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
-                            href="#">Hi Kourosh</a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <li id="dashboardNav"><a href="#" title="Dashboard">Dashboard</a></li>
-                                <li id="settingsNav"><a href="#" title="Settings">Settings</a></li>
-                                <li><a href="#" title="Log out" class="link-sign-out">Log out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
+    <div id="sidebar" class="sidebar visible-xs">
+        <div>
+            <button class="close">
+            </button>
+            <dl>
+                <dt>Hi <strong>Kourosh</strong></dt>
+                <dd id="dashboardNav" class="active">
+                    <a title="" href="#">Dashboard</a></dd>
+                <dd id="settingsNav">
+                    <a title="" href="#">Settings</a></dd>
+                <dd id="logOutNav">
+                    <a title="" href="#">Log out</a></dd>
+            </dl>
         </div>
-        <div class="relative">
-            <!-- slide-feature -->
-            <div class="slide-feature">
-                <div id="carousel-desktop" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-desktop" data-slide-to="0" class="active"></li>
-                    </ol>
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active" style="background-image: url(content/images/assets/banner_default.png);"
-                            data-toggle="modal" data-target="#modal-banner">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
+    </div>
+    <div class="wrapper company-page company-settings-page settings-section">
+        <div class="header-banner default">
+            <div id="site-header" class="site-header bg-black">
+                <div class="container">
+                    <h1 class="company-name">
+                        Kourosh Soccer Club</h1>
+                    <button class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <div class="clear visible-xs visible-sm">
                     </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-desktop" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
-                            href="#carousel-desktop" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
-                            </span></a>
+                    <!-- .navbar-collapse -->
+                    <div class="collapse navbar-collapse menuList" id="bs-navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right nav-main">
+                            <li class="li-account hidden-xs dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                href="#">Hi Kourosh</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li id="dashboardNav"><a href="#" title="Dashboard">Dashboard</a></li>
+                                    <li id="settingsNav"><a href="#" title="Settings">Settings</a></li>
+                                    <li><a href="#" title="Log out" class="link-sign-out">Log out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
             </div>
-            <!-- /slide-feature -->
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div id="companyBanner" class="item active" data-image="content/images/assets/slide_nails.jpg"
+                        style="background-image: url(content/images/assets/slide_nails.jpg);">
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel" role="button" data-slide="prev"><span
+                    class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                        href="#carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
+                        </span></a>
+            </div>
+            <ul class="control">
+                <li class="edit"><span>Edit</span></li>
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+            <div class="upload">
+                Upload banner image</div>
         </div>
+        <input type="file" id="fileBanner" class="hide" />
         <!-- .main-content -->
         <div class="main-content settings-page clearfix">
             <div class="container">

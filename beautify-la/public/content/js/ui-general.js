@@ -105,6 +105,14 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click', '#site-header .navbar-toggle', function () {
+        $('html').addClass('sidebar-open');
+    });
+
+    $(document).on('click', '#sidebar .close', function () {
+        $('html').removeClass('sidebar-open');
+    });
+
     monitorResize(function () {
         $('.modal:visible').each(centerModal);
 
@@ -119,5 +127,9 @@ $(document).ready(function () {
         }
 
         inputCustomResize();
+
+        if (!isView.mobile()) {
+            $('html').removeClass('sidebar-open');
+        }
     });
 });
