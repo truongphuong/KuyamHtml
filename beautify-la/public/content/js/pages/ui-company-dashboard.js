@@ -1,6 +1,7 @@
 'use strict';
 
 document.getElementById('dashboardNav').className = "active";
+document.getElementById('dashboardNav1').className = "active";
 
 $(document).ready(function () {
 	$('.select-settings').selectpicker();

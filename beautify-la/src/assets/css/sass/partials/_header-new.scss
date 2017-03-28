@@ -1,20 +1,18 @@
-.wrapper .site-header{
-    background: transparent url(../images/ui/master/header/bg.png) center center;
-    background-size: auto 176px;
-    height: 170px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 12;
-    font-size: 16px;
-    line-height: 150%;
-    font-family: $primary;
-}
+.wrapper {
+    .site-header{
+        background: transparent url(../images/ui/master/header/bg.png) center center;
+        background-size: auto 176px;
+        height: 170px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 12;
+        font-size: 16px;
+        line-height: 150%;
+        font-family: $primary;
 
-@media (min-width: 1270px){
-    .wrapper .site-header .container{
-        //width: 1230px;
+
     }
 }
 
@@ -312,6 +310,17 @@
         color:#fff;
         margin-left: 26px;
         padding:0;
+
+        &.li-account{
+            max-width: 180px;
+
+            a {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
     }
     .wrapper .site-header .navbar-collapse li:first-child{
         margin-left: 0;
@@ -459,29 +468,39 @@
         color: $positive;
     }
 }
+
 @media (min-width:992px){
-    .wrapper .region-section .bootstrap-select.btn-group .btn .filter-option{
-        max-width:150px;
-        overflow:hidden;
-        text-overflow:ellipsis;
-        white-space:nowrap;
-    }
-    .wrapper .site-header .navbar-collapse{
-        padding-top: 24px;
-    }
-    .wrapper .site-header .navbar-collapse .nav-main{
-        margin-top: 9px;
+    .wrapper {
+        .region-section .bootstrap-select.btn-group .btn .filter-option{
+            max-width:150px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+
+        .site-header {
+            .navbar-collapse{
+                padding-top: 24px;
+
+                .nav-main{
+                    margin-top: 9px;
+                }
+            }
+        }
     }
 }
 
 @media (max-width:991px){
-    .wrapper .region-section{
-        float:left;
-        margin:31px 0 0;
-        clear:inherit;
-    }
-    .wrapper .navbar-collapse{
-        padding-top:0;
+    .wrapper {
+        .region-section{
+            float:left;
+            margin:31px 0 0;
+            clear:inherit;
+        }
+
+        .navbar-collapse{
+            padding-top:0;
+        }
     }
 }
 

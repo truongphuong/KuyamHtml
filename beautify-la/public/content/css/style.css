@@ -2921,6 +2921,13 @@ div.placeholder-custom {
     color: #fff;
     margin-left: 26px;
     padding: 0; }
+    .wrapper .site-header .navbar-collapse li.li-account {
+      max-width: 180px; }
+      .wrapper .site-header .navbar-collapse li.li-account a {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
   .wrapper .site-header .navbar-collapse li:first-child {
     margin-left: 0; }
   .wrapper .site-header .navbar-collapse li a {
@@ -3034,8 +3041,8 @@ div.placeholder-custom {
     white-space: nowrap; }
   .wrapper .site-header .navbar-collapse {
     padding-top: 24px; }
-  .wrapper .site-header .navbar-collapse .nav-main {
-    margin-top: 9px; } }
+    .wrapper .site-header .navbar-collapse .nav-main {
+      margin-top: 9px; } }
 
 @media (max-width: 991px) {
   .wrapper .region-section {
@@ -3711,12 +3718,15 @@ html {
     line-height: 100%;
     margin: 28px 0 0;
     float: left;
-    cursor: text; }
+    cursor: text;
+    display: block;
+    width: calc(100% - 200px); }
     @media (max-width: 767px) {
       .company-page .site-header h1 {
         font-size: 1.125em;
         margin-top: 8px;
-        line-height: 32px; } }
+        line-height: 32px;
+        width: calc(100% - 50px); } }
 
 @media (max-width: 767px) {
   .company-page .site-footer p {
@@ -5501,92 +5511,6 @@ html {
   font-size: 16px;
   line-height: 150%;
   font-family: "Lato", sans-serif; }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .clear {
-      display: none !important; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse {
-      background: transparent;
-      display: block; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse .navbar-nav {
-      float: right; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse .dropdown-menu {
-      background: transparent;
-      border: 0 none;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      display: block;
-      background-clip: padding-box;
-      opacity: .3;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-      filter: alpha(opacity=30);
-      -webkit-transform-origin: top;
-      transform-origin: top;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-transform: scale(1, 0);
-      transform: scale(1, 0);
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear;
-      right: 0;
-      left: inherit; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse .dropdown-menu li a {
-      display: block;
-      text-align: right;
-      padding-left: 34px;
-      padding-right: 34px; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li {
-      width: auto;
-      padding: 0;
-      margin: 0;
-      float: none;
-      text-align: right; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.active a {
-      color: #f3472d; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li a {
-      color: #fff;
-      margin: 0;
-      display: inline-block; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account {
-      display: block !important; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account.open .dropdown-menu {
-      -webkit-transform: scale(1, 1);
-      transform: scale(1, 1);
-      opacity: 1;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      filter: alpha(opacity=100); } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account > a {
-      padding: 12px 34px; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account > a:before, .company-settings-page .site-header .navbar-collapse li.li-account > a:after {
-      content: '';
-      width: 25px;
-      height: 25px;
-      background: url(../images/ui/master/header/account.png) no-repeat;
-      background-size: 25px auto;
-      position: absolute;
-      top: 7px; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account > a:before {
-      left: 0;
-      background-position: center 0; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li.li-account > a:after {
-      right: 0;
-      background-position: center -25px; } }
-  @media (max-width: 767px) {
-    .company-settings-page .site-header .navbar-collapse li a {
-      background: transparent;
-      border: 0 none; } }
   .company-settings-page .main-content {
     padding: 0; }
   .company-settings-page .content {

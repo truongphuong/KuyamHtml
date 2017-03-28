@@ -1,6 +1,7 @@
 'use strict';
 
 document.getElementById('dashboardNav').className = "active";
+document.getElementById('dashboardNav1').className = "active";
 
 $(document).ready(function(){
 	$('.select-settings').selectpicker();
@@ -35,7 +36,7 @@ $(document).ready(function(){
 	$('.popover-confirm .icon-yes').click(function(e){
 		$(this).parents('.popover-confirm').hide();
 	});
-	
+
 	function placeholderCustom($obj){
 		var inputVal = $obj.val();
 		if(inputVal !== ''){
@@ -44,7 +45,7 @@ $(document).ready(function(){
 			$obj.removeClass('has-value');
 		}
 	}
-	
+
 	$( document ).ready(function() {
 		$('.placeholder-custom .form-control').each(function(){
 			var $this = $(this);
@@ -53,7 +54,7 @@ $(document).ready(function(){
 			var $this = $(this);
 			placeholderCustom($this);
 		});
-		
+
 		$('input[name="whereEvent"]').on('change', function(){
 			var $radioChecked = $('input[name="whereEvent"]:checked');
 			var inputVal = parseInt($radioChecked.val());
@@ -64,5 +65,5 @@ $(document).ready(function(){
 				$section.addClass('disable');
 			}
 		});
-	});	
+	});
 });

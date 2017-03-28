@@ -1,6 +1,7 @@
 'use strict';
 
 document.getElementById('settingsNav').className = "active";
+document.getElementById('settingsNav1').className = "active";
 
 $(document).ready(function () {
 
