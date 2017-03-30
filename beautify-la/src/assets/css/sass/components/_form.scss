@@ -268,8 +268,57 @@
         text-align: center;
     }
 
+    .time-control {
+        border: 1px solid #797979;
+        border-right: 0 none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 67px);
+        border-right: 0 none;
+        border-radius: 2px 0 0 2px;
+        text-align: center;
+        padding: 0 5px;
+        font-size: 20px;
+
+        input {
+            border: none;
+            width: 30px;
+            padding: 0;
+            margin: 0;
+            cursor: default;
+            color: #242424;
+            height: 38px;
+            text-align: right;
+
+            @media (max-width: 767px) {
+                height: 34px;
+            }
+
+            &[disabled] {
+                cursor: default;
+                opacity: .5;
+            }
+
+            &:focus {
+                color: $base;
+            }
+
+            &.mode {
+                width: 22px;
+                margin-left: 3px;
+            }
+        }
+
+        span {
+            + input {
+                text-align: left;
+            }
+        }
+    }
+
     .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
-        width: 82px;
+        width: 85px;
     }
 
     .bootstrap-select {

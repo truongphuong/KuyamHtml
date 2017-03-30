@@ -43,6 +43,7 @@
     <link type="text/css" rel="stylesheet" href="content/css/croppie.css" />
     <link type="text/css" rel="stylesheet" href="content/css/tooltipster.css" />
     <link type="text/css" rel="stylesheet" href="content/css/chosen.css" />
+    <link type="text/css" rel="stylesheet" href="content/css/inputtime.min.css" />
     <link type="text/css" rel="stylesheet" href="content/css/owl.carousel.css" />
     <link type="text/css" rel="stylesheet" href="content/css/owl.theme.css" />
     <link type="text/css" rel="stylesheet" href="content/css/style.css" />
@@ -988,7 +989,7 @@
                 <div class="relative">
                     <span class="label-form">From</span>
                     <div class="hour-custom">
-                        <input id="txtFrom" type="text" class="form-control" value="8:00" />
+                        <div class="time-control"><input autocomplete="off" ng-disabled="" type="text" name="hour" class="hour ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="hour"><span>:</span><input autocomplete="off" ng-disabled="" type="text" name="minute" class="minute ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="minute"></div>
                         <select id="fromSectlect">
                             <option selected value="1">AM</option>
                             <option selected value="1">PM</option>
@@ -1000,7 +1001,7 @@
                 <div class="relative">
                     <span class="label-form">To</span>
                     <div class="hour-custom">
-                        <input id="txtTo" type="text" class="form-control" value="8:00" />
+                        <div class="time-control"><input autocomplete="off" ng-disabled="" type="text" name="hour" class="hour ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="hour"><span>:</span><input autocomplete="off" ng-disabled="" type="text" name="minute" class="minute ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="minute"></div>
                         <select id="toSelect">
                             <option selected value="1">AM</option>
                             <option selected value="1">PM</option>

@@ -43,38 +43,40 @@
 </style>
 
 <style type="text/css">	
-	.img-desktop,  * [aria-labelledby="img-desktop"]{
-		display:inline-block !important; 
-	}
-	.img-mobile,  * [aria-labelledby="img-mobile"]{
-		display:none !important;
-	}
-	.mj-desktop,  * [aria-labelledby="mj-desktop"]{
-		display:table !important; 
-		width:auto !important;
-		height:auto !important;
-	}
-	.mj-mobile,  * [aria-labelledby="mj-mobile"]{
-		display:none !important; 
-		width:0px !important;
-		height:0px !important;
-	}
-	.banner-bg,  * [aria-labelledby="banner-bg"]{
-		background-repeat:no-repeat !important;
-		background-size:cover !important;
-	}
-	
-	.dropdown-menu,  * [aria-labelledby="dropdown-menu"]{
-		display: none !important;
-	}
-	
-	.dropdown button,  * [aria-labelledby="dropdown"] button {
-		outline: 0 none !important;
-	}
-	.dropdown button:active + .dropdown-menu,  * [aria-labelledby="dropdown"] button:active + * [aria-labelledby="dropdown-menu"],
-	.dropdown button:visited + .dropdown-menu,  * [aria-labelledby="dropdown"] button:visited + * [aria-labelledby="dropdown-menu"],
-	.dropdown button:focus + .dropdown-menu,  * [aria-labelledby="dropdown"] button:focus + * [aria-labelledby="dropdown-menu"]{
-		display: block !important;
+	@media only screen and (min-width:768px) {	
+		.img-desktop,  * [aria-labelledby="img-desktop"]{
+			display:inline-block !important; 
+		}
+		.img-mobile,  * [aria-labelledby="img-mobile"]{
+			display:none !important;
+		}
+		.mj-desktop,  * [aria-labelledby="mj-desktop"]{
+			display:table !important; 
+			width:auto !important;
+			height:auto !important;
+		}
+		.mj-mobile,  * [aria-labelledby="mj-mobile"]{
+			display:none !important; 
+			width:0px !important;
+			height:0px !important;
+		}
+		.banner-bg,  * [aria-labelledby="banner-bg"]{
+			background-repeat:no-repeat !important;
+			background-size:cover !important;
+		}
+		
+		/*.dropdown-menu,  * [aria-labelledby="dropdown-menu"]{
+			display: none !important;
+		}*/
+		
+		.dropdown button,  * [aria-labelledby="dropdown"] button {
+			outline: 0 none !important;
+		}
+		/*.dropdown button:active + .dropdown-menu,  * [aria-labelledby="dropdown"] button:active + * [aria-labelledby="dropdown-menu"],
+		.dropdown button:visited + .dropdown-menu,  * [aria-labelledby="dropdown"] button:visited + * [aria-labelledby="dropdown-menu"],
+		.dropdown button:focus + .dropdown-menu,  * [aria-labelledby="dropdown"] button:focus + * [aria-labelledby="dropdown-menu"]{
+			display: block !important;
+		}*/
 	}
 	
 	@media only screen and (max-width:767px) {
@@ -130,12 +132,12 @@
 <div class="mj-wrapper" aria-labelledby="mj-wrapper" style="width:640px;margin: 0 auto;">
     <div style="background:#ffffff;">
 	<!-- Begin Header -->
-	<table class="banner-bg" aria-labelledby="banner-bg" cellpadding="0" cellspacing="0" border="0" style="background:url(../public/content/images/email/desktop/banner.jpg) center center / cover no-repeat;width:100%;font-size:0px;" background="../public/content/images/email/desktop/banner.jpg">
+	<table class="banner-bg" aria-labelledby="banner-bg" cellpadding="0" cellspacing="0" border="0" style="background:url(http://dev.beautify.us/content/v2/images/email/desktop/banner.jpg) center center / cover no-repeat;width:100%;font-size:0px;" background="http://dev.beautify.us/content/v2/images/email/desktop/banner.jpg">
 		<tr>
 			<td class="banner-outlook" aria-labelledby="banner-outlook" height="88" style="text-align:center;vertical-align:bottom;font-size:0;">
 				<!--[if gte mso 9]>
 				<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fillcolor="none" fill="#ccd9e2" stroke="false" style="width:640px;height:88px;position:absolute;top:0px;left:0px;">
-				<v:fill type="frame" src="../public/content/images/email/desktop/banner.jpg" />
+				<v:fill type="frame" src="http://dev.beautify.us/content/v2/images/email/desktop/banner.jpg" />
 				</v:rect>
 				<![endif]-->
 			</td>
@@ -255,40 +257,39 @@
 				<div style="text-align:center;">
 					<div class="dropdown" aria-labelledby="dropdown" style="width:239px;margin:0 auto;">
 						<!--[if !mso]><!-->	    
-						<button style="height:44px;width:100%;border:1px solid #f2472d;background: #ffffff;font-size:20px;color:#f2472d;font-family:'Lato',sans-serif;font-weight:400;">
+						<!--<button style="height:44px;width:100%;border:1px solid #f2472d;background: #ffffff;font-size:20px;color:#f2472d;font-family:'Lato',sans-serif;font-weight:400;">
 							<span class="text" aria-labelledby="text" style="display:inline-block;">Add to calendar</span>
-							<img class="caret img-desktop" aria-labelledby="caret" src="../public/content/images/email/desktop/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
-							<img class="caret img-mobile" aria-labelledby="caret" src="../public/content/images/email/mobile/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
-						</button>
+							<img class="caret img-desktop" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/desktop/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
+							<img class="caret img-mobile" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/mobile/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
+						</button>-->
 						<!--<![endif]-->
-						<ul class="dropdown-menu" aria-labelledby="dropdown-menu" style="margin:0;padding:0;list-style:none;width:1005;border:1px solid #f2472d;border-top:0 none;background: #ffffff;font-size:14px;color:#f2472d;font-family:'Lato',sans-serif;font-weight:400;">
-							<!--[if mso]>
-							<li style="height:44px;width:100%;border:1px solid #f2472d;background: #ffffff;font-size:20px;color:#f2472d;font-family:'Lato',sans-serif;font-weight:400;">
+						<ul class="dropdown-menu" aria-labelledby="dropdown-menu" style="margin:0;padding:0;list-style:none;width:100%;border:1px solid #f2472d;background: #ffffff;font-size:20px;font-family:'Lato',sans-serif;font-weight:400;">
+							<li style="line-height:44px;border-bottom:1px solid #f2472d;color:#f2472d;margin:0;">
 								<span class="text" aria-labelledby="text" style="display:inline-block;">Add to calendar</span>
-								<img class="caret" aria-labelledby="caret" src="../public/content/images/email/desktop/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
+								<img class="caret img-desktop" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/desktop/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
+								<img class="caret img-mobile" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/mobile/icon_arrow@3x.png" style="margin-left:20px;display:inline-block;width:16px;height:16px;" />
 							</li>
-							<![endif]-->
-							<li>
-								<a title="" href="" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
-									<img class="img-apple" aria-labelledby="caret" src="../public/content/images/email/apple@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:20px;height:24px;" />
+							<li style="margin:0;">
+								<a target="_blank" title="" href="http://dev.beautify.us" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
+									<img class="img-apple" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/apple@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:20px;height:24px;" />
 									<span class="text" aria-labelledby="text" style="display:inline-block;">Apple iCalendar</span>
 								</a>
 							</li>
-							<li>								
-								<a title="" href="" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
-									<img class="img-google" aria-labelledby="caret" src="../public/content/images/email/google@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:15px;height:23px;" />
+							<li style="margin:0;">								
+								<a target="_blank" title="" href="http://dev.beautify.us" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
+									<img class="img-google" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/google@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:15px;height:23px;" />
 									<span class="text" aria-labelledby="text" style="display:inline-block;">Google</span>
 								</a>
 							</li>
-							<li>								
-								<a title="" href="" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
-									<img class="img-outlook" aria-labelledby="caret" src="../public/content/images/email/outlook@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:20px;height:20px;" />
+							<li style="margin:0;">								
+								<a target="_blank" title="" href="http://dev.beautify.us" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
+									<img class="img-outlook" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/outlook@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:20px;height:20px;" />
 									<span class="text" aria-labelledby="text" style="display:inline-block;">Outlook</span>  
 								</a>  
 							</li>
-							<li>								
-								<a title="" href="" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
-									<img class="img-yahoo" aria-labelledby="caret" src="../public/content/images/email/yahoo@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:25px;height:18px;" />
+							<li style="margin:0;">								
+								<a target="_blank" title="" href="http://dev.beautify.us" style="text-decoration:none;color:#4a4a4a; line-height:44px;">
+									<img class="img-yahoo" aria-labelledby="caret" src="http://dev.beautify.us/content/v2/images/email/yahoo@2x.png" style="margin-right:5px;margin-bottom: -5px;display:inline-block;width:25px;height:18px;" />
 									<span class="text" aria-labelledby="text" style="display:inline-block;">Yahoo</span>
 								</a>
 							</li>
