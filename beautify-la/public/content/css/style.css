@@ -3632,14 +3632,6 @@ div.placeholder-custom {
     width: 240px;
     padding-left: 0; } }
 
-html {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform .4s;
-  transition: -webkit-transform .4s;
-  transition: transform .4s;
-  transition: transform .4s, -webkit-transform .4s; }
-
 .sidebar {
   width: 80%;
   position: absolute;
@@ -3684,7 +3676,11 @@ html {
 
 .sidebar-open {
   -webkit-transform: translate3d(80%, 0, 0);
-          transform: translate3d(80%, 0, 0); }
+          transform: translate3d(80%, 0, 0);
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s; }
   .sidebar-open body {
     position: fixed;
     top: 0;
@@ -7151,6 +7147,12 @@ html {
     .company-event-page .type-event .type-donation .section.section-donation p {
       margin-bottom: 15px; } }
 
+.company-event-page .type-event .type-donation .section div[class*="col-"] {
+  margin-bottom: 24px; }
+  @media (max-width: 767px) {
+    .company-event-page .type-event .type-donation .section div[class*="col-"] {
+      margin-bottom: 10px; } }
+
 .company-event-page .type-event .type-donation .section.section-num {
   margin-top: 31px; }
   @media (max-width: 767px) {
@@ -7201,6 +7203,12 @@ html {
         font-size: 0.75em;
         padding-left: 0;
         padding-right: 0; } }
+
+.company-event-page .type-event .type-donation .section.section-photo {
+  margin-top: 7px; }
+  @media (max-width: 767px) {
+    .company-event-page .type-event .type-donation .section.section-photo {
+      margin-bottom: 8px; } }
 
 .company-event-page .type-event .type-rsvp .section.section-class p {
   margin: 0 0 19px; }
@@ -9746,7 +9754,7 @@ html {
       width: 672px; } }
   @media (min-width: 1270px) {
     .event-page #nav-affix {
-      padding-left: 86px; } }
+      padding-left: 78px; } }
   .event-page .social_twitter {
     margin-top: 0; }
 
