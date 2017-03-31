@@ -355,6 +355,9 @@ function crop(section, file, modal, croppie, type) {
     var $btn = $modal.find('.btn-positive');
     var $section = $(section);
     var $croppie = $(croppie);
+    var croppieID = '#' + $croppie.attr('id');
+    var zoomOut = croppieID + ' .croppie-zoom-out';
+    var zoomIn = croppieID + ' .croppie-zoom-in';
 
     var isUpload = false;
     $file.on('change', function (e) {
@@ -464,6 +467,31 @@ function crop(section, file, modal, croppie, type) {
     $btn.on('click', function () {
         $('.header-banner').removeClass('default');
         $croppie.croppie('result', 'canvas', 'viewport').then(function (result) {});
+    });
+
+    $(document).on('click', zoomIn, function (e) {
+        var objCurrent = $croppie.croppie('get');
+        var step = $croppie.find('.cr-slider').attr('step');
+        step = step * 10;
+        var zoom_in = 0;
+        if (objCurrent.zoom - step > 0) {
+            zoom_in = objCurrent.zoom - step;
+        }
+        $croppie.croppie('setZoom', zoom_in);
+        $croppie.croppie('refresh');
+    });
+
+    $(document).on('click', zoomOut, function (e) {
+        var objCurrent = $croppie.croppie('get');
+        var step = $croppie.find('.cr-slider').attr('step');
+        step = step * 10;
+        var max = $croppie.find('.cr-slider').attr('max');
+        var zoom_out = max;
+        if (objCurrent.zoom + step < max) {
+            zoom_out = objCurrent.zoom + step;
+        }
+        $croppie.croppie('setZoom', zoom_out);
+        $croppie.croppie('refresh');
     });
     //End Banner
 }

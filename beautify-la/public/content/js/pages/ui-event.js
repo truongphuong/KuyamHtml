@@ -42,7 +42,7 @@ $(document).ready(function () {
         $this.closest('.video').find('iframe')[0].src += "?autoplay=1";
     });
 
-    $(document).find('.grab .progress').each(function () {
+    $(document).find('.grab .progress, .rewards .progress').each(function () {
         var $this = $(this);
         var progressBarW = $this.find('.progress-bar').width();
         var textW = $this.find('.text').width();
