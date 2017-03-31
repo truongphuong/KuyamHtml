@@ -137,6 +137,22 @@
                                 float: left;
                                 padding:0 8px;
 
+                                + li {
+                                    .input-custom {
+                                        .table-css {
+                                            .td{
+                                                &:first-child {
+                                                    width: 32px;
+
+                                                    @media (max-width: 767px) {
+                                                        width: 16px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
                                 .radio-custom{
                                     width: 32px;
                                     float: left;
@@ -165,6 +181,18 @@
                                 .input-custom{
                                     width: calc(100% - 32px);
                                     float: left;
+
+                                    .table-css {
+                                        .td{
+                                            &:first-child {
+                                                width: 28px;
+
+                                                @media (max-width: 767px) {
+                                                    width: 14px;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

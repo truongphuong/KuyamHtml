@@ -298,7 +298,7 @@ function inputCustomResize(){
 
 function datetimepickerDate($txtDate, $section){
     $txtDate.datetimepicker({
-        format: 'dddd, MMM Do',
+        format: 'DD/MM/YYYY',
         sideBySide: true,
         minDate: now,
         useCurrent: false,
@@ -317,7 +317,7 @@ function datetimepickerDate($txtDate, $section){
             console.log('bottom');
             $section.addClass('open bottom');
         }
-        //$('.bootstrap-datetimepicker-widget').clone().appendTo('#sectionDateEnd');
+        $('.bootstrap-datetimepicker-widget').clone().appendTo('#sectionDateEnd');
     }).on('dp.hide', function() {
         $section.removeClass('open top bottom');
     });

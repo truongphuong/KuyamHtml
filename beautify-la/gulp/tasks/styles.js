@@ -10,6 +10,6 @@ gulp.task('styles', () => {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(plumber.stop())
-        .pipe(gulp.dest('./public/content/css'))
+        .pipe(gulp.dest('./public/content'))
         .pipe(browserSync.reload({ stream: true }))
 })
