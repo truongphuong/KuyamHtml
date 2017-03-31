@@ -581,6 +581,7 @@
                             box-shadow: none;
                             overflow: inherit;
                             border-radius: 0;
+                            margin-right: 15px;
 
                             @media (max-width:767px) {
                                 height: 2px;
@@ -600,7 +601,6 @@
                                     background: $white;
                                     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.43);
                                     position: absolute;
-                                    right: 0;
                                     top: -5px;
 
                                     @media (max-width:767px) {
@@ -803,6 +803,16 @@
 
             @media (max-width:979px) {
                 max-height: inherit;
+            }
+        }
+
+        .spot-right {
+            .spot-footer {
+                .btn-orange {
+                    @media (min-width: 768px) {
+                        line-height: 70px;
+                    }
+                }
             }
         }
     }
