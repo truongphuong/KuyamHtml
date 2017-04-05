@@ -4,17 +4,17 @@
         width: 109px;
         padding-top: 12px;
 
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             display: none;
         }
 
-        ul{
+        ul {
             margin: 0;
             padding: 0;
             list-style: none;
 
-            li{
-                a{
+            li {
+                a {
                     display: block;
                     padding: 6px 0;
                     font-family: $primary;
@@ -25,19 +25,25 @@
                     pointer-events: none;
                 }
 
-                &.active{
-                    a{
+                &.active {
+                    a {
                         font-weight: 700;
                         color: #ff4527;
+                    }
+                }
+
+                &.has_cursor {
+                    a {
+                        pointer-events: inherit;
                     }
                 }
             }
         }
 
-        &.active{
-            ul{
-                li{
-                    a{
+        &.active {
+            ul {
+                li {
+                    a {
                         pointer-events: inherit;
                     }
                 }

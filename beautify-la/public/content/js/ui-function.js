@@ -50,30 +50,37 @@ function refreshNiceScroll(sectionID) {
 
 function iscrollSelect(sectionID) {
     var $sectionID = $('#' + sectionID);
-    if ($sectionID.length === 0) {
-        return;
+
+    if ($sectionID.find('.bootstrap-select').length) {
+        $sectionID.find('select').selectpicker('destroy');
     }
+
     if ($sectionID.find('.bootstrap-select').length === 0) {
+
         $sectionID.find('select').selectpicker();
 
-        $sectionID.find('select').on('hide.bs.select', function () {
-            $sectionID.find('.form-control').trigger('blur');
-        });
-
         if (!isMobile.Windows()) {
+
+            if ($(sectionID + ' .wrap-dropdown-menu-inner').getNiceScroll().length > 0) {
+                refreshNiceScroll(sectionID);
+                return;
+            }
+
             $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
-            $('#' + sectionID + ' select').on('show.bs.select', function (e) {
+            $('#' + sectionID + ' select').one('shown.bs.select', function (e) {
                 var heightOfUL = $('#' + sectionID + ' ul.inner').height();
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+
                 $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', {
                     bouncescroll: false,
                     autohidemode: false,
-                    cursorcolor: "#f3472d",
+                    cursorcolor: "#f3472d ",
                     cursorborder: "1px solid transparent",
                     cursorborderradius: "5px",
                     cursorwidth: "7px",
-                    background: "#8B8B8B",
+                    background: "#8B8B8B ",
                     mousescrollstep: 10
+                    //preservenativescrolling: false
                 });
             });
         }
