@@ -94,17 +94,16 @@ $(document).ready(function(){
     $(document).on('change', 'select', function(){
         var $this = $(this);
 
-        if($this.siblings('.bootstrap-select').length === 0){
+        if($this.siblings('.bootstrap-select').length === 0 && $this.closest('.bootstrap-select').length === 0){
             return;
         }
 
         if($this.val().trim() !== ''){
             $this.addClass('active');
-            $this.siblings('.bootstrap-select').addClass('active');
         } else {
             $this.removeClass('active');
-            $this.siblings('.bootstrap-select').removeClass('active');
         }
+        $this.selectpicker('refresh');
     });
 
     $(document).on('click', '#site-header .navbar-toggle', function(){
