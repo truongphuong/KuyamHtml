@@ -730,6 +730,10 @@
                 color: #2c2c2c;
                 font-size: 25px;
 
+                @media (max-width: 1269px) and (min-width: 980px) {
+                    font-size: 17px;
+                }
+
                 @media (max-width:979px) {
                     text-align: center;
                     height:54px;
@@ -755,6 +759,10 @@
                 .color-orange{
                     font-size: 29px;
                     color:#ff4527;
+
+                    @media (max-width: 1269px) and (min-width: 980px) {
+                        font-size: 24px;
+                    }
 
                     @media (max-width:767px) {
                         font-size:16px;
@@ -797,10 +805,6 @@
     &.single-rsvp-spot {
         .section-ellipsis{
             height: 70px;
-
-            @media (max-width:979px) {
-                max-height: inherit;
-            }
         }
 
         .spot-right {
@@ -808,6 +812,10 @@
                 .btn-orange {
                     @media (min-width: 768px) {
                         line-height: 70px;
+                    }
+
+                    @media (min-width: 980px) and (max-width: 1269px){
+                        line-height: 51px;
                     }
                 }
             }
