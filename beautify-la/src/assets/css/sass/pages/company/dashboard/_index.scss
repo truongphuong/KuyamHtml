@@ -168,12 +168,22 @@
                 text-align: left;
             }
 
+            @media (max-width:372px) {
+                width: 100%;
+                text-align: center;
+            }
+
             dt {
                 float:left;
                 color:#999;
                 padding:0;
                 font-size:20px;
                 font-family:ralewaybold, sans-serif;
+
+                @media (max-width:372px) {
+                    float: none;
+                    text-align: left;
+                }
             }
         }
 
@@ -185,8 +195,17 @@
                 text-decoration:none;
                 font-size:16px;
 
-                @media (max-width: 767px) {
+                @media (max-width: 979px) {
+                    width: 24.5%;
                     margin-top: 10px;
+                }
+
+                @media (max-width: 767px) {
+                    width: 49%;
+                }
+
+                @media (max-width:372px) {
+                    width:100%;
                 }
             }
 
@@ -343,10 +362,4 @@
     .event-edit .available-date .start-date{margin-right:0;}
     .event-edit .available-date .div-to{padding:10px 0;}
     .event-edit .available-date .end-date{margin-left:0;}
-}
-
-@media (max-width:372px){
-    .available-section .social-icons{width:100%;text-align:center;}
-    .available-section .social-icons dt{float:none;text-align:left;}
-    .available-section .item .controls .btn-control{width:100%;}
 }
