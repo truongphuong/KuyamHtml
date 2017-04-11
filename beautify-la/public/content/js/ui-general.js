@@ -125,8 +125,6 @@ $(document).ready(function () {
             selectAreaScroll.refresh();
         }
 
-        inputCustomResize();
-
         if (!isView.mobile()) {
             $('html').removeClass('sidebar-open');
         }

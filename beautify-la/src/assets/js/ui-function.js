@@ -240,7 +240,6 @@ function inputCustom(){
 
     $(document).on('focus', input, function(){
         var $this = $(this);
-		inputCheck($this);
 
         var $parent = $this.closest('.input-custom');
         $parent.removeClass('validate');
@@ -252,41 +251,33 @@ function inputCustom(){
 
 function inputCheck($obj){
 	var $parent = $obj.closest('.input-custom');
-	if(isView.mobile()){
-		if($parent.hasClass('input-url')){
-			var isUrl = $parent.data('url');
-			var inputVal = $obj.val();
-			var $parent = $obj.closest('.input-custom');
+	if($parent.hasClass('input-url')){
+        var isUrl = $parent.data('url');
+        var inputVal = $obj.val();
+        var $parent = $obj.closest('.input-custom');
 
-			var temp = 0;
-			if (isView.xxs()){
-				temp = 36;
-			}else if (isView.xs()){
-				temp = 42;
-			}
-			var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
-			var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
-			var inputW = parseInt($obj.innerWidth()) + tdFirstW - aWidth - temp;
+        var temp = 0;
+        if (isView.xxs()){
+            temp = 36;
+        }else if (isView.xs()){
+            temp = 42;
+        }
+        var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
+        var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
+        var inputW = parseInt($obj.innerWidth()) + tdFirstW - aWidth - temp;
 
-			if(inputVal !== ''){
-				if(isUrl === false){
-					$parent.find('.table-css').css({'margin-left': - tdFirstW});
-					$obj.css({'width': inputW});
-					$parent.data('url', true);
-				}
-			}else{
-				$parent.find('.table-css').css({'margin-left': ''});
-				$obj.css({'width': ''});
-				$parent.data('url', false);
-			}
-		}
-	}else{
-		if($parent.hasClass('input-url')){
-			$parent.find('.table-css').css({'margin-left': ''});
-			$obj.css({'width': ''});
-			$parent.data('url', false);
-		}
-	}
+        if(inputVal.length > 40){
+            if(isUrl === false){
+                $parent.find('.table-css').css({'margin-left': - tdFirstW});
+                $obj.css({'width': inputW});
+                $parent.data('url', true);
+            }
+        }else{
+            $parent.find('.table-css').css({'margin-left': ''});
+            $obj.css({'width': ''});
+            $parent.data('url', false);
+        }
+    }
 }
 
 function inputCustomResize(){
