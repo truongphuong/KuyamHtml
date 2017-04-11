@@ -19,9 +19,7 @@ $(document).ready(function(){
 		$li.remove();
 		var $parent = $('#divTagesSelect');
 		$parent.find('select').val('');
-		console.log($parent.length);
 		$parent.find('select option:nth-child(' + liIndex + ')').remove();
-		//$parent.find('select').selectpicker('refresh');
 		if($parent.find('li').length === 1){
 			$parent.addClass('hide');
 			return;
