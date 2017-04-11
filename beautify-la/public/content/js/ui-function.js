@@ -255,12 +255,21 @@ function inputCheck($obj) {
         var inputVal = $obj.val();
         var $parent = $obj.closest('.input-custom');
 
+        if ($parent.find('.placeholder').length) {
+            if (inputVal.length === 0) {
+                $parent.addClass('has-placeholder');
+            } else {
+                $parent.removeClass('has-placeholder');
+            }
+        }
+
         var temp = 0;
         if (isView.xxs()) {
             temp = 36;
         } else if (isView.xs()) {
             temp = 42;
         }
+
         var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
         var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
         var inputW = parseInt($obj.innerWidth()) + tdFirstW - aWidth - temp;
