@@ -508,7 +508,7 @@
                 }
 
                 .placeholder-custom{
-                    .placeholder:after{
+                    &.gradient:after{
                         content: '';
                         display: block;
                         width: 100%;
@@ -534,7 +534,37 @@
 
                         /* Opera 11.10+ */
                         background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        pointer-events: none;
+                        z-index: 1;
                     }
+
+                    a {
+                        z-index: 2;
+                    }
+
+                    /*.placeholder:after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(255,255,255,0);
+                        background-image: url(images/linear_bg_1.png);
+                        background-repeat: repeat-y;
+
+                        background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.1)), to(#fff));
+
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -moz-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -ms-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+                    }*/
                 }
             }
         }

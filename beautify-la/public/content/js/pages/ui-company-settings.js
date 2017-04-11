@@ -11,7 +11,7 @@ $(document).ready(function () {
 	iscrollSelect('divTagesSelect');
 	$('#sectionSelect').selectpicker();
 
-	$(document).on('click', '#divTagesSelect .close', function (e) {
+	$('#divTagesSelect .close').on('click', function (e) {
 		e.stopPropagation();
 		var $this = $(this);
 		var $li = $this.closest('li');
@@ -21,7 +21,7 @@ $(document).ready(function () {
 		$parent.find('select').val('');
 		console.log($parent.length);
 		$parent.find('select option:nth-child(' + liIndex + ')').remove();
-		$parent.find('select').selectpicker('refresh');
+		//$parent.find('select').selectpicker('refresh');
 		if ($parent.find('li').length === 1) {
 			$parent.addClass('hide');
 			return;

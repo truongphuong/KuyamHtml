@@ -6444,25 +6444,52 @@ div.placeholder-custom {
     @media (max-width: 767px) {
       .company-settings-page .company-info .section.tweets-section .label-form {
         margin-bottom: 11px; } }
-    .company-settings-page .company-info .section.tweets-section .placeholder-custom .placeholder:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(255, 255, 255, 0);
-      background-image: url(images/linear_bg_1.png);
-      background-repeat: repeat-y;
-      /* Safari 4-5, Chrome 1-9 */
-      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(#fff));
-      /* Safari 5.1, Chrome 10+ */
-      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
-      /* Firefox 3.6+ */
-      /* IE 10 */
-      /* Opera 11.10+ */
-      background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff); }
+    .company-settings-page .company-info .section.tweets-section .placeholder-custom {
+      /*.placeholder:after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(255,255,255,0);
+                        background-image: url(images/linear_bg_1.png);
+                        background-repeat: repeat-y;
+
+                        background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.1)), to(#fff));
+
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -moz-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -ms-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+                    }*/ }
+      .company-settings-page .company-info .section.tweets-section .placeholder-custom.gradient:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0);
+        background-image: url(images/linear_bg_1.png);
+        background-repeat: repeat-y;
+        /* Safari 4-5, Chrome 1-9 */
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(#fff));
+        /* Safari 5.1, Chrome 10+ */
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
+        /* Firefox 3.6+ */
+        /* IE 10 */
+        /* Opera 11.10+ */
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
+        pointer-events: none;
+        z-index: 1; }
+      .company-settings-page .company-info .section.tweets-section .placeholder-custom a {
+        z-index: 2; }
 
 @media (max-width: 767px) {
   .company-settings-page .company-info footer .btn {
