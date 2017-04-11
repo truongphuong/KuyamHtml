@@ -11,20 +11,36 @@ $(document).ready(function () {
 	iscrollSelect('divTagesSelect');
 	$('#sectionSelect').selectpicker();
 
-	$('#divTagesSelect .close').on('click', function (e) {
+	$('#divTagesSelect li a').on('click', function (e) {
 		e.stopPropagation();
 		var $this = $(this);
-		var $li = $this.closest('li');
-		var liIndex = parseInt($li.data('original-index')) + 1;
-		$li.remove();
 		var $parent = $('#divTagesSelect');
-		$parent.find('select').val('');
-		$parent.find('select option:nth-child(' + liIndex + ')').remove();
-		if ($parent.find('li').length === 1) {
-			$parent.addClass('hide');
+		var $li = $this.closest('li');
+		var originalIndex = $li.data('original-index');
+		if ($(e.target).attr('class') === 'close') {
+			$li.remove();
+			$parent.find('select option[value="' + originalIndex + '"]').remove();
+			if ($parent.find('li').length === 1) {
+				$parent.addClass('hide');
+				return;
+			}
+			refreshNiceScroll('#divTagesSelect');
 			return;
 		}
-		refreshNiceScroll('#divTagesSelect');
+		$parent.find('li').removeClass('selected');
+		$li.addClass('selected');
+		$parent.find('select').val(originalIndex);
+		var optionText = '';
+		if (parseInt(originalIndex) === 0) {
+			optionText = $parent.find('select option:first-child').text();
+			$parent.find('.bootstrap-select').removeClass('active');
+		} else {
+			optionText = $parent.find('select option[value="' + originalIndex + '"]').text();
+			$parent.find('.bootstrap-select').addClass('active');
+		}
+		$parent.find('.filter-option').text(optionText);
+		$parent.find('.bootstrap-select').removeClass('open');
+		$parent.find('.dropdown-toggle').attr('aria-expanded', false);
 	});
 
 	// Begin active item sidebar/select and show form follow step by step
