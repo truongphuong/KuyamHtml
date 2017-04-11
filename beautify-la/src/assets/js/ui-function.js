@@ -273,18 +273,26 @@ function inputCheck($obj){
 
         var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
         var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
-        var inputW = parseInt($obj.innerWidth()) + tdFirstW - aWidth - temp;
+        var inputW = parseInt($parent.innerWidth()) - temp - aWidth;
 
-        if(inputVal.length > 40){
-            if(isUrl === false){
-                $parent.find('.table-css').css({'margin-left': - tdFirstW});
-                $obj.css({'width': inputW});
-                $parent.data('url', true);
+        if (isView.mobile()) {
+            if(inputVal.length === 0){
+                if(isUrl === false){
+                    $parent.find('.table-css').css({'margin-left': - tdFirstW});
+                    $obj.css({'width': inputW});
+                    $parent.data('url', true);
+                }
+            } else {
+                $parent.find('.table-css').css({'margin-left': ''});
+                $obj.css({'width': ''});
+                $parent.data('url', false);
             }
         } else {
-            $parent.find('.table-css').css({'margin-left': ''});
-            $obj.css({'width': ''});
-            $parent.data('url', false);
+            if ($parent.hasClass('input-url')) {
+                $parent.find('.table-css').css({ 'margin-left': '' });
+                $obj.css({ 'width': '' });
+                $parent.data('url', false);
+            }
         }
     }
 }
