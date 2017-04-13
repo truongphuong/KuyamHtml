@@ -5821,7 +5821,8 @@ div.placeholder-custom {
       @media (max-width: 767px) {
         .company-settings-page .content footer .btn {
           float: left;
-          width: calc(50% - 20px);
+          /*width: calc(50% - 20px);*/
+          width: calc(100% - 20px);
           margin: 0 10px;
           height: 38px; } }
       @media (max-width: 359px) {
@@ -5978,14 +5979,11 @@ div.placeholder-custom {
             background-image: url(images/ui/pages/company/settings/icon_photo@3x.png); } }
       .company-settings-page .header-banner .control li.edit span:before {
         background-position: 0 0; }
-      @media (max-width: 767px) {
-        .company-settings-page .header-banner .control li.edit {
-          display: none; } }
       .company-settings-page .header-banner .control li.change span:before {
         background-position: 0 0; }
       @media (max-width: 767px) {
-        .company-settings-page .header-banner .control li.change span {
-          border-left: 0 none; } }
+        .company-settings-page .header-banner .control li.change {
+          display: none; } }
       .company-settings-page .header-banner .control li.delete span:before {
         background-position: 0 -23px; }
   .company-settings-page .header-banner .upload {
@@ -6169,327 +6167,335 @@ div.placeholder-custom {
         padding: 7px 12px;
         line-height: 20px; }
 
-.company-settings-page .company-info .section {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .company-settings-page .company-info .section.logo-section .frame {
-    width: 220px;
-    height: 110px;
-    border: 1px dashed #797979;
-    position: relative;
-    background: #666;
-    margin-bottom: 15px;
-    cursor: pointer;
-    /*&:hover{
+.company-settings-page .company-info {
+  /*footer{
+            .btn {
+                @media (max-width: 767px){
+                    width: calc(100% - 20px);
+                }
+            }
+        }*/ }
+  .company-settings-page .company-info .section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .company-settings-page .company-info .section.logo-section .frame {
+      width: 220px;
+      height: 110px;
+      border: 1px dashed #797979;
+      position: relative;
+      background: #666;
+      margin-bottom: 15px;
+      cursor: pointer;
+      /*&:hover{
                         .control{
                             visibility:visible;
                             opacity:1;
                         }
                     }*/ }
-    @media (max-width: 767px) {
-      .company-settings-page .company-info .section.logo-section .frame {
-        margin-bottom: 18px; } }
-    .company-settings-page .company-info .section.logo-section .frame.default {
-      /*&:hover{
+      @media (max-width: 767px) {
+        .company-settings-page .company-info .section.logo-section .frame {
+          margin-bottom: 18px; } }
+      .company-settings-page .company-info .section.logo-section .frame.default {
+        /*&:hover{
                             .upload{
                                 visibility:visible;
                                 opacity:1;
                             }
                         }*/ }
-      .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
-        background-image: none !important; }
-      .company-settings-page .company-info .section.logo-section .frame.default .control {
-        /*visibility:hidden;
+        .company-settings-page .company-info .section.logo-section .frame.default .page-logo {
+          background-image: none !important; }
+        .company-settings-page .company-info .section.logo-section .frame.default .control {
+          /*visibility:hidden;
                             opacity:0;*/
-        display: none; }
-      .company-settings-page .company-info .section.logo-section .frame.default .upload {
-        width: 167px;
+          display: none; }
+        .company-settings-page .company-info .section.logo-section .frame.default .upload {
+          width: 167px;
+          height: 51px;
+          line-height: 49px;
+          font-size: 0.9375em;
+          font-family: "Lato", sans-serif;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.31);
+          background: rgba(0, 0, 0, 0.24) none;
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+          text-align: center;
+          margin: -25px 0 0 -83px;
+          top: 50%;
+          left: 50%;
+          /*visibility:hidden;
+                            opacity:0;*/
+          display: block; }
+          .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 14px;
+            background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+            background-size: 16px auto;
+            margin-right: 5px;
+            position: relative;
+            bottom: -2px; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+              .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
+                background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
+      .company-settings-page .company-info .section.logo-section .frame .page-logo {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background: center center no-repeat;
+        background-size: auto 55px;
+        display: block; }
+      .company-settings-page .company-info .section.logo-section .frame .control {
         height: 51px;
-        line-height: 49px;
         font-size: 0.9375em;
         font-family: "Lato", sans-serif;
         color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.31);
-        background: rgba(0, 0, 0, 0.24) none;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-        text-align: center;
-        margin: -25px 0 0 -83px;
+        position: absolute;
         top: 50%;
         left: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.31);
+        background: rgba(0, 0, 0, 0.24);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+        text-align: center;
+        z-index: 3;
+        width: 122px;
+        margin: -25px 0 0 -61px;
+        padding: 0;
+        list-style: none;
         /*visibility:hidden;
-                            opacity:0;*/
-        display: block; }
-        .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-          content: '';
-          display: inline-block;
-          width: 16px;
-          height: 14px;
-          background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
-          background-size: 16px auto;
-          margin-right: 5px;
-          position: relative;
-          bottom: -2px; }
-          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-            .company-settings-page .company-info .section.logo-section .frame.default .upload:before {
-              background-image: url(images/ui/pages/company/settings/icon_upload@3x.png); } }
-    .company-settings-page .company-info .section.logo-section .frame .page-logo {
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      right: -1px;
-      bottom: -1px;
-      background: center center no-repeat;
-      background-size: auto 55px;
-      display: block; }
-    .company-settings-page .company-info .section.logo-section .frame .control {
-      height: 51px;
-      font-size: 0.9375em;
-      font-family: "Lato", sans-serif;
-      color: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.31);
-      background: rgba(0, 0, 0, 0.24);
-      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-      text-align: center;
-      z-index: 3;
-      width: 122px;
-      margin: -25px 0 0 -61px;
-      padding: 0;
-      list-style: none;
-      /*visibility:hidden;
                         opacity:0;
                         transition:visibility 2s, opacity 2s;*/ }
-      .company-settings-page .company-info .section.logo-section .frame .control li {
-        float: left;
-        width: 60px;
-        height: 49px;
-        cursor: pointer; }
-        @media (max-width: 767px) {
-          .company-settings-page .company-info .section.logo-section .frame .control li {
-            width: 50%; } }
-        .company-settings-page .company-info .section.logo-section .frame .control li:hover {
-          font-weight: 700; }
-        .company-settings-page .company-info .section.logo-section .frame .control li + li span {
-          border-left: 1px solid rgba(255, 255, 255, 0.5); }
-        .company-settings-page .company-info .section.logo-section .frame .control li span {
-          display: block;
-          margin: 15px 0;
-          line-height: 19px; }
+        .company-settings-page .company-info .section.logo-section .frame .control li {
+          float: left;
+          width: 60px;
+          height: 49px;
+          cursor: pointer; }
           @media (max-width: 767px) {
-            .company-settings-page .company-info .section.logo-section .frame .control li span {
-              font-size: 0;
-              margin-top: 15px;
-              line-height: 0; } }
+            .company-settings-page .company-info .section.logo-section .frame .control li {
+              width: 50%; } }
+          .company-settings-page .company-info .section.logo-section .frame .control li:hover {
+            font-weight: 700; }
+          .company-settings-page .company-info .section.logo-section .frame .control li + li span {
+            border-left: 1px solid rgba(255, 255, 255, 0.5); }
+          .company-settings-page .company-info .section.logo-section .frame .control li span {
+            display: block;
+            margin: 15px 0;
+            line-height: 19px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.logo-section .frame .control li span {
+                font-size: 0;
+                margin-top: 15px;
+                line-height: 0; } }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.logo-section .frame .control li span:before {
+                content: '';
+                display: inline-block;
+                width: 23px;
+                height: 23px;
+                background: url(images/ui/pages/company/settings/icon_photo.png) no-repeat;
+                background-size: 23px auto; } }
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
+              .company-settings-page .company-info .section.logo-section .frame .control li span:before {
+                background-image: url(images/ui/pages/company/settings/icon_photo@3x.png); } }
+          .company-settings-page .company-info .section.logo-section .frame .control li.edit span:before {
+            background-position: 0 0; }
           @media (max-width: 767px) {
-            .company-settings-page .company-info .section.logo-section .frame .control li span:before {
-              content: '';
-              display: inline-block;
-              width: 23px;
-              height: 23px;
-              background: url(images/ui/pages/company/settings/icon_photo.png) no-repeat;
-              background-size: 23px auto; } }
-          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
-            .company-settings-page .company-info .section.logo-section .frame .control li span:before {
-              background-image: url(images/ui/pages/company/settings/icon_photo@3x.png); } }
-        .company-settings-page .company-info .section.logo-section .frame .control li.edit span:before {
-          background-position: 0 0; }
-        @media (max-width: 767px) {
-          .company-settings-page .company-info .section.logo-section .frame .control li.edit {
-            display: none; } }
-        .company-settings-page .company-info .section.logo-section .frame .control li.change span:before {
-          background-position: 0 0; }
-        @media (max-width: 767px) {
-          .company-settings-page .company-info .section.logo-section .frame .control li.change span {
-            border-left: 0 none; } }
-        .company-settings-page .company-info .section.logo-section .frame .control li.delete span:before {
-          background-position: 0 -23px; }
-    .company-settings-page .company-info .section.logo-section .frame .upload {
-      position: absolute;
-      z-index: 3;
-      /*visibility:hidden;
+            .company-settings-page .company-info .section.logo-section .frame .control li.edit {
+              display: none; } }
+          .company-settings-page .company-info .section.logo-section .frame .control li.change span:before {
+            background-position: 0 0; }
+          @media (max-width: 767px) {
+            .company-settings-page .company-info .section.logo-section .frame .control li.change span {
+              border-left: 0 none; } }
+          .company-settings-page .company-info .section.logo-section .frame .control li.delete span:before {
+            background-position: 0 -23px; }
+      .company-settings-page .company-info .section.logo-section .frame .upload {
+        position: absolute;
+        z-index: 3;
+        /*visibility:hidden;
                         opacity:0;
                         transition:visibility 2s, opacity 2s;*/
-      display: none; }
-      @media (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame .upload {
-          width: 21px;
-          height: 21px;
-          background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
-          background-size: 21px auto;
-          font-size: 0;
-          right: 12px;
-          bottom: 6px;
-          visibility: visible;
-          opacity: 1;
-          border: 0 none; } }
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
-        .company-settings-page .company-info .section.logo-section .frame .upload {
-          background-image: url(images/ui/pages/company/settings/icon_camera@3x.png); } }
-  .company-settings-page .company-info .section.socials-section ul {
-    padding: 0;
-    margin: 0 0 11px;
-    list-style: none;
-    cursor: pointer; }
-    @media (max-width: 767px) {
-      .company-settings-page .company-info .section.socials-section ul {
-        margin-bottom: 18px; } }
-    .company-settings-page .company-info .section.socials-section ul li {
-      float: left;
-      line-height: 0; }
-      .company-settings-page .company-info .section.socials-section ul li + li {
-        margin-left: 10px; }
-      .company-settings-page .company-info .section.socials-section ul li .icon {
-        width: 44px;
-        height: 44px;
-        background: url(images/ui/pages/company/settings/icon_socials.png) no-repeat;
-        background-size: 44px auto; }
+        display: none; }
         @media (max-width: 767px) {
-          .company-settings-page .company-info .section.socials-section ul li .icon {
-            width: 33px;
-            height: 33px;
-            background-size: 33px auto; } }
-        @media (max-width: 359px) {
-          .company-settings-page .company-info .section.socials-section ul li .icon {
-            width: 28px;
-            height: 28px;
-            background-size: 28px auto; } }
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-          .company-settings-page .company-info .section.socials-section ul li .icon {
-            background-image: url(images/ui/pages/company/settings/icon_socials@3x.png); } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-add {
-          background-position: center top; }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
-          background-position: center -44px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
-              background-position: center -33px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
-              background-position: center -28px; } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
-          background-position: center -88px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
-              background-position: center -66px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
-              background-position: center -56px; } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
-          background-position: center -132px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
-              background-position: center -99px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
-              background-position: center -84px; } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
-          background-position: center -176px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
-              background-position: center -132px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
-              background-position: center -112px; } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
-          background-position: center -220px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
-              background-position: center -165px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
-              background-position: center -140px; } }
-        .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
-          background-position: center -264px; }
-          @media (max-width: 767px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
-              background-position: center -198px; } }
-          @media (max-width: 359px) {
-            .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
-              background-position: center -168px; } }
-  .company-settings-page .company-info .section.address-section {
-    margin-top: 20px; }
-    @media (max-width: 767px) {
-      .company-settings-page .company-info .section.address-section {
-        margin-top: 24px; } }
-    .company-settings-page .company-info .section.address-section .col-sm-4-5 {
-      margin-bottom: 0; }
-      @media (min-width: 992px) {
-        .company-settings-page .company-info .section.address-section .col-sm-4-5 {
-          width: 39.2%; } }
-      @media (max-width: 991px) {
-        .company-settings-page .company-info .section.address-section .col-sm-4-5 {
-          margin-bottom: 18px; } }
-    @media (min-width: 992px) {
-      .company-settings-page .company-info .section.address-section .col-sm-7-5 {
-        width: 60.8%; } }
-    .company-settings-page .company-info .section.address-section > .row > div[class*="col-"]:last-child {
-      margin-bottom: 0; }
-  @media (min-width: 992px) {
-    .company-settings-page .company-info .section.tags-section .col-md-4 {
-      width: 31%; }
-    .company-settings-page .company-info .section.tags-section .col-md-8 {
-      width: 69%; } }
-  @media (max-width: 767px) {
-    .company-settings-page .company-info .section.tags-section .label-form {
-      margin-bottom: 15px; } }
-  .company-settings-page .company-info .section.tags-section .btn-tag {
-    width: 100%;
-    height: 38px;
-    padding: 0;
-    font-size: 0.9375em;
-    border-radius: 0;
-    font-family: "Lato", sans-serif;
-    color: #f3472d; }
-    @media (max-width: 767px) {
-      .company-settings-page .company-info .section.tags-section .btn-tag {
-        height: 38px;
-        font-size: 1.3125em; } }
-    @media (max-width: 359px) {
-      .company-settings-page .company-info .section.tags-section .btn-tag {
-        height: 33px;
-        font-size: 1.0625em; } }
-    .company-settings-page .company-info .section.tags-section .btn-tag:before {
-      content: '';
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      background: url(images/ui/pages/company/settings/icon_tag.png) center center no-repeat;
-      background-size: 15px auto;
-      position: relative;
-      top: 3px;
-      margin-right: 5px; }
+          .company-settings-page .company-info .section.logo-section .frame .upload {
+            width: 21px;
+            height: 21px;
+            background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+            background-size: 21px auto;
+            font-size: 0;
+            right: 12px;
+            bottom: 6px;
+            visibility: visible;
+            opacity: 1;
+            border: 0 none; } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min--moz-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-device-pixel-ratio: 1.25) and (max-width: 767px), only screen and (min-resolution: 120dpi) and (max-width: 767px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (min-resolution: 2dppx) and (max-width: 767px) {
+          .company-settings-page .company-info .section.logo-section .frame .upload {
+            background-image: url(images/ui/pages/company/settings/icon_camera@3x.png); } }
+    .company-settings-page .company-info .section.socials-section ul {
+      padding: 0;
+      margin: 0 0 11px;
+      list-style: none;
+      cursor: pointer; }
       @media (max-width: 767px) {
-        .company-settings-page .company-info .section.tags-section .btn-tag:before {
-          top: 1px; } }
-      @media (max-width: 359px) {
-        .company-settings-page .company-info .section.tags-section .btn-tag:before {
-          top: 2px; } }
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-        .company-settings-page .company-info .section.tags-section .btn-tag:before {
-          background-image: url(images/ui/pages/company/settings/icon_tag@3x.png); } }
-  .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a {
-    position: relative; }
-    .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a .close {
-      display: inline-block;
-      width: 45px;
-      height: 34px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: url(images/ui/modals/icon_close.png) center center no-repeat;
-      background-size: 15px auto;
-      opacity: 1; }
-      @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-        .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a .close {
-          background-image: url(images/ui/modals/icon_close@3x.png); } }
-  .company-settings-page .company-info .section.tweets-section {
-    border-bottom: 0 none; }
+        .company-settings-page .company-info .section.socials-section ul {
+          margin-bottom: 18px; } }
+      .company-settings-page .company-info .section.socials-section ul li {
+        float: left;
+        line-height: 0; }
+        .company-settings-page .company-info .section.socials-section ul li + li {
+          margin-left: 10px; }
+        .company-settings-page .company-info .section.socials-section ul li .icon {
+          width: 44px;
+          height: 44px;
+          background: url(images/ui/pages/company/settings/icon_socials.png) no-repeat;
+          background-size: 44px auto; }
+          @media (max-width: 767px) {
+            .company-settings-page .company-info .section.socials-section ul li .icon {
+              width: 33px;
+              height: 33px;
+              background-size: 33px auto; } }
+          @media (max-width: 359px) {
+            .company-settings-page .company-info .section.socials-section ul li .icon {
+              width: 28px;
+              height: 28px;
+              background-size: 28px auto; } }
+          @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+            .company-settings-page .company-info .section.socials-section ul li .icon {
+              background-image: url(images/ui/pages/company/settings/icon_socials@3x.png); } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-add {
+            background-position: center top; }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
+            background-position: center -44px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
+                background-position: center -33px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-facebook {
+                background-position: center -28px; } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
+            background-position: center -88px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
+                background-position: center -66px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-twitter {
+                background-position: center -56px; } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
+            background-position: center -132px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
+                background-position: center -99px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-linkedin {
+                background-position: center -84px; } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
+            background-position: center -176px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
+                background-position: center -132px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-instagram {
+                background-position: center -112px; } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
+            background-position: center -220px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
+                background-position: center -165px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-pinterest {
+                background-position: center -140px; } }
+          .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
+            background-position: center -264px; }
+            @media (max-width: 767px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
+                background-position: center -198px; } }
+            @media (max-width: 359px) {
+              .company-settings-page .company-info .section.socials-section ul li .icon.icon-google-plus {
+                background-position: center -168px; } }
+    .company-settings-page .company-info .section.address-section {
+      margin-top: 20px; }
+      @media (max-width: 767px) {
+        .company-settings-page .company-info .section.address-section {
+          margin-top: 24px; } }
+      .company-settings-page .company-info .section.address-section .col-sm-4-5 {
+        margin-bottom: 0; }
+        @media (min-width: 992px) {
+          .company-settings-page .company-info .section.address-section .col-sm-4-5 {
+            width: 39.2%; } }
+        @media (max-width: 991px) {
+          .company-settings-page .company-info .section.address-section .col-sm-4-5 {
+            margin-bottom: 18px; } }
+      @media (min-width: 992px) {
+        .company-settings-page .company-info .section.address-section .col-sm-7-5 {
+          width: 60.8%; } }
+      .company-settings-page .company-info .section.address-section > .row > div[class*="col-"]:last-child {
+        margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .company-settings-page .company-info .section.tags-section .col-md-4 {
+        width: 31%; }
+      .company-settings-page .company-info .section.tags-section .col-md-8 {
+        width: 69%; } }
     @media (max-width: 767px) {
-      .company-settings-page .company-info .section.tweets-section .label-form {
-        margin-bottom: 11px; } }
-    .company-settings-page .company-info .section.tweets-section .placeholder-custom {
-      /*.placeholder:after{
+      .company-settings-page .company-info .section.tags-section .label-form {
+        margin-bottom: 15px; } }
+    .company-settings-page .company-info .section.tags-section .btn-tag {
+      width: 100%;
+      height: 38px;
+      padding: 0;
+      font-size: 0.9375em;
+      border-radius: 0;
+      font-family: "Lato", sans-serif;
+      color: #f3472d; }
+      @media (max-width: 767px) {
+        .company-settings-page .company-info .section.tags-section .btn-tag {
+          height: 38px;
+          font-size: 1.3125em; } }
+      @media (max-width: 359px) {
+        .company-settings-page .company-info .section.tags-section .btn-tag {
+          height: 33px;
+          font-size: 1.0625em; } }
+      .company-settings-page .company-info .section.tags-section .btn-tag:before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(images/ui/pages/company/settings/icon_tag.png) center center no-repeat;
+        background-size: 15px auto;
+        position: relative;
+        top: 3px;
+        margin-right: 5px; }
+        @media (max-width: 767px) {
+          .company-settings-page .company-info .section.tags-section .btn-tag:before {
+            top: 1px; } }
+        @media (max-width: 359px) {
+          .company-settings-page .company-info .section.tags-section .btn-tag:before {
+            top: 2px; } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+          .company-settings-page .company-info .section.tags-section .btn-tag:before {
+            background-image: url(images/ui/pages/company/settings/icon_tag@3x.png); } }
+    .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a {
+      position: relative; }
+      .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a .close {
+        display: inline-block;
+        width: 45px;
+        height: 34px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(images/ui/modals/icon_close.png) center center no-repeat;
+        background-size: 15px auto;
+        opacity: 1; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+          .company-settings-page .company-info .section.tags-section .bootstrap-select .dropdown-menu > li > a .close {
+            background-image: url(images/ui/modals/icon_close@3x.png); } }
+    .company-settings-page .company-info .section.tweets-section {
+      border-bottom: 0 none; }
+      @media (max-width: 767px) {
+        .company-settings-page .company-info .section.tweets-section .label-form {
+          margin-bottom: 11px; } }
+      .company-settings-page .company-info .section.tweets-section .placeholder-custom {
+        /*.placeholder:after{
                         content: '';
                         display: block;
                         width: 100%;
@@ -6511,33 +6517,29 @@ div.placeholder-custom {
 
                         background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
                     }*/ }
-      .company-settings-page .company-info .section.tweets-section .placeholder-custom.gradient:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0);
-        background-image: url(images/linear_bg_1.png);
-        background-repeat: repeat-y;
-        /* Safari 4-5, Chrome 1-9 */
-        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(#fff));
-        /* Safari 5.1, Chrome 10+ */
-        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
-        /* Firefox 3.6+ */
-        /* IE 10 */
-        /* Opera 11.10+ */
-        background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
-        pointer-events: none;
-        z-index: 1; }
-      .company-settings-page .company-info .section.tweets-section .placeholder-custom a {
-        z-index: 2; }
-
-@media (max-width: 767px) {
-  .company-settings-page .company-info footer .btn {
-    width: calc(100% - 20px); } }
+        .company-settings-page .company-info .section.tweets-section .placeholder-custom.gradient:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0);
+          background-image: url(images/linear_bg_1.png);
+          background-repeat: repeat-y;
+          /* Safari 4-5, Chrome 1-9 */
+          background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(#fff));
+          /* Safari 5.1, Chrome 10+ */
+          background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
+          /* Firefox 3.6+ */
+          /* IE 10 */
+          /* Opera 11.10+ */
+          background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), #fff);
+          pointer-events: none;
+          z-index: 1; }
+        .company-settings-page .company-info .section.tweets-section .placeholder-custom a {
+          z-index: 2; }
 
 .company-settings-page .primary-contact .private-section {
   padding-bottom: 9px; }
