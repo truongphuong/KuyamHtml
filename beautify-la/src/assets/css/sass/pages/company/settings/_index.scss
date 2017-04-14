@@ -29,9 +29,6 @@
         }
 
         header{
-            @media (max-width: 767px){
-                display: none;
-            }
 
             h3{
                 font-size: $s27;
@@ -39,6 +36,18 @@
                 font-family: $primary;
                 color: #f2472d;
                 margin:0 0 17px;
+
+                @media (max-width: 767px){
+                    font-size: $h5;
+                    line-height: 27px;
+                    margin-bottom: 18px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $s17;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+                }
 
                 small{
                     font-style: italic;

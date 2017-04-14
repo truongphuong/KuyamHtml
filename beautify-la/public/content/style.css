@@ -1783,8 +1783,13 @@ input[type=number] {
     @media (max-width: 767px) {
       .input-custom .copy {
         font-size: 0.75em;
-        line-height: 32px;
+        line-height: 36px;
         padding: 0 8px; } }
+    @media (max-width: 359px) {
+      .input-custom .copy {
+        font-size: 0.8125em;
+        line-height: 31px;
+        padding: 0 5px; } }
   .input-custom .error {
     position: absolute;
     top: 0;
@@ -1801,6 +1806,11 @@ input[type=number] {
         line-height: 36px;
         font-size: 0.75em;
         padding: 0 8px; } }
+    @media (max-width: 359px) {
+      .input-custom .error {
+        font-size: 0.8125em;
+        line-height: 31px;
+        padding: 0 5px; } }
     .input-custom .error:before {
       content: '';
       display: inline-block;
@@ -2156,12 +2166,12 @@ div.placeholder-custom {
       label.placeholder-custom a,
       div.placeholder-custom a {
         padding: 0 8px;
-        line-height: 36px; } }
+        line-height: 34px; } }
     @media (max-width: 359px) {
       label.placeholder-custom a,
       div.placeholder-custom a {
         padding: 0 5px;
-        line-height: 31px;
+        line-height: 29px;
         font-size: 0.625em; } }
   label.placeholder-custom .error,
   div.placeholder-custom .error {
@@ -3190,19 +3200,19 @@ div.placeholder-custom {
     max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; }
-  .wrapper .site-header .navbar-collapse {
-    padding-top: 24px; }
-    .wrapper .site-header .navbar-collapse .nav-main {
-      margin-top: 9px; } }
+    white-space: nowrap; } }
 
 @media (max-width: 991px) {
   .wrapper .region-section {
     float: left;
     margin: 31px 0 0;
-    clear: inherit; }
-  .wrapper .navbar-collapse {
-    padding-top: 0; } }
+    clear: inherit; } }
+
+@media (min-width: 768px) {
+  .wrapper .site-header .navbar-collapse {
+    padding-top: 24px; }
+    .wrapper .site-header .navbar-collapse .nav-main {
+      margin-top: 9px; } }
 
 @media (max-width: 767px) {
   .wrapper .region-section {
@@ -5693,15 +5703,22 @@ div.placeholder-custom {
     @media (max-width: 359px) {
       .company-settings-page .content {
         padding: 19px 0 18px; } }
-    @media (max-width: 767px) {
-      .company-settings-page .content header {
-        display: none; } }
     .company-settings-page .content header h3 {
       font-size: 1.6875em;
       line-height: 34px;
       font-family: "Lato", sans-serif;
       color: #f2472d;
       margin: 0 0 17px; }
+      @media (max-width: 767px) {
+        .company-settings-page .content header h3 {
+          font-size: 1.25em;
+          line-height: 27px;
+          margin-bottom: 18px; } }
+      @media (max-width: 359px) {
+        .company-settings-page .content header h3 {
+          font-size: 1.0625em;
+          line-height: 24px;
+          margin-bottom: 15px; } }
       .company-settings-page .content header h3 small {
         font-style: italic;
         font-size: 14px;
