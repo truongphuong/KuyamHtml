@@ -24,6 +24,15 @@ div {
         border: 1px solid $border;
         border-radius: 2px;
         overflow: hidden;
+        height: 38px;
+
+        @media (max-width: 767px) {
+            height: 36px;
+        }
+
+        @media (max-width: 767px) {
+            height: 31px;
+        }
 
         &.disabled {
             border-color: $disabled;
@@ -54,13 +63,13 @@ div {
 
             @media (max-width: 767px) {
                 font-size: $s15;
-                line-height: 36px;
+                line-height: 34px;
                 padding-left: 8px;
             }
 
             @media (max-width: 359px) {
                 font-size: $s13;
-                line-height: 31px;
+                line-height: 29px;
                 padding-left: 5px;
             }
 
@@ -192,6 +201,15 @@ div {
             border: 0 none;
             position: relative;
             background: transparent;
+            height: 36px;
+
+            @media (max-width: 767px) {
+                height: 34px;
+            }
+
+            @media (max-width: 359px) {
+                height: 29px;
+            }
 
             &.has-value {
                 background: $white;

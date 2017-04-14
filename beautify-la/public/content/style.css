@@ -2089,7 +2089,16 @@ div.placeholder-custom {
   position: relative;
   border: 1px solid #797979;
   border-radius: 2px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 38px; }
+  @media (max-width: 767px) {
+    label.placeholder-custom,
+    div.placeholder-custom {
+      height: 36px; } }
+  @media (max-width: 767px) {
+    label.placeholder-custom,
+    div.placeholder-custom {
+      height: 31px; } }
   label.placeholder-custom.disabled,
   div.placeholder-custom.disabled {
     border-color: rgba(67, 67, 67, 0.4); }
@@ -2119,13 +2128,13 @@ div.placeholder-custom {
       label.placeholder-custom .placeholder,
       div.placeholder-custom .placeholder {
         font-size: 0.9375em;
-        line-height: 36px;
+        line-height: 34px;
         padding-left: 8px; } }
     @media (max-width: 359px) {
       label.placeholder-custom .placeholder,
       div.placeholder-custom .placeholder {
         font-size: 0.8125em;
-        line-height: 31px;
+        line-height: 29px;
         padding-left: 5px; } }
     label.placeholder-custom .placeholder .optional,
     div.placeholder-custom .placeholder .optional {
@@ -2233,7 +2242,16 @@ div.placeholder-custom {
   div.placeholder-custom .form-control {
     border: 0 none;
     position: relative;
-    background: transparent; }
+    background: transparent;
+    height: 36px; }
+    @media (max-width: 767px) {
+      label.placeholder-custom .form-control,
+      div.placeholder-custom .form-control {
+        height: 34px; } }
+    @media (max-width: 359px) {
+      label.placeholder-custom .form-control,
+      div.placeholder-custom .form-control {
+        height: 29px; } }
     label.placeholder-custom .form-control.has-value,
     div.placeholder-custom .form-control.has-value {
       background: #fff; }
@@ -5717,8 +5735,8 @@ div.placeholder-custom {
       .company-settings-page .content .bootstrap-select.open > .btn:visited {
         font-family: 'lato', sans-serif;
         font-size: 1.25em;
-        min-height: 40px;
-        height: 40px;
+        min-height: 38px;
+        height: 38px;
         padding-left: 15px;
         padding-right: 35px;
         border-color: #797979; }
