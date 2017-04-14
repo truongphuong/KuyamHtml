@@ -6152,16 +6152,17 @@ div.placeholder-custom {
         background-image: url(images/ui/pages/company/settings/icon_select@3x.png); } }
   .company-settings-page div.section-select.bootstrap-select ~ .content {
     position: relative; }
-  .company-settings-page div.section-select.bootstrap-select.open ~ .content:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: -15px;
-    right: -15px;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 3; }
+  @media (max-width: 767px) {
+    .company-settings-page div.section-select.bootstrap-select.open ~ .content:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: -15px;
+      right: -15px;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 3; } }
   .company-settings-page div.section-select.bootstrap-select.open > .btn,
   .company-settings-page div.section-select.bootstrap-select.open > .btn:focus,
   .company-settings-page div.section-select.bootstrap-select.open > .btn:active,
