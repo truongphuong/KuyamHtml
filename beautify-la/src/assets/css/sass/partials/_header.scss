@@ -52,8 +52,18 @@
 .area-section .bootstrap-select .btn:focus{outline:0 none !important;outline-offset:inherit;box-shadow:none;}
 .area-section .bootstrap-select.open{background:#333;}
 .area-section .bootstrap-select.btn-group .btn .caret{
-    background-image:url(images/assets/icon_dropdown_white.png);
+    background-image:url(images/ui/master/header/icon_select.png);
     margin-top: inherit;
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (              min-resolution:120dpi)      and (min-width:768px),
+    only screen and (               min-resolution:2dppx)      and (min-width:768px){
+        background-image: url(images/ui/master/header/icon_select@3x.png);
+    }
 }
 .area-section .dropdown-menu{background:#333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .area-section .bootstrap-select.btn-group .dropdown-menu.open{max-height:390px !important;width:100%;overflow:hidden;}
@@ -83,11 +93,21 @@
 .region-section .bootstrap-select.open{background:#333;z-index:15;}
 .region-section .bootstrap-select.btn-group .btn .filter-option{width:auto;}
 .region-section .bootstrap-select.btn-group .btn .caret{
-    background-image:url(images/assets/icon_dropdown_white.png);
+    background-image:url(images/ui/master/header/icon_select.png);
     position:relative;
     margin-left:24px;
     top:0;
     margin-top: inherit;
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+    only screen and (              min-resolution:120dpi)      and (min-width:768px),
+    only screen and (               min-resolution:2dppx)      and (min-width:768px){
+        background-image: url(images/ui/master/header/icon_select@3x.png);
+    }
 }
 .region-section .dropdown-menu{background:#333;margin:0;padding:0;border:0 none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;min-height:auto !important;max-height:none !important;}
 .region-section .bootstrap-select.btn-group .dropdown-menu.open{overflow:hidden;}

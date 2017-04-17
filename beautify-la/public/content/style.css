@@ -2509,8 +2509,11 @@ div.placeholder-custom {
   background: #333; }
 
 .area-section .bootstrap-select.btn-group .btn .caret {
-  background-image: url(images/assets/icon_dropdown_white.png);
+  background-image: url(images/ui/master/header/icon_select.png);
   margin-top: inherit; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .area-section .bootstrap-select.btn-group .btn .caret {
+      background-image: url(images/ui/master/header/icon_select@3x.png); } }
 
 .area-section .dropdown-menu {
   background: #333;
@@ -2609,11 +2612,14 @@ div.placeholder-custom {
   width: auto; }
 
 .region-section .bootstrap-select.btn-group .btn .caret {
-  background-image: url(images/assets/icon_dropdown_white.png);
+  background-image: url(images/ui/master/header/icon_select.png);
   position: relative;
   margin-left: 24px;
   top: 0;
   margin-top: inherit; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .region-section .bootstrap-select.btn-group .btn .caret {
+      background-image: url(images/ui/master/header/icon_select@3x.png); } }
 
 .region-section .dropdown-menu {
   background: #333;
@@ -2917,10 +2923,15 @@ div.placeholder-custom {
   .wrapper .area-section .bootstrap-select.btn-group .btn .filter-option {
     width: auto; }
   .wrapper .area-section .bootstrap-select.btn-group .btn .caret {
-    background-image: url(images/assets/icon_dropdown_white.png);
+    background-image: url(images/ui/master/header/icon_select.png);
     position: relative;
     margin-left: 24px;
-    top: 0; }
+    top: 0; } }
+  @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min-resolution: 120dpi) and (min-width: 768px), only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+    .wrapper .area-section .bootstrap-select.btn-group .btn .caret {
+      background-image: url(images/ui/master/header/icon_select@3x.png); } }
+
+@media (min-width: 768px) {
   .wrapper .area-section .dropdown-menu {
     background: #333;
     margin: 0;
@@ -2999,10 +3010,15 @@ div.placeholder-custom {
   .wrapper .region-section .bootstrap-select.btn-group .btn .filter-option {
     width: auto; }
   .wrapper .region-section .bootstrap-select.btn-group .btn .caret {
-    background-image: url(images/assets/icon_dropdown_white.png);
+    background-image: url(images/ui/master/header/icon_select.png);
     position: relative;
     margin-left: 24px;
-    top: 0; }
+    top: 0; } }
+  @media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-width: 768px) and (min-resolution: 120dpi) and (min-width: 768px), only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+    .wrapper .region-section .bootstrap-select.btn-group .btn .caret {
+      background-image: url(images/ui/master/header/icon_select@3x.png); } }
+
+@media (min-width: 768px) {
   .wrapper .region-section .dropdown-menu {
     background: #333;
     margin: 0;
@@ -3143,25 +3159,30 @@ div.placeholder-custom {
   .wrapper .site-header .navbar-collapse .li-account > a:hover,
   .wrapper .site-header .navbar-collapse .li-account > a:focus,
   .wrapper .site-header .navbar-collapse .li-account > a:visited {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 40px;
     padding: 0 34px;
-    color: #fff; }
-  .wrapper .site-header .navbar-collapse .li-account > a:before,
+    color: #fff;
+    font-family: "Lato", sans-serif; }
+  /*.wrapper .site-header .navbar-collapse .li-account > a:before,*/
   .wrapper .site-header .navbar-collapse .li-account > a:after {
     content: '';
     width: 25px;
     height: 25px;
-    background: url(images/ui/master/header/account.png) no-repeat;
-    background-size: 25px auto;
+    /*background: url(images/ui/master/header/account.png) no-repeat;
+        background-size: 25px auto;*/
+    background: url(images/ui/master/header/icon_select.png) no-repeat;
+    background-size: 19px auto;
     position: absolute;
     top: 7px; }
-  .wrapper .site-header .navbar-collapse .li-account > a:before {
-    left: 0;
-    background-position: center 0; }
+  /*.wrapper .site-header .navbar-collapse .li-account > a:before{
+        left:0;
+        background-position:center 0;
+    }*/
   .wrapper .site-header .navbar-collapse .li-account > a:after {
     right: 0;
-    background-position: center -25px; }
+    /*background-position:center -25px;*/
+    background-position: center center; }
   .wrapper .site-header .navbar-collapse .li-account .dropdown-menu {
     background: transparent;
     border: 0 none;
@@ -3178,22 +3199,31 @@ div.placeholder-custom {
     -webkit-transform: scale(1, 0);
     transform: scale(1, 0);
     -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
+    transition: all 0.2s linear;
+    padding: 0; }
   .wrapper .site-header .navbar-collapse .li-account.open .dropdown-menu {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100); }
+  .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li {
+    padding-bottom: 8px; }
   .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li a {
     color: #fff;
     text-align: right;
-    padding: 0 34px; }
+    padding: 0 34px;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400; }
   .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li a:hover {
     color: #F3472D;
-    background: transparent; }
+    background: transparent;
+    font-weight: 400; }
   .wrapper .site-header .navbar-collapse .li-account .dropdown-menu li.active a {
-    color: #f3472d; } }
+    color: #f3472d;
+    font-weight: 700; } }
 
 @media (min-width: 992px) {
   .wrapper .region-section .bootstrap-select.btn-group .btn .filter-option {
@@ -3260,9 +3290,10 @@ div.placeholder-custom {
   .wrapper .site-header .navbar-collapse .li-blog a:before,
   .wrapper .site-header .navbar-collapse .li-chat a:before {
     background-image: url(images/ui/master/header/icons@3x.png); }
-  .wrapper .site-header .navbar-collapse .li-account > a:before,
+  /*.wrapper .site-header .navbar-collapse .li-account > a:before,*/
   .wrapper .site-header .navbar-collapse .li-account > a:after {
-    background-image: url(images/ui/master/header/account@3x.png); } }
+    /*background-image: url(images/ui/master/header/account@3x.png);*/
+    background-image: url(images/ui/master/header/icon_select@3x.png); } }
 
 .slide-feature {
   overflow: hidden;
