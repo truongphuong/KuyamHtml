@@ -318,7 +318,6 @@
                         padding-top: 15px;
                     }
 
-
                     .row{
                         @media (max-width: 767px){
                             width: calc(100% - 16px);
@@ -331,6 +330,24 @@
                         @media (max-width: 767px){
                             padding-left: 5px;
                             padding-right: 5px;
+                        }
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -511,6 +528,24 @@
 
                     div[class*="col-"] {
                         margin-bottom: 15px;
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     .tier-list{

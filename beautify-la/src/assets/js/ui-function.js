@@ -251,7 +251,7 @@ function inputCustom(){
 
 function inputCheck($obj){
 	var $parent = $obj.closest('.input-custom');
-	if($parent.hasClass('input-url')){
+	if($parent.hasClass('input-url') || $parent.hasClass('input-price')){
         var isUrl = $parent.data('url');
         var inputVal = $obj.val();
         var $parent = $obj.closest('.input-custom');
