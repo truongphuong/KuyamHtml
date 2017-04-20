@@ -87,7 +87,19 @@ $(document).ready(function () {
 
     placeholderCustom();
 
-    inputCustom();
+    inputCustom('.input-custom input[type="text"]');
+
+    inputCustom('.input-custom .editable');
+
+    $(document).on('click', '.input-url', function (e) {
+        var $this = $(this);
+        var $editable = $this.find('.editable');
+        var $target = $(e.target);
+        if (!$target.hasClass('copy')) {
+            $editable.focus();
+            placeCaretAtEnd($editable[0]);
+        }
+    });
 
     $(document).on('change', 'select', function () {
         var $this = $(this);

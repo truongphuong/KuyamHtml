@@ -37,33 +37,14 @@ $(document).ready(function(){
 		$(this).parents('.popover-confirm').hide();
 	});
 
-	function placeholderCustom($obj){
-		var inputVal = $obj.val();
-		if(inputVal !== ''){
-			$obj.addClass('has-value');
+	$('input[name="whereEvent"]').on('change', function(){
+		var $radioChecked = $('input[name="whereEvent"]:checked');
+		var inputVal = parseInt($radioChecked.val());
+		var $section = $('#alternativeSection');
+		if(inputVal === 1){
+			$section.removeClass('disable');
 		}else{
-			$obj.removeClass('has-value');
+			$section.addClass('disable');
 		}
-	}
-
-	$( document ).ready(function() {
-		$('.placeholder-custom .form-control').each(function(){
-			var $this = $(this);
-			placeholderCustom($this);
-		}).on('keyup', function(){
-			var $this = $(this);
-			placeholderCustom($this);
-		});
-
-		$('input[name="whereEvent"]').on('change', function(){
-			var $radioChecked = $('input[name="whereEvent"]:checked');
-			var inputVal = parseInt($radioChecked.val());
-			var $section = $('#alternativeSection');
-			if(inputVal === 1){
-				$section.removeClass('disable');
-			}else{
-				$section.addClass('disable');
-			}
-		});
 	});
 });

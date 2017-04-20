@@ -19,7 +19,76 @@
     position: relative;
     margin-bottom: 0;
 
+    &.input-url {
+        border: 1px solid $border;
+        overflow: hidden;
+        border-radius: 2px;
+        display: block;
+        position: relative;
+        margin-bottom: 0;
+        padding: 0 15px;
+
+        @media (max-width: 767px){
+            padding:0 8px;
+        }
+
+        @media (max-width: 359px){
+            padding:0 5px;
+        }
+
+        &.has-copy {
+            padding-right: 62px;
+
+            @media (max-width: 767px){
+                padding-right: 42px;
+            }
+        }
+
+        .box {
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 36px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0;
+
+            @media (max-width: 767px){
+                line-height: 34px;
+            }
+
+            @media (max-width: 359px){
+                line-height: 29px;
+            }
+        }
+
+        .text {
+            display: inline-block;
+            color: #999;
+            font-size: $h5;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+            }
+        }
+
+        .editable {
+            min-width: 100px;
+            display: inline-block;
+            margin-left: -4px;
+        }
+    }
+
     &.has-placeholder {
+        &.input-url {
+            .text {
+                display: none;
+            }
+        }
+
         .placeholder {
             display: block;
             z-index: 1;
@@ -150,6 +219,7 @@
         top:0;
         right: 0;
         cursor: pointer;
+        z-index: 3;
 
         @media (max-width: 767px){
             font-size:$p;

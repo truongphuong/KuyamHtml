@@ -1681,6 +1681,54 @@ input[type=number] {
   display: block;
   position: relative;
   margin-bottom: 0; }
+  .input-custom.input-url {
+    border: 1px solid #797979;
+    overflow: hidden;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    padding: 0 15px; }
+    @media (max-width: 767px) {
+      .input-custom.input-url {
+        padding: 0 8px; } }
+    @media (max-width: 359px) {
+      .input-custom.input-url {
+        padding: 0 5px; } }
+    .input-custom.input-url.has-copy {
+      padding-right: 62px; }
+      @media (max-width: 767px) {
+        .input-custom.input-url.has-copy {
+          padding-right: 42px; } }
+    .input-custom.input-url .box {
+      white-space: nowrap;
+      overflow: hidden;
+      line-height: 36px;
+      position: relative;
+      z-index: 2;
+      letter-spacing: 0; }
+      @media (max-width: 767px) {
+        .input-custom.input-url .box {
+          line-height: 34px; } }
+      @media (max-width: 359px) {
+        .input-custom.input-url .box {
+          line-height: 29px; } }
+    .input-custom.input-url .text {
+      display: inline-block;
+      color: #999;
+      font-size: 1.25em; }
+      @media (max-width: 767px) {
+        .input-custom.input-url .text {
+          font-size: 0.9375em; } }
+      @media (max-width: 359px) {
+        .input-custom.input-url .text {
+          font-size: 0.8125em; } }
+    .input-custom.input-url .editable {
+      min-width: 100px;
+      display: inline-block;
+      margin-left: -4px; }
+  .input-custom.has-placeholder.input-url .text {
+    display: none; }
   .input-custom.has-placeholder .placeholder {
     display: block;
     z-index: 1; }
@@ -1779,7 +1827,8 @@ input[type=number] {
     position: absolute;
     top: 0;
     right: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 3; }
     @media (max-width: 767px) {
       .input-custom .copy {
         font-size: 0.75em;

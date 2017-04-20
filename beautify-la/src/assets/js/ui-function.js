@@ -231,8 +231,7 @@ function placholderCheck($obj){
     }
 }
 
-function inputCustom(){
-    var input = '.input-custom input[type="text"]';
+function inputCustom(input){
 	$(document).find(input).each(function(){
         var $this = $(this);
 		inputCheck($this);
@@ -252,8 +251,7 @@ function inputCustom(){
 function inputCheck($obj){
 	var $parent = $obj.closest('.input-custom');
 	if($parent.hasClass('input-url') || $parent.hasClass('input-price')){
-        var isUrl = $parent.data('url');
-        var inputVal = $obj.val();
+        var inputVal = $parent.hasClass('input-url') ? $obj.text() : $obj.val();
         var $parent = $obj.closest('.input-custom');
 
         if($parent.find('.placeholder').length) {
@@ -263,52 +261,7 @@ function inputCheck($obj){
                 $parent.removeClass('has-placeholder');
             }
         }
-
-        var temp = 0;
-        if (isView.xxs()){
-            temp = 36;
-        }else if (isView.xs()){
-            temp = 42;
-        }
-
-        var tdFirstW = parseInt($parent.find('.table-css .td:first-child').innerWidth()) - temp;
-        var aWidth = $parent.find('a').length ? parseInt($parent.find('a').innerWidth()) : 0;
-        var inputW = parseInt($parent.innerWidth()) - temp - aWidth;
-
-        if (isView.mobile()) {
-            if(inputVal.length === 0){
-                if(isUrl === false){
-                    $parent.find('.table-css').css({'margin-left': - tdFirstW});
-                    $obj.css({'width': inputW});
-                    $parent.data('url', true);
-                }
-            } else {
-                $parent.find('.table-css').css({'margin-left': ''});
-                $obj.css({'width': ''});
-                $parent.data('url', false);
-            }
-        } else {
-            if ($parent.hasClass('input-url')) {
-                $parent.find('.table-css').css({ 'margin-left': '' });
-                $obj.css({ 'width': '' });
-                $parent.data('url', false);
-            }
-        }
     }
-}
-
-function inputCustomResize(){
-    var input = '.input-custom input[type="text"]';
-	$(document).find(input).each(function(){
-        var $this = $(this);
-		var $parent = $this.closest('.input-custom');
-		if($parent.hasClass('input-url')){
-			$parent.find('.table-css').css({'margin-left': ''});
-			$this.css({'width': ''});
-			$parent.data('url', false);
-			inputCheck($this);
-		}
-    });
 }
 
 function datetimepickerDate($txtDate, $section){
@@ -337,8 +290,6 @@ function datetimepickerDate($txtDate, $section){
         $section.removeClass('open top bottom');
     });
 }
-
-
 
 function readFile(input, $croppieID) {
     if (input.files && input.files[0]) {
@@ -532,4 +483,22 @@ function tooltipResize($section, contentTooltip, classTooltip){
         theme:  classTooltip,
         offsetY: offsetYTooltip
     });
+}
+
+function placeCaretAtEnd(el) {
+    el.focus();
+    if (typeof window.getSelection != "undefined"
+            && typeof document.createRange != "undefined") {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else if (typeof document.body.createTextRange != "undefined") {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.collapse(false);
+        textRange.select();
+    }
 }
