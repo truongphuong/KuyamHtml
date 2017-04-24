@@ -1706,7 +1706,8 @@ input[type=number] {
       line-height: 36px;
       position: relative;
       z-index: 2;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      display: block; }
       @media (max-width: 767px) {
         .input-custom.input-url .box {
           line-height: 34px; } }
@@ -1726,7 +1727,14 @@ input[type=number] {
     .input-custom.input-url .editable {
       min-width: 100px;
       display: inline-block;
-      margin-left: -4px; }
+      margin-left: -4px;
+      font-size: 1.25em; }
+      @media (max-width: 767px) {
+        .input-custom.input-url .editable {
+          font-size: 0.9375em; } }
+      @media (max-width: 359px) {
+        .input-custom.input-url .editable {
+          font-size: 0.8125em; } }
   .input-custom.has-placeholder.input-url .text {
     display: none; }
   .input-custom.has-placeholder .placeholder {
@@ -7174,11 +7182,15 @@ div.placeholder-custom {
     .company-event-page .content footer .btn {
       width: 146px;
       height: 44px;
-      margin-right: 16px;
       font-size: 1.25em;
       font-family: "Lato", sans-serif;
       border-radius: 0;
       padding: 0; }
+      .company-event-page .content footer .btn + .btn {
+        margin-left: 16px; }
+        @media (max-width: 767px) {
+          .company-event-page .content footer .btn + .btn {
+            margin-left: 10px; } }
       .company-event-page .content footer .btn.btn-positive:after {
         content: ''; }
       .company-event-page .content footer .btn.btn-negative:before {
@@ -7677,10 +7689,12 @@ div.placeholder-custom {
       padding-top: 0;
       height: 24px; } }
 
-@media (max-width: 767px) {
-  .company-event-page .details-event .time-section .cb-mark ~ .cb-label {
-    font-size: 0.9375em;
-    margin: 0; } }
+.company-event-page .details-event .time-section .cb-mark ~ .cb-label {
+  white-space: nowrap; }
+  @media (max-width: 767px) {
+    .company-event-page .details-event .time-section .cb-mark ~ .cb-label {
+      font-size: 0.9375em;
+      margin: 0; } }
 
 .company-event-page .details-event .time-section .week-list {
   margin: 0;

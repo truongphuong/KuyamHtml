@@ -51,6 +51,7 @@
             position: relative;
             z-index: 2;
             letter-spacing: 0;
+            display: block;
 
             @media (max-width: 767px){
                 line-height: 34px;
@@ -79,6 +80,15 @@
             min-width: 100px;
             display: inline-block;
             margin-left: -4px;
+            font-size: $h5;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+            }
         }
     }
 

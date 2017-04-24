@@ -244,6 +244,12 @@ function inputCustom(input) {
     }).on('keyup', input, function () {
         var $this = $(this);
         inputCheck($this);
+    }).on('keydown', input, function (e) {
+        var $this = $(this);
+        var $parent = $this.closest('.input-custom');
+        if ($parent.hasClass('input-url') && e.keyCode === 13) {
+            return false;
+        }
     });
 }
 

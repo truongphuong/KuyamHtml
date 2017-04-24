@@ -284,11 +284,18 @@
             .btn {
                 width: 146px;
                 height: 44px;
-                margin-right: 16px;
                 font-size: $h5;
                 font-family: $primary;
                 border-radius: 0;
                 padding:0;
+
+                + .btn {
+                    margin-left: 16px;
+
+                    @media (max-width: 767px){
+                        margin-left: 10px;
+                    }
+                }
 
                 &.btn-positive{
                     &:after{
