@@ -97,7 +97,7 @@ $(document).ready(function () {
         var $target = $(e.target);
         if (!$target.hasClass('copy')) {
             $editable.focus();
-            placeCaretAtEnd($editable[0]);
+            //placeCaretAtEnd($editable[0]);
         }
     });
 
