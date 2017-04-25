@@ -6,8 +6,24 @@
                 padding-left: 43px;
                 padding-bottom: 16px;
 
+                @media (max-width: 767px) {
+                    padding-left: 23px;
+                }
+
+                @media (max-width: 359px) {
+                    padding-left: 20px;
+                }
+
                 + .item {
-                    padding-top: 23px;
+                    padding-top: 33px;
+
+                    @media (max-width: 767px) {
+                        padding-top: 23px;
+                    }
+
+                    @media (max-width: 359px) {
+                        padding-top: 20px;
+                    }
                 }
 
                 p {
@@ -16,6 +32,14 @@
                     color: $base;
                     position: relative;
                     margin: 0 0 11px;
+
+                    @media (max-width: 767px) {
+                        font-size: $h6;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $p;
+                    }
 
                     &:before {
                         content: '';
@@ -26,6 +50,14 @@
                         position: absolute;
                         top: -3px;
                         left: -43px;
+
+                        @media (max-width: 767px) {
+                            left: -33px;
+                        }
+
+                        @media (max-width: 359px) {
+                            left: -30px;
+                        }
                     }
                 }
 
@@ -87,6 +119,10 @@
                         b {
                             font-weight: 800;
                             font-size: 14px;
+
+                            @media (max-width: 359px){
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -96,6 +132,14 @@
                         &:before {
                             background-image: url(images/ui/pages/event/icon_bird.png);
                             background-size: 28px auto;
+
+                            @media (max-width:767px) {
+                                background-size: 15px auto;
+                            }
+
+                            @media (max-width:359px) {
+                                background-size: 12px auto;
+                            }
 
                             @media
                             only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
@@ -115,6 +159,14 @@
                         &:before {
                             background-image: url(images/ui/pages/event/icon_group.png);
                             background-size: 29px auto;
+
+                            @media (max-width:767px) {
+                                background-size: 16px auto;
+                            }
+
+                            @media (max-width:359px) {
+                                background-size: 13px auto;
+                            }
 
                             @media
                             only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),

@@ -5,11 +5,31 @@
             margin-top: 19px;
             padding-top: 16px;
 
+            @media (max-width: 767px) {
+                margin-top: 16px;
+                padding-top: 20px;
+            }
+
+            @media (max-width: 359px) {
+                margin-top: 13px;
+                padding-top: 17px;
+            }
+
             .video{
                 height: 320px;
                 margin-bottom: 22px;
                 cursor: pointer;
                 position: relative;
+
+                @media (max-width: 767px) {
+                    height: 178px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 359px) {
+                    height: 175px;
+                    margin-bottom: 17px;
+                }
 
                 &.vimeo {
                     &.default{
@@ -30,6 +50,14 @@
                 iframe {
                     height: 320px;
                     width: 100%;
+
+                    @media (max-width: 767px) {
+                        height: 178px;
+                    }
+
+                    @media (max-width: 359px) {
+                        height: 175px;
+                    }
                 }
             }
 
@@ -39,6 +67,18 @@
                 font-family: $primary;
                 color: $base;
                 margin: 0 0 21px;
+
+                @media (max-width: 767px) {
+                    font-size: $h6;
+                    line-height: 18px;
+                    margin-bottom: 19px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $p;
+                    line-height: 15px;
+                    margin-bottom: 16px;
+                }
 
                 b {
                     font-weight: 700;

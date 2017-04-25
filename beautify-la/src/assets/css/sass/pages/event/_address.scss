@@ -8,19 +8,28 @@
                 color: $base;
                 margin: 0 0 15px;
 
-                b {
-                    font-weight: 700;
+                @media (max-width: 767px){
+                    font-size: $h6;
+                    line-height: 18px;
                 }
 
-                @media (max-width: 767px){
-                    font-size: 21px;
-                    line-height: 23px;
+                @media (max-width: 359px){
+                    font-size: $p;
+                    line-height: 15px;
+                }
+
+                b {
+                    font-weight: 700;
                 }
             }
 
             .map{
                 > div {
                     height: 276px;
+
+                    @media (max-width: 767px){
+                        height: 154px;
+                    }
                 }
             }
         }

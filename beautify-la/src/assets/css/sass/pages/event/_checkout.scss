@@ -15,11 +15,21 @@
                     width: 100%;
                     float: none;
                     margin-bottom: 10px;
+                    height: 31px;
+                }
+
+                @media (max-width: 359px) {
+                    margin-bottom: 7px;
+                    height: 29px;
                 }
 
                 .form-control {
                     padding: 0 55px 0 0;
                     height: 31px;
+
+                    @media (max-width: 359px) {
+                        height: 29px;
+                    }
                 }
 
                 .btn {
@@ -36,6 +46,16 @@
                     margin: 0;
                     width: auto;
                     box-shadow: none;
+
+                    @media (max-width: 767px) {
+                        padding-right: 15px;
+                    }
+
+                    @media (max-width: 359px) {
+                        height: 29px;
+                        font-size: $s13;
+                        padding-right: 8px;
+                    }
 
                     &[disabled] {
                         background: transparent;
@@ -57,6 +77,17 @@
                     font-family: $primary;
                     color: $base;
 
+                    @media (max-width: 767px){
+                        font-size: $h6;
+                        line-height: 21px;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $p;
+                        line-height: 18px;
+                        padding:0 8px;
+                    }
+
                     + li {
                         border-left: 1px solid rgba(44, 44, 46, .3);
 
@@ -77,6 +108,16 @@
                 border-radius: 0;
                 clear: both;
                 margin-top: 13px;
+
+                @media (max-width: 767px){
+                    font-size: $h6;
+                    height: 39px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $p;
+                    height: 36px;
+                }
             }
         }
     }

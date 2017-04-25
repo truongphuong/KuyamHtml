@@ -1,6 +1,11 @@
 .wrapper {
     .back-to-home{
         background: $black;
+        height: 46px;
+
+        @media (max-width: 767px) {
+            height: 48px;
+        }
 
         a {
             display: inline-block;
@@ -11,6 +16,10 @@
             color: $white;
             padding-left: 30px;
             text-decoration: none;
+
+            @media (max-width: 767px) {
+                line-height: 48px;
+            }
 
             &:before {
                 content: '';
