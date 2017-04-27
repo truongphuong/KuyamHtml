@@ -51,6 +51,66 @@
                     }
 
                     .btn{
+                        width: 262px;
+                        height: 40px;
+                        padding: 1px;
+                        margin: 3px 0;
+
+                        @media (max-width: 767px){
+                            width: 217px;
+                            height: 39px;
+                            margin: 2px 0;
+                        }
+
+                        @media (max-width: 359px){
+                            width: 191px;
+                            height: 35px;
+                            margin: 1px 0;
+                        }
+
+                        span {
+                            height: 38px;
+                            line-height: 38px;
+                            font-size: 19px;
+                            padding-left: 56px;
+
+                            @media (max-width: 767px){
+                                height: 37px;
+                                line-height: 37px;
+                                font-size: 16px;
+                                padding-left: 48px;
+                            }
+
+                            @media (max-width: 359px){
+                                height: 33px;
+                                line-height: 33px;
+                                font-size: 14px;
+                                padding-left: 44px;
+                            }
+
+                            &:before {
+                                width: 65px;
+                                height: 100%;
+                                top:0;
+                                left: 0;
+                                margin-top: 0;
+                                background-position: center center;
+                                background-size: 32px auto;
+
+                                @media (max-width: 767px){
+                                    width: 50px;
+                                    background-size: 28px auto;
+                                }
+
+                                @media (max-width: 359px){
+                                    width: 44px;
+                                    background-size: 26px auto;
+                                }
+                            }
+                        }
+                    }
+
+                    /*.btn{
                         display: block;
                         width: 262px;
                         height: 46px;
@@ -98,7 +158,7 @@
                                 background-image: url(images/ui/pages/company/settings/btn_stripe_connected@3x.png);
                             }
                         }
-                    }
+                    }*/
 
                     ul{
                         margin:0;
