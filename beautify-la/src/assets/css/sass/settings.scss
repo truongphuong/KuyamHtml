@@ -141,7 +141,14 @@
 
 /*------------------------------------------------------------------*/
 body{overflow-x:auto;}
-.settings-section{font-size:20px;line-height:24px;}
+.settings-section{
+    font-size:20px;line-height:24px;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
 .settings-section .site-header .logo img{height:70px;}
 .settings-section .nav-main{padding-bottom:20px;}
 .settings-section .nav-main li img{margin-top:-20px;} .nav-main{padding-bottom:20px;}

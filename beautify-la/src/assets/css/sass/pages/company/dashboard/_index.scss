@@ -19,6 +19,10 @@
     h2 {
         font-family:ralewaybold, sans-serif;
 
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
+
         span.event-date{float:right;color:#f3472d;}
     }
 
@@ -44,6 +48,7 @@
             float: none;
             display: block;
             margin-bottom: 20px;
+            font-size: 16px;
         }
     }
 
@@ -53,6 +58,12 @@
         height:32px;
         margin-bottom:-8px;
         width:32px;
+
+        @media (max-width: 767px) {
+            background-size: 16px auto;
+            position: relative;
+            bottom: -3px;
+        }
     }
 
     .icon-down{
@@ -61,6 +72,12 @@
         height:32px;
         margin-bottom:-8px;
         width:32px;
+
+        @media (max-width: 767px) {
+            background-size: 16px auto;
+            position: relative;
+            bottom: -3px;
+        }
     }
 }
 
@@ -68,6 +85,10 @@
     h3{
         font-family:ralewaybold, sans-serif;
         margin-bottom:10px;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
 
         .icon-up{display:inline-block;
             width:24px;
@@ -95,10 +116,10 @@
             position:relative;
             overflow:hidden;
 
-
             @media (max-width: 767px) {
                 padding-right: 0;
             }
+
             span.event-date{
                 float:right;color:#f3472d;
                 position:absolute;
@@ -160,7 +181,11 @@
 
         .social-icons{
             margin:0;
-            width:330px;
+            width: 440px;
+
+            @media (max-width: 979px) {
+                float: left;
+            }
 
             @media (max-width: 767px) {
                 float: none;
@@ -168,8 +193,7 @@
                 text-align: left;
             }
 
-            @media (max-width:372px) {
-                width: 100%;
+            @media (max-width: 359px) {
                 text-align: center;
             }
 
@@ -180,9 +204,28 @@
                 font-size:20px;
                 font-family:ralewaybold, sans-serif;
 
-                @media (max-width:372px) {
+                @media (max-width: 767px) {
                     float: none;
                     text-align: left;
+                }
+
+                + dd {
+                    @media (max-width: 767px) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            dd {
+                img {
+                    @media (max-width: 767px) {
+                        width: 28px;
+                    }
+
+
+                    @media (max-width: 359px) {
+                        width: 22px;
+                    }
                 }
             }
         }
