@@ -85,7 +85,11 @@ $(document).ready(function(){
 
     settingsModal();
 
+    $('.modal').on('show.bs.modal', setOffsetY);
+
     $('.modal').on('shown.bs.modal', centerModal);
+
+    $('.modal').on('hidden.bs.modal', removeOffsetY);
 
     placeholderCustom();
 

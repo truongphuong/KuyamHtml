@@ -33,6 +33,27 @@ function settingsModal(){
     });
 }
 
+function setOffsetY(){
+    var offsetY = window.pageYOffset || document.documentElement.scrollTop;
+    $('.wrapper').css({'top': - offsetY});
+    if(!isView.mobile()) {
+        if($('wrapper').hasClass('company-event-page')){
+            $('.wrapper .affix').css({'top': 20, 'position': 'fixed'});
+        } else {
+            $('.wrapper .affix').css({'top': 15, 'position': 'fixed'});
+        }
+    }
+}
+
+function removeOffsetY() {
+    var offsetY = - parseInt($('.wrapper').css('top'));
+    document.body.scrollTop = offsetY;
+    $('.wrapper').css({'top': ''});
+    if(!isView.mobile()) {
+        $('.wrapper .affix-top, .wrapper .affix').css({'top': '', 'position': ''});
+    }
+}
+
 function centerModal() {
     $(this).css('display', 'block');
     var $dialog = $(this).find(".modal-dialog");
