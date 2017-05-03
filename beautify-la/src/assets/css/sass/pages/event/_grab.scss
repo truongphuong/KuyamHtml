@@ -106,6 +106,13 @@
                                 font-size: $p;
                             }
 
+                            &:first-child {
+                                @media (max-width: 767px){
+                                    float: left;
+                                    width: 60%;
+                                }
+                            }
+
                             .how {
                                 display: none;
 
@@ -118,13 +125,6 @@
 
                                 @media (max-width: 359px){
                                     margin-right: 12px;
-                                }
-                            }
-
-                            &:first-child {
-                                @media (max-width: 767px){
-                                    float: left;
-                                    width: 60%;
                                 }
                             }
 
@@ -146,6 +146,28 @@
 
                             ul{
                                 font-size: 16px;
+                                display: inline-block;
+                                float: left;
+
+                                &.rsvp-max {
+                                    position: relative;
+                                    padding-bottom: 24px;
+
+                                    li {
+                                        &.max-guest {
+                                            font-size: $s13;
+                                            font-style: italic;
+                                            position: absolute;
+                                            right: 0;
+                                            bottom: 0;
+                                            white-space: nowrap;
+
+                                            @media (max-width: 767px){
+                                                font-size: $p;
+                                            }
+                                        }
+                                    }
+                                }
 
                                 li {
                                     font-size: $h4;

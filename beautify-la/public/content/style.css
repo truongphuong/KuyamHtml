@@ -8094,6 +8094,9 @@ div.placeholder-custom {
     .company-event-page .link-social li + li {
       margin-left: 5px; } }
 
+.company-event-page #main-affix.affix {
+  top: 20px; }
+
 .company-event-page #nav-affix.affix {
   top: 20px; }
   .company-event-page #nav-affix.affix .coming-section {
@@ -10642,6 +10645,10 @@ div.placeholder-custom {
         @media (max-width: 359px) {
           .event-page .event-section .grab .item ul.footer > li {
             font-size: 0.75em; } }
+        @media (max-width: 767px) {
+          .event-page .event-section .grab .item ul.footer > li:first-child {
+            float: left;
+            width: 60%; } }
         .event-page .event-section .grab .item ul.footer > li .how {
           display: none; }
           @media (max-width: 767px) {
@@ -10653,10 +10660,6 @@ div.placeholder-custom {
           @media (max-width: 359px) {
             .event-page .event-section .grab .item ul.footer > li .how {
               margin-right: 12px; } }
-        @media (max-width: 767px) {
-          .event-page .event-section .grab .item ul.footer > li:first-child {
-            float: left;
-            width: 60%; } }
         .event-page .event-section .grab .item ul.footer > li + li {
           border-left: 1px solid rgba(44, 44, 46, 0.3);
           margin-left: 15px;
@@ -10669,7 +10672,22 @@ div.placeholder-custom {
             color: #f3472d;
             font-weight: 700; }
         .event-page .event-section .grab .item ul.footer > li ul {
-          font-size: 16px; }
+          font-size: 16px;
+          display: inline-block;
+          float: left; }
+          .event-page .event-section .grab .item ul.footer > li ul.rsvp-max {
+            position: relative;
+            padding-bottom: 24px; }
+            .event-page .event-section .grab .item ul.footer > li ul.rsvp-max li.max-guest {
+              font-size: 0.8125em;
+              font-style: italic;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              white-space: nowrap; }
+              @media (max-width: 767px) {
+                .event-page .event-section .grab .item ul.footer > li ul.rsvp-max li.max-guest {
+                  font-size: 0.75em; } }
           .event-page .event-section .grab .item ul.footer > li ul li {
             font-size: 1.5em;
             font-family: "Lato", sans-serif;
