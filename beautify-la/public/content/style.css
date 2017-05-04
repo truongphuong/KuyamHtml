@@ -3985,19 +3985,6 @@ div.placeholder-custom {
 #nav-affix.affix-bottom {
   position: absolute; }
 
-@media (max-width: 767px) {
-  .company-event-page {
-    font-size: 16px; } }
-
-@media (min-width: 1270px) {
-  .company-event-page #main-affix {
-    width: 930px; } }
-
-@media (min-width: 1270px) {
-  .company-event-page #nav-affix {
-    width: 240px;
-    padding-left: 0; } }
-
 #sidebar {
   width: 80%;
   position: absolute;
@@ -7096,6 +7083,22 @@ div.placeholder-custom {
   font-size: 16px;
   line-height: 150%;
   font-family: "Lato", sans-serif; }
+  @media (max-width: 767px) {
+    .company-event-page {
+      font-size: 16px; } }
+  @media (min-width: 1270px) {
+    .company-event-page #main-affix {
+      width: 930px; } }
+  .company-event-page #main-affix.affix {
+    top: 20px; }
+  @media (min-width: 1270px) {
+    .company-event-page #nav-affix {
+      width: 240px;
+      padding-left: 0; } }
+  .company-event-page #nav-affix.affix {
+    top: 20px; }
+    .company-event-page #nav-affix.affix .coming-section {
+      margin-top: 0; }
   .company-event-page .main-content {
     padding: 0; }
   .company-event-page .content {
@@ -7138,8 +7141,7 @@ div.placeholder-custom {
       font-size: 1.25em;
       line-height: 25px;
       font-family: "Lato", sans-serif;
-      color: rgba(51, 51, 51, 0.3);
-      text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+      color: rgba(51, 51, 51, 0.6);
       margin: 0 0 19px; }
       @media (max-width: 767px) {
         .company-event-page .content p {
@@ -7393,17 +7395,9 @@ div.placeholder-custom {
   .company-event-page .sidebar.active ul li a {
     pointer-events: inherit; }
 
-.company-event-page .type-event p {
-  font-size: 1.25em;
-  line-height: 25px;
-  font-family: "Lato", sans-serif;
-  color: rgba(51, 51, 51, 0.3);
-  text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
-  margin: 0 0 19px; }
-  @media (max-width: 767px) {
-    .company-event-page .type-event p {
-      font-size: 0.9375em;
-      margin-bottom: 16px; } }
+@media (max-width: 767px) {
+  .company-event-page .type-event p {
+    margin-bottom: 16px; } }
 
 .company-event-page .type-event .section-photo {
   margin-top: 31px;
@@ -8093,14 +8087,6 @@ div.placeholder-custom {
   @media (min-width: 1270px) {
     .company-event-page .link-social li + li {
       margin-left: 5px; } }
-
-.company-event-page #main-affix.affix {
-  top: 20px; }
-
-.company-event-page #nav-affix.affix {
-  top: 20px; }
-  .company-event-page #nav-affix.affix .coming-section {
-    margin-top: 0; }
 
 .company-event-page .coming-section {
   margin-top: 20px; }

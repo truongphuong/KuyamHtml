@@ -37,7 +37,10 @@ function setOffsetY(){
     var offsetY = window.pageYOffset || document.documentElement.scrollTop;
     $('.wrapper').css({'top': - offsetY});
     if(!isView.mobile()) {
-        if($('wrapper').hasClass('company-event-page')){
+        if($('.wrapper').hasClass('company-event-page')){
+            if ($('.wrapper').find('.affix').length){
+                $('.coming-section').css({'margin-top': 0});
+            }
             $('.wrapper .affix').css({'top': 20, 'position': 'fixed'});
         } else {
             $('.wrapper .affix').css({'top': 15, 'position': 'fixed'});
@@ -50,6 +53,8 @@ function removeOffsetY() {
     document.body.scrollTop = offsetY;
     $('.wrapper').css({'top': ''});
     if(!isView.mobile()) {
+        $('.company-event-page .coming-section').css({'margin-top': ''});
+
         $('.wrapper .affix-top, .wrapper .affix').css({'top': '', 'position': ''});
     }
 }
