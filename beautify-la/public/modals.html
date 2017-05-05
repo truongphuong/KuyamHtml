@@ -323,7 +323,16 @@
                         <a href="#" title="" data-target="#billModal" data-toggle="modal">bill</a>
                     </dd>
                     <dd>
+                        <a href="#" title="" data-target="#bill1Modal" data-toggle="modal">bill1</a>
+                    </dd>
+                    <dd>
+                        <a href="#" title="" data-target="#billDonationModal" data-toggle="modal">bill donation</a>
+                    </dd>
+                    <dd>
                         <a href="#" title="" data-target="#shareModal" data-toggle="modal">share</a>
+                    </dd>
+                    <dd>
+                        <a href="#" title="" data-target="#congratsModal" data-toggle="modal">congrats</a>
                     </dd>
                 </dl>
             </div>
@@ -5050,7 +5059,7 @@
                     </div>
                 </section>
                     <section class="bill">
-                    <label class="label-form">Contact info</label>
+                    <label class="label-form">Your purchase</label>
                     <div class="table-css">
                         <div class="tr">
                             <div class="td td-name"><hr /><span>Adults really long ticket name oh super long ($50) x2</span></div>
@@ -5064,12 +5073,89 @@
                             <div class="td td-name"><hr /><span>Dogs tickets ($10) x1</span></div>
                             <div class="td td-price">$10.00</div>
                         </div>
-                        <div class="tr">
-                            <div class="td td-name"><hr /><span><strong>Subtotal</strong></span></div>
+                    </div>
+                    <div class="table-css footer">
+                        <div class="tr subtotal">
+                            <div class="td td-name">Subtotal</div>
                             <div class="td td-price">$190.00</div>
                         </div>
+                        <div class="tr processing">
+                            <div class="td td-name">Processing fees</div>
+                            <div class="td td-price">$10.00</div>
+                        </div>
+                        <div class="tr total">
+                            <div class="td td-name">Total due:</div>
+                            <div class="td td-price">$200.00</div>
+                        </div>
+                    </div>
+                    <ul class="clearfix hide">
+                        <li>Total due:</li>
+                        <li>$185.00</li>
+                    </ul>
+                </section>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-positive" value="Pay with credit card" data-dismiss="modal"
+                        data-target="#reminderModal" data-toggle="modal" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#billModal -->
+    <!-- #billModal -->
+    <div id="bill1Modal" class="modal fade" role="dialog" aria-labelledby="billModalLabel"
+        data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-bill">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
+                    <h4 id="billModalLabel" class="modal-title">
+                        Confirm your spot</h4>
+                    <p>
+                        Amy's Hair Salon special offer event!Amy's Hair SaSaSaSaSaSSaSaSaaAmy's Hair Salon
+                        special offer</p>
+                </div>
+                <div class="modal-body">
+                    <section class="info">
+                    <label class="label-form">Contact info</label>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtFirstName" class="placeholder-custom validate-border">
+                                <span class="placeholder">First Name<span class="required">∗</span></span>
+                                <input id="txtFirstName" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtLastName" class="placeholder-custom">
+                                <span class="placeholder">Last Name<span class="required">∗</span></span>
+                                <input id="txtLastName" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <input id="txtCellPhone" type="text" class="form-control" placeholder="Cell Phone" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtEmail" class="placeholder-custom">
+                                <span class="placeholder">Email<span class="required">∗</span></span>
+                                <input id="txtEmail" type="text" class="form-control" />
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                    <section class="bill">
+                    <label class="label-form">Your purchase</label>
+                    <div class="table-css">
                         <div class="tr">
-                            <div class="td td-name"><hr /><span><strong>Processing fees</strong></span></div>
+                            <div class="td td-name"><hr /><span>Adults really long ticket name oh super long ($50) x2</span></div>
+                            <div class="td td-price">$100.00</div>
+                        </div>
+                        <div class="tr">
+                            <div class="td td-name"><hr /><span>Kids tickets ($25) x3</span></div>
+                            <div class="td td-price">$75.00</div>
+                        </div>
+                        <div class="tr">
+                            <div class="td td-name"><hr /><span>Dogs tickets ($10) x1</span></div>
                             <div class="td td-price">$10.00</div>
                         </div>
                     </div>
@@ -5156,6 +5242,90 @@
         </div>
     </div>
     <!-- /#scheduleModal -->
+    <!-- #billModal -->
+    <div id="billDonationModal" class="modal fade" role="dialog" aria-labelledby="billModalLabel"
+        data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-bill">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
+                    <h4 id="billModalLabel" class="modal-title">
+                        Confirm your spot</h4>
+                    <p>
+                        Amy's Hair Salon special offer event!Amy's Hair SaSaSaSaSaSSaSaSaaAmy's Hair Salon
+                        special offer</p>
+                </div>
+                <div class="modal-body">
+                    <section class="info">
+                    <label class="label-form">Contact info</label>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtFirstName" class="placeholder-custom validate-border">
+                                <span class="placeholder">First Name<span class="required">∗</span></span>
+                                <input id="txtFirstName" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtLastName" class="placeholder-custom">
+                                <span class="placeholder">Last Name<span class="required">∗</span></span>
+                                <input id="txtLastName" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <input id="txtCellPhone" type="text" class="form-control" placeholder="Cell Phone" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label for="txtEmail" class="placeholder-custom">
+                                <span class="placeholder">Email<span class="required">∗</span></span>
+                                <input id="txtEmail" type="text" class="form-control" />
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                    <section class="bill donation">
+                    <label class="label-form">Your donation</label>
+                    <div class="table-css">
+                        <div class="tr">
+                            <div class="td td-name"><hr /><span>Lorem ipsum dolor sit amet</span></div>
+                            <div class="td td-price">$150.00</div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-positive" value="Pay with credit card" data-dismiss="modal"
+                        data-target="#reminderModal" data-toggle="modal" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#billModal -->
+    <!-- #congratsModal -->
+    <div id="congratsModal" class="modal fade" role="dialog" aria-labelledby="congratsModalLabel"
+        data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-congrats">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
+                    <h4 id="congratsModalLabel" class="modal-title">
+                        Request confirmed</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="icon icon-reminder">
+                    </div>
+                    <p>
+                        Congrats! Your ticket will be<br />
+                        emailed to you shortly.</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-positive" value="Close" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#congratsModal -->
     <div class="lightbox">
     </div>
     <div class="loading">

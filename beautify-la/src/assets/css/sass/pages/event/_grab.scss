@@ -304,6 +304,11 @@
                         text-align: right;
                         white-space: nowrap;
 
+                        &.raise {
+                            right: inherit;
+                            left: 0;
+                        }
+
                         b {
                             font-weight: 800;
                             font-size: 14px;
@@ -342,6 +347,18 @@
                                 width: 100%;
                             }
                         }
+                    }
+                }
+
+                > p {
+                    font-size: $h6;
+                    font-family: $primary;
+                    line-height: 20px;
+                    color: $base;
+                    margin: 0 0 8px;
+
+                    @media (max-width: 359px){
+                        font-size: $p;
                     }
                 }
             }

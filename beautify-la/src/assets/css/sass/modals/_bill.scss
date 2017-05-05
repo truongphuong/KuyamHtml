@@ -117,7 +117,7 @@
 
         .bill {
             border-top: 1px solid rgba(44, 44, 46, .1);
-            padding: 5px 34px 0;
+            padding: 5px 23px 0;
 
             @media (max-width: 767px) {
                 padding-left: 15px;
@@ -130,8 +130,50 @@
                 clear: both;
             }
 
+            &.donation {
+                .td {
+                    &.td-price {
+                        font-size: 22px;
+                        font-family: $primary;
+                        font-weight: 700;
+                        color: $positive;
+                    }
+                }
+            }
+
             .table-css {
                 width: 100%;
+
+                &.footer {
+                    float: right;
+                    width: auto;
+
+                    .td {
+                        &.td-name{
+                            text-align: right;
+                            padding-right: 30px;
+                        }
+                    }
+
+                    .subtotal ,
+                    .processing {
+                        .td {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .total {
+                        .td {
+                            &.td-name{
+                                font-size: 22px;
+                            }
+
+                            &.td-price {
+                                color: $positive;
+                            }
+                        }
+                    }
+                }
             }
 
             .td {
@@ -141,6 +183,7 @@
                 line-height: 27px;
                 position: relative;
                 padding: 3px 0;
+                color: #333;
 
                 @media (max-width: 767px) {
                     font-size: $h6;
@@ -152,6 +195,7 @@
                     white-space: nowrap;
                     vertical-align: bottom;
                     padding-left: 5px;
+                    width: 75px;
                 }
 
                 span {
@@ -213,6 +257,16 @@
                 font-size: $h6;
                 padding:0 20px;
                 min-width: auto;
+            }
+        }
+
+        .btn-paypal {
+            * {
+                display: none;
+            }
+
+            .btn-positive {
+                display: inline-block;
             }
         }
     }

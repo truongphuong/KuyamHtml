@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Beautify LA - Event RSVP</title>
+    <title>Beautify LA - Event Ticket</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
@@ -47,7 +47,7 @@
     <link type="text/css" rel="stylesheet" href="content/style.css" />
 </head>
 <body>
-    <div class="wrapper event-page event-rsvp-page">
+    <div class="wrapper event-page event-donation-page">
         <div class="back-to-home">
             <div class="container">
                 <a title="" href="home.html">Go back</a>
@@ -82,10 +82,12 @@
                                         Sed sapien nisi, pretium sed porta ut, placerat ac turpis. Aenean cursus eros feugiat,
                                         semper dolor condimentum, iverra justo. Sed iaculis felis libero, quis faucibus
                                         erat fermentum vitae. Nulla mi ipsum, rutrum!</p>
-                                    <p>
-                                        <b>Parking:</b> inside the builing</p>
-                                    <p>
-                                        <b>Dress attire:</b> casual</p>
+                                    <section>
+        <ul class="clearfix">
+            <li><b>Parking</b><br />Inside the builing lorem ipsum dolor sit amet.</li>
+            <li><b>Dress attire</b><br />Casual conseditur palesque grotes ips amet conseditur.</li>
+        </ul>
+    </section>
                                 </div>
                                 <div class="section rewards">
                                     <div class="p">
@@ -109,41 +111,55 @@
                                 </div>
                                 <div class="section grab">
                                     <div class="p">
-                                        <b>Grab your places</b></div>
+                                        <b>Grab your tickets</b></div>
                                     <div class="list">
-                                        <div class="item sold-out">
-                                            <span class="progress"><span class="progress-bar" role="progressbar" aria-valuenow="0"
-                                                aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="control"></span>
-                                                <span class="text"><span><b>8</b> SPOTS LEFT</span></span> </span></span>
-                                            <div class="table-css">
-                                                <div class="tr">
-                                                    <div class="td hidden-xs">
-                                                    </div>
-                                                    <div class="td">
-                                                        <ul class="footer">
-                                                            <li><span class="how">How many:</span>
-                                                                <ul class="rsvp-max">
-                                                                    <li>
-                                                                        <button class="btn-minus">
-                                                                        </button>
-                                                                    </li>
-                                                                    <li><span class="num">0</span> </li>
-                                                                    <li>
-                                                                        <button class="btn-add">
-                                                                        </button>
-                                                                    </li>
-                                                                    <li class="max-guest">(Max 4 guests)</li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="item">
+                                            <ul class="header">
+                                                <li>Goal $500</li>
+                                            </ul>
+                                            <span class="progress"><span class="progress-bar" role="progressbar" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="control">
+                                                </span><span class="text"><span><b>8</b> SPOTS LEFT</span></span> <span class="text raise">
+                                                    <span><b>$400</b> RAISED</span></span> </span></span>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae congue metus,
+                                                dignissim aliquam neque consectetur adipiscing elit.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="section checkout">
-                                    <input type="button" class="btn btn-positive" value="RSVP" data-target="#billModal"
+                                    <div class="p">
+                                        <b>Checkout</b></div>
+                                    <label class="form-label">
+                                        Suggested donations</label>
+                                    <ul class="form suggested">
+                                        <li><span class="radio-custom">
+                                            <input class="radio-mark" id="radiosuggested1" type="radio" name="suggested" value="1">
+                                            <label class="radio-label" for="radiosuggested1">
+                                                $5</label>
+                                        </span></li>
+                                        <li><span class="radio-custom">
+                                            <input class="radio-mark" id="radiosuggested2" type="radio" name="suggested" value="2">
+                                            <label class="radio-label" for="radiosuggested2">
+                                                $10</label>
+                                        </span></li>
+                                        <li><span class="radio-custom">
+                                            <input class="radio-mark" id="radiosuggested3" type="radio" name="suggested" value="3">
+                                            <label class="radio-label" for="radiosuggested3">
+                                                $100</label>
+                                        </span></li>
+                                        <li>
+                                            <label class="placeholder-custom">
+                                                <input type="text" class="form-control" placeholder="Or type your donation" />
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>Total: <span>$99999.00</span></li>
+                                    </ul>
+                                    <p>
+                                        Minimum donation $1</p>
+                                    <input type="button" class="btn btn-positive" value="Donate" data-target="#billModal"
                                         data-toggle="modal" />
                                 </div>
                                 <div class="section address">
@@ -467,6 +483,128 @@
         </div>
     </div>
     <!-- /#reminderModal -->
+    <!-- #scheduleModal -->
+    <div id="scheduleModal" class="modal fade" role="dialog" aria-labelledby="scheduleModalLabel"
+        data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-schedule">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    </button>
+                    <h4 id="scheduleModalLabel" class="modal-title">
+                        Full schedule</h4>
+                </div>
+                <div class="modal-body">
+                    <header>
+                    <div class="table-css">
+                        <div class="tr">
+                            <div class="th td-date">Date</div>
+                            <div class="th td-from"><span>From</span></div>
+                            <div class="th td-to"><span>To</span></div>
+                        </div>
+                    </div>
+                </header>
+                    <section id="scheduleList">
+                    <div class="scroll-content">
+                        <div class="table-css">
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Wednesday, February 3rd</div>
+                                <div class="td td-from"><span>9:00am</span></div>
+                                <div class="td td-to"><span>1:00pm</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Thursday, February 4th</div>
+                                <div class="td td-from"><span>12:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Friday, February 5th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Saturday, February 6th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Sunday, February 7th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                            <div class="tr">
+                                <div class="td td-date">Monday, February 8th</div>
+                                <div class="td td-from"><span>10:00am</span></div>
+                                <div class="td td-to"><span>11:00am</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#scheduleModal -->
     <div class="lightbox">
     </div>
     <div class="loading">
@@ -497,5 +635,6 @@
     <script type="text/javascript" src="content/js/ui-function.js"></script>
     <script type="text/javascript" src="content/js/ui-general.js"></script>
     <script type="text/javascript" src="content/js/pages/ui-event.js"></script>
+    <script type="text/javascript" src="content/js/modals/ui-schedule.js"></script>
 </body>
 </html>

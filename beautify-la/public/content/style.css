@@ -3964,14 +3964,15 @@ div.placeholder-custom {
 
 #nav-affix {
   width: 290px;
-  padding-left: 60px; }
-  @media (max-width: 1269px) {
-    #nav-affix {
-      width: calc(290px - 60px);
-      padding-left: 0; } }
+  padding-left: 60px;
+  /*@media (max-width: 1269px) {
+        width: calc(290px - 60px);
+        padding-left: 0;
+    }*/ }
   @media (max-width: 979px) {
     #nav-affix {
-      width: 220px; } }
+      width: 220px;
+      padding-left: 0; } }
   @media (max-width: 767px) {
     #nav-affix {
       width: 100%; } }
@@ -4604,7 +4605,7 @@ div.placeholder-custom {
                 font-size: 13px;
                 line-height: 26px; } }
             .new-spot .spot-right .spot-bar .table-css .tr .td.spots-left strong {
-              font-size: 16px; }
+              font-size: 15px; }
               @media (max-width: 359px) {
                 .new-spot .spot-right .spot-bar .table-css .tr .td.spots-left strong {
                   font-size: 13px; } }
@@ -4626,7 +4627,7 @@ div.placeholder-custom {
                 line-height: 26px;
                 font-size: 13px; } }
             .new-spot .spot-right .spot-bar .table-css .tr .td.guests-going strong {
-              font-size: 16px; }
+              font-size: 15px; }
               @media (max-width: 359px) {
                 .new-spot .spot-right .spot-bar .table-css .tr .td.guests-going strong {
                   font-size: 13px; } }
@@ -10251,7 +10252,18 @@ div.placeholder-custom {
 .event-page {
   font-size: 16px;
   line-height: 150%;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  /*#main-affix{
+        @media (min-width: 1270px){
+            width: 672px;
+        }
+    }
+
+    #nav-affix{
+        @media (min-width: 1270px){
+            padding-left: 78px; //86px;
+        }
+    }*/ }
   .event-page.event-rsvp-page .main-content .col-sm-8 {
     position: relative;
     z-index: 2; }
@@ -10301,12 +10313,6 @@ div.placeholder-custom {
         margin-bottom: 12px; } }
   .event-page .link-social {
     margin: 0 0 15px; }
-  @media (min-width: 1270px) {
-    .event-page #main-affix {
-      width: 672px; } }
-  @media (min-width: 1270px) {
-    .event-page #nav-affix {
-      padding-left: 78px; } }
   .event-page .social_twitter {
     margin-top: 0; }
 
@@ -10487,6 +10493,46 @@ div.placeholder-custom {
         margin-bottom: 16px; } }
     .event-page .event-section .details p b {
       font-weight: 700; }
+  .event-page .event-section .details section {
+    margin: 0 20px; }
+    @media (max-width: 767px) {
+      .event-page .event-section .details section {
+        margin: 0 15px; } }
+    @media (max-width: 359px) {
+      .event-page .event-section .details section {
+        margin: 0 10px; } }
+    .event-page .event-section .details section ul {
+      margin: 0 -20px;
+      padding: 0;
+      list-style: none; }
+      @media (max-width: 767px) {
+        .event-page .event-section .details section ul {
+          margin: 0 -15px; } }
+      @media (max-width: 359px) {
+        .event-page .event-section .details section ul {
+          margin: 0 -10px; } }
+      .event-page .event-section .details section ul li {
+        float: left;
+        width: 50%;
+        font-size: 1.125em;
+        line-height: 22px;
+        font-family: "Lato", sans-serif;
+        color: #333;
+        padding: 0 20px; }
+        @media (max-width: 767px) {
+          .event-page .event-section .details section ul li {
+            float: none;
+            width: auto;
+            padding: 0 15px; } }
+        @media (max-width: 359px) {
+          .event-page .event-section .details section ul li {
+            padding: 0 10px; } }
+        @media (max-width: 767px) {
+          .event-page .event-section .details section ul li:first-child {
+            margin: 0 0 19px; } }
+        @media (max-width: 359px) {
+          .event-page .event-section .details section ul li:first-child {
+            margin: 0 0 16px; } }
 
 .event-page .event-section .rewards .item {
   padding-top: 8px;
@@ -10811,6 +10857,9 @@ div.placeholder-custom {
       right: 0;
       text-align: right;
       white-space: nowrap; }
+      .event-page .event-section .grab .item .progress .text.raise {
+        right: inherit;
+        left: 0; }
       .event-page .event-section .grab .item .progress .text b {
         font-weight: 800;
         font-size: 14px; }
@@ -10837,6 +10886,15 @@ div.placeholder-custom {
         @media (max-width: 767px) {
           .event-page .event-section .grab .item .table-css .td + .td {
             width: 100%; } }
+  .event-page .event-section .grab .item > p {
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 8px; }
+    @media (max-width: 359px) {
+      .event-page .event-section .grab .item > p {
+        font-size: 0.75em; } }
 
 .event-page.event-rsvp-page .event-section .grab .item ul.header li:first-child {
   max-width: 100%;
@@ -10845,29 +10903,36 @@ div.placeholder-custom {
 .event-page .event-section .checkout {
   border-top: 0 none;
   margin-top: 0; }
-  .event-page .event-section .checkout div.placeholder-custom {
+  .event-page .event-section .checkout div.placeholder-custom,
+  .event-page .event-section .checkout label.placeholder-custom {
     width: 220px;
     border-top: 0 none;
     border-left: 0 none;
     border-right: 0 none;
-    float: left; }
+    float: left;
+    border-radius: 0; }
     @media (max-width: 767px) {
-      .event-page .event-section .checkout div.placeholder-custom {
+      .event-page .event-section .checkout div.placeholder-custom,
+      .event-page .event-section .checkout label.placeholder-custom {
         width: 100%;
         float: none;
         margin-bottom: 10px;
         height: 31px; } }
     @media (max-width: 359px) {
-      .event-page .event-section .checkout div.placeholder-custom {
+      .event-page .event-section .checkout div.placeholder-custom,
+      .event-page .event-section .checkout label.placeholder-custom {
         margin-bottom: 7px;
         height: 29px; } }
-    .event-page .event-section .checkout div.placeholder-custom .form-control {
+    .event-page .event-section .checkout div.placeholder-custom .form-control,
+    .event-page .event-section .checkout label.placeholder-custom .form-control {
       padding: 0 55px 0 0;
       height: 31px; }
       @media (max-width: 359px) {
-        .event-page .event-section .checkout div.placeholder-custom .form-control {
+        .event-page .event-section .checkout div.placeholder-custom .form-control,
+        .event-page .event-section .checkout label.placeholder-custom .form-control {
           height: 29px; } }
-    .event-page .event-section .checkout div.placeholder-custom .btn {
+    .event-page .event-section .checkout div.placeholder-custom .btn,
+    .event-page .event-section .checkout label.placeholder-custom .btn {
       padding: 0;
       height: 31px;
       border: 0 none;
@@ -10882,14 +10947,17 @@ div.placeholder-custom {
       width: auto;
       box-shadow: none; }
       @media (max-width: 767px) {
-        .event-page .event-section .checkout div.placeholder-custom .btn {
+        .event-page .event-section .checkout div.placeholder-custom .btn,
+        .event-page .event-section .checkout label.placeholder-custom .btn {
           padding-right: 15px; } }
       @media (max-width: 359px) {
-        .event-page .event-section .checkout div.placeholder-custom .btn {
+        .event-page .event-section .checkout div.placeholder-custom .btn,
+        .event-page .event-section .checkout label.placeholder-custom .btn {
           height: 29px;
           font-size: 0.8125em;
           padding-right: 8px; } }
-      .event-page .event-section .checkout div.placeholder-custom .btn[disabled] {
+      .event-page .event-section .checkout div.placeholder-custom .btn[disabled],
+      .event-page .event-section .checkout label.placeholder-custom .btn[disabled] {
         background: transparent; }
   .event-page .event-section .checkout ul {
     margin: 0;
@@ -10934,6 +11002,109 @@ div.placeholder-custom {
       .event-page .event-section .checkout .btn {
         font-size: 0.75em;
         height: 36px; } }
+
+.event-page.event-donation-page .event-section .checkout .form-label {
+  font-size: 1.25em;
+  color: #333;
+  clear: both;
+  display: block;
+  margin-bottom: 12px; }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout .form-label {
+      font-size: 1.125em;
+      margin-bottom: 10px; } }
+  @media (max-width: 359px) {
+    .event-page.event-donation-page .event-section .checkout .form-label {
+      font-size: 1em;
+      margin-bottom: 7px; } }
+
+.event-page.event-donation-page .event-section .checkout div.placeholder-custom,
+.event-page.event-donation-page .event-section .checkout label.placeholder-custom {
+  width: 335px; }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout div.placeholder-custom,
+    .event-page.event-donation-page .event-section .checkout label.placeholder-custom {
+      width: 100%; } }
+  .event-page.event-donation-page .event-section .checkout div.placeholder-custom .form-control,
+  .event-page.event-donation-page .event-section .checkout label.placeholder-custom .form-control {
+    padding-right: 0; }
+
+.event-page.event-donation-page .event-section .checkout ul li span {
+  color: #f3472d;
+  font-weight: 700; }
+
+.event-page.event-donation-page .event-section .checkout ul.form {
+  float: left;
+  margin: 0 -10px; }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout ul.form {
+      float: none; } }
+  @media (max-width: 359px) {
+    .event-page.event-donation-page .event-section .checkout ul.form {
+      margin: 0 -5px; } }
+  .event-page.event-donation-page .event-section .checkout ul.form li {
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 10px; }
+    @media (max-width: 359px) {
+      .event-page.event-donation-page .event-section .checkout ul.form li {
+        padding: 0 5px;
+        margin-bottom: 7px; } }
+  @media (min-width: 768px) {
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested div.placeholder-custom,
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested label.placeholder-custom {
+      width: 195px; } }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested li {
+      width: 33.3333%; } }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested li:last-child {
+      width: 100%; } }
+  @media (max-width: 359px) {
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested li:last-child {
+      width: 100%; } }
+  .event-page.event-donation-page .event-section .checkout ul.form.suggested li .radio-mark ~ .radio-label {
+    font-size: 1.0625em;
+    color: #f3472d;
+    border: 1px solid #f3472d;
+    border-radius: 2px;
+    background: #fff;
+    width: 65px;
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .event-page.event-donation-page .event-section .checkout ul.form.suggested li .radio-mark ~ .radio-label {
+        width: 100%;
+        font-size: 0.9375em; } }
+    @media (max-width: 359px) {
+      .event-page.event-donation-page .event-section .checkout ul.form.suggested li .radio-mark ~ .radio-label {
+        height: 29px;
+        line-height: 27px;
+        font-size: 0.8125em; } }
+    .event-page.event-donation-page .event-section .checkout ul.form.suggested li .radio-mark ~ .radio-label:before {
+      display: none; }
+  .event-page.event-donation-page .event-section .checkout ul.form.suggested li .radio-mark:checked ~ .radio-label {
+    color: #fff;
+    background: #f3472d; }
+  .event-page.event-donation-page .event-section .checkout ul.form.suggested li + li {
+    border: 0 none; }
+
+.event-page.event-donation-page .event-section .checkout p {
+  font-size: 1em;
+  color: #333;
+  clear: both; }
+  @media (max-width: 767px) {
+    .event-page.event-donation-page .event-section .checkout p {
+      clear: none;
+      font-size: 1em;
+      line-height: 21px; } }
+  @media (max-width: 359px) {
+    .event-page.event-donation-page .event-section .checkout p {
+      font-size: 0.75em;
+      line-height: 18px; } }
 
 .event-page .event-section .address address {
   font-size: 1.25em;
@@ -15934,7 +16105,7 @@ div.placeholder-custom {
           padding-right: 15px; } }
     .modal-bill .modal-body .bill {
       border-top: 1px solid rgba(44, 44, 46, 0.1);
-      padding: 5px 34px 0; }
+      padding: 5px 23px 0; }
       @media (max-width: 767px) {
         .modal-bill .modal-body .bill {
           padding-left: 15px;
@@ -15943,15 +16114,34 @@ div.placeholder-custom {
         content: '';
         display: block;
         clear: both; }
+      .modal-bill .modal-body .bill.donation .td.td-price {
+        font-size: 22px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        color: #f3472d; }
       .modal-bill .modal-body .bill .table-css {
         width: 100%; }
+        .modal-bill .modal-body .bill .table-css.footer {
+          float: right;
+          width: auto; }
+          .modal-bill .modal-body .bill .table-css.footer .td.td-name {
+            text-align: right;
+            padding-right: 30px; }
+          .modal-bill .modal-body .bill .table-css.footer .subtotal .td,
+          .modal-bill .modal-body .bill .table-css.footer .processing .td {
+            font-weight: 700; }
+          .modal-bill .modal-body .bill .table-css.footer .total .td.td-name {
+            font-size: 22px; }
+          .modal-bill .modal-body .bill .table-css.footer .total .td.td-price {
+            color: #f3472d; }
       .modal-bill .modal-body .bill .td {
         font-size: 1.0625em;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         line-height: 27px;
         position: relative;
-        padding: 3px 0; }
+        padding: 3px 0;
+        color: #333; }
         @media (max-width: 767px) {
           .modal-bill .modal-body .bill .td {
             font-size: 1em; } }
@@ -15960,7 +16150,8 @@ div.placeholder-custom {
           text-align: right;
           white-space: nowrap;
           vertical-align: bottom;
-          padding-left: 5px; }
+          padding-left: 5px;
+          width: 75px; }
         .modal-bill .modal-body .bill .td span {
           background: #fff;
           position: relative; }
@@ -16006,6 +16197,10 @@ div.placeholder-custom {
           font-size: 1em;
           padding: 0 20px;
           min-width: auto; } }
+    .modal-bill .modal-footer .btn-paypal * {
+      display: none; }
+    .modal-bill .modal-footer .btn-paypal .btn-positive {
+      display: inline-block; }
 
 .modal-reminder {
   font-size: 16px;
@@ -16219,6 +16414,98 @@ div.placeholder-custom {
 .on-nicescroll .modal-share .modal-body .wrap-dropdown-menu-inner {
   max-height: 240px;
   position: relative; }
+
+.modal-congrats {
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Lato", sans-serif;
+  width: 560px; }
+  @media (max-width: 767px) {
+    .modal-congrats {
+      width: auto; } }
+  .modal-congrats .modal-content {
+    box-shadow: none;
+    border-radius: 0; }
+  .modal-congrats .modal-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(44, 44, 46, 0.1);
+    padding-top: 17px;
+    padding-bottom: 20px;
+    position: relative; }
+    @media (max-width: 767px) {
+      .modal-congrats .modal-header {
+        padding-top: 11px;
+        padding-bottom: 11px; } }
+    .modal-congrats .modal-header .modal-title {
+      font-size: 1.25em;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      padding-bottom: 0;
+      color: #333; }
+      @media (max-width: 767px) {
+        .modal-congrats .modal-header .modal-title {
+          font-size: 1em; } }
+    .modal-congrats .modal-header .close {
+      margin-top: 0;
+      position: absolute;
+      top: 16px;
+      right: 23px; }
+      @media (max-width: 767px) {
+        .modal-congrats .modal-header .close {
+          top: 7px;
+          right: 5px; } }
+  .modal-congrats .modal-body {
+    padding: 33px 34px 14px;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center; }
+    @media (max-width: 767px) {
+      .modal-congrats .modal-body {
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px; } }
+    .modal-congrats .modal-body .icon-reminder {
+      width: 65px;
+      height: 65px;
+      background: url(images/ui/modals/reminder/icon_reminder.png) center center no-repeat;
+      background-size: 65px auto; }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+        .modal-congrats .modal-body .icon-reminder {
+          background-image: url(images/ui/modals/reminder/icon_reminder@3x.png); } }
+    .modal-congrats .modal-body p {
+      font-family: "Lato", sans-serif;
+      font-size: 1.125em;
+      font-weight: 400;
+      line-height: 21px;
+      color: #333;
+      margin-top: -1px;
+      margin-bottom: 18px; }
+      @media (max-width: 767px) {
+        .modal-congrats .modal-body p {
+          font-size: 1em; } }
+      @media (max-width: 359px) {
+        .modal-congrats .modal-body p {
+          font-size: 0.875em;
+          margin-bottom: 8px; } }
+  .modal-congrats .modal-footer {
+    padding-bottom: 35px;
+    text-align: center;
+    border: 0 none; }
+    .modal-congrats .modal-footer .btn {
+      width: auto;
+      min-width: 175px;
+      height: 50px;
+      border-radius: 0;
+      font-size: 1.25em;
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      padding: 0 40px; }
+      @media (max-width: 767px) {
+        .modal-congrats .modal-footer .btn {
+          height: 32px;
+          font-size: 1em;
+          padding: 0 20px;
+          min-width: auto; } }
 
 .event-new {
   height: 212px;
