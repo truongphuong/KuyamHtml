@@ -181,7 +181,8 @@
 
         .social-icons{
             margin:0;
-            max-width: 440px;
+            width: 440px;
+            white-space: nowrap;
 
             @media (max-width: 979px) {
                 float: left;
@@ -198,15 +199,20 @@
             }
 
             dt {
-                float:left;
                 color:#999;
                 padding:0;
                 font-size:20px;
                 font-family:ralewaybold, sans-serif;
+                display: inline-block;
 
                 @media (max-width: 767px) {
                     float: none;
                     text-align: left;
+                    display: block;
+                }
+
+                @media (max-width: 372px) {
+                    text-align:left;
                 }
 
                 + dd {
