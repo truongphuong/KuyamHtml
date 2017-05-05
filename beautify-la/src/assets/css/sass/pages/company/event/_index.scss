@@ -298,8 +298,8 @@
             }
         }
 
-        footer{
-            @media (max-width: 767px){
+        footer {
+            @media (max-width: 767px) {
                 margin:0 -10px;
 
                 &:after{
@@ -328,12 +328,84 @@
                 &.btn-positive{
                     &:after{
                         content:'';
+                        display: inline-block;
+                        width: 12px;
+                        height: 19px;
+                        background: url(images/ui/pages/company/event/icon_next.png) center center no-repeat;
+                        background-size: 12px auto;
+                        margin-left: 5px;
+                        position: relative;
+                        bottom: -2px;
+
+                        @media (max-width: 767px){
+                            width: 8px;
+                            height: 14px;
+                            background-size: 8px auto;
+                            background-image: url(images/ui/pages/company/event/mobile/icon_next.png);
+                            bottom: -1px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/event/mobile/icon_next@3x.png);
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:768px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:768px){
+                            background-image: url(images/ui/pages/company/event/icon_next@3x.png);
+                        }
                     }
                 }
 
                 &.btn-negative{
                     &:before{
                         content:'';
+                        display: inline-block;
+                        width: 12px;
+                        height: 19px;
+                        background: url(images/ui/pages/company/event/icon_prev.png) center center no-repeat;
+                        background-size: 12px auto;
+                        margin-right: 5px;
+                        position: relative;
+                        bottom: -2px;
+
+                        @media (max-width: 767px){
+                            width: 8px;
+                            height: 14px;
+                            background-size: 8px auto;
+                            background-image: url(images/ui/pages/company/event/mobile/icon_prev.png);
+                            bottom: -1px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/event/mobile/icon_prev@3x.png);
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:768px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:768px){
+                            background-image: url(images/ui/pages/company/event/icon_prev@3x.png);
+                        }
                     }
                 }
 

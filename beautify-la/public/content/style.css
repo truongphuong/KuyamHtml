@@ -7328,9 +7328,51 @@ div.placeholder-custom {
           .company-event-page .content footer .btn + .btn {
             margin-left: 10px; } }
       .company-event-page .content footer .btn.btn-positive:after {
-        content: ''; }
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 19px;
+        background: url(images/ui/pages/company/event/icon_next.png) center center no-repeat;
+        background-size: 12px auto;
+        margin-left: 5px;
+        position: relative;
+        bottom: -2px; }
+        @media (max-width: 767px) {
+          .company-event-page .content footer .btn.btn-positive:after {
+            width: 8px;
+            height: 14px;
+            background-size: 8px auto;
+            background-image: url(images/ui/pages/company/event/mobile/icon_next.png);
+            bottom: -1px; } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+          .company-event-page .content footer .btn.btn-positive:after {
+            background-image: url(images/ui/pages/company/event/mobile/icon_next@3x.png); } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+          .company-event-page .content footer .btn.btn-positive:after {
+            background-image: url(images/ui/pages/company/event/icon_next@3x.png); } }
       .company-event-page .content footer .btn.btn-negative:before {
-        content: ''; }
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 19px;
+        background: url(images/ui/pages/company/event/icon_prev.png) center center no-repeat;
+        background-size: 12px auto;
+        margin-right: 5px;
+        position: relative;
+        bottom: -2px; }
+        @media (max-width: 767px) {
+          .company-event-page .content footer .btn.btn-negative:before {
+            width: 8px;
+            height: 14px;
+            background-size: 8px auto;
+            background-image: url(images/ui/pages/company/event/mobile/icon_prev.png);
+            bottom: -1px; } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+          .company-event-page .content footer .btn.btn-negative:before {
+            background-image: url(images/ui/pages/company/event/mobile/icon_prev@3x.png); } }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 768px), only screen and (min-resolution: 120dpi) and (min-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+          .company-event-page .content footer .btn.btn-negative:before {
+            background-image: url(images/ui/pages/company/event/icon_prev@3x.png); } }
       @media (max-width: 767px) {
         .company-event-page .content footer .btn {
           float: left;
@@ -8055,6 +8097,9 @@ div.placeholder-custom {
   .company-event-page .options-event .section.miscelaneous-section div[class*="col-"] {
     margin-bottom: 7px; }
 
+.company-event-page .options-event footer .btn.btn-positive:after {
+  display: none; }
+
 .company-event-page .share-event p {
   font-size: 1.25em;
   font-family: "Lato", sans-serif;
@@ -8078,6 +8123,9 @@ div.placeholder-custom {
       .company-event-page .share-event .share-section .share .cb-mark ~ .cb-label {
         margin: 0;
         font-size: 0.9375em; } }
+
+.company-event-page .share-event footer .btn.btn-positive:after {
+  display: none; }
 
 .company-event-page .link-social {
   margin-top: 18px; }
