@@ -1,4 +1,4 @@
-{% extends 'master/main-company-logged.html' %}
+{% extends 'master/main-book.html' %}
 
 {% block title %}Beautify LA - Company Dashboard{% endblock %}
 
@@ -13,11 +13,12 @@
 
 {% block namepage %}company-page settings-section{% endblock %}
 
-{% block banner %}
-{% include "content/pages/company/dashboard/banner.html" %}
-{% endblock %}
+{% block banner %}{% endblock %}
 
 {% block main %}
+
+{% include "content/pages/event/back.html" %}
+
 <!-- .main-content -->
 <div class="main-content settings-page clearfix">
     <div class="container">
