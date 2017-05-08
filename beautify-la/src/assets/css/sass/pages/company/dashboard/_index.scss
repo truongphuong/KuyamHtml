@@ -90,11 +90,26 @@
             font-size: 18px;
         }
 
-        .icon-up{display:inline-block;
+        .icon-up{
+            display:inline-block;
             width:24px;
             height:12px;
             background:url(images/assets/icon-up.png) center center no-repeat;
             margin:0 0 0 5px;
+        }
+
+        a {
+            color: $base;
+        }
+
+        &.no_title {
+            font-style: italic;
+            color: rgba(0, 0, 0, .5);
+
+            span {
+                font-style: normal;
+                color: $positive;
+            }
         }
     }
 
