@@ -392,6 +392,10 @@ textarea {
 .modal-backdrop {
   display: none; }
 
+.modal-dialog {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 .modal-header {
   position: relative; }
   .modal-header .close {
@@ -1811,6 +1815,10 @@ input[type=number] {
     @media (max-width: 359px) {
       .input-custom.input-url {
         padding: 0 5px; } }
+    .input-custom.input-url.focus .text {
+      display: none; }
+    .input-custom.input-url.focus .editable {
+      margin-left: 0; }
     .input-custom.input-url.has-copy {
       padding-right: 88px; }
       @media (max-width: 767px) {

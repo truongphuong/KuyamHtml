@@ -20,7 +20,6 @@ $(document).ready(function(){
 		var optValue = $(this).val(),
 		paymentID = '#payment-' + optValue;
 
-		console.log(paymentID);
 		$('.payment-section').addClass("hide");
 		$(paymentID).removeClass("hide");
 	})

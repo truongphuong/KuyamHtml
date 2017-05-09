@@ -268,6 +268,9 @@ function inputCustom(input){
 
         var $parent = $this.closest('.input-custom');
         $parent.removeClass('validate');
+        if($parent.hasClass('input-url')) {
+            $parent.addClass('focus');
+        }
     }).on('keyup', input, function(){
         var $this = $(this);
 		inputCheck($this);
@@ -276,6 +279,13 @@ function inputCustom(input){
         var $parent = $this.closest('.input-custom');
         if($parent.hasClass('input-url') && e.keyCode === 13){
             return false;
+        }
+    }).on('blur', input, function(){
+        var $this = $(this);
+
+        var $parent = $this.closest('.input-custom');
+        if($parent.hasClass('input-url')) {
+            $parent.removeClass('focus');
         }
     });
 }
@@ -311,10 +321,8 @@ function datetimepickerDate($txtDate, $section){
         var $parent = $this.closest('.date-custom');
         var $datetimepicker = $parent.find('.bootstrap-datetimepicker-widget');
         if($datetimepicker.hasClass('top')){
-            console.log('top');
             $section.addClass('open top');
         }else if($datetimepicker.hasClass('bottom')){
-            console.log('bottom');
             $section.addClass('open bottom');
         }
         $('.bootstrap-datetimepicker-widget').clone().appendTo('#sectionDateEnd');

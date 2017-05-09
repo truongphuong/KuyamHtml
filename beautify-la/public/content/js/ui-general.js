@@ -85,6 +85,8 @@ $(document).ready(function () {
 
     $('.modal').on('show.bs.modal', setOffsetY);
 
+    $('.modal').on('show.bs.modal', centerModal);
+
     $('.modal').on('shown.bs.modal', centerModal);
 
     $('.modal').on('hidden.bs.modal', removeOffsetY);
