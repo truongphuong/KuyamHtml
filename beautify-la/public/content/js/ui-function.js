@@ -57,6 +57,8 @@ function removeOffsetY() {
 
         $('.wrapper .affix-top, .wrapper .affix').css({ 'top': '', 'position': '' });
     }
+
+    $(this).css({ "visibility": '' });
 }
 
 function centerModal() {
@@ -66,6 +68,8 @@ function centerModal() {
     offset = offset > 0 ? offset : 15;
     // Center modal vertically in window
     $dialog.css({ "margin-top": offset, "margin-bottom": offset });
+
+    $(this).css({ "visibility": 'visible' });
 }
 
 function refreshNiceScroll(sectionID) {
