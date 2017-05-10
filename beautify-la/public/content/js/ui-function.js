@@ -230,6 +230,14 @@ function listFilter(header, list) {
     });
 }
 
+function isString(str) {
+    var isString = /^([0-9])$/;
+    if (!isString.test(str)) {
+        return false;
+    }
+    return true;
+}
+
 function placeholderCustom() {
     var input = '.placeholder-custom .form-control';
     $(document).find(input).each(function () {
@@ -237,7 +245,13 @@ function placeholderCustom() {
         placholderCheck($this);
     });
 
-    $(document).on('keyup', input, function () {
+    $(document).on('keydown', input, function (e) {
+        var $this = $(this);
+        var value = $this.val() + String.fromCharCode(e.keyCode);
+        if (value !== '') {
+            $this.addClass('has-value');
+        }
+    }).on('keyup', input, function () {
         var $this = $(this);
         placholderCheck($this);
     }).on('focus', input, function () {
