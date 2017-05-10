@@ -230,14 +230,6 @@ function listFilter(header, list) {
     });
 }
 
-function isString(str) {
-    var isString = /^([0-9])$/;
-    if (!isString.test(str)) {
-        return false;
-    }
-    return true;
-}
-
 function placeholderCustom() {
     var input = '.placeholder-custom .form-control';
     $(document).find(input).each(function () {
@@ -246,6 +238,23 @@ function placeholderCustom() {
     });
 
     $(document).on('keydown', input, function (e) {
+        // Allow: backspace, tab, enter, shift, ctrl, alt, pause, caps lock, escape, print screen, insert, delete, window, context menu, num lock,
+        if ($.inArray(e.keyCode, [8, 9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 44, 45, 46, 91, 93, 144]) !== -1 ||
+        // Allow: Ctrl+A, Command+A
+        e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true) ||
+        // Allow: Ctrl+C, Command+C
+        e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true) ||
+        // Allow: Ctrl+X, Command+X
+        e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true) ||
+        // Allow:  pg up, pg down, home, end, left, right, down, up
+        e.keyCode >= 33 && e.keyCode <= 40 ||
+        // Allow: F1 - F24
+        e.keyCode >= 111 && e.keyCode <= 135 ||
+        // Allow: volumn down, volumn up, next, pre, stop, play/pause
+        e.keyCode >= 74 && e.keyCode <= 79) {
+            // let it happen, don't do anything
+            return;
+        }
         var $this = $(this);
         var value = $this.val() + String.fromCharCode(e.keyCode);
         if (value !== '') {
