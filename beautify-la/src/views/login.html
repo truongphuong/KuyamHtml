@@ -7,6 +7,8 @@
 <meta name="keywords" content="3" />
 {% endblock %}
 
+{% block namepage %}login-page{% endblock %}
+
 {% block banner %}{% endblock %}
 
 {% block main %}
@@ -15,26 +17,20 @@
         <!-- .modal-login -->
         <div class="modal-form modal-login">
             <div class="modal-header">
-                <h3 class="modal-title">welcome to Beautify LA events!</h3>
-                <p>if you have been approved you will be sent an email with login info. You can manage and modify your event details from your events dashboard.</p>
+                <h3 class="modal-title">Login</h3>
             </div>
             <div class="modal-body">
-                <a title="" data-toggle="modal" data-target="#modal-upcomming" class="btn-blue btn-facebook">login with facebook</a>
-                <div class="form-or">
-                    <hr />
-                    <span>or</span>
-                </div>
-                <fieldset>
-                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
-                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'password'; }" onfocus="if (this.value == 'password') { this.value = ''; }" value="password" />
-                    <div class="text-right link-form"><a class="link-forgot" title="" href="forgot-password.html">don't have your password?</a></div>
-                    <button type="button" class="btn-orange btn-form btn-login" data-toggle="modal" data-target="#modal-welcome">login</button>
-                    <div class="alert-error">invalid</div>
-                </fieldset>
+                <input class="form-control" type="text" placeholder="Email" />
+                <input class="form-control" type="text" placeholder="Password" />
+                <button type="button" class="btn-orange btn-form btn-login" data-toggle="modal" data-target="#modal-welcome">login</button>
             </div>
-            <div class="modal-footer">
-
-             </div>
+            <div class="modal-footer clearfix">
+                <a title="" href="forgot-password.html">Forgot Password?</a>
+                <div class="cb-custom">
+                    <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" checked="">
+                    <label class="cb-label" for="cbTwitter">Remember me</label>
+                </div>
+            </div>
         </div><!-- /.modal -->
         <!-- /.modal-login -->
 

@@ -1,0 +1,149 @@
+.login-page {
+    padding-bottom: 0;
+
+    .site-header {
+        min-height: 206px;
+        text-align: center;
+        background: transparent url(images/ui/pages/account/login/bg_login.jpg);
+        background-size: cover;
+
+        @media (max-width: 767px) {
+            min-height: 74px;
+        }
+
+        .logo{
+            margin: 79px auto 0;
+            float: none;
+            display: inline-block;
+
+            @media (max-width: 767px) {
+                margin-top: 24px;
+            }
+
+            img {
+                @media (max-width: 767px) {
+                    height: 32px;
+                }
+
+                &.hidden-xs {
+                    @media (max-width: 767px) {
+                        display: block !important;
+                    }
+                }
+
+                &.visible-xs {
+                    @media (max-width: 767px) {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .login-page {
+        font-size: 16px;
+        padding-top: 128px;
+
+        @media (max-width: 767px) {
+            padding-top: 0;
+        }
+
+        .modal-form {
+            .modal-header {
+                padding-bottom: 19px;
+
+                @media (max-width: 767px) {
+                    padding-top: 0;
+                    padding-bottom: 2px;
+                }
+
+                .modal-title{
+                    font-family: $primary;
+                    font-size: $s34;
+                    font-weight: 300;
+                    color: #3f3f3f;
+
+                    @media (max-width: 767px) {
+                        font-size: $s25;
+                        margin-top: 14px;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding-bottom: 0;
+
+                @media (max-width: 767px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .form-control {
+                    text-align: center;
+                    margin-bottom: 9px;
+                    font-family: $primary;
+                    font-size: $s18;
+
+                    @media (max-width: 767px) {
+                        font-size: $s15;
+                        height: 36px;
+                        padding:0 8px;
+                    }
+                }
+            }
+
+            .btn-form {
+                margin-top: 12px;
+            }
+
+            .modal-footer {
+                padding-top: 14px;
+
+                @media (max-width: 767px) {
+                    width: auto;
+                    text-align: center;
+                }
+
+                a{
+                    font-family: $primary;
+                    color: #646161;
+                    font-size: $s18;
+                    float: left;
+                    text-decoration: underline;
+
+                    @media (max-width: 767px) {
+                        float: none;
+                        font-size: $s15;
+                    }
+                }
+
+                .cb-custom {
+                    float: right;
+
+                    @media (max-width: 767px) {
+                        float: none;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .cb-mark {
+            ~ .cb-label{
+                font-family: $primary;
+                font-size: $s18;
+                color: #646161;
+
+                @media (max-width: 767px) {
+                    font-size: $s15;
+                }
+            }
+        }
+    }
+
+    .site-contact,
+    .site-footer {
+        display: none;
+    }
+}
