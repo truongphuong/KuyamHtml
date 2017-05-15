@@ -184,5 +184,30 @@
     <script type="text/javascript" src="content/js/ui-variables.js"></script>
     <script type="text/javascript" src="content/js/ui-function.js"></script>
     <script type="text/javascript" src="content/js/ui-general.js"></script>
+    <script type="text/javascript">
+        function ptLogin() {
+            var pt = ($(window).innerHeight() - $('.site-header').height() - $('.login-page .modal-login').height()) / 2;
+            var $mainContent = $('.login-page .main-content');
+            if (!isView.mobile()) {
+                if (pt > 0) {
+                    $('.login-page .main-content').css({ 'padding-top': pt - 10, 'padding-bottom': pt });
+                } else {
+                    $('.login-page .main-content').css({ 'padding-top': 0, 'padding-bottom': 10 });
+                }
+            }
+        }
+        $(document).ready(function () {
+            ptLogin()
+
+            monitorResize(function () {
+                if (isView.mobile()) {
+                    $('.login-page .main-content').css({ 'padding-top': 0, 'padding-bottom': 0 });
+                    return;
+                }
+                ptLogin();
+            });
+
+        });
+</script>
 </body>
 </html>

@@ -35,7 +35,7 @@ function settingsModal(){
 
 function setOffsetY(){
     var offsetY = window.pageYOffset || document.documentElement.scrollTop;
-    $('.wrapper').css({'top': - offsetY});
+    $('#detech-devices').css({'top': - offsetY});
     if(!isView.mobile()) {
         if($('.wrapper').hasClass('company-event-page')){
             if ($('.wrapper').find('.affix').length){
@@ -49,9 +49,9 @@ function setOffsetY(){
 }
 
 function removeOffsetY() {
-    var offsetY = - parseInt($('.wrapper').css('top'));
+    var offsetY = - parseInt($('#detech-devices').css('top'));
     document.body.scrollTop = offsetY;
-    $('.wrapper').css({'top': ''});
+    $('#detech-devices').css({'top': ''});
     if(!isView.mobile()) {
         $('.company-event-page .coming-section').css({'margin-top': ''});
 
