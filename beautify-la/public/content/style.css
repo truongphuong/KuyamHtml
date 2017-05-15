@@ -1800,7 +1800,14 @@ input[type=number] {
   border-radius: 2px;
   display: block;
   position: relative;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  height: 40px; }
+  @media (max-width: 767px) {
+    .input-custom {
+      height: 36px; } }
+  @media (max-width: 359px) {
+    .input-custom {
+      height: 31px; } }
   .input-custom.input-url {
     border: 1px solid #797979;
     overflow: hidden;
@@ -1808,7 +1815,8 @@ input[type=number] {
     display: block;
     position: relative;
     margin-bottom: 0;
-    padding: 0 15px; }
+    padding: 0 15px;
+    cursor: text; }
     @media (max-width: 767px) {
       .input-custom.input-url {
         padding: 0 8px; } }
@@ -1818,7 +1826,8 @@ input[type=number] {
     .input-custom.input-url.focus .text {
       display: none; }
     .input-custom.input-url.focus .editable {
-      margin-left: 0; }
+      margin-left: 0;
+      width: 100%; }
     .input-custom.input-url.has-copy {
       padding-right: 88px; }
       @media (max-width: 767px) {

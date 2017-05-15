@@ -18,6 +18,15 @@
     display: block;
     position: relative;
     margin-bottom: 0;
+    height: 40px;
+
+    @media (max-width: 767px){
+        height: 36px;
+    }
+
+    @media (max-width: 359px){
+        height: 31px;
+    }
 
     &.input-url {
         border: 1px solid $border;
@@ -27,6 +36,7 @@
         position: relative;
         margin-bottom: 0;
         padding: 0 15px;
+        cursor: text;
 
         @media (max-width: 767px){
             padding:0 8px;
@@ -43,6 +53,7 @@
 
             .editable {
                 margin-left: 0;
+                width: 100%;
             }
         }
 
