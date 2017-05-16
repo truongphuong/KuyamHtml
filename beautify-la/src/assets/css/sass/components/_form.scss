@@ -449,12 +449,21 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: calc(100% - 67px);
+        width: calc(100% - 80px);
         border-right: 0 none;
         border-radius: 2px 0 0 2px;
         text-align: center;
-        padding: 0 5px;
+        padding: 0;
         font-size: 20px;
+        height: 40px;
+
+        @media (max-width: 767px) {
+            height: 36px;
+        }
+
+        @media (max-width: 359px) {
+            height: 31px;
+        }
 
         input {
             border: none;
@@ -468,6 +477,10 @@
 
             @media (max-width: 767px) {
                 height: 34px;
+            }
+
+            @media (max-width: 359px) {
+                height: 29px;
             }
 
             &[disabled] {

@@ -2114,12 +2114,19 @@ input[type=number] {
     position: absolute;
     left: 0;
     top: 0;
-    width: calc(100% - 67px);
+    width: calc(100% - 80px);
     border-right: 0 none;
     border-radius: 2px 0 0 2px;
     text-align: center;
-    padding: 0 5px;
-    font-size: 20px; }
+    padding: 0;
+    font-size: 20px;
+    height: 40px; }
+    @media (max-width: 767px) {
+      .hour-custom .time-control {
+        height: 36px; } }
+    @media (max-width: 359px) {
+      .hour-custom .time-control {
+        height: 31px; } }
     .hour-custom .time-control input {
       border: none;
       width: 30px;
@@ -2132,6 +2139,9 @@ input[type=number] {
       @media (max-width: 767px) {
         .hour-custom .time-control input {
           height: 34px; } }
+      @media (max-width: 359px) {
+        .hour-custom .time-control input {
+          height: 29px; } }
       .hour-custom .time-control input[disabled] {
         cursor: default;
         opacity: .5; }
