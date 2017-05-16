@@ -703,9 +703,18 @@
 
             .section-ellipsis{
                 max-height: 115px;
+                display: block; /* Fallback for non-webkit */
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
 
-                @media (max-width:979px) {
-                    max-height: inherit;
+                @media (max-width:767px) {
+                    max-height: 82px;
+                }
+
+                @media (max-width:359px) {
+                    max-height: 65px;
                 }
             }
         }
@@ -713,11 +722,26 @@
 
     &.single-ticket-spot,
     &.single-rsvp-spot {
-        .section-ellipsis{
-            height: 70px;
-        }
-
         .spot-right {
+            .spot-content {
+                .section-ellipsis {
+                    max-height: 70px;
+                    display: block; /* Fallback for non-webkit */
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+
+                    @media (max-width:767px) {
+                        max-height: 50px;
+                    }
+
+                    @media (max-width:359px) {
+                        max-height: 38px;
+                    }
+                }
+            }
+
             .spot-footer {
                 .btn-orange {
                     @media (min-width: 768px) {

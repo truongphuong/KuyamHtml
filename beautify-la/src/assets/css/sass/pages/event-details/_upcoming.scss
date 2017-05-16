@@ -1,5 +1,15 @@
 
-.article-short-des{width:598px;max-height:44px;overflow:hidden;margin-bottom:10px;}
+.article-short-des{
+    width:598px;
+    max-height:44px;
+    overflow:hidden;
+    margin-bottom:10px;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
 
 .coming-section{background:#323232;margin:0 0 20px;padding:10px;}
 .coming-section .section-header h4{font-size:24px;line-height:28px;}
