@@ -34,28 +34,32 @@ function settingsModal() {
 }
 
 function setOffsetY() {
-    var offsetY = window.pageYOffset || document.documentElement.scrollTop;
-    $('.wrapper, #detech-devices').css({ 'top': -offsetY });
-    if (!isView.mobile()) {
-        if ($('.wrapper').hasClass('company-event-page')) {
-            if ($('.wrapper').find('.affix').length) {
-                $('.coming-section').css({ 'margin-top': 0 });
+    if (isMobile.any()) {
+        var offsetY = window.pageYOffset || document.documentElement.scrollTop;
+        $('.wrapper, #detech-devices').css({ 'top': -offsetY });
+        if (!isView.mobile()) {
+            if ($('.wrapper').hasClass('company-event-page')) {
+                if ($('.wrapper').find('.affix').length) {
+                    $('.coming-section').css({ 'margin-top': 0 });
+                }
+                $('.wrapper .affix').css({ 'top': 20, 'position': 'fixed' });
+            } else {
+                $('.wrapper .affix').css({ 'top': 15, 'position': 'fixed' });
             }
-            $('.wrapper .affix').css({ 'top': 20, 'position': 'fixed' });
-        } else {
-            $('.wrapper .affix').css({ 'top': 15, 'position': 'fixed' });
         }
     }
 }
 
 function removeOffsetY() {
-    var offsetY = -parseInt($('#detech-devices').css('top'));
-    document.body.scrollTop = offsetY;
-    $('.wrapper, #detech-devices').css({ 'top': '' });
-    if (!isView.mobile()) {
-        $('.company-event-page .coming-section').css({ 'margin-top': '' });
+    if (isMobile.any()) {
+        var offsetY = -parseInt($('#detech-devices').css('top'));
+        document.body.scrollTop = offsetY;
+        $('.wrapper, #detech-devices').css({ 'top': '' });
+        if (!isView.mobile()) {
+            $('.company-event-page .coming-section').css({ 'margin-top': '' });
 
-        $('.wrapper .affix-top, .wrapper .affix').css({ 'top': '', 'position': '' });
+            $('.wrapper .affix-top, .wrapper .affix').css({ 'top': '', 'position': '' });
+        }
     }
 }
 
