@@ -17,6 +17,10 @@ function monitorResize (callbackfnc){
 };
 
 function settingsModal(){
+    if(isMobile.any()) {
+        $('.wrapper, #detech-devices').addClass('detech-devices');
+    }
+
     if (typeof window.verifyScrollbarWidth == "undefined") {
         window.verifyScrollbarWidth = (window.innerWidth - $(window).width()) + 'px';
         window.verifyScrollbarWidth = '<style type="text/css">.modal-open, .modal-open .wrapper{padding-right:' + window.verifyScrollbarWidth + ' !important;}</style>';
@@ -243,6 +247,7 @@ function placeholderCustom(){
     });
 
     $(document).on('keydown', input, function(e){
+        console.log(e.keyCode);
         // Allow: backspace, tab, enter, shift, ctrl, alt, pause, caps lock, escape, print screen, insert, delete, window, context menu, num lock,
         if ($.inArray(e.keyCode, [8, 9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 44, 45, 46, 91, 93, 144 ]) !== -1 ||
             // Allow: Ctrl+A, Command+A
@@ -254,9 +259,7 @@ function placeholderCustom(){
             // Allow:  pg up, pg down, home, end, left, right, down, up
             (e.keyCode >= 33 && e.keyCode <= 40) ||
             // Allow: F1 - F24
-            (e.keyCode >= 111 && e.keyCode <= 135)||
-            // Allow: volumn down, volumn up, next, pre, stop, play/pause
-            (e.keyCode >= 74 && e.keyCode <= 79)) {
+            (e.keyCode >= 111 && e.keyCode <= 135)) {
                 // let it happen, don't do anything
                 return;
         }
