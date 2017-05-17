@@ -2103,6 +2103,48 @@ input[type=number] {
     line-height: 100%;
     font-family: "Lato", sans-serif; }
 
+.input-countdown .error {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 0 15px;
+  color: #f3472d;
+  text-decoration: none;
+  font-size: 0.9375em;
+  line-height: 38px;
+  font-family: "Lato", sans-serif;
+  background: #fff;
+  z-index: 4; }
+  @media (max-width: 767px) {
+    .input-countdown .error {
+      line-height: 36px;
+      font-size: 0.75em;
+      padding: 0 8px; } }
+  @media (max-width: 359px) {
+    .input-countdown .error {
+      font-size: 0.8125em;
+      line-height: 31px;
+      padding: 0 5px; } }
+  .input-countdown .error:before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 11px;
+    background: #fff url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
+    background-size: 13px auto;
+    margin-right: 5px; }
+    @media (max-width: 767px) {
+      .input-countdown .error:before {
+        position: relative;
+        top: 1px; } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+      .input-countdown .error:before {
+        background-image: url(images/ui/pages/company/settings/icon_error@3x.png); } }
+
+.input-countdown.validate .error {
+  left: inherit;
+  right: 0; }
+
 .hour-custom {
   position: relative;
   padding-left: calc(100% - 82px); }
