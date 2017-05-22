@@ -1200,6 +1200,14 @@ textarea.form-control {
     .inner_input {
       height: 38px; } }
 
+.chosen-container-active.chosen-with-drop .chosen-single .inner_input,
+.chosen-container-active.chosen-with-drop .chosen-multiple .inner_input {
+  border-radius: 2px 0 0; }
+  @media (max-width: 767px) {
+    .chosen-container-active.chosen-with-drop .chosen-single .inner_input,
+    .chosen-container-active.chosen-with-drop .chosen-multiple .inner_input {
+      border-radius: 0; } }
+
 .stripe-connect {
   display: inline-block;
   margin-bottom: 1px;
@@ -7164,7 +7172,8 @@ div.placeholder-custom {
           position: relative;
           top: 6px;
           left: inherit;
-          margin-right: 5px; } }
+          margin-right: 5px;
+          margin-left: 10px; } }
       @media (max-width: 359px) {
         .company-settings-page .company-connect .share-section .share .btn:before {
           width: 21px;
@@ -7928,21 +7937,22 @@ div.placeholder-custom {
 .company-event-page .details-event div[class*="col-"] {
   margin-bottom: 17px; }
 
-@media (max-width: 767px) {
-  .company-event-page .details-event .organizer-section .radio-mark ~ .radio-label {
-    margin: 0;
-    font-size: 0.9375em; } }
-
-.company-event-page .details-event .organizer-section .radio-custom {
-  margin-top: 20px;
-  margin-bottom: 10px; }
+.company-event-page .details-event .organizer-section {
+  border-top: 0 none; }
   @media (max-width: 767px) {
-    .company-event-page .details-event .organizer-section .radio-custom {
-      margin-top: 18px;
-      margin-bottom: 0; } }
-  @media (max-width: 359px) {
-    .company-event-page .details-event .organizer-section .radio-custom {
-      margin-top: 15px; } }
+    .company-event-page .details-event .organizer-section .radio-mark ~ .radio-label {
+      margin: 0;
+      font-size: 0.9375em; } }
+  .company-event-page .details-event .organizer-section .radio-custom {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    @media (max-width: 767px) {
+      .company-event-page .details-event .organizer-section .radio-custom {
+        margin-top: 18px;
+        margin-bottom: 0; } }
+    @media (max-width: 359px) {
+      .company-event-page .details-event .organizer-section .radio-custom {
+        margin-top: 15px; } }
 
 .company-event-page .details-event .info-section div[class*="col-"]:last-child {
   margin-bottom: 12px; }
