@@ -512,6 +512,8 @@ textarea.form-control {
   cursor: default; }
   .bootstrap-select.disabled > .btn {
     cursor: default; }
+    .bootstrap-select.disabled > .btn .caret {
+      display: none; }
 
 .bootstrap-select > .btn,
 .bootstrap-select > .btn:focus,
@@ -1151,8 +1153,23 @@ textarea.form-control {
 .chosen-select .wrap-nicescroll-content + .nicescroll-rails div {
   background-color: #f3472d !important; }
 
-.chosen-container .chosen-results li:hover {
-  color: #f3472d; }
+.chosen-container {
+  font-size: 16px; }
+  .chosen-container .inner_input {
+    font-size: 1.25em; }
+    @media (max-width: 767px) {
+      .chosen-container .inner_input {
+        font-size: 0.9375em; } }
+    @media (max-width: 359px) {
+      .chosen-container .inner_input {
+        font-size: 0.8125em; } }
+  .chosen-container .chosen-results li:hover {
+    color: #f3472d; }
+  .chosen-container.chosen-disabled .chosen-default div {
+    display: none; }
+  .chosen-container .chosen-results li,
+  .chosen-container .chosen-choices li {
+    font-size: 0.8125em; }
 
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-multiple,
@@ -1161,14 +1178,22 @@ textarea.form-control {
   border-color: #797979;
   height: 40px;
   border-radius: 2px;
-  line-height: 38px; }
+  line-height: 38px;
+  font-size: 1.25em; }
   @media (max-width: 767px) {
     .chosen-container-single .chosen-single,
     .chosen-container-single .chosen-multiple,
     .chosen-container-multi .chosen-single,
     .chosen-container-multi .chosen-multiple {
       height: 38px;
-      line-height: 36px; } }
+      line-height: 36px;
+      font-size: 0.9375em; } }
+  @media (max-width: 359px) {
+    .chosen-container-single .chosen-single,
+    .chosen-container-single .chosen-multiple,
+    .chosen-container-multi .chosen-single,
+    .chosen-container-multi .chosen-multiple {
+      font-size: 0.8125em; } }
   .chosen-container-single .chosen-single div,
   .chosen-container-single .chosen-multiple div,
   .chosen-container-multi .chosen-single div,

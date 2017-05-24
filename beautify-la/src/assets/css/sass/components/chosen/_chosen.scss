@@ -9,11 +9,40 @@
 }
 
 .chosen-container {
+    font-size: 16px;
+
+    .inner_input {
+        font-size: $h5;
+
+        @media (max-width: 767px){
+            font-size: $s15;
+        }
+
+        @media (max-width: 359px){
+            font-size: $s13;
+        }
+    }
+
     .chosen-results {
         li {
             &:hover {
                 color: $positive;
             }
+        }
+    }
+
+    &.chosen-disabled {
+        .chosen-default {
+            div {
+                display: none;
+            }
+        }
+    }
+
+    .chosen-results,
+    .chosen-choices {
+        li {
+            font-size: $s13;
         }
     }
 }
@@ -26,10 +55,16 @@
         height: 40px;
         border-radius: 2px;
         line-height: 38px;
+        font-size: $h5;
 
         @media (max-width: 767px) {
             height: 38px;
             line-height: 36px;
+            font-size: $s15;
+        }
+
+        @media (max-width: 359px){
+            font-size: $s13;
         }
 
         div {
