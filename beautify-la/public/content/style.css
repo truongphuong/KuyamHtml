@@ -5128,6 +5128,10 @@ div.placeholder-custom {
   line-height: 57px;
   margin: 0 0 18px; }
 
+.past-list .scroll-content {
+  max-height: 225px;
+  overflow-y: auto; }
+
 .past-list .item {
   border-bottom: 1px solid rgba(51, 51, 51, 0.3);
   margin-top: 15px;
@@ -5142,7 +5146,11 @@ div.placeholder-custom {
     margin: 0 0 11px; }
     .past-list .item h3 a {
       color: #343434;
-      text-decoration: none; }
+      text-decoration: none;
+      /*display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;*/ }
   .past-list .item footer time {
     font-size: 0.875em;
     line-height: 20px;
@@ -5157,6 +5165,18 @@ div.placeholder-custom {
     text-decoration: underline;
     float: right; }
 
+.detech-devices .scroll-content {
+  overflow-y: scroll; }
+
+/*.on-nicescroll {
+    .past-list {
+        .wrap-dropdown-menu-inner {
+            max-height: 225px;
+            padding-right: 16px;
+            position: relative;
+        }
+    }
+}*/
 .back-to-top {
   display: none;
   width: 45px;
@@ -7606,15 +7626,15 @@ div.placeholder-custom {
     margin-bottom: 16px; } }
 
 .company-event-page .type-event .section-photo {
-  margin-top: 31px;
+  /*margin-top: 31px;*/
   margin-bottom: 21px; }
   @media (max-width: 767px) {
     .company-event-page .type-event .section-photo {
-      margin-top: 18px;
+      /*margin-top: 18px;*/
       margin-bottom: 18px; } }
   @media (max-width: 359px) {
     .company-event-page .type-event .section-photo {
-      margin-top: 15px;
+      /*margin-top: 15px;*/
       margin-bottom: 15px; } }
   .company-event-page .type-event .section-photo .label-form {
     margin-top: 27px;
@@ -7962,6 +7982,40 @@ div.placeholder-custom {
     @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
       .company-event-page .type-event .type-tickets .section.section-num .btn:before {
         background-image: url(images/ui/pages/company/event/icon_tier@3x.png); } }
+
+.company-event-page .type-event .proccessing-section {
+  margin-top: 31px; }
+  @media (max-width: 767px) {
+    .company-event-page .type-event .proccessing-section {
+      margin-top: 18px; } }
+  @media (max-width: 359px) {
+    .company-event-page .type-event .proccessing-section {
+      margin-top: 15px; } }
+  .company-event-page .type-event .proccessing-section p {
+    margin-top: 18px;
+    margin-bottom: 6px; }
+    @media (max-width: 767px) {
+      .company-event-page .type-event .proccessing-section p {
+        margin-top: 10px;
+        margin-bottom: 6px; } }
+  @media (max-width: 767px) {
+    .company-event-page .type-event .proccessing-section .radio-mark ~ .radio-label {
+      margin: 0;
+      font-size: 0.9375em; } }
+  .company-event-page .type-event .proccessing-section .radio-custom {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+    @media (max-width: 767px) {
+      .company-event-page .type-event .proccessing-section .radio-custom {
+        margin-top: 18px;
+        margin-bottom: 0; } }
+    @media (max-width: 359px) {
+      .company-event-page .type-event .proccessing-section .radio-custom {
+        margin-top: 15px; } }
+    .company-event-page .type-event .proccessing-section .radio-custom + .radio-custom {
+      margin-bottom: 0; }
+      .company-event-page .type-event .proccessing-section .radio-custom + .radio-custom label {
+        margin-bottom: 0; }
 
 .company-event-page .details-event div[class*="col-"] {
   margin-bottom: 17px; }

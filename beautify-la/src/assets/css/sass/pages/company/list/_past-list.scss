@@ -8,6 +8,11 @@
         }
     }
 
+    .scroll-content {
+        max-height: 225px;
+        overflow-y: auto;
+    }
+
     .item{
         border-bottom: 1px solid rgba(51, 51, 51, .3);
         margin-top: 15px;
@@ -27,6 +32,10 @@
             a{
                 color: #343434;
                 text-decoration: none;
+                /*display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;*/
             }
         }
 
@@ -51,3 +60,16 @@
     }
 }
 
+.detech-devices .scroll-content {
+    overflow-y: scroll;
+}
+
+/*.on-nicescroll {
+    .past-list {
+        .wrap-dropdown-menu-inner {
+            max-height: 225px;
+            padding-right: 16px;
+            position: relative;
+        }
+    }
+}*/

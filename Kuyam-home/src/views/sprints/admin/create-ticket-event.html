@@ -1,0 +1,1253 @@
+{% extends './master/main-admin.html' %}
+
+{% block title %}Kuyam - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="../../content/bootstrap-table.css" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<div id="divList">
+    <h2>
+        Single Company Events list
+    </h2>
+    <div class="boxsearch">
+        <center>
+            <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+                <tbody>
+                    <tr class="odd">
+                        <td>
+                            <select id="companyEventType1">
+                                <option value="-1" selected="selected">select type</option>
+                                <option value="0">Special pricing</option>
+                                <option value="1">RSVP</option>
+                                <option value="2">Ticket sales</option>
+                                <option value="3" disabled>Donation</option>
+                                <option value="4" disabled>Class</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>
+                            <label>
+                                search&nbsp;&nbsp;
+                                <input type="text" id="txtKey" name="Key" value="">
+                            </label>
+                            &nbsp;&nbsp;
+                            <select id="stateStatus">
+                                <option value="-1">select status</option>
+                                <option value="0">inActive</option>
+                                <option value="1" selected="selected">Active</option>
+                                <option value="2">Expired</option>
+                            </select>
+                            <select id="companyEventType">
+                                <option value="-1" selected="selected">select type</option>
+                                <option value="0">Special pricing</option>
+                                <option value="1">RSVP</option>
+                                <option value="2">Ticket sales</option>
+                                <option value="3" disabled>Donation</option>
+                                <option value="4" disabled>Class</option>
+                            </select>
+                            <input class="button" id="btnSearch" value="search" type="button" onclick="FilterSearchResult();">
+                            <input class="button" style="float:right;" id="btnDeleteSingleCompanyEvent" value="Delete Event" type="button" onclick="DeleteSingleCompanyEventByEventIds();">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+    <div id="listServices" style="overflow-x: scroll; display: block">
+        <table border="0" cellpadding="0" cellspacing="0" class="tbldata" id="tblServices">
+            <tbody>
+                <tr>
+                    <th style="width: 230px;">
+                        name
+                    </th>
+                    <th style="display:none">
+                        decription
+                    </th>
+                    <th style="display:none">
+                        event url
+                    </th>
+                    <th style="width: 115px;">
+                        start
+                    </th>
+                    <th style="width: 115px;">
+                        end
+                    </th>
+                    <th style="width: 100px;">
+                        status
+                    </th>
+                    <th style="width: 100px;">
+                        type
+                    </th>
+                    <th style="width: 230px;">
+                        action
+                    </th>
+                    <th>
+                        <input type="checkbox" id="select-all-checkbox" onclick="checkAll()">
+                    </th>
+                </tr>
+                <tr id="111">
+
+                    <td>
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        adfad
+                    </td>
+
+                    <td style="display:none">
+                        adfadfd
+                    </td>
+
+                    <td>
+                            <span> 3/19/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 3/30/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        303
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/111">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/111"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/111?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="111" id="111" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="296">
+
+                    <td>
+                        Chanh 12-3-2015 event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh_12_3_2015_event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event 1
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event 2
+                    </td>
+
+                    <td>
+                            <span> 12/3/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 12/10/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        279
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/296">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/296"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/296?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="296" id="296" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="41">
+
+                    <td>
+                        hello abc
+                    </td>
+
+                    <td style="display:none">
+                        www ew
+                    </td>
+
+                    <td style="display:none">
+                        222_232
+                    </td>
+
+                    <td style="display:none">
+                        wew
+                    </td>
+
+                    <td style="display:none">
+                        eqwe
+                    </td>
+
+                    <td>
+                            <span> 12/31/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 12/31/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        329
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        null
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/41">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/41"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/41?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="41" id="41" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="282">
+
+                    <td>
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan_pereira_old_event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old eventSantan pereira old event
+                    </td>
+
+                    <td>
+                            <span> 3/27/2016</span>
+
+                    </td>
+
+                    <td>
+                            <span> 3/27/2016</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        331
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/282">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/282"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/282?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="282" id="282" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="324">
+
+                    <td>
+                        test789456
+                    </td>
+
+                    <td style="display:none">
+                        test22
+                    </td>
+
+                    <td style="display:none">
+                        test789456
+                    </td>
+
+                    <td style="display:none">
+                        test
+                    </td>
+
+                    <td style="display:none">
+                        test
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_ec3bvo4w
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        799
+                    </td>
+
+                    <td style="display:none">
+                        2501
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+                        67 Nguyen Thi Minh Khai
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        TPHCM
+                    </td>
+
+                    <td style="display:none">
+                        TX
+                    </td>
+
+                    <td style="display:none">
+                        77040
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/324">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/324"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/324?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="324" id="324" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="325">
+
+                    <td>
+                        78564
+                    </td>
+
+                    <td style="display:none">
+                        75684
+                    </td>
+
+                    <td style="display:none">
+                        78564
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_i0hhgijx
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        799
+                    </td>
+
+                    <td style="display:none">
+                        2501
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+                        67 Nguyen thi Minh Khai
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        hcm
+                    </td>
+
+                    <td style="display:none">
+                        AL
+                    </td>
+
+                    <td style="display:none">
+                        7704
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/325">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/325"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/325?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="325" id="325" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="53">
+
+                    <td>
+                        Kourosh Testing
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        Kourosh_Testing
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span> 5/3/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 5/3/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_5x60sc1w
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        316
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        AL
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/53">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/53"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/53?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="53" id="53" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+            <tbody>
+                <tr class="odd" style="width: 50%;">
+                    <td>
+                        <input type="hidden" id="currentPage" value="1">
+                            <div class="fLeft mt4" style="float: left; padding-left: 0px;">
+                                    <span>1 - 7 of </span>
+                                    <span><strong>7 results</strong></span>
+                            </div>
+
+                    </td>
+                    <td class="paging" style="text-align: right; width: 50%;">
+                                <div class="paging">
+                                                <span class="active" title="1">1</span>
+
+
+                                </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <div style="width: 100%">
+    </div>
+    <div style="width: 100%">
+    </div>
+</div>
+</div>
+
+<div id="dialog-form" style="display: none;">
+    <h2 id="formTitle"></h2>
+    <p class="validateTips">
+    </p>
+    <form id="form-data" enctype="multipart/form-data" class="ng-pristine ng-valid ng-valid-maxlength">
+        <input type="hidden" id="hdfEventId">
+
+        <div id="viewImageContainer" class="img-upload">
+            <!-- ngIf: KalturaId -->
+        </div>
+
+        <div id="cropImageContainer" class="img-upload hide">
+            <!-- ngIf: dataUrl -->
+        </div>
+
+        <label class="btn btn-primary btn-upload btn-orange" for="inputEventImage" title="Upload image file">
+            <input id="inputEventImage" class="sr-only" name="file" type="file" onchange="angular.element(this).scope().uploadEventImage(this.files[0])" accept="image/*">
+            <span class="docs-tooltip" data-toggle="tooltip" title="Import image">
+                <span class="icon icon-upload">upload image</span>
+            </span>
+        </label>
+        <!-- ngIf: KalturaId != null -->
+        <p>3mb max file size</p>
+
+        <table border="0" cellpadding="0" cellspacing="0" class="tbldata">
+            <tbody><tr>
+                <td style="width: 90px;">
+                    <label for="txtServiceName">
+                        Name(*)
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="txtEventName" id="txtEventName" class="text" maxlength="80">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtServiceDescription">
+                        description
+                    </label>
+                </td>
+                <td>
+
+
+                    <textarea style="width: 99%; overflow: auto; resize: none" name="txtEventDescription" id="txtEventDescription" cols="20" rows="6" maxlength="300"></textarea>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="create url" onclick="createUrl();">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtEventUrl">
+                        event url(*)
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="txtEventUrl" id="txtEventUrl" ng-model="EditedEvent.EventUrl" class="text ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" maxlength="150">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtRuntimeEventUrl">
+                        runtime event url
+                    </label>
+                </td>
+                <td nowrap="nowrap">
+                    <input type="text" name="txtRuntimeEventUrl" id="txtRuntimeEventUrl" value="http://dev.beautify.us/booking/" readonly="readonly" style="width: 92%">
+                    <button id="d_clip_button" title="Copy to clipboard." data-clipboard-target="txtRuntimeEventUrl" style="display: none;">Copy</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="txtEventTitleFirst">
+                        first title
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="txtEventTitleFirst" id="txtEventTitleFirst" value="" class="text" maxlength="150">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="txtEventTitleSecond">
+                        second title
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="txtEventTitleSecond" id="txtEventTitleSecond" value="" class="text" maxlength="150">
+                </td>
+            </tr>
+
+            <tr id="mailChimpArea">
+                <td>
+                    <label for="mailChimpListId">
+                        MailChimp List Id
+                    </label>
+                </td>
+                <td>
+
+
+                    <select name="mailChimpListId" id="mailChimpListId" ng-model="mailChimpId" ng-options="item.name for item in mailChimpListId track by item.id" style="width: 99%;" class="ng-pristine ng-untouched ng-valid ng-empty"><option value="" class="" selected="selected"> -- select an option -- </option></select>
+                    <div ng-show="(total + 1)/limit + 1 > 1" class="ng-binding">
+                        <!-- ngIf: pageIndex > 1 -->
+                        <input type="text" style="width: 40px;" ng-model="pageIndex" ng-enter="goToPage(pageIndex - 1)" class="ng-pristine ng-untouched ng-valid ng-not-empty"> /0 page<!-- ngIf: total > 1 -->
+                        <!-- ngIf: pageIndex < total -->
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="eventStartDate">
+                        Start Date(*)
+                    </label>
+                </td>
+                <td>
+                    <input type="text" value="start date" onfocus="if (this.value == 'start date') {this.value = '';}" onblur="if (this.value == '') {this.value = 'start date';}" id="eventStartDate" class="hasDatepicker">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="eventEndDate">
+                        End Date(*)
+                    </label>
+                </td>
+                <td>
+                    <input type="text" value="end date" onfocus="if (this.value == 'end date') {this.value = '';}" onblur="if (this.value == '') {this.value = 'end date';}" id="eventEndDate" class="hasDatepicker">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dllCounty">
+                        Area(*)
+                    </label>
+                </td>
+                <td>
+
+                    <select id="dllCounty" ng-options="c.CountyName for c in counties track by c.CountyId" ng-model="CountyId" ng-change="GetCities()" class="ng-pristine ng-untouched ng-valid ng-empty"><option value="" class="" selected="selected">-- Select Area --</option><option label="Elko County" value="799">Elko County</option><option label="King County" value="1424">King County</option><option label="Los Angeles" value="75">Los Angeles</option></select>
+
+                    <input type="text" id="txtcounty" value="" style="width: 200px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dllCity">
+                        Event City(*)
+                    </label>
+                </td>
+                <td>
+                    <select id="dllCity" ng-model="CityId" ng-disabled="!cities" ng-options="s.CityName for s in cities track by s.CityId" class="ng-pristine ng-untouched ng-valid ng-empty" disabled="disabled"><option value="" class="" selected="selected">
+                            -- Select City --
+                        </option></select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>
+                        Is Private
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="isprivate" value="false">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Early Access
+                    </label>
+                </td>
+                <td>
+
+
+                    <select id="dlmonth">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span>months</span>
+                    <select id="dlday">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <span>days</span>
+                    <select id="dlhour">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                    </select>
+                    <span>hours</span>
+                    <select id="dlminute">
+                        <option value="0">0</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                        <option value="55">55</option>
+                        <option value="60">60</option>
+                    </select>
+                    <span>minutes</span>
+                </td>
+            </tr>
+
+            <tr id="wheresection" class="facilityName-class" style="display: none;">
+                <td>
+                    <label>
+                        Where this event?
+                    </label>
+                </td>
+                <td>
+                    <input type="radio" name="isFacilityName" onclick="handleClick(0);" value="0">&nbsp;<span id="companyAddress"></span>
+                    <br>
+                    <input type="radio" name="isFacilityName" onclick="handleClick(1);" value="1">&nbsp;Alternative address
+                </td>
+            </tr>
+            <tr id="alternativeSection">
+                <td>
+                    <label>
+                        Event Location Override
+                    </label>
+                </td>
+                <td>
+                    <table>
+                        <tbody><tr class="facilityName-class" style="display: none;">
+                            <td>
+                                <label>
+                                    FacilityName
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" id="facilityName" value="" style="width:200px;" maxlength="300">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Address
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" id="companyaddress" value="" style="width: 200px;" maxlength="300">
+                                <input type="text" id="secondline" value="" style="width: 200px;" maxlength="300">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    City
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" id="companycity" value="" style="width: 200px;" maxlength="100">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    State
+                                </label>
+                            </td>
+                            <td>
+
+                                <select id="companystate" name="companystate" style="width: 200px; height: 20px;">
+                                        <option value="AL"> Alabama</option>
+                                        <option value="AK"> Alaska</option>
+                                        <option value="AZ"> Arizona</option>
+                                        <option value="AR"> Arkansas</option>
+                                        <option value="CA"> California</option>
+                                        <option value="CO"> Colorado</option>
+                                        <option value="CT"> Connecticut</option>
+                                        <option value="DE"> Delaware</option>
+                                        <option value="FL"> Florida</option>
+                                        <option value="GA"> Georgia</option>
+                                        <option value="HI"> Hawaii</option>
+                                        <option value="ID"> Idaho</option>
+                                        <option value="IL"> Illinois</option>
+                                        <option value="IN"> Indiana</option>
+                                        <option value="IA"> Iowa</option>
+                                        <option value="KS"> Kansas</option>
+                                        <option value="KY"> Kentucky</option>
+                                        <option value="LA"> Louisiana</option>
+                                        <option value="ME"> Maine</option>
+                                        <option value="MD"> Maryland</option>
+                                        <option value="MA"> Massachusetts</option>
+                                        <option value="MI"> Michigan</option>
+                                        <option value="MN"> Minnesota</option>
+                                        <option value="MS"> Mississippi</option>
+                                        <option value="MO"> Missouri</option>
+                                        <option value="MT"> Montana</option>
+                                        <option value="NE"> Nebraska</option>
+                                        <option value="NV"> Nevada</option>
+                                        <option value="NH"> New Hampshire</option>
+                                        <option value="NJ"> New Jersey</option>
+                                        <option value="NM"> New Mexico</option>
+                                        <option value="NY"> New York</option>
+                                        <option value="NC"> North Carolina</option>
+                                        <option value="ND"> North Dakota</option>
+                                        <option value="OH"> Ohio</option>
+                                        <option value="OK"> Oklahoma</option>
+                                        <option value="OR"> Oregon</option>
+                                        <option value="PA"> Pennsylvania</option>
+                                        <option value="RI"> Rhode Island</option>
+                                        <option value="SC"> South Carolina</option>
+                                        <option value="SD"> South Dakota</option>
+                                        <option value="TN"> Tennessee</option>
+                                        <option value="TX"> Texas</option>
+                                        <option value="UT"> Utah</option>
+                                        <option value="VT"> Vermont</option>
+                                        <option value="VA"> Virginia</option>
+                                        <option value="WA"> Washington</option>
+                                        <option value="WV"> West Virginia</option>
+                                        <option value="WI"> Wisconsin</option>
+                                        <option value="WY"> Wyoming</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label>
+                                    Zip
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" id="companyzip" value="" style="width: 200px;" maxlength="20">
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td colspan="2" align="center">
+                    <center>
+                        <button id="btnSave">
+                            create
+                        </button>
+                        <button id="btnDelete" style="display: none">
+                            inactive
+                        </button>
+                        <button id="btnCancel">
+                            cancel
+                        </button>
+
+                    </center>
+                </td>
+            </tr>
+        </tbody></table>
+        <input type="hidden" id="hidProfileId" value="0">
+    </form>
+    <a id="lnkBack" href="javascript:void(0)">back to list</a>
+</div>
+{% endblock %}
+
+{% block libsscript %}
+<script type="text/javascript" src="../../content/js/libs/bootstrap-table.js"></script>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="../../content/js/pages/admin/ui-owned-comp.js"></script>
+{% endblock %}
+

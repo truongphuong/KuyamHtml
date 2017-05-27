@@ -1,0 +1,134 @@
+#contentmainpage {
+    .create-event {
+        .form {
+            .tbldata {
+                margin-top: 0;
+                margin-bottom: 0;
+
+                &:first-child {
+                    margin-top: 1em;
+                }
+
+                &:last-child {
+                    margin-bottom: 1em;
+
+                    > tbody {
+                        > tr {
+                            &:last-child {
+                                td {
+                                    border-bottom: 1px solid #E5EFF8;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > tbody {
+                    > tr {
+                        td[rowspan] {
+                            border-bottom: 0 none;
+                        }
+
+                        &:last-child {
+                            td {
+                                border-bottom: 0 none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .img-upload {
+            width: 271px;
+            height: 348px;
+            background: center center no-repeat;
+            background-size: cover;
+        }
+
+        .tbldata {
+            tr {
+                td{
+                    &.field {
+                        width: 155px !important;
+
+                        label{
+                            max-width: auto;
+                        }
+                    }
+
+                    &.field-sub {
+                        width: 100px !important;
+
+                        label{
+                            max-width: auto;
+                        }
+
+                        + td {
+                            input[type="text"],
+                            select {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    textarea{
+                        width: 100%;
+                        border: 1px solid rgb(169, 169, 169);
+                        overflow: auto;
+                        resize: none;
+                    }
+
+                    select {
+                        width: 80%;
+                    }
+
+                    input[type="text"] {
+                        width: 100%;
+                        border: 1px solid rgb(169, 169, 169);
+
+                        &.input-url {
+                            width: 92%;
+                        }
+                    }
+
+                    .btn-url {
+                        width: 40px;
+                    }
+
+                    input[type="radio"], input[type="checkbox"] {
+                        margin: 0;
+                        position: relative;
+                        bottom: -2px;
+                    }
+
+                    .chosen-container {
+                        width: 80% !important;
+
+                        &.chosen-container-single {
+                            .chosen-single {
+                                font-size: 12px;
+                                height: 18px;
+                                line-height: 16px;
+                            }
+                        }
+
+                        &.chosen-container-multi {
+                            .chosen-multiple {
+                                font-size: 12px;
+                                height: 18px;
+                                line-height: 16px;
+                            }
+
+                            .inner_input {
+                                height: 18px;
+                                line-height: auto;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .company-event-page {
-    .type-event{
+    .type-event {
         p {
             @media (max-width: 767px){
                 margin-bottom: 16px;
@@ -7,16 +7,16 @@
         }
 
         .section-photo{
-            margin-top: 31px;
+            /*margin-top: 31px;*/
             margin-bottom: 21px;
 
             @media (max-width:767px){
-                margin-top: 18px;
+                /*margin-top: 18px;*/
                 margin-bottom: 18px;
             }
 
             @media (max-width:359px){
-                margin-top: 15px;
+                /*margin-top: 15px;*/
                 margin-bottom: 15px;
             }
 
@@ -635,6 +635,60 @@
                                 background-image: url(images/ui/pages/company/event/icon_tier@3x.png);
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .proccessing-section{
+            margin-top: 31px;
+
+            @media (max-width:767px){
+                margin-top: 18px;
+            }
+
+            @media (max-width:359px){
+                margin-top: 15px;
+            }
+
+            p {
+                margin-top: 18px;
+                margin-bottom: 6px;
+
+                @media (max-width:767px){
+                    margin-top: 10px;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .radio-mark {
+                ~ .radio-label{
+                    @media (max-width: 767px){
+                        margin:0;
+                        font-size: $s15;
+                    }
+                }
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+
+                + .radio-custom {
+                    margin-bottom: 0;
+
+                    label {
+                        margin-bottom: 0;
                     }
                 }
             }

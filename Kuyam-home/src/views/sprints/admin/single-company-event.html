@@ -1,0 +1,810 @@
+{% extends './master/main-admin.html' %}
+
+{% block title %}Kuyam - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block css %}
+<link type="text/css" rel="stylesheet" href="../../content/bootstrap-table.css" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<div id="divList" class="single-company-event">
+    <h2>
+        Single Company Events list
+    </h2>
+    <div class="boxsearch">
+        <center>
+            <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+                <tbody>
+                    <tr class="odd">
+                        <td>
+                            <select id="companyEventType1">
+                                <option value="-1" selected="selected">select type</option>
+                                <option value="0">Special pricing</option>
+                                <option value="1">RSVP</option>
+                                <option value="2">Ticket sales</option>
+                                <option value="3" disabled>Donation</option>
+                                <option value="4" disabled>Class</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>
+                            <label>
+                                search&nbsp;&nbsp;
+                                <input type="text" id="txtKey" name="Key" value="">
+                            </label>
+                            &nbsp;&nbsp;
+                            <select id="stateStatus">
+                                <option value="-1">select status</option>
+                                <option value="0">inActive</option>
+                                <option value="1" selected="selected">Active</option>
+                                <option value="2">Expired</option>
+                            </select>
+                            <select id="companyEventType">
+                                <option value="-1" selected="selected">select type</option>
+                                <option value="0">Special pricing</option>
+                                <option value="1">RSVP</option>
+                                <option value="2">Ticket sales</option>
+                                <option value="3" disabled>Donation</option>
+                                <option value="4" disabled>Class</option>
+                            </select>
+                            <input class="button" id="btnSearch" value="search" type="button" />
+                            <input class="button" style="float:right;" value="Delete Event" type="button" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+    <div id="listServices">
+        <table border="0" cellpadding="0" cellspacing="0" class="tbldata" id="tblServices">
+            <tbody>
+                <tr>
+                    <th style="width: 230px;">
+                        name
+                    </th>
+                    <th style="display:none">
+                        decription
+                    </th>
+                    <th style="display:none">
+                        event url
+                    </th>
+                    <th style="width: 115px;">
+                        start
+                    </th>
+                    <th style="width: 115px;">
+                        end
+                    </th>
+                    <th style="width: 100px;">
+                        status
+                    </th>
+                    <th style="width: 100px;">
+                        type
+                    </th>
+                    <th style="width: 230px;">
+                        action
+                    </th>
+                    <th>
+                        <input type="checkbox" id="select-all-checkbox" />
+                    </th>
+                </tr>
+                <tr id="111">
+
+                    <td>
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        111
+                    </td>
+
+                    <td style="display:none">
+                        adfad
+                    </td>
+
+                    <td style="display:none">
+                        adfadfd
+                    </td>
+
+                    <td>
+                            <span> 3/19/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 3/30/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        303
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="#">Edit</a>
+                                <span> |  </span>
+                                    <a href="#">add company </a>
+                                <span> | </span>
+                                <a href="#"> information</a>
+                            <span> | </span>
+                            <a href="#">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="111" id="111" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="296">
+
+                    <td>
+                        Chanh 12-3-2015 event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh_12_3_2015_event
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event 1
+                    </td>
+
+                    <td style="display:none">
+                        Chanh 12-3-2015 event 2
+                    </td>
+
+                    <td>
+                            <span> 12/3/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 12/10/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        279
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="#">Edit</a>
+                                <span> |  </span>
+                                    <a href="#">add company </a>
+                                <span> | </span>
+                                <a href="#"> information</a>
+                            <span> | </span>
+                            <a href="#">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="296" id="296" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="41">
+
+                    <td>
+                        hello abc
+                    </td>
+
+                    <td style="display:none">
+                        www ew
+                    </td>
+
+                    <td style="display:none">
+                        222_232
+                    </td>
+
+                    <td style="display:none">
+                        wew
+                    </td>
+
+                    <td style="display:none">
+                        eqwe
+                    </td>
+
+                    <td>
+                            <span> 12/31/2015</span>
+
+                    </td>
+
+                    <td>
+                            <span> 12/31/2015</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        329
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        null
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="#">Edit</a>
+                                <span> |  </span>
+                                    <a href="#">add company </a>
+                                <span> | </span>
+                                <a href="#"> information</a>
+                            <span> | </span>
+                            <a href="#">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="41" id="41" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="282">
+
+                    <td>
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan_pereira_old_event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old event
+                    </td>
+
+                    <td style="display:none">
+                        Santan pereira old eventSantan pereira old event
+                    </td>
+
+                    <td>
+                            <span> 3/27/2016</span>
+
+                    </td>
+
+                    <td>
+                            <span> 3/27/2016</span>
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        331
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="#">Edit</a>
+                                <span> |  </span>
+                                    <a href="#">add company </a>
+                                <span> | </span>
+                                <a href="#"> information</a>
+                            <span> | </span>
+                            <a href="#">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="282" id="282" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="324">
+
+                    <td>
+                        test789456
+                    </td>
+
+                    <td style="display:none">
+                        test22
+                    </td>
+
+                    <td style="display:none">
+                        test789456
+                    </td>
+
+                    <td style="display:none">
+                        test
+                    </td>
+
+                    <td style="display:none">
+                        test
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_ec3bvo4w
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        799
+                    </td>
+
+                    <td style="display:none">
+                        2501
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+                        67 Nguyen Thi Minh Khai
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        TPHCM
+                    </td>
+
+                    <td style="display:none">
+                        TX
+                    </td>
+
+                    <td style="display:none">
+                        77040
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/324">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/324"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/324?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="324" id="324" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="325">
+
+                    <td>
+                        78564
+                    </td>
+
+                    <td style="display:none">
+                        75684
+                    </td>
+
+                    <td style="display:none">
+                        78564
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 1/19/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_i0hhgijx
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        799
+                    </td>
+
+                    <td style="display:none">
+                        2501
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+                        67 Nguyen thi Minh Khai
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        hcm
+                    </td>
+
+                    <td style="display:none">
+                        AL
+                    </td>
+
+                    <td style="display:none">
+                        7704
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/325">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/325"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/325?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="325" id="325" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+                <tr id="53">
+
+                    <td>
+                        Kourosh Testing
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        Kourosh_Testing
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td>
+                            <span> 5/3/2017</span>
+
+                    </td>
+
+                    <td>
+                            <span> 5/3/2017</span>
+
+                    </td>
+
+                    <td style="display:none">
+                        1_5x60sc1w
+                    </td>
+
+                    <td>
+                            <span>Expired</span>
+                    </td>
+
+                    <td style="display:none">
+                    </td>
+
+                    <td style="display:none">
+                            false
+                    </td>
+
+                    <td style="display:none">
+                        75
+                    </td>
+
+                    <td style="display:none">
+                        316
+                    </td>
+
+                    <td style="display:none">
+                        False
+                    </td>
+
+                    <td style="display:none">
+                        0
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+
+                    <td style="display:none">
+                        AL
+                    </td>
+
+                    <td style="display:none">
+
+                    </td>
+                            <td></td>
+
+
+                    <td class="word-break-normal">
+                                <a class="modify" href="javascript:void(0)">Edit</a>
+                                <span> |  </span>
+                                    <a href="/Admin/CompaniesForEachEvent/53">add company </a>
+                                <span> | </span>
+                                <a href="/Admin/InformationalSection/53"> information</a>
+                            <span> | </span>
+                            <a href="/Admin/MEdiaAdsForEachEvent/53?callbackUrl=%2FAdmin%2FFilterSingleEvent%2F">Media List</a>
+                    </td>
+                    <td>
+                        <input type="checkbox" value="53" id="53" name="single-company-checkbox" class="delete-single-company">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table cellpadding="0" cellspacing="0" border="0" class="tbldata">
+            <tbody>
+                <tr class="odd" style="width: 50%;">
+                    <td>
+                        <input type="hidden" id="currentPage" value="1">
+                            <div class="fLeft mt4" style="float: left; padding-left: 0px;">
+                                    <span>1 - 7 of </span>
+                                    <span><strong>7 results</strong></span>
+                            </div>
+
+                    </td>
+                    <td class="paging" style="text-align: right; width: 50%;">
+                                <div class="paging">
+                                                <span class="active" title="1">1</span>
+
+
+                                </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block libsscript %}
+<script type="text/javascript" src="../../content/js/libs/bootstrap-table.js"></script>
+{% endblock %}
+
+{% block script %}{% endblock %}
+

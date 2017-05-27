@@ -1,0 +1,62 @@
+.bootstrap-table thead th{    
+    background: #F4F9FE;
+    color:#003765;
+    border-left-color: #E5EFF8;
+}
+.fixed-table-container{
+    border-radius:0;
+    border-color:#E5EFF8;
+}
+.bootstrap-table .table{
+    border:0 none;
+}
+.bootstrap-table .table > thead > tr > th{
+    border-bottom-color:#E5EFF8;
+}
+
+.bootstrap-table tbody td{
+    color:$base;
+    border-left-color: #E5EFF8;
+    background:$white;
+}
+
+.bootstrap-table tbody tr:nth-child(even) td{
+    background: #F4F9FE;
+}
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td{
+    border-top-color:#E5EFF8;    
+}
+.bootstrap-table thead th .both {
+    background-image: url(images/ui/admin/icon_sort.png);
+    background-size: 36px auto;
+}
+.bootstrap-table thead th .desc {
+    background-image: url(images/ui/admin/icon_desc.png);
+}
+.bootstrap-table thead th .asc {
+    background-image: url(images/ui/admin/icon_asc.png);
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){        
+    .bootstrap-table thead th .both {
+        background-image: url(images/ui/admin/icon_sort@2x.png);
+        background-size: 36px auto;
+    }
+    .bootstrap-table thead th .desc {
+        background-image: url(images/ui/admin/icon_desc@2x.png);
+    }
+    .bootstrap-table thead th .asc {
+        background-image: url(images/ui/admin/icon_asc@2x.png);
+    }
+}

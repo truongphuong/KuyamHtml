@@ -430,9 +430,81 @@ textarea {
   .bootstrap-table thead th .asc {
     background-image: url(images/ui/admin/icon_asc@2x.png); } }
 
+.iscroll-vertical .nicescroll-rails {
+  width: 1px !important;
+  right: 3px !important; }
+
+.iscroll-vertical .nicescroll-rails div {
+  right: -3px !important; }
+
+.chosen-select .nicescroll-rails {
+  width: 1px !important;
+  right: 3px !important; }
+
+.chosen-select .nicescroll-rails div {
+  right: -3px !important; }
+
+.bootstrap-select .nicescroll-rails {
+  width: 1px !important;
+  right: 3px !important; }
+
+.bootstrap-select .nicescroll-rails div {
+  right: -3px !important; }
+
+.on-nicescroll .wrap-dropdown-menu-inner {
+  overflow: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch; }
+
+.on-nicescroll .wrap-dropdown-menu-inner-content {
+  overflow: hidden; }
+
+/*.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner:after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:calc(100% - 10px);
+    height: 80px;
+    background: $rgba_white;
+    pointer-events: none;
+    background: -webkit-linear-gradient(transparent, $rgba_white, $white);
+    background: -o-linear-gradient(transparent, $rgba_white, $white);
+    background: -moz-linear-gradient(transparent, $rgba_white, $white);
+    background: linear-gradient(transparent, $rgba_white, $white);
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -ms-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    opacity:1;
+}
+.on-nicescroll .book-detail-page .wrap-dropdown-menu-inner.end:after{
+    opacity:0;
+}*/
+.iscroll-horizontal .nicescroll-rails {
+  height: 1px !important;
+  bottom: 3px !important; }
+
+.iscroll-horizontal .nicescroll-rails div {
+  top: -3px !important; }
+
+@media (max-width: 1023px) {
+  .iscroll-vertical .nicescroll-rails div {
+    width: 5px !important;
+    right: -2px !important; }
+  .iscroll-horizontal .nicescroll-rails div {
+    height: 5px !important;
+    top: -2px !important; } }
+
+.chosen-container .nicescroll-rails {
+  width: 1px !important; }
+
 /**
  * Partials
  */
+.boxsearch label {
+  margin-bottom: 0; }
+
 /**
  * Pages
  */
@@ -629,45 +701,82 @@ textarea {
 .owed-comp ul.header-image-list li img {
   width: 100%; }
 
-.tags-section a,
-.tags-section .span-collapse {
-  color: #29abe2;
-  text-decoration: none;
-  cursor: pointer; }
+.single-company-event .tbldata tr:nth-child(even) td {
+  background: #fff !important; }
 
-.tags-section a:hover,
-.tags-section .span-collapse:hover {
-  text-decoration: underline; }
+.single-company-event .tbldata tr:nth-child(odd) td {
+  background: #F4F9FE !important; }
 
-.tags-section .tag-list {
-  border: 1px solid #ccc;
-  border-radius: 4px; }
-
-.tags-section .tag-list ul {
-  margin: 0;
-  padding: 5px 0;
-  list-style: none; }
-
-.tags-section .tag-list li {
-  position: relative;
-  padding: 5px 10px; }
-
-.tags-section .tag-list li .close {
-  opacity: 1;
-  position: absolute;
+#contentmainpage .create-event .form .tbldata {
   margin-top: 0;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background: url(images/dashboard/icon-close.png) center center no-repeat;
-  background-size: 14px auto;
-  color: transparent;
-  width: 33px;
-  height: 33px; }
+  margin-bottom: 0; }
+  #contentmainpage .create-event .form .tbldata:first-child {
+    margin-top: 1em; }
+  #contentmainpage .create-event .form .tbldata:last-child {
+    margin-bottom: 1em; }
+    #contentmainpage .create-event .form .tbldata:last-child > tbody > tr:last-child td {
+      border-bottom: 1px solid #E5EFF8; }
+  #contentmainpage .create-event .form .tbldata > tbody > tr td[rowspan] {
+    border-bottom: 0 none; }
+  #contentmainpage .create-event .form .tbldata > tbody > tr:last-child td {
+    border-bottom: 0 none; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
-  .tags-section .tag-list li .close {
-    background-image: url(images/dashboard/icon-close@2x.png); } }
+#contentmainpage .create-event .img-upload {
+  width: 271px;
+  height: 348px;
+  background: center center no-repeat;
+  background-size: cover; }
+
+#contentmainpage .create-event .tbldata tr td.field {
+  width: 155px !important; }
+  #contentmainpage .create-event .tbldata tr td.field label {
+    max-width: auto; }
+
+#contentmainpage .create-event .tbldata tr td.field-sub {
+  width: 100px !important; }
+  #contentmainpage .create-event .tbldata tr td.field-sub label {
+    max-width: auto; }
+  #contentmainpage .create-event .tbldata tr td.field-sub + td input[type="text"],
+  #contentmainpage .create-event .tbldata tr td.field-sub + td select {
+    width: 50%; }
+
+#contentmainpage .create-event .tbldata tr td textarea {
+  width: 100%;
+  border: 1px solid darkgray;
+  overflow: auto;
+  resize: none; }
+
+#contentmainpage .create-event .tbldata tr td select {
+  width: 80%; }
+
+#contentmainpage .create-event .tbldata tr td input[type="text"] {
+  width: 100%;
+  border: 1px solid darkgray; }
+  #contentmainpage .create-event .tbldata tr td input[type="text"].input-url {
+    width: 92%; }
+
+#contentmainpage .create-event .tbldata tr td .btn-url {
+  width: 40px; }
+
+#contentmainpage .create-event .tbldata tr td input[type="radio"], #contentmainpage .create-event .tbldata tr td input[type="checkbox"] {
+  margin: 0;
+  position: relative;
+  bottom: -2px; }
+
+#contentmainpage .create-event .tbldata tr td .chosen-container {
+  width: 80% !important; }
+  #contentmainpage .create-event .tbldata tr td .chosen-container.chosen-container-single .chosen-single {
+    font-size: 12px;
+    height: 18px;
+    line-height: 16px; }
+  #contentmainpage .create-event .tbldata tr td .chosen-container.chosen-container-multi .chosen-multiple {
+    font-size: 12px;
+    height: 18px;
+    line-height: 16px; }
+  #contentmainpage .create-event .tbldata tr td .chosen-container.chosen-container-multi .inner_input {
+    height: 18px;
+    line-height: auto;
+    font-size: 12px; }
 
 /**
  * Modals

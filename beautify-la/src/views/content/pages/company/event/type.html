@@ -13,7 +13,7 @@
                 </select>
             </div>
         </div>
-        <div id="type1" class="type-section type-class">
+        <div id="type1" class="type-section type-class hide">
             <section class="section section-class">
                 <p>Class events are for one or more days with limited spots.</p>
                 <div class="row">
@@ -756,7 +756,7 @@
             </section>
         </div>
 
-        <div id="type4" class="type-section type-tickets hide">
+        <div id="type4" class="type-section type-tickets">
             <section class="section section-ticket">
                 <p>Ticket events require guests to purchase tickets at the price you set.</p>
                 <div class="row">
@@ -842,6 +842,17 @@
                     </div>
                 </div>
                 <button class="btn btn-negative">Add another tier</button>
+            </section>
+            <section class="section proccessing-section">
+                <p>Processing Fees are 3rd party credit card fees (Stripe fees & PayPal fees) plus Beautify’s fees (which at this time we’re not charging.)</p>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioProccessing1" type="radio" name="proccessing" value="0" checked="">
+                    <label class="radio-label" for="radioProccessing1">You</label>
+                </div>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioProccessing2" type="radio" name="proccessing" value="1">
+                    <label class="radio-label" for="radioProccessing2">Your guess</label>
+                </div>
             </section>
             <section class="section section-photo">
                 <span class="label-form">Event image <span class="required">&lowast;</span></span>
