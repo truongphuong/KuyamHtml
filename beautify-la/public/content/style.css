@@ -7651,10 +7651,8 @@ div.placeholder-custom {
     background: #f7f7f7 center center no-repeat;
     background-size: cover;
     border: 1px dashed rgba(50, 50, 50, 0.2); }
-    .company-event-page .type-event .section-photo .photo ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .company-event-page .type-event .section-photo .photo .ul {
+      display: block;
       width: 100%;
       height: 346px;
       overflow: hidden;
@@ -7662,20 +7660,24 @@ div.placeholder-custom {
       opacity: 0;
       -webkit-transition: visibility 2s, opacity 2s;
       transition: visibility 2s, opacity 2s; }
-    .company-event-page .type-event .section-photo .photo:hover ul {
+      .company-event-page .type-event .section-photo .photo .ul .li {
+        display: block;
+        text-decoration: none;
+        outline: 0 none !important; }
+    .company-event-page .type-event .section-photo .photo:hover .ul, .company-event-page .type-event .section-photo .photo:focus .ul {
       background: rgba(0, 0, 0, 0.5);
       visibility: visible;
       opacity: 1; }
-    .company-event-page .type-event .section-photo .photo:hover li .or {
+    .company-event-page .type-event .section-photo .photo:hover .li .or, .company-event-page .type-event .section-photo .photo:focus .li .or {
       color: #ccc; }
-      .company-event-page .type-event .section-photo .photo:hover li .or .td .line {
+      .company-event-page .type-event .section-photo .photo:hover .li .or .td .line, .company-event-page .type-event .section-photo .photo:focus .li .or .td .line {
         border-bottom: 1px solid #ccc; }
-      .company-event-page .type-event .section-photo .photo:hover li .or .td .text {
+      .company-event-page .type-event .section-photo .photo:hover .li .or .td .text, .company-event-page .type-event .section-photo .photo:focus .li .or .td .text {
         text-shadow: 0 0 1px #ccc; }
-    .company-event-page .type-event .section-photo .photo li {
+    .company-event-page .type-event .section-photo .photo .li {
       position: relative;
       cursor: pointer; }
-      .company-event-page .type-event .section-photo .photo li .or {
+      .company-event-page .type-event .section-photo .photo .li .or {
         display: block;
         width: 100%;
         position: absolute;
@@ -7685,22 +7687,22 @@ div.placeholder-custom {
         font-family: "Lato", sans-serif;
         color: rgba(0, 0, 0, 0.25);
         text-align: center; }
-        .company-event-page .type-event .section-photo .photo li .or .table-css {
+        .company-event-page .type-event .section-photo .photo .li .or .table-css {
           width: 100%; }
-        .company-event-page .type-event .section-photo .photo li .or .td {
+        .company-event-page .type-event .section-photo .photo .li .or .td {
           height: 22px;
           line-height: 0;
           vertical-align: middle; }
-          .company-event-page .type-event .section-photo .photo li .or .td .line {
+          .company-event-page .type-event .section-photo .photo .li .or .td .line {
             display: inline-block;
             border-bottom: 1px solid rgba(50, 50, 50, 0.2);
             width: 118px; }
-          .company-event-page .type-event .section-photo .photo li .or .td .text {
+          .company-event-page .type-event .section-photo .photo .li .or .td .text {
             display: inline-block;
             padding: 0 8px;
             text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
             width: 33px; }
-      .company-event-page .type-event .section-photo .photo li .caption {
+      .company-event-page .type-event .section-photo .photo .li .caption {
         display: block;
         width: 100%;
         text-align: center;
@@ -7710,54 +7712,54 @@ div.placeholder-custom {
         line-height: 100%;
         position: absolute;
         left: 0; }
-        .company-event-page .type-event .section-photo .photo li .caption span {
+        .company-event-page .type-event .section-photo .photo .li .caption span {
           display: block;
           font-size: 1.0625em; }
-        .company-event-page .type-event .section-photo .photo li .caption small {
+        .company-event-page .type-event .section-photo .photo .li .caption small {
           display: block;
           font-size: 0.75em; }
-    .company-event-page .type-event .section-photo .photo.default:hover ul {
+    .company-event-page .type-event .section-photo .photo.default:hover .ul {
       background: transparent; }
-    .company-event-page .type-event .section-photo .photo.default:hover li .or {
+    .company-event-page .type-event .section-photo .photo.default:hover .li .or {
       color: rgba(0, 0, 0, 0.25); }
-      .company-event-page .type-event .section-photo .photo.default:hover li .or .td .line {
+      .company-event-page .type-event .section-photo .photo.default:hover .li .or .td .line {
         border-bottom: 1px solid rgba(50, 50, 50, 0.2); }
-      .company-event-page .type-event .section-photo .photo.default:hover li .or .td .text {
+      .company-event-page .type-event .section-photo .photo.default:hover .li .or .td .text {
         text-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
-    .company-event-page .type-event .section-photo .photo.default ul {
+    .company-event-page .type-event .section-photo .photo.default .ul {
       visibility: visible;
       opacity: 1; }
-    .company-event-page .type-event .section-photo .photo.two li {
+    .company-event-page .type-event .section-photo .photo.two .li {
       height: 174px; }
-      .company-event-page .type-event .section-photo .photo.two li.upload .caption {
+      .company-event-page .type-event .section-photo .photo.two .li.upload .caption {
         bottom: 28px; }
-      .company-event-page .type-event .section-photo .photo.two li.upload .or {
+      .company-event-page .type-event .section-photo .photo.two .li.upload .or {
         display: none; }
-      .company-event-page .type-event .section-photo .photo.two li.purchase .caption {
+      .company-event-page .type-event .section-photo .photo.two .li.purchase .caption {
         top: 28px; }
-      .company-event-page .type-event .section-photo .photo.two li.edit, .company-event-page .type-event .section-photo .photo.two li.purchased {
+      .company-event-page .type-event .section-photo .photo.two .li.edit, .company-event-page .type-event .section-photo .photo.two .li.purchased {
         display: none; }
-    .company-event-page .type-event .section-photo .photo.three li.edit .caption, .company-event-page .type-event .section-photo .photo.four li.edit .caption {
+    .company-event-page .type-event .section-photo .photo.three .li.edit .caption, .company-event-page .type-event .section-photo .photo.four .li.edit .caption {
       top: 50%;
       margin-top: -16px; }
-    .company-event-page .type-event .section-photo .photo.three li.upload .caption, .company-event-page .type-event .section-photo .photo.four li.upload .caption {
+    .company-event-page .type-event .section-photo .photo.three .li.upload .caption, .company-event-page .type-event .section-photo .photo.four .li.upload .caption {
       top: 50%;
       margin-top: -16px; }
-    .company-event-page .type-event .section-photo .photo.three li.purchase .caption, .company-event-page .type-event .section-photo .photo.four li.purchase .caption {
+    .company-event-page .type-event .section-photo .photo.three .li.purchase .caption, .company-event-page .type-event .section-photo .photo.four .li.purchase .caption {
       top: 50%;
       margin-top: -16px; }
-    .company-event-page .type-event .section-photo .photo.three li.purchased .caption, .company-event-page .type-event .section-photo .photo.four li.purchased .caption {
+    .company-event-page .type-event .section-photo .photo.three .li.purchased .caption, .company-event-page .type-event .section-photo .photo.four .li.purchased .caption {
       top: 50%;
       margin-top: -8px; }
-    .company-event-page .type-event .section-photo .photo.three li {
+    .company-event-page .type-event .section-photo .photo.three .li {
       height: 115px; }
-    .company-event-page .type-event .section-photo .photo.three.photo-uploaded li.purchased {
+    .company-event-page .type-event .section-photo .photo.three.photo-uploaded .li.purchased {
       display: none; }
-    .company-event-page .type-event .section-photo .photo.three.photo-purchased li.edit {
+    .company-event-page .type-event .section-photo .photo.three.photo-purchased .li.edit {
       display: none; }
-    .company-event-page .type-event .section-photo .photo.three.photo-purchased li.upload .or {
+    .company-event-page .type-event .section-photo .photo.three.photo-purchased .li.upload .or {
       display: none; }
-    .company-event-page .type-event .section-photo .photo.four li {
+    .company-event-page .type-event .section-photo .photo.four .li {
       height: 87px; }
 
 .company-event-page .type-event .icon-help {
