@@ -176,10 +176,15 @@
                     .li{
                         height: 174px; //152px;
 
+                        .caption{
+                            top: 50%;
+                            margin-top: -16px;
+                        }
+
                         &.upload {
-                            .caption{
+                            /*.caption{
                                 bottom: 28px;
-                            }
+                            }*/
 
                             .or{
                                 display: none;
@@ -187,9 +192,9 @@
                         }
 
                         &.purchase {
-                            .caption{
+                            /*.caption{
                                 top: 28px;
-                            }
+                            }*/
                         }
 
                         &.edit,
@@ -696,6 +701,12 @@
                         margin-bottom: 0;
                     }
                 }
+            }
+        }
+
+        footer {
+            .btn {
+                width: calc(100% - 20px);
             }
         }
     }

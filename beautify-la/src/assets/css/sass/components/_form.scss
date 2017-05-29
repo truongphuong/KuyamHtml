@@ -542,10 +542,12 @@
 
             @media (max-width: 767px) {
                 height: 34px;
+                font-size: $s15;
             }
 
             @media (max-width: 359px) {
                 height: 29px;
+                font-size: $s13;
             }
 
             &[disabled] {
@@ -564,6 +566,14 @@
         }
 
         span {
+            @media (max-width: 767px) {
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px) {
+                font-size: $s13;
+            }
+
             + input {
                 text-align: left;
             }
