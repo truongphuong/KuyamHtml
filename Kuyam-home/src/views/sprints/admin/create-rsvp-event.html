@@ -7,9 +7,7 @@
 <meta name="keywords" content="3" />
 {% endblock %}
 
-{% block css %}
-<link type="text/css" rel="stylesheet" href="../../content/bootstrap-table.css" />
-{% endblock %}
+{% block css %}{% endblock %}
 
 {% block banner %}{% endblock %}
 
@@ -92,7 +90,7 @@
                             </label>
                         </td>
                         <td nowrap="nowrap">
-                            <input class="input-url" id="txtRuntimeEventUrl" type="text" value="http://dev.beautify.us/booking/" readonly="readonly">
+                            <input class="input-url" id="txtRuntimeEventUrl" type="text" value="http://dev.beautify.us/rsvp/" readonly="readonly">
                             <button id="d_clip_button" class="btn-url" title="Copy to clipboard.">Copy</button>
                         </td>
                     </tr>
@@ -113,7 +111,6 @@
                             <input type="text" id="txtOrganizer" value="" class="text" />
                         </td>
                     </tr>
-
                     <tr>
                         <td class="field">
                             <label for="eventStartDate">
@@ -124,7 +121,6 @@
                             <input type="text" value="05/15/2017 16:00" id="eventStartDate" class="hasDatepicker" />
                         </td>
                     </tr>
-
                     <tr>
                         <td class="field">
                             <label for="eventEndDate">
@@ -135,7 +131,6 @@
                             <input id="eventEndDate" type="text" value="05/15/2017 00:00" class="hasDatepicker" />
                         </td>
                     </tr>
-
                     <tr>
                         <td class="field">
                             <label>
@@ -146,7 +141,6 @@
                             <input type="checkbox" id="isprivate" />
                         </td>
                     </tr>
-
                     <tr>
                         <td class="field">
                             <label for="eventStartDate">
@@ -167,7 +161,7 @@
                     </tr>
                     <tr>
                         <td class="field">
-                            <label for="cbCompany">
+                            <label>
                                 Where this event?
                             </label>
                         </td>
@@ -273,9 +267,7 @@
 </div>
 {% endblock %}
 
-{% block libsscript %}
-<script type="text/javascript" src="../../content/js/libs/bootstrap-table.js"></script>
-{% endblock %}
+{% block libsscript %}{% endblock %}
 
 {% block script %}
 <script type="text/javascript" src="../../content/js/pages/admin/ui-creat-rsvp-event.js"></script>
