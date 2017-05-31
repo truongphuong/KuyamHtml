@@ -137,6 +137,45 @@ function iscrollSelect(sectionID, scrollName) {
     }
 }
 
+function nicescrollSelect(sectionID) {
+    var $sectionID = $('#' + sectionID);
+
+    if ($sectionID.find('.bootstrap-select').length) {
+        $sectionID.find('select').selectpicker('destroy');
+    }
+
+    if ($sectionID.find('.bootstrap-select').length === 0) {
+
+        $sectionID.find('select').selectpicker();
+
+        if (!isMobile.Windows()) {
+
+            if ($(sectionID + ' .wrap-dropdown-menu-inner').getNiceScroll().length > 0) {
+                refreshNiceScroll(sectionID);
+                return;
+            }
+
+            $sectionID.find('.dropdown-menu.inner').wrap("<div class='wrap-dropdown-menu-inner'></div>").wrap("<div class='wrap-dropdown-menu-inner-content'></div>");
+            $('#' + sectionID + ' select').one('shown.bs.select', function (e) {
+                var heightOfUL = $('#' + sectionID + ' ul.inner').height();
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner-content').height(heightOfUL);
+
+                $('#' + sectionID + ' .wrap-dropdown-menu-inner').niceScroll('#' + sectionID + ' .wrap-dropdown-menu-inner-content', {
+                    bouncescroll: false,
+                    autohidemode: false,
+                    cursorcolor: "#278CFE ",
+                    cursorborder: "1px solid transparent",
+                    cursorborderradius: "5px",
+                    cursorwidth: "7px",
+                    background: "#8B8B8B ",
+                    mousescrollstep: 10
+                    //preservenativescrolling: false
+                });
+            });
+        }
+    }
+}
+
 function existSelect(sectionClass) {
     var $sectionClass = $('.' + sectionClass);
     if ($sectionClass.length !== 0) {

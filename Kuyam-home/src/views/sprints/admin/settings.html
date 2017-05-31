@@ -1,0 +1,220 @@
+{% extends './master/main-admin.html' %}
+
+{% block title %}Kuyam - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block css %}{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<div id="dialog-form" class="settings">
+    <h2 id="formTitle">Add single event special price</h2>
+    <p class="validateTips"></p>
+    <form>
+        <section class="form">
+            <table border="0" cellpadding="0" cellspacing="0" class="tbldata">
+                <tbody>
+                    <tr>
+                        <td class="field">
+                            <label for="txtName">
+                                Company name(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtName" type="text" class="text" maxlength="80" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtPhone">
+                                Company phone(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtPhone" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtEmail">
+                                Email(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtEmail" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtFacilityName">
+                                Facility name
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtFacilityName" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtStreet">
+                                Street(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtStreet" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtCity">
+                                City(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtCity" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtState">
+                                State(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtState" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtZip">
+                                Zip(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtZip" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtCellPhone">
+                                Cell phone(*)
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtCellPhone" type="text" class="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtOwnedUrl">
+                                Owned company url
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtOwnedUrl" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtRuntimeUrl">
+                                Runtime Company url
+                            </label>
+                        </td>
+                        <td nowrap="nowrap">
+                            <input class="input-url" id="txtRuntimeUrl" type="text" value="http://dev.beautify.us/chanhcompany/" readonly="readonly">
+                            <button id="d_clip_button" class="btn-url" title="Copy to clipboard.">Copy</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtSpecialName">
+                                Special company page name
+                            </label>
+                        </td>
+                        <td>
+                            <input id="txtSpecialName" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="selectUsers">
+                                Users
+                            </label>
+                        </td>
+                        <td class="iscroll-vertical">
+                            <select id="selectUsers" data-placeholder="Search and select" class="chosen-select" multiple>
+                                <option value="all">User list</option>
+                                <option value="Admin">admin</option>
+                                <option value="HotelAdmin">hoteladmin</option>
+                                <option value="HotelStaff">hotelstaff</option>
+                                <option value="Guest">guest</option>
+                                <option value="Agent">agent</option>
+                                <option value="Concierge">concierge</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="tag-tr">
+                        <td class="field">
+                            <label for="selectTags">
+                                Company tags
+                            </label>
+                        </td>
+                        <td id="tdTags" nowrap="nowrap" class="select-readonly">
+                            <select id="selectTags" class="default">
+                                <option data-content="Category" value="" selected="">Category</option>
+                                <option data-content="Yoga <button class=&quot;close&quot;></button>" value="1">Yoga</option>
+                                <option data-content="Swimming <button class=&quot;close&quot;></button>" value="2">Swimming</option>
+                                <option data-content="jogging <button class=&quot;close&quot;></button>" value="3">jogging</option>
+                                <option data-content="running <button class=&quot;close&quot;></button>" value="4">running</option>
+                                <option data-content="singing <button class=&quot;close&quot;></button>" value="5">singing</option>
+                                <option data-content="tennis <button class=&quot;close&quot;></button>" value="6">tennis</option>
+                                <option data-content="Yoga <button class=&quot;close&quot;></button>" value="1">Yoga</option>
+                                <option data-content="Swimming <button class=&quot;close&quot;></button>" value="2">Swimming</option>
+                                <option data-content="jogging <button class=&quot;close&quot;></button>" value="3">jogging</option>
+                                <option data-content="running <button class=&quot;close&quot;></button>" value="4">running</option>
+                                <option data-content="singing <button class=&quot;close&quot;></button>" value="5">singing</option>
+                                <option data-content="tennis <button class=&quot;close&quot;></button>" value="6">tennis</option>
+                            </select>
+                            <input type="button" data-target="#tagsModal" data-toggle="modal" value="Add tag" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label for="txtServiceDescription">
+                                Description
+                            </label>
+                        </td>
+                        <td>
+                            <textarea id="txtEventDescription" cols="20" rows="6" maxlength="300"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <center>
+                                <button id="btnSave">save</button>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </form>
+    <a id="lnkBack" href="javascript:void(0)">back to list</a>
+</div>
+{% endblock %}
+
+{% block libsscript %}{% endblock %}
+
+{% block modal %}
+{% include "content/modals/tags.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="../../content/js/pages/admin/ui-settings.js"></script>
+{% endblock %}
+
