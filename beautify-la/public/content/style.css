@@ -2137,8 +2137,8 @@ input[type=number] {
     position: absolute;
     right: 0;
     bottom: 0;
-    color: rgba(51, 51, 51, 0.2);
-    text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
+    color: rgba(51, 51, 51, 0.4);
+    /*text-shadow: 0 0 1px rgba(51, 51, 51, .2);*/
     font-size: 0.875em;
     line-height: 100%;
     font-family: "Lato", sans-serif; }
@@ -6481,7 +6481,8 @@ div.placeholder-custom {
     border-radius: 0;
     color: #f3472d;
     border: 0 none;
-    border-bottom: 1px solid #797979;
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
     min-height: 46px; }
     @media (max-width: 359px) {
       .company-settings-page div.section-select.bootstrap-select > .btn,
@@ -7339,7 +7340,9 @@ div.placeholder-custom {
         margin-right: -15px;
         padding: 9px 15px;
         background: #f5f5f5;
-        margin-bottom: 18px; } }
+        margin-bottom: 18px;
+        border-top: 1px solid #c7c7c7;
+        border-bottom: 1px solid #c7c7c7; } }
     @media (max-width: 359px) {
       .company-event-page .content header {
         padding: 6px 15px;
@@ -7497,7 +7500,7 @@ div.placeholder-custom {
           font-size: 0.9375em;
           margin-top: 10px;
           margin-bottom: 6px;
-          text-shadow: 0 1px 0 #333; } }
+          /*text-shadow: 0 1px 0 $base;*/ } }
       .company-event-page .content .label-form small {
         font-style: italic;
         color: #9b9b9b; }
@@ -7711,7 +7714,7 @@ div.placeholder-custom {
       .company-event-page .type-event .section-photo .photo:hover .li .or .td .line, .company-event-page .type-event .section-photo .photo:focus .li .or .td .line {
         border-bottom: 1px solid #ccc; }
       .company-event-page .type-event .section-photo .photo:hover .li .or .td .text, .company-event-page .type-event .section-photo .photo:focus .li .or .td .text {
-        text-shadow: 0 0 1px #ccc; }
+        /*text-shadow: 0 0 1px #ccc;*/ }
     .company-event-page .type-event .section-photo .photo .li {
       position: relative;
       cursor: pointer; }
@@ -7738,7 +7741,7 @@ div.placeholder-custom {
           .company-event-page .type-event .section-photo .photo .li .or .td .text {
             display: inline-block;
             padding: 0 8px;
-            text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+            /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/
             width: 33px; }
       .company-event-page .type-event .section-photo .photo .li .caption {
         display: block;
@@ -7746,7 +7749,7 @@ div.placeholder-custom {
         text-align: center;
         font-family: "Lato", sans-serif;
         color: #f3472d;
-        text-shadow: 0 0 1px #f3472d;
+        /*text-shadow: 0 0 1px $positive;*/
         line-height: 100%;
         position: absolute;
         left: 0; }
@@ -7763,7 +7766,7 @@ div.placeholder-custom {
       .company-event-page .type-event .section-photo .photo.default:hover .li .or .td .line {
         border-bottom: 1px solid rgba(50, 50, 50, 0.2); }
       .company-event-page .type-event .section-photo .photo.default:hover .li .or .td .text {
-        text-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
+        /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/ }
     .company-event-page .type-event .section-photo .photo.default .ul {
       visibility: visible;
       opacity: 1; }
@@ -8016,6 +8019,9 @@ div.placeholder-custom {
   height: 40px;
   font-family: "Lato", sans-serif;
   font-size: 0.9375em; }
+  @media (max-width: 767px) {
+    .company-event-page .type-event .type-tickets .section.section-num .btn {
+      width: 100%; } }
   .company-event-page .type-event .type-tickets .section.section-num .btn:before {
     content: '';
     display: inline-block;
@@ -8116,12 +8122,18 @@ div.placeholder-custom {
 .company-event-page .details-event .time-section .txt-date {
   background: url(images/ui/pages/company/event/icon_date.png) calc(100% - 12px) center no-repeat;
   background-size: 13px auto; }
-  @media (max-width: 767px) {
-    .company-event-page .details-event .time-section .txt-date {
-      text-align: center; } }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (min-resolution: 120dpi) and (min-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
     .company-event-page .details-event .time-section .txt-date {
       background-image: url(images/ui/pages/company/event/icon_date@3x.png); } }
+  @media (max-width: 767px) {
+    .company-event-page .details-event .time-section .txt-date {
+      text-align: center;
+      background-image: url(images/ui/pages/company/event/mobile/icon_date.png);
+      background-size: 20px auto;
+      background-position: calc(100% - 5px) center; } }
+  @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (max-width: 767px) and (min-device-pixel-ratio: 1.25) and (min-width: 320px), only screen and (max-width: 767px) and (min-resolution: 120dpi) and (min-width: 320px), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (max-width: 767px) and (min-resolution: 2dppx) and (min-width: 320px) {
+    .company-event-page .details-event .time-section .txt-date {
+      background-image: url(images/ui/pages/company/event/mobile/icon_date@3x.png); } }
 
 .company-event-page .details-event .time-section .cb-custom {
   padding-top: 7px;
@@ -16469,7 +16481,7 @@ div.placeholder-custom {
           font-size: 0.9375em;
           margin-top: 10px;
           margin-bottom: 6px;
-          text-shadow: 0 1px 0 #333; } }
+          /*text-shadow: 0 1px 0 $base;*/ } }
     .modal-bill .modal-body .form-control {
       height: 38px; }
       @media (max-width: 767px) {

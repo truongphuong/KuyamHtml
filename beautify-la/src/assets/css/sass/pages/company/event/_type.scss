@@ -74,7 +74,7 @@
                                 }
 
                                 .text{
-                                    text-shadow: 0 0 1px #ccc;
+                                    /*text-shadow: 0 0 1px #ccc;*/
                                 }
                             }
                         }
@@ -114,7 +114,7 @@
                             .text{
                                 display: inline-block;
                                 padding:0 8px;
-                                text-shadow: 0 0 1px rgba(0, 0, 0, .25);
+                                /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/
                                 width: 33px;
                             }
                         }
@@ -126,7 +126,7 @@
                         text-align: center;
                         font-family: $primary;
                         color: $positive;
-                        text-shadow: 0 0 1px $positive;
+                        /*text-shadow: 0 0 1px $positive;*/
                         line-height: 100%;
                         position: absolute;
                         left: 0;
@@ -159,7 +159,7 @@
                                     }
 
                                     .text{
-                                        text-shadow: 0 0 1px rgba(0, 0, 0, .25);
+                                        /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/
                                     }
                                 }
                             }
@@ -623,6 +623,10 @@
                         height: 40px;
                         font-family: $primary;
                         font-size: $s15;
+
+                        @media (max-width: 767px){
+                            width: 100%;
+                        }
 
                         &:before{
                             content: '';
