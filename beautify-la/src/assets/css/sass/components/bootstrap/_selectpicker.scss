@@ -89,6 +89,7 @@
         box-shadow: none;
         font-size: 20px;
         border-color: #ccc;
+        width: 100%;
 
         &.inner {
             overflow-y:hidden !important;
@@ -102,6 +103,9 @@
             }
 
             a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+
                 &:hover {
                     background: transparent;
                     color: $positive;

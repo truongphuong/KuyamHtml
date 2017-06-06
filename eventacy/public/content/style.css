@@ -574,16 +574,20 @@ textarea.form-control {
   padding: 0;
   box-shadow: none;
   font-size: 20px;
-  border-color: #ccc; }
+  border-color: #ccc;
+  width: 100%; }
   .bootstrap-select .dropdown-menu.inner {
     overflow-y: hidden !important; }
   .bootstrap-select .dropdown-menu li {
     /*border-top:1px solid #f8f8f8;*/ }
     .bootstrap-select .dropdown-menu li.selected {
       display: none; }
-    .bootstrap-select .dropdown-menu li a:hover {
-      background: transparent;
-      color: #f3472d; }
+    .bootstrap-select .dropdown-menu li a {
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .bootstrap-select .dropdown-menu li a:hover {
+        background: transparent;
+        color: #f3472d; }
   .bootstrap-select .dropdown-menu > li:first-child {
     /*border-top: 0 none;*/ }
     .bootstrap-select .dropdown-menu > li:first-child > a {
