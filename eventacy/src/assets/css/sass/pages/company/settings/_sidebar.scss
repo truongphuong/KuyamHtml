@@ -1,0 +1,182 @@
+.company-settings-page {
+    .sidebar {
+        float: left;
+        width: 131px;
+        padding-top: 12px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                a {
+                    display: block;
+                    padding: 6px 0;
+                    font-family: $primary;
+                    font-size: $h5;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: #333;
+                    pointer-events: none;
+                }
+
+                &.active {
+                    a {
+                        font-weight: 700;
+                        color: #ff4527;
+                    }
+                }
+
+                &.has_cursor {
+                    a {
+                        pointer-events: inherit;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            ul {
+                li {
+                    a {
+                        pointer-events: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    div.section-select {
+
+        &.bootstrap-select {
+            display: block;
+            margin: 0 -15px;
+            height: 46px;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+
+            @media (max-width: 359px) {
+                height: 40px;
+            }
+
+            &:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+                width: inherit;
+            }
+
+            > .btn,
+            > .btn:focus,
+            > .btn:active,
+            > .btn:hover,
+            > .btn:visited {
+                background: #f5f5f5;
+                border-radius: 0;
+                color: $positive;
+                border: 0 none;
+                border-top: 1px solid #c7c7c7;
+                border-bottom: 1px solid #c7c7c7;
+                min-height: 46px;
+
+                @media (max-width: 359px){
+                    font-size: 17px;
+                    min-height: 40px;
+                }
+            }
+
+            &.btn-group {
+                .btn {
+                    .caret {
+                        width: 21px;
+                        height: 15px;
+                        background-image: url(images/ui/pages/company/settings/icon_select.png);
+                        background-size: 21px auto;
+                        margin-top: -7px;
+                        right: 16px;
+
+                        @media (max-width:767px) {
+                            width: 18px;
+                            background-size: 18px auto;
+                        }
+
+                        @media (max-width:359px) {
+                            width: 16px;
+                            background-size: 16px auto;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+                            background-image: url(images/ui/pages/company/settings/icon_select@3x.png);
+                        }
+                    }
+                }
+            }
+
+            ~ .content {
+                position: relative;
+            }
+
+            &.open {
+                ~ .content:after {
+                    @media (max-width:767px) {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: -15px;
+                        right: -15px;
+                        background: $rgba-black;
+                        z-index: 3;
+                    }
+                }
+
+                > .btn,
+                > .btn:focus,
+                > .btn:active,
+                > .btn:hover,
+                > .btn:visited {
+                    border-bottom: 0 none;
+                }
+
+                .dropdown-menu {
+                    background: #f5f5f5;
+                }
+            }
+
+            .dropdown-menu {
+                font-size: 16px;
+                font-family: $primary;
+                border: 0 none;
+                top: calc(100% - 2px);
+
+                @media (max-width: 359px) {
+                    font-size: 13px;
+                }
+
+                ul {
+                    padding-bottom: 7px;
+                }
+
+                > li {
+                    border-top: 0 none;
+
+                    > a {
+                        padding: 7px 12px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

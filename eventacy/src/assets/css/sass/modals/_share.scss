@@ -1,0 +1,117 @@
+.modal-share {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: $primary;
+    width: 490px;
+
+    @media (max-width: 767px) {
+        width: auto;
+    }
+
+    .modal-content {
+        box-shadow: none;
+        border-radius: 0;
+        border-color: #979797;
+        box-shadow: 0 12px 18px 0 rgba(0, 0, 0, 0.35);
+    }
+
+    .modal-header {
+        text-align: center;
+        border-bottom: 1px solid #d7d7d7;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        position: relative;
+
+        @media (max-width: 767px) {
+            padding-top: 11px;
+            padding-bottom: 5px;
+        }
+
+        .modal-title {
+            font-size: $h5;
+            font-family: $primary;
+            font-weight: 400;
+            padding-bottom: 0;
+            color: $base;
+
+            @media (max-width: 359px) {
+                font-size: $h6;
+            }
+        }
+
+        .close {
+            margin-top: 0;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+
+            @media (max-width: 767px) {
+                top: 7px;
+                right: 5px;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 6px 30px;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 359px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            text-align: left;
+            font-size: $s15;
+            line-height: 24px;
+            font-family: $primary;
+            font-weight: 400;
+
+            @media (max-width: 359px) {
+                font-size: $p;
+            }
+
+            a {
+               color: $base;
+               text-decoration: none;
+
+                &:hover {
+                    color: $positive;
+                }
+            }
+        }
+
+        section {
+            max-height: 240px;
+            overflow-y: auto;
+        }
+    }
+}
+
+.on-nicescroll {
+    .modal-share {
+        .modal-body {
+            section {
+                overflow-y: hidden;
+            }
+
+            .wrap-dropdown-menu-inner {
+                max-height: 240px;
+                position: relative;
+            }
+        }
+    }
+}

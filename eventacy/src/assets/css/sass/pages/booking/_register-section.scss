@@ -1,0 +1,60 @@
+.register-section{
+    color:$white;
+    position:relative;
+    padding:15px 0 5px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:11;
+
+    .section-header {
+        .back-section{
+            float:right;
+            margin:3px 0 0 10px;
+            padding:0;
+
+            @media (max-width: 767px){
+                float:none;
+            }
+
+            a{
+                color:$white;
+            }
+
+            .icon-back{
+                background-image:url(images/assets/icon_arrow_right_white.png);
+            }
+        }
+
+        h2{
+            font-size:30px;
+            line-height:34px;
+            margin:0;
+        }
+
+        p{
+            margin:0 0 15px;
+        }
+    }
+
+    .register-form{
+        .form-group{
+            float:left;
+            margin:0 25px 15px 0;
+
+            @media (max-width:530px){
+                float:none;
+                margin:0 0 15px;
+            }
+        }
+
+        .input-group{
+            width:485px;
+
+            @media (max-width:530px){
+                width:100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.modal-open {
+    .detech-devices/*,
+    #detech-devices,
+    .wrapper*/ {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .modal {
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-dialog{
+    margin-top: -100%;
+}
+
+.modal-header {
+    position: relative;
+
+    .close {
+        opacity: 1;
+        position: absolute;
+        margin-top:0;
+        z-index: 1;
+        top: 5px;
+        right: 5px;
+        background: url(images/ui/modals/icon_close.png) center center no-repeat;
+        background-size: 15px auto;
+        color: transparent;
+        width: 33px;
+        height: 33px;
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+        only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+            background-image: url(images/ui/modals/icon_close@3x.png);
+        }
+    }
+}

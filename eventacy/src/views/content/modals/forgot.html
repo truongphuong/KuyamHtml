@@ -1,0 +1,24 @@
+<!-- #modal-forgot-pass -->
+<div id="modal-forgot-pass" class="modal fade" role="dialog" aria-labelledby="forgotPassModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-form modal-forgot-pass">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h3 id="forgotPassModalLabel" class="modal-title">forgot password?</h3>
+                <h4>enter your email to reset password</h4>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                    <button type="button" class="btn-orange btn-form btn-continue">continue</button>
+                    <div class="alert-error">invalid</div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <hr />
+                <div class="text-right link-form"><a class="link-login" title="" data-dismiss="modal" href="#" data-target="#modal-login" data-toggle="modal">back to login</a></div>
+             </div>
+        </div>
+    </div>
+</div>
+<!-- /#modal-forgot-pass -->

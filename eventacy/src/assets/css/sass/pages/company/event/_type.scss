@@ -1,0 +1,717 @@
+.company-event-page {
+    .type-event {
+        p {
+            @media (max-width: 767px){
+                margin-bottom: 16px;
+            }
+        }
+
+        .section-photo{
+            /*margin-top: 31px;*/
+            margin-bottom: 21px;
+
+            @media (max-width:767px){
+                /*margin-top: 18px;*/
+                margin-bottom: 18px;
+            }
+
+            @media (max-width:359px){
+                /*margin-top: 15px;*/
+                margin-bottom: 15px;
+            }
+
+            .label-form{
+                margin-top: 27px;
+                margin-bottom: 12px;
+
+                @media (max-width:767px){
+                    margin-top: 18px;
+                    margin-bottom: 6px;
+                }
+
+                @media (max-width:359px){
+                    margin-top: 15px;
+                }
+            }
+
+            .photo{
+                width: 271px;
+                background: #f7f7f7 center center no-repeat;
+                background-size: cover;
+                border: 1px dashed rgba(50, 50, 50, .2);
+
+                .ul{
+                    display: block;
+                    width: 100%; //232px;
+                    height: 346px; //306px;
+                    overflow: hidden;
+                    visibility:hidden;
+                    opacity:0;
+                    transition:visibility 2s, opacity 2s;
+
+                    .li{
+                        display: block;
+                        text-decoration: none;
+                        outline: 0 none !important;
+                    }
+                }
+
+                &:hover,
+                &:focus{
+                    .ul{
+                        background: $rgba-black;
+                        visibility:visible;
+                        opacity:1;
+                    }
+
+                    .li{
+                        .or {
+                            color: #ccc;
+
+                            .td{
+                                .line{
+                                    border-bottom: 1px solid #ccc;
+                                }
+
+                                .text{
+                                    /*text-shadow: 0 0 1px #ccc;*/
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li{
+                    position: relative;
+                    cursor: pointer;
+
+                    .or {
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        top: -14px;
+                        left: 0;
+                        font-size: $s17;
+                        font-family: $primary;
+                        color: rgba(0, 0, 0, .25);
+                        text-align: center;
+
+                        .table-css{
+                            width: 100%;
+                        }
+
+                        .td{
+                            height: 22px;
+                            line-height: 0;
+                            vertical-align: middle;
+
+                            .line{
+                                display: inline-block;
+                                border-bottom: 1px solid rgba(50, 50, 50, .2);
+                                width: 118px; //100px;
+                            }
+
+                            .text{
+                                display: inline-block;
+                                padding:0 8px;
+                                /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/
+                                width: 33px;
+                            }
+                        }
+                    }
+
+                    .caption {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        font-family: $primary;
+                        color: $positive;
+                        /*text-shadow: 0 0 1px $positive;*/
+                        line-height: 100%;
+                        position: absolute;
+                        left: 0;
+
+                        span{
+                            display: block;
+                            font-size: $s17;
+                        }
+
+                        small{
+                            display: block;
+                            font-size: $p;
+                        }
+                    }
+                }
+
+                &.default{
+                    &:hover{
+                        .ul{
+                            background: transparent;
+                        }
+
+                        .li{
+                            .or {
+                                color: rgba(0, 0, 0, .25);
+
+                                .td{
+                                    .line{
+                                        border-bottom: 1px solid rgba(50, 50, 50, .2);
+                                    }
+
+                                    .text{
+                                        /*text-shadow: 0 0 1px rgba(0, 0, 0, .25);*/
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .ul{
+                        visibility:visible;
+                        opacity:1;
+                    }
+                }
+
+                &.two{
+                    .li{
+                        height: 174px; //152px;
+
+                        .caption{
+                            top: 50%;
+                            margin-top: -16px;
+                        }
+
+                        &.upload {
+                            /*.caption{
+                                bottom: 28px;
+                            }*/
+
+                            .or{
+                                display: none;
+                            }
+                        }
+
+                        &.purchase {
+                            /*.caption{
+                                top: 28px;
+                            }*/
+                        }
+
+                        &.edit,
+                        &.purchased{
+                            display: none;
+                        }
+                    }
+                }
+
+                &.three,
+                &.four{
+                    .li{
+                        &.edit {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.upload {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.purchase {
+                            .caption{
+                                top: 50%;
+                                margin-top: -16px;
+                            }
+                        }
+
+                        &.purchased{
+                            .caption{
+                                top: 50%;
+                                margin-top: -8px;
+                            }
+                        }
+                    }
+                }
+
+                &.three{
+                    .li{
+                        height: 115px;
+                    }
+
+                    &.photo-uploaded{
+                        .li{
+                            &.purchased{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.photo-purchased{
+                        .li{
+                            &.edit{
+                                display: none;
+                            }
+
+                            &.upload {
+                                .or{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.four{
+                    .li{
+                        height: 87px; //102px;
+                    }
+                }
+            }
+        }
+
+        .icon-help {
+            width: 17px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -12px;
+            background: url(images/ui/pages/company/event/icon_help.png) center center no-repeat;
+            background-size: 17px auto;
+            cursor: pointer;
+
+            @media (max-width: 767px){
+                right: -20px;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                background-image: url(images/ui/pages/company/event/icon_help@3x.png);
+            }
+        }
+
+        .type-class{
+            .section{
+                &.section-class {
+                    p{
+                        margin:0 0 19px;
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 28px;
+                    padding-top: 29px;
+
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                        padding-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                        padding-top: 15px;
+                    }
+
+                    .row{
+                        @media (max-width: 767px){
+                            width: calc(100% - 16px);
+                            margin-left: -5px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    div[class*="col-"]{
+                        @media (max-width: 767px){
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-donation{
+            .section{
+                &.section-donation {
+                    p{
+                        margin:0 0 21px;
+
+                        @media (max-width:767px){
+                            margin-bottom: 18px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                div[class*="col-"] {
+                    margin-bottom: 24px;
+
+                    @media (max-width: 767px) {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 31px;
+
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                    }
+
+                    .row{
+                        @media (max-width: 767px){
+                            width: calc(100% - 16px);
+                            margin-left: -5px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    div[class*="col-"]{
+                        @media (max-width: 767px){
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .label-form{
+                        margin-top: 21px;
+                        margin-bottom: 7px;
+
+                        @media (max-width:767px){
+                            margin-top: 18px;
+                            margin-bottom: 6px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .close {
+                            opacity: 1;
+                            position: absolute;
+                            margin-top:0;
+                            z-index: 1;
+                            top: -7px;
+                            right: -7px;
+                            background: url(images/ui/pages/company/event/icon_delete.png) center center no-repeat;
+                            background-size: 10px auto;
+                            color: transparent;
+                            width: 33px;
+                            height: 33px;
+
+                            @media
+                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+                                background-image: url(images/ui/pages/company/event/icon_delete@3x.png);
+                            }
+                        }
+                    }
+
+                    .btn-negative {
+                        border-radius: 0;
+                        width: 100%;
+                        height: 40px;
+                        font-family: $primary;
+                        font-size: $s15;
+
+                        @media (max-width: 767px){
+                            height: 36px;
+                        }
+
+                        @media (max-width: 359px){
+                            height: 33px;
+                            font-size: $p;
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                    }
+
+                    .icon-help {
+                    }
+                }
+
+                &.section-photo {
+                    margin-top: 7px;
+
+                    @media (max-width: 767px) {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+
+        .type-rsvp{
+            .section{
+                &.section-class {
+                    p{
+                        margin:0 0 19px;
+
+                        @media (max-width:767px){
+                            margin-bottom: 18px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                &.section-num {
+                    margin-top: 28px;
+                    padding-top: 29px;
+
+                    @media (max-width:767px){
+                        margin-top: 18px;
+                        padding-top: 18px;
+                    }
+
+                    @media (max-width:359px){
+                        margin-top: 15px;
+                        padding-top: 15px;
+                    }
+
+
+                    .placeholder-custom{
+                        @media (min-width: 768px){
+                            width: 232px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-tickets{
+            .section{
+                &.section-num {
+                    p{
+                        margin-top: 19px;
+                        margin-bottom: 10px;
+
+                        @media (max-width:767px){
+                            margin-top: 18px;
+                            margin-bottom: 6px;
+                        }
+
+                        @media (max-width:359px){
+                            margin-top: 15px;
+                        }
+                    }
+
+                    div[class*="col-"] {
+                        margin-bottom: 15px;
+                    }
+
+                    .input-custom {
+                        .table-css {
+                            .td{
+                                &:first-child{
+                                    width: 27px;
+
+                                    @media (max-width: 767px){
+                                        width: 19px;
+                                    }
+
+                                    @media (max-width: 359px){
+                                        width: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .tier-list{
+                        .item{
+                            margin-top: 29px;
+
+                            &:first-child{
+                                margin-top: 0;
+                            }
+
+                            + .item {
+                                div[class*="col-"] {
+                                    &:first-child {
+                                        position: relative;
+
+                                        .form-control {
+                                            width: calc(100% - 40px);
+                                        }
+
+                                        .close {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 15px;
+                                            height: 100%;
+                                            width: 23px;
+                                            background: url(images/ui/pages/company/event/icon_delete.png) center center no-repeat;
+                                            background-size: 23px auto;
+                                            opacity: 1;
+
+                                            @media
+                                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                                background-image: url(images/ui/pages/company/event/icon_delete@3x.png);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btn{
+                        border-radius: 0;
+                        width: 176px;
+                        height: 40px;
+                        font-family: $primary;
+                        font-size: $s15;
+
+                        @media (max-width: 767px){
+                            width: 100%;
+                        }
+
+                        &:before{
+                            content: '';
+                            display: inline-block;
+                            width: 15px;
+                            height: 15px;
+                            background: url(images/ui/pages/company/event/icon_tier.png) center center no-repeat;
+                            background-size: 15px auto;
+                            position: relative;
+                            top:1px;
+                            margin-right: 5px;
+
+                            @media
+                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                background-image: url(images/ui/pages/company/event/icon_tier@3x.png);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .proccessing-section{
+            margin-top: 31px;
+
+            @media (max-width:767px){
+                margin-top: 18px;
+            }
+
+            @media (max-width:359px){
+                margin-top: 15px;
+            }
+
+            p {
+                margin-top: 18px;
+                margin-bottom: 6px;
+
+                @media (max-width:767px){
+                    margin-top: 10px;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .radio-mark {
+                ~ .radio-label{
+                    @media (max-width: 767px){
+                        margin:0;
+                        font-size: $s15;
+                    }
+                }
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+
+                + .radio-custom {
+                    margin-bottom: 0;
+
+                    label {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        footer {
+            .btn {
+                width: calc(100% - 20px);
+            }
+        }
+    }
+}

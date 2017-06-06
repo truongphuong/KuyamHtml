@@ -1,0 +1,42 @@
+{% extends 'master/main-blog.html' %}
+
+{% block title %}Beautify LA - Forgot{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block main %}
+<div class="main-content forgot-page clearfix">
+    <div class="container">
+        <!-- .modal-login -->
+        <div class="modal-form modal-login">
+            <div class="modal-header">
+                <h3 class="modal-title">forgot your password?</h3>
+                <p>enter your email and we'll send you a password</p>
+            </div>
+            <div class="modal-body">
+                <fieldset>
+                    <input class="form-control" type="text" onblur="if (this.value == '') { this.value = 'email'; }" onfocus="if (this.value == 'email') { this.value = ''; }" value="email" />
+                    <button type="button" class="btn-orange btn-form">send</button>
+                    <div class="alert-error">invalid</div>
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+
+             </div>
+        </div><!-- /.modal -->
+        <!-- /.modal-login -->
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scriptLibs %}{% endblock %}
+
+{% block script %}{% endblock %}
+
+

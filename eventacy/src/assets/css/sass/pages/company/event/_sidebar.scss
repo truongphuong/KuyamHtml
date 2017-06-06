@@ -1,0 +1,53 @@
+.company-event-page {
+    .sidebar {
+        float: left;
+        width: 109px;
+        padding-top: 12px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                a {
+                    display: block;
+                    padding: 6px 0;
+                    font-family: $primary;
+                    font-size: $h5;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: #333;
+                    pointer-events: none;
+                }
+
+                &.active {
+                    a {
+                        font-weight: 700;
+                        color: #ff4527;
+                    }
+                }
+
+                &.has_cursor {
+                    a {
+                        pointer-events: inherit;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            ul {
+                li {
+                    a {
+                        pointer-events: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

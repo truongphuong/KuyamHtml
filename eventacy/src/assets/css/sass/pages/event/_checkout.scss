@@ -1,0 +1,280 @@
+.event-page {
+    .event-section {
+        .checkout {
+            border-top: 0 none;
+            margin-top: 0;
+
+            div.placeholder-custom,
+            label.placeholder-custom {
+                width: 220px;
+                border-top: 0 none;
+                border-left: 0 none;
+                border-right: 0 none;
+                float: left;
+                border-radius: 0;
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    float: none;
+                    margin-bottom: 10px;
+                    height: 31px;
+                }
+
+                @media (max-width: 359px) {
+                    margin-bottom: 7px;
+                    height: 29px;
+                }
+
+                .form-control {
+                    padding: 0 55px 0 0;
+                    height: 31px;
+
+                    @media (max-width: 359px) {
+                        height: 29px;
+                    }
+                }
+
+                .btn {
+                    padding: 0;
+                    height: 31px;
+                    border: 0 none;
+                    background: $white;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: $positive;
+                    font-size: $s15;
+                    font-family: $primary;
+                    margin: 0;
+                    width: auto;
+                    box-shadow: none;
+
+                    @media (max-width: 767px) {
+                        padding-right: 15px;
+                    }
+
+                    @media (max-width: 359px) {
+                        height: 29px;
+                        font-size: $s13;
+                        padding-right: 8px;
+                    }
+
+                    &[disabled] {
+                        background: transparent;
+                    }
+                }
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                float: right;
+
+                li {
+                    float: left;
+                    padding:0 15px;
+                    font-size: $h5;
+                    line-height: 31px;
+                    font-family: $primary;
+                    color: $base;
+
+                    @media (max-width: 767px){
+                        font-size: $h6;
+                        line-height: 21px;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $p;
+                        line-height: 18px;
+                        padding:0 8px;
+                    }
+
+                    + li {
+                        border-left: 1px solid rgba(44, 44, 46, .3);
+
+                        span {
+                            color: $positive;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                width: 100%;
+                font-size: $h5;
+                font-weight: 700;
+                height: 50px;
+                padding: 0;
+                border-radius: 0;
+                clear: both;
+                margin-top: 13px;
+
+                @media (max-width: 767px){
+                    font-size: $h6;
+                    height: 39px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $p;
+                    height: 36px;
+                }
+            }
+        }
+    }
+
+    &.event-donation-page {
+        .event-section {
+            .checkout {
+                .form-label {
+                    font-size: $h5;
+                    color: $base;
+                    clear: both;
+                    display: block;
+                    margin-bottom: 12px;
+
+                    @media (max-width: 767px) {
+                        font-size: $s18;
+                        margin-bottom: 10px;
+                    }
+
+                    @media (max-width: 359px) {
+                        font-size: $h6;
+                        margin-bottom: 7px;
+                    }
+                }
+
+                div.placeholder-custom,
+                label.placeholder-custom {
+                    width: 335px;
+
+                    @media (max-width: 767px) {
+                        width: 100%;
+                    }
+
+                    .form-control {
+                        padding-right: 0;
+                    }
+                }
+
+                ul {
+                    li {
+                        span {
+                            color: $positive;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &.form {
+                        float: left;
+                        margin: 0 -10px;
+
+                        @media (max-width: 767px) {
+                            float: none;
+                        }
+
+                        @media (max-width: 359px) {
+                            margin: 0 -5px;
+                        }
+
+                        li {
+                            padding: 0 10px;
+                            font-size: 16px;
+                            margin-bottom: 10px;
+
+                            @media (max-width: 359px) {
+                                padding: 0 5px;
+                                margin-bottom: 7px;
+                            }
+                        }
+
+                        &.suggested {
+                            div.placeholder-custom,
+                            label.placeholder-custom {
+                                @media (min-width: 768px) {
+                                    width: 195px;
+                                }
+                            }
+
+                            li {
+                                @media (max-width: 767px) {
+                                    width: 33.3333%;
+                                }
+
+                                &:last-child {
+                                    @media (max-width: 767px) {
+                                        width: 100%;
+                                    }
+
+                                    @media (max-width: 359px) {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .radio-mark{
+                                    ~ .radio-label{
+                                        font-size: $s17;
+                                        color: $positive;
+                                        border: 1px solid $positive;
+                                        border-radius: 2px;
+                                        background: $white;
+                                        width: 65px;
+                                        height: 38px;
+                                        line-height: 36px;
+                                        text-align: center;
+                                        padding: 0;
+                                        margin-bottom: 0;
+
+                                        @media (max-width: 767px) {
+                                            width: 100%;
+                                            font-size: $s15;
+                                        }
+
+                                        @media (max-width: 359px) {
+                                            height: 29px;
+                                            line-height: 27px;
+                                            font-size: $s13;
+                                        }
+
+                                        &:before {
+                                            display: none;
+                                        }
+                                    }
+
+                                    &:checked {
+                                        ~ .radio-label{
+                                            color: $white;
+                                            background: $positive;
+                                        }
+                                    }
+                                }
+
+                                + li {
+                                    border: 0 none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: $h6;
+                    color: $base;
+                    clear: both;
+
+                    @media (max-width: 767px) {
+                        clear: none;
+                        font-size: $h6;
+                        line-height: 21px;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $p;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

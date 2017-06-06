@@ -1,0 +1,104 @@
+.filter-setion{
+    margin-top: 28px;
+
+    @media (max-width:767px){
+        margin-top: 12px;
+    }
+
+    @media (max-width:359px){
+        margin-top: 11px;
+    }
+
+    .bootstrap-select{
+        float:left;
+        width:308px !important;
+        margin:0 0 0 7px !important;
+        font-size: 16px;
+        font-family: 'lato', sans-serif;
+
+        @media (max-width:979px){
+            float:none;
+            width:100% !important;
+        }
+
+        > .btn,
+        > .btn:focus,
+        > .btn:active,
+        > .btn:hover,
+        > .btn:visited,
+        &.open > .btn,
+        &.open > .btn:focus,
+        &.open > .btn:active,
+        &.open > .btn:hover,
+        &.open > .btn:visited{
+            font-size: $s22;
+            min-height: 50px;
+            padding-left: 15px;
+            padding-right: 67px;
+
+            @media (max-width:767px){
+                font-size: $s15;
+                min-height: 38px;
+                padding-left: 10px;
+                padding-right: 35px;
+            }
+
+            @media (max-width:359px){
+                font-size: $s13;
+                min-height: 32px;
+                padding-left: 10px;
+                padding-right: 35px;
+            }
+        }
+
+        &.btn-group {
+            .btn {
+                .caret {
+                    width:27px;
+                    height:17px;
+                    background-image: url(images/ui/pages/company/list/icon_select.png);
+                    background-size: 27px auto;
+                    margin-top: -8px;
+                    right: 20px;
+
+                    @media (max-width:767px){
+                        width:15px;
+                        background-size: 15px auto;
+                        right: 10px;
+                    }
+
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        background-image: url(images/ui/pages/company/list/icon_select@3x.png);
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu {
+            font-size: 16px;
+
+            > li{
+                font-size: $s22;
+
+                @media (max-width:767px){
+                    font-size: $s15;
+                }
+            }
+        }
+    }
+
+    .select-category{
+        margin-left:0 !important;
+    }
+
+    .select-full{
+        width:100% !important;
+        margin-left:0 !important;
+    }
+}

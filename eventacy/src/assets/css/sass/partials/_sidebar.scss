@@ -1,0 +1,95 @@
+#sidebar {
+    width: 80%;
+    position: absolute;
+    left: -80%;
+    height: 100%;
+    background: $white;
+
+    div {
+        position: relative;
+        padding: 54px 45px;
+    }
+
+    .close {
+        width: 55px;
+        height: 55px;
+        opacity: 1;
+        background: url(images/ui/master/sidebar/icon_close.png) center center no-repeat;
+        background-size: 19px auto;
+        position: absolute;
+        right: 3px;
+        top: 6px;
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+            background-image: url(images/ui/master/sidebar/icon_close@3x.png);
+        }
+    }
+
+    dt {
+        font-size: $s19;
+        line-height: 43px;
+        font-family: $primary;
+        color: $positive;
+        font-weight: 400;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    dd {
+        font-size: $s19;
+        line-height: 43px;
+        font-family: $primary;
+        color: $base;
+        font-weight: 400;
+
+        a {
+            color: $base;
+            text-decoration: none;
+        }
+
+        &.active {
+            a {
+                color: $positive;
+                pointer-events: none;
+            }
+        }
+    }
+
+}
+
+.sidebar-open {
+    transform: translate3d(80%, 0, 0);
+    transition: transform .4s;
+
+    body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .wrapper{
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $rgba-black;
+            z-index: 13;
+        }
+    }
+}

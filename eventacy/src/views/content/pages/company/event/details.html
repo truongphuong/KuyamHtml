@@ -1,0 +1,180 @@
+<div id="event2" class="content details-event hide">
+    <header>
+        <h3>Tell us about your class</h3>
+    </header>
+    <section class="section organizer-section">
+        <label for="txtEventName" class="placeholder-custom">
+            <span class="placeholder">Event name<span class="required">&lowast;</span></span>
+            <input id="txtEventName" type="text" class="form-control" />
+        </label>
+        <span class="label-form">Organized by<span class="required">&lowast;</span></span>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioOrganized1" type="radio" name="organizer" value="0" checked="" />
+            <label class="radio-label" for="radioOrganized1">Kourosh Soccer Club</label>
+        </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioOrganized2" type="radio" name="organizer" value="1"/>
+            <label class="radio-label" for="radioOrganized2">New organizer</label>
+        </div>
+        <label id="labelOrganizer" for="txtOrganizer" class="placeholder-custom hide">
+            <span class="placeholder">New organizer<span class="required">&lowast;</span></span>
+            <input id="txtOrganizer" type="text" class="form-control" />
+        </label>
+    </section>
+    <!-- Begin Class type -->
+    <section class="section info-section hide">
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="txtName" class="placeholder-custom">
+                    <span class="placeholder">Class name<span class="required">&lowast;</span></span>
+                    <input id="txtName" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <label for="txtName" class="placeholder-custom">
+                    <span class="placeholder">Staff <small>optional</small></span>
+                    <input id="txtName" type="text" class="form-control" />
+                </label>
+            </div>
+        </div>
+    </section>
+    <!-- End Class type -->
+    <section class="section time-section">
+        <span class="label-form">When is this class?<span class="required">&lowast;</span></span>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <span class="label-form">Date</span>
+                <div id="sectionDateStart" class="date-custom">
+                    <input id="txtDateStart" type="text" class="form-control txt-date" readonly />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="relative">
+                    <span class="label-form">From</span>
+                    <div class="hour-custom">
+                        <div class="time-control"><input autocomplete="off" ng-disabled="" type="text" name="hour" class="hour ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="hour"><span>:</span><input autocomplete="off" ng-disabled="" type="text" name="minute" class="minute ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="minute"></div>
+                        <select id="fromSectlect">
+                            <option selected value="1">AM</option>
+                            <option selected value="1">PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="relative">
+                    <span class="label-form">To</span>
+                    <div class="hour-custom">
+                        <div class="time-control"><input autocomplete="off" ng-disabled="" type="text" name="hour" class="hour ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="hour"><span>:</span><input autocomplete="off" ng-disabled="" type="text" name="minute" class="minute ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" maxlength="2" ng-model="minute"></div>
+                        <select id="toSelect">
+                            <option selected value="1">AM</option>
+                            <option selected value="1">PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="cb-custom">
+                    <input class="cb-mark" id="cbRepeat" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbRepeat">Repeat class?</label>
+                </div>
+            </div>
+            <div id="weekList" class="col-xs-12 col-md-8 hide">
+                <ul class="week-list">
+                    <li>M</li>
+                    <li>T</li>
+                    <li>W</li>
+                    <li>T</li>
+                    <li>F</li>
+                    <li>S</li>
+                    <li>S</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <span class="label-form">End date</span>
+                <div id="sectionDateEnd" class="date-custom">
+                    <input id="txtDateEnd" type="text" class="form-control txt-date" readonly />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section description-section">
+        <div class="placeholder-custom input-countdown inner">
+            <span class="placeholder">Class page description<span class="required">&lowast;</span></span>
+            <textarea class="form-control" cols="" rows=""></textarea>
+            <span class="text"><span class="num">300</span> characters</span>
+        </div>
+    </section>
+    <section class="section address-section">
+        <span class="label-form">Where is this class?<span class="required">&lowast;</span></span>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioAddress1" type="radio" name="address" value="0" checked />
+            <label class="radio-label" for="radioAddress1">1564 Lorem ipsum default address</label>
+        </div>
+        <div class="radio-custom">
+            <input class="radio-mark" id="radioAddress2" type="radio" name="address" value="1" />
+            <label class="radio-label" for="radioAddress2">Alternative Address</label>
+        </div>
+        <div id="alternativeSection" class="row hide">
+            <div class="col-xs-12">
+                <label for="txtFacility" class="placeholder-custom">
+                    <span class="placeholder">Facility / Location name <span class="optional">optional</span></span>
+                    <input id="txtFacility" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <label for="txtStreet" class="placeholder-custom">
+                    <span class="placeholder">Address<span class="required">&lowast;</span></span>
+                    <input id="txtStreet" type="text" class="form-control" value="hello" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label for="txtCity" class="placeholder-custom">
+                    <span class="placeholder">City<span class="required">&lowast;</span></span>
+                    <input id="txtCity" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row">
+                    <div id="divStateSelect" class="col-xs-12 col-sm-6 select-readonly">
+                        <select id="stateSelect" class="select-full select-state default">
+                            <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
+                            <option value="1" title="AL">Alabama</option>
+                            <option value="2" title="AK">Alaska</option>
+                            <option value="3" title="AZ">Arizona</option>
+                            <option value="4" title="AR">Arkansas</option>
+                            <option value="5" title="CA">California</option>
+                            <option value="6" title="CO">Colorado</option>
+                            <option value="7" title="CT">Connecticut</option>
+                            <option value="8" title="DE">Delaware</option>
+                            <option value="9" title="FL">Florida</option>
+                            <option value="10" title="GA">Georgia</option>
+                            <option value="11" title="HI">Hawaii</option>
+                            <option value="12" title="ID">Idaho</option>
+                            <option value="13" title="IL">Illinois</option>
+                            <option value="14" title="IN">Indiana</option>
+                            <option value="15" title="IA">Iowa</option>
+                            <option value="16" title="KS">Kansas</option>
+                            <option value="17" title="KY">Kentucky</option>
+                            <option value="18" title="LA">Louisiana</option>
+                            <option value="19" title="ME">Maine</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtZip" class="placeholder-custom">
+                            <span class="placeholder">ZIP code<span class="required">&lowast;</span></span>
+                            <input id="txtZip" type="text" class="form-control" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button data-section="event1" class="btn btn-negative">back</button>
+        <button data-section="event3" class="btn btn-positive">next</button>
+    </footer>
+</div>

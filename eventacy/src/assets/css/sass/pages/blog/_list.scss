@@ -1,0 +1,33 @@
+.blog-list{
+    padding:0 21px;
+
+    @media (max-width: 979px){
+        padding:0;
+    }
+
+    @media (max-width: 767px) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+.blog-block{float:left;width:289px;position:relative;margin:0 10px 10px 0;background:center center no-repeat;background-size:cover;}
+.blog-block:nth-child(3n){margin:0 0 10px;}
+.blog-caption{min-height:68px;padding:10px;position:absolute;right:0;bottom:0;left:0;color:#fff;background:rgba(0, 0, 0, 0.5);font:20px/24px ralewaybold, sans-serif;}
+
+.blog-control{padding:21px 21px 31px;text-align:center;}
+.blog-control .btn-orange{display:inline-block;width:215px;text-decoration:none;font:24px/47px ralewaymedium, sans-serif;color:#fff !important;}
+.detech-devices .blog-control .btn-orange,
+.detech-devices .blog-control .btn-orange:hover{background:#f3472d;}
+
+@media (max-width: 979px){
+    .blog-block{width:32%;margin-right:2%;}
+    .blog-block:nth-child(3n){margin-right:0;}
+    .blog-block:nth-child(4n){margin-right:2%;}
+}
+
+@media (max-width: 767px){
+    .blog-block{
+        width:100%;
+        margin:0 0 20px !important;
+    }
+}

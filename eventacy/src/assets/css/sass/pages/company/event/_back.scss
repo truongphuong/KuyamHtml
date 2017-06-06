@@ -1,0 +1,38 @@
+.company-event-page {
+    background: #323232;
+
+    .back-section {
+        a {
+            position: relative;
+            font-size: $s14;
+            line-height: 47px;
+            font-weight: 700;
+            display: inline-block;
+            padding-left: 24px;
+            color: $white;
+            text-decoration: none;
+
+            &:before{
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 100%;
+                position: absolute;
+                top:0;
+                left: 0;
+                background: url(images/ui/pages/company/event/icon_back.png) center center no-repeat;
+                background-size: 16px auto;
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                    background-image: url(images/ui/pages/company/event/icon_back@3x.png);
+                }
+            }
+        }
+    }
+}

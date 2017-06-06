@@ -1,0 +1,160 @@
+<!-- #modal-create -->
+<div id="modal-create" class="modal fade" role="dialog" aria-labelledby="createModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-post modal-create">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 id="createModalLabel" class="modal-title">request event</h4>
+            </div>
+            <div class="modal-body">
+                <div id="request-event-1">
+                    <!-- .section-note -->
+                    <header class="section-header text-center">
+                        <h2>your event starts here!</h2>
+                        <p>please fill out the request form below. we will confirm that<br class="visible-lg" /> we have recieved your request and get back to you shortly.</p>
+                    </header>
+                    <!-- /.section-note -->
+
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 request-cell">
+                                <label for="txtFirstName">first name: <span class="alert-error">*</span></label>
+                                <input id="txtFirstName" type="text" class="form-control" />
+                                <div class="alert-error">please enter a valid date format</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 request-cell">
+                                <label for="txtBusinessName">business name:<span class="alert-error">*</span></label>
+                                <input id="txtBusinessName" type="text" class="form-control" />
+                                <div class="alert-error">please enter a valid date format</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 request-cell">
+                                <label for="txtEmail">contackt email:<span class="alert-error">*</span></label>
+                                <input id="txtEmail" type="text" class="form-control" />
+                                <div class="alert-error">please enter a valid date format</div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 request-cell">
+                                <label for="txtCity">city:<span class="alert-error">*</span></label>
+                                <input id="txtCity" type="text" class="form-control" />
+                                <div class="alert-error">please enter a valid date format</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 request-cell">
+                                <label for="txtTitle">suggest an event title<span class="alert-error">*</span></label>
+                                <input id="txtTitle" type="text" class="form-control" />
+                                <div class="alert-error">please enter a valid date format</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label>choose 3 different dates that your business is available for an event.</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <!-- .date-list -->
+                            <div class="col-xs-12">
+
+                                <!-- .date-item -->
+                                <div class="table-css table-date">
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                        </div>
+                                        <div class="table-cell col-day">
+                                            <label for="txtDate1">dd/mm/yy:</label>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                            <div class="bulletin-num">1</div>
+                                        </div>
+                                        <div class="table-cell col-date">
+                                            <input id="txtDate1" readonly="readonly" type="text" class="form-control" />
+                                            <div class="alert-error">please enter a valid date format</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.date-item -->
+
+
+                                <!-- .date-item -->
+                                <div class="table-css table-date">
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                        </div>
+                                        <div class="table-cell col-day">
+                                            <label for="txtDate2">dd/mm/yy:</label>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                            <div class="bulletin-num">2</div>
+                                        </div>
+                                        <div class="table-cell col-date">
+                                            <input id="txtDate2" readonly="readonly" type="text" class="form-control" />
+                                            <div class="alert-error">please enter a valid date format</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.date-item -->
+
+                                <!-- .date-item -->
+                                <div class="table-css table-date">
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                        </div>
+                                        <div class="table-cell col-day">
+                                            <label for="txtDate3">dd/mm/yy:</label>
+                                        </div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="table-cell col-num">
+                                            <div class="bulletin-num">3</div>
+                                        </div>
+                                        <div class="table-cell col-date">
+                                            <input id="txtDate3" readonly="readonly" type="text" class="form-control" />
+                                            <div class="alert-error">please enter a valid date format</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.date-item -->
+
+                            </div>
+                            <!-- /.date-list -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 request-cell">
+                                <label for="txtNote">any special notes or request?</label>
+                                <textarea id="txtNote" class="form-control" cols="" rows=""></textarea>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <input id="btnRequestEvent" slidenext="request-event-2" slidecurrent="request-event-1" type="button" class="btn-orange btn-form btn-submit" value="submit request" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="request-event-2" class="hide">
+
+                    <!-- .section-note -->
+                    <header class="section-header text-center">
+                        <h2 class="hidden-xs">request confirmed!</h2>
+                        <h2 class="visible-xs">your event starts here!</h2>
+                        <p>thank you for requesting a Beautify LA event! we will<br class="visible-lg" /> process your request and noe of our representatives<br class="visible-lg" /> will get back to you soon!</p>
+                    </header>
+                    <!-- /.section-note -->
+
+                    <fieldset>
+                        <div class="text-center">
+                            <input type="button" data-dismiss="modal" class="btn-orange btn-form btn-submit" value="done" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#modal-create -->

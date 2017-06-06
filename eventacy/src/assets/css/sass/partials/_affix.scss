@@ -1,0 +1,42 @@
+#main-affix {
+    width: 630px;
+
+    @media (max-width: 979px) {
+        width: 470px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+#nav-affix {
+    width: 290px;
+    padding-left: 60px;
+
+    /*@media (max-width: 1269px) {
+        width: calc(290px - 60px);
+        padding-left: 0;
+    }*/
+
+    @media (max-width: 979px) {
+        width: 220px;
+        padding-left: 0;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+#main-affix.affix,
+#nav-affix.affix {
+    position: fixed;
+    top: 15px;
+}
+
+#main-affix.affix-bottom,
+#nav-affix.affix-bottom {
+    position: absolute;
+}
+

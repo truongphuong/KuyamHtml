@@ -1,0 +1,181 @@
+<div id="company1" class="content company-info">
+    <header>
+        <h3>Company info</h3>
+    </header>
+    <section class="section info-section">
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="txtName" class="placeholder-custom validate">
+                    <span class="placeholder">Name<span class="required">&lowast;</span></span>
+                    <input id="txtName" type="text" class="form-control" />
+                    <span class="error">Invalid</span>
+                </label>
+            </div>
+            <div class="col-xs-12">
+                <div class="input-custom-container">
+                    <label for="txtURL1" class="input-custom input-url has-copy">
+                        <span class="placeholder">Event homepage URL<span class="required">&lowast;</span></span>
+                        <span class="box">
+                            <span class="text">https://www.google.com/</span>
+                            <span id="txtURL1" class="editable" contenteditable="true">pijons</span>
+                        </span>
+                        <span class="copy">copy link</span>
+                        <span class="error">This URL is already taken</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Website" />
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Phone number" />
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Cellphone number" />
+            </div>
+            <div id="divCategorySelect" class="col-xs-12 col-md-6 select-readonly">
+                <select id="caterogySelect" class="select-full">
+                    <option value="" selected>Category</option>
+                    <option value="1">Yoga</option>
+                    <option value="2">Swimming</option>
+                    <option value="3">Yoga</option>
+                    <option value="4">Swimming</option>
+                    <option value="5">Yoga</option>
+                    <option value="6">Swimming</option>
+                    <option value="7">Yoga</option>
+                    <option value="8">Swimming</option>
+                    <option value="9">Yoga</option>
+                    <option value="10">Swimming</option>
+                    <option value="11">Yoga</option>
+                    <option value="12">Swimming</option>
+                    <option value="13">Yoga</option>
+                    <option value="14">Swimming</option>
+                    <option value="15">Yoga</option>
+                    <option value="16">Swimming</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <section class="section logo-section">
+        <span class="label-form">Page logo</span>
+        <div class="frame default">
+            <div class="page-logo" style="background-image: url(content/images/assets/bla-logo_registered_trademark_header.png);"></div>
+            <ul class="control">
+                <li class="change"><span>Change</span></li>
+                <li class="delete"><span>Delete</span></li>
+            </ul>
+            <div class="upload">Upload logo</div>
+        </div>
+        <input type="file" id="fileLogo" class="hide" />
+    </section>
+    <section class="section socials-section">
+        <span class="label-form">Social media links</span>
+        <ul class="clearfix" data-target="#modal-social" data-toggle="modal">
+            <li><span class="icon icon-facebook"></span></li>
+            <li><span class="icon icon-twitter"></span></li>
+            <li><span class="icon icon-linkedin"></span></li>
+            <li><span class="icon icon-instagram"></span></li>
+            <li><span class="icon icon-pinterest"></span></li>
+            <li><span class="icon icon-google-plus"></span></li>
+            <li><span class="icon icon-add"></span></li>
+        </ul>
+    </section>
+    <section class="section address-section">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="placeholder-custom">
+                    <span class="placeholder">Facility / Location name <span class="optional">optional</span></span>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <label for="txtStreet" class="placeholder-custom">
+                    <span class="placeholder">Address<span class="required">&lowast;</span></span>
+                    <input id="txtStreet" type="text" class="form-control" value="hello" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-sm-7-5">
+                <label for="txtCity" class="placeholder-custom">
+                    <span class="placeholder">City<span class="required">&lowast;</span></span>
+                    <input id="txtCity" type="text" class="form-control" />
+                </label>
+            </div>
+            <div class="col-xs-12 col-sm-4-5">
+                <div class="row">
+                    <div id="divStateSelect" class="col-xs-12 col-sm-6 select-readonly">
+                        <select id="stateSelect" class="select-full select-state default">
+                            <option value="" selected data-content='State<span class="required">&lowast;</span>'>State</option>
+                            <option value="1" title="AL">Alabama</option>
+                            <option value="2" title="AK">Alaska</option>
+                            <option value="3" title="AZ">Arizona</option>
+                            <option value="4" title="AR">Arkansas</option>
+                            <option value="5" title="CA">California</option>
+                            <option value="6" title="CO">Colorado</option>
+                            <option value="7" title="CT">Connecticut</option>
+                            <option value="8" title="DE">Delaware</option>
+                            <option value="9" title="FL">Florida</option>
+                            <option value="10" title="GA">Georgia</option>
+                            <option value="11" title="HI">Hawaii</option>
+                            <option value="12" title="ID">Idaho</option>
+                            <option value="13" title="IL">Illinois</option>
+                            <option value="14" title="IN">Indiana</option>
+                            <option value="15" title="IA">Iowa</option>
+                            <option value="16" title="KS">Kansas</option>
+                            <option value="17" title="KY">Kentucky</option>
+                            <option value="18" title="LA">Louisiana</option>
+                            <option value="19" title="ME">Maine</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtZip" class="placeholder-custom">
+                            <span class="placeholder">ZIP code<span class="required">&lowast;</span></span>
+                            <input id="txtZip" type="text" class="form-control">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section tags-section">
+        <label class="label-form">Filter events by tags</label>
+        <div class="row">
+            <div id="divTagesSelect" class="col-xs-12 col-md-8 select-readonly hide">
+                <select id="tagesSelect" class="select-full">
+                    <option data-content='Category' value="" selected>Category</option>
+                    <option data-content='Yoga <button class="close"></button>' value="1">Yoga</option>
+                    <option data-content='Swimming <button class="close"></button>' value="2">Swimming</option>
+                    <option data-content='jogging <button class="close"></button>' value="3">jogging</option>
+                    <option data-content='running <button class="close"></button>' value="4">running</option>
+                    <option data-content='singing <button class="close"></button>' value="5">singing</option>
+                    <option data-content='tennis <button class="close"></button>' value="6">tennis</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-4 hidden-xs">
+                <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
+            </div>
+            <div id="tagsDescription" class="col-xs-12 hide">
+                <textarea cols="" rows="" class="form-control" disabled>Tối 26/2, tiếp tục chiến dịch "đòi lại vỉa hè" cho người đi bộ, Phó chủ tịch UBND quận 1 Đoàn Ngọc Hải cùng CSGT, trật tự đô thị… kiểm tra khu vực đường Nam Kỳ Khởi Nghĩa.
+
+Rời trụ sở khoảng 700 m, đoàn công tác phát hiện hai ôtô biển xanh 7 chỗ và 16 chỗ đậu trước một nhà hàng. Những người trên xe ăn uống trong quán nhưng không ra làm việc. Ông Hải yêu cầu niêm phong, kéo xe về trụ sở công an phường xử lý.</textarea>
+            </div>
+            <div class="col-xs-12 col-md-4 visible-xs">
+                <button class="btn btn-negative btn-tag" data-target="#tagsModal" data-toggle="modal">create a new tag</button>
+            </div>
+        </div>
+    </section>
+    <section class="section tweets-section">
+        <label class="label-form">Tweets script</label>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="placeholder-custom">
+                    <span class="placeholder">&lt;a class="twitter-timeline" href="https://twitter.com/dimonqu</span>
+                    <input type="text" class="form-control" />
+                    <a title="" target="_blank" href="https://support.twitter.com/articles/20170071">help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <button data-section="company2" class="btn btn-positive">Save</button>
+    </footer>
+</div>

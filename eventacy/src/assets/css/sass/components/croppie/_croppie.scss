@@ -1,0 +1,251 @@
+.croppie-container{
+    width: 450px;
+    margin: 0 auto;
+    padding: 0;
+}
+.croppie-container .cr-viewport{
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 0 899px rgba(191, 191, 191, 0.5);
+}
+.croppie-container  .cr-boundary{
+    background: $white;
+}
+.croppie-container .croppie-caption{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0px,-50%);
+    text-align: center;
+}
+.croppie-container .croppie-caption > span{
+    display: inline-block;
+    width: 146px;
+    height: 39px;
+    line-height: 39px;
+    color: $white;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    font-family: $primary;
+    font-weight: 700;
+    font-size: $s17;
+}
+.croppie-container .croppie-caption .icon-move{
+    width: 20px;
+    height: 20px;
+    background-image: url(images/ui/modals/banner/icon_drap_drop.png);
+    background-size: contain;
+    position: relative;
+    bottom: -3px;
+    margin-right: 5px;
+}
+.croppie-container .croppie-none{
+    background: url(images/ui/modals/banner/photo_default.png) center center no-repeat;
+    background-size: 65px auto;
+    height: 100%;
+}
+.croppie-container .cr-boundary:hover .croppie-caption > span{
+    background: rgba(0, 0, 0, 0.45);
+}
+.croppie-container .spinner {
+   opacity: 0;
+}
+.croppie-container .croppie-image-loading .spinner {
+   opacity: 1;
+}
+.croppie-container .cr-slider {
+   -webkit-appearance: none;
+   height: 28px;
+   padding: 0;
+}
+.croppie-container .cr-slider:focus {
+   outline: none;
+}
+.croppie-container .cr-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #e4e4e4;
+    border-radius: 1px;
+}
+.croppie-container .cr-slider:focus::-webkit-slider-runnable-track {
+    background: #e4e4e4;
+}
+.croppie-container .cr-slider::-webkit-slider-thumb {
+    height: 21px;
+    width: 21px;
+    border-radius: 100%;
+    background: $white;
+    border: 1px solid #6e6e6e;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+}
+.croppie-container .cr-slider::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #e4e4e4;
+    border-radius: 1px;
+}
+.croppie-container .cr-slider:focus::-moz-range-track {
+    background: #e4e4e4;
+}
+.croppie-container .cr-slider::-moz-range-thumb {
+    height: 21px;
+    width: 21px;
+    border-radius: 100%;
+    background: $white;
+    border: 1px solid #6e6e6e;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.croppie-container .cr-slider::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-radius: 1px;
+}
+.croppie-container .cr-slider::-ms-fill-lower,
+.croppie-container .cr-slider::-ms-fill-upper,
+.croppie-container .cr-slider:focus::-ms-fill-lower,
+.croppie-container .cr-slider:focus::-ms-fill-upper{
+    background: #e4e4e4;
+}
+.croppie-container .cr-slider::-ms-thumb {
+    height: 21px;
+    width: 21px;
+    border-radius: 100%;
+    background: $white;
+    border: 1px solid #6e6e6e;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.croppie-container .cr-slider-wrap{
+    border:1px solid #b8b8b8;
+    padding:15px 38px 12px;
+    position:relative;
+    border-radius:5px;
+    margin-top:32px;
+    width:100%;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom,
+.croppie-container .cr-slider-wrap .croppie-zoom:hover,
+.croppie-container .cr-slider-wrap .croppie-zoom:focus{
+    position: absolute;
+    display: block;
+    width: 38px;
+    top: 0;
+    bottom: 0;
+    font-size: 1.6em;
+    font-family: 'liberation_sansbold', 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: $base;
+    cursor: pointer;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-in{
+    left: 0;
+    line-height: 53px;
+}
+.croppie-container .cr-slider-wrap .croppie-zoom-out{
+    right: 0;
+    line-height: 55px;
+}
+
+@media (max-width: 767px){
+    /* Croppie*/
+    .croppie-container{
+        width:100%;
+    }
+    .croppie-container .cr-boundary{
+        /*height:176px !important;*/
+    }
+    .croppie-container .croppie-caption > span{
+        font-size: $s13;
+        background: $rgba_black;
+    }
+    .croppie-container .croppie-caption .icon{
+        width:15px;
+        height:15px;
+    }
+    .croppie-container .cr-viewport{
+        box-shadow: 0 0 0 899px rgba(235, 235, 235, 0.5);
+    }
+    .croppie-container .cr-slider::-webkit-slider-runnable-track {
+        height: 2px;
+    }
+    .croppie-container .cr-slider::-webkit-slider-thumb {
+      /*height: 9px;
+      width: 9px;
+      margin-top: -4px;*/
+      border-color: $positive;
+    }
+    .croppie-container .cr-slider::-moz-range-track {
+      height: 2px;
+    }
+    .croppie-container .cr-slider::-moz-range-thumb {
+      /*height: 9px;
+      width: 9px;*/
+      border-color: $positive;
+    }
+    .croppie-container .cr-slider::-ms-track {
+      height: 2px;
+    }
+    .croppie-container .cr-slider::-ms-thumb {
+      /*height: 9px;
+      width: 9px;*/
+      border-color: $positive;
+    }
+    .croppie-container .cr-slider-wrap{
+        padding:1px 38px;
+        border-radius:3px;
+        margin-top:8px;
+    }
+    .croppie-container .cr-slider-wrap  .cropit-zoom,
+    .croppie-container .cr-slider-wrap .cropit-zoom:hover,
+    .croppie-container .cr-slider-wrap  .cropit-zoom:focus{
+        width:21px;
+        font-size:$s39;
+    }
+    .croppie-container .cr-slider-wrap .croppie-zoom-out{
+        line-height:28px;
+    }
+    .croppie-container .cr-slider-wrap .croppie-zoom-in{
+        line-height:26px;
+    }
+    .croppie-container .croppie-none{
+        background-size: 45px auto;
+    }
+}
+
+@media (max-width: 359px){
+    .croppie-container .croppie-none{
+        background-size: 33px auto;
+    }
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+only screen and (              min-resolution:120dpi)      and (min-width:320px),
+only screen and (               min-resolution:2dppx)      and (min-width:320px){
+    .croppie-container .croppie-caption .icon-move{
+        background-image: url(images/ui/modals/banner/icon_drap_drop@3x.png);
+    }
+    .croppie-container .croppie-none{
+        background-image: url(images/ui/modals/banner/photo_default@2x.png);
+    }
+}
+
+.on-devices{
+    .croppie-container .cr-boundary .croppie-caption > span{
+        background: rgba(0, 0, 0, 0.45);
+    }
+}

@@ -1,0 +1,440 @@
+.company-event-page {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: $primary;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+
+    #main-affix {
+        @media (min-width: 1270px) {
+            width: 930px;
+        }
+
+        &.affix {
+            top: 20px;
+        }
+    }
+
+    #nav-affix {
+        @media (min-width: 1270px) {
+            width: 240px;
+            padding-left: 0;
+        }
+
+        &.affix {
+            top: 20px;
+
+            .coming-section{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .main-content{
+        padding:0;
+    }
+
+    .content{
+        width: 549px;
+        float: left;
+        padding:24px 0 20px 38px;
+        border-left: 1px solid rgba(50, 50, 50, .2);
+
+        @media (max-width: 1269px){
+            width: calc(100% - 109px);
+        }
+
+        @media (max-width: 767px){
+            border-left: 0 none;
+            float: none;
+            width: 100%;
+            padding-top: 0; /*23px*/
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 359px) {
+            /*padding-top: 19px;*/
+        }
+
+        header{
+            @media (max-width: 767px){
+                margin-left: -15px;
+                margin-right: -15px;
+                padding: 9px 15px;
+                background: #f5f5f5;
+                margin-bottom: 18px;
+                border-top: 1px solid #c7c7c7;
+                border-bottom: 1px solid #c7c7c7;
+            }
+
+            @media (max-width: 359px){
+                padding: 6px 15px;
+                margin-bottom: 15px;
+            }
+
+            h3{
+                font-size: $s27;
+                line-height: 34px;
+                font-family: $primary;
+                color: #f2472d;
+                margin:0 0 21px;
+
+                @media (max-width: 767px){
+                    font-size: $h5;
+                    line-height: 27px;
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $s17;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        p{
+            font-size: $h5;
+            line-height: 25px;
+            font-family: $primary;
+            color: rgba(51, 51, 51, .6);
+            margin:0 0 19px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 359px){
+                margin-bottom: 15px;
+            }
+        }
+
+        .row{
+            margin-left: -12px;
+            margin-right: -12px;
+
+            @media (max-width: 767px){
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+        }
+
+        div[class*="col-"]{
+            padding-left: 12px;
+            padding-right: 12px;
+
+            @media (max-width: 767px){
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+
+        .section{
+            margin-top: 16px;
+            border-top: 1px solid rgba(50, 50, 50, .1);
+
+            @media (max-width: 359px){
+                margin-top: 18px;
+            }
+
+            @media (max-width: 359px){
+                margin-top: 15px;
+            }
+
+            &:first-child{
+                border-top: 0 none;
+            }
+        }
+
+        .bootstrap-select {
+            font-size: 16px;
+            font-family: 'lato', sans-serif;
+
+            > .btn,
+            > .btn:focus,
+            > .btn:active,
+            > .btn:hover,
+            > .btn:visited,
+            &.open > .btn,
+            &.open > .btn:focus,
+            &.open > .btn:active,
+            &.open > .btn:hover,
+            &.open > .btn:visited{
+                font-family: 'lato', sans-serif;
+                font-size: $h5;
+                min-height: 40px;
+                height: 40px;
+                padding-left: 15px;
+                padding-right: 35px;
+                border-color: $border;
+
+                @media (max-width: 767px){
+                    min-height: 36px;
+                    height: 36px;
+                    font-size: $s15;
+                    padding-left: 8px;
+                }
+
+                @media (max-width: 359px){
+                    min-height: 31px;
+                    height: 31px;
+                    font-size: $s13;
+                    padding-left: 5px;
+                }
+            }
+
+            &.btn-group {
+                .btn {
+                    .caret {
+                        width:21px;
+                        height:15px;
+                        background-image: url(images/ui/pages/company/settings/icon_select.png);
+                        background-size: 21px auto;
+                        margin-top: -7px;
+                        right: 10px;
+
+                        @media (max-width:767px){
+                            width:18px;
+                            background-size: 18px auto;
+                        }
+
+                        @media (max-width:359px){
+                            width:16px;
+                            background-size: 16px auto;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/settings/icon_select@3x.png);
+                        }
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                font-size: 16px;
+
+                > li {
+                    font-size: $h5;
+
+                    @media (max-width: 767px){
+                        font-size: $s15;
+                    }
+
+                    @media (max-width: 359px){
+                        font-size: $s13;
+                    }
+
+                    > a {
+                        padding-left: 15px;
+                        padding-right: 15px;
+
+                        @media (max-width: 767px){
+                            padding: 5px 8px;
+                        }
+
+                        @media (max-width: 359px){
+                            padding: 6px 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .label-form{
+            display: block;
+            font-family: $primary;
+            font-size: $h5;
+            line-height: 25px;
+            color: $base;
+            margin-top: 18px;
+            margin-bottom: 6px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-top: 10px;
+                margin-bottom: 6px;
+                /*text-shadow: 0 1px 0 $base;*/
+            }
+
+            small {
+                font-style: italic;
+                color:#9b9b9b;
+            }
+        }
+
+        .form-control{
+            height: 40px;
+
+            @media (max-width: 767px){
+                height: 36px;
+            }
+
+            @media (max-width: 359px){
+                height: 31px;
+            }
+        }
+
+        .input-countdown.inner .form-control{
+            height: 85px;
+        }
+
+        label.placeholder-custom .form-control,
+        div.placeholder-custom .form-control{
+            height: 38px;
+
+            @media (max-width: 767px){
+                height: 36px;
+            }
+
+            @media (max-width: 359px){
+                height: 31px;
+            }
+        }
+        .input-custom .table-css input[type="text"]{
+            height: 37px;
+
+            @media (max-width: 767px){
+                height: 34px;
+            }
+
+            @media (max-width: 359px){
+                height: 29px;
+            }
+        }
+
+        footer {
+            @media (max-width: 767px) {
+                margin:0 -10px;
+
+                &:after{
+                    content:'';
+                    display: block;
+                    clear:both;
+                }
+            }
+
+            .btn {
+                width: 146px;
+                height: 44px;
+                font-size: $h5;
+                font-family: $primary;
+                border-radius: 0;
+                padding:0;
+
+                + .btn {
+                    margin-left: 16px;
+
+                    @media (max-width: 767px){
+                        margin-left: 10px;
+                    }
+                }
+
+                &.btn-positive{
+                    &:after{
+                        content:'';
+                        display: inline-block;
+                        width: 12px;
+                        height: 19px;
+                        background: url(images/ui/pages/company/event/icon_next.png) center center no-repeat;
+                        background-size: 12px auto;
+                        margin-left: 5px;
+                        position: relative;
+                        bottom: -2px;
+
+                        @media (max-width: 767px){
+                            width: 8px;
+                            height: 14px;
+                            background-size: 8px auto;
+                            background-image: url(images/ui/pages/company/event/mobile/icon_next.png);
+                            bottom: -1px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/event/mobile/icon_next@3x.png);
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:768px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:768px){
+                            background-image: url(images/ui/pages/company/event/icon_next@3x.png);
+                        }
+                    }
+                }
+
+                &.btn-negative{
+                    &:before{
+                        content:'';
+                        display: inline-block;
+                        width: 12px;
+                        height: 19px;
+                        background: url(images/ui/pages/company/event/icon_prev.png) center center no-repeat;
+                        background-size: 12px auto;
+                        margin-right: 5px;
+                        position: relative;
+                        bottom: -2px;
+
+                        @media (max-width: 767px){
+                            width: 8px;
+                            height: 14px;
+                            background-size: 8px auto;
+                            background-image: url(images/ui/pages/company/event/mobile/icon_prev.png);
+                            bottom: -1px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/event/mobile/icon_prev@3x.png);
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:768px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:768px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:768px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:768px){
+                            background-image: url(images/ui/pages/company/event/icon_prev@3x.png);
+                        }
+                    }
+                }
+
+                @media (max-width: 767px){
+                    float: left;
+                    width: calc(50% - 20px);
+                    margin:0 10px;
+                    height: 38px;
+                }
+
+                @media (max-width: 359px){
+                    height: 32px;
+                    font-size: $s17;
+                }
+            }
+        }
+    }
+}

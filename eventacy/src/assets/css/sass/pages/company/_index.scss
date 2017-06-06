@@ -1,0 +1,69 @@
+.company-page {
+    .site-header {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        h1{
+            color: $white;
+            font-size: $h1;
+            font-family: $primary;
+            line-height: 100%;
+            margin: 28px 0 0;
+            float: left;
+            cursor: text;
+            display: block;
+            width: calc(100% - 200px);
+
+            @media (max-width:767px){
+                font-size: $s18;
+                margin-top: 8px;
+                line-height: 32px;
+                width: calc(100% - 50px);
+            }
+        }
+    }
+
+    .site-footer{
+        p{
+            @media (max-width:767px){
+                text-align: right;
+            }
+        }
+
+        .powered {
+            p{
+                @media (max-width:767px){
+                    text-align: left;
+                }
+            }
+        }
+
+    }
+
+    .carousel {
+        height: 338px;
+
+        @media (max-width:767px){
+            height:220px;
+        }
+
+        @media (max-width:359px){
+            height:107px;
+        }
+    }
+
+    .carousel-inner{
+         > .item {
+            height: 338px;
+
+            @media (max-width:767px){
+                height:220px;
+            }
+
+            @media (max-width:359px){
+                height:107px;
+            }
+        }
+    }
+}

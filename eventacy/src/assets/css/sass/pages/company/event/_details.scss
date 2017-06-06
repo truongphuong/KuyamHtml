@@ -1,0 +1,237 @@
+.company-event-page {
+    .details-event{
+        div[class*="col-"]{
+            margin-bottom: 17px;
+        }
+
+        .organizer-section{
+            border-top: 0 none;
+
+            .radio-mark {
+                ~ .radio-label{
+                    @media (max-width: 767px){
+                        margin:0;
+                        font-size: $s15;
+                    }
+                }
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .info-section{
+            div[class*="col-"]:last-child{
+                margin-bottom: 12px;
+            }
+        }
+
+        .time-section{
+            @media (max-width: 767px){
+                margin-top: 8px;
+            }
+
+            @media (max-width: 359px){
+                margin-top: 3px;
+            }
+
+            .label-form{
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            > .label-form{
+                margin-top:24px;
+                margin-bottom: 16px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 6px;
+                }
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+            }
+
+            .txt-date {
+                background: url(images/ui/pages/company/event/icon_date.png) calc(100% - 12px) center no-repeat;
+                background-size: 13px auto;
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                    background-image: url(images/ui/pages/company/event/icon_date@3x.png);
+                }
+
+                @media (max-width: 767px){
+                    text-align: center;
+                    background-image: url(images/ui/pages/company/event/mobile/icon_date.png);
+                    background-size: 20px auto;
+                    background-position: calc(100% - 5px) center;
+
+                    @media
+                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                        background-image: url(images/ui/pages/company/event/mobile/icon_date@3x.png);
+                    }
+                }
+            }
+
+            .cb-custom{
+                padding-top: 7px;
+                height: 40px;
+
+                @media (max-width: 767px){
+                    padding-top: 0;
+                    height: 24px;
+                }
+            }
+
+            .cb-mark{
+                ~ .cb-label{
+                    white-space: nowrap;
+
+                    @media (max-width: 767px){
+                        font-size: $s15;
+                        margin:0;
+                    }
+                }
+            }
+
+            .week-list{
+                margin: 0;
+                padding:0;
+                list-style: none;
+                border: 1px solid $border;
+                float: left;
+                border-radius: 2px;
+
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                @media (max-width: 359px){
+                    float: none;
+                }
+
+                li{
+                    float: left;
+                    color: $placeholder;
+                    line-height: 38px;
+                    width: 33px;
+                    font-size: $h5;
+                    font-family: $primary;
+                    text-align: center;
+                    cursor: pointer;
+
+                    @media (max-width: 767px){
+                        width: 36px;
+                        line-height: 34px;
+                    }
+
+                    @media (max-width: 359px){
+                        width: 14.2857%;
+                        line-height: 29px;
+                    }
+
+                    &.active{
+                        color: $positive;
+                        font-weight: 700;
+                    }
+
+                    + li{
+                        border-left: 1px solid $border;
+                    }
+                }
+            }
+        }
+
+        .description-section{
+            padding-top:26px;
+            padding-bottom: 13px;
+
+            @media (max-width: 767px){
+                padding-top: 18px;
+                padding-bottom: 18px;
+                margin-top: 0;
+            }
+
+            @media (max-width: 359px){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        .address-section{
+            @media (max-width: 767px){
+                margin-top: 0;
+                padding-bottom: 18px;
+            }
+
+            @media (max-width: 359px){
+                margin-top: 0;
+                padding-bottom: 15px;
+            }
+
+            .label-form{
+                margin-top: 22px;
+                margin-bottom: 0;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                }
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+            }
+
+            .radio-mark {
+                ~ .radio-label{
+                    @media (max-width: 767px){
+                        margin:0;
+                        font-size: $s15;
+                    }
+                }
+            }
+
+            .radio-custom{
+                margin-top: 20px;
+                margin-bottom: 10px;
+
+                @media (max-width: 767px){
+                    margin-top: 18px;
+                    margin-bottom: 0;
+                }
+
+
+                @media (max-width: 359px){
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

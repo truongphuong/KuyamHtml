@@ -1,0 +1,54 @@
+.company-settings-page {
+    .primary-contact{
+        .private-section{
+            padding-bottom: 9px;
+
+             @media (max-width: 767px){
+                padding-bottom: 5px;
+             }
+
+            .row {
+                .row{
+                    div[class*="col-"]:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            a{
+                color: $positive;
+                font-family: $primary;
+                font-size: $s14;
+                line-height: 17px;
+                position: relative;
+                top: -5px;
+
+                @media (max-width: 767px){
+                    font-size: $p;
+                    margin-left: 13px;
+                    top:-9px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $s10;
+                }
+            }
+
+            .form-control{
+                @media (max-width: 767px){
+                    text-align: center;
+                }
+            }
+
+            div{
+                &.placeholder-custom {
+                    .placeholder{
+                        @media (max-width: 767px){
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

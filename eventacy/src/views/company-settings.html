@@ -1,0 +1,62 @@
+{% extends './master/main-company-settings.html' %}
+
+{% block title %}Beautify LA - Company Settings{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block namepage %}company-page company-settings-page{% endblock %}
+
+{% block banner %}
+{% include "content/pages/company/settings/banner.html" %}
+{% endblock %}
+
+{% block upload %}
+<ul class="control">
+    <li class="edit"><span>Edit</span></li>
+    <li class="change"><span>Change</span></li>
+    <li class="delete"><span>Delete</span></li>
+</ul>
+<div class="upload">Upload banner image</div>
+{% endblock %}
+
+{% block main %}
+<input type="file" id="fileBanner" class="hide" />
+<div class="main-content clearfix">
+    <div class="container">
+
+        {% include "content/pages/company/settings/address.html" %}
+
+        <div class="settings-content clearfix">
+
+            {% include "content/pages/company/settings/sidebar.html" %}
+
+            {% include "content/pages/company/settings/company-info.html" %}
+
+            {% include "content/pages/company/settings/primary-contact.html" %}
+
+            {% include "content/pages/company/settings/payment-method.html" %}
+
+            {% include "content/pages/company/settings/company-connect.html" %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block modal %}
+{% include "content/modals/change-password.html" %}
+{% include "content/modals/socials.html" %}
+{% include "content/modals/tags.html" %}
+{% include "content/modals/crop-banner.html" %}
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="content/js/pages/ui-company-settings.js"></script>
+<script type="text/javascript" src="content/js/pages/ui-company.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-crop-banner.js"></script>
+<script type="text/javascript" src="content/js/modals/ui-tags.js"></script>
+{% endblock %}
+

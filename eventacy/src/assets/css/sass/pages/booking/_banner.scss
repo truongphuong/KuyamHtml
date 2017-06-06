@@ -1,0 +1,33 @@
+.book-page{
+    .slide-feature{
+        overflow:hidden;
+        position:relative;
+    }
+
+    #carousel-desktop{
+        height:449px;
+        overflow:hidden;
+
+        @media (max-width:979px){
+            height:320px;
+        }
+
+        .carousel-inner {
+            > .item{
+                height:449px;
+
+                @media (max-width:979px){
+                    height:320px;
+                }
+            }
+        }
+    }
+
+    #carousel-mobile {
+        .carousel-inner {
+            > .item{
+                height:517px;
+            }
+        }
+    }
+}

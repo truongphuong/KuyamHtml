@@ -1,0 +1,219 @@
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $placeholder;
+    opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $placeholder;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: $placeholder;
+    opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $placeholder;
+    opacity: 1;
+}
+
+label,
+div {
+    &.placeholder-custom {
+        display: block;
+        margin: 0;
+        position: relative;
+        border: 1px solid $border;
+        border-radius: 2px;
+        overflow: hidden;
+        height: 40px;
+
+        @media (max-width: 767px) {
+            height: 36px;
+        }
+
+        @media (max-width: 359px) {
+            height: 31px;
+        }
+
+        &.disabled {
+            border-color: $disabled;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .placeholder {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 0 0 15px;
+            color: $rgba-placeholder;
+            font-size: $h5;
+            line-height: 36px;
+            font-family: $primary;
+
+            @media (max-width: 767px) {
+                font-size: $s15;
+                line-height: 34px;
+                padding-left: 8px;
+            }
+
+            @media (max-width: 359px) {
+                font-size: $s13;
+                line-height: 29px;
+                padding-left: 5px;
+            }
+
+            .optional {
+                font-size: 12px;
+            }
+        }
+
+        a {
+            display: block;
+            position: absolute;
+            top:0;
+            right: 0;
+            padding: 0 15px;
+            color: $positive;
+            text-decoration: none;
+            font-size: $s15;
+            line-height: 38px;
+            font-family: $primary;
+            background: $white;
+
+            @media (max-width: 767px) {
+                padding: 0 8px;
+                line-height: 34px;
+            }
+
+            @media (max-width: 359px) {
+                padding: 0 5px;
+                line-height: 29px;
+                font-size: $s10;
+            }
+        }
+
+        .error {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            padding: 0 15px;
+            color: $positive;
+            text-decoration: none;
+            font-size: $s15;
+            line-height: 36px;
+            font-family: $primary;
+            background: $white;
+
+            @media (max-width: 767px) {
+                line-height: 36px;
+                font-size: $p;
+                padding: 0 8px;
+            }
+
+            @media (max-width: 359px) {
+                line-height: 31px;
+                font-size: $s10;
+                padding: 0 5px;
+            }
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 13px;
+                height: 11px;
+                background: $white url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
+                background-size: 13px auto;
+                margin-right: 5px;
+
+                @media (max-width: 767px) {
+                    position: relative;
+                    top: 1px;
+                }
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+                    background-image: url(images/ui/pages/company/settings/icon_error@3x.png);
+                }
+            }
+        }
+
+        &.validate {
+            .error {
+                left: inherit;
+                right: 0;
+            }
+        }
+
+        &.validate-border {
+            border-color: #f3472d;
+        }
+
+        .icon-check {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 15px;
+            width: 50px;
+            height: 100%;
+            background: $white url(images/ui/pages/company/settings/icon_check.png) center center no-repeat;
+            background-size: 20px auto;
+
+            @media (max-width: 767px) {
+                padding: 0 8px;
+                background-size: 17px auto;
+                width: 36px;
+            }
+
+            @media (max-width: 359px) {
+                padding: 0 5px;
+                background-size: 16px auto;
+                width: 30px;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px) {
+                background-image: url(images/ui/pages/company/settings/icon_check@3x.png);
+            }
+        }
+
+        .form-control {
+            border: 0 none;
+            position: relative;
+            background: transparent;
+            height: 36px;
+
+            @media (max-width: 767px) {
+                height: 34px;
+            }
+
+            @media (max-width: 359px) {
+                height: 29px;
+            }
+
+            &.has-value {
+                background: $white;
+            }
+        }
+    }
+}

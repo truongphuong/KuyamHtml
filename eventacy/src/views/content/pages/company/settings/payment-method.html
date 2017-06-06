@@ -1,0 +1,57 @@
+<div id="company3" class="content payment-method hide">
+    <header>
+        <h3>How do you want to get paid?</h3>
+    </header>
+    <section class="section method-section">
+        <div class="method">
+            <div class="radio-custom">
+                <input class="radio-mark" id="radioStripe" type="radio" name="payment" value="1" checked />
+                <label class="radio-label" for="radioStripe">Stripe</label>
+            </div>
+            <div class="section">
+                <button class="btn stripe-connect btn-stripe-connect"><span>Connect with Stripe</span></button>
+                <button class="btn stripe-connect btn-stripe-connected hide"><span>Connected!</span></button>
+                <ul class="reconnect-section clearfix hide">
+                    <li>Stripe not connected</li>
+                    <li>
+                        <button class="btn btn-negative btn-reconnect">reconnect</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="method">
+            <div class="radio-custom">
+                <input class="radio-mark" id="radioPaypal" type="radio" name="payment" value="1" />
+                <label class="radio-label" for="radioPaypal">Paypal</label>
+            </div>
+            <div class="section disabled">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtFirstName" class="placeholder-custom">
+                            <span class="placeholder">First name<span class="required">&lowast;</span></span>
+                            <input id="txtFirstName" type="tẽt" class="form-control" />
+                        </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtLastName" class="placeholder-custom">
+                            <span class="placeholder">Last name<span class="required">&lowast;</span></span>
+                            <input id="txtLastName" type="email" class="form-control" />
+                        </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="txtEmail" class="placeholder-custom validate">
+                            <span class="placeholder">Paypal email<span class="required">&lowast;</span></span>
+                            <input id="txtEmail" type="email" class="form-control" />
+                            <span class="icon icon-check"></span>
+                            <span class="error">Invalid</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!--<button data-section="company2" class="btn btn-negative">back</button>-->
+        <button data-section="company4" class="btn btn-positive">Save</button>
+    </footer>
+</div>

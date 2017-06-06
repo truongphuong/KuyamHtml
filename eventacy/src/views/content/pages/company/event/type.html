@@ -1,0 +1,933 @@
+<div id="event1" class="content type-event">
+    <header>
+        <h3>What type of event do you want to host?</h3>
+    </header>
+    <div class="type-form">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7">
+                <select id="typeSelect" class="select-full">
+                    <option value="type1" selected>Class</option>
+                    <option value="type2">Donation</option>
+                    <option value="type3">RSVP</option>
+                    <option value="type4">Tickets Sales</option>
+                </select>
+            </div>
+        </div>
+        <div id="type1" class="type-section type-class hide">
+            <section class="section section-class">
+                <p>Class events are for one or more days with limited spots.</p>
+                <div class="row">
+                    <div id="divClassSelect" class="col-xs-12 select-readonly">
+                        <select id="classSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous class? <small>optional</small>'>Duplicate a previous class?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <label for="txtClassNum" class="placeholder-custom ">
+                            <span class="placeholder">Max. number of slots<span class="required">&lowast;</span></span>
+                            <input id="txtClassNum" type="text" class="form-control" />
+                        </label>
+                    </div>
+                    <div class="col-xs-5 relative">
+                        <!--<label for="txtClassPrice" class="placeholder-custom">
+                            <span class="placeholder">Class price<span class="required">&lowast;</span></span>
+                            <input id="txtClassPrice" type="text" class="form-control" />
+                        </label>-->
+                        <label class="input-custom input-price" for="txtNum1">
+                            <span class="placeholder">Class price<span class="required">&lowast;</span></span>
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum1" type="text" /></span>
+                                </span>
+                            </span>
+                        </label>
+                        <span class="icon icon-help"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Class image <span class="required">&lowast;</span></span>
+                <div class="photo two default">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+
+                <br /><br />
+                <div class="photo three photo-uploaded" style="background-image:url(content/images/assets/slide_nails.jpg);">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+
+                <br /><br />
+                <div class="photo three photo-purchased" style="background-image:url(content/images/assets/slide_nails.jpg);">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+
+                <br /><br />
+                <div class="photo four" style="background-image:url(content/images/assets/slide_nails.jpg);">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <input type="file" id="filePhoto" class="hide">
+            </section>
+
+            <section class="section purchase-section">
+                <div class="header">
+                    <label class="label-form" for="txtSearch">Purchase stock images for $0.99 each</label>
+                    <input type="text" class="form-control" placeholder="Search stock photos by tags. Ex: Soccer, Pilates, Yogo" />
+                </div>
+                <section class="popular-section">
+                    <label class="label-form">Popular stock images recommended for you</label>
+                    <div class="controls">
+                        <div class="visible-xs"><i>Tap on image to see options</i></div>
+                    </div>
+                    <section class="photo-list">
+                        <ul class="clearfix">
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    <strong>Add to cart</strong> ($0.99)
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    <strong>Add to cart</strong> ($0.99)
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    <strong>Add to cart</strong> ($0.99)
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section id="searchSection" class="search-section">
+                    <label class="label-form">Search results for <strong>yoga</strong></label>
+                    <div class="controls">
+                        <div class="visible-xs"><i>Tap on image to see options</i></div>
+                    </div>
+                    <section class="photo-list">
+                        <div class="photo-ul">
+                            <div id="serchPhotoOwl" class="owl-carousel owl-theme">
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item photo-item">
+                                    <div class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                        <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                        <a title="" href="">
+                                            <span class="table-css">
+                                                <span class="tr">
+                                                    <span class="td">
+                                                        <strong>Add to cart</strong> ($0.99)
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-control prev"><span class="icon icon-owl"></span></div>
+                            <div class="list-control next"><span class="icon icon-owl"></span></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="cart-section">
+                    <label class="label-form"><span class="icon icon-cart"></span> Your cart is currently empty</label>
+                </section>
+
+                <section class="cart-section">
+                    <label class="label-form"><span class="icon icon-cart"></span> Your cart</label>
+                    <div class="controls">
+                        <div class="visible-xs"><i>Tap on image to see options</i></div>
+                    </div>
+                    <section class="photo-list">
+                        <ul class="clearfix">
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="photo" style="background-image: url(content/images/assets/slide_nails.jpg);">
+                                    <img alt="" src="content/images/ui/pages/company/event/img_default.png" class="img-transparent">
+                                    <a title="" href="">
+                                        <span class="table-css">
+                                            <span class="tr">
+                                                <span class="td">
+                                                    Delete from cart
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <div class="footer">
+                    <label class="label-form">Total: <strong>$5.94</strong></label>
+                    <ul>
+                        <li>
+                            <input type="button" value="Purchase" class="btn btn-negative">
+                        </li>
+                        <li>
+                            <input type="button" value="Cancel purchase" class="btn btn-negative">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div id="type2" class="type-section type-donation hide">
+            <section class="section section-donation">
+                <p>Donation events allow your guests to donate an amount of their choice upon checkout.</p>
+                <div class="row">
+                    <div id="divDonationSelect" class="col-xs-12 select-readonly">
+                        <select id="donationSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <span class="label-form">Suggested donations at checkout <small>(leave blank for no max.)</small></span>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum1">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum1" type="text" /></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum2">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum2" type="text" /></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum3">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum4" type="text" /></span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="col-xs-3 relative">
+                        <input type="button" class="btn btn-negative" value="or other" />
+                        <span class="icon icon-help"></span>
+                    </div>
+                    <div class="col-xs-3">
+                        <label class="input-custom" for="txtNum2">
+                            <span class="table-css">
+                                <span class="tr">
+                                    <span class="td">$</span>
+                                    <span class="td"><input id="txtNum2" type="text" /></span>
+                                </span>
+                            </span>
+                            <button class="close"></button>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <div class="photo two default">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div id="type3" class="type-section type-rsvp hide">
+            <section class="section section-rsvp">
+                <p>RSVP events are free events with limited spots.</p>
+                <div class="row">
+                    <div id="divRSVPSelect" class="col-xs-12 select-readonly">
+                        <select id="rsvpSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                        <label for="txtRSVPNum" class="placeholder-custom">
+                            <span class="placeholder">Max. number of slots<span class="required">&lowast;</span></span>
+                            <input id="txtRSVPNum" type="text" class="form-control" />
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <div class="photo two default">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div id="type4" class="type-section type-tickets">
+            <section class="section section-ticket">
+                <p>Ticket events require guests to purchase tickets at the price you set.</p>
+                <div class="row">
+                    <div id="divTicketSelect" class="col-xs-12 select-readonly">
+                        <select id="ticketSelect" class="select-full default">
+                            <option value="" selected data-content='Duplicate a previous event? <small>optional</small>'>Duplicate a previous event?</option>
+                            <option value="1">Donation</option>
+                            <option value="2">RSVP</option>
+                            <option value="3">Tickets Sales</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-num">
+                <p>Tickets</p>
+                <div id="tierList" class="tier-list">
+                    <div class="row item">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" placeholder="Ticket name / title" />
+                        </div>
+                        <div class="col-xs-7">
+                            <label for="txtTicketNum" class="placeholder-custom">
+                                <span class="placeholder">Max. number of tickets<span class="required">&lowast;</span></span>
+                                <input id="txtTicketNum" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-5">
+                            <!--<label for="txtTicketPrice" class="placeholder-custom">
+                                <span class="placeholder">Ticket price<span class="required">&lowast;</span></span>
+                                <input id="txtTicketPrice" type="text" class="form-control" />
+                            </label>-->
+                            <label class="input-custom input-price" for="txtTicketPrice">
+                                <span class="placeholder">Ticket price<span class="required">&lowast;</span></span>
+                                <span class="table-css">
+                                    <span class="tr">
+                                        <span class="td">$</span>
+                                        <span class="td"><input id="txtTicketPrice" type="text" /></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="input-countdown inner validate">
+                                <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                                <span class="error">Invalid</span>
+                                <span class="text"><span class="num">140</span> characters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-xs-12">
+                            <input type="text" class="form-control" placeholder="Ticket name / title" />
+                            <button class="close"></button>
+                        </div>
+                        <div class="col-xs-7">
+                            <label for="txtTicketNum2" class="placeholder-custom">
+                                <span class="placeholder">Max. number of tickets<span class="required">&lowast;</span></span>
+                                <input id="txtTicketNum2" type="text" class="form-control" />
+                            </label>
+                        </div>
+                        <div class="col-xs-5">
+                            <!--<label for="txtTicketPrice" class="placeholder-custom">
+                                <span class="placeholder">Ticket price<span class="required">&lowast;</span></span>
+                                <input id="txtTicketPrice" type="text" class="form-control" />
+                            </label>-->
+                            <label class="input-custom input-price" for="txtTicketPrice2">
+                                <span class="placeholder">Ticket price<span class="required">&lowast;</span></span>
+                                <span class="table-css">
+                                    <span class="tr">
+                                        <span class="td">$</span>
+                                        <span class="td"><input id="txtTicketPrice2" type="text" /></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="input-countdown inner validate">
+                                <textarea class="form-control" cols="" rows="" placeholder="Ticket description"></textarea>
+                                <span class="error">Invalid</span>
+                                <span class="text"><span class="num">140</span> characters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-negative">Add another tier</button>
+            </section>
+            <section class="section proccessing-section">
+                <p>Processing Fees are 3rd party credit card fees (Stripe fees & PayPal fees) plus Beautify’s fees (which at this time we’re not charging.)</p>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioProccessing1" type="radio" name="proccessing" value="0" checked="">
+                    <label class="radio-label" for="radioProccessing1">You</label>
+                </div>
+                <div class="radio-custom">
+                    <input class="radio-mark" id="radioProccessing2" type="radio" name="proccessing" value="1">
+                    <label class="radio-label" for="radioProccessing2">Your guess</label>
+                </div>
+            </section>
+            <section class="section section-photo">
+                <span class="label-form">Event image <span class="required">&lowast;</span></span>
+                <div class="photo two default">
+                    <a href="javascript:void(0);">
+                        <span class="ul">
+                            <span class="li edit">
+                                <span class="caption">
+                                    <span>Edit images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li upload">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Upload images</span>
+                                    <small>3mb max file size</small>
+                                </span>
+                            </span>
+                            <span class="li purchase">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Purchase images</span>
+                                    <small>$0.99 each</small>
+                                </span>
+                            </span>
+                            <span class="li purchased">
+                                <span class="or">
+                                    <span class="table-css">
+                                        <span class="tr">
+                                            <span class="td"><span class="line"></span></span>
+                                            <span class="td"><span class="text">or</span></span>
+                                            <span class="td"><span class="line"></span></span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="caption">
+                                    <span>Your purchases</span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <button data-section="event2" class="btn btn-positive">next</button>
+    </footer>
+</div>

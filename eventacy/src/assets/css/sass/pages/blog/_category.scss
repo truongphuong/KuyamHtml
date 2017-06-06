@@ -1,0 +1,79 @@
+.blog-category{
+    margin:0 0 20px;
+}
+.blog-category-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.blog-category-list li{
+    display:inline-block;
+    padding:0 26px;
+}
+.blog-category-list li:first-child{
+    padding-left:20px;
+}
+.blog-category-list li:last-child{
+    padding-right:20px;
+    text-align:right;
+}
+.blog-category-list li a{
+    color:#000;
+    line-height:44px;
+    text-decoration:none;
+}
+.blog-category-list li span{
+    display:block;
+    border-bottom:2px solid $white;
+}
+.blog-category-list li.active span{
+    border-bottom:2px solid #f3472d;
+}
+.blog-category-list li a:hover,
+.blog-category-list li.active a{
+    color:#f3472d;
+}
+
+.blog-category-select{}
+.blog-category-select .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+    width:100%;
+}
+.blog-category-select .bootstrap-select > .btn{
+    height:42px;
+    border:1px solid #333;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    font:16px/20px ralewaymedium, sans-serif;
+}
+.blog-category-select .bootstrap-select.btn-group .btn .filter-option{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width:150px;
+}
+.blog-category-select .bootstrap-select.btn-group .btn .caret{
+    width:23px;
+    height:13px;
+    background:url(images/assets/icon_dropdown.png) center center no-repeat;
+    border:0 none;
+    margin-top:-5px;
+}
+
+@media (max-width: 979px){
+    .blog-category-list li{
+        padding:0 1%;
+    }
+    .blog-category-list li:first-child{
+        padding-left:1%;
+    }
+    .blog-category-list li:last-child{
+        padding-right:1%;
+    }
+}
+
+@media (max-width: 767px){
+    .blog-category{
+        padding:0;
+    }
+}

@@ -1,0 +1,618 @@
+.error{
+    font-size:12px;
+    color:#f3472d;
+}
+
+.alert-error{color:#ff0000;}
+
+.required{
+    color: $required;
+    position: relative;
+    top: -5px;
+}
+
+.input-custom-container{
+    display: inline-block;
+    width: 100%;
+}
+
+.input-custom{
+    border: 1px solid $border;
+    overflow: hidden;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    height: 40px;
+
+    @media (max-width: 767px){
+        height: 36px;
+    }
+
+    @media (max-width: 359px){
+        height: 31px;
+    }
+
+    &.input-url {
+        border: 1px solid $border;
+        overflow: hidden;
+        border-radius: 2px;
+        display: block;
+        position: relative;
+        margin-bottom: 0;
+        padding: 0 15px;
+        cursor: text;
+
+        @media (max-width: 767px){
+            padding:0 8px;
+        }
+
+        @media (max-width: 359px){
+            padding:0 5px;
+        }
+
+        &.focus {
+            .text {
+                display: none;
+            }
+
+            .editable {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        &.has-copy {
+            padding-right: 88px;
+
+            @media (max-width: 767px){
+                padding-right: 63px;
+            }
+        }
+
+        .box {
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 36px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0;
+            display: block;
+
+            @media (max-width: 767px){
+                line-height: 34px;
+            }
+
+            @media (max-width: 359px){
+                line-height: 29px;
+            }
+        }
+
+        .text {
+            display: inline-block;
+            color: #999;
+            font-size: $h5;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+            }
+        }
+
+        .editable {
+            min-width: 100px;
+            display: inline-block;
+            margin-left: -4px;
+            font-size: $h5;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+            }
+        }
+    }
+
+    &.has-placeholder {
+        &.input-url {
+            .text {
+                display: none;
+            }
+        }
+
+        .placeholder {
+            display: block;
+            z-index: 1;
+        }
+
+        .editable {
+            margin-left: 0;
+        }
+
+        .table-css {
+            position: relative;
+            z-index: 2;
+
+            .td {
+                &:first-child {
+                    display: none;
+                }
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                background: transparent;
+                padding-left: 15px;
+                left: 0;
+
+                @media (max-width: 767px) {
+                    padding-left: 8px;
+                }
+
+                @media (max-width: 359px) {
+                    padding-left: 8px;
+                    left: -2px;
+                }
+            }
+        }
+    }
+
+    .placeholder {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 0 0 15px;
+        color: $rgba-placeholder;
+        font-size: $h5;
+        line-height: 38px;
+        font-family: $primary;
+
+        @media (max-width: 767px) {
+            font-size: $s15;
+            line-height: 36px;
+            padding-left: 8px;
+        }
+
+        @media (max-width: 359px) {
+            font-size: $s13;
+            line-height: 31px;
+            padding-left: 5px;
+        }
+
+        .optional {
+            font-size: 12px;
+        }
+    }
+
+    .table-css {
+        width: 100%;
+        font-weight: normal;
+
+        .td {
+            vertical-align: top;
+
+           &:first-child {
+                padding-left: 15px;
+                word-break: keep-all;
+                color: #999;
+                width: 100px;
+                line-height: 38px;
+                font-size: $h5;
+
+                @media (max-width: 767px){
+                    font-size: $s15;
+                    line-height: 36px;
+                    padding-left:8px;
+                }
+
+                @media (max-width: 359px){
+                    font-size: $s13;
+                    line-height: 31px;
+                    padding-left:5px;
+                }
+            }
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            height: 36px;
+            border: 0 none;
+            padding: 0 15px 0 0;
+            color: #000;
+            width: 100%;
+            position: relative;
+            left: -1px;
+            font-size: $h5;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                height: 34px;
+                padding-right:8px;
+            }
+
+            @media (max-width: 359px){
+                font-size: $s13;
+                height: 29px;
+                padding-right:5px;
+            }
+        }
+    }
+
+    .copy {
+        display: block;
+        word-wrap:normal;
+        word-break:normal;
+        padding:0 15px;
+        color: $positive;
+        text-decoration: none;
+        font-size: $s15;
+        line-height: 38px;
+        font-family: $primary;
+        background: $white;
+        position: absolute;
+        top:0;
+        right: 0;
+        cursor: pointer;
+        z-index: 3;
+
+        @media (max-width: 767px){
+            font-size:$p;
+            line-height: 36px;
+            padding:0 8px;
+        }
+
+        @media (max-width: 359px){
+            font-size: $s13;
+            line-height: 31px;
+            padding:0 5px;
+        }
+    }
+
+    .error {
+        position: absolute;
+        top:0;
+        left: 100%;
+        padding:0 15px;
+        color: $positive;
+        text-decoration: none;
+        font-size: $s15;
+        line-height: 38px;
+        font-family: $primary;
+        background: $white;
+        z-index: 4;
+
+        @media (max-width: 767px){
+            line-height: 36px;
+            font-size: $p;
+            padding:0 8px;
+        }
+
+        @media (max-width: 359px){
+            font-size: $s13;
+            line-height: 31px;
+            padding:0 5px;
+        }
+
+        &:before{
+            content:'';
+            display: inline-block;
+            width: 13px;
+            height: 11px;
+            background: $white url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
+            background-size: 13px auto;
+            margin-right: 5px;
+
+            @media (max-width: 767px){
+                position: relative;
+                top: 1px;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                background-image: url(images/ui/pages/company/settings/icon_error@3x.png);
+            }
+        }
+    }
+
+    &.validate{
+        .error{
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+
+.custom-input {
+    &.table-css{
+        width: 100%;
+        border: 1px solid $border;
+        font-size: 20px;
+        border-radius: 2px;
+        font-weight: normal;
+        overflow: hidden;
+
+        @media (max-width: 767px){
+            font-size: 15px;
+        }
+
+        @media (max-width: 767px){
+            font-size: 13px;
+        }
+
+        .td {
+
+            @media (max-width: 767px){
+                line-height: 36px;
+            }
+
+            @media (max-width: 359px){
+                line-height: 31px;
+            }
+
+           &:first-child {
+                padding-left: 15px;
+                word-break: keep-all;
+                color: #999;
+                width: 100px;
+                line-height: 38px;
+
+                @media (max-width: 767px){
+                    line-height: 36px;
+                }
+
+                @media (max-width: 359px){
+                    line-height: 31px;
+                }
+            }
+        }
+
+        input[type="text"] {
+            height: 38px;
+            border: 0 none;
+            padding: 0 15px 0 0;
+            color: #000;
+            width: 100%;
+
+            @media (max-width: 767px){
+                height: 34px;
+            }
+
+            @media (max-width: 767px){
+                height: 29px;
+            }
+        }
+    }
+}
+
+.input-countdown{
+    &.inner{
+        position: relative;
+        border: 1px solid $border;
+        border-radius: 2px;
+        overflow: hidden;
+        height: 105px;
+
+        .form-control {
+            height: 85px;
+            padding: 5px 14px;
+            border: 0 none;
+
+            @media (max-width: 767px){
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            @media (max-width: 767px){
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        .text{
+            display: inline-block;
+            padding: 0 14px 8px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: rgba(51, 51, 51, .4);
+            /*text-shadow: 0 0 1px rgba(51, 51, 51, .2);*/
+            font-size: $s14;
+            line-height: 100%;
+            font-family: $primary;
+        }
+    }
+
+    .error {
+        position: absolute;
+        top:0;
+        left: 100%;
+        padding:0 15px;
+        color: $positive;
+        text-decoration: none;
+        font-size: $s15;
+        line-height: 38px;
+        font-family: $primary;
+        background: $white;
+        z-index: 4;
+
+        @media (max-width: 767px){
+            line-height: 36px;
+            font-size: $p;
+            padding:0 8px;
+        }
+
+        @media (max-width: 359px){
+            font-size: $s13;
+            line-height: 31px;
+            padding:0 5px;
+        }
+
+        &:before{
+            content:'';
+            display: inline-block;
+            width: 13px;
+            height: 11px;
+            background: $white url(images/ui/pages/company/settings/icon_error.png) center center no-repeat;
+            background-size: 13px auto;
+            margin-right: 5px;
+
+            @media (max-width: 767px){
+                position: relative;
+                top: 1px;
+            }
+
+            @media
+            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                background-image: url(images/ui/pages/company/settings/icon_error@3x.png);
+            }
+        }
+    }
+
+    &.validate{
+        .error{
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+
+.hour-custom{
+    position: relative;
+    padding-left: calc(100% - 82px);
+
+    .form-control{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 67px);
+        border-right: 0 none;
+        border-radius: 2px 0 0 2px;
+        text-align: center;
+    }
+
+    .time-control {
+        border: 1px solid #797979;
+        border-right: 0 none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 74px);
+        border-right: 0 none;
+        border-radius: 2px 0 0 2px;
+        text-align: center;
+        padding: 0;
+        font-size: 20px;
+        height: 40px;
+
+        @media (max-width: 767px) {
+            height: 36px;
+            padding-left: 74px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 359px) {
+            height: 31px;
+        }
+
+        input {
+            border: none;
+            width: 30px;
+            padding: 0;
+            margin: 0;
+            cursor: default;
+            color: #242424;
+            height: 38px;
+            text-align: right;
+
+            @media (max-width: 767px) {
+                height: 34px;
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px) {
+                height: 29px;
+                font-size: $s13;
+            }
+
+            &[disabled] {
+                cursor: default;
+                opacity: .5;
+            }
+
+            &:focus {
+                color: $base;
+            }
+
+            &.mode {
+                width: 22px;
+                margin-left: 3px;
+            }
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: $s15;
+            }
+
+            @media (max-width: 359px) {
+                font-size: $s13;
+            }
+
+            + input {
+                text-align: left;
+            }
+        }
+    }
+
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn){
+        width: 85px;
+    }
+
+    .bootstrap-select {
+        > .btn,
+        > .btn:focus,
+        > .btn:active,
+        > .btn:hover,
+        > .btn:visited,
+        &.open > .btn,
+        &.open > .btn:focus,
+        &.open > .btn:active,
+        &.open > .btn:hover,
+        &.open > .btn:visited{
+            border-left: 0 none;
+            border-radius:0 2px 2px 0;
+        }
+    }
+}
+
+.date-custom{
+    &.top{
+        .form-control{
+            border-radius: 0 0 2px 2px;
+        }
+    }
+
+    &.bottom{
+        .form-control{
+            border-radius: 2px 2px 0 0;
+        }
+    }
+}

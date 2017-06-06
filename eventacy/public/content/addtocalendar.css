@@ -1,0 +1,30 @@
+#add-to-calendar-checkbox-label {
+  cursor: pointer;
+}
+
+input[type=checkbox].add-to-calendar-checkbox {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.add-to-calendar-checkbox ~ a:before {
+  background-image: none !important;
+}
+
+.addtocalendar{width:280px;margin:0 auto;position:relative;font:18px/22px ralewaymedium, sans-serif;}
+.addtocalendar .add-to-calendar-checkbox{display:block;border:1px solid #333;padding:10px 45px;font-weight:400;}
+.addtocalendar .glyphicon{width:25px;height:26px;background:center center no-repeat;margin-right:10px;margin-bottom:-5px;}
+.addtocalendar ul{margin:0;padding:0;list-style:none;display:none;position:absolute;top:100%;right:0;left:0;background:#fff;border:1px solid #333;border-top:0 none;}
+.addtocalendar ul a{display:block;padding:10px 45px;color:#333;text-decoration:none;outline:none;}
+.addtocalendar span.icon-calendar{background-image:url(images/assets/calendar.png);}
+.addtocalendar span.icon-apple{background-image:url(images/assets/apple.png);}
+.addtocalendar span.icon-google{background-image:url(images/assets/google.png);}
+.addtocalendar span.icon-outlook{background-image:url(images/assets/Outlook.png);}
+.addtocalendar span.icon-yahoo{background-image:url(images/assets/yahoo.png);}
+
+@media (max-width:372px){
+	.addtocalendar .add-to-calendar-checkbox,
+	.addtocalendar ul a{padding:10px 35px;}
+	.addtocalendar{width:100%;}
+}

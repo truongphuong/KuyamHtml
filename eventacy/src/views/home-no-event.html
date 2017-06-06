@@ -1,0 +1,78 @@
+{% extends 'master/main-new.html' %}
+
+{% block title %}Beautify LA - Home{% endblock %}
+
+{% block meta %}
+<meta name="description" content="2" />
+<meta name="keywords" content="3" />
+{% endblock %}
+
+{% block namepage %}home-page{% endblock %}
+
+{% block banner %}
+{% include "content/pages/home/banner.html" %}
+{% endblock %}
+
+{% block main %}
+<!-- .main-content -->
+<div class="main-content home-page clearfix">
+	<div class="container">
+    	<div class="row">
+            <div class="col-xs-12 col-sm-8">
+
+                <!-- #main-affix -->
+                <div id="main-affix">
+                    <div class="affix-content event-section">
+
+                        <!-- .section-header -->
+                    	<header class="section-header section-header-no-event on-desktop">
+                            <h2>welcome to Beautify LA</h2>
+                            <p>Beautify LA is the place for businesses to offer special events and deals to the community.</p>
+                        </header>
+                        <!-- /.section-header -->
+
+                        {% include "content/pages/home/article.html" %}
+
+                    </div>
+                </div>
+                <!-- /#main-affix -->
+
+            </div>
+            <div class="col-xs-12 col-sm-4">
+
+                <!-- #nav-affix -->
+                <div id="nav-affix">
+                    <div class="affix-content">
+                    	<div class="happen-date hidden-xs">
+                            <header class="section-header">
+                                <!--<h2>Oct. 2nd</h2>-->
+                            </header>
+                        </div>
+
+                        {% include "content/pages/company/list/tweets.html" %}
+
+                        {% include "content/pages/home/media.html" %}
+
+                        {% include "content/pages/home/blogger.html" %}
+
+                        <div class="back-top-section visible-xs">
+                            <a title="" href="#site-header">back to top</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /#nav-affix -->
+
+            </div>
+		</div>
+	</div>
+</div>
+<!-- /.main-content -->
+{% endblock %}
+
+{% block scriptLibs %}{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="content/js/pages/ui-home.js"></script>
+{% endblock %}
+

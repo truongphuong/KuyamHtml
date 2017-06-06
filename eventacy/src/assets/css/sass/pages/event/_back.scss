@@ -1,0 +1,46 @@
+.wrapper {
+    .back-to-home{
+        background: $black;
+        height: 46px;
+
+        @media (max-width: 767px) {
+            height: 48px;
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+            font-size:  16px;
+            line-height: 46px;
+            font-family: ralewaylight,sans-serif;;
+            color: $white;
+            padding-left: 30px;
+            text-decoration: none;
+
+            @media (max-width: 767px) {
+                line-height: 48px;
+            }
+
+            &:before {
+                content: '';
+                width: 21px;
+                height: 21px;
+                background: url(images/ui/master/header/icons.png) center -84px no-repeat;
+                background-size: 21px auto;
+                position: absolute;
+                top: 12px;
+                left: 0;
+
+                @media
+                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                    background-image: url(images/ui/master/header/icons@3x.png);
+                }
+            }
+        }
+    }
+}

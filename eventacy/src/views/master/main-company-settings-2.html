@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{% block title %}{% endblock %}</title>
+
+{% include "./components/meta.html" %}
+
+{% include "./components/favicon.html" %}
+
+{% include "./components/fonts.html" %}
+
+{% block meta %}{% endblock %}
+
+{% include "./components/css.html" %}
+
+{% block cssLibs %}{% endblock %}
+
+<link type="text/css" rel="stylesheet" href="content/style.css" />
+
+{% block css %}{% endblock %}
+</head>
+<body>
+<div id="detech-devices" class="wrapper {% block namepage %}{% endblock %}">
+    <div class="header-banner default">
+    {% include "./partials/header-company-2-logged.html" %}
+
+    {% block banner %}{% endblock %}
+
+    {% block upload %}{% endblock %}
+    </div>
+
+    {% block main %}{% endblock %}
+
+    {% include "./partials/footer-company.html" %}
+</div>
+
+{% block modal %}{% endblock %}
+
+{% include "./partials/loading.html" %}
+
+{% include "./components/js.html" %}
+
+{% block scriptLibs %}{% endblock %}
+
+<script type="text/javascript" src="content/js/ui-variables.js"></script>
+<script type="text/javascript" src="content/js/ui-function.js"></script>
+<script type="text/javascript" src="content/js/ui-general.js"></script>
+
+{% block script %}{% endblock %}
+</body>
+</html>

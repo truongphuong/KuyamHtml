@@ -1,0 +1,273 @@
+.modal-bill {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: $primary;
+    width: 523px;
+
+    @media (max-width: 767px){
+        width: auto;
+    }
+
+    .modal-content{
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .modal-header {
+        text-align: center;
+        border-bottom: 1px solid rgba(44, 44, 46, .1);
+        padding-top: 17px;
+        padding-bottom: 20px;
+        position: relative;
+
+        @media (max-width: 767px){
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        .modal-title{
+            font-size: $h5;
+            font-family: $primary;
+            font-weight: 400;
+            padding-bottom: 0;
+            color: $base;
+
+            @media (max-width: 767px){
+                font-size: $h6;
+            }
+        }
+
+        .close {
+            margin-top: 0;
+            position: absolute;
+            top: 16px;
+            right: 23px;
+
+            @media (max-width: 767px){
+                top: 7px;
+                right: 5px;
+            }
+        }
+
+        p {
+            @media (max-width: 767px){
+                font-size: $p;
+            }
+        }
+    }
+
+    .modal-body {
+        padding:15px 0 8px;
+        font-size: 16px;
+        line-height: 140%;
+
+        @media (max-width: 767px){
+            padding-bottom: 10px;
+        }
+
+        .row {
+            margin-left: -22px;
+            margin-right: -22px;
+        }
+
+        div[class*="col-"] {
+            margin-bottom: 16px;
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        .label-form{
+            display: block;
+            font-family: $primary;
+            font-size: $h5;
+            font-weight: 700;
+            line-height: 25px;
+            color: $base;
+            margin-top: 7px;
+            margin-bottom: 9px;
+
+            @media (max-width: 767px){
+                font-size: $s15;
+                margin-top: 10px;
+                margin-bottom: 6px;
+                /*text-shadow: 0 1px 0 $base;*/
+            }
+        }
+
+        .form-control{
+            height: 38px;
+
+            @media (max-width: 767px){
+                height: 36px;
+            }
+
+            @media (max-width: 359px){
+                height: 31px;
+            }
+        }
+
+        .info {
+            padding: 0 34px 17px;
+
+            @media (max-width: 767px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .bill {
+            border-top: 1px solid rgba(44, 44, 46, .1);
+            padding: 5px 23px 0;
+
+            @media (max-width: 767px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            &.donation {
+                .td {
+                    &.td-price {
+                        font-size: 22px;
+                        font-family: $primary;
+                        font-weight: 700;
+                        color: $positive;
+                    }
+                }
+            }
+
+            .table-css {
+                width: 100%;
+
+                &.footer {
+                    float: right;
+                    width: auto;
+
+                    .td {
+                        &.td-name{
+                            text-align: right;
+                            padding-right: 30px;
+                        }
+                    }
+
+                    .subtotal ,
+                    .processing {
+                        .td {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .total {
+                        .td {
+                            &.td-name{
+                                font-size: 22px;
+                            }
+
+                            &.td-price {
+                                color: $positive;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .td {
+                font-size: $s17;
+                font-family: $primary;
+                font-weight: 400;
+                line-height: 27px;
+                position: relative;
+                padding: 3px 0;
+                color: #333;
+
+                @media (max-width: 767px) {
+                    font-size: $h6;
+                }
+
+                &.td-price {
+                    font-weight: 700; //400 /* CR */
+                    text-align: right;
+                    white-space: nowrap;
+                    vertical-align: bottom;
+                    padding-left: 5px;
+                    width: 75px;
+                }
+
+                span {
+                    background: $white;
+                    position: relative;
+                }
+
+                hr {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 14px;
+                    border: 0 none;
+                    border-bottom: 1px solid rgba(44, 44, 46, .1);
+                    margin: 0;
+                }
+            }
+
+            ul {
+                margin: 6px 0 3px;
+                padding: 0;
+                list-style: none;
+                float: right;
+
+                li {
+                    float: left;
+                    font-size: 22px;
+                    font-family: $primary;
+                    font-weight: 400;
+                    color: $base;
+
+                    + li {
+                        font-weight: 700;
+                        color: $positive;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        padding-bottom: 29px;
+        text-align: center;
+        border:0 none;
+
+        .btn{
+            width: auto;
+            min-width: 255px;
+            height: 50px;
+            border-radius: 0;
+            font-size: $h5;
+            font-family: $primary;
+            font-weight: 700;
+            padding:0 40px;
+
+            @media (max-width: 767px){
+                height: 32px;
+                font-size: $h6;
+                padding:0 20px;
+                min-width: auto;
+            }
+        }
+
+        .btn-paypal {
+            * {
+                display: none;
+            }
+
+            .btn-positive {
+                display: inline-block;
+            }
+        }
+    }
+}

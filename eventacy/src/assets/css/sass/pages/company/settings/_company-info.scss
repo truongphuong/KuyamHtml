@@ -1,0 +1,579 @@
+.company-settings-page {
+    .company-info{
+        .section{
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+            &.logo-section{
+                .frame{
+                    width: 220px;
+                    height: 110px;
+                    border: 1px dashed $border;
+                    position: relative;
+                    background: #666;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+
+                    @media (max-width: 767px){
+                        margin-bottom: 18px;
+                    }
+
+                    /*&:hover{
+                        .control{
+                            visibility:visible;
+                            opacity:1;
+                        }
+                    }*/
+
+                    &.default{
+                        .page-logo{
+                            background-image: none !important;
+                        }
+
+                        .control{
+                            /*visibility:hidden;
+                            opacity:0;*/
+                            display: none;
+                        }
+
+                        .upload{
+                            width: 167px;
+                            height: 51px;
+                            line-height: 49px;
+                            font-size: $s15;
+                            font-family: $primary;
+                            color: $white;
+                            border: 1px solid rgba(255, 255, 255, .31);
+                            background: rgba(0, 0, 0, .24) none;
+                            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+                            text-align: center;
+                            margin:-25px 0 0 -83px;
+                            top: 50%;
+                            left: 50%;
+                            /*visibility:hidden;
+                            opacity:0;*/
+                            display: block;
+
+                            &:before {
+                                content: '';
+                                display: inline-block;
+                                width: 16px;
+                                height: 14px;
+                                background: url(images/ui/pages/company/settings/icon_upload.png) center center no-repeat;
+                                background-size: 16px auto;
+                                margin-right: 5px;
+                                position: relative;
+                                bottom: -2px;
+
+                                @media
+                                only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                    background-image: url(images/ui/pages/company/settings/icon_upload@3x.png);
+                                }
+                            }
+                        }
+
+                        /*&:hover{
+                            .upload{
+                                visibility:visible;
+                                opacity:1;
+                            }
+                        }*/
+                    }
+
+                    .page-logo{
+                        position: absolute;
+                        top:-1px;
+                        left: -1px;
+                        right: -1px;
+                        bottom: -1px;
+                        background: center center no-repeat;
+                        background-size: auto 55px;
+                        display: block;
+                    }
+
+                    .control {
+                        height: 51px;
+                        font-size: $s15;
+                        font-family: $primary;
+                        color: $white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        border: 1px solid rgba(255, 255, 255, .31);
+                        background: rgba(0, 0, 0, .24);
+                        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+                        text-align: center;
+                        z-index: 3;
+                        width: 122px;
+                        margin:-25px 0 0 -61px;
+                        padding:0;
+                        list-style: none;
+                        /*visibility:hidden;
+                        opacity:0;
+                        transition:visibility 2s, opacity 2s;*/
+
+                        li{
+                            float: left;
+                            width: 60px;
+                            height: 49px;
+                            cursor: pointer;
+
+                            @media (max-width: 767px){
+                                width: 50%;
+                            }
+
+                            &:hover{
+                                font-weight: 700;
+                            }
+
+                            + li {
+                                span {
+                                    border-left: 1px solid rgba(255, 255, 255, .5);
+                                }
+                            }
+
+                            span{
+                                display: block;
+                                margin:15px 0;
+                                line-height: 19px;
+
+                                @media (max-width: 767px){
+                                    font-size: 0;
+                                    margin-top:15px;
+                                    line-height: 0;
+                                }
+
+                                &:before{
+                                    @media (max-width: 767px){
+                                        content: '';
+                                        display: inline-block;
+                                        width: 23px;
+                                        height: 23px;
+                                        background: url(images/ui/pages/company/settings/icon_photo.png) no-repeat;
+                                        background-size: 23px auto;
+                                    }
+
+                                    @media
+                                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+                                    only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+                                    only screen and (              min-resolution:120dpi)      and (max-width:767px),
+                                    only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                                        background-image: url(images/ui/pages/company/settings/icon_photo@3x.png);
+                                    }
+                                }
+                            }
+
+                            &.edit{
+                                span{
+                                    &:before{
+                                        background-position: 0 0;
+                                    }
+                                }
+
+                                @media (max-width: 767px){
+                                    display: none;
+                                }
+                            }
+
+                            &.change{
+                                span{
+                                    &:before{
+                                        background-position: 0 0;
+                                    }
+
+                                    @media (max-width: 767px){
+                                        border-left: 0 none;
+                                    }
+                                }
+                            }
+
+                            &.delete{
+                                span{
+                                    &:before{
+                                        background-position: 0 -23px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .upload{
+                        position: absolute;
+                        z-index: 3;
+                        /*visibility:hidden;
+                        opacity:0;
+                        transition:visibility 2s, opacity 2s;*/
+                        display: none;
+
+                        @media (max-width: 767px){
+                            width: 21px;
+                            height: 21px;
+                            background: url(images/ui/pages/company/settings/icon_camera.png) center center no-repeat;
+                            background-size: 21px auto;
+                            font-size: 0;
+                            right: 12px;
+                            bottom: 6px;
+                            visibility:visible;
+                            opacity:1;
+                            border: 0 none;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (max-width:767px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (max-width:767px),
+                        only screen and (              min-resolution:120dpi)      and (max-width:767px),
+                        only screen and (               min-resolution:2dppx)      and (max-width:767px){
+                            background-image: url(images/ui/pages/company/settings/icon_camera@3x.png);
+                        }
+                    }
+                }
+            }
+
+            &.socials-section{
+                ul{
+                    padding:0;
+                    margin: 0 0 11px;
+                    list-style: none;
+                    cursor: pointer;
+
+                    @media (max-width: 767px){
+                        margin-bottom: 18px;
+                    }
+
+                    li{
+                        float: left;
+                        line-height: 0;
+
+                        + li{
+                            margin-left: 10px;
+                        }
+
+                        .icon{
+                            width: 44px;
+                            height: 44px;
+                            background: url(images/ui/pages/company/settings/icon_socials.png) no-repeat;
+                            background-size: 44px auto;
+
+                            @media (max-width: 767px){
+                                width: 33px;
+                                height: 33px;
+                                background-size: 33px auto;
+                            }
+
+                            @media (max-width: 359px){
+                                width: 28px;
+                                height: 28px;
+                                background-size: 28px auto;
+                            }
+
+                            @media
+                            only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                            only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                            only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                            only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                background-image: url(images/ui/pages/company/settings/icon_socials@3x.png);
+                            }
+
+                            &.icon-add{
+                                background-position: center top;
+                            }
+
+                            &.icon-facebook{
+                                background-position: center -44px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -33px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -28px;
+                                }
+                            }
+
+                            &.icon-twitter{
+                                background-position: center -88px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -66px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -56px;
+                                }
+                            }
+
+                            &.icon-linkedin{
+                                background-position: center -132px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -99px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -84px;
+                                }
+                            }
+
+                            &.icon-instagram{
+                                background-position: center -176px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -132px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -112px;
+                                }
+                            }
+
+                            &.icon-pinterest{
+                                background-position: center -220px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -165px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -140px;
+                                }
+                            }
+
+                            &.icon-google-plus{
+                                background-position: center -264px;
+
+                                @media (max-width: 767px){
+                                    background-position: center -198px;
+                                }
+
+                                 @media (max-width: 359px){
+                                    background-position: center -168px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.address-section{
+                margin-top: 20px;
+
+                @media (max-width: 767px){
+                    margin-top: 24px;
+                }
+
+                .col-sm-4-5{
+                    margin-bottom: 0;
+
+                    @media (min-width: 992px){
+                        width: 39.2%;
+                    }
+
+                    @media (max-width: 991px){
+                        margin-bottom: 18px;
+                    }
+                }
+
+                .col-sm-7-5 {
+                    @media (min-width: 992px){
+                        width: 60.8%;
+                    }
+                }
+                > .row {
+                    > div[class*="col-"]{
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            &.tags-section{
+                @media (min-width: 992px){
+                    .col-md-4 {
+                        width: 31%;
+                    }
+
+                    .col-md-8 {
+                        width: 69%;
+                    }
+                }
+
+                .label-form{
+                    @media (max-width: 767px){
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .btn-tag{
+                    width: 100%;
+                    height: 38px;
+                    padding:0;
+                    font-size: $s15;
+                    border-radius: 0;
+                    font-family: $primary;
+                    color: $positive;
+
+                    @media (max-width: 767px){
+                        height: 38px;
+                        font-size: $s21;
+                    }
+
+                    @media (max-width:359px){
+                        height: 33px;
+                        font-size: $s17;
+                    }
+
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        background: url(images/ui/pages/company/settings/icon_tag.png) center center no-repeat;
+                        background-size: 15px auto;
+                        position: relative;
+                        top:3px;
+                        margin-right: 5px;
+
+                        @media (max-width: 767px){
+                            top:1px;
+                        }
+
+                        @media (max-width: 359px){
+                            top:2px;
+                        }
+
+                        @media
+                        only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                        only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                        only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                        only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                            background-image: url(images/ui/pages/company/settings/icon_tag@3x.png);
+                        }
+                    }
+                }
+
+                .bootstrap-select{
+                    .dropdown-menu {
+                        > li {
+                            > a {
+                                position: relative;
+
+                                .close{
+                                    display: inline-block;
+                                    width: 45px;
+                                    height: 34px;
+                                    position: absolute;
+                                    top:0;
+                                    right: 0;
+                                    background: url(images/ui/modals/icon_close.png) center center no-repeat;
+                                    background-size: 15px auto;
+                                    opacity: 1;
+
+                                    @media
+                                    only screen and (-webkit-min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (   min--moz-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (     -o-min-device-pixel-ratio:1.25/1)    and (min-width:320px),
+                                    only screen and (        min-device-pixel-ratio:1.25)      and (min-width:320px),
+                                    only screen and (              min-resolution:120dpi)      and (min-width:320px),
+                                    only screen and (               min-resolution:2dppx)      and (min-width:320px){
+                                        background-image: url(images/ui/modals/icon_close@3x.png);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.tweets-section{
+                border-bottom: 0 none;
+
+                .label-form{
+                    @media (max-width: 767px){
+                        margin-bottom: 11px;
+                    }
+                }
+
+                .placeholder-custom{
+                    &.gradient:after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(255,255,255,0);
+                        background-image: url(images/linear_bg_1.png);
+                        background-repeat: repeat-y;
+
+                        /* Safari 4-5, Chrome 1-9 */
+                        background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.1)), to(#fff));
+
+                        /* Safari 5.1, Chrome 10+ */
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        /* Firefox 3.6+ */
+                        background: -moz-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        /* IE 10 */
+                        background: -ms-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        /* Opera 11.10+ */
+                        background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        pointer-events: none;
+                        z-index: 1;
+                    }
+
+                    a {
+                        z-index: 2;
+                    }
+
+                    /*.placeholder:after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(255,255,255,0);
+                        background-image: url(images/linear_bg_1.png);
+                        background-repeat: repeat-y;
+
+                        background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0.1)), to(#fff));
+
+                        background: -webkit-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -moz-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -ms-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+
+                        background: -o-linear-gradient(left, rgba(255,255,255,0.1), #fff);
+                    }*/
+                }
+            }
+        }
+        /*footer{
+            .btn {
+                @media (max-width: 767px){
+                    width: calc(100% - 20px);
+                }
+            }
+        }*/
+    }
+}

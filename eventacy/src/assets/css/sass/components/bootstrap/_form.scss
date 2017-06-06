@@ -1,0 +1,49 @@
+.form-control {
+    height: 38px;
+    border: 1px solid $border;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #313432;
+    padding:0 15px;
+    box-shadow: none;
+
+    @media (max-width: 767px) {
+        font-size: 15px;
+        height: 36px;
+        padding: 0 8px;
+    }
+
+    @media (max-width: 359px) {
+        font-size: 13px;
+        height: 31px;
+        padding:0 5px;
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid $border;
+        box-shadow: none;
+    }
+
+    &[disabled] {
+        background: $white;
+        border-color: $disabled;
+        cursor: default;
+    }
+
+    &[readonly] {
+        background: $white;
+        cursor: default;
+    }
+}
+
+.btn {
+    &[disabled] {
+        cursor: default;
+    }
+}
+
+textarea.form-control {
+    height: 110px;
+    resize: none;
+}
