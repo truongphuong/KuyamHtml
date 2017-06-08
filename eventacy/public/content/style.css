@@ -12654,7 +12654,8 @@ div.placeholder-custom {
   text-align: center;
   background: url(images/ui/pages/coming-soon/img.jpg) center center no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  font-size: 16px; }
   .coming-soon-page:after {
     content: '';
     background: rgba(0, 0, 0, 0.5);
@@ -12666,22 +12667,55 @@ div.placeholder-custom {
     z-index: 1; }
   .coming-soon-page h1 {
     color: #fff;
-    font-size: 100px;
-    font-family: "Lato", sans-serif;
+    font-size: 5.25em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 25px;
     width: 100%;
-    margin-top: -52px;
-    z-index: 2; }
+    margin-top: -78px;
+    z-index: 2;
+    letter-spacing: .023em; }
     @media (max-width: 767px) {
       .coming-soon-page h1 {
         font-size: 50px;
-        margin-top: -27px; } }
+        margin-top: -44px;
+        left: 12px; } }
     @media (max-width: 359px) {
       .coming-soon-page h1 {
         font-size: 2.25em;
-        margin-top: -20px; } }
+        margin-top: -30px;
+        left: 10px; } }
+    .coming-soon-page h1 sup {
+      font-size: 11px;
+      position: relative;
+      top: -43px;
+      margin-left: 5px; }
+      @media (max-width: 767px) {
+        .coming-soon-page h1 sup {
+          font-size: 10px;
+          top: -25px; } }
+      @media (max-width: 359px) {
+        .coming-soon-page h1 sup {
+          font-size: 9px;
+          top: -18px; } }
+  .coming-soon-page h5 {
+    font-size: 1.875em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    bottom: 16.6%;
+    left: 0;
+    width: 100%;
+    letter-spacing: .025em; }
+    @media (max-width: 767px) {
+      .coming-soon-page h5 {
+        font-size: 1.5625em; } }
+    @media (max-width: 359px) {
+      .coming-soon-page h5 {
+        font-size: 1.25em; } }
 
 /**
  * Modals
