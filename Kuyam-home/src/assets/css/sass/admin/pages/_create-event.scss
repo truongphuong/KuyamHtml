@@ -58,7 +58,7 @@
                     }
 
                     &.field-sub {
-                        width: 100px !important;
+                        width: 130px !important;
 
                         label{
                             max-width: auto;
@@ -133,8 +133,32 @@
             }
         }
 
-        .ticket-section {
+        .dynamic-table {
+            + .tbldata {
+                border-top: 0 none;
+            }
+
             .tbldata {
+                margin-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .ticket-section {
+            + .tbldata {
+                border-top: 0 none;
+            }
+
+            .tbldata {
+                margin-bottom: 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
                 tr {
                     &:first-child {
                         td {
