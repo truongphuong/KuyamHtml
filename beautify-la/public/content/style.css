@@ -4604,7 +4604,8 @@ div.placeholder-custom {
           max-height: 54px; }
       .new-spot .spot-right .spot-content p {
         margin-bottom: 16px;
-        line-height: 23px; }
+        line-height: 23px;
+        word-break: break-word; }
         @media (max-width: 767px) {
           .new-spot .spot-right .spot-content p {
             line-height: 16px;
@@ -4936,6 +4937,13 @@ div.placeholder-custom {
   @media (min-width: 768px) {
     .new-spot.single-ticket-spot .spot-right .spot-footer .btn-orange, .new-spot.single-rsvp-spot .spot-right .spot-footer .btn-orange {
       line-height: 51px; } }
+  .new-spot.single-special-spot .spot-right .spot-content p small, .new-spot.single-ticket-spot .spot-right .spot-content p small, .new-spot.single-rsvp-spot .spot-right .spot-content p small {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .new-spot.single-special-spot .spot-right .spot-content p br, .new-spot.single-ticket-spot .spot-right .spot-content p br, .new-spot.single-rsvp-spot .spot-right .spot-content p br {
+    display: none; }
   .new-spot.single-special-spot .spot-footer .spot-text, .new-spot.single-ticket-spot .spot-footer .spot-text, .new-spot.single-rsvp-spot .spot-footer .spot-text {
     color: #f3472d;
     font-weight: 700; }

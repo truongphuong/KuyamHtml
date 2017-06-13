@@ -282,6 +282,7 @@
             p{
                 margin-bottom: 16px;
                 line-height: 23px;
+                word-break: break-word;
 
                 @media (max-width:767px) {
                     line-height: 16px;
@@ -753,6 +754,23 @@
     &.single-special-spot,
     &.single-ticket-spot,
     &.single-rsvp-spot {
+        .spot-right {
+            .spot-content {
+                p {
+                    small {
+                        display: block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
         .spot-footer{
             .spot-text{
                 color: $positive;
