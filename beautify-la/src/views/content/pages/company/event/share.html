@@ -4,44 +4,56 @@
     </header>
     <p>Lorem ipsum dolor sit amet conseditur palesque</p>
     <section class="section share-section">
-        <div class="share">
-            <div class="cb-custom">
-                <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
-                <label class="cb-label" for="cbFacebook">Facebook</label>
+        <div class="row">
+            <div class="col-xs-6 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbFacebook" type="checkbox" name="share" value="1" checked />
+                    <label class="cb-label" for="cbFacebook">Facebook</label>
+                </div>-->
+                <button class="btn btn-neutral btn-facebook">Facebook</button>
             </div>
-        </div>
-        <div class="share">
-            <div class="cb-custom">
-                <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" />
-                <label class="cb-label" for="cbTwitter">Twitter</label>
+            <div class="col-xs-6 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbTwitter" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbTwitter">Twitter</label>
+                </div>-->
+                <button class="btn btn-neutral btn-twitter">Twitter</button>
             </div>
-        </div>
-        <div class="share">
-            <div class="cb-custom">
-                <input class="cb-mark" id="cbLinkedIn" type="checkbox" name="share" value="1" />
-                <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
+            <div class="col-xs-6 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbLinkedIn" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
+                </div>-->
+                <button class="btn btn-neutral btn-linkedin">LinkedIn</button>
             </div>
-        </div>
-        <div class="share">
-            <div class="cb-custom">
-                <input class="cb-mark" id="cbMailchimp" type="checkbox" name="share" value="1" />
-                <label class="cb-label" for="cbMailchimp">Mailchimp</label>
+            <div class="col-xs-6 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbLinkedIn" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbLinkedIn">LinkedIn</label>
+                </div>-->
+                <button class="btn btn-neutral btn-email">Email</button>
             </div>
-            <div id="divMailchimpSelect" class="section select-readonly hide">
-                <select id="mailchimpSelect" class="select-full default">
-                    <option value="">Select a campaign</option>
-                </select>
+            <div class="col-xs-12 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbMailchimp" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbMailchimp">Mailchimp</label>
+                </div>-->
+                <div id="divMailchimpSelect" class="select-readonly select-mailchimp">
+                    <select id="mailchimpSelect" class="select-full default">
+                        <option value="">Select a Mailchimp campaign</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="share">
-            <div class="cb-custom">
-                <input class="cb-mark" id="cbConstant" type="checkbox" name="share" value="1" />
-                <label class="cb-label" for="cbConstant">Constant Contact</label>
-            </div>
-            <div id="divConstantContactSelect" class="section select-readonly hide">
-                <select id="constantContactSelect" class="select-full default" disabled>
-                    <option value="">Select a campaign</option>
-                </select>
+            <div class="col-xs-12 share">
+                <!--<div class="cb-custom">
+                    <input class="cb-mark" id="cbConstant" type="checkbox" name="share" value="1" />
+                    <label class="cb-label" for="cbConstant">Constant Contact</label>
+                </div>-->
+                <div id="divConstantContactSelect" class="select-readonly select-constant-contact">
+                    <select id="constantContactSelect" class="select-full default" disabled>
+                        <option value="">Select a Constant Contact campaign</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
